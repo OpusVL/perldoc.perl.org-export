@@ -1,0 +1,1083 @@
+      
+      
+      
+      
+
+      <!DOCTYPE html>
+      <html lang="en">
+
+      <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="warnings - perldoc.perl.org">
+        <link rel="icon" href="/public/img/favicon.ico">
+        <title>warnings - perldoc.perl.org</title>
+        <link href="/public/css/main.min.css" rel="stylesheet">
+        <link rel="canonical" href="/warnings.html">
+        <link
+          href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900'
+          rel='stylesheet' type='text/css'>
+        <script>
+          window.ga = window.ga || function () {
+            (ga.q = ga.q || []).push(arguments)
+          };
+          ga.l = +new Date;
+          ga('create', 'UA-1892152-2', 'auto'); // JJ's account
+          ga('create', 'UA-50555-3', 'auto', 'perlOrg'); // perl.org account
+          ga('require', 'outboundLinkTracker', {
+            events: ['click', 'auxclick', 'contextmenu'],
+          });
+          ga('require', 'maxScrollTracker');
+          ga('send', 'pageview');
+          ga('perlOrg.send', 'pageview');
+        </script>
+        <script async src="https://www.google-analytics.com/analytics.js">
+        </script>
+        <script async src="/public/js/tracking.min.js"></script>
+      </head>
+
+      <body class="body container-fluid ">
+        <div class="wrapper">
+
+          <nav
+    class="navbar navbar-dark bg-primary bg-perl fixed-top justify-content-between navbar-expand-lg">
+    <a href="#content" class="skippy sr-only sr-only-focusable">
+        <span class=' skippy-text'>Skip to main content</span>
+    </a>
+    <a class="navbar-brand" href="/">
+        <img class="logo" src="/public/img/logo_perl_doc.svg"
+            alt="Perl Documentation Logo" />
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse"
+        data-target="#navbar" aria-controls="navbar" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="navbar" class="collapse navbar-collapse ">
+        <ul class="navbar-nav ml-auto navbar-right">
+            <form class="nav-item dropdown search-wrapper">
+                <input type="text" id='searchinput' aria-describedby='navbarDropdown5'
+                    placeholder="Type query" class='search-input-field' value=''>
+
+                <button href="#" data-toggle='dropdown' type="button"
+                    aria-haspopup="true" aria-expanded='false' id="navbarDropdown5"
+                    class="nav-link dropdown-toggle search-link">
+                    <object tabindex='-1' focusable="false" class='search-icon'
+                        data="/public/img/search.svg" type="image/svg+xml"
+                        name='search icon'>search
+                        icon</object>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown5"
+                    id='search-results'>
+                    <p class='dropdown-item major-version'>
+                        No results
+                    </p>
+                </div>
+            </form>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown" href="#" class="nav-link dropdown-toggle"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Perl versions</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    
+                        <p class='dropdown-item major-version'>
+                            5.32
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.32.0/">5.32.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.30
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.3/">5.30.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.2/">5.30.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.1/">5.30.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.0/">5.30.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.28
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.3/">5.28.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.2/">5.28.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.1/">5.28.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.0/">5.28.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.26
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.3/">5.26.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.2/">5.26.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.1/">5.26.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.0/">5.26.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.24
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.4/">5.24.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.3/">5.24.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.2/">5.24.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.1/">5.24.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.0/">5.24.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.22
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.4/">5.22.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.3/">5.22.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.2/">5.22.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.1/">5.22.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.0/">5.22.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.20
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.3/">5.20.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.2/">5.20.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.1/">5.20.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.0/">5.20.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.18
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.4/">5.18.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.3/">5.18.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.2/">5.18.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.1/">5.18.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.0/">5.18.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.16
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.3/">5.16.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.2/">5.16.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.1/">5.16.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.0/">5.16.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.14
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.4/">5.14.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.3/">5.14.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.2/">5.14.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.1/">5.14.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.0/">5.14.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.12
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.5/">5.12.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.4/">5.12.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.3/">5.12.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.2/">5.12.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.1/">5.12.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.0/">5.12.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.10
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.1/">5.10.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.0/">5.10.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.8
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.9/">5.8.9</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.8/">5.8.8</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.7/">5.8.7</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.6/">5.8.6</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.5/">5.8.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.4/">5.8.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.3/">5.8.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.2/">5.8.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.1/">5.8.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.0/">5.8.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.6
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.2/">5.6.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.1/">5.6.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.0/">5.6.0</a>
+                        
+                        
+                    
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown1" href="#" class="dropdown-toggle nav-link"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Manuals</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                    <a class="dropdown-item"
+                        href="/5.28.3/index-overview.html">Overview</a>
+                    <a class="dropdown-item"
+                        href="/5.28.3/index-tutorials.html">Tutorials</a>
+                    <a class="dropdown-item"
+                        href="/5.28.3/index-faq.html">FAQs</a>
+                    <a class="dropdown-item"
+                        href="/5.28.3/index-history.html">Changes</a>
+                    <a class="dropdown-item"
+                        href="/5.28.3/index-licence.html">License</a>
+                    <a class="dropdown-item"
+                        href="/5.28.3/index-language.html">Language</a>
+                    <a class="dropdown-item"
+                        href="/5.28.3/index-functions.html">Functions</a>
+                    <a class="dropdown-item"
+                        href="/5.28.3/perlop.html">Operators</a>
+                    <a class="dropdown-item"
+                        href="/5.28.3/perlvar.html">Variables</a>
+                    <a class="dropdown-item"
+                        href="/5.28.3/index-pragmas.html">Pragmas</a>
+                    <a class="dropdown-item"
+                        href="/5.28.3/index-utilities.html">Utilities</a>
+                    <a class="dropdown-item"
+                        href="/5.28.3/index-internals.html">Internals</a>
+                    <a class="dropdown-item"
+                        href="/5.28.3/index-platforms.html">Platforms</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown3" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Modules</a>
+                <div aria-labelledby="navbarDropdown3"
+                    class="dropdown-menu letters-wrap">
+                    <!--<a class="dropdown-item"
+                        href="/5.28.3/index-modules.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.28.3/index-modules-by-cat.html">By
+                        Category</a>-->
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-A.html">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-B.html">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-C.html">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-D.html">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-E.html">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-F.html">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-G.html">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-H.html">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-I.html">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-J.html">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-K.html">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-L.html">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-M.html">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-N.html">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-O.html">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-P.html">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-Q.html">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-R.html">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-S.html">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-T.html">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-U.html">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-V.html">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-W.html">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-X.html">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-Y.html">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-Z.html">Z</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown4" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Functions</a>
+                <div aria-labelledby="navbarDropdown4"
+                    class="dropdown-menu letters-wrap">
+                    <a class="dropdown-item"
+                        href="/5.28.3/index-functions.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.28.3/index-functions-by-cat.html">By
+                        Category</a>
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#A">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#B">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#C">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#D">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#E">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#F">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#G">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#H">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#I">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#J">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#K">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#L">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#M">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#N">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#O">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#P">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#Q">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#R">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#S">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#T">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#U">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#V">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#W">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#X">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#Y">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#Z">Z</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!--/.nav-collapse -->
+</nav>
+
+
+          <main class="row main-content pb-5 pt-5" id='content'>
+            <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+              <div class="row">
+                <div class="col-sm-12">
+                  <div id="breadcrumbs">
+                      
+    <a href="index.html">Home</a>&nbsp; &gt;
+    
+      
+        <a href="index-pragmas.html">Pragmas</a> &gt;
+      
+    
+    warnings
+  
+
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <article class="col-sm-12 content">
+                  <div class="documentation-wrapper">
+                    <div id="perl_version">
+                      <h7 class='page-title'> Perl 5 version 28.3
+                        documentation</h7>
+                    </div>
+                    <h1>warnings</h1>
+
+
+  <!--    -->
+<ul><li><a href="#SYNOPSIS">SYNOPSIS</a></li><li><a href="#DESCRIPTION">DESCRIPTION</a></li><ul><li><a href="#Default-Warnings-and-Optional-Warnings">Default Warnings and Optional Warnings</a></li><li><a href="#What's-wrong-with-*-w*-and-%24%5eW">What's wrong with *-w* and $^W</a></li><li><a href="#Controlling-Warnings-from-the-Command-Line">Controlling Warnings from the Command Line</a></li><li><a href="#Backward-Compatibility">Backward Compatibility</a></li><li><a href="#Category-Hierarchy">Category Hierarchy
+</a></li><li><a href="#Fatal-Warnings">Fatal Warnings
+</a></li><li><a href="#Reporting-Warnings-from-a-Module">Reporting Warnings from a Module
+ </a></li></ul><li><a href="#FUNCTIONS">FUNCTIONS</a></li></ul><a class='view-head1' id="SYNOPSIS"></a><h2 class='h2' >SYNOPSIS</h2>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="functions/use.html">use</a> <span class="w">warnings</span><span class="sc">;</span></li><li>    <a class="l_k" href="functions/no.html">no</a> <span class="w">warnings</span><span class="sc">;</span></li><li></li><li>    <a class="l_k" href="functions/use.html">use</a> <span class="w">warnings</span> <span class="q">&quot;all&quot;</span><span class="sc">;</span></li><li>    <a class="l_k" href="functions/no.html">no</a> <span class="w">warnings</span> <span class="q">&quot;all&quot;</span><span class="sc">;</span></li><li></li><li>    <a class="l_k" href="functions/use.html">use</a> <span class="w">warnings::register</span><span class="sc">;</span></li><li>    <a class="l_k" href="functions/if.html">if</a> <span class="s">(</span><span class="i">warnings::enabled</span><span class="s">(</span><span class="s">)</span><span class="s">)</span> <span class="s">{</span></li><li>        <span class="i">warnings::warn</span><span class="s">(</span><span class="q">&quot;some warning&quot;</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="s">}</span></li><li></li><li>    <a class="l_k" href="functions/if.html">if</a> <span class="s">(</span><span class="i">warnings::enabled</span><span class="s">(</span><span class="q">&quot;void&quot;</span><span class="s">)</span><span class="s">)</span> <span class="s">{</span></li><li>        <span class="i">warnings::warn</span><span class="s">(</span><span class="q">&quot;void&quot;</span><span class="cm">,</span> <span class="q">&quot;some warning&quot;</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="s">}</span></li><li></li><li>    <a class="l_k" href="functions/if.html">if</a> <span class="s">(</span><span class="i">warnings::enabled</span><span class="s">(</span><span class="i">$object</span><span class="s">)</span><span class="s">)</span> <span class="s">{</span></li><li>        <span class="i">warnings::warn</span><span class="s">(</span><span class="i">$object</span><span class="cm">,</span> <span class="q">&quot;some warning&quot;</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="s">}</span></li><li></li><li>    <span class="i">warnings::warnif</span><span class="s">(</span><span class="q">&quot;some warning&quot;</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="i">warnings::warnif</span><span class="s">(</span><span class="q">&quot;void&quot;</span><span class="cm">,</span> <span class="q">&quot;some warning&quot;</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="i">warnings::warnif</span><span class="s">(</span><span class="i">$object</span><span class="cm">,</span> <span class="q">&quot;some warning&quot;</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><a class='view-head1' id="DESCRIPTION"></a><h2 class='h2' >DESCRIPTION</h2>
+<p>The <code class="inline"><span class="w">warnings</span></code>
+ pragma gives control over which warnings are enabled in
+which parts of a Perl program.  It's a more flexible alternative for
+both the command line flag <strong>-w</strong> and the equivalent Perl variable,
+<code class="inline"><span class="i">$^W</span></code>
+.</p>
+<p>This pragma works just like the <code class="inline"><span class="w">strict</span></code>
+ pragma.
+This means that the scope of the warning pragma is limited to the
+enclosing block.  It also means that the pragma setting will not
+leak across files (via <code class="inline"><a class="l_k" href="functions/use.html">use</a></code>, <code class="inline"><a class="l_k" href="functions/require.html">require</a></code> or <code class="inline"><a class="l_k" href="functions/do.html">do</a></code>).  This allows
+authors to independently define the degree of warning checks that will
+be applied to their module.</p>
+<p>By default, optional warnings are disabled, so any legacy code that
+doesn't attempt to control the warnings will work unchanged.</p>
+<p>All warnings are enabled in a block by either of these:</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="functions/use.html">use</a> <span class="w">warnings</span><span class="sc">;</span></li><li>    <a class="l_k" href="functions/use.html">use</a> <span class="w">warnings</span> <span class="q">&#39;all&#39;</span><span class="sc">;</span></li></ol></pre><p>Similarly all warnings are disabled in a block by either of these:</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="functions/no.html">no</a> <span class="w">warnings</span><span class="sc">;</span></li><li>    <a class="l_k" href="functions/no.html">no</a> <span class="w">warnings</span> <span class="q">&#39;all&#39;</span><span class="sc">;</span></li></ol></pre><p>For example, consider the code below:</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="functions/use.html">use</a> <span class="w">warnings</span><span class="sc">;</span></li><li>    <a class="l_k" href="functions/my.html">my</a> <span class="i">@a</span><span class="sc">;</span></li><li>    <span class="s">{</span></li><li>        <a class="l_k" href="functions/no.html">no</a> <span class="w">warnings</span><span class="sc">;</span></li><li>	<a class="l_k" href="functions/my.html">my</a> <span class="i">$b</span> = <span class="i">@a</span>[<span class="n">0</span>]<span class="sc">;</span></li><li>    <span class="s">}</span></li><li>    <a class="l_k" href="functions/my.html">my</a> <span class="i">$c</span> = <span class="i">@a</span>[<span class="n">0</span>]<span class="sc">;</span></li></ol></pre><p>The code in the enclosing block has warnings enabled, but the inner
+block has them disabled.  In this case that means the assignment to the
+scalar <code class="inline"><span class="i">$c</span></code>
+ will trip the <code class="inline"><span class="q">&quot;Scalar value @a[0] better written as $a[0]&quot;</span></code>
+
+warning, but the assignment to the scalar <code class="inline"><span class="i">$b</span></code>
+ will not.</p>
+<a class='view-head2' id="Default-Warnings-and-Optional-Warnings"></a><h3 class='h3' >Default Warnings and Optional Warnings</h3>
+<p>Before the introduction of lexical warnings, Perl had two classes of
+warnings: mandatory and optional.</p>
+<p>As its name suggests, if your code tripped a mandatory warning, you
+would get a warning whether you wanted it or not.
+For example, the code below would always produce an <code class="inline"><span class="q">&quot;isn&#39;t numeric&quot;</span></code>
+
+warning about the "2:".</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="functions/my.html">my</a> <span class="i">$a</span> = <span class="q">&quot;2:&quot;</span> + <span class="n">3</span><span class="sc">;</span></li></ol></pre><p>With the introduction of lexical warnings, mandatory warnings now become
+<i>default</i> warnings.  The difference is that although the previously
+mandatory warnings are still enabled by default, they can then be
+subsequently enabled or disabled with the lexical warning pragma.  For
+example, in the code below, an <code class="inline"><span class="q">&quot;isn&#39;t numeric&quot;</span></code>
+ warning will only
+be reported for the <code class="inline"><span class="i">$a</span></code>
+ variable.</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="functions/my.html">my</a> <span class="i">$a</span> = <span class="q">&quot;2:&quot;</span> + <span class="n">3</span><span class="sc">;</span></li><li>    <a class="l_k" href="functions/no.html">no</a> <span class="w">warnings</span><span class="sc">;</span></li><li>    <a class="l_k" href="functions/my.html">my</a> <span class="i">$b</span> = <span class="q">&quot;2:&quot;</span> + <span class="n">3</span><span class="sc">;</span></li></ol></pre><p>Note that neither the <strong>-w</strong> flag or the <code class="inline"><span class="i">$^W</span></code>
+ can be used to
+disable/enable default warnings.  They are still mandatory in this case.</p>
+<a class='view-head2' id="What's-wrong-with-*-w*-and-%24%5eW"></a><h3 class='h3' >What's wrong with <strong>-w</strong> and <code class="inline"><span class="i">$^W</span></code>
+</h3>
+<p>Although very useful, the big problem with using <strong>-w</strong> on the command
+line to enable warnings is that it is all or nothing.  Take the typical
+scenario when you are writing a Perl program.  Parts of the code you
+will write yourself, but it's very likely that you will make use of
+pre-written Perl modules.  If you use the <strong>-w</strong> flag in this case, you
+end up enabling warnings in pieces of code that you haven't written.</p>
+<p>Similarly, using <code class="inline"><span class="i">$^W</span></code>
+ to either disable or enable blocks of code is
+fundamentally flawed.  For a start, say you want to disable warnings in
+a block of code.  You might expect this to be enough to do the trick:</p>
+<pre class="verbatim"><ol><li>     <span class="s">{</span></li><li>         <a class="l_k" href="functions/local.html">local</a> <span class="s">(</span><span class="i">$^W</span><span class="s">)</span> = <span class="n">0</span><span class="sc">;</span></li><li>	 <a class="l_k" href="functions/my.html">my</a> <span class="i">$a</span> =+ <span class="n">2</span><span class="sc">;</span></li><li>	 <a class="l_k" href="functions/my.html">my</a> <span class="i">$b</span><span class="sc">;</span> <a class="l_k" href="functions/chop.html">chop</a> <span class="i">$b</span><span class="sc">;</span></li><li>     <span class="s">}</span></li></ol></pre><p>When this code is run with the <strong>-w</strong> flag, a warning will be produced
+for the <code class="inline"><span class="i">$a</span></code>
+ line:  <code class="inline"><span class="q">&quot;Reversed += operator&quot;</span></code>
+.</p>
+<p>The problem is that Perl has both compile-time and run-time warnings.  To
+disable compile-time warnings you need to rewrite the code like this:</p>
+<pre class="verbatim"><ol><li>     <span class="s">{</span></li><li>         <a class="l_k" href="functions/BEGIN.html">BEGIN</a> <span class="s">{</span> <span class="i">$^W</span> = <span class="n">0</span> <span class="s">}</span></li><li>	 <a class="l_k" href="functions/my.html">my</a> <span class="i">$a</span> =+ <span class="n">2</span><span class="sc">;</span></li><li>	 <a class="l_k" href="functions/my.html">my</a> <span class="i">$b</span><span class="sc">;</span> <a class="l_k" href="functions/chop.html">chop</a> <span class="i">$b</span><span class="sc">;</span></li><li>     <span class="s">}</span></li></ol></pre><p>The other big problem with <code class="inline"><span class="i">$^W</span></code>
+ is the way you can inadvertently
+change the warning setting in unexpected places in your code.  For example,
+when the code below is run (without the <strong>-w</strong> flag), the second call
+to <code class="inline"><span class="w">doit</span></code>
+ will trip a <code class="inline"><span class="q">&quot;Use of uninitialized value&quot;</span></code>
+ warning, whereas
+the first will not.</p>
+<pre class="verbatim"><ol><li><a name="doit"></a>    sub <span class="m">doit</span></li><li>    <span class="s">{</span></li><li>        <a class="l_k" href="functions/my.html">my</a> <span class="i">$b</span><span class="sc">;</span> <a class="l_k" href="functions/chop.html">chop</a> <span class="i">$b</span><span class="sc">;</span></li><li>    <span class="s">}</span></li><li></li><li>    <span class="i">doit</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>    <span class="s">{</span></li><li>        <a class="l_k" href="functions/local.html">local</a> <span class="s">(</span><span class="i">$^W</span><span class="s">)</span> = <span class="n">1</span><span class="sc">;</span></li><li>        <span class="i">doit</span><span class="s">(</span><span class="s">)</span></li><li>    <span class="s">}</span></li></ol></pre><p>This is a side-effect of <code class="inline"><span class="i">$^W</span></code>
+ being dynamically scoped.</p>
+<p>Lexical warnings get around these limitations by allowing finer control
+over where warnings can or can't be tripped.</p>
+<a class='view-head2' id="Controlling-Warnings-from-the-Command-Line"></a><h3 class='h3' >Controlling Warnings from the Command Line</h3>
+<p>There are three Command Line flags that can be used to control when
+warnings are (or aren't) produced:</p>
+<ul>
+<li><a class='view-title' id="*-w*"></a><strong><strong>-w</strong>
+</strong>
+<p>This is  the existing flag.  If the lexical warnings pragma is <strong>not</strong>
+used in any of you code, or any of the modules that you use, this flag
+will enable warnings everywhere.  See <a href="#Backward-Compatibility">Backward Compatibility</a> for
+details of how this flag interacts with lexical warnings.</p>
+</li>
+<li><a class='view-title' id="*-W*"></a><strong><strong>-W</strong>
+</strong>
+<p>If the <strong>-W</strong> flag is used on the command line, it will enable all warnings
+throughout the program regardless of whether warnings were disabled
+locally using <code class="inline"><a class="l_k" href="functions/no.html">no</a> <span class="w">warnings</span></code>
+ or <code class="inline"><span class="i">$^W</span> =<span class="n">0</span></code>
+.
+This includes all files that get
+included via <code class="inline"><a class="l_k" href="functions/use.html">use</a></code>, <code class="inline"><a class="l_k" href="functions/require.html">require</a></code> or <code class="inline"><a class="l_k" href="functions/do.html">do</a></code>.
+Think of it as the Perl equivalent of the "lint" command.</p>
+</li>
+<li><a class='view-title' id="*-X*"></a><strong><strong>-X</strong>
+</strong>
+<p>Does the exact opposite to the <strong>-W</strong> flag, i.e. it disables all warnings.</p>
+</li>
+</ul>
+<a class='view-head2' id="Backward-Compatibility"></a><h3 class='h3' >Backward Compatibility</h3>
+<p>If you are used to working with a version of Perl prior to the
+introduction of lexically scoped warnings, or have code that uses both
+lexical warnings and <code class="inline"><span class="i">$^W</span></code>
+, this section will describe how they interact.</p>
+<p>How Lexical Warnings interact with <strong>-w</strong>/<code class="inline"><span class="i">$^W</span></code>
+:</p>
+<dl>
+<li>
+<p>If none of the three command line flags (<strong>-w</strong>, <strong>-W</strong> or <strong>-X</strong>) that
+control warnings is used and neither <code class="inline"><span class="i">$^W</span></code>
+ nor the <code class="inline"><span class="w">warnings</span></code>
+ pragma
+are used, then default warnings will be enabled and optional warnings
+disabled.
+This means that legacy code that doesn't attempt to control the warnings
+will work unchanged.</p>
+</li>
+<li>
+<p>The <strong>-w</strong> flag just sets the global <code class="inline"><span class="i">$^W</span></code>
+ variable as in 5.005.  This
+means that any legacy code that currently relies on manipulating <code class="inline"><span class="i">$^W</span></code>
+
+to control warning behavior will still work as is.</p>
+</li>
+<li>
+<p>Apart from now being a boolean, the <code class="inline"><span class="i">$^W</span></code>
+ variable operates in exactly
+the same horrible uncontrolled global way, except that it cannot
+disable/enable default warnings.</p>
+</li>
+<li>
+<p>If a piece of code is under the control of the <code class="inline"><span class="w">warnings</span></code>
+ pragma,
+both the <code class="inline"><span class="i">$^W</span></code>
+ variable and the <strong>-w</strong> flag will be ignored for the
+scope of the lexical warning.</p>
+</li>
+<li>
+<p>The only way to override a lexical warnings setting is with the <strong>-W</strong>
+or <strong>-X</strong> command line flags.</p>
+</li>
+</dl>
+<p>The combined effect of 3 &amp; 4 is that it will allow code which uses
+the <code class="inline"><span class="w">warnings</span></code>
+ pragma to control the warning behavior of $^W-type
+code (using a <code class="inline"><a class="l_k" href="functions/local.html">local</a> <span class="i">$^W</span>=<span class="n">0</span></code>
+) if it really wants to, but not vice-versa.</p>
+<a class='view-head2' id="Category-Hierarchy"></a><h3 class='h3' >Category Hierarchy
+</h3>
+<p>A hierarchy of "categories" have been defined to allow groups of warnings
+to be enabled/disabled in isolation.</p>
+<p>The current hierarchy is:</p>
+<pre class="verbatim"><ol><li>    <span class="w">all</span> -+</li><li>         |</li><li>         +- <span class="w">closure</span></li><li>         |</li><li>         +- <span class="w">deprecated</span></li><li>         |</li><li>         +- <span class="w">exiting</span></li><li>         |</li><li>         +- <span class="w">experimental</span> --+</li><li>         |                 |</li><li>         |                 +- <span class="w">experimental::alpha_assertions</span></li><li>         |                 |</li><li>         |                 +- <span class="w">experimental::bitwise</span></li><li>         |                 |</li><li>         |                 +- <span class="w">experimental::const_attr</span></li><li>         |                 |</li><li>         |                 +- <span class="w">experimental::declared_refs</span></li><li>         |                 |</li><li>         |                 +- <span class="w">experimental::lexical_subs</span></li><li>         |                 |</li><li>         |                 +- <span class="w">experimental::postderef</span></li><li>         |                 |</li><li>         |                 +- <span class="w">experimental::re_strict</span></li><li>         |                 |</li><li>         |                 +- <span class="w">experimental::refaliasing</span></li><li>         |                 |</li><li>         |                 +- <span class="w">experimental::regex_sets</span></li><li>         |                 |</li><li>         |                 +- <span class="w">experimental::script_run</span></li><li>         |                 |</li><li>         |                 +- <span class="w">experimental::signatures</span></li><li>         |                 |</li><li>         |                 +- <span class="w">experimental::smartmatch</span></li><li>         |                 |</li><li>         |                 +- <span class="w">experimental::win32_perlio</span></li><li>         |</li><li>         +- <a class="l_k" href="functions/glob.html">glob</a></li><li>         |</li><li>         +- <span class="w">imprecision</span></li><li>         |</li><li>         +- <span class="w">io</span> ------------+</li><li>         |                 |</li><li>         |                 +- <span class="w">closed</span></li><li>         |                 |</li><li>         |                 +- <a class="l_k" href="functions/exec.html">exec</a></li><li>         |                 |</li><li>         |                 +- <span class="w">layer</span></li><li>         |                 |</li><li>         |                 +- <span class="w">newline</span></li><li>         |                 |</li><li>         |                 +- <a class="l_k" href="functions/pipe.html">pipe</a></li><li>         |                 |</li><li>         |                 +- <span class="w">syscalls</span></li><li>         |                 |</li><li>         |                 +- <span class="w">unopened</span></li><li>         |</li><li>         +- <span class="w">locale</span></li><li>         |</li><li>         +- <span class="w">misc</span></li><li>         |</li><li>         +- <span class="w">missing</span></li><li>         |</li><li>         +- <span class="w">numeric</span></li><li>         |</li><li>         +- <span class="w">once</span></li><li>         |</li><li>         +- <span class="w">overflow</span></li><li>         |</li><li>         +- <a class="l_k" href="functions/pack.html">pack</a></li><li>         |</li><li>         +- <span class="w">portable</span></li><li>         |</li><li>         +- <span class="w">recursion</span></li><li>         |</li><li>         +- <span class="w">redefine</span></li><li>         |</li><li>         +- <span class="w">redundant</span></li><li>         |</li><li>         +- <span class="w">regexp</span></li><li>         |</li><li>         +- <span class="w">severe</span> --------+</li><li>         |                 |</li><li>         |                 +- <span class="w">debugging</span></li><li>         |                 |</li><li>         |                 +- <span class="w">inplace</span></li><li>         |                 |</li><li>         |                 +- <span class="w">internal</span></li><li>         |                 |</li><li>         |                 +- <span class="w">malloc</span></li><li>         |</li><li>         +- <span class="w">shadow</span></li><li>         |</li><li>         +- <span class="w">signal</span></li><li>         |</li><li>         +- <a class="l_k" href="functions/substr.html">substr</a></li><li>         |</li><li>         +- <span class="w">syntax</span> --------+</li><li>         |                 |</li><li>         |                 +- <span class="w">ambiguous</span></li><li>         |                 |</li><li>         |                 +- <span class="w">bareword</span></li><li>         |                 |</li><li>         |                 +- <span class="w">digit</span></li><li>         |                 |</li><li>         |                 +- <span class="w">illegalproto</span></li><li>         |                 |</li><li>         |                 +- <span class="w">parenthesis</span></li><li>         |                 |</li><li>         |                 +- <span class="w">precedence</span></li><li>         |                 |</li><li>         |                 +- <a class="l_k" href="functions/printf.html">printf</a></li><li>         |                 |</li><li>         |                 +- <a class="l_k" href="functions/prototype.html">prototype</a></li><li>         |                 |</li><li>         |                 +- <span class="q">qw</span></li><li>         <span class="q">|                 |</span></li><li>         |                 +- <span class="w">reserved</span></li><li>         |                 |</li><li>         |                 +- <span class="w">semicolon</span></li><li>         |</li><li>         +- <span class="w">taint</span></li><li>         |</li><li>         +- <span class="w">threads</span></li><li>         |</li><li>         +- <span class="w">uninitialized</span></li><li>         |</li><li>         +- <a class="l_k" href="functions/unpack.html">unpack</a></li><li>         |</li><li>         +- <a class="l_k" href="functions/untie.html">untie</a></li><li>         |</li><li>         +- <span class="w">utf8</span> ----------+</li><li>         |                 |</li><li>         |                 +- <span class="w">non_unicode</span></li><li>         |                 |</li><li>         |                 +- <span class="w">nonchar</span></li><li>         |                 |</li><li>         |                 +- <span class="w">surrogate</span></li><li>         |</li><li>         +- <span class="w">void</span></li></ol></pre><p>Just like the "strict" pragma any of these categories can be combined</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="functions/use.html">use</a> <span class="w">warnings</span> <span class="q">qw(void redefine)</span><span class="sc">;</span></li><li>    <a class="l_k" href="functions/no.html">no</a> <span class="w">warnings</span> <span class="q">qw(io syntax untie)</span><span class="sc">;</span></li></ol></pre><p>Also like the "strict" pragma, if there is more than one instance of the
+<code class="inline"><span class="w">warnings</span></code>
+ pragma in a given scope the cumulative effect is additive.</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="functions/use.html">use</a> <span class="w">warnings</span> <span class="q">qw(void)</span><span class="sc">;</span> <span class="c"># only &quot;void&quot; warnings enabled</span></li><li>    ...</li><li>    <a class="l_k" href="functions/use.html">use</a> <span class="w">warnings</span> <span class="q">qw(io)</span><span class="sc">;</span>   <span class="c"># only &quot;void&quot; &amp; &quot;io&quot; warnings enabled</span></li><li>    ...</li><li>    <a class="l_k" href="functions/no.html">no</a> <span class="w">warnings</span> <span class="q">qw(void)</span><span class="sc">;</span>  <span class="c"># only &quot;io&quot; warnings enabled</span></li></ol></pre><p>To determine which category a specific warning has been assigned to see
+<a href="perldiag.html">perldiag</a>.</p>
+<p>Note: Before Perl 5.8.0, the lexical warnings category "deprecated" was a
+sub-category of the "syntax" category.  It is now a top-level category
+in its own right.</p>
+<p>Note: Before 5.21.0, the "missing" lexical warnings category was
+internally defined to be the same as the "uninitialized" category. It
+is now a top-level category in its own right.</p>
+<a class='view-head2' id="Fatal-Warnings"></a><h3 class='h3' >Fatal Warnings
+</h3>
+<p>The presence of the word "FATAL" in the category list will escalate
+warnings in those categories into fatal errors in that lexical scope.</p>
+<p><strong>NOTE:</strong> FATAL warnings should be used with care, particularly
+<code class="inline"><span class="w">FATAL</span> <span class="cm">=&gt;</span> <span class="q">&#39;all&#39;</span></code>
+.</p>
+<p>Libraries using <a href="#FUNCTIONS">warnings::warn</a> for custom warning categories
+generally don't expect <a href="#FUNCTIONS">warnings::warn</a> to be fatal and can wind up
+in an unexpected state as a result.  For XS modules issuing categorized
+warnings, such unanticipated exceptions could also expose memory leak bugs.</p>
+<p>Moreover, the Perl interpreter itself has had serious bugs involving
+fatalized warnings.  For a summary of resolved and unresolved problems as
+of January 2015, please see
+<a class='link-to-page' href="http://www.nntp.perl.org/group/perl.perl5.porters/2015/01/msg225235.html">this perl5-porters post</a>.</p>
+<p>While some developers find fatalizing some warnings to be a useful
+defensive programming technique, using <code class="inline"><span class="w">FATAL</span> <span class="cm">=&gt;</span> <span class="q">&#39;all&#39;</span></code>
+ to fatalize
+all possible warning categories -- including custom ones -- is particularly
+risky.  Therefore, the use of <code class="inline"><span class="w">FATAL</span> <span class="cm">=&gt;</span> <span class="q">&#39;all&#39;</span></code>
+ is
+<a href="perlpolicy.html#discouraged">discouraged</a>.</p>
+<p>The <a href="https://search.cpan.org/perldoc/strictures#VERSION-2">strictures</a> module on CPAN offers one example of
+a warnings subset that the module's authors believe is relatively safe to
+fatalize.</p>
+<p><strong>NOTE:</strong> users of FATAL warnings, especially those using
+<code class="inline"><span class="w">FATAL</span> <span class="cm">=&gt;</span> <span class="q">&#39;all&#39;</span></code>
+, should be fully aware that they are risking future
+portability of their programs by doing so.  Perl makes absolutely no
+commitments to not introduce new warnings or warnings categories in the
+future; indeed, we explicitly reserve the right to do so.  Code that may
+not warn now may warn in a future release of Perl if the Perl5 development
+team deems it in the best interests of the community to do so.  Should code
+using FATAL warnings break due to the introduction of a new warning we will
+NOT consider it an incompatible change.  Users of FATAL warnings should
+take special caution during upgrades to check to see if their code triggers
+any new warnings and should pay particular attention to the fine print of
+the documentation of the features they use to ensure they do not exploit
+features that are documented as risky, deprecated, or unspecified, or where
+the documentation says "so don't do that", or anything with the same sense
+and spirit.  Use of such features in combination with FATAL warnings is
+ENTIRELY AT THE USER'S RISK.</p>
+<p>The following documentation describes how to use FATAL warnings but the
+perl5 porters strongly recommend that you understand the risks before doing
+so, especially for library code intended for use by others, as there is no
+way for downstream users to change the choice of fatal categories.</p>
+<p>In the code below, the use of <code class="inline"><a class="l_k" href="functions/time.html">time</a></code>, <code class="inline"><a class="l_k" href="functions/length.html">length</a></code>
+and <code class="inline"><a class="l_k" href="functions/join.html">join</a></code> can all produce a <code class="inline"><span class="q">&quot;Useless use of xxx in void context&quot;</span></code>
+
+warning.</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="functions/use.html">use</a> <span class="w">warnings</span><span class="sc">;</span></li><li></li><li>    <a class="l_k" href="functions/time.html">time</a><span class="sc">;</span></li><li></li><li>    <span class="s">{</span></li><li>        <a class="l_k" href="functions/use.html">use</a> <span class="w">warnings</span> <span class="w">FATAL</span> <span class="cm">=&gt;</span> <span class="q">qw(void)</span><span class="sc">;</span></li><li>        <a class="l_k" href="functions/length.html">length</a> <span class="q">&quot;abc&quot;</span><span class="sc">;</span></li><li>    <span class="s">}</span></li><li></li><li>    <a class="l_k" href="functions/join.html">join</a> <span class="q">&quot;&quot;</span><span class="cm">,</span> <span class="n">1</span><span class="cm">,</span><span class="n">2</span><span class="cm">,</span><span class="n">3</span><span class="sc">;</span></li><li></li><li>    <a class="l_k" href="functions/print.html">print</a> <span class="q">&quot;done\n&quot;</span><span class="sc">;</span></li></ol></pre><p>When run it produces this output</p>
+<pre class="verbatim"><ol><li>    <span class="w">Useless</span> <a class="l_k" href="functions/use.html">use</a> <span class="w">of</span> <a class="l_k" href="functions/time.html">time</a> <span class="w">in</span> <span class="w">void</span> <span class="w">context</span> <span class="w">at</span> <span class="w">fatal</span> <span class="w">line</span> <span class="n">3.</span></li><li>    <span class="w">Useless</span> <a class="l_k" href="functions/use.html">use</a> <span class="w">of</span> <a class="l_k" href="functions/length.html">length</a> <span class="w">in</span> <span class="w">void</span> <span class="w">context</span> <span class="w">at</span> <span class="w">fatal</span> <span class="w">line</span> <span class="n">7.</span></li></ol></pre><p>The scope where <code class="inline"><a class="l_k" href="functions/length.html">length</a></code> is used has escalated the <code class="inline"><span class="w">void</span></code>
+ warnings
+category into a fatal error, so the program terminates immediately when it
+encounters the warning.</p>
+<p>To explicitly turn off a "FATAL" warning you just disable the warning
+it is associated with.  So, for example, to disable the "void" warning
+in the example above, either of these will do the trick:</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="functions/no.html">no</a> <span class="w">warnings</span> <span class="q">qw(void)</span><span class="sc">;</span></li><li>    <a class="l_k" href="functions/no.html">no</a> <span class="w">warnings</span> <span class="w">FATAL</span> <span class="cm">=&gt;</span> <span class="q">qw(void)</span><span class="sc">;</span></li></ol></pre><p>If you want to downgrade a warning that has been escalated into a fatal
+error back to a normal warning, you can use the "NONFATAL" keyword.  For
+example, the code below will promote all warnings into fatal errors,
+except for those in the "syntax" category.</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="functions/use.html">use</a> <span class="w">warnings</span> <span class="w">FATAL</span> <span class="cm">=&gt;</span> <span class="q">&#39;all&#39;</span><span class="cm">,</span> <span class="w">NONFATAL</span> <span class="cm">=&gt;</span> <span class="q">&#39;syntax&#39;</span><span class="sc">;</span></li></ol></pre><p>As of Perl 5.20, instead of <code class="inline"><a class="l_k" href="functions/use.html">use</a> <span class="w">warnings</span> <span class="w">FATAL</span> <span class="cm">=&gt;</span> <span class="q">&#39;all&#39;</span><span class="sc">;</span></code>
+ you can
+use:</p>
+<pre class="verbatim"><ol><li>   <a class="l_k" href="functions/use.html">use</a> <span class="v">v5.20</span><span class="sc">;</span>       <span class="c"># Perl 5.20 or greater is required for the following</span></li><li>   <a class="l_k" href="functions/use.html">use</a> <span class="w">warnings</span> <span class="q">&#39;FATAL&#39;</span><span class="sc">;</span>  <span class="c"># short form of &quot;use warnings FATAL =&gt; &#39;all&#39;;&quot;</span></li></ol></pre><p>If you want your program to be compatible with versions of Perl before
+5.20, you must use <code class="inline"><a class="l_k" href="functions/use.html">use</a> <span class="w">warnings</span> <span class="w">FATAL</span> <span class="cm">=&gt;</span> <span class="q">&#39;all&#39;</span><span class="sc">;</span></code>
+ instead.  (In
+previous versions of Perl, the behavior of the statements
+<code class="inline"><a class="l_k" href="functions/use.html">use</a> <span class="w">warnings</span> <span class="q">&#39;FATAL&#39;</span><span class="sc">;</span></code>
+, <code class="inline"><a class="l_k" href="functions/use.html">use</a> <span class="w">warnings</span> <span class="q">&#39;NONFATAL&#39;</span><span class="sc">;</span></code>
+ and
+<code class="inline"><a class="l_k" href="functions/no.html">no</a> <span class="w">warnings</span> <span class="q">&#39;FATAL&#39;</span><span class="sc">;</span></code>
+ was unspecified; they did not behave as if
+they included the <code class="inline"><span class="cm">=&gt;</span> <span class="q">&#39;all&#39;</span></code>
+ portion.  As of 5.20, they do.)</p>
+<a class='view-head2' id="Reporting-Warnings-from-a-Module"></a><h3 class='h3' >Reporting Warnings from a Module
+ </h3>
+<p>The <code class="inline"><span class="w">warnings</span></code>
+ pragma provides a number of functions that are useful for
+module authors.  These are used when you want to report a module-specific
+warning to a calling module has enabled warnings via the <code class="inline"><span class="w">warnings</span></code>
+
+pragma.</p>
+<p>Consider the module <code class="inline"><span class="w">MyMod::Abc</span></code>
+ below.</p>
+<pre class="verbatim"><ol><li><a name="package-MyMod::Abc"></a>    package <span class="i">MyMod::Abc</span><span class="sc">;</span></li><li></li><li>    <a class="l_k" href="functions/use.html">use</a> <span class="w">warnings::register</span><span class="sc">;</span></li><li></li><li><a name="open"></a>    sub <span class="m">open</span> <span class="s">{</span></li><li>        <a class="l_k" href="functions/my.html">my</a> <span class="i">$path</span> = <a class="l_k" href="functions/shift.html">shift</a><span class="sc">;</span></li><li>        <a class="l_k" href="functions/if.html">if</a> <span class="s">(</span><span class="i">$path</span> !~ <span class="q">m#^/#</span><span class="s">)</span> <span class="s">{</span></li><li>            <span class="i">warnings::warn</span><span class="s">(</span><span class="q">&quot;changing relative path to /var/abc&quot;</span><span class="s">)</span></li><li>                <a class="l_k" href="functions/if.html">if</a> <span class="i">warnings::enabled</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li><li>            <span class="i">$path</span> = <span class="q">&quot;/var/abc/$path&quot;</span><span class="sc">;</span></li><li>        <span class="s">}</span></li><li>    <span class="s">}</span></li><li></li><li>    <span class="n">1</span><span class="sc">;</span></li></ol></pre><p>The call to <code class="inline"><span class="w">warnings::register</span></code>
+ will create a new warnings category
+called "MyMod::Abc", i.e. the new category name matches the current
+package name.  The <code class="inline"><a class="l_k" href="functions/open.html">open</a></code> function in the module will display a warning
+message if it gets given a relative path as a parameter.  This warnings
+will only be displayed if the code that uses <code class="inline"><span class="w">MyMod::Abc</span></code>
+ has actually
+enabled them with the <code class="inline"><span class="w">warnings</span></code>
+ pragma like below.</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="functions/use.html">use</a> <span class="w">MyMod::Abc</span><span class="sc">;</span></li><li>    <a class="l_k" href="functions/use.html">use</a> <span class="w">warnings</span> <span class="q">&#39;MyMod::Abc&#39;</span><span class="sc">;</span></li><li>    ...</li><li>    <span class="i">abc::open</span><span class="s">(</span><span class="q">&quot;../fred.txt&quot;</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>It is also possible to test whether the pre-defined warnings categories are
+set in the calling module with the <code class="inline"><span class="w">warnings::enabled</span></code>
+ function.  Consider
+this snippet of code:</p>
+<pre class="verbatim"><ol><li><a name="package-MyMod::Abc"></a>    package <span class="i">MyMod::Abc</span><span class="sc">;</span></li><li></li><li><a name="open"></a>    sub <span class="m">open</span> <span class="s">{</span></li><li>        <a class="l_k" href="functions/if.html">if</a> <span class="s">(</span><span class="i">warnings::enabled</span><span class="s">(</span><span class="q">&quot;deprecated&quot;</span><span class="s">)</span><span class="s">)</span> <span class="s">{</span></li><li>            <span class="i">warnings::warn</span><span class="s">(</span><span class="q">&quot;deprecated&quot;</span><span class="cm">,</span></li><li>                           <span class="q">&quot;open is deprecated, use new instead&quot;</span><span class="s">)</span><span class="sc">;</span></li><li>        <span class="s">}</span></li><li>        <span class="i">new</span><span class="s">(</span><span class="i">@_</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="s">}</span></li><li></li><li><a name="new"></a>    sub <span class="m">new</span></li><li>    ...</li><li>    <span class="n">1</span><span class="sc">;</span></li></ol></pre><p>The function <code class="inline"><a class="l_k" href="functions/open.html">open</a></code> has been deprecated, so code has been included to
+display a warning message whenever the calling module has (at least) the
+"deprecated" warnings category enabled.  Something like this, say.</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="functions/use.html">use</a> <span class="w">warnings</span> <span class="q">&#39;deprecated&#39;</span><span class="sc">;</span></li><li>    <a class="l_k" href="functions/use.html">use</a> <span class="w">MyMod::Abc</span><span class="sc">;</span></li><li>    ...</li><li>    <span class="i">MyMod::Abc::open</span><span class="s">(</span><span class="i">$filename</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>Either the <code class="inline"><span class="w">warnings::warn</span></code>
+ or <code class="inline"><span class="w">warnings::warnif</span></code>
+ function should be
+used to actually display the warnings message.  This is because they can
+make use of the feature that allows warnings to be escalated into fatal
+errors.  So in this case</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="functions/use.html">use</a> <span class="w">MyMod::Abc</span><span class="sc">;</span></li><li>    <a class="l_k" href="functions/use.html">use</a> <span class="w">warnings</span> <span class="w">FATAL</span> <span class="cm">=&gt;</span> <span class="q">&#39;MyMod::Abc&#39;</span><span class="sc">;</span></li><li>    ...</li><li>    <span class="i">MyMod::Abc::open</span><span class="s">(</span><span class="q">&#39;../fred.txt&#39;</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>the <code class="inline"><span class="w">warnings::warnif</span></code>
+ function will detect this and die after
+displaying the warning message.</p>
+<p>The three warnings functions, <code class="inline"><span class="w">warnings::warn</span></code>
+, <code class="inline"><span class="w">warnings::warnif</span></code>
+
+and <code class="inline"><span class="w">warnings::enabled</span></code>
+ can optionally take an object reference in place
+of a category name.  In this case the functions will use the class name
+of the object as the warnings category.</p>
+<p>Consider this example:</p>
+<pre class="verbatim"><ol><li><a name="package-Original"></a>    package <span class="i">Original</span><span class="sc">;</span></li><li></li><li>    <a class="l_k" href="functions/no.html">no</a> <span class="w">warnings</span><span class="sc">;</span></li><li>    <a class="l_k" href="functions/use.html">use</a> <span class="w">warnings::register</span><span class="sc">;</span></li><li></li><li><a name="new"></a>    sub <span class="m">new</span></li><li>    <span class="s">{</span></li><li>        <a class="l_k" href="functions/my.html">my</a> <span class="i">$class</span> = <a class="l_k" href="functions/shift.html">shift</a><span class="sc">;</span></li><li>        <a class="l_k" href="functions/bless.html">bless</a> <span class="s">[</span><span class="s">]</span><span class="cm">,</span> <span class="i">$class</span><span class="sc">;</span></li><li>    <span class="s">}</span></li><li></li><li><a name="check"></a>    sub <span class="m">check</span></li><li>    <span class="s">{</span></li><li>        <a class="l_k" href="functions/my.html">my</a> <span class="i">$self</span> = <a class="l_k" href="functions/shift.html">shift</a><span class="sc">;</span></li><li>        <a class="l_k" href="functions/my.html">my</a> <span class="i">$value</span> = <a class="l_k" href="functions/shift.html">shift</a><span class="sc">;</span></li><li></li><li>        <a class="l_k" href="functions/if.html">if</a> <span class="s">(</span><span class="i">$value</span> % <span class="n">2</span> &amp;&amp; <span class="i">warnings::enabled</span><span class="s">(</span><span class="i">$self</span><span class="s">)</span><span class="s">)</span></li><li>          <span class="s">{</span> <span class="i">warnings::warn</span><span class="s">(</span><span class="i">$self</span><span class="cm">,</span> <span class="q">&quot;Odd numbers are unsafe&quot;</span><span class="s">)</span> <span class="s">}</span></li><li>    <span class="s">}</span></li><li></li><li><a name="doit"></a>    sub <span class="m">doit</span></li><li>    <span class="s">{</span></li><li>        <a class="l_k" href="functions/my.html">my</a> <span class="i">$self</span> = <a class="l_k" href="functions/shift.html">shift</a><span class="sc">;</span></li><li>        <a class="l_k" href="functions/my.html">my</a> <span class="i">$value</span> = <a class="l_k" href="functions/shift.html">shift</a><span class="sc">;</span></li><li>        <span class="i">$self</span><span class="i">-&gt;check</span><span class="s">(</span><span class="i">$value</span><span class="s">)</span><span class="sc">;</span></li><li>        <span class="c"># ...</span></li><li>    <span class="s">}</span></li><li></li><li>    <span class="n">1</span><span class="sc">;</span></li><li></li><li><a name="package-Derived"></a>    package <span class="i">Derived</span><span class="sc">;</span></li><li></li><li>    <a class="l_k" href="functions/use.html">use</a> <span class="w">warnings::register</span><span class="sc">;</span></li><li>    <a class="l_k" href="functions/use.html">use</a> <span class="w">Original</span><span class="sc">;</span></li><li>    <a class="l_k" href="functions/our.html">our</a> <span class="i">@ISA</span> = <span class="q">qw( Original )</span><span class="sc">;</span></li><li><a name="new-1"></a>    sub <span class="m">new</span></li><li>    <span class="s">{</span></li><li>        <a class="l_k" href="functions/my.html">my</a> <span class="i">$class</span> = <a class="l_k" href="functions/shift.html">shift</a><span class="sc">;</span></li><li>        <a class="l_k" href="functions/bless.html">bless</a> <span class="s">[</span><span class="s">]</span><span class="cm">,</span> <span class="i">$class</span><span class="sc">;</span></li><li>    <span class="s">}</span></li><li></li><li></li><li>    <span class="n">1</span><span class="sc">;</span></li></ol></pre><p>The code below makes use of both modules, but it only enables warnings from
+<code class="inline"><span class="w">Derived</span></code>
+.</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="functions/use.html">use</a> <span class="w">Original</span><span class="sc">;</span></li><li>    <a class="l_k" href="functions/use.html">use</a> <span class="w">Derived</span><span class="sc">;</span></li><li>    <a class="l_k" href="functions/use.html">use</a> <span class="w">warnings</span> <span class="q">&#39;Derived&#39;</span><span class="sc">;</span></li><li>    <a class="l_k" href="functions/my.html">my</a> <span class="i">$a</span> = <span class="w">Original</span><span class="w">-&gt;new</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="i">$a</span><span class="i">-&gt;doit</span><span class="s">(</span><span class="n">1</span><span class="s">)</span><span class="sc">;</span></li><li>    <a class="l_k" href="functions/my.html">my</a> <span class="i">$b</span> = <span class="w">Derived</span><span class="w">-&gt;new</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="i">$a</span><span class="i">-&gt;doit</span><span class="s">(</span><span class="n">1</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>When this code is run only the <code class="inline"><span class="w">Derived</span></code>
+ object, <code class="inline"><span class="i">$b</span></code>
+, will generate
+a warning.</p>
+<pre class="verbatim"><ol><li>    <span class="w">Odd</span> <span class="w">numbers</span> <span class="w">are</span> <span class="w">unsafe</span> <span class="w">at</span> <span class="w">main</span>.<span class="w">pl</span> <span class="w">line</span> <span class="n">7</span></li></ol></pre><p>Notice also that the warning is reported at the line where the object is first
+used.</p>
+<p>When registering new categories of warning, you can supply more names to
+warnings::register like this:</p>
+<pre class="verbatim"><ol><li><a name="package-MyModule"></a>    package <span class="i">MyModule</span><span class="sc">;</span></li><li>    <a class="l_k" href="functions/use.html">use</a> <span class="w">warnings::register</span> <span class="q">qw(format precision)</span><span class="sc">;</span></li><li></li><li>    ...</li><li></li><li>    <span class="i">warnings::warnif</span><span class="s">(</span><span class="q">&#39;MyModule::format&#39;</span><span class="cm">,</span> <span class="q">&#39;...&#39;</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><a class='view-head1' id="FUNCTIONS"></a><h2 class='h2' >FUNCTIONS</h2>
+<p>Note: The functions with names ending in <code class="inline"><span class="w">_at_level</span></code>
+ were added in Perl
+5.28.</p>
+<ul>
+<li><a class='view-title' id="use-warnings%3a%3aregister"></a><strong>use warnings::register</strong>
+<p>Creates a new warnings category with the same name as the package where
+the call to the pragma is used.</p>
+</li>
+<li><a class='view-title' id="warnings%3a%3aenabled()"></a><strong>warnings::enabled()</strong>
+<p>Use the warnings category with the same name as the current package.</p>
+<p>Return TRUE if that warnings category is enabled in the calling module.
+Otherwise returns FALSE.</p>
+</li>
+<li><a class='view-title' id="warnings%3a%3aenabled(%24category)"></a><strong>warnings::enabled($category)</strong>
+<p>Return TRUE if the warnings category, <code class="inline"><span class="i">$category</span></code>
+, is enabled in the
+calling module.
+Otherwise returns FALSE.</p>
+</li>
+<li><a class='view-title' id="warnings%3a%3aenabled(%24object)"></a><strong>warnings::enabled($object)</strong>
+<p>Use the name of the class for the object reference, <code class="inline"><span class="i">$object</span></code>
+, as the
+warnings category.</p>
+<p>Return TRUE if that warnings category is enabled in the first scope
+where the object is used.
+Otherwise returns FALSE.</p>
+</li>
+<li><a class='view-title' id="warnings%3a%3aenabled_at_level(%24category%2c-%24level)"></a><strong>warnings::enabled_at_level($category, $level)</strong>
+<p>Like <code class="inline"><span class="w">warnings::enabled</span></code>
+, but $level specifies the exact call frame, 0
+being the immediate caller.</p>
+</li>
+<li><a class='view-title' id="warnings%3a%3afatal_enabled()"></a><strong>warnings::fatal_enabled()</strong>
+<p>Return TRUE if the warnings category with the same name as the current
+package has been set to FATAL in the calling module.
+Otherwise returns FALSE.</p>
+</li>
+<li><a class='view-title' id="warnings%3a%3afatal_enabled(%24category)"></a><strong>warnings::fatal_enabled($category)</strong>
+<p>Return TRUE if the warnings category <code class="inline"><span class="i">$category</span></code>
+ has been set to FATAL in
+the calling module.
+Otherwise returns FALSE.</p>
+</li>
+<li><a class='view-title' id="warnings%3a%3afatal_enabled(%24object)"></a><strong>warnings::fatal_enabled($object)</strong>
+<p>Use the name of the class for the object reference, <code class="inline"><span class="i">$object</span></code>
+, as the
+warnings category.</p>
+<p>Return TRUE if that warnings category has been set to FATAL in the first
+scope where the object is used.
+Otherwise returns FALSE.</p>
+</li>
+<li><a class='view-title' id="warnings%3a%3afatal_enabled_at_level(%24category%2c-%24level)"></a><strong>warnings::fatal_enabled_at_level($category, $level)</strong>
+<p>Like <code class="inline"><span class="w">warnings::fatal_enabled</span></code>
+, but $level specifies the exact call frame,
+0 being the immediate caller.</p>
+</li>
+<li><a class='view-title' id="warnings%3a%3awarn(%24message)"></a><strong>warnings::warn($message)</strong>
+<p>Print <code class="inline"><span class="i">$message</span></code>
+ to STDERR.</p>
+<p>Use the warnings category with the same name as the current package.</p>
+<p>If that warnings category has been set to "FATAL" in the calling module
+then die. Otherwise return.</p>
+</li>
+<li><a class='view-title' id="warnings%3a%3awarn(%24category%2c-%24message)"></a><strong>warnings::warn($category, $message)</strong>
+<p>Print <code class="inline"><span class="i">$message</span></code>
+ to STDERR.</p>
+<p>If the warnings category, <code class="inline"><span class="i">$category</span></code>
+, has been set to "FATAL" in the
+calling module then die. Otherwise return.</p>
+</li>
+<li><a class='view-title' id="warnings%3a%3awarn(%24object%2c-%24message)"></a><strong>warnings::warn($object, $message)</strong>
+<p>Print <code class="inline"><span class="i">$message</span></code>
+ to STDERR.</p>
+<p>Use the name of the class for the object reference, <code class="inline"><span class="i">$object</span></code>
+, as the
+warnings category.</p>
+<p>If that warnings category has been set to "FATAL" in the scope where <code class="inline"><span class="i">$object</span></code>
+
+is first used then die. Otherwise return.</p>
+</li>
+<li><a class='view-title' id="warnings%3a%3awarn_at_level(%24category%2c-%24level%2c-%24message)"></a><strong>warnings::warn_at_level($category, $level, $message)</strong>
+<p>Like <code class="inline"><span class="w">warnings::warn</span></code>
+, but $level specifies the exact call frame,
+0 being the immediate caller.</p>
+</li>
+<li><a class='view-title' id="warnings%3a%3awarnif(%24message)"></a><strong>warnings::warnif($message)</strong>
+<p>Equivalent to:</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="functions/if.html">if</a> <span class="s">(</span><span class="i">warnings::enabled</span><span class="s">(</span><span class="s">)</span><span class="s">)</span></li><li>      <span class="s">{</span> <span class="i">warnings::warn</span><span class="s">(</span><span class="i">$message</span><span class="s">)</span> <span class="s">}</span></li></ol></pre></li>
+<li><a class='view-title' id="warnings%3a%3awarnif(%24category%2c-%24message)"></a><strong>warnings::warnif($category, $message)</strong>
+<p>Equivalent to:</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="functions/if.html">if</a> <span class="s">(</span><span class="i">warnings::enabled</span><span class="s">(</span><span class="i">$category</span><span class="s">)</span><span class="s">)</span></li><li>      <span class="s">{</span> <span class="i">warnings::warn</span><span class="s">(</span><span class="i">$category</span><span class="cm">,</span> <span class="i">$message</span><span class="s">)</span> <span class="s">}</span></li></ol></pre></li>
+<li><a class='view-title' id="warnings%3a%3awarnif(%24object%2c-%24message)"></a><strong>warnings::warnif($object, $message)</strong>
+<p>Equivalent to:</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="functions/if.html">if</a> <span class="s">(</span><span class="i">warnings::enabled</span><span class="s">(</span><span class="i">$object</span><span class="s">)</span><span class="s">)</span></li><li>      <span class="s">{</span> <span class="i">warnings::warn</span><span class="s">(</span><span class="i">$object</span><span class="cm">,</span> <span class="i">$message</span><span class="s">)</span> <span class="s">}</span></li></ol></pre></li>
+<li><a class='view-title' id="warnings%3a%3awarnif_at_level(%24category%2c-%24level%2c-%24message)"></a><strong>warnings::warnif_at_level($category, $level, $message)</strong>
+<p>Like <code class="inline"><span class="w">warnings::warnif</span></code>
+, but $level specifies the exact call frame,
+0 being the immediate caller.</p>
+</li>
+<li><a class='view-title' id="warnings%3a%3aregister_categories(%40names)"></a><strong>warnings::register_categories(@names)</strong>
+<p>This registers warning categories for the given names and is primarily for
+use by the warnings::register pragma.</p>
+</li>
+</ul>
+<p>See also <a href="perlmodlib.html#Pragmatic-Modules">Pragmatic Modules in perlmodlib</a> and <a href="perldiag.html">perldiag</a>.</p>
+
+
+
+
+      <ul><li><a href="#SYNOPSIS">SYNOPSIS</a></li><li><a href="#DESCRIPTION">DESCRIPTION</a></li><ul><li><a href="#Default-Warnings-and-Optional-Warnings">Default Warnings and Optional Warnings</a></li><li><a href="#What's-wrong-with-*-w*-and-%24%5eW">What's wrong with *-w* and $^W</a></li><li><a href="#Controlling-Warnings-from-the-Command-Line">Controlling Warnings from the Command Line</a></li><li><a href="#Backward-Compatibility">Backward Compatibility</a></li><li><a href="#Category-Hierarchy">Category Hierarchy
+</a></li><li><a href="#Fatal-Warnings">Fatal Warnings
+</a></li><li><a href="#Reporting-Warnings-from-a-Module">Reporting Warnings from a Module
+ </a></li></ul><li><a href="#FUNCTIONS">FUNCTIONS</a></li></ul>
+
+
+                  </div>
+                </article>
+              </div>
+            </div>
+          </main>
+        </div>
+           <footer class="footer row bg-light pt-5 pb-5">
+       <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+           <div class="row">
+               <div class="col-md-4">
+                   <ul class="list-unstyled">
+                       <li>
+                           <h4>Site info</h4>
+                       </li>
+                       <li>Docs mantained by
+                           <a href="//lists.perl.org/list/perl5-porters.html"
+                               rel="noopener">Perl 5 Porters</a>
+                       </li>
+                       <li>Perldoc site development sponsored by
+                           <a href="//opusvl.com" rel="noopener">
+                           <img style="margin: 20px 20px 5px 10px" class="opus-logo" src="/public/img/opusvl_logo.svg" alt="OpusVL Logo">
+                        </a>
+                    <li><span class="about_perldoc"><a href="//about.html">About PerlDOC</a></span>
+                    </li>
+                       </li>
+                   </ul>
+               </div>
+               <div class="col-md-8">
+                   <div class="row">
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Manuals</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.28.3/index-overview.html">Overview</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.28.3/index-tutorials.html">Tutorials</a>
+                               </li>
+                               <li>
+                                   <a href="/5.28.3/index-faq.html">FAQs</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.28.3/index-history.html">Changes</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Reference</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.28.3/index-language.html">Language</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.28.3/index-functions.html">Functions</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.28.3/perlop.html">Operators</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.28.3/perlvar.html">Variables</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Modules</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.28.3/index-modules-A.html">Modules</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.28.3/index-pragmas.html">Pragmas</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.28.3/index-utilities.html">Utilities</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Misc</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.28.3/index-licence.html">License</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.28.3/index-internals.html">Internals</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.28.3/index-platforms.html">Platforms</a>
+                               </li>
+                            <li>
+                                <a
+                                    href="/5.28.3/index-about.html">About</a>
+                            </li>
+                           </ul>
+                       </div>
+                   </div>
+               </div>
+               <div class=" col-12 footer-inf text-center">
+                   <small>perldoc.perl.org - Official documentation for the Perl
+                       programming language</small>
+               </div>
+           </div>
+       </div>
+   </footer>
+
+        	<div class="beta-wrapper beta-bottom-right ">
+		<div class="beta beta-blue  ">
+			<a class="beta-link "
+				href="//github.com/OpusVL/perldoc.perl.org/issues/new" rel="noopener">
+				<span class="beta-text">
+					This website is a Beta release.
+				</span>
+				<span class="beta-text">
+					For any issues please raise a ticket on GitHub
+				</span>
+			</a>
+		</div>
+	</div>
+
+        <script src="/public/js/main.min.js"></script>
+      </body>
+
+      </html>

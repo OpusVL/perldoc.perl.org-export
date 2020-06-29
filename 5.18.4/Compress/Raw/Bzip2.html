@@ -1,0 +1,854 @@
+      
+      
+      
+      
+
+      <!DOCTYPE html>
+      <html lang="en">
+
+      <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Compress::Raw::Bzip2 - perldoc.perl.org">
+        <link rel="icon" href="/public/img/favicon.ico">
+        <title>Compress::Raw::Bzip2 - perldoc.perl.org</title>
+        <link href="/public/css/main.min.css" rel="stylesheet">
+        <link rel="canonical" href="/Compress/Raw/Bzip2.html">
+        <link
+          href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900'
+          rel='stylesheet' type='text/css'>
+        <script>
+          window.ga = window.ga || function () {
+            (ga.q = ga.q || []).push(arguments)
+          };
+          ga.l = +new Date;
+          ga('create', 'UA-1892152-2', 'auto'); // JJ's account
+          ga('create', 'UA-50555-3', 'auto', 'perlOrg'); // perl.org account
+          ga('require', 'outboundLinkTracker', {
+            events: ['click', 'auxclick', 'contextmenu'],
+          });
+          ga('require', 'maxScrollTracker');
+          ga('send', 'pageview');
+          ga('perlOrg.send', 'pageview');
+        </script>
+        <script async src="https://www.google-analytics.com/analytics.js">
+        </script>
+        <script async src="/public/js/tracking.min.js"></script>
+      </head>
+
+      <body class="body container-fluid ">
+        <div class="wrapper">
+
+          <nav
+    class="navbar navbar-dark bg-primary bg-perl fixed-top justify-content-between navbar-expand-lg">
+    <a href="#content" class="skippy sr-only sr-only-focusable">
+        <span class=' skippy-text'>Skip to main content</span>
+    </a>
+    <a class="navbar-brand" href="/">
+        <img class="logo" src="/public/img/logo_perl_doc.svg"
+            alt="Perl Documentation Logo" />
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse"
+        data-target="#navbar" aria-controls="navbar" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="navbar" class="collapse navbar-collapse ">
+        <ul class="navbar-nav ml-auto navbar-right">
+            <form class="nav-item dropdown search-wrapper">
+                <input type="text" id='searchinput' aria-describedby='navbarDropdown5'
+                    placeholder="Type query" class='search-input-field' value=''>
+
+                <button href="#" data-toggle='dropdown' type="button"
+                    aria-haspopup="true" aria-expanded='false' id="navbarDropdown5"
+                    class="nav-link dropdown-toggle search-link">
+                    <object tabindex='-1' focusable="false" class='search-icon'
+                        data="/public/img/search.svg" type="image/svg+xml"
+                        name='search icon'>search
+                        icon</object>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown5"
+                    id='search-results'>
+                    <p class='dropdown-item major-version'>
+                        No results
+                    </p>
+                </div>
+            </form>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown" href="#" class="nav-link dropdown-toggle"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Perl versions</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    
+                        <p class='dropdown-item major-version'>
+                            5.32
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.32.0/">5.32.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.30
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.3/">5.30.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.2/">5.30.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.1/">5.30.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.0/">5.30.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.28
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.3/">5.28.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.2/">5.28.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.1/">5.28.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.0/">5.28.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.26
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.3/">5.26.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.2/">5.26.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.1/">5.26.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.0/">5.26.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.24
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.4/">5.24.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.3/">5.24.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.2/">5.24.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.1/">5.24.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.0/">5.24.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.22
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.4/">5.22.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.3/">5.22.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.2/">5.22.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.1/">5.22.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.0/">5.22.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.20
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.3/">5.20.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.2/">5.20.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.1/">5.20.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.0/">5.20.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.18
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.4/">5.18.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.3/">5.18.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.2/">5.18.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.1/">5.18.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.0/">5.18.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.16
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.3/">5.16.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.2/">5.16.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.1/">5.16.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.0/">5.16.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.14
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.4/">5.14.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.3/">5.14.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.2/">5.14.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.1/">5.14.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.0/">5.14.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.12
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.5/">5.12.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.4/">5.12.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.3/">5.12.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.2/">5.12.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.1/">5.12.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.0/">5.12.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.10
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.1/">5.10.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.0/">5.10.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.8
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.9/">5.8.9</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.8/">5.8.8</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.7/">5.8.7</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.6/">5.8.6</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.5/">5.8.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.4/">5.8.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.3/">5.8.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.2/">5.8.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.1/">5.8.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.0/">5.8.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.6
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.2/">5.6.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.1/">5.6.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.0/">5.6.0</a>
+                        
+                        
+                    
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown1" href="#" class="dropdown-toggle nav-link"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Manuals</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                    <a class="dropdown-item"
+                        href="/5.18.4/index-overview.html">Overview</a>
+                    <a class="dropdown-item"
+                        href="/5.18.4/index-tutorials.html">Tutorials</a>
+                    <a class="dropdown-item"
+                        href="/5.18.4/index-faq.html">FAQs</a>
+                    <a class="dropdown-item"
+                        href="/5.18.4/index-history.html">Changes</a>
+                    <a class="dropdown-item"
+                        href="/5.18.4/index-licence.html">License</a>
+                    <a class="dropdown-item"
+                        href="/5.18.4/index-language.html">Language</a>
+                    <a class="dropdown-item"
+                        href="/5.18.4/index-functions.html">Functions</a>
+                    <a class="dropdown-item"
+                        href="/5.18.4/perlop.html">Operators</a>
+                    <a class="dropdown-item"
+                        href="/5.18.4/perlvar.html">Variables</a>
+                    <a class="dropdown-item"
+                        href="/5.18.4/index-pragmas.html">Pragmas</a>
+                    <a class="dropdown-item"
+                        href="/5.18.4/index-utilities.html">Utilities</a>
+                    <a class="dropdown-item"
+                        href="/5.18.4/index-internals.html">Internals</a>
+                    <a class="dropdown-item"
+                        href="/5.18.4/index-platforms.html">Platforms</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown3" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Modules</a>
+                <div aria-labelledby="navbarDropdown3"
+                    class="dropdown-menu letters-wrap">
+                    <!--<a class="dropdown-item"
+                        href="/5.18.4/index-modules.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.18.4/index-modules-by-cat.html">By
+                        Category</a>-->
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-modules-A.html">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-modules-B.html">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-modules-C.html">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-modules-D.html">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-modules-E.html">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-modules-F.html">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-modules-G.html">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-modules-H.html">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-modules-I.html">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-modules-J.html">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-modules-K.html">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-modules-L.html">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-modules-M.html">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-modules-N.html">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-modules-O.html">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-modules-P.html">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-modules-Q.html">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-modules-R.html">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-modules-S.html">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-modules-T.html">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-modules-U.html">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-modules-V.html">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-modules-W.html">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-modules-X.html">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-modules-Y.html">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-modules-Z.html">Z</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown4" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Functions</a>
+                <div aria-labelledby="navbarDropdown4"
+                    class="dropdown-menu letters-wrap">
+                    <a class="dropdown-item"
+                        href="/5.18.4/index-functions.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.18.4/index-functions-by-cat.html">By
+                        Category</a>
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-functions.html#A">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-functions.html#B">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-functions.html#C">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-functions.html#D">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-functions.html#E">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-functions.html#F">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-functions.html#G">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-functions.html#H">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-functions.html#I">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-functions.html#J">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-functions.html#K">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-functions.html#L">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-functions.html#M">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-functions.html#N">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-functions.html#O">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-functions.html#P">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-functions.html#Q">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-functions.html#R">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-functions.html#S">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-functions.html#T">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-functions.html#U">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-functions.html#V">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-functions.html#W">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-functions.html#X">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-functions.html#Y">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-functions.html#Z">Z</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!--/.nav-collapse -->
+</nav>
+
+
+          <main class="row main-content pb-5 pt-5" id='content'>
+            <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+              <div class="row">
+                <div class="col-sm-12">
+                  <div id="breadcrumbs">
+                      
+    <a href="../../index.html">Home</a>&nbsp; &gt;
+    
+      
+        <a href="../../index-modules-C.html">Core modules (C)</a> &gt;
+      
+    
+    Compress::Raw::Bzip2
+  
+
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <article class="col-sm-12 content">
+                  <div class="documentation-wrapper">
+                    <div id="perl_version">
+                      <h7 class='page-title'> Perl 5 version 18.4
+                        documentation</h7>
+                    </div>
+                    <h1>Compress::Raw::Bzip2</h1>
+
+
+  <!--    -->
+<ul><li><a href="#NAME">NAME</a></li><li><a href="#SYNOPSIS">SYNOPSIS</a></li><li><a href="#DESCRIPTION">DESCRIPTION</a></li><li><a href="#Compression">Compression</a></li><ul><li><a href="#(%24z%2c-%24status)-%3d-new-Compress%3a%3aRaw%3a%3aBzip2-%24appendOutput%2c-%24blockSize100k%2c-%24workfactor%3b">($z, $status) = new Compress::Raw::Bzip2 $appendOutput, $blockSize100k, $workfactor;</a></li><li><a href="#%24status-%3d-%24bz-%3ebzdeflate(%24input%2c-%24output)%3b">$status = $bz->bzdeflate($input, $output);</a></li><li><a href="#%24status-%3d-%24bz-%3ebzflush(%24output)%3b">$status = $bz->bzflush($output);</a></li><li><a href="#%24status-%3d-%24bz-%3ebzclose(%24output)%3b">$status = $bz->bzclose($output);</a></li><li><a href="#Example">Example</a></li></ul><li><a href="#Uncompression">Uncompression</a></li><ul><li><a href="#(%24z%2c-%24status)-%3d-new-Compress%3a%3aRaw%3a%3aBunzip2-%24appendOutput%2c-%24consumeInput%2c-%24small%2c-%24verbosity%2c-%24limitOutput%3b">($z, $status) = new Compress::Raw::Bunzip2 $appendOutput, $consumeInput, $small, $verbosity, $limitOutput;</a></li><li><a href="#%24status-%3d-%24z-%3ebzinflate(%24input%2c-%24output)%3b">$status = $z->bzinflate($input, $output);</a></li></ul><li><a href="#Misc">Misc</a></li><ul><li><a href="#my-%24version-%3d-Compress%3a%3aRaw%3a%3aBzip2%3a%3abzlibversion()%3b">my $version = Compress::Raw::Bzip2::bzlibversion();</a></li></ul><li><a href="#Constants">Constants</a></li><li><a href="#SEE-ALSO">SEE ALSO</a></li><li><a href="#AUTHOR">AUTHOR</a></li><li><a href="#MODIFICATION-HISTORY">MODIFICATION HISTORY</a></li><li><a href="#COPYRIGHT-AND-LICENSE">COPYRIGHT AND LICENSE</a></li></ul><a class='view-head1' id="NAME"></a><h2 class='h2' >NAME</h2>
+<p>Compress::Raw::Bzip2 - Low-Level Interface to bzip2 compression library</p>
+<a class='view-head1' id="SYNOPSIS"></a><h2 class='h2' >SYNOPSIS</h2>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../../functions/use.html">use</a> <span class="w">Compress::Raw::Bzip2</span> <span class="sc">;</span></li><li></li><li>    <a class="l_k" href="../../functions/my.html">my</a> <span class="s">(</span><span class="i">$bz</span><span class="cm">,</span> <span class="i">$status</span><span class="s">)</span> = <span class="w">new</span> <span class="w">Compress::Raw::Bzip2</span> <span class="s">[</span><span class="w">OPTS</span><span class="s">]</span></li><li>        <a class="l_k" href="../../functions/or.html">or</a> <a class="l_k" href="../../functions/die.html">die</a> <span class="q">&quot;Cannot create bzip2 object: $bzerno\n&quot;</span><span class="sc">;</span></li><li>    </li><li>    <span class="i">$status</span> = <span class="i">$bz</span><span class="i">-&gt;bzdeflate</span><span class="s">(</span><span class="i">$input</span><span class="cm">,</span> <span class="i">$output</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="i">$status</span> = <span class="i">$bz</span><span class="i">-&gt;bzflush</span><span class="s">(</span><span class="i">$output</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="i">$status</span> = <span class="i">$bz</span><span class="i">-&gt;bzclose</span><span class="s">(</span><span class="i">$output</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>    <a class="l_k" href="../../functions/my.html">my</a> <span class="s">(</span><span class="i">$bz</span><span class="cm">,</span> <span class="i">$status</span><span class="s">)</span> = <span class="w">new</span> <span class="w">Compress::Raw::Bunzip2</span> <span class="s">[</span><span class="w">OPTS</span><span class="s">]</span></li><li>        <a class="l_k" href="../../functions/or.html">or</a> <a class="l_k" href="../../functions/die.html">die</a> <span class="q">&quot;Cannot create bunzip2 object: $bzerno\n&quot;</span><span class="sc">;</span></li><li>    </li><li>    <span class="i">$status</span> = <span class="i">$bz</span><span class="i">-&gt;bzinflate</span><span class="s">(</span><span class="i">$input</span><span class="cm">,</span> <span class="i">$output</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>    <a class="l_k" href="../../functions/my.html">my</a> <span class="i">$version</span> = <span class="i">Compress::Raw::Bzip2::bzlibversion</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><a class='view-head1' id="DESCRIPTION"></a><h2 class='h2' >DESCRIPTION</h2>
+<p><code class="inline"><span class="w">Compress::Raw::Bzip2</span></code>
+ provides an interface to the in-memory
+compression/uncompression functions from the bzip2 compression library.</p>
+<p>Although the primary purpose for the existence of <code class="inline"><span class="w">Compress::Raw::Bzip2</span></code>
+
+is for use by the  <code class="inline"><span class="w">IO::Compress::Bzip2</span></code>
+ and <code class="inline"><span class="w">IO::Compress::Bunzip2</span></code>
+
+modules, it can be used on its own for simple compression/uncompression
+tasks.</p>
+<a class='view-head1' id="Compression"></a><h2 class='h2' >Compression</h2>
+<a class='view-head2' id="(%24z%2c-%24status)-%3d-new-Compress%3a%3aRaw%3a%3aBzip2-%24appendOutput%2c-%24blockSize100k%2c-%24workfactor%3b"></a><h3 class='h3' >($z, $status) = new Compress::Raw::Bzip2 $appendOutput, $blockSize100k, $workfactor;</h3>
+<p>Creates a new compression object.</p>
+<p>If successful, it will return the initialised compression object, <code class="inline"><span class="i">$z</span></code>
+
+and a <code class="inline"><span class="i">$status</span></code>
+ of <code class="inline"><span class="w">BZ_OK</span></code>
+ in a list context. In scalar context it
+returns the deflation object, <code class="inline"><span class="i">$z</span></code>
+, only.</p>
+<p>If not successful, the returned compression object, <code class="inline"><span class="i">$z</span></code>
+, will be
+<i>undef</i> and <code class="inline"><span class="i">$status</span></code>
+ will hold the a <i>bzip2</i> error code.</p>
+<p>Below is a list of the valid options:</p>
+<ul>
+<li><a class='view-title' id="*%24appendOutput*"></a><strong><strong>$appendOutput</strong></strong>
+<p>Controls whether the compressed data is appended to the output buffer in
+the <code class="inline"><span class="w">bzdeflate</span></code>
+, <code class="inline"><span class="w">bzflush</span></code>
+ and <code class="inline"><span class="w">bzclose</span></code>
+ methods.</p>
+<p>Defaults to 1.</p>
+</li>
+<li><a class='view-title' id="*%24blockSize100k*"></a><strong><strong>$blockSize100k</strong></strong>
+<p>To quote the bzip2 documentation</p>
+<pre class="verbatim"><ol><li>    <span class="w">blockSize100k</span> <span class="w">specifies</span> <span class="w">the</span> <span class="w">block</span> <span class="w">size</span> <span class="w">to</span> <span class="w">be</span> <span class="w">used</span> <a class="l_k" href="../../functions/for.html">for</a> <span class="w">compression</span>. <span class="w">It</span></li><li>    <span class="w">should</span> <span class="w">be</span> <span class="w">a</span> <span class="w">value</span> <span class="w">between</span> <span class="n">1</span> <a class="l_k" href="../../functions/and.html">and</a> <span class="n">9</span> <span class="w">inclusive</span><span class="cm">,</span> <a class="l_k" href="../../functions/and.html">and</a> <span class="w">the</span> <span class="w">actual</span> <span class="w">block</span> <span class="w">size</span></li><li>    <span class="w">used</span> <span class="w">is</span> <span class="n">100000</span> x <span class="w">this</span> <span class="w">figure</span>. <span class="n">9</span> <span class="w">gives</span> <span class="w">the</span> <span class="w">best</span> <span class="w">compression</span> <span class="w">but</span> <span class="w">takes</span></li><li>    <span class="w">most</span> <span class="w">memory</span>.</li></ol></pre><p>Defaults to 1.</p>
+</li>
+<li><a class='view-title' id="*%24workfactor*"></a><strong><strong>$workfactor</strong></strong>
+<p>To quote the bzip2 documentation</p>
+<pre class="verbatim"><ol><li>    <span class="w">This</span> <span class="w">parameter</span> <span class="w">controls</span> <span class="w">how</span> <span class="w">the</span> <span class="w">compression</span> <span class="w">phase</span> <span class="w">behaves</span> <a class="l_k" href="../../functions/when.html">when</a></li><li>    <span class="w">presented</span> <span class="w">with</span> <span class="w">worst</span> case<span class="cm">,</span> <span class="w">highly</span> <span class="w">repetitive</span><span class="cm">,</span> <span class="w">input</span> <span class="w">data</span>. <span class="w">If</span></li><li>    <span class="w">compression</span> <span class="w">runs</span> <span class="w">into</span> <span class="w">difficulties</span> <span class="w">caused</span> <span class="w">by</span> <span class="w">repetitive</span> <span class="w">data</span><span class="cm">,</span> <span class="w">the</span></li><li>    <span class="w">library</span> <span class="w">switches</span> <span class="w">from</span> <span class="w">the</span> <span class="w">standard</span> <span class="w">sorting</span> <span class="w">algorithm</span> <span class="w">to</span> <span class="w">a</span> <span class="w">fallback</span></li><li>    <span class="w">algorithm</span>. <span class="w">The</span> <span class="w">fallback</span> <span class="w">is</span> <span class="w">slower</span> <span class="w">than</span> <span class="w">the</span> <span class="w">standard</span> <span class="w">algorithm</span> <span class="w">by</span></li><li>    <span class="w">perhaps</span> <span class="w">a</span> <span class="w">factor</span> <span class="w">of</span> <span class="w">three</span><span class="cm">,</span> <span class="w">but</span> <span class="w">always</span> <span class="w">behaves</span> <span class="w">reasonably</span><span class="cm">,</span> <a class="l_k" href="../../functions/no.html">no</a> <span class="w">matter</span> <span class="w">how</span></li><li>    <span class="w">bad</span> <span class="w">the</span> <span class="w">input</span>.</li><li></li><li>    <span class="w">Lower</span> <a class="l_k" href="../../functions/values.html">values</a> <span class="w">of</span> <span class="w">workFactor</span> <span class="w">reduce</span> <span class="w">the</span> <span class="w">amount</span> <span class="w">of</span> <span class="w">effort</span> <span class="w">the</span> <span class="w">standard</span></li><li>    <span class="w">algorithm</span> <span class="w">will</span> <span class="w">expend</span> <span class="w">before</span> <span class="w">resorting</span> <span class="w">to</span> <span class="w">the</span> <span class="w">fallback</span>. <span class="w">You</span> <span class="w">should</span> <span class="w">set</span></li><li>    <span class="w">this</span> <span class="w">parameter</span> <span class="w">carefully</span><span class="sc">;</span> <span class="w">too</span> <span class="w">low</span><span class="cm">,</span> <a class="l_k" href="../../functions/and.html">and</a> <span class="w">many</span> <span class="w">inputs</span> <span class="w">will</span> <span class="w">be</span> <span class="w">handled</span> <span class="w">by</span></li><li>    <span class="w">the</span> <span class="w">fallback</span> <span class="w">algorithm</span> <a class="l_k" href="../../functions/and.html">and</a> <span class="w">so</span> <span class="w">compress</span> <span class="w">rather</span> <span class="w">slowly</span><span class="cm">,</span> <span class="w">too</span> <span class="w">high</span><span class="cm">,</span> <a class="l_k" href="../../functions/and.html">and</a></li><li>    <span class="w">your</span> <span class="w">average</span>-<span class="w">to</span>-<span class="w">worst</span> case <span class="w">compression</span> <a class="l_k" href="../../functions/times.html">times</a> <span class="w">can</span> <span class="w">become</span> <span class="w">very</span> <span class="w">large</span>. <span class="w">The</span></li><li>    <span class="w">default</span> <span class="w">value</span> <span class="w">of</span> <span class="n">30</span> <span class="w">gives</span> <span class="w">reasonable</span> <span class="w">behaviour</span> <span class="w">over</span> <span class="w">a</span> <span class="w">wide</span> <span class="w">range</span> <span class="w">of</span></li><li>    <span class="w">circumstances</span>.</li><li></li><li>    <span class="w">Allowable</span> <a class="l_k" href="../../functions/values.html">values</a> <span class="w">range</span> <span class="w">from</span> <span class="n">0</span> <span class="w">to</span> <span class="n">250</span> <span class="w">inclusive</span>. <span class="n">0</span> <span class="w">is</span> <span class="w">a</span> <span class="w">special</span> case<span class="cm">,</span></li><li>    <span class="w">equivalent</span> <span class="w">to</span> <span class="w">using</span> <span class="w">the</span> <span class="w">default</span> <span class="w">value</span> <span class="w">of</span> <span class="n">30.</span></li></ol></pre><p>Defaults to 0.</p>
+</li>
+</ul>
+<a class='view-head2' id="%24status-%3d-%24bz-%3ebzdeflate(%24input%2c-%24output)%3b"></a><h3 class='h3' >$status = $bz-&gt;bzdeflate($input, $output);</h3>
+<p>Reads the contents of <code class="inline"><span class="i">$input</span></code>
+, compresses it and writes the compressed
+data to <code class="inline"><span class="i">$output</span></code>
+.</p>
+<p>Returns <code class="inline"><span class="w">BZ_RUN_OK</span></code>
+ on success and a <code class="inline"><span class="w">bzip2</span></code>
+ error code on failure.</p>
+<p>If <code class="inline"><span class="w">appendOutput</span></code>
+ is enabled in the constructor for the bzip2 object, the
+compressed data will be appended to <code class="inline"><span class="i">$output</span></code>
+. If not enabled, <code class="inline"><span class="i">$output</span></code>
+
+will be truncated before the compressed data is written to it.</p>
+<a class='view-head2' id="%24status-%3d-%24bz-%3ebzflush(%24output)%3b"></a><h3 class='h3' >$status = $bz-&gt;bzflush($output);</h3>
+<p>Flushes any pending compressed data to <code class="inline"><span class="i">$output</span></code>
+.</p>
+<p>Returns <code class="inline"><span class="w">BZ_RUN_OK</span></code>
+ on success and a <code class="inline"><span class="w">bzip2</span></code>
+ error code on failure.</p>
+<a class='view-head2' id="%24status-%3d-%24bz-%3ebzclose(%24output)%3b"></a><h3 class='h3' >$status = $bz-&gt;bzclose($output);</h3>
+<p>Terminates the compressed data stream and flushes any pending compressed
+data to <code class="inline"><span class="i">$output</span></code>
+.</p>
+<p>Returns <code class="inline"><span class="w">BZ_STREAM_END</span></code>
+ on success and a <code class="inline"><span class="w">bzip2</span></code>
+ error code on failure.</p>
+<a class='view-head2' id="Example"></a><h3 class='h3' >Example</h3>
+<a class='view-head1' id="Uncompression"></a><h2 class='h2' >Uncompression</h2>
+<a class='view-head2' id="(%24z%2c-%24status)-%3d-new-Compress%3a%3aRaw%3a%3aBunzip2-%24appendOutput%2c-%24consumeInput%2c-%24small%2c-%24verbosity%2c-%24limitOutput%3b"></a><h3 class='h3' >($z, $status) = new Compress::Raw::Bunzip2 $appendOutput, $consumeInput, $small, $verbosity, $limitOutput;</h3>
+<p>If successful, it will return the initialised uncompression object, <code class="inline"><span class="i">$z</span></code>
+
+and a <code class="inline"><span class="i">$status</span></code>
+ of <code class="inline"><span class="w">BZ_OK</span></code>
+ in a list context. In scalar context it
+returns the deflation object, <code class="inline"><span class="i">$z</span></code>
+, only.</p>
+<p>If not successful, the returned uncompression object, <code class="inline"><span class="i">$z</span></code>
+, will be
+<i>undef</i> and <code class="inline"><span class="i">$status</span></code>
+ will hold the a <i>bzip2</i> error code.</p>
+<p>Below is a list of the valid options:</p>
+<ul>
+<li><a class='view-title' id="*%24appendOutput*"></a><strong><strong>$appendOutput</strong></strong>
+<p>Controls whether the compressed data is appended to the output buffer in the
+<code class="inline"><span class="w">bzinflate</span></code>
+, <code class="inline"><span class="w">bzflush</span></code>
+ and <code class="inline"><span class="w">bzclose</span></code>
+ methods.</p>
+<p>Defaults to 1.</p>
+</li>
+<li><a class='view-title' id="*%24consumeInput*"></a><strong><strong>$consumeInput</strong></strong>
+</li>
+<li><a class='view-title' id="*%24small*"></a><strong><strong>$small</strong></strong>
+<p>To quote the bzip2 documentation</p>
+<pre class="verbatim"><ol><li>    <span class="w">If</span> <span class="w">small</span> <span class="w">is</span> <span class="w">nonzero</span><span class="cm">,</span> <span class="w">the</span> <span class="w">library</span> <span class="w">will</span> <a class="l_k" href="../../functions/use.html">use</a> <span class="w">an</span> <span class="w">alternative</span> <span class="w">decompression</span></li><li>    <span class="w">algorithm</span> <span class="w">which</span> <span class="w">uses</span> <span class="w">less</span> <span class="w">memory</span> <span class="w">but</span> <span class="w">at</span> <span class="w">the</span> <span class="w">cost</span> <span class="w">of</span> <span class="w">decompressing</span> <span class="w">more</span></li><li>    <span class="w">slowly</span> <span class="s">(</span><span class="w">roughly</span> <span class="w">speaking</span><span class="cm">,</span> <span class="w">half</span> <span class="w">the</span> <span class="w">speed</span><span class="cm">,</span> <span class="w">but</span> <span class="w">the</span> <span class="w">maximum</span> <span class="w">memory</span></li><li>    <span class="w">requirement</span> <span class="w">drops</span> <span class="w">to</span> <span class="w">around</span> <span class="n">2300</span><span class="w">k</span><span class="s">)</span>.</li></ol></pre><p>Defaults to 0.</p>
+</li>
+<li><a class='view-title' id="*%24limitOutput*"></a><strong><strong>$limitOutput</strong></strong>
+<p>The <code class="inline"><span class="w">LimitOutput</span></code>
+ option changes the behavior of the <code class="inline"><span class="i">$i</span><span class="i">-&gt;bzinflate</span></code>
+
+method so that the amount of memory used by the output buffer can be
+limited.</p>
+<p>When <code class="inline"><span class="w">LimitOutput</span></code>
+ is used the size of the output buffer used will either
+be the 16k or the amount of memory already allocated to <code class="inline"><span class="i">$output</span></code>
+,
+whichever is larger. Predicting the output size available is tricky, so
+don't rely on getting an exact output buffer size.</p>
+<p>When <code class="inline"><span class="w">LimitOutout</span></code>
+ is not specified <code class="inline"><span class="i">$i</span><span class="i">-&gt;bzinflate</span></code>
+ will use as much
+memory as it takes to write all the uncompressed data it creates by
+uncompressing the input buffer.</p>
+<p>If <code class="inline"><span class="w">LimitOutput</span></code>
+ is enabled, the <code class="inline"><span class="w">ConsumeInput</span></code>
+ option will also be
+enabled.</p>
+<p>This option defaults to false.</p>
+</li>
+<li><a class='view-title' id="*%24verbosity*"></a><strong><strong>$verbosity</strong></strong>
+<p>This parameter is ignored.</p>
+<p>Defaults to 0.</p>
+</li>
+</ul>
+<a class='view-head2' id="%24status-%3d-%24z-%3ebzinflate(%24input%2c-%24output)%3b"></a><h3 class='h3' >$status = $z-&gt;bzinflate($input, $output);</h3>
+<p>Uncompresses <code class="inline"><span class="i">$input</span></code>
+ and writes the uncompressed data to <code class="inline"><span class="i">$output</span></code>
+.</p>
+<p>Returns <code class="inline"><span class="w">BZ_OK</span></code>
+ if the uncompression was successful, but the end of the
+compressed data stream has not been reached. Returns <code class="inline"><span class="w">BZ_STREAM_END</span></code>
+ on
+successful uncompression and the end of the compression stream has been
+reached.</p>
+<p>If <code class="inline"><span class="w">consumeInput</span></code>
+ is enabled in the constructor for the bunzip2 object,
+<code class="inline"><span class="i">$input</span></code>
+ will have all compressed data removed from it after
+uncompression. On <code class="inline"><span class="w">BZ_OK</span></code>
+ return this will mean that <code class="inline"><span class="i">$input</span></code>
+ will be an
+empty string; when <code class="inline"><span class="w">BZ_STREAM_END</span></code>
+ <code class="inline"><span class="i">$input</span></code>
+ will either be an empty
+string or will contain whatever data immediately followed the compressed
+data stream.</p>
+<p>If <code class="inline"><span class="w">appendOutput</span></code>
+ is enabled in the constructor for the bunzip2 object,
+the uncompressed data will be appended to <code class="inline"><span class="i">$output</span></code>
+. If not enabled,
+<code class="inline"><span class="i">$output</span></code>
+ will be truncated before the uncompressed data is written to it.</p>
+<a class='view-head1' id="Misc"></a><h2 class='h2' >Misc</h2>
+<a class='view-head2' id="my-%24version-%3d-Compress%3a%3aRaw%3a%3aBzip2%3a%3abzlibversion()%3b"></a><h3 class='h3' >my $version = Compress::Raw::Bzip2::bzlibversion();</h3>
+<p>Returns the version of the underlying bzip2 library.</p>
+<a class='view-head1' id="Constants"></a><h2 class='h2' >Constants</h2>
+<p>The following bzip2 constants are exported by this module</p>
+<pre class="verbatim"><ol><li>		<span class="w">BZ_RUN</span></li><li>		<span class="w">BZ_FLUSH</span></li><li>		<span class="w">BZ_FINISH</span></li><li></li><li>		<span class="w">BZ_OK</span></li><li>		<span class="w">BZ_RUN_OK</span></li><li>		<span class="w">BZ_FLUSH_OK</span></li><li>		<span class="w">BZ_FINISH_OK</span></li><li>		<span class="w">BZ_STREAM_END</span></li><li>		<span class="w">BZ_SEQUENCE_ERROR</span></li><li>		<span class="w">BZ_PARAM_ERROR</span></li><li>		<span class="w">BZ_MEM_ERROR</span></li><li>		<span class="w">BZ_DATA_ERROR</span></li><li>		<span class="w">BZ_DATA_ERROR_MAGIC</span></li><li>		<span class="w">BZ_IO_ERROR</span></li><li>		<span class="w">BZ_UNEXPECTED_EOF</span></li><li>		<span class="w">BZ_OUTBUFF_FULL</span></li><li>		<span class="w">BZ_CONFIG_ERROR</span></li></ol></pre><a class='view-head1' id="SEE-ALSO"></a><h2 class='h2' >SEE ALSO</h2>
+<p><a href="../../Compress/Zlib.html">Compress::Zlib</a>, <a href="../../IO/Compress/Gzip.html">IO::Compress::Gzip</a>, <a href="../../IO/Uncompress/Gunzip.html">IO::Uncompress::Gunzip</a>, <a href="../../IO/Compress/Deflate.html">IO::Compress::Deflate</a>, <a href="../../IO/Uncompress/Inflate.html">IO::Uncompress::Inflate</a>, <a href="../../IO/Compress/RawDeflate.html">IO::Compress::RawDeflate</a>, <a href="../../IO/Uncompress/RawInflate.html">IO::Uncompress::RawInflate</a>, <a href="../../IO/Compress/Bzip2.html">IO::Compress::Bzip2</a>, <a href="../../IO/Uncompress/Bunzip2.html">IO::Uncompress::Bunzip2</a>, <a href="https://search.cpan.org/perldoc/IO::Compress::Lzma">IO::Compress::Lzma</a>, <a href="https://search.cpan.org/perldoc/IO::Uncompress::UnLzma">IO::Uncompress::UnLzma</a>, <a href="https://search.cpan.org/perldoc/IO::Compress::Xz">IO::Compress::Xz</a>, <a href="https://search.cpan.org/perldoc/IO::Uncompress::UnXz">IO::Uncompress::UnXz</a>, <a href="https://search.cpan.org/perldoc/IO::Compress::Lzop">IO::Compress::Lzop</a>, <a href="https://search.cpan.org/perldoc/IO::Uncompress::UnLzop">IO::Uncompress::UnLzop</a>, <a href="https://search.cpan.org/perldoc/IO::Compress::Lzf">IO::Compress::Lzf</a>, <a href="https://search.cpan.org/perldoc/IO::Uncompress::UnLzf">IO::Uncompress::UnLzf</a>, <a href="../../IO/Uncompress/AnyInflate.html">IO::Uncompress::AnyInflate</a>, <a href="../../IO/Uncompress/AnyUncompress.html">IO::Uncompress::AnyUncompress</a></p>
+<p><a href="../../IO/Compress/FAQ.html">IO::Compress::FAQ</a></p>
+<p><a href="../../File/GlobMapper.html">File::GlobMapper</a>, <a href="https://search.cpan.org/perldoc/Archive::Zip">Archive::Zip</a>,
+<a href="../../Archive/Tar.html">Archive::Tar</a>,
+<a href="../../IO/Zlib.html">IO::Zlib</a></p>
+<p>The primary site for the bzip2 program is <i><a href="http://www.bzip.org">http://www.bzip.org</a></i>.</p>
+<p>See the module <a href="https://search.cpan.org/perldoc/Compress::Bzip2">Compress::Bzip2</a></p>
+<a class='view-head1' id="AUTHOR"></a><h2 class='h2' >AUTHOR</h2>
+<p>This module was written by Paul Marquess, <i>pmqs@cpan.org</i>.</p>
+<a class='view-head1' id="MODIFICATION-HISTORY"></a><h2 class='h2' >MODIFICATION HISTORY</h2>
+<p>See the Changes file.</p>
+<a class='view-head1' id="COPYRIGHT-AND-LICENSE"></a><h2 class='h2' >COPYRIGHT AND LICENSE</h2>
+<p>Copyright (c) 2005-2013 Paul Marquess. All rights reserved.</p>
+<p>This program is free software; you can redistribute it and/or
+modify it under the same terms as Perl itself.</p>
+
+
+
+
+      <ul><li><a href="#NAME">NAME</a></li><li><a href="#SYNOPSIS">SYNOPSIS</a></li><li><a href="#DESCRIPTION">DESCRIPTION</a></li><li><a href="#Compression">Compression</a></li><ul><li><a href="#(%24z%2c-%24status)-%3d-new-Compress%3a%3aRaw%3a%3aBzip2-%24appendOutput%2c-%24blockSize100k%2c-%24workfactor%3b">($z, $status) = new Compress::Raw::Bzip2 $appendOutput, $blockSize100k, $workfactor;</a></li><li><a href="#%24status-%3d-%24bz-%3ebzdeflate(%24input%2c-%24output)%3b">$status = $bz->bzdeflate($input, $output);</a></li><li><a href="#%24status-%3d-%24bz-%3ebzflush(%24output)%3b">$status = $bz->bzflush($output);</a></li><li><a href="#%24status-%3d-%24bz-%3ebzclose(%24output)%3b">$status = $bz->bzclose($output);</a></li><li><a href="#Example">Example</a></li></ul><li><a href="#Uncompression">Uncompression</a></li><ul><li><a href="#(%24z%2c-%24status)-%3d-new-Compress%3a%3aRaw%3a%3aBunzip2-%24appendOutput%2c-%24consumeInput%2c-%24small%2c-%24verbosity%2c-%24limitOutput%3b">($z, $status) = new Compress::Raw::Bunzip2 $appendOutput, $consumeInput, $small, $verbosity, $limitOutput;</a></li><li><a href="#%24status-%3d-%24z-%3ebzinflate(%24input%2c-%24output)%3b">$status = $z->bzinflate($input, $output);</a></li></ul><li><a href="#Misc">Misc</a></li><ul><li><a href="#my-%24version-%3d-Compress%3a%3aRaw%3a%3aBzip2%3a%3abzlibversion()%3b">my $version = Compress::Raw::Bzip2::bzlibversion();</a></li></ul><li><a href="#Constants">Constants</a></li><li><a href="#SEE-ALSO">SEE ALSO</a></li><li><a href="#AUTHOR">AUTHOR</a></li><li><a href="#MODIFICATION-HISTORY">MODIFICATION HISTORY</a></li><li><a href="#COPYRIGHT-AND-LICENSE">COPYRIGHT AND LICENSE</a></li></ul>
+
+
+                  </div>
+                </article>
+              </div>
+            </div>
+          </main>
+        </div>
+           <footer class="footer row bg-light pt-5 pb-5">
+       <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+           <div class="row">
+               <div class="col-md-4">
+                   <ul class="list-unstyled">
+                       <li>
+                           <h4>Site info</h4>
+                       </li>
+                       <li>Docs mantained by
+                           <a href="//lists.perl.org/list/perl5-porters.html"
+                               rel="noopener">Perl 5 Porters</a>
+                       </li>
+                       <li>Perldoc site development sponsored by
+                           <a href="//opusvl.com" rel="noopener">
+                           <img style="margin: 20px 20px 5px 10px" class="opus-logo" src="/public/img/opusvl_logo.svg" alt="OpusVL Logo">
+                        </a>
+                    <li><span class="about_perldoc"><a href="//about.html">About PerlDOC</a></span>
+                    </li>
+                       </li>
+                   </ul>
+               </div>
+               <div class="col-md-8">
+                   <div class="row">
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Manuals</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.18.4/index-overview.html">Overview</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.18.4/index-tutorials.html">Tutorials</a>
+                               </li>
+                               <li>
+                                   <a href="/5.18.4/index-faq.html">FAQs</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.18.4/index-history.html">Changes</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Reference</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.18.4/index-language.html">Language</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.18.4/index-functions.html">Functions</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.18.4/perlop.html">Operators</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.18.4/perlvar.html">Variables</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Modules</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.18.4/index-modules-A.html">Modules</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.18.4/index-pragmas.html">Pragmas</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.18.4/index-utilities.html">Utilities</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Misc</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.18.4/index-licence.html">License</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.18.4/index-internals.html">Internals</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.18.4/index-platforms.html">Platforms</a>
+                               </li>
+                            <li>
+                                <a
+                                    href="/5.18.4/index-about.html">About</a>
+                            </li>
+                           </ul>
+                       </div>
+                   </div>
+               </div>
+               <div class=" col-12 footer-inf text-center">
+                   <small>perldoc.perl.org - Official documentation for the Perl
+                       programming language</small>
+               </div>
+           </div>
+       </div>
+   </footer>
+
+        	<div class="beta-wrapper beta-bottom-right ">
+		<div class="beta beta-blue  ">
+			<a class="beta-link "
+				href="//github.com/OpusVL/perldoc.perl.org/issues/new" rel="noopener">
+				<span class="beta-text">
+					This website is a Beta release.
+				</span>
+				<span class="beta-text">
+					For any issues please raise a ticket on GitHub
+				</span>
+			</a>
+		</div>
+	</div>
+
+        <script src="/public/js/main.min.js"></script>
+      </body>
+
+      </html>

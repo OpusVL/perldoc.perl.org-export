@@ -1,0 +1,1721 @@
+      
+      
+      
+      
+
+      <!DOCTYPE html>
+      <html lang="en">
+
+      <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="ExtUtils::MakeMaker - perldoc.perl.org">
+        <link rel="icon" href="/public/img/favicon.ico">
+        <title>ExtUtils::MakeMaker - perldoc.perl.org</title>
+        <link href="/public/css/main.min.css" rel="stylesheet">
+        <link rel="canonical" href="/ExtUtils/MakeMaker.html">
+        <link
+          href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900'
+          rel='stylesheet' type='text/css'>
+        <script>
+          window.ga = window.ga || function () {
+            (ga.q = ga.q || []).push(arguments)
+          };
+          ga.l = +new Date;
+          ga('create', 'UA-1892152-2', 'auto'); // JJ's account
+          ga('create', 'UA-50555-3', 'auto', 'perlOrg'); // perl.org account
+          ga('require', 'outboundLinkTracker', {
+            events: ['click', 'auxclick', 'contextmenu'],
+          });
+          ga('require', 'maxScrollTracker');
+          ga('send', 'pageview');
+          ga('perlOrg.send', 'pageview');
+        </script>
+        <script async src="https://www.google-analytics.com/analytics.js">
+        </script>
+        <script async src="/public/js/tracking.min.js"></script>
+      </head>
+
+      <body class="body container-fluid ">
+        <div class="wrapper">
+
+          <nav
+    class="navbar navbar-dark bg-primary bg-perl fixed-top justify-content-between navbar-expand-lg">
+    <a href="#content" class="skippy sr-only sr-only-focusable">
+        <span class=' skippy-text'>Skip to main content</span>
+    </a>
+    <a class="navbar-brand" href="/">
+        <img class="logo" src="/public/img/logo_perl_doc.svg"
+            alt="Perl Documentation Logo" />
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse"
+        data-target="#navbar" aria-controls="navbar" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="navbar" class="collapse navbar-collapse ">
+        <ul class="navbar-nav ml-auto navbar-right">
+            <form class="nav-item dropdown search-wrapper">
+                <input type="text" id='searchinput' aria-describedby='navbarDropdown5'
+                    placeholder="Type query" class='search-input-field' value=''>
+
+                <button href="#" data-toggle='dropdown' type="button"
+                    aria-haspopup="true" aria-expanded='false' id="navbarDropdown5"
+                    class="nav-link dropdown-toggle search-link">
+                    <object tabindex='-1' focusable="false" class='search-icon'
+                        data="/public/img/search.svg" type="image/svg+xml"
+                        name='search icon'>search
+                        icon</object>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown5"
+                    id='search-results'>
+                    <p class='dropdown-item major-version'>
+                        No results
+                    </p>
+                </div>
+            </form>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown" href="#" class="nav-link dropdown-toggle"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Perl versions</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    
+                        <p class='dropdown-item major-version'>
+                            5.32
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.32.0/">5.32.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.30
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.3/">5.30.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.2/">5.30.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.1/">5.30.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.0/">5.30.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.28
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.3/">5.28.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.2/">5.28.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.1/">5.28.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.0/">5.28.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.26
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.3/">5.26.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.2/">5.26.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.1/">5.26.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.0/">5.26.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.24
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.4/">5.24.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.3/">5.24.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.2/">5.24.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.1/">5.24.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.0/">5.24.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.22
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.4/">5.22.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.3/">5.22.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.2/">5.22.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.1/">5.22.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.0/">5.22.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.20
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.3/">5.20.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.2/">5.20.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.1/">5.20.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.0/">5.20.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.18
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.4/">5.18.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.3/">5.18.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.2/">5.18.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.1/">5.18.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.0/">5.18.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.16
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.3/">5.16.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.2/">5.16.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.1/">5.16.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.0/">5.16.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.14
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.4/">5.14.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.3/">5.14.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.2/">5.14.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.1/">5.14.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.0/">5.14.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.12
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.5/">5.12.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.4/">5.12.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.3/">5.12.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.2/">5.12.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.1/">5.12.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.0/">5.12.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.10
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.1/">5.10.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.0/">5.10.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.8
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.9/">5.8.9</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.8/">5.8.8</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.7/">5.8.7</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.6/">5.8.6</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.5/">5.8.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.4/">5.8.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.3/">5.8.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.2/">5.8.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.1/">5.8.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.0/">5.8.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.6
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.2/">5.6.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.1/">5.6.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.0/">5.6.0</a>
+                        
+                        
+                    
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown1" href="#" class="dropdown-toggle nav-link"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Manuals</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                    <a class="dropdown-item"
+                        href="/5.8.5/index-overview.html">Overview</a>
+                    <a class="dropdown-item"
+                        href="/5.8.5/index-tutorials.html">Tutorials</a>
+                    <a class="dropdown-item"
+                        href="/5.8.5/index-faq.html">FAQs</a>
+                    <a class="dropdown-item"
+                        href="/5.8.5/index-history.html">Changes</a>
+                    <a class="dropdown-item"
+                        href="/5.8.5/index-licence.html">License</a>
+                    <a class="dropdown-item"
+                        href="/5.8.5/index-language.html">Language</a>
+                    <a class="dropdown-item"
+                        href="/5.8.5/index-functions.html">Functions</a>
+                    <a class="dropdown-item"
+                        href="/5.8.5/perlop.html">Operators</a>
+                    <a class="dropdown-item"
+                        href="/5.8.5/perlvar.html">Variables</a>
+                    <a class="dropdown-item"
+                        href="/5.8.5/index-pragmas.html">Pragmas</a>
+                    <a class="dropdown-item"
+                        href="/5.8.5/index-utilities.html">Utilities</a>
+                    <a class="dropdown-item"
+                        href="/5.8.5/index-internals.html">Internals</a>
+                    <a class="dropdown-item"
+                        href="/5.8.5/index-platforms.html">Platforms</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown3" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Modules</a>
+                <div aria-labelledby="navbarDropdown3"
+                    class="dropdown-menu letters-wrap">
+                    <!--<a class="dropdown-item"
+                        href="/5.8.5/index-modules.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.8.5/index-modules-by-cat.html">By
+                        Category</a>-->
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.8.5/index-modules-A.html">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.5/index-modules-B.html">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.5/index-modules-C.html">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.5/index-modules-D.html">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.5/index-modules-E.html">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.5/index-modules-F.html">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.5/index-modules-G.html">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.5/index-modules-H.html">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.5/index-modules-I.html">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.5/index-modules-J.html">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.5/index-modules-K.html">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.5/index-modules-L.html">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.5/index-modules-M.html">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.5/index-modules-N.html">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.5/index-modules-O.html">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.5/index-modules-P.html">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.5/index-modules-Q.html">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.5/index-modules-R.html">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.5/index-modules-S.html">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.5/index-modules-T.html">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.5/index-modules-U.html">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.5/index-modules-V.html">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.5/index-modules-W.html">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.5/index-modules-X.html">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.5/index-modules-Y.html">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.5/index-modules-Z.html">Z</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown4" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Functions</a>
+                <div aria-labelledby="navbarDropdown4"
+                    class="dropdown-menu letters-wrap">
+                    <a class="dropdown-item"
+                        href="/5.8.5/index-functions.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.8.5/index-functions-by-cat.html">By
+                        Category</a>
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.8.5/index-functions.html#A">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.5/index-functions.html#B">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.5/index-functions.html#C">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.5/index-functions.html#D">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.5/index-functions.html#E">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.5/index-functions.html#F">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.5/index-functions.html#G">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.5/index-functions.html#H">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.5/index-functions.html#I">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.5/index-functions.html#J">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.5/index-functions.html#K">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.5/index-functions.html#L">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.5/index-functions.html#M">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.5/index-functions.html#N">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.5/index-functions.html#O">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.5/index-functions.html#P">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.5/index-functions.html#Q">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.5/index-functions.html#R">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.5/index-functions.html#S">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.5/index-functions.html#T">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.5/index-functions.html#U">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.5/index-functions.html#V">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.5/index-functions.html#W">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.5/index-functions.html#X">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.5/index-functions.html#Y">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.5/index-functions.html#Z">Z</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!--/.nav-collapse -->
+</nav>
+
+
+          <main class="row main-content pb-5 pt-5" id='content'>
+            <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+              <div class="row">
+                <div class="col-sm-12">
+                  <div id="breadcrumbs">
+                      
+    <a href="../index.html">Home</a>&nbsp; &gt;
+    
+      
+        <a href="../index-modules-E.html">Core modules (E)</a> &gt;
+      
+    
+    ExtUtils::MakeMaker
+  
+
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <article class="col-sm-12 content">
+                  <div class="documentation-wrapper">
+                    <div id="perl_version">
+                      <h7 class='page-title'> Perl 5 version 8.5
+                        documentation</h7>
+                    </div>
+                    <h1>ExtUtils::MakeMaker</h1>
+
+
+  <!--    -->
+<ul><li><a href="#NAME">NAME</a></li><li><a href="#SYNOPSIS">SYNOPSIS</a></li><li><a href="#DESCRIPTION">DESCRIPTION</a></li><ul><li><a href="#How-To-Write-A-Makefile.PL">How To Write A Makefile.PL</a></li><li><a href="#Default-Makefile-Behaviour">Default Makefile Behaviour</a></li><li><a href="#make-test">make test</a></li><li><a href="#make-testdb">make testdb</a></li><li><a href="#make-install">make install</a></li><li><a href="#PREFIX-and-LIB-attribute">PREFIX and LIB attribute</a></li><li><a href="#AFS-users">AFS users</a></li><li><a href="#Static-Linking-of-a-new-Perl-Binary">Static Linking of a new Perl Binary</a></li><li><a href="#Determination-of-Perl-Library-and-Installation-Locations">Determination of Perl Library and Installation Locations</a></li><li><a href="#Which-architecture-dependent-directory%3f">Which architecture dependent directory?</a></li><li><a href="#Using-Attributes-and-Parameters">Using Attributes and Parameters</a></li><li><a href="#Additional-lowercase-attributes">Additional lowercase attributes</a></li><li><a href="#Overriding-MakeMaker-Methods">Overriding MakeMaker Methods</a></li><li><a href="#The-End-Of-Cargo-Cult-Programming">The End Of Cargo Cult Programming</a></li><li><a href="#Hintsfile-support">Hintsfile support</a></li><li><a href="#Distribution-Support">Distribution Support</a></li><li><a href="#Module-Meta-Data">Module Meta-Data</a></li><li><a href="#Disabling-an-extension">Disabling an extension</a></li><li><a href="#Other-Handy-Functions">Other Handy Functions</a></li></ul><li><a href="#ENVIRONMENT">ENVIRONMENT</a></li><li><a href="#SEE-ALSO">SEE ALSO</a></li><li><a href="#AUTHORS">AUTHORS</a></li><li><a href="#LICENSE">LICENSE</a></li></ul><a class='view-head1' id="NAME"></a><h2 class='h2' >NAME</h2>
+<p>ExtUtils::MakeMaker - Create a module Makefile</p>
+<a class='view-head1' id="SYNOPSIS"></a><h2 class='h2' >SYNOPSIS</h2>
+<pre class="verbatim"><ol><li>  <a class="l_k" href="../functions/use.html">use</a> <span class="w">ExtUtils::MakeMaker</span><span class="sc">;</span></li><li></li><li>  <span class="i">WriteMakefile</span><span class="s">(</span> <span class="w">ATTRIBUTE</span> <span class="cm">=&gt;</span> <span class="w">VALUE</span> <span class="s">[</span><span class="cm">,</span> ...<span class="s">]</span> <span class="s">)</span><span class="sc">;</span></li></ol></pre><a class='view-head1' id="DESCRIPTION"></a><h2 class='h2' >DESCRIPTION</h2>
+<p>This utility is designed to write a Makefile for an extension module
+from a Makefile.PL. It is based on the Makefile.SH model provided by
+Andy Dougherty and the perl5-porters.</p>
+<p>It splits the task of generating the Makefile into several subroutines
+that can be individually overridden.  Each subroutine returns the text
+it wishes to have written to the Makefile.</p>
+<p>MakeMaker is object oriented. Each directory below the current
+directory that contains a Makefile.PL is treated as a separate
+object. This makes it possible to write an unlimited number of
+Makefiles with a single invocation of WriteMakefile().</p>
+<a class='view-head2' id="How-To-Write-A-Makefile.PL"></a><h3 class='h3' >How To Write A Makefile.PL</h3>
+<p>See ExtUtils::MakeMaker::Tutorial.</p>
+<p>The long answer is the rest of the manpage :-)</p>
+<a class='view-head2' id="Default-Makefile-Behaviour"></a><h3 class='h3' >Default Makefile Behaviour</h3>
+<p>The generated Makefile enables the user of the extension to invoke</p>
+<pre class="verbatim"><ol><li>  <span class="w">perl</span> <span class="w">Makefile</span>.<span class="w">PL</span> <span class="c"># optionally &quot;perl Makefile.PL verbose&quot;</span></li><li>  <span class="w">make</span></li><li>  <span class="w">make</span> <span class="w">test</span>        <span class="c"># optionally set TEST_VERBOSE=1</span></li><li>  <span class="w">make</span> <span class="w">install</span>     <span class="c"># See below</span></li></ol></pre><p>The Makefile to be produced may be altered by adding arguments of the
+form <code class="inline"><span class="w">KEY</span>=<span class="w">VALUE</span></code>
+. E.g.</p>
+<pre class="verbatim"><ol><li>  <span class="w">perl</span> <span class="w">Makefile</span>.<span class="w">PL</span> <span class="w">PREFIX</span>=<span class="q">/tmp/myperl5</span></li></ol></pre><p>Other interesting targets in the generated Makefile are</p>
+<pre class="verbatim"><ol><li>  <span class="w">make</span> <span class="w">config</span>     <span class="c"># to check if the Makefile is up-to-date</span></li><li>  <span class="w">make</span> <span class="w">clean</span>      <span class="c"># delete local temp files (Makefile gets renamed)</span></li><li>  <span class="w">make</span> <span class="w">realclean</span>  <span class="c"># delete derived files (including ./blib)</span></li><li>  <span class="w">make</span> <span class="w">ci</span>         <span class="c"># check in all the files in the MANIFEST file</span></li><li>  <span class="w">make</span> <span class="w">dist</span>       <span class="c"># see below the Distribution Support section</span></li></ol></pre><a class='view-head2' id="make-test"></a><h3 class='h3' >make test</h3>
+<p>MakeMaker checks for the existence of a file named <i>test.pl</i> in the
+current directory and if it exists it execute the script with the
+proper set of perl <code class="inline">-<span class="w">I</span></code>
+ options.</p>
+<p>MakeMaker also checks for any files matching glob("t/*.t"). It will
+execute all matching files in alphabetical order via the
+<a href="../Test/Harness.html">Test::Harness</a> module with the <code class="inline">-<span class="w">I</span></code>
+ switches set correctly.</p>
+<p>If you'd like to see the raw output of your tests, set the
+<code class="inline"><span class="w">TEST_VERBOSE</span></code>
+ variable to true.</p>
+<pre class="verbatim"><ol><li>  <span class="w">make</span> <span class="w">test</span> <span class="w">TEST_VERBOSE</span>=<span class="n">1</span></li></ol></pre><a class='view-head2' id="make-testdb"></a><h3 class='h3' >make testdb</h3>
+<p>A useful variation of the above is the target <code class="inline"><span class="w">testdb</span></code>
+. It runs the
+test under the Perl debugger (see <a href="../perldebug.html">perldebug</a>). If the file
+<i>test.pl</i> exists in the current directory, it is used for the test.</p>
+<p>If you want to debug some other testfile, set the <code class="inline"><span class="w">TEST_FILE</span></code>
+ variable
+thusly:</p>
+<pre class="verbatim"><ol><li>  <span class="w">make</span> <span class="w">testdb</span> <span class="w">TEST_FILE</span>=<span class="w">t</span>/<span class="w">mytest</span>.<span class="w">t</span></li></ol></pre><p>By default the debugger is called using <code class="inline">-d</code>
+ option to perl. If you
+want to specify some other option, set the <code class="inline"><span class="w">TESTDB_SW</span></code>
+ variable:</p>
+<pre class="verbatim"><ol><li>  <span class="w">make</span> <span class="w">testdb</span> <span class="w">TESTDB_SW</span>=-<span class="w">Dx</span></li></ol></pre><a class='view-head2' id="make-install"></a><h3 class='h3' >make install</h3>
+<p>make alone puts all relevant files into directories that are named by
+the macros INST_LIB, INST_ARCHLIB, INST_SCRIPT, INST_MAN1DIR and
+INST_MAN3DIR.  All these default to something below ./blib if you are
+<i>not</i> building below the perl source directory. If you <i>are</i>
+building below the perl source, INST_LIB and INST_ARCHLIB default to
+../../lib, and INST_SCRIPT is not defined.</p>
+<p>The <i>install</i> target of the generated Makefile copies the files found
+below each of the INST_* directories to their INSTALL*
+counterparts. Which counterparts are chosen depends on the setting of
+INSTALLDIRS according to the following table:</p>
+<pre class="verbatim"><ol><li>                                 <span class="w">INSTALLDIRS</span> <span class="w">set</span> <span class="w">to</span></li><li>                           <span class="w">perl</span>        <span class="w">site</span>          <span class="w">vendor</span></li><li></li><li>                 <span class="w">PERLPREFIX</span>      <span class="w">SITEPREFIX</span>          <span class="w">VENDORPREFIX</span></li><li>  <span class="w">INST_ARCHLIB</span>   <span class="w">INSTALLARCHLIB</span>  <span class="w">INSTALLSITEARCH</span>     <span class="w">INSTALLVENDORARCH</span></li><li>  <span class="w">INST_LIB</span>       <span class="w">INSTALLPRIVLIB</span>  <span class="w">INSTALLSITELIB</span>      <span class="w">INSTALLVENDORLIB</span></li><li>  <span class="w">INST_BIN</span>       <span class="w">INSTALLBIN</span>      <span class="w">INSTALLSITEBIN</span>      <span class="w">INSTALLVENDORBIN</span></li><li>  <span class="w">INST_SCRIPT</span>    <span class="w">INSTALLSCRIPT</span>   <span class="w">INSTALLSCRIPT</span>       <span class="w">INSTALLSCRIPT</span></li><li>  <span class="w">INST_MAN1DIR</span>   <span class="w">INSTALLMAN1DIR</span>  <span class="w">INSTALLSITEMAN1DIR</span>  <span class="w">INSTALLVENDORMAN1DIR</span></li><li>  <span class="w">INST_MAN3DIR</span>   <span class="w">INSTALLMAN3DIR</span>  <span class="w">INSTALLSITEMAN3DIR</span>  <span class="w">INSTALLVENDORMAN3DIR</span></li></ol></pre><p>The INSTALL... macros in turn default to their %Config
+($Config{installprivlib}, $Config{installarchlib}, etc.) counterparts.</p>
+<p>You can check the values of these variables on your system with</p>
+<pre class="verbatim"><ol><li>    <span class="w">perl</span> <span class="q">&#39;-V:install.*&#39;</span></li></ol></pre><p>And to check the sequence in which the library directories are
+searched by perl, run</p>
+<pre class="verbatim"><ol><li>    <span class="w">perl</span> -le <span class="q">&#39;print join $/, @INC&#39;</span></li></ol></pre><a class='view-head2' id="PREFIX-and-LIB-attribute"></a><h3 class='h3' >PREFIX and LIB attribute</h3>
+<p>PREFIX and LIB can be used to set several INSTALL* attributes in one
+go. The quickest way to install a module in a non-standard place might
+be</p>
+<pre class="verbatim"><ol><li>    <span class="w">perl</span> <span class="w">Makefile</span>.<span class="w">PL</span> <span class="w">PREFIX</span>=~</li></ol></pre><p>This will install all files in the module under your home directory,
+with man pages and libraries going into an appropriate place (usually
+~/man and ~/lib).</p>
+<p>Another way to specify many INSTALL directories with a single
+parameter is LIB.</p>
+<pre class="verbatim"><ol><li>    <span class="w">perl</span> <span class="w">Makefile</span>.<span class="w">PL</span> <span class="w">LIB</span>=~<span class="q">/lib</span></li></ol></pre><p>This will install the module's architecture-independent files into
+~/lib, the architecture-dependent files into ~/lib/$archname.</p>
+<p>Note, that in both cases the tilde expansion is done by MakeMaker, not
+by perl by default, nor by make.</p>
+<p>Conflicts between parameters LIB, PREFIX and the various INSTALL*
+arguments are resolved so that:</p>
+<ul>
+<li>
+<p>setting LIB overrides any setting of INSTALLPRIVLIB, INSTALLARCHLIB,
+INSTALLSITELIB, INSTALLSITEARCH (and they are not affected by PREFIX);</p>
+</li>
+<li>
+<p>without LIB, setting PREFIX replaces the initial <code class="inline"><span class="i">$Config</span>{<span class="w">prefix</span>}</code>
+
+part of those INSTALL* arguments, even if the latter are explicitly
+set (but are set to still start with <code class="inline"><span class="i">$Config</span>{<span class="w">prefix</span>}</code>
+).</p>
+</li>
+</ul>
+<p>If the user has superuser privileges, and is not working on AFS or
+relatives, then the defaults for INSTALLPRIVLIB, INSTALLARCHLIB,
+INSTALLSCRIPT, etc. will be appropriate, and this incantation will be
+the best:</p>
+<pre class="verbatim"><ol><li>    <span class="w">perl</span> <span class="w">Makefile</span>.<span class="w">PL</span><span class="sc">;</span> </li><li>    <span class="w">make</span><span class="sc">;</span> </li><li>    <span class="w">make</span> <span class="w">test</span></li><li>    <span class="w">make</span> <span class="w">install</span></li></ol></pre><p>make install per default writes some documentation of what has been
+done into the file <code class="inline"><span class="i">$(</span><span class="w">INSTALLARCHLIB</span><span class="p">)</span>/<span class="w">perllocal</span>.<span class="w">pod</span></code>
+. This feature
+can be bypassed by calling make pure_install.</p>
+<a class='view-head2' id="AFS-users"></a><h3 class='h3' >AFS users</h3>
+<p>will have to specify the installation directories as these most
+probably have changed since perl itself has been installed. They will
+have to do this by calling</p>
+<pre class="verbatim"><ol><li>    <span class="w">perl</span> <span class="w">Makefile</span>.<span class="w">PL</span> <span class="w">INSTALLSITELIB</span>=<span class="q">/afs/</span><span class="w">here</span>/<span class="w">today</span> \</li><li>        <span class="w">INSTALLSCRIPT</span>=<span class="q">/afs/</span><span class="w">there</span>/<span class="w">now</span> <span class="w">INSTALLMAN3DIR</span>=<span class="q">/afs/</span>for<span class="q">/manpages</span></li><li>    <span class="q">    make</span></li></ol></pre><p>Be careful to repeat this procedure every time you recompile an
+extension, unless you are sure the AFS installation directories are
+still valid.</p>
+<a class='view-head2' id="Static-Linking-of-a-new-Perl-Binary"></a><h3 class='h3' >Static Linking of a new Perl Binary</h3>
+<p>An extension that is built with the above steps is ready to use on
+systems supporting dynamic loading. On systems that do not support
+dynamic loading, any newly created extension has to be linked together
+with the available resources. MakeMaker supports the linking process
+by creating appropriate targets in the Makefile whenever an extension
+is built. You can invoke the corresponding section of the makefile with</p>
+<pre class="verbatim"><ol><li>    <span class="w">make</span> <span class="w">perl</span></li></ol></pre><p>That produces a new perl binary in the current directory with all
+extensions linked in that can be found in INST_ARCHLIB, SITELIBEXP,
+and PERL_ARCHLIB. To do that, MakeMaker writes a new Makefile, on
+UNIX, this is called Makefile.aperl (may be system dependent). If you
+want to force the creation of a new perl, it is recommended, that you
+delete this Makefile.aperl, so the directories are searched-through
+for linkable libraries again.</p>
+<p>The binary can be installed into the directory where perl normally
+resides on your machine with</p>
+<pre class="verbatim"><ol><li>    <span class="w">make</span> <span class="w">inst_perl</span></li></ol></pre><p>To produce a perl binary with a different name than <code class="inline"><span class="w">perl</span></code>
+, either say</p>
+<pre class="verbatim"><ol><li>    <span class="w">perl</span> <span class="w">Makefile</span>.<span class="w">PL</span> <span class="w">MAP_TARGET</span>=<span class="w">myperl</span></li><li>    <span class="w">make</span> <span class="w">myperl</span></li><li>    <span class="w">make</span> <span class="w">inst_perl</span></li></ol></pre><p>or say</p>
+<pre class="verbatim"><ol><li>    <span class="w">perl</span> <span class="w">Makefile</span>.<span class="w">PL</span></li><li>    <span class="w">make</span> <span class="w">myperl</span> <span class="w">MAP_TARGET</span>=<span class="w">myperl</span></li><li>    <span class="w">make</span> <span class="w">inst_perl</span> <span class="w">MAP_TARGET</span>=<span class="w">myperl</span></li></ol></pre><p>In any case you will be prompted with the correct invocation of the
+<code class="inline"><span class="w">inst_perl</span></code>
+ target that installs the new binary into INSTALLBIN.</p>
+<p>make inst_perl per default writes some documentation of what has been
+done into the file <code class="inline"><span class="i">$(</span><span class="w">INSTALLARCHLIB</span><span class="p">)</span>/<span class="w">perllocal</span>.<span class="w">pod</span></code>
+. This
+can be bypassed by calling make pure_inst_perl.</p>
+<p>Warning: the inst_perl: target will most probably overwrite your
+existing perl binary. Use with care!</p>
+<p>Sometimes you might want to build a statically linked perl although
+your system supports dynamic loading. In this case you may explicitly
+set the linktype with the invocation of the Makefile.PL or make:</p>
+<pre class="verbatim"><ol><li>    <span class="w">perl</span> <span class="w">Makefile</span>.<span class="w">PL</span> <span class="w">LINKTYPE</span>=<span class="w">static</span>    <span class="c"># recommended</span></li></ol></pre><p>or</p>
+<pre class="verbatim"><ol><li>    <span class="w">make</span> <span class="w">LINKTYPE</span>=<span class="w">static</span>                <span class="c"># works on most systems</span></li></ol></pre><a class='view-head2' id="Determination-of-Perl-Library-and-Installation-Locations"></a><h3 class='h3' >Determination of Perl Library and Installation Locations</h3>
+<p>MakeMaker needs to know, or to guess, where certain things are
+located.  Especially INST_LIB and INST_ARCHLIB (where to put the files
+during the make(1) run), PERL_LIB and PERL_ARCHLIB (where to read
+existing modules from), and PERL_INC (header files and <code class="inline"><span class="w">libperl</span>*.<span class="i">*</span></code>
+).</p>
+<p>Extensions may be built either using the contents of the perl source
+directory tree or from the installed perl library. The recommended way
+is to build extensions after you have run 'make install' on perl
+itself. You can do that in any directory on your hard disk that is not
+below the perl source tree. The support for extensions below the ext
+directory of the perl distribution is only good for the standard
+extensions that come with perl.</p>
+<p>If an extension is being built below the <code class="inline"><span class="w">ext</span>/</code>
+ directory of the perl
+source then MakeMaker will set PERL_SRC automatically (e.g.,
+<code class="inline">..<span class="q">/..</span></code>
+).  If PERL_SRC is defined and the extension is recognized as
+a standard extension, then other variables default to the following:</p>
+<pre class="verbatim"><ol><li>  <span class="w">PERL_INC</span>     = <span class="w">PERL_SRC</span></li><li>  <span class="w">PERL_LIB</span>     = <span class="w">PERL_SRC</span>/<span class="w">lib</span></li><li>  <span class="w">PERL_ARCHLIB</span> = <span class="w">PERL_SRC</span>/<span class="w">lib</span></li><li>  <span class="w">INST_LIB</span>     = <span class="w">PERL_LIB</span></li><li>  <span class="w">INST_ARCHLIB</span> = <span class="w">PERL_ARCHLIB</span></li></ol></pre><p>If an extension is being built away from the perl source then MakeMaker
+will leave PERL_SRC undefined and default to using the installed copy
+of the perl library. The other variables default to the following:</p>
+<pre class="verbatim"><ol><li>  <span class="w">PERL_INC</span>     = <span class="i">$archlibexp</span>/<span class="w">CORE</span></li><li>  <span class="w">PERL_LIB</span>     = <span class="i">$privlibexp</span></li><li>  <span class="w">PERL_ARCHLIB</span> = <span class="i">$archlibexp</span></li><li>  <span class="w">INST_LIB</span>     = .<span class="q">/blib/</span><span class="w">lib</span></li><li>  <span class="w">INST_ARCHLIB</span> = .<span class="q">/blib/</span><span class="w">arch</span></li></ol></pre><p>If perl has not yet been installed then PERL_SRC can be defined on the
+command line as shown in the previous section.</p>
+<a class='view-head2' id="Which-architecture-dependent-directory%3f"></a><h3 class='h3' >Which architecture dependent directory?</h3>
+<p>If you don't want to keep the defaults for the INSTALL* macros,
+MakeMaker helps you to minimize the typing needed: the usual
+relationship between INSTALLPRIVLIB and INSTALLARCHLIB is determined
+by Configure at perl compilation time. MakeMaker supports the user who
+sets INSTALLPRIVLIB. If INSTALLPRIVLIB is set, but INSTALLARCHLIB not,
+then MakeMaker defaults the latter to be the same subdirectory of
+INSTALLPRIVLIB as Configure decided for the counterparts in %Config ,
+otherwise it defaults to INSTALLPRIVLIB. The same relationship holds
+for INSTALLSITELIB and INSTALLSITEARCH.</p>
+<p>MakeMaker gives you much more freedom than needed to configure
+internal variables and get different results. It is worth to mention,
+that make(1) also lets you configure most of the variables that are
+used in the Makefile. But in the majority of situations this will not
+be necessary, and should only be done if the author of a package
+recommends it (or you know what you're doing).</p>
+<a class='view-head2' id="Using-Attributes-and-Parameters"></a><h3 class='h3' >Using Attributes and Parameters</h3>
+<p>The following attributes may be specified as arguments to WriteMakefile()
+or as NAME=VALUE pairs on the command line.</p>
+<ul>
+<li><a class='view-title' id="ABSTRACT"></a><strong>ABSTRACT</strong>
+<p>One line description of the module. Will be included in PPD file.</p>
+</li>
+<li><a class='view-title' id="ABSTRACT_FROM"></a><strong>ABSTRACT_FROM</strong>
+<p>Name of the file that contains the package description. MakeMaker looks
+for a line in the POD matching /^($package\s-\s)(.*)/. This is typically
+the first line in the "=head1 NAME" section. $2 becomes the abstract.</p>
+</li>
+<li><a class='view-title' id="AUTHOR"></a><strong>AUTHOR</strong>
+<p>String containing name (and email address) of package author(s). Is used
+in PPD (Perl Package Description) files for PPM (Perl Package Manager).</p>
+</li>
+<li><a class='view-title' id="BINARY_LOCATION"></a><strong>BINARY_LOCATION</strong>
+<p>Used when creating PPD files for binary packages.  It can be set to a
+full or relative path or URL to the binary archive for a particular
+architecture.  For example:</p>
+<pre class="verbatim"><ol><li>        <span class="w">perl</span> <span class="w">Makefile</span>.<span class="w">PL</span> <span class="w">BINARY_LOCATION</span>=<span class="w">x86</span>/<span class="w">Agent</span>.<span class="w">tar</span>.<span class="w">gz</span></li></ol></pre><p>builds a PPD package that references a binary of the <code class="inline"><span class="w">Agent</span></code>
+ package,
+located in the <code class="inline"><span class="w">x86</span></code>
+ directory relative to the PPD itself.</p>
+</li>
+<li><a class='view-title' id="C"></a><strong>C</strong>
+<p>Ref to array of *.c file names. Initialised from a directory scan
+and the values portion of the XS attribute hash. This is not
+currently used by MakeMaker but may be handy in Makefile.PLs.</p>
+</li>
+<li><a class='view-title' id="CCFLAGS"></a><strong>CCFLAGS</strong>
+<p>String that will be included in the compiler call command line between
+the arguments INC and OPTIMIZE.</p>
+</li>
+<li><a class='view-title' id="CONFIG"></a><strong>CONFIG</strong>
+<p>Arrayref. E.g. [qw(archname manext)] defines ARCHNAME &amp; MANEXT from
+config.sh. MakeMaker will add to CONFIG the following values anyway:
+ar
+cc
+cccdlflags
+ccdlflags
+dlext
+dlsrc
+ld
+lddlflags
+ldflags
+libc
+lib_ext
+obj_ext
+ranlib
+sitelibexp
+sitearchexp
+so</p>
+</li>
+<li><a class='view-title' id="CONFIGURE"></a><strong>CONFIGURE</strong>
+<p>CODE reference. The subroutine should return a hash reference. The
+hash may contain further attributes, e.g. {LIBS =&gt; ...}, that have to
+be determined by some evaluation method.</p>
+</li>
+<li><a class='view-title' id="DEFINE"></a><strong>DEFINE</strong>
+<p>Something like <code class="inline"><span class="q">&quot;-DHAVE_UNISTD_H&quot;</span></code>
+</p>
+</li>
+<li><a class='view-title' id="DESTDIR"></a><strong>DESTDIR</strong>
+<p>This is the root directory into which the code will be installed.  It
+<i>prepends itself to the normal prefix</i>.  For example, if your code
+would normally go into /usr/local/lib/perl you could set DESTDIR=/tmp/
+and installation would go into /tmp/usr/local/lib/perl.</p>
+<p>This is primarily of use for people who repackage Perl modules.</p>
+<p>NOTE: Due to the nature of make, it is important that you put the trailing
+slash on your DESTDIR.  "/tmp/" not "/tmp".</p>
+</li>
+<li><a class='view-title' id="DIR"></a><strong>DIR</strong>
+<p>Ref to array of subdirectories containing Makefile.PLs e.g. [ 'sdbm'
+] in ext/SDBM_File</p>
+</li>
+<li><a class='view-title' id="DISTNAME"></a><strong>DISTNAME</strong>
+<p>A safe filename for the package.</p>
+<p>Defaults to NAME above but with :: replaced with -.</p>
+<p>For example, Foo::Bar becomes Foo-Bar.</p>
+</li>
+<li><a class='view-title' id="DISTVNAME"></a><strong>DISTVNAME</strong>
+<p>Your name for distributing the package with the version number
+included.  This is used by 'make dist' to name the resulting archive
+file.</p>
+<p>Defaults to DISTNAME-VERSION.</p>
+<p>For example, version 1.04 of Foo::Bar becomes Foo-Bar-1.04.</p>
+<p>On some OS's where . has special meaning VERSION_SYM may be used in
+place of VERSION.</p>
+</li>
+<li><a class='view-title' id="DL_FUNCS"></a><strong>DL_FUNCS</strong>
+<p>Hashref of symbol names for routines to be made available as universal
+symbols.  Each key/value pair consists of the package name and an
+array of routine names in that package.  Used only under AIX, OS/2,
+VMS and Win32 at present.  The routine names supplied will be expanded
+in the same way as XSUB names are expanded by the XS() macro.
+Defaults to</p>
+<pre class="verbatim"><ol><li>  <span class="s">{</span><span class="q">&quot;$(NAME)&quot;</span> <span class="cm">=&gt;</span> <span class="s">[</span><span class="q">&quot;boot_$(NAME)&quot;</span> <span class="s">]</span> <span class="s">}</span></li></ol></pre><p>e.g.</p>
+<pre class="verbatim"><ol><li>  <span class="s">{</span><span class="q">&quot;RPC&quot;</span> <span class="cm">=&gt;</span> <span class="s">[</span><span class="q">qw( boot_rpcb rpcb_gettime getnetconfigent )</span><span class="s">]</span><span class="cm">,</span></li><li>   <span class="q">&quot;NetconfigPtr&quot;</span> <span class="cm">=&gt;</span> <span class="s">[</span> <span class="q">&#39;DESTROY&#39;</span><span class="s">]</span> <span class="s">}</span></li></ol></pre><p>Please see the <a href="../ExtUtils/Mksymlists.html">ExtUtils::Mksymlists</a> documentation for more information
+about the DL_FUNCS, DL_VARS and FUNCLIST attributes.</p>
+</li>
+<li><a class='view-title' id="DL_VARS"></a><strong>DL_VARS</strong>
+<p>Array of symbol names for variables to be made available as universal symbols.
+Used only under AIX, OS/2, VMS and Win32 at present.  Defaults to [].
+(e.g. [ qw(Foo_version Foo_numstreams Foo_tree ) ])</p>
+</li>
+<li><a class='view-title' id="EXCLUDE_EXT"></a><strong>EXCLUDE_EXT</strong>
+<p>Array of extension names to exclude when doing a static build.  This
+is ignored if INCLUDE_EXT is present.  Consult INCLUDE_EXT for more
+details.  (e.g.  [ qw( Socket POSIX ) ] )</p>
+<p>This attribute may be most useful when specified as a string on the
+command line:  perl Makefile.PL EXCLUDE_EXT='Socket Safe'</p>
+</li>
+<li><a class='view-title' id="EXE_FILES"></a><strong>EXE_FILES</strong>
+<p>Ref to array of executable files. The files will be copied to the
+INST_SCRIPT directory. Make realclean will delete them from there
+again.</p>
+<p>If your executables start with something like #!perl or
+#!/usr/bin/perl MakeMaker will change this to the path of the perl
+'Makefile.PL' was invoked with so the programs will be sure to run
+properly even if perl is not in /usr/bin/perl.</p>
+</li>
+<li><a class='view-title' id="FIRST_MAKEFILE"></a><strong>FIRST_MAKEFILE</strong>
+<p>The name of the Makefile to be produced.  This is used for the second
+Makefile that will be produced for the MAP_TARGET.</p>
+<p>Defaults to 'Makefile' or 'Descrip.MMS' on VMS.</p>
+<p>(Note: we couldn't use MAKEFILE because dmake uses this for something
+else).</p>
+</li>
+<li><a class='view-title' id="FULLPERL"></a><strong>FULLPERL</strong>
+<p>Perl binary able to run this extension, load XS modules, etc...</p>
+</li>
+<li><a class='view-title' id="FULLPERLRUN"></a><strong>FULLPERLRUN</strong>
+<p>Like PERLRUN, except it uses FULLPERL.</p>
+</li>
+<li><a class='view-title' id="FULLPERLRUNINST"></a><strong>FULLPERLRUNINST</strong>
+<p>Like PERLRUNINST, except it uses FULLPERL.</p>
+</li>
+<li><a class='view-title' id="FUNCLIST"></a><strong>FUNCLIST</strong>
+<p>This provides an alternate means to specify function names to be
+exported from the extension.  Its value is a reference to an
+array of function names to be exported by the extension.  These
+names are passed through unaltered to the linker options file.</p>
+</li>
+<li><a class='view-title' id="H"></a><strong>H</strong>
+<p>Ref to array of *.h file names. Similar to C.</p>
+</li>
+<li><a class='view-title' id="IMPORTS"></a><strong>IMPORTS</strong>
+<p>This attribute is used to specify names to be imported into the
+extension. Takes a hash ref.</p>
+<p>It is only used on OS/2 and Win32.</p>
+</li>
+<li><a class='view-title' id="INC"></a><strong>INC</strong>
+<p>Include file dirs eg: <code class="inline"><span class="q">&quot;-I/usr/5include -I/path/to/inc&quot;</span></code>
+</p>
+</li>
+<li><a class='view-title' id="INCLUDE_EXT"></a><strong>INCLUDE_EXT</strong>
+<p>Array of extension names to be included when doing a static build.
+MakeMaker will normally build with all of the installed extensions when
+doing a static build, and that is usually the desired behavior.  If
+INCLUDE_EXT is present then MakeMaker will build only with those extensions
+which are explicitly mentioned. (e.g.  [ qw( Socket POSIX ) ])</p>
+<p>It is not necessary to mention DynaLoader or the current extension when
+filling in INCLUDE_EXT.  If the INCLUDE_EXT is mentioned but is empty then
+only DynaLoader and the current extension will be included in the build.</p>
+<p>This attribute may be most useful when specified as a string on the
+command line:  perl Makefile.PL INCLUDE_EXT='POSIX Socket Devel::Peek'</p>
+</li>
+<li><a class='view-title' id="INSTALLARCHLIB"></a><strong>INSTALLARCHLIB</strong>
+<p>Used by 'make install', which copies files from INST_ARCHLIB to this
+directory if INSTALLDIRS is set to perl.</p>
+</li>
+<li><a class='view-title' id="INSTALLBIN"></a><strong>INSTALLBIN</strong>
+<p>Directory to install binary files (e.g. tkperl) into if
+INSTALLDIRS=perl.</p>
+</li>
+<li><a class='view-title' id="INSTALLDIRS"></a><strong>INSTALLDIRS</strong>
+<p>Determines which of the sets of installation directories to choose:
+perl, site or vendor.  Defaults to site.</p>
+</li>
+<li><a class='view-title' id="INSTALLMAN1DIR"></a><strong>INSTALLMAN1DIR</strong>
+</li>
+<li><a class='view-title' id="INSTALLMAN3DIR"></a><strong>INSTALLMAN3DIR</strong>
+<p>These directories get the man pages at 'make install' time if
+INSTALLDIRS=perl.  Defaults to $Config{installman*dir}.</p>
+<p>If set to 'none', no man pages will be installed.</p>
+</li>
+<li><a class='view-title' id="INSTALLPRIVLIB"></a><strong>INSTALLPRIVLIB</strong>
+<p>Used by 'make install', which copies files from INST_LIB to this
+directory if INSTALLDIRS is set to perl.</p>
+<p>Defaults to $Config{installprivlib}.</p>
+</li>
+<li><a class='view-title' id="INSTALLSCRIPT"></a><strong>INSTALLSCRIPT</strong>
+<p>Used by 'make install' which copies files from INST_SCRIPT to this
+directory.</p>
+</li>
+<li><a class='view-title' id="INSTALLSITEARCH"></a><strong>INSTALLSITEARCH</strong>
+<p>Used by 'make install', which copies files from INST_ARCHLIB to this
+directory if INSTALLDIRS is set to site (default).</p>
+</li>
+<li><a class='view-title' id="INSTALLSITEBIN"></a><strong>INSTALLSITEBIN</strong>
+<p>Used by 'make install', which copies files from INST_BIN to this
+directory if INSTALLDIRS is set to site (default).</p>
+</li>
+<li><a class='view-title' id="INSTALLSITELIB"></a><strong>INSTALLSITELIB</strong>
+<p>Used by 'make install', which copies files from INST_LIB to this
+directory if INSTALLDIRS is set to site (default).</p>
+</li>
+<li><a class='view-title' id="INSTALLSITEMAN1DIR"></a><strong>INSTALLSITEMAN1DIR</strong>
+</li>
+<li><a class='view-title' id="INSTALLSITEMAN3DIR"></a><strong>INSTALLSITEMAN3DIR</strong>
+<p>These directories get the man pages at 'make install' time if
+INSTALLDIRS=site (default).  Defaults to 
+$(SITEPREFIX)/man/man$(MAN*EXT).</p>
+<p>If set to 'none', no man pages will be installed.</p>
+</li>
+<li><a class='view-title' id="INSTALLVENDORARCH"></a><strong>INSTALLVENDORARCH</strong>
+<p>Used by 'make install', which copies files from INST_ARCHLIB to this
+directory if INSTALLDIRS is set to vendor.</p>
+</li>
+<li><a class='view-title' id="INSTALLVENDORBIN"></a><strong>INSTALLVENDORBIN</strong>
+<p>Used by 'make install', which copies files from INST_BIN to this
+directory if INSTALLDIRS is set to vendor.</p>
+</li>
+<li><a class='view-title' id="INSTALLVENDORLIB"></a><strong>INSTALLVENDORLIB</strong>
+<p>Used by 'make install', which copies files from INST_LIB to this
+directory if INSTALLDIRS is set to vendor.</p>
+</li>
+<li><a class='view-title' id="INSTALLVENDORMAN1DIR"></a><strong>INSTALLVENDORMAN1DIR</strong>
+</li>
+<li><a class='view-title' id="INSTALLVENDORMAN3DIR"></a><strong>INSTALLVENDORMAN3DIR</strong>
+<p>These directories get the man pages at 'make install' time if
+INSTALLDIRS=vendor.  Defaults to $(VENDORPREFIX)/man/man$(MAN*EXT).</p>
+<p>If set to 'none', no man pages will be installed.</p>
+</li>
+<li><a class='view-title' id="INST_ARCHLIB"></a><strong>INST_ARCHLIB</strong>
+<p>Same as INST_LIB for architecture dependent files.</p>
+</li>
+<li><a class='view-title' id="INST_BIN"></a><strong>INST_BIN</strong>
+<p>Directory to put real binary files during 'make'. These will be copied
+to INSTALLBIN during 'make install'</p>
+</li>
+<li><a class='view-title' id="INST_LIB"></a><strong>INST_LIB</strong>
+<p>Directory where we put library files of this extension while building
+it.</p>
+</li>
+<li><a class='view-title' id="INST_MAN1DIR"></a><strong>INST_MAN1DIR</strong>
+<p>Directory to hold the man pages at 'make' time</p>
+</li>
+<li><a class='view-title' id="INST_MAN3DIR"></a><strong>INST_MAN3DIR</strong>
+<p>Directory to hold the man pages at 'make' time</p>
+</li>
+<li><a class='view-title' id="INST_SCRIPT"></a><strong>INST_SCRIPT</strong>
+<p>Directory, where executable files should be installed during
+'make'. Defaults to "./blib/script", just to have a dummy location during
+testing. make install will copy the files in INST_SCRIPT to
+INSTALLSCRIPT.</p>
+</li>
+<li><a class='view-title' id="LD"></a><strong>LD</strong>
+<p>Program to be used to link libraries for dynamic loading.</p>
+<p>Defaults to $Config{ld}.</p>
+</li>
+<li><a class='view-title' id="LDDLFLAGS"></a><strong>LDDLFLAGS</strong>
+<p>Any special flags that might need to be passed to ld to create a
+shared library suitable for dynamic loading.  It is up to the makefile
+to use it.  (See <a href="../Config.html#lddlflags">lddlflags in Config</a>)</p>
+<p>Defaults to $Config{lddlflags}.</p>
+</li>
+<li><a class='view-title' id="LDFROM"></a><strong>LDFROM</strong>
+<p>Defaults to "$(OBJECT)" and is used in the ld command to specify
+what files to link/load from (also see dynamic_lib below for how to
+specify ld flags)</p>
+</li>
+<li><a class='view-title' id="LIB"></a><strong>LIB</strong>
+<p>LIB should only be set at <code class="inline"><span class="w">perl</span> <span class="w">Makefile</span>.<span class="w">PL</span></code>
+ time but is allowed as a
+MakeMaker argument. It has the effect of setting both INSTALLPRIVLIB
+and INSTALLSITELIB to that value regardless any explicit setting of
+those arguments (or of PREFIX).  INSTALLARCHLIB and INSTALLSITEARCH
+are set to the corresponding architecture subdirectory.</p>
+</li>
+<li><a class='view-title' id="LIBPERL_A"></a><strong>LIBPERL_A</strong>
+<p>The filename of the perllibrary that will be used together with this
+extension. Defaults to libperl.a.</p>
+</li>
+<li><a class='view-title' id="LIBS"></a><strong>LIBS</strong>
+<p>An anonymous array of alternative library
+specifications to be searched for (in order) until
+at least one library is found. E.g.</p>
+<pre class="verbatim"><ol><li>  <span class="q">&#39;LIBS&#39;</span> <span class="cm">=&gt;</span> <span class="s">[</span><span class="q">&quot;-lgdbm&quot;</span><span class="cm">,</span> <span class="q">&quot;-ldbm -lfoo&quot;</span><span class="cm">,</span> <span class="q">&quot;-L/path -ldbm.nfs&quot;</span><span class="s">]</span></li></ol></pre><p>Mind, that any element of the array
+contains a complete set of arguments for the ld
+command. So do not specify</p>
+<pre class="verbatim"><ol><li>  <span class="q">&#39;LIBS&#39;</span> <span class="cm">=&gt;</span> <span class="s">[</span><span class="q">&quot;-ltcl&quot;</span><span class="cm">,</span> <span class="q">&quot;-ltk&quot;</span><span class="cm">,</span> <span class="q">&quot;-lX11&quot;</span><span class="s">]</span></li></ol></pre><p>See ODBM_File/Makefile.PL for an example, where an array is needed. If
+you specify a scalar as in</p>
+<pre class="verbatim"><ol><li>  <span class="q">&#39;LIBS&#39;</span> <span class="cm">=&gt;</span> <span class="q">&quot;-ltcl -ltk -lX11&quot;</span></li></ol></pre><p>MakeMaker will turn it into an array with one element.</p>
+</li>
+<li><a class='view-title' id="LINKTYPE"></a><strong>LINKTYPE</strong>
+<p>'static' or 'dynamic' (default unless usedl=undef in
+config.sh). Should only be used to force static linking (also see
+linkext below).</p>
+</li>
+<li><a class='view-title' id="MAKEAPERL"></a><strong>MAKEAPERL</strong>
+<p>Boolean which tells MakeMaker, that it should include the rules to
+make a perl. This is handled automatically as a switch by
+MakeMaker. The user normally does not need it.</p>
+</li>
+<li><a class='view-title' id="MAKEFILE_OLD"></a><strong>MAKEFILE_OLD</strong>
+<p>When 'make clean' or similar is run, the $(FIRST_MAKEFILE) will be
+backed up at this location.</p>
+<p>Defaults to $(FIRST_MAKEFILE).old or $(FIRST_MAKEFILE)_old on VMS.</p>
+</li>
+<li><a class='view-title' id="MAN1PODS"></a><strong>MAN1PODS</strong>
+<p>Hashref of pod-containing files. MakeMaker will default this to all
+EXE_FILES files that include POD directives. The files listed
+here will be converted to man pages and installed as was requested
+at Configure time.</p>
+</li>
+<li><a class='view-title' id="MAN3PODS"></a><strong>MAN3PODS</strong>
+<p>Hashref that assigns to *.pm and *.pod files the files into which the
+manpages are to be written. MakeMaker parses all *.pod and *.pm files
+for POD directives. Files that contain POD will be the default keys of
+the MAN3PODS hashref. These will then be converted to man pages during
+<code class="inline"><span class="w">make</span></code>
+ and will be installed during <code class="inline"><span class="w">make</span> <span class="w">install</span></code>
+.</p>
+</li>
+<li><a class='view-title' id="MAP_TARGET"></a><strong>MAP_TARGET</strong>
+<p>If it is intended, that a new perl binary be produced, this variable
+may hold a name for that binary. Defaults to perl</p>
+</li>
+<li><a class='view-title' id="MYEXTLIB"></a><strong>MYEXTLIB</strong>
+<p>If the extension links to a library that it builds set this to the
+name of the library (see SDBM_File)</p>
+</li>
+<li><a class='view-title' id="NAME"></a><strong>NAME</strong>
+<p>Perl module name for this extension (DBD::Oracle). This will default
+to the directory name but should be explicitly defined in the
+Makefile.PL.</p>
+</li>
+<li><a class='view-title' id="NEEDS_LINKING"></a><strong>NEEDS_LINKING</strong>
+<p>MakeMaker will figure out if an extension contains linkable code
+anywhere down the directory tree, and will set this variable
+accordingly, but you can speed it up a very little bit if you define
+this boolean variable yourself.</p>
+</li>
+<li><a class='view-title' id="NOECHO"></a><strong>NOECHO</strong>
+<p>Command so make does not print the literal commands its running.</p>
+<p>By setting it to an empty string you can generate a Makefile that
+prints all commands. Mainly used in debugging MakeMaker itself.</p>
+<p>Defaults to <code class="inline"><span class="i">@</span></code>
+.</p>
+</li>
+<li><a class='view-title' id="NORECURS"></a><strong>NORECURS</strong>
+<p>Boolean.  Attribute to inhibit descending into subdirectories.</p>
+</li>
+<li><a class='view-title' id="NO_META"></a><strong>NO_META</strong>
+<p>When true, suppresses the generation and addition to the MANIFEST of
+the META.yml module meta-data file during 'make distdir'.</p>
+<p>Defaults to false.</p>
+</li>
+<li><a class='view-title' id="NO_VC"></a><strong>NO_VC</strong>
+<p>In general, any generated Makefile checks for the current version of
+MakeMaker and the version the Makefile was built under. If NO_VC is
+set, the version check is neglected. Do not write this into your
+Makefile.PL, use it interactively instead.</p>
+</li>
+<li><a class='view-title' id="OBJECT"></a><strong>OBJECT</strong>
+<p>List of object files, defaults to '$(BASEEXT)$(OBJ_EXT)', but can be a long
+string containing all object files, e.g. "tkpBind.o
+tkpButton.o tkpCanvas.o"</p>
+<p>(Where BASEEXT is the last component of NAME, and OBJ_EXT is $Config{obj_ext}.)</p>
+</li>
+<li><a class='view-title' id="OPTIMIZE"></a><strong>OPTIMIZE</strong>
+<p>Defaults to <code class="inline">-O</code>
+. Set it to <code class="inline">-g</code>
+ to turn debugging on. The flag is
+passed to subdirectory makes.</p>
+</li>
+<li><a class='view-title' id="PERL"></a><strong>PERL</strong>
+<p>Perl binary for tasks that can be done by miniperl</p>
+</li>
+<li><a class='view-title' id="PERL_CORE"></a><strong>PERL_CORE</strong>
+<p>Set only when MakeMaker is building the extensions of the Perl core
+distribution.</p>
+</li>
+<li><a class='view-title' id="PERLMAINCC"></a><strong>PERLMAINCC</strong>
+<p>The call to the program that is able to compile perlmain.c. Defaults
+to $(CC).</p>
+</li>
+<li><a class='view-title' id="PERL_ARCHLIB"></a><strong>PERL_ARCHLIB</strong>
+<p>Same as for PERL_LIB, but for architecture dependent files.</p>
+<p>Used only when MakeMaker is building the extensions of the Perl core
+distribution (because normally $(PERL_ARCHLIB) is automatically in @INC,
+and adding it would get in the way of PERL5LIB).</p>
+</li>
+<li><a class='view-title' id="PERL_LIB"></a><strong>PERL_LIB</strong>
+<p>Directory containing the Perl library to use.</p>
+<p>Used only when MakeMaker is building the extensions of the Perl core
+distribution (because normally $(PERL_LIB) is automatically in @INC,
+and adding it would get in the way of PERL5LIB).</p>
+</li>
+<li><a class='view-title' id="PERL_MALLOC_OK"></a><strong>PERL_MALLOC_OK</strong>
+<p>defaults to 0.  Should be set to TRUE if the extension can work with
+the memory allocation routines substituted by the Perl malloc() subsystem.
+This should be applicable to most extensions with exceptions of those</p>
+<ul>
+<li>
+<p>with bugs in memory allocations which are caught by Perl's malloc();</p>
+</li>
+<li>
+<p>which interact with the memory allocator in other ways than via
+malloc(), realloc(), free(), calloc(), sbrk() and brk();</p>
+</li>
+<li>
+<p>which rely on special alignment which is not provided by Perl's malloc().</p>
+</li>
+</ul>
+<p><strong>NOTE.</strong>  Negligence to set this flag in <i>any one</i> of loaded extension
+nullifies many advantages of Perl's malloc(), such as better usage of
+system resources, error detection, memory usage reporting, catchable failure
+of memory allocations, etc.</p>
+</li>
+<li><a class='view-title' id="PERLPREFIX"></a><strong>PERLPREFIX</strong>
+<p>Directory under which core modules are to be installed.</p>
+<p>Defaults to $Config{installprefixexp} falling back to
+$Config{installprefix}, $Config{prefixexp} or $Config{prefix} should
+$Config{installprefixexp} not exist.</p>
+<p>Overridden by PREFIX.</p>
+</li>
+<li><a class='view-title' id="PERLRUN"></a><strong>PERLRUN</strong>
+<p>Use this instead of $(PERL) when you wish to run perl.  It will set up
+extra necessary flags for you.</p>
+</li>
+<li><a class='view-title' id="PERLRUNINST"></a><strong>PERLRUNINST</strong>
+<p>Use this instead of $(PERL) when you wish to run perl to work with
+modules.  It will add things like -I$(INST_ARCH) and other necessary
+flags so perl can see the modules you're about to install.</p>
+</li>
+<li><a class='view-title' id="PERL_SRC"></a><strong>PERL_SRC</strong>
+<p>Directory containing the Perl source code (use of this should be
+avoided, it may be undefined)</p>
+</li>
+<li><a class='view-title' id="PERM_RW"></a><strong>PERM_RW</strong>
+<p>Desired permission for read/writable files. Defaults to <code class="inline"><span class="n">644</span></code>
+.
+See also <a href="https://search.cpan.org/perldoc/MM_Unix#perm_rw">perm_rw in MM_Unix</a>.</p>
+</li>
+<li><a class='view-title' id="PERM_RWX"></a><strong>PERM_RWX</strong>
+<p>Desired permission for executable files. Defaults to <code class="inline"><span class="n">755</span></code>
+.
+See also <a href="https://search.cpan.org/perldoc/MM_Unix#perm_rwx">perm_rwx in MM_Unix</a>.</p>
+</li>
+<li><a class='view-title' id="PL_FILES"></a><strong>PL_FILES</strong>
+<p>Ref to hash of files to be processed as perl programs. MakeMaker
+will default to any found *.PL file (except Makefile.PL) being keys
+and the basename of the file being the value. E.g.</p>
+<pre class="verbatim"><ol><li>  <span class="s">{</span><span class="q">&#39;foobar.PL&#39;</span> <span class="cm">=&gt;</span> <span class="q">&#39;foobar&#39;</span><span class="s">}</span></li></ol></pre><p>The *.PL files are expected to produce output to the target files
+themselves. If multiple files can be generated from the same *.PL
+file then the value in the hash can be a reference to an array of
+target file names. E.g.</p>
+<pre class="verbatim"><ol><li>  <span class="s">{</span><span class="q">&#39;foobar.PL&#39;</span> <span class="cm">=&gt;</span> <span class="s">[</span><span class="q">&#39;foobar1&#39;</span><span class="cm">,</span><span class="q">&#39;foobar2&#39;</span><span class="s">]</span><span class="s">}</span></li></ol></pre></li>
+<li><a class='view-title' id="PM"></a><strong>PM</strong>
+<p>Hashref of .pm files and *.pl files to be installed.  e.g.</p>
+<pre class="verbatim"><ol><li>  <span class="s">{</span><span class="q">&#39;name_of_file.pm&#39;</span> <span class="cm">=&gt;</span> <span class="q">&#39;$(INST_LIBDIR)/install_as.pm&#39;</span><span class="s">}</span></li></ol></pre><p>By default this will include *.pm and *.pl and the files found in
+the PMLIBDIRS directories.  Defining PM in the
+Makefile.PL will override PMLIBDIRS.</p>
+</li>
+<li><a class='view-title' id="PMLIBDIRS"></a><strong>PMLIBDIRS</strong>
+<p>Ref to array of subdirectories containing library files.  Defaults to
+[ 'lib', $(BASEEXT) ]. The directories will be scanned and <i>any</i> files
+they contain will be installed in the corresponding location in the
+library.  A libscan() method can be used to alter the behaviour.
+Defining PM in the Makefile.PL will override PMLIBDIRS.</p>
+<p>(Where BASEEXT is the last component of NAME.)</p>
+</li>
+<li><a class='view-title' id="PM_FILTER"></a><strong>PM_FILTER</strong>
+<p>A filter program, in the traditional Unix sense (input from stdin, output
+to stdout) that is passed on each .pm file during the build (in the
+pm_to_blib() phase).  It is empty by default, meaning no filtering is done.</p>
+<p>Great care is necessary when defining the command if quoting needs to be
+done.  For instance, you would need to say:</p>
+<pre class="verbatim"><ol><li>  <span class="s">{</span><span class="q">&#39;PM_FILTER&#39;</span> <span class="cm">=&gt;</span> <span class="q">&#39;grep -v \\&quot;^\\#\\&quot;&#39;</span><span class="s">}</span></li></ol></pre><p>to remove all the leading coments on the fly during the build.  The
+extra \\ are necessary, unfortunately, because this variable is interpolated
+within the context of a Perl program built on the command line, and double
+quotes are what is used with the -e switch to build that command line.  The
+# is escaped for the Makefile, since what is going to be generated will then
+be:</p>
+<pre class="verbatim"><ol><li>  <span class="w">PM_FILTER</span> = <a class="l_k" href="../functions/grep.html">grep</a> -<span class="w">v</span> \<span class="q">&quot;^\#\&quot;</span></li></ol></pre><p>Without the \\ before the #, we'd have the start of a Makefile comment,
+and the macro would be incorrectly defined.</p>
+</li>
+<li><a class='view-title' id="POLLUTE"></a><strong>POLLUTE</strong>
+<p>Release 5.005 grandfathered old global symbol names by providing preprocessor
+macros for extension source compatibility.  As of release 5.6, these
+preprocessor definitions are not available by default.  The POLLUTE flag
+specifies that the old names should still be defined:</p>
+<pre class="verbatim"><ol><li>  <span class="w">perl</span> <span class="w">Makefile</span>.<span class="w">PL</span> <span class="w">POLLUTE</span>=<span class="n">1</span></li></ol></pre><p>Please inform the module author if this is necessary to successfully install
+a module under 5.6 or later.</p>
+</li>
+<li><a class='view-title' id="PPM_INSTALL_EXEC"></a><strong>PPM_INSTALL_EXEC</strong>
+<p>Name of the executable used to run <code class="inline"><span class="w">PPM_INSTALL_SCRIPT</span></code>
+ below. (e.g. perl)</p>
+</li>
+<li><a class='view-title' id="PPM_INSTALL_SCRIPT"></a><strong>PPM_INSTALL_SCRIPT</strong>
+<p>Name of the script that gets executed by the Perl Package Manager after
+the installation of a package.</p>
+</li>
+<li><a class='view-title' id="PREFIX"></a><strong>PREFIX</strong>
+<p>This overrides all the default install locations.  Man pages,
+libraries, scripts, etc...  MakeMaker will try to make an educated
+guess about where to place things under the new PREFIX based on your
+Config defaults.  Failing that, it will fall back to a structure
+which should be sensible for your platform.</p>
+<p>If you specify LIB or any INSTALL* variables they will not be effected
+by the PREFIX.</p>
+</li>
+<li><a class='view-title' id="PREREQ_FATAL"></a><strong>PREREQ_FATAL</strong>
+<p>Bool. If this parameter is true, failing to have the required modules
+(or the right versions thereof) will be fatal. perl Makefile.PL will die
+with the proper message.</p>
+<p>Note: see <a href="../Test/Harness.html">Test::Harness</a> for a shortcut for stopping tests early if
+you are missing dependencies.</p>
+<p>Do <i>not</i> use this parameter for simple requirements, which could be resolved
+at a later time, e.g. after an unsuccessful <strong>make test</strong> of your module.</p>
+<p>It is <i>extremely</i> rare to have to use <code class="inline"><span class="w">PREREQ_FATAL</span></code>
+ at all!</p>
+</li>
+<li><a class='view-title' id="PREREQ_PM"></a><strong>PREREQ_PM</strong>
+<p>Hashref: Names of modules that need to be available to run this
+extension (e.g. Fcntl for SDBM_File) are the keys of the hash and the
+desired version is the value. If the required version number is 0, we
+only check if any version is installed already.</p>
+</li>
+<li><a class='view-title' id="PREREQ_PRINT"></a><strong>PREREQ_PRINT</strong>
+<p>Bool.  If this parameter is true, the prerequisites will be printed to
+stdout and MakeMaker will exit.  The output format is an evalable hash
+ref.</p>
+<p>$PREREQ_PM = {
+               'A::B' =&gt; Vers1,
+               'C::D' =&gt; Vers2,
+               ...
+             };</p>
+</li>
+<li><a class='view-title' id="PRINT_PREREQ"></a><strong>PRINT_PREREQ</strong>
+<p>RedHatism for <code class="inline"><span class="w">PREREQ_PRINT</span></code>
+.  The output format is different, though:</p>
+<pre class="verbatim"><ol><li>    <span class="i">perl</span><span class="s">(</span><span class="w">A::B</span><span class="s">)</span>&gt;=<span class="w">Vers1</span> <span class="i">perl</span><span class="s">(</span><span class="w">C::D</span><span class="s">)</span>&gt;=<span class="w">Vers2</span> ...</li></ol></pre></li>
+<li><a class='view-title' id="SITEPREFIX"></a><strong>SITEPREFIX</strong>
+<p>Like PERLPREFIX, but only for the site install locations.</p>
+<p>Defaults to $Config{siteprefixexp}.  Perls prior to 5.6.0 didn't have
+an explicit siteprefix in the Config.  In those cases
+$Config{installprefix} will be used.</p>
+<p>Overridable by PREFIX</p>
+</li>
+<li><a class='view-title' id="SKIP"></a><strong>SKIP</strong>
+<p>Arrayref. E.g. [qw(name1 name2)] skip (do not write) sections of the
+Makefile. Caution! Do not use the SKIP attribute for the negligible
+speedup. It may seriously damage the resulting Makefile. Only use it
+if you really need it.</p>
+</li>
+<li><a class='view-title' id="TYPEMAPS"></a><strong>TYPEMAPS</strong>
+<p>Ref to array of typemap file names.  Use this when the typemaps are
+in some directory other than the current directory or when they are
+not named <strong>typemap</strong>.  The last typemap in the list takes
+precedence.  A typemap in the current directory has highest
+precedence, even if it isn't listed in TYPEMAPS.  The default system
+typemap has lowest precedence.</p>
+</li>
+<li><a class='view-title' id="VENDORPREFIX"></a><strong>VENDORPREFIX</strong>
+<p>Like PERLPREFIX, but only for the vendor install locations.</p>
+<p>Defaults to $Config{vendorprefixexp}.</p>
+<p>Overridable by PREFIX</p>
+</li>
+<li><a class='view-title' id="VERBINST"></a><strong>VERBINST</strong>
+<p>If true, make install will be verbose</p>
+</li>
+<li><a class='view-title' id="VERSION"></a><strong>VERSION</strong>
+<p>Your version number for distributing the package.  This defaults to
+0.1.</p>
+</li>
+<li><a class='view-title' id="VERSION_FROM"></a><strong>VERSION_FROM</strong>
+<p>Instead of specifying the VERSION in the Makefile.PL you can let
+MakeMaker parse a file to determine the version number. The parsing
+routine requires that the file named by VERSION_FROM contains one
+single line to compute the version number. The first line in the file
+that contains the regular expression</p>
+<pre class="verbatim"><ol><li>    <span class="q">/([\$*])(([\w\:\&#39;]*)\bVERSION)\b.*\=/</span></li></ol></pre><p>will be evaluated with eval() and the value of the named variable
+<strong>after</strong> the eval() will be assigned to the VERSION attribute of the
+MakeMaker object. The following lines will be parsed o.k.:</p>
+<pre class="verbatim"><ol><li>    <span class="i">$VERSION</span> = <span class="q">&#39;1.00&#39;</span><span class="sc">;</span></li><li>    <span class="i">*VERSION</span> = \<span class="q">&#39;1.01&#39;</span><span class="sc">;</span></li><li>    <span class="i">$VERSION</span> = <a class="l_k" href="../functions/sprintf.html">sprintf</a> <span class="q">&quot;%d.%03d&quot;</span><span class="cm">,</span> <span class="q">q$Revision: 1.133 $</span> =~ <span class="q">/(\d+)/g</span><span class="sc">;</span></li><li>    <span class="i">$FOO::VERSION</span> = <span class="q">&#39;1.10&#39;</span><span class="sc">;</span></li><li>    <span class="i">*FOO::VERSION</span> = \<span class="q">&#39;1.11&#39;</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/our.html">our</a> <span class="i">$VERSION</span> = <span class="v">1.2.3</span><span class="sc">;</span>       <span class="c"># new for perl5.6.0</span></li></ol></pre><p>but these will fail:</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">$VERSION</span> = <span class="q">&#39;1.01&#39;</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/local.html">local</a> <span class="i">$VERSION</span> = <span class="q">&#39;1.02&#39;</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/local.html">local</a> <span class="i">$FOO::VERSION</span> = <span class="q">&#39;1.30&#39;</span><span class="sc">;</span></li></ol></pre><p>(Putting <code class="inline"><a class="l_k" href="../functions/my.html">my</a></code> or <code class="inline"><a class="l_k" href="../functions/local.html">local</a></code> on the preceding line will work o.k.)</p>
+<p>The file named in VERSION_FROM is not added as a dependency to
+Makefile. This is not really correct, but it would be a major pain
+during development to have to rewrite the Makefile for any smallish
+change in that file. If you want to make sure that the Makefile
+contains the correct VERSION macro after any change of the file, you
+would have to do something like</p>
+<pre class="verbatim"><ol><li>    <span class="w">depend</span> <span class="cm">=&gt;</span> <span class="s">{</span> <span class="w">Makefile</span> <span class="cm">=&gt;</span> <span class="q">&#39;$(VERSION_FROM)&#39;</span> <span class="s">}</span></li></ol></pre><p>See attribute <code class="inline"><span class="w">depend</span></code>
+ below.</p>
+</li>
+<li><a class='view-title' id="VERSION_SYM"></a><strong>VERSION_SYM</strong>
+<p>A sanitized VERSION with . replaced by _.  For places where . has
+special meaning (some filesystems, RCS labels, etc...)</p>
+</li>
+<li><a class='view-title' id="XS"></a><strong>XS</strong>
+<p>Hashref of .xs files. MakeMaker will default this.  e.g.</p>
+<pre class="verbatim"><ol><li>  <span class="s">{</span><span class="q">&#39;name_of_file.xs&#39;</span> <span class="cm">=&gt;</span> <span class="q">&#39;name_of_file.c&#39;</span><span class="s">}</span></li></ol></pre><p>The .c files will automatically be included in the list of files
+deleted by a make clean.</p>
+</li>
+<li><a class='view-title' id="XSOPT"></a><strong>XSOPT</strong>
+<p>String of options to pass to xsubpp.  This might include <code class="inline">-C++</code>
+ or
+<code class="inline">-<span class="w">extern</span></code>
+.  Do not include typemaps here; the TYPEMAP parameter exists for
+that purpose.</p>
+</li>
+<li><a class='view-title' id="XSPROTOARG"></a><strong>XSPROTOARG</strong>
+<p>May be set to an empty string, which is identical to <code class="inline">-<span class="w">prototypes</span></code>
+, or
+<code class="inline">-<span class="w">noprototypes</span></code>
+. See the xsubpp documentation for details. MakeMaker
+defaults to the empty string.</p>
+</li>
+<li><a class='view-title' id="XS_VERSION"></a><strong>XS_VERSION</strong>
+<p>Your version number for the .xs file of this package.  This defaults
+to the value of the VERSION attribute.</p>
+</li>
+</ul>
+<a class='view-head2' id="Additional-lowercase-attributes"></a><h3 class='h3' >Additional lowercase attributes</h3>
+<p>can be used to pass parameters to the methods which implement that
+part of the Makefile.  Parameters are specified as a hash ref but are
+passed to the method as a hash.</p>
+<ul>
+<li><a class='view-title' id="clean"></a><strong>clean</strong>
+<pre class="verbatim"><ol><li>  <span class="s">{</span><span class="w">FILES</span> <span class="cm">=&gt;</span> <span class="q">&quot;*.xyz foo&quot;</span><span class="s">}</span></li></ol></pre></li>
+<li><a class='view-title' id="depend"></a><strong>depend</strong>
+<pre class="verbatim"><ol><li>  <span class="s">{</span><span class="w">ANY_TARGET</span> <span class="cm">=&gt;</span> <span class="w">ANY_DEPENDECY</span><span class="cm">,</span> ...<span class="s">}</span></li></ol></pre><p>(ANY_TARGET must not be given a double-colon rule by MakeMaker.)</p>
+</li>
+<li><a class='view-title' id="dist"></a><strong>dist</strong>
+<pre class="verbatim"><ol><li>  <span class="s">{</span><span class="w">TARFLAGS</span> <span class="cm">=&gt;</span> <span class="q">&#39;cvfF&#39;</span><span class="cm">,</span> <span class="w">COMPRESS</span> <span class="cm">=&gt;</span> <span class="q">&#39;gzip&#39;</span><span class="cm">,</span> <span class="w">SUFFIX</span> <span class="cm">=&gt;</span> <span class="q">&#39;.gz&#39;</span><span class="cm">,</span></li><li>  <span class="w">SHAR</span> <span class="cm">=&gt;</span> <span class="q">&#39;shar -m&#39;</span><span class="cm">,</span> <span class="w">DIST_CP</span> <span class="cm">=&gt;</span> <span class="q">&#39;ln&#39;</span><span class="cm">,</span> <span class="w">ZIP</span> <span class="cm">=&gt;</span> <span class="q">&#39;/bin/zip&#39;</span><span class="cm">,</span></li><li>  <span class="w">ZIPFLAGS</span> <span class="cm">=&gt;</span> <span class="q">&#39;-rl&#39;</span><span class="cm">,</span> <span class="w">DIST_DEFAULT</span> <span class="cm">=&gt;</span> <span class="q">&#39;private tardist&#39;</span> <span class="s">}</span></li></ol></pre><p>If you specify COMPRESS, then SUFFIX should also be altered, as it is
+needed to tell make the target file of the compression. Setting
+DIST_CP to ln can be useful, if you need to preserve the timestamps on
+your files. DIST_CP can take the values 'cp', which copies the file,
+'ln', which links the file, and 'best' which copies symbolic links and
+links the rest. Default is 'best'.</p>
+</li>
+<li><a class='view-title' id="dynamic_lib"></a><strong>dynamic_lib</strong>
+<pre class="verbatim"><ol><li>  <span class="s">{</span><span class="w">ARMAYBE</span> <span class="cm">=&gt;</span> <span class="q">&#39;ar&#39;</span><span class="cm">,</span> <span class="w">OTHERLDFLAGS</span> <span class="cm">=&gt;</span> <span class="q">&#39;...&#39;</span><span class="cm">,</span> <span class="w">INST_DYNAMIC_DEP</span> <span class="cm">=&gt;</span> <span class="q">&#39;...&#39;</span><span class="s">}</span></li></ol></pre></li>
+<li><a class='view-title' id="linkext"></a><strong>linkext</strong>
+<pre class="verbatim"><ol><li>  <span class="s">{</span><span class="w">LINKTYPE</span> <span class="cm">=&gt;</span> <span class="q">&#39;static&#39;</span><span class="cm">,</span> <span class="q">&#39;dynamic&#39;</span> or <span class="q">&#39;&#39;</span><span class="s">}</span></li></ol></pre><p>NB: Extensions that have nothing but *.pm files had to say</p>
+<pre class="verbatim"><ol><li>  <span class="s">{</span><span class="w">LINKTYPE</span> <span class="cm">=&gt;</span> <span class="q">&#39;&#39;</span><span class="s">}</span></li></ol></pre><p>with Pre-5.0 MakeMakers. Since version 5.00 of MakeMaker such a line
+can be deleted safely. MakeMaker recognizes when there's nothing to
+be linked.</p>
+</li>
+<li><a class='view-title' id="macro"></a><strong>macro</strong>
+<pre class="verbatim"><ol><li>  <span class="s">{</span><span class="w">ANY_MACRO</span> <span class="cm">=&gt;</span> <span class="w">ANY_VALUE</span><span class="cm">,</span> ...<span class="s">}</span></li></ol></pre></li>
+<li><a class='view-title' id="postamble"></a><strong>postamble</strong>
+<p>Anything put here will be passed to MY::postamble() if you have one.</p>
+</li>
+<li><a class='view-title' id="realclean"></a><strong>realclean</strong>
+<pre class="verbatim"><ol><li>  <span class="s">{</span><span class="w">FILES</span> <span class="cm">=&gt;</span> <span class="q">&#39;$(INST_ARCHAUTODIR)/*.xyz&#39;</span><span class="s">}</span></li></ol></pre></li>
+<li><a class='view-title' id="test"></a><strong>test</strong>
+<pre class="verbatim"><ol><li>  <span class="s">{</span><span class="w">TESTS</span> <span class="cm">=&gt;</span> <span class="q">&#39;t/*.t&#39;</span><span class="s">}</span></li></ol></pre></li>
+<li><a class='view-title' id="tool_autosplit"></a><strong>tool_autosplit</strong>
+<pre class="verbatim"><ol><li>  <span class="s">{</span><span class="w">MAXLEN</span> <span class="cm">=&gt;</span> <span class="n">8</span><span class="s">}</span></li></ol></pre></li>
+</ul>
+<a class='view-head2' id="Overriding-MakeMaker-Methods"></a><h3 class='h3' >Overriding MakeMaker Methods</h3>
+<p>If you cannot achieve the desired Makefile behaviour by specifying
+attributes you may define private subroutines in the Makefile.PL.
+Each subroutine returns the text it wishes to have written to
+the Makefile. To override a section of the Makefile you can
+either say:</p>
+<pre class="verbatim"><ol><li><a name="MY::c_o"></a>        sub <span class="m">MY::c_o</span> <span class="s">{</span> <span class="q">&quot;new literal text&quot;</span> <span class="s">}</span></li></ol></pre><p>or you can edit the default by saying something like:</p>
+<pre class="verbatim"><ol><li><a name="package-MY"></a>        package <span class="i">MY</span><span class="sc">;</span> <span class="c"># so that &quot;SUPER&quot; works right</span></li><li><a name="c_o"></a>        sub <span class="m">c_o</span> <span class="s">{</span></li><li>            <a class="l_k" href="../functions/my.html">my</a> <span class="i">$inherited</span> = <a class="l_k" href="../functions/shift.html">shift</a><span class="i">-&gt;SUPER::c_o</span><span class="s">(</span><span class="i">@_</span><span class="s">)</span><span class="sc">;</span></li><li>            <span class="i">$inherited</span> =~ <span class="q">s/old text/new text/</span><span class="sc">;</span></li><li>            <span class="i">$inherited</span><span class="sc">;</span></li><li>        <span class="s">}</span></li></ol></pre><p>If you are running experiments with embedding perl as a library into
+other applications, you might find MakeMaker is not sufficient. You'd
+better have a look at ExtUtils::Embed which is a collection of utilities
+for embedding.</p>
+<p>If you still need a different solution, try to develop another
+subroutine that fits your needs and submit the diffs to
+<i>makemaker@perl.org</i></p>
+<p>For a complete description of all MakeMaker methods see
+<a href="../ExtUtils/MM_Unix.html">ExtUtils::MM_Unix</a>.</p>
+<p>Here is a simple example of how to add a new target to the generated
+Makefile:</p>
+<pre class="verbatim"><ol><li><a name="MY::postamble"></a>    sub <span class="m">MY::postamble</span> <span class="s">{</span></li><li>        <a class="l_k" href="../functions/return.html">return</a> <span class="h">&lt;&lt;&#39;MAKE_FRAG&#39;</span><span class="sc">;</span></li><li><span class="hh">    $(MYEXTLIB): sdbm/Makefile</span></li><li><span class="hh">            cd sdbm &amp;&amp; $(MAKE) all</span></li><li></li><li><span class="hh">    MAKE_FRAG</span></li><li><span class="hh">    }</span></li></ol></pre><a class='view-head2' id="The-End-Of-Cargo-Cult-Programming"></a><h3 class='h3' >The End Of Cargo Cult Programming</h3>
+<p>WriteMakefile() now does some basic sanity checks on its parameters to
+protect against typos and malformatted values.  This means some things
+which happened to work in the past will now throw warnings and
+possibly produce internal errors.</p>
+<p>Some of the most common mistakes:</p>
+<ul>
+<li><a class='view-title' id="%3cMAN3PODS-%3d-'-'%3e%3e"></a><strong><code class="inline">&lt;<span class="w">MAN3PODS</span> =</code>
+ ' '&gt;&gt;</strong>
+<p>This is commonly used to supress the creation of man pages.  MAN3PODS
+takes a hash ref not a string, but the above worked by accident in old
+versions of MakeMaker.</p>
+<p>The correct code is <code class="inline">&lt;<span class="w">MAN3PODS</span> =</code>
+ { }&gt;&gt;.</p>
+</li>
+</ul>
+<a class='view-head2' id="Hintsfile-support"></a><h3 class='h3' >Hintsfile support</h3>
+<p>MakeMaker.pm uses the architecture specific information from
+Config.pm. In addition it evaluates architecture specific hints files
+in a <code class="inline"><span class="w">hints</span>/</code>
+ directory. The hints files are expected to be named
+like their counterparts in <code class="inline"><span class="w">PERL_SRC</span>/<span class="w">hints</span></code>
+, but with an <code class="inline">.<span class="w">pl</span></code>
+ file
+name extension (eg. <code class="inline"><span class="w">next_3_2</span>.<span class="w">pl</span></code>
+). They are simply <code class="inline"><a class="l_k" href="../functions/eval.html">eval</a></code>ed by
+MakeMaker within the WriteMakefile() subroutine, and can be used to
+execute commands as well as to include special variables. The rules
+which hintsfile is chosen are the same as in Configure.</p>
+<p>The hintsfile is eval()ed immediately after the arguments given to
+WriteMakefile are stuffed into a hash reference $self but before this
+reference becomes blessed. So if you want to do the equivalent to
+override or create an attribute you would say something like</p>
+<pre class="verbatim"><ol><li>    <span class="i">$self</span>-&gt;{<span class="w">LIBS</span>} = <span class="s">[</span><span class="q">&#39;-ldbm -lucb -lc&#39;</span><span class="s">]</span><span class="sc">;</span></li></ol></pre><a class='view-head2' id="Distribution-Support"></a><h3 class='h3' >Distribution Support</h3>
+<p>For authors of extensions MakeMaker provides several Makefile
+targets. Most of the support comes from the ExtUtils::Manifest module,
+where additional documentation can be found.</p>
+<ul>
+<li><a class='view-title' id="make-distcheck"></a><strong>make distcheck</strong>
+<p>reports which files are below the build directory but not in the
+MANIFEST file and vice versa. (See ExtUtils::Manifest::fullcheck() for
+details)</p>
+</li>
+<li><a class='view-title' id="make-skipcheck"></a><strong>make skipcheck</strong>
+<p>reports which files are skipped due to the entries in the
+<code class="inline"><span class="w">MANIFEST</span>.<span class="w">SKIP</span></code>
+ file (See ExtUtils::Manifest::skipcheck() for
+details)</p>
+</li>
+<li><a class='view-title' id="make-distclean"></a><strong>make distclean</strong>
+<p>does a realclean first and then the distcheck. Note that this is not
+needed to build a new distribution as long as you are sure that the
+MANIFEST file is ok.</p>
+</li>
+<li><a class='view-title' id="make-manifest"></a><strong>make manifest</strong>
+<p>rewrites the MANIFEST file, adding all remaining files found (See
+ExtUtils::Manifest::mkmanifest() for details)</p>
+</li>
+<li><a class='view-title' id="make-distdir"></a><strong>make distdir</strong>
+<p>Copies all the files that are in the MANIFEST file to a newly created
+directory with the name <code class="inline"><span class="i">$(</span><span class="w">DISTNAME</span><span class="p">)</span>-<span class="i">$(</span><span class="w">VERSION</span><span class="p">)</span></code>
+. If that directory
+exists, it will be removed first.</p>
+<p>Additionally, it will create a META.yml module meta-data file and add
+this to your MANFIEST.  You can shut this behavior off with the NO_META
+flag.</p>
+</li>
+<li><a class='view-title' id="make-disttest"></a><strong>make disttest</strong>
+<p>Makes a distdir first, and runs a <code class="inline"><span class="w">perl</span> <span class="w">Makefile</span>.<span class="w">PL</span></code>
+, a make, and
+a make test in that directory.</p>
+</li>
+<li><a class='view-title' id="make-tardist"></a><strong>make tardist</strong>
+<p>First does a distdir. Then a command $(PREOP) which defaults to a null
+command, followed by $(TOUNIX), which defaults to a null command under
+UNIX, and will convert files in distribution directory to UNIX format
+otherwise. Next it runs <code class="inline"><span class="w">tar</span></code>
+ on that directory into a tarfile and
+deletes the directory. Finishes with a command $(POSTOP) which
+defaults to a null command.</p>
+</li>
+<li><a class='view-title' id="make-dist"></a><strong>make dist</strong>
+<p>Defaults to $(DIST_DEFAULT) which in turn defaults to tardist.</p>
+</li>
+<li><a class='view-title' id="make-uutardist"></a><strong>make uutardist</strong>
+<p>Runs a tardist first and uuencodes the tarfile.</p>
+</li>
+<li><a class='view-title' id="make-shdist"></a><strong>make shdist</strong>
+<p>First does a distdir. Then a command $(PREOP) which defaults to a null
+command. Next it runs <code class="inline"><span class="w">shar</span></code>
+ on that directory into a sharfile and
+deletes the intermediate directory again. Finishes with a command
+$(POSTOP) which defaults to a null command.  Note: For shdist to work
+properly a <code class="inline"><span class="w">shar</span></code>
+ program that can handle directories is mandatory.</p>
+</li>
+<li><a class='view-title' id="make-zipdist"></a><strong>make zipdist</strong>
+<p>First does a distdir. Then a command $(PREOP) which defaults to a null
+command. Runs <code class="inline"><span class="i">$(</span><span class="w">ZIP</span><span class="p">)</span> <span class="i">$(</span><span class="w">ZIPFLAGS</span><span class="p">)</span></code>
+ on that directory into a
+zipfile. Then deletes that directory. Finishes with a command
+$(POSTOP) which defaults to a null command.</p>
+</li>
+<li><a class='view-title' id="make-ci"></a><strong>make ci</strong>
+<p>Does a $(CI) and a $(RCS_LABEL) on all files in the MANIFEST file.</p>
+</li>
+</ul>
+<p>Customization of the dist targets can be done by specifying a hash
+reference to the dist attribute of the WriteMakefile call. The
+following parameters are recognized:</p>
+<pre class="verbatim"><ol><li>    <span class="w">CI</span>           <span class="s">(</span><span class="q">&#39;ci -u&#39;</span><span class="s">)</span></li><li>    <span class="w">COMPRESS</span>     <span class="s">(</span><span class="q">&#39;gzip --best&#39;</span><span class="s">)</span></li><li>    <span class="w">POSTOP</span>       <span class="s">(</span><span class="q">&#39;@ :&#39;</span><span class="s">)</span></li><li>    <span class="w">PREOP</span>        <span class="s">(</span><span class="q">&#39;@ :&#39;</span><span class="s">)</span></li><li>    <span class="w">TO_UNIX</span>      <span class="s">(</span><span class="w">depends</span> <span class="w">on</span> <span class="w">the</span> <a class="l_k" href="../functions/system.html">system</a><span class="s">)</span></li><li>    <span class="w">RCS_LABEL</span>    <span class="s">(</span><span class="q">&#39;rcs -q -Nv$(VERSION_SYM):&#39;</span><span class="s">)</span></li><li>    <span class="w">SHAR</span>         <span class="s">(</span><span class="q">&#39;shar&#39;</span><span class="s">)</span></li><li>    <span class="w">SUFFIX</span>       <span class="s">(</span><span class="q">&#39;.gz&#39;</span><span class="s">)</span></li><li>    <span class="w">TAR</span>          <span class="s">(</span><span class="q">&#39;tar&#39;</span><span class="s">)</span></li><li>    <span class="w">TARFLAGS</span>     <span class="s">(</span><span class="q">&#39;cvf&#39;</span><span class="s">)</span></li><li>    <span class="w">ZIP</span>          <span class="s">(</span><span class="q">&#39;zip&#39;</span><span class="s">)</span></li><li>    <span class="w">ZIPFLAGS</span>     <span class="s">(</span><span class="q">&#39;-r&#39;</span><span class="s">)</span></li></ol></pre><p>An example:</p>
+<pre class="verbatim"><ol><li>    <span class="i">WriteMakefile</span><span class="s">(</span> <span class="q">&#39;dist&#39;</span> <span class="cm">=&gt;</span> <span class="s">{</span> <span class="w">COMPRESS</span><span class="cm">=&gt;</span><span class="q">&quot;bzip2&quot;</span><span class="cm">,</span> <span class="w">SUFFIX</span><span class="cm">=&gt;</span><span class="q">&quot;.bz2&quot;</span> <span class="s">}</span><span class="s">)</span></li></ol></pre><a class='view-head2' id="Module-Meta-Data"></a><h3 class='h3' >Module Meta-Data</h3>
+<p>Long plaguing users of MakeMaker based modules has been the problem of
+getting basic information about the module out of the sources
+<i>without</i> running the <i>Makefile.PL</i> and doing a bunch of messy
+heuristics on the resulting <i>Makefile</i>.  To this end a simple module
+meta-data file has been introduced, <i>META.yml</i>.</p>
+<p><i>META.yml</i> is a YAML document (see <a href="http://www.yaml.org">http://www.yaml.org</a>) containing
+basic information about the module (name, version, prerequisites...)
+in an easy to read format.  The format is developed and defined by the
+Module::Build developers (see 
+<a href="http://module-build.sourceforge.net/META-spec.html">http://module-build.sourceforge.net/META-spec.html</a>)</p>
+<p>MakeMaker will automatically generate a <i>META.yml</i> file for you and
+add it to your <i>MANIFEST</i> as part of the 'distdir' target (and thus
+the 'dist' target).  This is intended to seamlessly and rapidly
+populate CPAN with module meta-data.  If you wish to shut this feature
+off, set the <code class="inline"><span class="w">NO_META</span></code>
+ <code class="inline"><span class="i">WriteMakefile</span><span class="s">(</span><span class="s">)</span></code>
+ flag to true.</p>
+<a class='view-head2' id="Disabling-an-extension"></a><h3 class='h3' >Disabling an extension</h3>
+<p>If some events detected in <i>Makefile.PL</i> imply that there is no way
+to create the Module, but this is a normal state of things, then you
+can create a <i>Makefile</i> which does nothing, but succeeds on all the
+"usual" build targets.  To do so, use</p>
+<pre class="verbatim"><ol><li>   <span class="i">ExtUtils::MakeMaker::WriteEmptyMakefile</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>instead of WriteMakefile().</p>
+<p>This may be useful if other modules expect this module to be <i>built</i>
+OK, as opposed to <i>work</i> OK (say, this system-dependent module builds
+in a subdirectory of some other distribution, or is listed as a
+dependency in a CPAN::Bundle, but the functionality is supported by
+different means on the current architecture).</p>
+<a class='view-head2' id="Other-Handy-Functions"></a><h3 class='h3' >Other Handy Functions</h3>
+<ul>
+<li><a class='view-title' id="prompt"></a><strong>prompt</strong>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">$value</span> = <span class="i">prompt</span><span class="s">(</span><span class="i">$message</span><span class="s">)</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">$value</span> = <span class="i">prompt</span><span class="s">(</span><span class="i">$message</span><span class="cm">,</span> <span class="i">$default</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>The <code class="inline"><span class="i">prompt</span><span class="s">(</span><span class="s">)</span></code>
+ function provides an easy way to request user input
+used to write a makefile.  It displays the $message as a prompt for
+input.  If a $default is provided it will be used as a default.  The
+function returns the $value selected by the user.</p>
+<p>If <code class="inline"><span class="i">prompt</span><span class="s">(</span><span class="s">)</span></code>
+ detects that it is not running interactively and there
+is nothing on STDIN or if the PERL_MM_USE_DEFAULT environment variable
+is set to true, the $default will be used without prompting.  This
+prevents automated processes from blocking on user input.</p>
+<p>If no $default is provided an empty string will be used instead.</p>
+</li>
+</ul>
+<a class='view-head1' id="ENVIRONMENT"></a><h2 class='h2' >ENVIRONMENT</h2>
+<ul>
+<li><a class='view-title' id="PERL_MM_OPT"></a><strong>PERL_MM_OPT</strong>
+<p>Command line options used by <code class="inline"><span class="w">MakeMaker</span><span class="w">-&gt;new</span><span class="s">(</span><span class="s">)</span></code>
+, and thus by
+<code class="inline"><span class="i">WriteMakefile</span><span class="s">(</span><span class="s">)</span></code>
+.  The string is split on whitespace, and the result
+is processed before any actual command line arguments are processed.</p>
+</li>
+<li><a class='view-title' id="PERL_MM_USE_DEFAULT"></a><strong>PERL_MM_USE_DEFAULT</strong>
+<p>If set to a true value then MakeMaker's prompt function will
+always return the default without waiting for user input.</p>
+</li>
+</ul>
+<a class='view-head1' id="SEE-ALSO"></a><h2 class='h2' >SEE ALSO</h2>
+<p>ExtUtils::MM_Unix, ExtUtils::Manifest ExtUtils::Install,
+ExtUtils::Embed</p>
+<a class='view-head1' id="AUTHORS"></a><h2 class='h2' >AUTHORS</h2>
+<p>Andy Dougherty &lt;<i>doughera@lafayette.edu</i>&gt;, Andreas K&#xf6;nig
+&lt;<i>andreas.koenig@mind.de</i>&gt;, Tim Bunce &lt;<i>timb@cpan.org</i>&gt;.  VMS
+support by Charles Bailey &lt;<i>bailey@newman.upenn.edu</i>&gt;.  OS/2 support
+by Ilya Zakharevich &lt;<i>ilya@math.ohio-state.edu</i>&gt;.</p>
+<p>Currently maintained by Michael G Schwern &lt;<i>schwern@pobox.com</i>&gt;</p>
+<p>Send patches and ideas to &lt;<i>makemaker@perl.org</i>&gt;.</p>
+<p>Send bug reports via <a href="http://rt.cpan.org/">http://rt.cpan.org/</a>.  Please send your
+generated Makefile along with your report.</p>
+<p>For more up-to-date information, see <a href="http://www.makemaker.org">http://www.makemaker.org</a>.</p>
+<a class='view-head1' id="LICENSE"></a><h2 class='h2' >LICENSE</h2>
+<p>This program is free software; you can redistribute it and/or 
+modify it under the same terms as Perl itself.</p>
+<p>See <i><a href="http://www.perl.com/perl/misc/Artistic.html">http://www.perl.com/perl/misc/Artistic.html</a></i></p>
+
+
+
+
+      <ul><li><a href="#NAME">NAME</a></li><li><a href="#SYNOPSIS">SYNOPSIS</a></li><li><a href="#DESCRIPTION">DESCRIPTION</a></li><ul><li><a href="#How-To-Write-A-Makefile.PL">How To Write A Makefile.PL</a></li><li><a href="#Default-Makefile-Behaviour">Default Makefile Behaviour</a></li><li><a href="#make-test">make test</a></li><li><a href="#make-testdb">make testdb</a></li><li><a href="#make-install">make install</a></li><li><a href="#PREFIX-and-LIB-attribute">PREFIX and LIB attribute</a></li><li><a href="#AFS-users">AFS users</a></li><li><a href="#Static-Linking-of-a-new-Perl-Binary">Static Linking of a new Perl Binary</a></li><li><a href="#Determination-of-Perl-Library-and-Installation-Locations">Determination of Perl Library and Installation Locations</a></li><li><a href="#Which-architecture-dependent-directory%3f">Which architecture dependent directory?</a></li><li><a href="#Using-Attributes-and-Parameters">Using Attributes and Parameters</a></li><li><a href="#Additional-lowercase-attributes">Additional lowercase attributes</a></li><li><a href="#Overriding-MakeMaker-Methods">Overriding MakeMaker Methods</a></li><li><a href="#The-End-Of-Cargo-Cult-Programming">The End Of Cargo Cult Programming</a></li><li><a href="#Hintsfile-support">Hintsfile support</a></li><li><a href="#Distribution-Support">Distribution Support</a></li><li><a href="#Module-Meta-Data">Module Meta-Data</a></li><li><a href="#Disabling-an-extension">Disabling an extension</a></li><li><a href="#Other-Handy-Functions">Other Handy Functions</a></li></ul><li><a href="#ENVIRONMENT">ENVIRONMENT</a></li><li><a href="#SEE-ALSO">SEE ALSO</a></li><li><a href="#AUTHORS">AUTHORS</a></li><li><a href="#LICENSE">LICENSE</a></li></ul>
+
+
+                  </div>
+                </article>
+              </div>
+            </div>
+          </main>
+        </div>
+           <footer class="footer row bg-light pt-5 pb-5">
+       <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+           <div class="row">
+               <div class="col-md-4">
+                   <ul class="list-unstyled">
+                       <li>
+                           <h4>Site info</h4>
+                       </li>
+                       <li>Docs mantained by
+                           <a href="//lists.perl.org/list/perl5-porters.html"
+                               rel="noopener">Perl 5 Porters</a>
+                       </li>
+                       <li>Perldoc site development sponsored by
+                           <a href="//opusvl.com" rel="noopener">
+                           <img style="margin: 20px 20px 5px 10px" class="opus-logo" src="/public/img/opusvl_logo.svg" alt="OpusVL Logo">
+                        </a>
+                    <li><span class="about_perldoc"><a href="//about.html">About PerlDOC</a></span>
+                    </li>
+                       </li>
+                   </ul>
+               </div>
+               <div class="col-md-8">
+                   <div class="row">
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Manuals</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.5/index-overview.html">Overview</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.5/index-tutorials.html">Tutorials</a>
+                               </li>
+                               <li>
+                                   <a href="/5.8.5/index-faq.html">FAQs</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.5/index-history.html">Changes</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Reference</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.5/index-language.html">Language</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.5/index-functions.html">Functions</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.5/perlop.html">Operators</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.5/perlvar.html">Variables</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Modules</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.5/index-modules-A.html">Modules</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.5/index-pragmas.html">Pragmas</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.5/index-utilities.html">Utilities</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Misc</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.5/index-licence.html">License</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.5/index-internals.html">Internals</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.5/index-platforms.html">Platforms</a>
+                               </li>
+                            <li>
+                                <a
+                                    href="/5.8.5/index-about.html">About</a>
+                            </li>
+                           </ul>
+                       </div>
+                   </div>
+               </div>
+               <div class=" col-12 footer-inf text-center">
+                   <small>perldoc.perl.org - Official documentation for the Perl
+                       programming language</small>
+               </div>
+           </div>
+       </div>
+   </footer>
+
+        	<div class="beta-wrapper beta-bottom-right ">
+		<div class="beta beta-blue  ">
+			<a class="beta-link "
+				href="//github.com/OpusVL/perldoc.perl.org/issues/new" rel="noopener">
+				<span class="beta-text">
+					This website is a Beta release.
+				</span>
+				<span class="beta-text">
+					For any issues please raise a ticket on GitHub
+				</span>
+			</a>
+		</div>
+	</div>
+
+        <script src="/public/js/main.min.js"></script>
+      </body>
+
+      </html>

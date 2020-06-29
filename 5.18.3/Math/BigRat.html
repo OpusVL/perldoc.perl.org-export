@@ -1,0 +1,837 @@
+      
+      
+      
+      
+
+      <!DOCTYPE html>
+      <html lang="en">
+
+      <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Math::BigRat - perldoc.perl.org">
+        <link rel="icon" href="/public/img/favicon.ico">
+        <title>Math::BigRat - perldoc.perl.org</title>
+        <link href="/public/css/main.min.css" rel="stylesheet">
+        <link rel="canonical" href="/Math/BigRat.html">
+        <link
+          href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900'
+          rel='stylesheet' type='text/css'>
+        <script>
+          window.ga = window.ga || function () {
+            (ga.q = ga.q || []).push(arguments)
+          };
+          ga.l = +new Date;
+          ga('create', 'UA-1892152-2', 'auto'); // JJ's account
+          ga('create', 'UA-50555-3', 'auto', 'perlOrg'); // perl.org account
+          ga('require', 'outboundLinkTracker', {
+            events: ['click', 'auxclick', 'contextmenu'],
+          });
+          ga('require', 'maxScrollTracker');
+          ga('send', 'pageview');
+          ga('perlOrg.send', 'pageview');
+        </script>
+        <script async src="https://www.google-analytics.com/analytics.js">
+        </script>
+        <script async src="/public/js/tracking.min.js"></script>
+      </head>
+
+      <body class="body container-fluid ">
+        <div class="wrapper">
+
+          <nav
+    class="navbar navbar-dark bg-primary bg-perl fixed-top justify-content-between navbar-expand-lg">
+    <a href="#content" class="skippy sr-only sr-only-focusable">
+        <span class=' skippy-text'>Skip to main content</span>
+    </a>
+    <a class="navbar-brand" href="/">
+        <img class="logo" src="/public/img/logo_perl_doc.svg"
+            alt="Perl Documentation Logo" />
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse"
+        data-target="#navbar" aria-controls="navbar" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="navbar" class="collapse navbar-collapse ">
+        <ul class="navbar-nav ml-auto navbar-right">
+            <form class="nav-item dropdown search-wrapper">
+                <input type="text" id='searchinput' aria-describedby='navbarDropdown5'
+                    placeholder="Type query" class='search-input-field' value=''>
+
+                <button href="#" data-toggle='dropdown' type="button"
+                    aria-haspopup="true" aria-expanded='false' id="navbarDropdown5"
+                    class="nav-link dropdown-toggle search-link">
+                    <object tabindex='-1' focusable="false" class='search-icon'
+                        data="/public/img/search.svg" type="image/svg+xml"
+                        name='search icon'>search
+                        icon</object>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown5"
+                    id='search-results'>
+                    <p class='dropdown-item major-version'>
+                        No results
+                    </p>
+                </div>
+            </form>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown" href="#" class="nav-link dropdown-toggle"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Perl versions</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    
+                        <p class='dropdown-item major-version'>
+                            5.32
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.32.0/">5.32.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.30
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.3/">5.30.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.2/">5.30.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.1/">5.30.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.0/">5.30.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.28
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.3/">5.28.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.2/">5.28.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.1/">5.28.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.0/">5.28.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.26
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.3/">5.26.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.2/">5.26.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.1/">5.26.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.0/">5.26.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.24
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.4/">5.24.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.3/">5.24.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.2/">5.24.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.1/">5.24.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.0/">5.24.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.22
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.4/">5.22.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.3/">5.22.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.2/">5.22.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.1/">5.22.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.0/">5.22.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.20
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.3/">5.20.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.2/">5.20.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.1/">5.20.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.0/">5.20.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.18
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.4/">5.18.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.3/">5.18.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.2/">5.18.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.1/">5.18.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.0/">5.18.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.16
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.3/">5.16.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.2/">5.16.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.1/">5.16.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.0/">5.16.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.14
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.4/">5.14.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.3/">5.14.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.2/">5.14.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.1/">5.14.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.0/">5.14.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.12
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.5/">5.12.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.4/">5.12.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.3/">5.12.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.2/">5.12.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.1/">5.12.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.0/">5.12.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.10
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.1/">5.10.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.0/">5.10.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.8
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.9/">5.8.9</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.8/">5.8.8</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.7/">5.8.7</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.6/">5.8.6</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.5/">5.8.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.4/">5.8.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.3/">5.8.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.2/">5.8.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.1/">5.8.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.0/">5.8.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.6
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.2/">5.6.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.1/">5.6.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.0/">5.6.0</a>
+                        
+                        
+                    
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown1" href="#" class="dropdown-toggle nav-link"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Manuals</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                    <a class="dropdown-item"
+                        href="/5.18.3/index-overview.html">Overview</a>
+                    <a class="dropdown-item"
+                        href="/5.18.3/index-tutorials.html">Tutorials</a>
+                    <a class="dropdown-item"
+                        href="/5.18.3/index-faq.html">FAQs</a>
+                    <a class="dropdown-item"
+                        href="/5.18.3/index-history.html">Changes</a>
+                    <a class="dropdown-item"
+                        href="/5.18.3/index-licence.html">License</a>
+                    <a class="dropdown-item"
+                        href="/5.18.3/index-language.html">Language</a>
+                    <a class="dropdown-item"
+                        href="/5.18.3/index-functions.html">Functions</a>
+                    <a class="dropdown-item"
+                        href="/5.18.3/perlop.html">Operators</a>
+                    <a class="dropdown-item"
+                        href="/5.18.3/perlvar.html">Variables</a>
+                    <a class="dropdown-item"
+                        href="/5.18.3/index-pragmas.html">Pragmas</a>
+                    <a class="dropdown-item"
+                        href="/5.18.3/index-utilities.html">Utilities</a>
+                    <a class="dropdown-item"
+                        href="/5.18.3/index-internals.html">Internals</a>
+                    <a class="dropdown-item"
+                        href="/5.18.3/index-platforms.html">Platforms</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown3" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Modules</a>
+                <div aria-labelledby="navbarDropdown3"
+                    class="dropdown-menu letters-wrap">
+                    <!--<a class="dropdown-item"
+                        href="/5.18.3/index-modules.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.18.3/index-modules-by-cat.html">By
+                        Category</a>-->
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.18.3/index-modules-A.html">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.3/index-modules-B.html">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.3/index-modules-C.html">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.3/index-modules-D.html">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.3/index-modules-E.html">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.3/index-modules-F.html">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.3/index-modules-G.html">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.3/index-modules-H.html">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.3/index-modules-I.html">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.3/index-modules-J.html">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.3/index-modules-K.html">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.3/index-modules-L.html">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.3/index-modules-M.html">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.3/index-modules-N.html">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.3/index-modules-O.html">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.3/index-modules-P.html">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.3/index-modules-Q.html">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.3/index-modules-R.html">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.3/index-modules-S.html">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.3/index-modules-T.html">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.3/index-modules-U.html">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.3/index-modules-V.html">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.3/index-modules-W.html">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.3/index-modules-X.html">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.3/index-modules-Y.html">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.3/index-modules-Z.html">Z</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown4" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Functions</a>
+                <div aria-labelledby="navbarDropdown4"
+                    class="dropdown-menu letters-wrap">
+                    <a class="dropdown-item"
+                        href="/5.18.3/index-functions.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.18.3/index-functions-by-cat.html">By
+                        Category</a>
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.18.3/index-functions.html#A">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.3/index-functions.html#B">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.3/index-functions.html#C">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.3/index-functions.html#D">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.3/index-functions.html#E">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.3/index-functions.html#F">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.3/index-functions.html#G">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.3/index-functions.html#H">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.3/index-functions.html#I">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.3/index-functions.html#J">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.3/index-functions.html#K">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.3/index-functions.html#L">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.3/index-functions.html#M">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.3/index-functions.html#N">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.3/index-functions.html#O">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.3/index-functions.html#P">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.3/index-functions.html#Q">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.3/index-functions.html#R">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.3/index-functions.html#S">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.3/index-functions.html#T">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.3/index-functions.html#U">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.3/index-functions.html#V">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.3/index-functions.html#W">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.3/index-functions.html#X">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.3/index-functions.html#Y">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.3/index-functions.html#Z">Z</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!--/.nav-collapse -->
+</nav>
+
+
+          <main class="row main-content pb-5 pt-5" id='content'>
+            <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+              <div class="row">
+                <div class="col-sm-12">
+                  <div id="breadcrumbs">
+                      
+    <a href="../index.html">Home</a>&nbsp; &gt;
+    
+      
+        <a href="../index-modules-M.html">Core modules (M)</a> &gt;
+      
+    
+    Math::BigRat
+  
+
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <article class="col-sm-12 content">
+                  <div class="documentation-wrapper">
+                    <div id="perl_version">
+                      <h7 class='page-title'> Perl 5 version 18.3
+                        documentation</h7>
+                    </div>
+                    <h1>Math::BigRat</h1>
+
+
+  <!--    -->
+<ul><li><a href="#NAME">NAME</a></li><li><a href="#SYNOPSIS">SYNOPSIS</a></li><li><a href="#DESCRIPTION">DESCRIPTION</a></li><ul><li><a href="#MATH-LIBRARY">MATH LIBRARY</a></li></ul><li><a href="#METHODS">METHODS</a></li><ul><li><a href="#new()">new()</a></li><li><a href="#numerator()">numerator()</a></li><li><a href="#denominator()">denominator()</a></li><li><a href="#parts()">parts()</a></li><li><a href="#numify()">numify()</a></li><li><a href="#as_int()%2fas_number()">as_int()/as_number()</a></li><li><a href="#as_float()">as_float()</a></li><li><a href="#as_hex()">as_hex()</a></li><li><a href="#as_bin()">as_bin()</a></li><li><a href="#as_oct()">as_oct()</a></li><li><a href="#from_hex()%2ffrom_bin()%2ffrom_oct()">from_hex()/from_bin()/from_oct()</a></li><li><a href="#length()">length()</a></li><li><a href="#digit()">digit()</a></li><li><a href="#bnorm()">bnorm()</a></li><li><a href="#bfac()">bfac()</a></li><li><a href="#bround()%2fround()%2fbfround()">bround()/round()/bfround()</a></li><li><a href="#bmod()">bmod()</a></li><li><a href="#bneg()">bneg()</a></li><li><a href="#is_one()">is_one()</a></li><li><a href="#is_zero()">is_zero()</a></li><li><a href="#is_pos()%2fis_positive()">is_pos()/is_positive()</a></li><li><a href="#is_neg()%2fis_negative()">is_neg()/is_negative()</a></li><li><a href="#is_int()">is_int()</a></li><li><a href="#is_odd()">is_odd()</a></li><li><a href="#is_even()">is_even()</a></li><li><a href="#bceil()">bceil()</a></li><li><a href="#bfloor()">bfloor()</a></li><li><a href="#bsqrt()">bsqrt()</a></li><li><a href="#broot()">broot()</a></li><li><a href="#badd()%2fbmul()%2fbsub()%2fbdiv()%2fbdec()%2fbinc()">badd()/bmul()/bsub()/bdiv()/bdec()/binc()</a></li><li><a href="#copy()">copy()</a></li><li><a href="#bstr()%2fbsstr()">bstr()/bsstr()</a></li><li><a href="#bacmp()%2fbcmp()">bacmp()/bcmp()</a></li><li><a href="#blsft()%2fbrsft()">blsft()/brsft()</a></li><li><a href="#bpow()">bpow()</a></li><li><a href="#bexp()">bexp()</a></li><li><a href="#bnok()">bnok()</a></li><li><a href="#config()">config()</a></li><li><a href="#objectify()">objectify()</a></li></ul><li><a href="#BUGS">BUGS</a></li><li><a href="#LICENSE">LICENSE</a></li><li><a href="#SEE-ALSO">SEE ALSO</a></li><li><a href="#AUTHORS">AUTHORS</a></li></ul><a class='view-head1' id="NAME"></a><h2 class='h2' >NAME</h2>
+<p>Math::BigRat - Arbitrary big rational numbers</p>
+<a class='view-head1' id="SYNOPSIS"></a><h2 class='h2' >SYNOPSIS</h2>
+<pre class="verbatim"><ol><li>	<a class="l_k" href="../functions/use.html">use</a> <span class="w">Math::BigRat</span><span class="sc">;</span></li><li></li><li>	<a class="l_k" href="../functions/my.html">my</a> <span class="i">$x</span> = <span class="w">Math::BigRat</span><span class="w">-&gt;new</span><span class="s">(</span><span class="q">&#39;3/7&#39;</span><span class="s">)</span><span class="sc">;</span> <span class="i">$x</span> += <span class="q">&#39;5/9&#39;</span><span class="sc">;</span></li><li></li><li>	<a class="l_k" href="../functions/print.html">print</a> <span class="i">$x</span><span class="i">-&gt;bstr</span><span class="s">(</span><span class="s">)</span><span class="cm">,</span><span class="q">&quot;\n&quot;</span><span class="sc">;</span></li><li>	<a class="l_k" href="../functions/print.html">print</a> <span class="i">$x</span> <span class="i">**</span> <span class="n">2</span><span class="cm">,</span><span class="q">&quot;\n&quot;</span><span class="sc">;</span></li><li></li><li>	<a class="l_k" href="../functions/my.html">my</a> <span class="i">$y</span> = <span class="w">Math::BigRat</span><span class="w">-&gt;new</span><span class="s">(</span><span class="q">&#39;inf&#39;</span><span class="s">)</span><span class="sc">;</span></li><li>	<a class="l_k" href="../functions/print.html">print</a> <span class="q">&quot;$y &quot;</span><span class="cm">,</span> <span class="s">(</span><span class="i">$y</span><span class="i">-&gt;is_inf</span> ? <span class="q">&#39;is&#39;</span> <span class="co">:</span> <span class="q">&#39;is not&#39;</span><span class="s">)</span> <span class="cm">,</span> <span class="q">&quot; infinity\n&quot;</span><span class="sc">;</span></li><li></li><li>	<a class="l_k" href="../functions/my.html">my</a> <span class="i">$z</span> = <span class="w">Math::BigRat</span><span class="w">-&gt;new</span><span class="s">(</span><span class="n">144</span><span class="s">)</span><span class="sc">;</span> <span class="i">$z</span><span class="i">-&gt;bsqrt</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><a class='view-head1' id="DESCRIPTION"></a><h2 class='h2' >DESCRIPTION</h2>
+<p>Math::BigRat complements Math::BigInt and Math::BigFloat by providing support
+for arbitrary big rational numbers.</p>
+<a class='view-head2' id="MATH-LIBRARY"></a><h3 class='h3' >MATH LIBRARY</h3>
+<p>You can change the underlying module that does the low-level
+math operations by using:</p>
+<pre class="verbatim"><ol><li>	<a class="l_k" href="../functions/use.html">use</a> <span class="w">Math::BigRat</span> <span class="w">try</span> <span class="cm">=&gt;</span> <span class="q">&#39;GMP&#39;</span><span class="sc">;</span></li></ol></pre><p>Note: This needs Math::BigInt::GMP installed.</p>
+<p>The following would first try to find Math::BigInt::Foo, then
+Math::BigInt::Bar, and when this also fails, revert to Math::BigInt::Calc:</p>
+<pre class="verbatim"><ol><li>	<a class="l_k" href="../functions/use.html">use</a> <span class="w">Math::BigRat</span> <span class="w">try</span> <span class="cm">=&gt;</span> <span class="q">&#39;Foo,Math::BigInt::Bar&#39;</span><span class="sc">;</span></li></ol></pre><p>If you want to get warned when the fallback occurs, replace "try" with
+"lib":</p>
+<pre class="verbatim"><ol><li>	<a class="l_k" href="../functions/use.html">use</a> <span class="w">Math::BigRat</span> <span class="w">lib</span> <span class="cm">=&gt;</span> <span class="q">&#39;Foo,Math::BigInt::Bar&#39;</span><span class="sc">;</span></li></ol></pre><p>If you want the code to die instead, replace "try" with
+"only":</p>
+<pre class="verbatim"><ol><li>	<a class="l_k" href="../functions/use.html">use</a> <span class="w">Math::BigRat</span> <span class="w">only</span> <span class="cm">=&gt;</span> <span class="q">&#39;Foo,Math::BigInt::Bar&#39;</span><span class="sc">;</span></li></ol></pre><a class='view-head1' id="METHODS"></a><h2 class='h2' >METHODS</h2>
+<p>Any methods not listed here are derived from Math::BigFloat (or
+Math::BigInt), so make sure you check these two modules for further
+information.</p>
+<a class='view-head2' id="new()"></a><h3 class='h3' >new()</h3>
+<pre class="verbatim"><ol><li>	<span class="i">$x</span> = <span class="w">Math::BigRat</span><span class="w">-&gt;new</span><span class="s">(</span><span class="q">&#39;1/3&#39;</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>Create a new Math::BigRat object. Input can come in various forms:</p>
+<pre class="verbatim"><ol><li>	<span class="i">$x</span> = <span class="w">Math::BigRat</span><span class="w">-&gt;new</span><span class="s">(</span><span class="n">123</span><span class="s">)</span><span class="sc">;</span>				<span class="c"># scalars</span></li><li>	<span class="i">$x</span> = <span class="w">Math::BigRat</span><span class="w">-&gt;new</span><span class="s">(</span><span class="q">&#39;inf&#39;</span><span class="s">)</span><span class="sc">;</span>				<span class="c"># infinity</span></li><li>	<span class="i">$x</span> = <span class="w">Math::BigRat</span><span class="w">-&gt;new</span><span class="s">(</span><span class="q">&#39;123.3&#39;</span><span class="s">)</span><span class="sc">;</span>			<span class="c"># float</span></li><li>	<span class="i">$x</span> = <span class="w">Math::BigRat</span><span class="w">-&gt;new</span><span class="s">(</span><span class="q">&#39;1/3&#39;</span><span class="s">)</span><span class="sc">;</span>				<span class="c"># simple string</span></li><li>	<span class="i">$x</span> = <span class="w">Math::BigRat</span><span class="w">-&gt;new</span><span class="s">(</span><span class="q">&#39;1 / 3&#39;</span><span class="s">)</span><span class="sc">;</span>			<span class="c"># spaced</span></li><li>	<span class="i">$x</span> = <span class="w">Math::BigRat</span><span class="w">-&gt;new</span><span class="s">(</span><span class="q">&#39;1 / 0.1&#39;</span><span class="s">)</span><span class="sc">;</span>			<span class="c"># w/ floats</span></li><li>	<span class="i">$x</span> = <span class="w">Math::BigRat</span><span class="w">-&gt;new</span><span class="s">(</span><span class="w">Math::BigInt</span><span class="w">-&gt;new</span><span class="s">(</span><span class="n">3</span><span class="s">)</span><span class="s">)</span><span class="sc">;</span>		<span class="c"># BigInt</span></li><li>	<span class="i">$x</span> = <span class="w">Math::BigRat</span><span class="w">-&gt;new</span><span class="s">(</span><span class="w">Math::BigFloat</span><span class="w">-&gt;new</span><span class="s">(</span><span class="q">&#39;3.1&#39;</span><span class="s">)</span><span class="s">)</span><span class="sc">;</span>	<span class="c"># BigFloat</span></li><li>	<span class="i">$x</span> = <span class="w">Math::BigRat</span><span class="w">-&gt;new</span><span class="s">(</span><span class="w">Math::BigInt::Lite</span><span class="w">-&gt;new</span><span class="s">(</span><span class="q">&#39;2&#39;</span><span class="s">)</span><span class="s">)</span><span class="sc">;</span>	<span class="c"># BigLite</span></li><li></li><li>	<span class="c"># You can also give D and N as different objects:</span></li><li>	<span class="i">$x</span> = <span class="w">Math::BigRat</span><span class="w">-&gt;new</span><span class="s">(</span></li><li>		<span class="w">Math::BigInt</span><span class="w">-&gt;new</span><span class="s">(</span><span class="n">-123</span><span class="s">)</span><span class="cm">,</span></li><li>		<span class="w">Math::BigInt</span><span class="w">-&gt;new</span><span class="s">(</span><span class="n">7</span><span class="s">)</span><span class="cm">,</span></li><li>		<span class="s">)</span><span class="sc">;</span>			<span class="c"># =&gt; -123/7</span></li></ol></pre><a class='view-head2' id="numerator()"></a><h3 class='h3' >numerator()</h3>
+<pre class="verbatim"><ol><li>	<span class="i">$n</span> = <span class="i">$x</span><span class="i">-&gt;numerator</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>Returns a copy of the numerator (the part above the line) as signed BigInt.</p>
+<a class='view-head2' id="denominator()"></a><h3 class='h3' >denominator()</h3>
+<pre class="verbatim"><ol><li>	<span class="i">$d</span> = <span class="i">$x</span><span class="i">-&gt;denominator</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>Returns a copy of the denominator (the part under the line) as positive BigInt.</p>
+<a class='view-head2' id="parts()"></a><h3 class='h3' >parts()</h3>
+<pre class="verbatim"><ol><li>	<span class="s">(</span><span class="i">$n</span><span class="cm">,</span><span class="i">$d</span><span class="s">)</span> = <span class="i">$x</span><span class="i">-&gt;parts</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>Return a list consisting of (signed) numerator and (unsigned) denominator as
+BigInts.</p>
+<a class='view-head2' id="numify()"></a><h3 class='h3' >numify()</h3>
+<pre class="verbatim"><ol><li>	<a class="l_k" href="../functions/my.html">my</a> <span class="i">$y</span> = <span class="i">$x</span><span class="i">-&gt;numify</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>Returns the object as a scalar. This will lose some data if the object
+cannot be represented by a normal Perl scalar (integer or float), so
+use <a href="#as_int()%2fas_number()">as_int()</a> or <a href="#as_float()">as_float()</a> instead.</p>
+<p>This routine is automatically used whenever a scalar is required:</p>
+<pre class="verbatim"><ol><li>	<a class="l_k" href="../functions/my.html">my</a> <span class="i">$x</span> = <span class="w">Math::BigRat</span><span class="w">-&gt;new</span><span class="s">(</span><span class="q">&#39;3/1&#39;</span><span class="s">)</span><span class="sc">;</span></li><li>	<span class="i">@array</span> = <span class="s">(</span><span class="n">0</span><span class="cm">,</span><span class="n">1</span><span class="cm">,</span><span class="n">2</span><span class="cm">,</span><span class="n">3</span><span class="s">)</span><span class="sc">;</span></li><li>	<span class="i">$y</span> = <span class="i">$array</span>[<span class="i">$x</span>]<span class="sc">;</span>		<span class="c"># set $y to 3</span></li></ol></pre><a class='view-head2' id="as_int()%2fas_number()"></a><h3 class='h3' >as_int()/as_number()</h3>
+<pre class="verbatim"><ol><li>	<span class="i">$x</span> = <span class="w">Math::BigRat</span><span class="w">-&gt;new</span><span class="s">(</span><span class="q">&#39;13/7&#39;</span><span class="s">)</span><span class="sc">;</span></li><li>	<a class="l_k" href="../functions/print.html">print</a> <span class="i">$x</span><span class="i">-&gt;as_int</span><span class="s">(</span><span class="s">)</span><span class="cm">,</span><span class="q">&quot;\n&quot;</span><span class="sc">;</span>		<span class="c"># &#39;1&#39;</span></li></ol></pre><p>Returns a copy of the object as BigInt, truncated to an integer.</p>
+<p><code class="inline"><span class="i">as_number</span><span class="s">(</span><span class="s">)</span></code>
+ is an alias for <code class="inline"><span class="i">as_int</span><span class="s">(</span><span class="s">)</span></code>
+.</p>
+<a class='view-head2' id="as_float()"></a><h3 class='h3' >as_float()</h3>
+<pre class="verbatim"><ol><li>	<span class="i">$x</span> = <span class="w">Math::BigRat</span><span class="w">-&gt;new</span><span class="s">(</span><span class="q">&#39;13/7&#39;</span><span class="s">)</span><span class="sc">;</span></li><li>	<a class="l_k" href="../functions/print.html">print</a> <span class="i">$x</span><span class="i">-&gt;as_float</span><span class="s">(</span><span class="s">)</span><span class="cm">,</span><span class="q">&quot;\n&quot;</span><span class="sc">;</span>		<span class="c"># &#39;1&#39;</span></li><li></li><li>	<span class="i">$x</span> = <span class="w">Math::BigRat</span><span class="w">-&gt;new</span><span class="s">(</span><span class="q">&#39;2/3&#39;</span><span class="s">)</span><span class="sc">;</span></li><li>	<a class="l_k" href="../functions/print.html">print</a> <span class="i">$x</span><span class="i">-&gt;as_float</span><span class="s">(</span><span class="n">5</span><span class="s">)</span><span class="cm">,</span><span class="q">&quot;\n&quot;</span><span class="sc">;</span>		<span class="c"># &#39;0.66667&#39;</span></li></ol></pre><p>Returns a copy of the object as BigFloat, preserving the
+accuracy as wanted, or the default of 40 digits.</p>
+<p>This method was added in v0.22 of Math::BigRat (April 2008).</p>
+<a class='view-head2' id="as_hex()"></a><h3 class='h3' >as_hex()</h3>
+<pre class="verbatim"><ol><li>	<span class="i">$x</span> = <span class="w">Math::BigRat</span><span class="w">-&gt;new</span><span class="s">(</span><span class="q">&#39;13&#39;</span><span class="s">)</span><span class="sc">;</span></li><li>	<a class="l_k" href="../functions/print.html">print</a> <span class="i">$x</span><span class="i">-&gt;as_hex</span><span class="s">(</span><span class="s">)</span><span class="cm">,</span><span class="q">&quot;\n&quot;</span><span class="sc">;</span>		<span class="c"># &#39;0xd&#39;</span></li></ol></pre><p>Returns the BigRat as hexadecimal string. Works only for integers.</p>
+<a class='view-head2' id="as_bin()"></a><h3 class='h3' >as_bin()</h3>
+<pre class="verbatim"><ol><li>	<span class="i">$x</span> = <span class="w">Math::BigRat</span><span class="w">-&gt;new</span><span class="s">(</span><span class="q">&#39;13&#39;</span><span class="s">)</span><span class="sc">;</span></li><li>	<a class="l_k" href="../functions/print.html">print</a> <span class="i">$x</span><span class="i">-&gt;as_bin</span><span class="s">(</span><span class="s">)</span><span class="cm">,</span><span class="q">&quot;\n&quot;</span><span class="sc">;</span>		<span class="c"># &#39;0x1101&#39;</span></li></ol></pre><p>Returns the BigRat as binary string. Works only for integers.</p>
+<a class='view-head2' id="as_oct()"></a><h3 class='h3' >as_oct()</h3>
+<pre class="verbatim"><ol><li>	<span class="i">$x</span> = <span class="w">Math::BigRat</span><span class="w">-&gt;new</span><span class="s">(</span><span class="q">&#39;13&#39;</span><span class="s">)</span><span class="sc">;</span></li><li>	<a class="l_k" href="../functions/print.html">print</a> <span class="i">$x</span><span class="i">-&gt;as_oct</span><span class="s">(</span><span class="s">)</span><span class="cm">,</span><span class="q">&quot;\n&quot;</span><span class="sc">;</span>		<span class="c"># &#39;015&#39;</span></li></ol></pre><p>Returns the BigRat as octal string. Works only for integers.</p>
+<a class='view-head2' id="from_hex()%2ffrom_bin()%2ffrom_oct()"></a><h3 class='h3' >from_hex()/from_bin()/from_oct()</h3>
+<pre class="verbatim"><ol><li>	<a class="l_k" href="../functions/my.html">my</a> <span class="i">$h</span> = <span class="w">Math::BigRat</span><span class="w">-&gt;from_hex</span><span class="s">(</span><span class="q">&#39;0x10&#39;</span><span class="s">)</span><span class="sc">;</span></li><li>	<a class="l_k" href="../functions/my.html">my</a> <span class="i">$b</span> = <span class="w">Math::BigRat</span><span class="w">-&gt;from_bin</span><span class="s">(</span><span class="q">&#39;0b10000000&#39;</span><span class="s">)</span><span class="sc">;</span></li><li>	<a class="l_k" href="../functions/my.html">my</a> <span class="i">$o</span> = <span class="w">Math::BigRat</span><span class="w">-&gt;from_oct</span><span class="s">(</span><span class="q">&#39;020&#39;</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>Create a BigRat from an hexadecimal, binary or octal number
+in string form.</p>
+<a class='view-head2' id="length()"></a><h3 class='h3' >length()</h3>
+<pre class="verbatim"><ol><li>	<span class="i">$len</span> = <span class="i">$x</span><span class="i">-&gt;length</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>Return the length of $x in digits for integer values.</p>
+<a class='view-head2' id="digit()"></a><h3 class='h3' >digit()</h3>
+<pre class="verbatim"><ol><li>	<a class="l_k" href="../functions/print.html">print</a> <span class="i">Math::BigRat</span><span class="i">-&gt;new</span><span class="s">(</span><span class="q">&#39;123/1&#39;</span><span class="s">)</span><span class="i">-&gt;digit</span><span class="s">(</span><span class="n">1</span><span class="s">)</span><span class="sc">;</span>	<span class="c"># 1</span></li><li>	<a class="l_k" href="../functions/print.html">print</a> <span class="i">Math::BigRat</span><span class="i">-&gt;new</span><span class="s">(</span><span class="q">&#39;123/1&#39;</span><span class="s">)</span><span class="i">-&gt;digit</span><span class="s">(</span><span class="n">-1</span><span class="s">)</span><span class="sc">;</span>	<span class="c"># 3</span></li></ol></pre><p>Return the N'ths digit from X when X is an integer value.</p>
+<a class='view-head2' id="bnorm()"></a><h3 class='h3' >bnorm()</h3>
+<pre class="verbatim"><ol><li>	<span class="i">$x</span><span class="i">-&gt;bnorm</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>Reduce the number to the shortest form. This routine is called
+automatically whenever it is needed.</p>
+<a class='view-head2' id="bfac()"></a><h3 class='h3' >bfac()</h3>
+<pre class="verbatim"><ol><li>	<span class="i">$x</span><span class="i">-&gt;bfac</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>Calculates the factorial of $x. For instance:</p>
+<pre class="verbatim"><ol><li>	<a class="l_k" href="../functions/print.html">print</a> <span class="i">Math::BigRat</span><span class="i">-&gt;new</span><span class="s">(</span><span class="q">&#39;3/1&#39;</span><span class="s">)</span><span class="i">-&gt;bfac</span><span class="s">(</span><span class="s">)</span><span class="cm">,</span><span class="q">&quot;\n&quot;</span><span class="sc">;</span>	<span class="c"># 1*2*3</span></li><li>	<a class="l_k" href="../functions/print.html">print</a> <span class="i">Math::BigRat</span><span class="i">-&gt;new</span><span class="s">(</span><span class="q">&#39;5/1&#39;</span><span class="s">)</span><span class="i">-&gt;bfac</span><span class="s">(</span><span class="s">)</span><span class="cm">,</span><span class="q">&quot;\n&quot;</span><span class="sc">;</span>	<span class="c"># 1*2*3*4*5</span></li></ol></pre><p>Works currently only for integers.</p>
+<a class='view-head2' id="bround()%2fround()%2fbfround()"></a><h3 class='h3' >bround()/round()/bfround()</h3>
+<p>Are not yet implemented.</p>
+<a class='view-head2' id="bmod()"></a><h3 class='h3' >bmod()</h3>
+<pre class="verbatim"><ol><li>	<a class="l_k" href="../functions/use.html">use</a> <span class="w">Math::BigRat</span><span class="sc">;</span></li><li>	<a class="l_k" href="../functions/my.html">my</a> <span class="i">$x</span> = <span class="w">Math::BigRat</span><span class="w">-&gt;new</span><span class="s">(</span><span class="q">&#39;7/4&#39;</span><span class="s">)</span><span class="sc">;</span></li><li>	<a class="l_k" href="../functions/my.html">my</a> <span class="i">$y</span> = <span class="w">Math::BigRat</span><span class="w">-&gt;new</span><span class="s">(</span><span class="q">&#39;4/3&#39;</span><span class="s">)</span><span class="sc">;</span></li><li>	<a class="l_k" href="../functions/print.html">print</a> <span class="i">$x</span><span class="i">-&gt;bmod</span><span class="s">(</span><span class="i">$y</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>Set $x to the remainder of the division of $x by $y.</p>
+<a class='view-head2' id="bneg()"></a><h3 class='h3' >bneg()</h3>
+<pre class="verbatim"><ol><li>	<span class="i">$x</span><span class="i">-&gt;bneg</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>Used to negate the object in-place.</p>
+<a class='view-head2' id="is_one()"></a><h3 class='h3' >is_one()</h3>
+<pre class="verbatim"><ol><li>	<a class="l_k" href="../functions/print.html">print</a> <span class="q">&quot;$x is 1\n&quot;</span> <a class="l_k" href="../functions/if.html">if</a> <span class="i">$x</span><span class="i">-&gt;is_one</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>Return true if $x is exactly one, otherwise false.</p>
+<a class='view-head2' id="is_zero()"></a><h3 class='h3' >is_zero()</h3>
+<pre class="verbatim"><ol><li>	<a class="l_k" href="../functions/print.html">print</a> <span class="q">&quot;$x is 0\n&quot;</span> <a class="l_k" href="../functions/if.html">if</a> <span class="i">$x</span><span class="i">-&gt;is_zero</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>Return true if $x is exactly zero, otherwise false.</p>
+<a class='view-head2' id="is_pos()%2fis_positive()"></a><h3 class='h3' >is_pos()/is_positive()</h3>
+<pre class="verbatim"><ol><li>	<a class="l_k" href="../functions/print.html">print</a> <span class="q">&quot;$x is &gt;= 0\n&quot;</span> <a class="l_k" href="../functions/if.html">if</a> <span class="i">$x</span><span class="i">-&gt;is_positive</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>Return true if $x is positive (greater than or equal to zero), otherwise
+false. Please note that '+inf' is also positive, while 'NaN' and '-inf' aren't.</p>
+<p><code class="inline"><span class="i">is_positive</span><span class="s">(</span><span class="s">)</span></code>
+ is an alias for <code class="inline"><span class="i">is_pos</span><span class="s">(</span><span class="s">)</span></code>
+.</p>
+<a class='view-head2' id="is_neg()%2fis_negative()"></a><h3 class='h3' >is_neg()/is_negative()</h3>
+<pre class="verbatim"><ol><li>	<a class="l_k" href="../functions/print.html">print</a> <span class="q">&quot;$x is &lt; 0\n&quot;</span> <a class="l_k" href="../functions/if.html">if</a> <span class="i">$x</span><span class="i">-&gt;is_negative</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>Return true if $x is negative (smaller than zero), otherwise false. Please
+note that '-inf' is also negative, while 'NaN' and '+inf' aren't.</p>
+<p><code class="inline"><span class="i">is_negative</span><span class="s">(</span><span class="s">)</span></code>
+ is an alias for <code class="inline"><span class="i">is_neg</span><span class="s">(</span><span class="s">)</span></code>
+.</p>
+<a class='view-head2' id="is_int()"></a><h3 class='h3' >is_int()</h3>
+<pre class="verbatim"><ol><li>	<a class="l_k" href="../functions/print.html">print</a> <span class="q">&quot;$x is an integer\n&quot;</span> <a class="l_k" href="../functions/if.html">if</a> <span class="i">$x</span><span class="i">-&gt;is_int</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>Return true if $x has a denominator of 1 (e.g. no fraction parts), otherwise
+false. Please note that '-inf', 'inf' and 'NaN' aren't integer.</p>
+<a class='view-head2' id="is_odd()"></a><h3 class='h3' >is_odd()</h3>
+<pre class="verbatim"><ol><li>	<a class="l_k" href="../functions/print.html">print</a> <span class="q">&quot;$x is odd\n&quot;</span> <a class="l_k" href="../functions/if.html">if</a> <span class="i">$x</span><span class="i">-&gt;is_odd</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>Return true if $x is odd, otherwise false.</p>
+<a class='view-head2' id="is_even()"></a><h3 class='h3' >is_even()</h3>
+<pre class="verbatim"><ol><li>	<a class="l_k" href="../functions/print.html">print</a> <span class="q">&quot;$x is even\n&quot;</span> <a class="l_k" href="../functions/if.html">if</a> <span class="i">$x</span><span class="i">-&gt;is_even</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>Return true if $x is even, otherwise false.</p>
+<a class='view-head2' id="bceil()"></a><h3 class='h3' >bceil()</h3>
+<pre class="verbatim"><ol><li>	<span class="i">$x</span><span class="i">-&gt;bceil</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>Set $x to the next bigger integer value (e.g. truncate the number to integer
+and then increment it by one).</p>
+<a class='view-head2' id="bfloor()"></a><h3 class='h3' >bfloor()</h3>
+<pre class="verbatim"><ol><li>	<span class="i">$x</span><span class="i">-&gt;bfloor</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>Truncate $x to an integer value.</p>
+<a class='view-head2' id="bsqrt()"></a><h3 class='h3' >bsqrt()</h3>
+<pre class="verbatim"><ol><li>	<span class="i">$x</span><span class="i">-&gt;bsqrt</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>Calculate the square root of $x.</p>
+<a class='view-head2' id="broot()"></a><h3 class='h3' >broot()</h3>
+<pre class="verbatim"><ol><li>	<span class="i">$x</span><span class="i">-&gt;broot</span><span class="s">(</span><span class="i">$n</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>Calculate the N'th root of $x.</p>
+<a class='view-head2' id="badd()%2fbmul()%2fbsub()%2fbdiv()%2fbdec()%2fbinc()"></a><h3 class='h3' >badd()/bmul()/bsub()/bdiv()/bdec()/binc()</h3>
+<p>Please see the documentation in <a href="../Math/BigInt.html">Math::BigInt</a>.</p>
+<a class='view-head2' id="copy()"></a><h3 class='h3' >copy()</h3>
+<pre class="verbatim"><ol><li>	<a class="l_k" href="../functions/my.html">my</a> <span class="i">$z</span> = <span class="i">$x</span><span class="i">-&gt;copy</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>Makes a deep copy of the object.</p>
+<p>Please see the documentation in <a href="../Math/BigInt.html">Math::BigInt</a> for further details.</p>
+<a class='view-head2' id="bstr()%2fbsstr()"></a><h3 class='h3' >bstr()/bsstr()</h3>
+<pre class="verbatim"><ol><li>	<a class="l_k" href="../functions/my.html">my</a> <span class="i">$x</span> = <span class="w">Math::BigInt</span><span class="w">-&gt;new</span><span class="s">(</span><span class="q">&#39;8/4&#39;</span><span class="s">)</span><span class="sc">;</span></li><li>	<a class="l_k" href="../functions/print.html">print</a> <span class="i">$x</span><span class="i">-&gt;bstr</span><span class="s">(</span><span class="s">)</span><span class="cm">,</span><span class="q">&quot;\n&quot;</span><span class="sc">;</span>			<span class="c"># prints 1/2</span></li><li>	<a class="l_k" href="../functions/print.html">print</a> <span class="i">$x</span><span class="i">-&gt;bsstr</span><span class="s">(</span><span class="s">)</span><span class="cm">,</span><span class="q">&quot;\n&quot;</span><span class="sc">;</span>			<span class="c"># prints 1/2</span></li></ol></pre><p>Return a string representing this object.</p>
+<a class='view-head2' id="bacmp()%2fbcmp()"></a><h3 class='h3' >bacmp()/bcmp()</h3>
+<p>Used to compare numbers.</p>
+<p>Please see the documentation in <a href="../Math/BigInt.html">Math::BigInt</a> for further details.</p>
+<a class='view-head2' id="blsft()%2fbrsft()"></a><h3 class='h3' >blsft()/brsft()</h3>
+<p>Used to shift numbers left/right.</p>
+<p>Please see the documentation in <a href="../Math/BigInt.html">Math::BigInt</a> for further details.</p>
+<a class='view-head2' id="bpow()"></a><h3 class='h3' >bpow()</h3>
+<pre class="verbatim"><ol><li>	<span class="i">$x</span><span class="i">-&gt;bpow</span><span class="s">(</span><span class="i">$y</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>Compute $x ** $y.</p>
+<p>Please see the documentation in <a href="../Math/BigInt.html">Math::BigInt</a> for further details.</p>
+<a class='view-head2' id="bexp()"></a><h3 class='h3' >bexp()</h3>
+<pre class="verbatim"><ol><li>	<span class="i">$x</span><span class="i">-&gt;bexp</span><span class="s">(</span><span class="i">$accuracy</span><span class="s">)</span><span class="sc">;</span>		<span class="c"># calculate e ** X</span></li></ol></pre><p>Calculates two integers A and B so that A/B is equal to <code class="inline"><span class="w">e</span> ** <span class="i">$x</span></code>
+, where <code class="inline"><span class="w">e</span></code>
+ is
+Euler's number.</p>
+<p>This method was added in v0.20 of Math::BigRat (May 2007).</p>
+<p>See also <a href="#blog()">blog()</a>.</p>
+<a class='view-head2' id="bnok()"></a><h3 class='h3' >bnok()</h3>
+<pre class="verbatim"><ol><li>	<span class="i">$x</span><span class="i">-&gt;bnok</span><span class="s">(</span><span class="i">$y</span><span class="s">)</span><span class="sc">;</span>		   <span class="c"># x over y (binomial coefficient n over k)</span></li></ol></pre><p>Calculates the binomial coefficient n over k, also called the "choose"
+function. The result is equivalent to:</p>
+<pre class="verbatim"><ol><li>	<span class="s">(</span> <span class="w">n</span> <span class="s">)</span>      <span class="w">n</span>!</li><li>	| - |  = -------</li><li>	<span class="s">(</span> <span class="w">k</span> <span class="s">)</span>    <span class="w">k</span>!<span class="s">(</span><span class="w">n</span>-k<span class="s">)</span>!</li></ol></pre><p>This method was added in v0.20 of Math::BigRat (May 2007).</p>
+<a class='view-head2' id="config()"></a><h3 class='h3' >config()</h3>
+<pre class="verbatim"><ol><li>        <a class="l_k" href="../functions/use.html">use</a> <span class="w">Data::Dumper</span><span class="sc">;</span></li><li></li><li>        <a class="l_k" href="../functions/print.html">print</a> <span class="i">Dumper</span> <span class="s">(</span> <span class="w">Math::BigRat</span><span class="w">-&gt;config</span><span class="s">(</span><span class="s">)</span> <span class="s">)</span><span class="sc">;</span></li><li>        <a class="l_k" href="../functions/print.html">print</a> <span class="i">Math::BigRat</span><span class="i">-&gt;config</span><span class="s">(</span><span class="s">)</span>-&gt;{<span class="w">lib</span>}<span class="cm">,</span><span class="q">&quot;\n&quot;</span><span class="sc">;</span></li></ol></pre><p>Returns a hash containing the configuration, e.g. the version number, lib
+loaded etc. The following hash keys are currently filled in with the
+appropriate information.</p>
+<pre class="verbatim"><ol><li>        <span class="w">key</span>             <span class="w">RO</span>/<span class="w">RW</span>   <span class="w">Description</span></li><li>                                <span class="w">Example</span></li><li>        ============================================================</li><li>        <span class="w">lib</span>             <span class="w">RO</span>      <span class="w">Name</span> <span class="w">of</span> <span class="w">the</span> <span class="w">Math</span> <span class="w">library</span></li><li>                                <span class="w">Math::BigInt::Calc</span></li><li>        <span class="w">lib_version</span>     <span class="w">RO</span>      <span class="w">Version</span> <span class="w">of</span> <span class="q">&#39;lib&#39;</span></li><li>                                <span class="n">0.30</span></li><li>        <span class="w">class</span>           <span class="w">RO</span>      <span class="w">The</span> <span class="w">class</span> <span class="w">of</span> <span class="w">config</span> <span class="w">you</span> <span class="w">just</span> <span class="w">called</span></li><li>                                <span class="w">Math::BigRat</span></li><li>        <span class="w">version</span>         <span class="w">RO</span>      <span class="w">version</span> <span class="w">number</span> <span class="w">of</span> <span class="w">the</span> <span class="w">class</span> <span class="w">you</span> <span class="w">used</span></li><li>                                <span class="n">0.10</span></li><li>        <span class="w">upgrade</span>         <span class="w">RW</span>      <span class="w">To</span> <span class="w">which</span> <span class="w">class</span> <span class="w">numbers</span> <span class="w">are</span> <span class="w">upgraded</span></li><li>                                <a class="l_k" href="../functions/undef.html">undef</a></li><li>        <span class="w">downgrade</span>       <span class="w">RW</span>      <span class="w">To</span> <span class="w">which</span> <span class="w">class</span> <span class="w">numbers</span> <span class="w">are</span> <span class="w">downgraded</span></li><li>                                <a class="l_k" href="../functions/undef.html">undef</a></li><li>        <span class="w">precision</span>       <span class="w">RW</span>      <span class="w">Global</span> <span class="w">precision</span></li><li>                                <a class="l_k" href="../functions/undef.html">undef</a></li><li>        <span class="w">accuracy</span>        <span class="w">RW</span>      <span class="w">Global</span> <span class="w">accuracy</span></li><li>                                <a class="l_k" href="../functions/undef.html">undef</a></li><li>        <span class="w">round_mode</span>      <span class="w">RW</span>      <span class="w">Global</span> <span class="w">round</span> <span class="w">mode</span></li><li>                                <span class="w">even</span></li><li>        <span class="w">div_scale</span>       <span class="w">RW</span>      <span class="w">Fallback</span> <span class="w">accuracy</span> <a class="l_k" href="../functions/for.html">for</a> <span class="w">div</span></li><li>                                <span class="n">40</span></li><li>        <span class="w">trap_nan</span>        <span class="w">RW</span>      <span class="w">Trap</span> <span class="w">creation</span> <span class="w">of</span> <span class="w">NaN</span> <span class="s">(</span><a class="l_k" href="../functions/undef.html">undef</a> = <a class="l_k" href="../functions/no.html">no</a><span class="s">)</span></li><li>                                <a class="l_k" href="../functions/undef.html">undef</a></li><li>        <span class="w">trap_inf</span>        <span class="w">RW</span>      <span class="w">Trap</span> <span class="w">creation</span> <span class="w">of</span> +<span class="w">inf</span><span class="q">/-inf (undef = no)</span></li><li>                                <span class="q">                                undef</span></li></ol></pre><p>By passing a reference to a hash you may set the configuration values. This
+works only for values that a marked with a <code class="inline"><span class="w">RW</span></code>
+ above, anything else is
+read-only.</p>
+<a class='view-head2' id="objectify()"></a><h3 class='h3' >objectify()</h3>
+<p>This is an internal routine that turns scalars into objects.</p>
+<a class='view-head1' id="BUGS"></a><h2 class='h2' >BUGS</h2>
+<p>Some things are not yet implemented, or only implemented half-way:</p>
+<ul>
+<li><a class='view-title' id="inf-handling-(partial)"></a><strong>inf handling (partial)</strong>
+</li>
+<li><a class='view-title' id="NaN-handling-(partial)"></a><strong>NaN handling (partial)</strong>
+</li>
+<li><a class='view-title' id="rounding-(not-implemented-except-for-bceil%2fbfloor)"></a><strong>rounding (not implemented except for bceil/bfloor)</strong>
+</li>
+<li><a class='view-title' id="%24x-**-%24y-where-%24y-is-not-an-integer"></a><strong>$x ** $y where $y is not an integer</strong>
+</li>
+<li><a class='view-title' id="bmod()%2c-blog()%2c-bmodinv()-and-bmodpow()-(partial)"></a><strong>bmod(), blog(), bmodinv() and bmodpow() (partial)</strong>
+</li>
+</ul>
+<a class='view-head1' id="LICENSE"></a><h2 class='h2' >LICENSE</h2>
+<p>This program is free software; you may redistribute it and/or modify it under
+the same terms as Perl itself.</p>
+<a class='view-head1' id="SEE-ALSO"></a><h2 class='h2' >SEE ALSO</h2>
+<p><a href="../Math/BigFloat.html">Math::BigFloat</a> and <a href="https://search.cpan.org/perldoc/Math::Big">Math::Big</a> as well as
+<a href="https://search.cpan.org/perldoc/Math::BigInt::Pari">Math::BigInt::Pari</a> and  <a href="https://search.cpan.org/perldoc/Math::BigInt::GMP">Math::BigInt::GMP</a>.</p>
+<p>See <a href="http://search.cpan.org/search?dist=bignum">http://search.cpan.org/search?dist=bignum</a> for a way to use
+Math::BigRat.</p>
+<p>The package at <a href="http://search.cpan.org/search?dist=Math%3A%3ABigRat">http://search.cpan.org/search?dist=Math%3A%3ABigRat</a>
+may contain more documentation and examples as well as testcases.</p>
+<a class='view-head1' id="AUTHORS"></a><h2 class='h2' >AUTHORS</h2>
+<p>(C) by Tels <a href="http://bloodgate.com/">http://bloodgate.com/</a> 2001 - 2009.</p>
+<p>Currently maintained by Jonathan "Duke" Leto &lt;jonathan@leto.net&gt; <a href="http://leto.net">http://leto.net</a></p>
+
+
+
+
+      <ul><li><a href="#NAME">NAME</a></li><li><a href="#SYNOPSIS">SYNOPSIS</a></li><li><a href="#DESCRIPTION">DESCRIPTION</a></li><ul><li><a href="#MATH-LIBRARY">MATH LIBRARY</a></li></ul><li><a href="#METHODS">METHODS</a></li><ul><li><a href="#new()">new()</a></li><li><a href="#numerator()">numerator()</a></li><li><a href="#denominator()">denominator()</a></li><li><a href="#parts()">parts()</a></li><li><a href="#numify()">numify()</a></li><li><a href="#as_int()%2fas_number()">as_int()/as_number()</a></li><li><a href="#as_float()">as_float()</a></li><li><a href="#as_hex()">as_hex()</a></li><li><a href="#as_bin()">as_bin()</a></li><li><a href="#as_oct()">as_oct()</a></li><li><a href="#from_hex()%2ffrom_bin()%2ffrom_oct()">from_hex()/from_bin()/from_oct()</a></li><li><a href="#length()">length()</a></li><li><a href="#digit()">digit()</a></li><li><a href="#bnorm()">bnorm()</a></li><li><a href="#bfac()">bfac()</a></li><li><a href="#bround()%2fround()%2fbfround()">bround()/round()/bfround()</a></li><li><a href="#bmod()">bmod()</a></li><li><a href="#bneg()">bneg()</a></li><li><a href="#is_one()">is_one()</a></li><li><a href="#is_zero()">is_zero()</a></li><li><a href="#is_pos()%2fis_positive()">is_pos()/is_positive()</a></li><li><a href="#is_neg()%2fis_negative()">is_neg()/is_negative()</a></li><li><a href="#is_int()">is_int()</a></li><li><a href="#is_odd()">is_odd()</a></li><li><a href="#is_even()">is_even()</a></li><li><a href="#bceil()">bceil()</a></li><li><a href="#bfloor()">bfloor()</a></li><li><a href="#bsqrt()">bsqrt()</a></li><li><a href="#broot()">broot()</a></li><li><a href="#badd()%2fbmul()%2fbsub()%2fbdiv()%2fbdec()%2fbinc()">badd()/bmul()/bsub()/bdiv()/bdec()/binc()</a></li><li><a href="#copy()">copy()</a></li><li><a href="#bstr()%2fbsstr()">bstr()/bsstr()</a></li><li><a href="#bacmp()%2fbcmp()">bacmp()/bcmp()</a></li><li><a href="#blsft()%2fbrsft()">blsft()/brsft()</a></li><li><a href="#bpow()">bpow()</a></li><li><a href="#bexp()">bexp()</a></li><li><a href="#bnok()">bnok()</a></li><li><a href="#config()">config()</a></li><li><a href="#objectify()">objectify()</a></li></ul><li><a href="#BUGS">BUGS</a></li><li><a href="#LICENSE">LICENSE</a></li><li><a href="#SEE-ALSO">SEE ALSO</a></li><li><a href="#AUTHORS">AUTHORS</a></li></ul>
+
+
+                  </div>
+                </article>
+              </div>
+            </div>
+          </main>
+        </div>
+           <footer class="footer row bg-light pt-5 pb-5">
+       <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+           <div class="row">
+               <div class="col-md-4">
+                   <ul class="list-unstyled">
+                       <li>
+                           <h4>Site info</h4>
+                       </li>
+                       <li>Docs mantained by
+                           <a href="//lists.perl.org/list/perl5-porters.html"
+                               rel="noopener">Perl 5 Porters</a>
+                       </li>
+                       <li>Perldoc site development sponsored by
+                           <a href="//opusvl.com" rel="noopener">
+                           <img style="margin: 20px 20px 5px 10px" class="opus-logo" src="/public/img/opusvl_logo.svg" alt="OpusVL Logo">
+                        </a>
+                    <li><span class="about_perldoc"><a href="//about.html">About PerlDOC</a></span>
+                    </li>
+                       </li>
+                   </ul>
+               </div>
+               <div class="col-md-8">
+                   <div class="row">
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Manuals</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.18.3/index-overview.html">Overview</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.18.3/index-tutorials.html">Tutorials</a>
+                               </li>
+                               <li>
+                                   <a href="/5.18.3/index-faq.html">FAQs</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.18.3/index-history.html">Changes</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Reference</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.18.3/index-language.html">Language</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.18.3/index-functions.html">Functions</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.18.3/perlop.html">Operators</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.18.3/perlvar.html">Variables</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Modules</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.18.3/index-modules-A.html">Modules</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.18.3/index-pragmas.html">Pragmas</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.18.3/index-utilities.html">Utilities</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Misc</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.18.3/index-licence.html">License</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.18.3/index-internals.html">Internals</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.18.3/index-platforms.html">Platforms</a>
+                               </li>
+                            <li>
+                                <a
+                                    href="/5.18.3/index-about.html">About</a>
+                            </li>
+                           </ul>
+                       </div>
+                   </div>
+               </div>
+               <div class=" col-12 footer-inf text-center">
+                   <small>perldoc.perl.org - Official documentation for the Perl
+                       programming language</small>
+               </div>
+           </div>
+       </div>
+   </footer>
+
+        	<div class="beta-wrapper beta-bottom-right ">
+		<div class="beta beta-blue  ">
+			<a class="beta-link "
+				href="//github.com/OpusVL/perldoc.perl.org/issues/new" rel="noopener">
+				<span class="beta-text">
+					This website is a Beta release.
+				</span>
+				<span class="beta-text">
+					For any issues please raise a ticket on GitHub
+				</span>
+			</a>
+		</div>
+	</div>
+
+        <script src="/public/js/main.min.js"></script>
+      </body>
+
+      </html>

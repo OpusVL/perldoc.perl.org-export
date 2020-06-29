@@ -1,0 +1,905 @@
+      
+      
+      
+      
+
+      <!DOCTYPE html>
+      <html lang="en">
+
+      <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Opcode - perldoc.perl.org">
+        <link rel="icon" href="/public/img/favicon.ico">
+        <title>Opcode - perldoc.perl.org</title>
+        <link href="/public/css/main.min.css" rel="stylesheet">
+        <link rel="canonical" href="/Opcode.html">
+        <link
+          href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900'
+          rel='stylesheet' type='text/css'>
+        <script>
+          window.ga = window.ga || function () {
+            (ga.q = ga.q || []).push(arguments)
+          };
+          ga.l = +new Date;
+          ga('create', 'UA-1892152-2', 'auto'); // JJ's account
+          ga('create', 'UA-50555-3', 'auto', 'perlOrg'); // perl.org account
+          ga('require', 'outboundLinkTracker', {
+            events: ['click', 'auxclick', 'contextmenu'],
+          });
+          ga('require', 'maxScrollTracker');
+          ga('send', 'pageview');
+          ga('perlOrg.send', 'pageview');
+        </script>
+        <script async src="https://www.google-analytics.com/analytics.js">
+        </script>
+        <script async src="/public/js/tracking.min.js"></script>
+      </head>
+
+      <body class="body container-fluid ">
+        <div class="wrapper">
+
+          <nav
+    class="navbar navbar-dark bg-primary bg-perl fixed-top justify-content-between navbar-expand-lg">
+    <a href="#content" class="skippy sr-only sr-only-focusable">
+        <span class=' skippy-text'>Skip to main content</span>
+    </a>
+    <a class="navbar-brand" href="/">
+        <img class="logo" src="/public/img/logo_perl_doc.svg"
+            alt="Perl Documentation Logo" />
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse"
+        data-target="#navbar" aria-controls="navbar" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="navbar" class="collapse navbar-collapse ">
+        <ul class="navbar-nav ml-auto navbar-right">
+            <form class="nav-item dropdown search-wrapper">
+                <input type="text" id='searchinput' aria-describedby='navbarDropdown5'
+                    placeholder="Type query" class='search-input-field' value=''>
+
+                <button href="#" data-toggle='dropdown' type="button"
+                    aria-haspopup="true" aria-expanded='false' id="navbarDropdown5"
+                    class="nav-link dropdown-toggle search-link">
+                    <object tabindex='-1' focusable="false" class='search-icon'
+                        data="/public/img/search.svg" type="image/svg+xml"
+                        name='search icon'>search
+                        icon</object>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown5"
+                    id='search-results'>
+                    <p class='dropdown-item major-version'>
+                        No results
+                    </p>
+                </div>
+            </form>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown" href="#" class="nav-link dropdown-toggle"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Perl versions</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    
+                        <p class='dropdown-item major-version'>
+                            5.32
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.32.0/">5.32.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.30
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.3/">5.30.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.2/">5.30.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.1/">5.30.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.0/">5.30.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.28
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.3/">5.28.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.2/">5.28.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.1/">5.28.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.0/">5.28.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.26
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.3/">5.26.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.2/">5.26.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.1/">5.26.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.0/">5.26.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.24
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.4/">5.24.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.3/">5.24.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.2/">5.24.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.1/">5.24.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.0/">5.24.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.22
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.4/">5.22.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.3/">5.22.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.2/">5.22.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.1/">5.22.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.0/">5.22.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.20
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.3/">5.20.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.2/">5.20.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.1/">5.20.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.0/">5.20.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.18
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.4/">5.18.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.3/">5.18.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.2/">5.18.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.1/">5.18.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.0/">5.18.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.16
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.3/">5.16.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.2/">5.16.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.1/">5.16.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.0/">5.16.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.14
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.4/">5.14.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.3/">5.14.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.2/">5.14.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.1/">5.14.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.0/">5.14.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.12
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.5/">5.12.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.4/">5.12.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.3/">5.12.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.2/">5.12.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.1/">5.12.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.0/">5.12.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.10
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.1/">5.10.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.0/">5.10.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.8
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.9/">5.8.9</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.8/">5.8.8</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.7/">5.8.7</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.6/">5.8.6</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.5/">5.8.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.4/">5.8.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.3/">5.8.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.2/">5.8.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.1/">5.8.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.0/">5.8.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.6
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.2/">5.6.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.1/">5.6.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.0/">5.6.0</a>
+                        
+                        
+                    
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown1" href="#" class="dropdown-toggle nav-link"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Manuals</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                    <a class="dropdown-item"
+                        href="/5.18.4/index-overview.html">Overview</a>
+                    <a class="dropdown-item"
+                        href="/5.18.4/index-tutorials.html">Tutorials</a>
+                    <a class="dropdown-item"
+                        href="/5.18.4/index-faq.html">FAQs</a>
+                    <a class="dropdown-item"
+                        href="/5.18.4/index-history.html">Changes</a>
+                    <a class="dropdown-item"
+                        href="/5.18.4/index-licence.html">License</a>
+                    <a class="dropdown-item"
+                        href="/5.18.4/index-language.html">Language</a>
+                    <a class="dropdown-item"
+                        href="/5.18.4/index-functions.html">Functions</a>
+                    <a class="dropdown-item"
+                        href="/5.18.4/perlop.html">Operators</a>
+                    <a class="dropdown-item"
+                        href="/5.18.4/perlvar.html">Variables</a>
+                    <a class="dropdown-item"
+                        href="/5.18.4/index-pragmas.html">Pragmas</a>
+                    <a class="dropdown-item"
+                        href="/5.18.4/index-utilities.html">Utilities</a>
+                    <a class="dropdown-item"
+                        href="/5.18.4/index-internals.html">Internals</a>
+                    <a class="dropdown-item"
+                        href="/5.18.4/index-platforms.html">Platforms</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown3" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Modules</a>
+                <div aria-labelledby="navbarDropdown3"
+                    class="dropdown-menu letters-wrap">
+                    <!--<a class="dropdown-item"
+                        href="/5.18.4/index-modules.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.18.4/index-modules-by-cat.html">By
+                        Category</a>-->
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-modules-A.html">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-modules-B.html">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-modules-C.html">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-modules-D.html">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-modules-E.html">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-modules-F.html">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-modules-G.html">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-modules-H.html">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-modules-I.html">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-modules-J.html">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-modules-K.html">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-modules-L.html">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-modules-M.html">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-modules-N.html">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-modules-O.html">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-modules-P.html">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-modules-Q.html">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-modules-R.html">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-modules-S.html">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-modules-T.html">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-modules-U.html">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-modules-V.html">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-modules-W.html">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-modules-X.html">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-modules-Y.html">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-modules-Z.html">Z</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown4" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Functions</a>
+                <div aria-labelledby="navbarDropdown4"
+                    class="dropdown-menu letters-wrap">
+                    <a class="dropdown-item"
+                        href="/5.18.4/index-functions.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.18.4/index-functions-by-cat.html">By
+                        Category</a>
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-functions.html#A">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-functions.html#B">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-functions.html#C">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-functions.html#D">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-functions.html#E">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-functions.html#F">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-functions.html#G">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-functions.html#H">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-functions.html#I">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-functions.html#J">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-functions.html#K">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-functions.html#L">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-functions.html#M">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-functions.html#N">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-functions.html#O">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-functions.html#P">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-functions.html#Q">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-functions.html#R">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-functions.html#S">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-functions.html#T">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-functions.html#U">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-functions.html#V">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-functions.html#W">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-functions.html#X">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-functions.html#Y">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-functions.html#Z">Z</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!--/.nav-collapse -->
+</nav>
+
+
+          <main class="row main-content pb-5 pt-5" id='content'>
+            <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+              <div class="row">
+                <div class="col-sm-12">
+                  <div id="breadcrumbs">
+                      
+    <a href="index.html">Home</a>&nbsp; &gt;
+    
+      
+        <a href="index-modules-O.html">Core modules (O)</a> &gt;
+      
+    
+    Opcode
+  
+
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <article class="col-sm-12 content">
+                  <div class="documentation-wrapper">
+                    <div id="perl_version">
+                      <h7 class='page-title'> Perl 5 version 18.4
+                        documentation</h7>
+                    </div>
+                    <h1>Opcode</h1>
+
+
+  <!--    -->
+<ul><li><a href="#NAME">NAME</a></li><li><a href="#SYNOPSIS">SYNOPSIS</a></li><li><a href="#DESCRIPTION">DESCRIPTION</a></li><li><a href="#NOTE">NOTE</a></li><li><a href="#WARNING">WARNING</a></li><li><a href="#Operator-Names-and-Operator-Lists">Operator Names and Operator Lists</a></li><li><a href="#Opcode-Functions">Opcode Functions</a></li><li><a href="#Manipulating-Opsets">Manipulating Opsets</a></li><li><a href="#TO-DO-(maybe)">TO DO (maybe)</a></li><li><a href="#Predefined-Opcode-Tags">Predefined Opcode Tags</a></li><li><a href="#SEE-ALSO">SEE ALSO</a></li><li><a href="#AUTHORS">AUTHORS</a></li></ul><a class='view-head1' id="NAME"></a><h2 class='h2' >NAME</h2>
+<p>Opcode - Disable named opcodes when compiling perl code</p>
+<a class='view-head1' id="SYNOPSIS"></a><h2 class='h2' >SYNOPSIS</h2>
+<pre class="verbatim"><ol><li>  <a class="l_k" href="functions/use.html">use</a> <span class="w">Opcode</span><span class="sc">;</span></li></ol></pre><a class='view-head1' id="DESCRIPTION"></a><h2 class='h2' >DESCRIPTION</h2>
+<p>Perl code is always compiled into an internal format before execution.</p>
+<p>Evaluating perl code (e.g. via "eval" or "do 'file'") causes
+the code to be compiled into an internal format and then,
+provided there was no error in the compilation, executed.
+The internal format is based on many distinct <i>opcodes</i>.</p>
+<p>By default no opmask is in effect and any code can be compiled.</p>
+<p>The Opcode module allow you to define an <i>operator mask</i> to be in
+effect when perl <i>next</i> compiles any code.  Attempting to compile code
+which contains a masked opcode will cause the compilation to fail
+with an error. The code will not be executed.</p>
+<a class='view-head1' id="NOTE"></a><h2 class='h2' >NOTE</h2>
+<p>The Opcode module is not usually used directly. See the ops pragma and
+Safe modules for more typical uses.</p>
+<a class='view-head1' id="WARNING"></a><h2 class='h2' >WARNING</h2>
+<p>The authors make <strong>no warranty</strong>, implied or otherwise, about the
+suitability of this software for safety or security purposes.</p>
+<p>The authors shall not in any case be liable for special, incidental,
+consequential, indirect or other similar damages arising from the use
+of this software.</p>
+<p>Your mileage will vary. If in any doubt <strong>do not use it</strong>.</p>
+<a class='view-head1' id="Operator-Names-and-Operator-Lists"></a><h2 class='h2' >Operator Names and Operator Lists</h2>
+<p>The canonical list of operator names is the contents of the array
+PL_op_name defined and initialised in file <i>opcode.h</i> of the Perl
+source distribution (and installed into the perl library).</p>
+<p>Each operator has both a terse name (its opname) and a more verbose or
+recognisable descriptive name. The opdesc function can be used to
+return a list of descriptions for a list of operators.</p>
+<p>Many of the functions and methods listed below take a list of
+operators as parameters. Most operator lists can be made up of several
+types of element. Each element can be one of</p>
+<ul>
+<li><a class='view-title' id="an-operator-name-(opname)"></a><strong>an operator name (opname)</strong>
+<p>Operator names are typically small lowercase words like enterloop,
+leaveloop, last, next, redo etc. Sometimes they are rather cryptic
+like gv2cv, i_ncmp and ftsvtx.</p>
+</li>
+<li><a class='view-title' id="an-operator-tag-name-(optag)"></a><strong>an operator tag name (optag)</strong>
+<p>Operator tags can be used to refer to groups (or sets) of operators.
+Tag names always begin with a colon. The Opcode module defines several
+optags and the user can define others using the define_optag function.</p>
+</li>
+<li><a class='view-title' id="a-negated-opname-or-optag"></a><strong>a negated opname or optag</strong>
+<p>An opname or optag can be prefixed with an exclamation mark, e.g., !mkdir.
+Negating an opname or optag means remove the corresponding ops from the
+accumulated set of ops at that point.</p>
+</li>
+<li><a class='view-title' id="an-operator-set-(opset)"></a><strong>an operator set (opset)</strong>
+<p>An <i>opset</i> as a binary string of approximately 44 bytes which holds a
+set or zero or more operators.</p>
+<p>The opset and opset_to_ops functions can be used to convert from
+a list of operators to an opset and <i>vice versa</i>.</p>
+<p>Wherever a list of operators can be given you can use one or more opsets.
+See also Manipulating Opsets below.</p>
+</li>
+</ul>
+<a class='view-head1' id="Opcode-Functions"></a><h2 class='h2' >Opcode Functions</h2>
+<p>The Opcode package contains functions for manipulating operator names
+tags and sets. All are available for export by the package.</p>
+<ul>
+<li><a class='view-title' id="opcodes"></a><strong>opcodes</strong>
+<p>In a scalar context opcodes returns the number of opcodes in this
+version of perl (around 350 for perl-5.7.0).</p>
+<p>In a list context it returns a list of all the operator names.
+(Not yet implemented, use @names = opset_to_ops(full_opset).)</p>
+</li>
+<li><a class='view-title' id="opset-(OP%2c-...)"></a><strong>opset (OP, ...)</strong>
+<p>Returns an opset containing the listed operators.</p>
+</li>
+<li><a class='view-title' id="opset_to_ops-(OPSET)"></a><strong>opset_to_ops (OPSET)</strong>
+<p>Returns a list of operator names corresponding to those operators in
+the set.</p>
+</li>
+<li><a class='view-title' id="opset_to_hex-(OPSET)"></a><strong>opset_to_hex (OPSET)</strong>
+<p>Returns a string representation of an opset. Can be handy for debugging.</p>
+</li>
+<li><a class='view-title' id="full_opset"></a><strong>full_opset</strong>
+<p>Returns an opset which includes all operators.</p>
+</li>
+<li><a class='view-title' id="empty_opset"></a><strong>empty_opset</strong>
+<p>Returns an opset which contains no operators.</p>
+</li>
+<li><a class='view-title' id="invert_opset-(OPSET)"></a><strong>invert_opset (OPSET)</strong>
+<p>Returns an opset which is the inverse set of the one supplied.</p>
+</li>
+<li><a class='view-title' id="verify_opset-(OPSET%2c-...)"></a><strong>verify_opset (OPSET, ...)</strong>
+<p>Returns true if the supplied opset looks like a valid opset (is the
+right length etc) otherwise it returns false. If an optional second
+parameter is true then verify_opset will croak on an invalid opset
+instead of returning false.</p>
+<p>Most of the other Opcode functions call verify_opset automatically
+and will croak if given an invalid opset.</p>
+</li>
+<li><a class='view-title' id="define_optag-(OPTAG%2c-OPSET)"></a><strong>define_optag (OPTAG, OPSET)</strong>
+<p>Define OPTAG as a symbolic name for OPSET. Optag names always start
+with a colon <code class="inline"><span class="j">:</span></code>
+.</p>
+<p>The optag name used must not be defined already (define_optag will
+croak if it is already defined). Optag names are global to the perl
+process and optag definitions cannot be altered or deleted once
+defined.</p>
+<p>It is strongly recommended that applications using Opcode should use a
+leading capital letter on their tag names since lowercase names are
+reserved for use by the Opcode module. If using Opcode within a module
+you should prefix your tags names with the name of your module to
+ensure uniqueness and thus avoid clashes with other modules.</p>
+</li>
+<li><a class='view-title' id="opmask_add-(OPSET)"></a><strong>opmask_add (OPSET)</strong>
+<p>Adds the supplied opset to the current opmask. Note that there is
+currently <i>no</i> mechanism for unmasking ops once they have been masked.
+This is intentional.</p>
+</li>
+<li><a class='view-title' id="opmask"></a><strong>opmask</strong>
+<p>Returns an opset corresponding to the current opmask.</p>
+</li>
+<li><a class='view-title' id="opdesc-(OP%2c-...)"></a><strong>opdesc (OP, ...)</strong>
+<p>This takes a list of operator names and returns the corresponding list
+of operator descriptions.</p>
+</li>
+<li><a class='view-title' id="opdump-(PAT)"></a><strong>opdump (PAT)</strong>
+<p>Dumps to STDOUT a two column list of op names and op descriptions.
+If an optional pattern is given then only lines which match the
+(case insensitive) pattern will be output.</p>
+<p>It's designed to be used as a handy command line utility:</p>
+<pre class="verbatim"><ol><li>	<span class="w">perl</span> -<span class="w">MOpcode</span>=<span class="w">opdump</span> -e <span class="w">opdump</span></li><li>	<span class="w">perl</span> -<span class="w">MOpcode</span>=<span class="w">opdump</span> -e <span class="q">&#39;opdump Eval&#39;</span></li></ol></pre></li>
+</ul>
+<a class='view-head1' id="Manipulating-Opsets"></a><h2 class='h2' >Manipulating Opsets</h2>
+<p>Opsets may be manipulated using the perl bit vector operators &amp; (and), | (or),
+^ (xor) and ~ (negate/invert).</p>
+<p>However you should never rely on the numerical position of any opcode
+within the opset. In other words both sides of a bit vector operator
+should be opsets returned from Opcode functions.</p>
+<p>Also, since the number of opcodes in your current version of perl might
+not be an exact multiple of eight, there may be unused bits in the last
+byte of an upset. This should not cause any problems (Opcode functions
+ignore those extra bits) but it does mean that using the ~ operator
+will typically not produce the same 'physical' opset 'string' as the
+invert_opset function.</p>
+<a class='view-head1' id="TO-DO-(maybe)"></a><h2 class='h2' >TO DO (maybe)</h2>
+<pre class="verbatim"><ol><li>    <span class="i">$bool</span> = <span class="i">opset_eq</span><span class="s">(</span><span class="i">$opset1</span><span class="cm">,</span> <span class="i">$opset2</span><span class="s">)</span>	<span class="w">true</span> <a class="l_k" href="functions/if.html">if</a> <span class="w">opsets</span> <span class="w">are</span> <span class="w">logically</span></li><li>					<span class="w">equivalent</span></li><li>    <span class="i">$yes</span> = <span class="i">opset_can</span><span class="s">(</span><span class="i">$opset</span><span class="cm">,</span> <span class="i">@ops</span><span class="s">)</span>	<span class="w">true</span> <a class="l_k" href="functions/if.html">if</a> <span class="i">$opset</span> <span class="w">has</span> <span class="w">all</span> <span class="i">@ops</span> <span class="w">set</span></li><li></li><li>    <span class="i">@diff</span> = <span class="i">opset_diff</span><span class="s">(</span><span class="i">$opset1</span><span class="cm">,</span> <span class="i">$opset2</span><span class="s">)</span> <span class="cm">=&gt;</span> <span class="s">(</span><span class="q">&#39;foo&#39;</span><span class="cm">,</span> <span class="q">&#39;!bar&#39;</span><span class="cm">,</span> ...<span class="s">)</span></li></ol></pre><a class='view-head1' id="Predefined-Opcode-Tags"></a><h2 class='h2' >Predefined Opcode Tags</h2>
+<ul>
+<li><a class='view-title' id="%3abase_core"></a><strong>:base_core</strong>
+<pre class="verbatim"><ol><li>    <span class="w">null</span> <span class="w">stub</span> <a class="l_k" href="functions/scalar.html">scalar</a> <span class="w">pushmark</span> <a class="l_k" href="functions/wantarray.html">wantarray</a> <span class="w">const</span> <a class="l_k" href="functions/defined.html">defined</a> <a class="l_k" href="functions/undef.html">undef</a></li><li></li><li>    <span class="w">rv2sv</span> <span class="w">sassign</span></li><li></li><li>    <span class="w">rv2av</span> <span class="w">aassign</span> <span class="w">aelem</span> <span class="w">aelemfast</span> <span class="w">aelemfast_lex</span> <span class="w">aslice</span> <span class="w">av2arylen</span></li><li></li><li>    <span class="w">rv2hv</span> <span class="w">helem</span> <span class="w">hslice</span> <a class="l_k" href="functions/each.html">each</a> <a class="l_k" href="functions/values.html">values</a> <a class="l_k" href="functions/keys.html">keys</a> <a class="l_k" href="functions/exists.html">exists</a> <a class="l_k" href="functions/delete.html">delete</a> <span class="w">aeach</span> <span class="w">akeys</span></li><li>    <span class="w">avalues</span> <span class="w">reach</span> <span class="w">rvalues</span> <span class="w">rkeys</span></li><li></li><li>    <span class="w">preinc</span> <span class="w">i_preinc</span> <span class="w">predec</span> <span class="w">i_predec</span> <span class="w">postinc</span> <span class="w">i_postinc</span></li><li>    <span class="w">postdec</span> <span class="w">i_postdec</span> <a class="l_k" href="functions/int.html">int</a> <a class="l_k" href="functions/hex.html">hex</a> <a class="l_k" href="functions/oct.html">oct</a> <a class="l_k" href="functions/abs.html">abs</a> <span class="w">pow</span> <span class="w">multiply</span> <span class="w">i_multiply</span></li><li>    <span class="w">divide</span> <span class="w">i_divide</span> <span class="w">modulo</span> <span class="w">i_modulo</span> <span class="w">add</span> <span class="w">i_add</span> <span class="w">subtract</span> <span class="w">i_subtract</span></li><li></li><li>    <span class="w">left_shift</span> <span class="w">right_shift</span> <span class="w">bit_and</span> <span class="w">bit_xor</span> <span class="w">bit_or</span> <span class="w">negate</span> <span class="w">i_negate</span></li><li>    <a class="l_k" href="functions/not.html">not</a> <span class="w">complement</span></li><li></li><li>    <a class="l_k" href="functions/lt.html">lt</a> <span class="w">i_lt</span> <a class="l_k" href="functions/gt.html">gt</a> <span class="w">i_gt</span> <a class="l_k" href="functions/le.html">le</a> <span class="w">i_le</span> <a class="l_k" href="functions/ge.html">ge</a> <span class="w">i_ge</span> <a class="l_k" href="functions/eq.html">eq</a> <span class="w">i_eq</span> <a class="l_k" href="functions/ne.html">ne</a> <span class="w">i_ne</span> <span class="w">ncmp</span> <span class="w">i_ncmp</span></li><li>    <span class="w">slt</span> <span class="w">sgt</span> <span class="w">sle</span> <span class="w">sge</span> <span class="w">seq</span> <span class="w">sne</span> <span class="w">scmp</span></li><li></li><li>    <a class="l_k" href="functions/substr.html">substr</a> <a class="l_k" href="functions/vec.html">vec</a> <span class="w">stringify</span> <a class="l_k" href="functions/study.html">study</a> <a class="l_k" href="functions/pos.html">pos</a> <a class="l_k" href="functions/length.html">length</a> <a class="l_k" href="functions/index.html">index</a> <a class="l_k" href="functions/rindex.html">rindex</a> <a class="l_k" href="functions/ord.html">ord</a> <a class="l_k" href="functions/chr.html">chr</a></li><li></li><li>    <a class="l_k" href="functions/ucfirst.html">ucfirst</a> <a class="l_k" href="functions/lcfirst.html">lcfirst</a> <a class="l_k" href="functions/uc.html">uc</a> <a class="l_k" href="functions/lc.html">lc</a> <span class="w">fc</span> <a class="l_k" href="functions/quotemeta.html">quotemeta</a> <span class="w">trans</span> <span class="w">transr</span> <a class="l_k" href="functions/chop.html">chop</a> <span class="w">schop</span></li><li>    <a class="l_k" href="functions/chomp.html">chomp</a> <span class="w">schomp</span></li><li></li><li>    <span class="w">match</span> <a class="l_k" href="functions/split.html">split</a> <span class="q">qr</span></li><li></li><li>    <span class="q">    list lslice</span> <a class="l_k" href="functions/splice.html">splice</a> <a class="l_k" href="functions/push.html">push</a> <a class="l_k" href="functions/pop.html">pop</a> <a class="l_k" href="functions/shift.html">shift</a> <a class="l_k" href="functions/unshift.html">unshift</a> <a class="l_k" href="functions/reverse.html">reverse</a></li><li></li><li>    <span class="w">cond_expr</span> <span class="w">flip</span> <span class="w">flop</span> <span class="w">andassign</span> <span class="w">orassign</span> <span class="w">dorassign</span> <a class="l_k" href="functions/and.html">and</a> <a class="l_k" href="functions/or.html">or</a> <span class="w">dor</span> <a class="l_k" href="functions/xor.html">xor</a></li><li></li><li>    <a class="l_k" href="functions/warn.html">warn</a> <a class="l_k" href="functions/die.html">die</a> <span class="w">lineseq</span> <span class="w">nextstate</span> <span class="w">scope</span> <span class="w">enter</span> <span class="w">leave</span></li><li></li><li>    <span class="w">rv2cv</span> <span class="w">anoncode</span> <a class="l_k" href="functions/prototype.html">prototype</a> <span class="w">coreargs</span></li><li></li><li>    <span class="w">entersub</span> <span class="w">leavesub</span> <span class="w">leavesublv</span> <a class="l_k" href="functions/return.html">return</a> <span class="w">method</span> <span class="w">method_named</span></li><li>     -- <span class="w">XXX</span> <span class="w">loops</span> <span class="w">via</span> <span class="w">recursion</span>?</li><li></li><li>    <span class="w">leaveeval</span> -- <span class="w">needed</span> <a class="l_k" href="functions/for.html">for</a> <span class="w">Safe</span> <span class="w">to</span> <span class="w">operate</span><span class="cm">,</span> <span class="w">is</span> <span class="w">safe</span></li><li>		 <span class="w">without</span> <span class="w">entereval</span></li></ol></pre></li>
+<li><a class='view-title' id="%3abase_mem"></a><strong>:base_mem</strong>
+<p>These memory related ops are not included in :base_core because they
+can easily be used to implement a resource attack (e.g., consume all
+available memory).</p>
+<pre class="verbatim"><ol><li>    <span class="w">concat</span> <span class="w">repeat</span> <a class="l_k" href="functions/join.html">join</a> <span class="w">range</span></li><li></li><li>    <span class="w">anonlist</span> <span class="w">anonhash</span></li></ol></pre><p>Note that despite the existence of this optag a memory resource attack
+may still be possible using only :base_core ops.</p>
+<p>Disabling these ops is a <i>very</i> heavy handed way to attempt to prevent
+a memory resource attack. It's probable that a specific memory limit
+mechanism will be added to perl in the near future.</p>
+</li>
+<li><a class='view-title' id="%3abase_loop"></a><strong>:base_loop</strong>
+<p>These loop ops are not included in :base_core because they can easily be
+used to implement a resource attack (e.g., consume all available CPU time).</p>
+<pre class="verbatim"><ol><li>    <span class="w">grepstart</span> <span class="w">grepwhile</span></li><li>    <span class="w">mapstart</span> <span class="w">mapwhile</span></li><li>    <span class="w">enteriter</span> <span class="w">iter</span></li><li>    <span class="w">enterloop</span> <span class="w">leaveloop</span> <span class="w">unstack</span></li><li>    <a class="l_k" href="functions/last.html">last</a> <a class="l_k" href="functions/next.html">next</a> <a class="l_k" href="functions/redo.html">redo</a></li><li>    <a class="l_k" href="functions/goto.html">goto</a></li></ol></pre></li>
+<li><a class='view-title' id="%3abase_io"></a><strong>:base_io</strong>
+<p>These ops enable <i>filehandle</i> (rather than filename) based input and
+output. These are safe on the assumption that only pre-existing
+filehandles are available for use.  Usually, to create new filehandles
+other ops such as open would need to be enabled, if you don't take into
+account the magical open of ARGV.</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="functions/readline.html">readline</a> <span class="w">rcatline</span> <a class="l_k" href="functions/getc.html">getc</a> <a class="l_k" href="functions/read.html">read</a></li><li></li><li>    <a class="l_k" href="functions/formline.html">formline</a> <span class="w">enterwrite</span> <span class="w">leavewrite</span></li><li></li><li>    <a class="l_k" href="functions/print.html">print</a> <a class="l_k" href="functions/say.html">say</a> <a class="l_k" href="functions/sysread.html">sysread</a> <a class="l_k" href="functions/syswrite.html">syswrite</a> <a class="l_k" href="functions/send.html">send</a> <a class="l_k" href="functions/recv.html">recv</a></li><li></li><li>    <a class="l_k" href="functions/eof.html">eof</a> <a class="l_k" href="functions/tell.html">tell</a> <a class="l_k" href="functions/seek.html">seek</a> <a class="l_k" href="functions/sysseek.html">sysseek</a></li><li></li><li>    <a class="l_k" href="functions/readdir.html">readdir</a> <a class="l_k" href="functions/telldir.html">telldir</a> <a class="l_k" href="functions/seekdir.html">seekdir</a> <a class="l_k" href="functions/rewinddir.html">rewinddir</a></li></ol></pre></li>
+<li><a class='view-title' id="%3abase_orig"></a><strong>:base_orig</strong>
+<p>These are a hotchpotch of opcodes still waiting to be considered</p>
+<pre class="verbatim"><ol><li>    <span class="w">gvsv</span> <span class="w">gv</span> <span class="w">gelem</span></li><li></li><li>    <span class="w">padsv</span> <span class="w">padav</span> <span class="w">padhv</span> <span class="w">padcv</span> <span class="w">padany</span> <span class="w">padrange</span> <span class="w">introcv</span> <span class="w">clonecv</span></li><li></li><li>    <span class="w">once</span></li><li></li><li>    <span class="w">rv2gv</span> <span class="w">refgen</span> <span class="w">srefgen</span> <a class="l_k" href="functions/ref.html">ref</a></li><li></li><li>    <a class="l_k" href="functions/bless.html">bless</a> -- <span class="w">could</span> <span class="w">be</span> <span class="w">used</span> <span class="w">to</span> <span class="w">change</span> <span class="w">ownership</span> <span class="w">of</span> <span class="i">objects</span></li><li>	     <span class="s">(</span><span class="w">reblessing</span><span class="s">)</span></li><li></li><li>    <span class="w">pushre</span> <span class="w">regcmaybe</span> <span class="w">regcreset</span> <span class="w">regcomp</span> <span class="w">subst</span> <span class="w">substcont</span></li><li></li><li>    <a class="l_k" href="functions/sprintf.html">sprintf</a> <span class="w">prtf</span> -- <span class="w">can</span> <span class="w">core</span> <a class="l_k" href="functions/dump.html">dump</a></li><li></li><li>    <a class="l_k" href="functions/crypt.html">crypt</a></li><li></li><li>    <a class="l_k" href="functions/tie.html">tie</a> <a class="l_k" href="functions/untie.html">untie</a></li><li></li><li>    <a class="l_k" href="functions/dbmopen.html">dbmopen</a> <a class="l_k" href="functions/dbmclose.html">dbmclose</a></li><li>    <span class="w">sselect</span> <a class="l_k" href="functions/select.html">select</a></li><li>    <span class="w">pipe_op</span> <span class="w">sockpair</span></li><li></li><li>    <a class="l_k" href="functions/getppid.html">getppid</a> <a class="l_k" href="functions/getpgrp.html">getpgrp</a> <a class="l_k" href="functions/setpgrp.html">setpgrp</a> <a class="l_k" href="functions/getpriority.html">getpriority</a> <a class="l_k" href="functions/setpriority.html">setpriority</a></li><li>    <a class="l_k" href="functions/localtime.html">localtime</a> <a class="l_k" href="functions/gmtime.html">gmtime</a></li><li></li><li>    <span class="w">entertry</span> <span class="w">leavetry</span> -- <span class="w">can</span> <span class="w">be</span> <span class="w">used</span> <span class="w">to</span> <span class="q">&#39;hide&#39;</span> <span class="w">fatal</span> <span class="w">errors</span></li><li></li><li>    <span class="w">entergiven</span> <span class="w">leavegiven</span></li><li>    <span class="w">enterwhen</span> <span class="w">leavewhen</span></li><li>    <a class="l_k" href="functions/break.html">break</a> <a class="l_k" href="functions/continue.html">continue</a></li><li>    <span class="w">smartmatch</span></li><li></li><li>    <span class="w">custom</span> -- <span class="w">where</span> <span class="w">should</span> <span class="w">this</span> <span class="w">go</span></li></ol></pre></li>
+<li><a class='view-title' id="%3abase_math"></a><strong>:base_math</strong>
+<p>These ops are not included in :base_core because of the risk of them being
+used to generate floating point exceptions (which would have to be caught
+using a $SIG{FPE} handler).</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="functions/atan2.html">atan2</a> <a class="l_k" href="functions/sin.html">sin</a> <a class="l_k" href="functions/cos.html">cos</a> <a class="l_k" href="functions/exp.html">exp</a> <a class="l_k" href="functions/log.html">log</a> <a class="l_k" href="functions/sqrt.html">sqrt</a></li></ol></pre><p>These ops are not included in :base_core because they have an effect
+beyond the scope of the compartment.</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="functions/rand.html">rand</a> <a class="l_k" href="functions/srand.html">srand</a></li></ol></pre></li>
+<li><a class='view-title' id="%3abase_thread"></a><strong>:base_thread</strong>
+<p>These ops are related to multi-threading.</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="functions/lock.html">lock</a></li></ol></pre></li>
+<li><a class='view-title' id="%3adefault"></a><strong>:default</strong>
+<p>A handy tag name for a <i>reasonable</i> default set of ops.  (The current ops
+allowed are unstable while development continues. It will change.)</p>
+<pre class="verbatim"><ol><li>    <span class="j">:</span><span class="w">base_core</span> <span class="co">:</span><span class="w">base_mem</span> <span class="co">:</span><span class="w">base_loop</span> <span class="co">:</span><span class="w">base_orig</span> <span class="co">:</span><span class="w">base_thread</span></li></ol></pre><p>This list used to contain :base_io prior to Opcode 1.07.</p>
+<p>If safety matters to you (and why else would you be using the Opcode module?)
+then you should not rely on the definition of this, or indeed any other, optag!</p>
+</li>
+<li><a class='view-title' id="%3afilesys_read"></a><strong>:filesys_read</strong>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="functions/stat.html">stat</a> <a class="l_k" href="functions/lstat.html">lstat</a> <a class="l_k" href="functions/readlink.html">readlink</a></li><li></li><li>    <span class="w">ftatime</span> <span class="w">ftblk</span> <span class="w">ftchr</span> <span class="w">ftctime</span> <span class="w">ftdir</span> <span class="w">fteexec</span> <span class="w">fteowned</span></li><li>    <span class="w">fteread</span> <span class="w">ftewrite</span> <span class="w">ftfile</span> <span class="w">ftis</span> <span class="w">ftlink</span> <span class="w">ftmtime</span> <span class="w">ftpipe</span></li><li>    <span class="w">ftrexec</span> <span class="w">ftrowned</span> <span class="w">ftrread</span> <span class="w">ftsgid</span> <span class="w">ftsize</span> <span class="w">ftsock</span> <span class="w">ftsuid</span></li><li>    <span class="w">fttty</span> <span class="w">ftzero</span> <span class="w">ftrwrite</span> <span class="w">ftsvtx</span></li><li></li><li>    <span class="w">fttext</span> <span class="w">ftbinary</span></li><li></li><li>    <a class="l_k" href="functions/fileno.html">fileno</a></li></ol></pre></li>
+<li><a class='view-title' id="%3asys_db"></a><strong>:sys_db</strong>
+<pre class="verbatim"><ol><li>    <span class="w">ghbyname</span> <span class="w">ghbyaddr</span> <span class="w">ghostent</span> <span class="w">shostent</span> <span class="w">ehostent</span>      -- <span class="w">hosts</span></li><li>    <span class="w">gnbyname</span> <span class="w">gnbyaddr</span> <span class="w">gnetent</span> <span class="w">snetent</span> <span class="w">enetent</span>         -- <span class="w">networks</span></li><li>    <span class="w">gpbyname</span> <span class="w">gpbynumber</span> <span class="w">gprotoent</span> <span class="w">sprotoent</span> <span class="w">eprotoent</span> -- <span class="w">protocols</span></li><li>    <span class="w">gsbyname</span> <span class="w">gsbyport</span> <span class="w">gservent</span> <span class="w">sservent</span> <span class="w">eservent</span>      -- <span class="w">services</span></li><li></li><li>    <span class="w">gpwnam</span> <span class="w">gpwuid</span> <span class="w">gpwent</span> <span class="w">spwent</span> <span class="w">epwent</span> <a class="l_k" href="functions/getlogin.html">getlogin</a>       -- <span class="w">users</span></li><li>    <span class="w">ggrnam</span> <span class="w">ggrgid</span> <span class="w">ggrent</span> <span class="w">sgrent</span> <span class="w">egrent</span>                -- <span class="w">groups</span></li></ol></pre></li>
+<li><a class='view-title' id="%3abrowse"></a><strong>:browse</strong>
+<p>A handy tag name for a <i>reasonable</i> default set of ops beyond the
+:default optag.  Like :default (and indeed all the other optags) its
+current definition is unstable while development continues. It will change.</p>
+<p>The :browse tag represents the next step beyond :default. It it a
+superset of the :default ops and adds :filesys_read the :sys_db.
+The intent being that scripts can access more (possibly sensitive)
+information about your system but not be able to change it.</p>
+<pre class="verbatim"><ol><li>    <span class="j">:</span><span class="w">default</span> <span class="co">:</span><span class="w">filesys_read</span> <span class="co">:</span><span class="w">sys_db</span></li></ol></pre></li>
+<li><a class='view-title' id="%3afilesys_open"></a><strong>:filesys_open</strong>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="functions/sysopen.html">sysopen</a> <a class="l_k" href="functions/open.html">open</a> <a class="l_k" href="functions/close.html">close</a></li><li>    <a class="l_k" href="functions/umask.html">umask</a> <a class="l_k" href="functions/binmode.html">binmode</a></li><li></li><li>    <span class="w">open_dir</span> <a class="l_k" href="functions/closedir.html">closedir</a> -- <span class="w">other</span> <span class="w">dir</span> <span class="w">ops</span> <span class="w">are</span> <span class="w">in</span> <span class="co">:</span><span class="w">base_io</span></li></ol></pre></li>
+<li><a class='view-title' id="%3afilesys_write"></a><strong>:filesys_write</strong>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="functions/link.html">link</a> <a class="l_k" href="functions/unlink.html">unlink</a> <a class="l_k" href="functions/rename.html">rename</a> <a class="l_k" href="functions/symlink.html">symlink</a> <a class="l_k" href="functions/truncate.html">truncate</a></li><li></li><li>    <a class="l_k" href="functions/mkdir.html">mkdir</a> <a class="l_k" href="functions/rmdir.html">rmdir</a></li><li></li><li>    <a class="l_k" href="functions/utime.html">utime</a> <a class="l_k" href="functions/chmod.html">chmod</a> <a class="l_k" href="functions/chown.html">chown</a></li><li></li><li>    <a class="l_k" href="functions/fcntl.html">fcntl</a> -- <a class="l_k" href="functions/not.html">not</a> <span class="w">strictly</span> <span class="w">filesys</span> <span class="w">related</span><span class="cm">,</span> <span class="w">but</span> <span class="w">possibly</span> <span class="w">as</span></li><li>	     <span class="w">dangerous</span>?</li></ol></pre></li>
+<li><a class='view-title' id="%3asubprocess"></a><strong>:subprocess</strong>
+<pre class="verbatim"><ol><li>    <span class="w">backtick</span> <a class="l_k" href="functions/system.html">system</a></li><li></li><li>    <a class="l_k" href="functions/fork.html">fork</a></li><li></li><li>    <a class="l_k" href="functions/wait.html">wait</a> <a class="l_k" href="functions/waitpid.html">waitpid</a></li><li></li><li>    <a class="l_k" href="functions/glob.html">glob</a> -- <span class="w">access</span> <span class="w">to</span> <span class="w">Cshell</span> <span class="w">via</span> <span class="q">&lt;`rm *`&gt;</span></li></ol></pre></li>
+<li><a class='view-title' id="%3aownprocess"></a><strong>:ownprocess</strong>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="functions/exec.html">exec</a> <a class="l_k" href="functions/exit.html">exit</a> <a class="l_k" href="functions/kill.html">kill</a></li><li></li><li>    <a class="l_k" href="functions/time.html">time</a> <span class="w">tms</span> -- <span class="w">could</span> <span class="w">be</span> <span class="w">used</span> <a class="l_k" href="functions/for.html">for</a> <span class="w">timing</span> <span class="w">attacks</span> <span class="s">(</span><span class="w">paranoid</span>?<span class="s">)</span></li></ol></pre></li>
+<li><a class='view-title' id="%3aothers"></a><strong>:others</strong>
+<p>This tag holds groups of assorted specialist opcodes that don't warrant
+having optags defined for them.</p>
+<p>SystemV Interprocess Communications:</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="functions/msgctl.html">msgctl</a> <a class="l_k" href="functions/msgget.html">msgget</a> <a class="l_k" href="functions/msgrcv.html">msgrcv</a> <a class="l_k" href="functions/msgsnd.html">msgsnd</a></li><li></li><li>    <a class="l_k" href="functions/semctl.html">semctl</a> <a class="l_k" href="functions/semget.html">semget</a> <a class="l_k" href="functions/semop.html">semop</a></li><li></li><li>    <a class="l_k" href="functions/shmctl.html">shmctl</a> <a class="l_k" href="functions/shmget.html">shmget</a> <a class="l_k" href="functions/shmread.html">shmread</a> <a class="l_k" href="functions/shmwrite.html">shmwrite</a></li></ol></pre></li>
+<li><a class='view-title' id="%3aload"></a><strong>:load</strong>
+<p>This tag holds opcodes related to loading modules and getting information
+about calling environment and args.</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="functions/require.html">require</a> <span class="w">dofile</span> </li><li>    <a class="l_k" href="functions/caller.html">caller</a> <span class="w">runcv</span></li></ol></pre></li>
+<li><a class='view-title' id="%3astill_to_be_decided"></a><strong>:still_to_be_decided</strong>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="functions/chdir.html">chdir</a></li><li>    <a class="l_k" href="functions/flock.html">flock</a> <a class="l_k" href="functions/ioctl.html">ioctl</a></li><li></li><li>    <a class="l_k" href="functions/socket.html">socket</a> <a class="l_k" href="functions/getpeername.html">getpeername</a> <span class="w">ssockopt</span></li><li>    <a class="l_k" href="functions/bind.html">bind</a> <a class="l_k" href="functions/connect.html">connect</a> <a class="l_k" href="functions/listen.html">listen</a> <a class="l_k" href="functions/accept.html">accept</a> <a class="l_k" href="functions/shutdown.html">shutdown</a> <span class="w">gsockopt</span> <a class="l_k" href="functions/getsockname.html">getsockname</a></li><li></li><li>    <a class="l_k" href="functions/sleep.html">sleep</a> <a class="l_k" href="functions/alarm.html">alarm</a> -- <span class="w">changes</span> <span class="w">global</span> <span class="w">timer</span> <span class="w">state</span> <a class="l_k" href="functions/and.html">and</a> <span class="w">signal</span> <span class="w">handling</span></li><li>    <a class="l_k" href="functions/sort.html">sort</a> -- <span class="w">assorted</span> <span class="w">problems</span> <span class="w">including</span> <span class="w">core</span> <span class="w">dumps</span></li><li>    <a class="l_k" href="functions/tied.html">tied</a> -- <span class="w">can</span> <span class="w">be</span> <span class="w">used</span> <span class="w">to</span> <span class="w">access</span> <span class="w">object</span> <span class="w">implementing</span> <span class="w">a</span> <a class="l_k" href="functions/tie.html">tie</a></li><li>    <a class="l_k" href="functions/pack.html">pack</a> <a class="l_k" href="functions/unpack.html">unpack</a> -- <span class="w">can</span> <span class="w">be</span> <span class="w">used</span> <span class="w">to</span> <span class="w">create</span>/<a class="l_k" href="functions/use.html">use</a> <span class="w">memory</span> <span class="w">pointers</span></li><li></li><li>    <span class="w">hintseval</span> -- <span class="w">constant</span> <span class="w">op</span> <span class="w">holding</span> <a class="l_k" href="functions/eval.html">eval</a> <span class="w">hints</span></li><li></li><li>    <span class="w">entereval</span> -- <span class="w">can</span> <span class="w">be</span> <span class="w">used</span> <span class="w">to</span> <span class="w">hide</span> <span class="w">code</span> <span class="w">from</span> <span class="w">initial</span> <span class="w">compile</span></li><li></li><li>    <a class="l_k" href="functions/reset.html">reset</a></li><li></li><li>    <span class="w">dbstate</span> -- <span class="w">perl</span> -d <span class="w">version</span> <span class="w">of</span> <span class="i">nextstate</span><span class="s">(</span><span class="w">ment</span><span class="s">)</span> <span class="w">opcode</span></li></ol></pre></li>
+<li><a class='view-title' id="%3adangerous"></a><strong>:dangerous</strong>
+<p>This tag is simply a bucket for opcodes that are unlikely to be used via
+a tag name but need to be tagged for completeness and documentation.</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="functions/syscall.html">syscall</a> <a class="l_k" href="functions/dump.html">dump</a> <a class="l_k" href="functions/chroot.html">chroot</a></li></ol></pre></li>
+</ul>
+<a class='view-head1' id="SEE-ALSO"></a><h2 class='h2' >SEE ALSO</h2>
+<p><a href="ops.html">ops</a> -- perl pragma interface to Opcode module.</p>
+<p><a href="Safe.html">Safe</a> -- Opcode and namespace limited execution compartments</p>
+<a class='view-head1' id="AUTHORS"></a><h2 class='h2' >AUTHORS</h2>
+<p>Originally designed and implemented by Malcolm Beattie,
+mbeattie@sable.ox.ac.uk as part of Safe version 1.</p>
+<p>Split out from Safe module version 1, named opcode tags and other
+changes added by Tim Bunce.</p>
+
+
+
+
+      <ul><li><a href="#NAME">NAME</a></li><li><a href="#SYNOPSIS">SYNOPSIS</a></li><li><a href="#DESCRIPTION">DESCRIPTION</a></li><li><a href="#NOTE">NOTE</a></li><li><a href="#WARNING">WARNING</a></li><li><a href="#Operator-Names-and-Operator-Lists">Operator Names and Operator Lists</a></li><li><a href="#Opcode-Functions">Opcode Functions</a></li><li><a href="#Manipulating-Opsets">Manipulating Opsets</a></li><li><a href="#TO-DO-(maybe)">TO DO (maybe)</a></li><li><a href="#Predefined-Opcode-Tags">Predefined Opcode Tags</a></li><li><a href="#SEE-ALSO">SEE ALSO</a></li><li><a href="#AUTHORS">AUTHORS</a></li></ul>
+
+
+                  </div>
+                </article>
+              </div>
+            </div>
+          </main>
+        </div>
+           <footer class="footer row bg-light pt-5 pb-5">
+       <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+           <div class="row">
+               <div class="col-md-4">
+                   <ul class="list-unstyled">
+                       <li>
+                           <h4>Site info</h4>
+                       </li>
+                       <li>Docs mantained by
+                           <a href="//lists.perl.org/list/perl5-porters.html"
+                               rel="noopener">Perl 5 Porters</a>
+                       </li>
+                       <li>Perldoc site development sponsored by
+                           <a href="//opusvl.com" rel="noopener">
+                           <img style="margin: 20px 20px 5px 10px" class="opus-logo" src="/public/img/opusvl_logo.svg" alt="OpusVL Logo">
+                        </a>
+                    <li><span class="about_perldoc"><a href="//about.html">About PerlDOC</a></span>
+                    </li>
+                       </li>
+                   </ul>
+               </div>
+               <div class="col-md-8">
+                   <div class="row">
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Manuals</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.18.4/index-overview.html">Overview</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.18.4/index-tutorials.html">Tutorials</a>
+                               </li>
+                               <li>
+                                   <a href="/5.18.4/index-faq.html">FAQs</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.18.4/index-history.html">Changes</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Reference</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.18.4/index-language.html">Language</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.18.4/index-functions.html">Functions</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.18.4/perlop.html">Operators</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.18.4/perlvar.html">Variables</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Modules</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.18.4/index-modules-A.html">Modules</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.18.4/index-pragmas.html">Pragmas</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.18.4/index-utilities.html">Utilities</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Misc</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.18.4/index-licence.html">License</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.18.4/index-internals.html">Internals</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.18.4/index-platforms.html">Platforms</a>
+                               </li>
+                            <li>
+                                <a
+                                    href="/5.18.4/index-about.html">About</a>
+                            </li>
+                           </ul>
+                       </div>
+                   </div>
+               </div>
+               <div class=" col-12 footer-inf text-center">
+                   <small>perldoc.perl.org - Official documentation for the Perl
+                       programming language</small>
+               </div>
+           </div>
+       </div>
+   </footer>
+
+        	<div class="beta-wrapper beta-bottom-right ">
+		<div class="beta beta-blue  ">
+			<a class="beta-link "
+				href="//github.com/OpusVL/perldoc.perl.org/issues/new" rel="noopener">
+				<span class="beta-text">
+					This website is a Beta release.
+				</span>
+				<span class="beta-text">
+					For any issues please raise a ticket on GitHub
+				</span>
+			</a>
+		</div>
+	</div>
+
+        <script src="/public/js/main.min.js"></script>
+      </body>
+
+      </html>

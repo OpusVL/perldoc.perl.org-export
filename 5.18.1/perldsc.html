@@ -1,0 +1,938 @@
+      
+      
+      
+      
+
+      <!DOCTYPE html>
+      <html lang="en">
+
+      <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="perldsc - perldoc.perl.org">
+        <link rel="icon" href="/public/img/favicon.ico">
+        <title>perldsc - perldoc.perl.org</title>
+        <link href="/public/css/main.min.css" rel="stylesheet">
+        <link rel="canonical" href="/perldsc.html">
+        <link
+          href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900'
+          rel='stylesheet' type='text/css'>
+        <script>
+          window.ga = window.ga || function () {
+            (ga.q = ga.q || []).push(arguments)
+          };
+          ga.l = +new Date;
+          ga('create', 'UA-1892152-2', 'auto'); // JJ's account
+          ga('create', 'UA-50555-3', 'auto', 'perlOrg'); // perl.org account
+          ga('require', 'outboundLinkTracker', {
+            events: ['click', 'auxclick', 'contextmenu'],
+          });
+          ga('require', 'maxScrollTracker');
+          ga('send', 'pageview');
+          ga('perlOrg.send', 'pageview');
+        </script>
+        <script async src="https://www.google-analytics.com/analytics.js">
+        </script>
+        <script async src="/public/js/tracking.min.js"></script>
+      </head>
+
+      <body class="body container-fluid ">
+        <div class="wrapper">
+
+          <nav
+    class="navbar navbar-dark bg-primary bg-perl fixed-top justify-content-between navbar-expand-lg">
+    <a href="#content" class="skippy sr-only sr-only-focusable">
+        <span class=' skippy-text'>Skip to main content</span>
+    </a>
+    <a class="navbar-brand" href="/">
+        <img class="logo" src="/public/img/logo_perl_doc.svg"
+            alt="Perl Documentation Logo" />
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse"
+        data-target="#navbar" aria-controls="navbar" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="navbar" class="collapse navbar-collapse ">
+        <ul class="navbar-nav ml-auto navbar-right">
+            <form class="nav-item dropdown search-wrapper">
+                <input type="text" id='searchinput' aria-describedby='navbarDropdown5'
+                    placeholder="Type query" class='search-input-field' value=''>
+
+                <button href="#" data-toggle='dropdown' type="button"
+                    aria-haspopup="true" aria-expanded='false' id="navbarDropdown5"
+                    class="nav-link dropdown-toggle search-link">
+                    <object tabindex='-1' focusable="false" class='search-icon'
+                        data="/public/img/search.svg" type="image/svg+xml"
+                        name='search icon'>search
+                        icon</object>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown5"
+                    id='search-results'>
+                    <p class='dropdown-item major-version'>
+                        No results
+                    </p>
+                </div>
+            </form>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown" href="#" class="nav-link dropdown-toggle"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Perl versions</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    
+                        <p class='dropdown-item major-version'>
+                            5.32
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.32.0/">5.32.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.30
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.3/">5.30.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.2/">5.30.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.1/">5.30.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.0/">5.30.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.28
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.3/">5.28.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.2/">5.28.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.1/">5.28.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.0/">5.28.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.26
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.3/">5.26.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.2/">5.26.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.1/">5.26.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.0/">5.26.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.24
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.4/">5.24.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.3/">5.24.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.2/">5.24.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.1/">5.24.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.0/">5.24.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.22
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.4/">5.22.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.3/">5.22.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.2/">5.22.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.1/">5.22.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.0/">5.22.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.20
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.3/">5.20.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.2/">5.20.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.1/">5.20.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.0/">5.20.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.18
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.4/">5.18.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.3/">5.18.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.2/">5.18.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.1/">5.18.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.0/">5.18.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.16
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.3/">5.16.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.2/">5.16.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.1/">5.16.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.0/">5.16.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.14
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.4/">5.14.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.3/">5.14.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.2/">5.14.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.1/">5.14.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.0/">5.14.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.12
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.5/">5.12.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.4/">5.12.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.3/">5.12.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.2/">5.12.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.1/">5.12.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.0/">5.12.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.10
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.1/">5.10.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.0/">5.10.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.8
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.9/">5.8.9</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.8/">5.8.8</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.7/">5.8.7</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.6/">5.8.6</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.5/">5.8.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.4/">5.8.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.3/">5.8.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.2/">5.8.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.1/">5.8.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.0/">5.8.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.6
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.2/">5.6.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.1/">5.6.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.0/">5.6.0</a>
+                        
+                        
+                    
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown1" href="#" class="dropdown-toggle nav-link"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Manuals</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                    <a class="dropdown-item"
+                        href="/5.18.1/index-overview.html">Overview</a>
+                    <a class="dropdown-item"
+                        href="/5.18.1/index-tutorials.html">Tutorials</a>
+                    <a class="dropdown-item"
+                        href="/5.18.1/index-faq.html">FAQs</a>
+                    <a class="dropdown-item"
+                        href="/5.18.1/index-history.html">Changes</a>
+                    <a class="dropdown-item"
+                        href="/5.18.1/index-licence.html">License</a>
+                    <a class="dropdown-item"
+                        href="/5.18.1/index-language.html">Language</a>
+                    <a class="dropdown-item"
+                        href="/5.18.1/index-functions.html">Functions</a>
+                    <a class="dropdown-item"
+                        href="/5.18.1/perlop.html">Operators</a>
+                    <a class="dropdown-item"
+                        href="/5.18.1/perlvar.html">Variables</a>
+                    <a class="dropdown-item"
+                        href="/5.18.1/index-pragmas.html">Pragmas</a>
+                    <a class="dropdown-item"
+                        href="/5.18.1/index-utilities.html">Utilities</a>
+                    <a class="dropdown-item"
+                        href="/5.18.1/index-internals.html">Internals</a>
+                    <a class="dropdown-item"
+                        href="/5.18.1/index-platforms.html">Platforms</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown3" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Modules</a>
+                <div aria-labelledby="navbarDropdown3"
+                    class="dropdown-menu letters-wrap">
+                    <!--<a class="dropdown-item"
+                        href="/5.18.1/index-modules.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.18.1/index-modules-by-cat.html">By
+                        Category</a>-->
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.18.1/index-modules-A.html">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.1/index-modules-B.html">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.1/index-modules-C.html">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.1/index-modules-D.html">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.1/index-modules-E.html">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.1/index-modules-F.html">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.1/index-modules-G.html">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.1/index-modules-H.html">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.1/index-modules-I.html">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.1/index-modules-J.html">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.1/index-modules-K.html">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.1/index-modules-L.html">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.1/index-modules-M.html">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.1/index-modules-N.html">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.1/index-modules-O.html">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.1/index-modules-P.html">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.1/index-modules-Q.html">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.1/index-modules-R.html">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.1/index-modules-S.html">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.1/index-modules-T.html">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.1/index-modules-U.html">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.1/index-modules-V.html">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.1/index-modules-W.html">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.1/index-modules-X.html">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.1/index-modules-Y.html">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.1/index-modules-Z.html">Z</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown4" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Functions</a>
+                <div aria-labelledby="navbarDropdown4"
+                    class="dropdown-menu letters-wrap">
+                    <a class="dropdown-item"
+                        href="/5.18.1/index-functions.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.18.1/index-functions-by-cat.html">By
+                        Category</a>
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.18.1/index-functions.html#A">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.1/index-functions.html#B">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.1/index-functions.html#C">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.1/index-functions.html#D">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.1/index-functions.html#E">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.1/index-functions.html#F">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.1/index-functions.html#G">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.1/index-functions.html#H">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.1/index-functions.html#I">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.1/index-functions.html#J">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.1/index-functions.html#K">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.1/index-functions.html#L">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.1/index-functions.html#M">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.1/index-functions.html#N">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.1/index-functions.html#O">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.1/index-functions.html#P">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.1/index-functions.html#Q">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.1/index-functions.html#R">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.1/index-functions.html#S">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.1/index-functions.html#T">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.1/index-functions.html#U">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.1/index-functions.html#V">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.1/index-functions.html#W">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.1/index-functions.html#X">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.1/index-functions.html#Y">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.1/index-functions.html#Z">Z</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!--/.nav-collapse -->
+</nav>
+
+
+          <main class="row main-content pb-5 pt-5" id='content'>
+            <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+              <div class="row">
+                <div class="col-sm-12">
+                  <div id="breadcrumbs">
+                      
+    <a href="index.html">Home</a>&nbsp; &gt;
+    
+      
+        <a href="index-tutorials.html">Tutorials</a> &gt;
+      
+    
+    perldsc
+  
+
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <article class="col-sm-12 content">
+                  <div class="documentation-wrapper">
+                    <div id="perl_version">
+                      <h7 class='page-title'> Perl 5 version 18.1
+                        documentation</h7>
+                    </div>
+                    <h1>perldsc</h1>
+
+
+  <!--    -->
+<ul><li><a href="#NAME">NAME
+  </a></li><li><a href="#DESCRIPTION">DESCRIPTION</a></li><li><a href="#REFERENCES">REFERENCES
+   </a></li><li><a href="#COMMON-MISTAKES">COMMON MISTAKES</a></li><li><a href="#CAVEAT-ON-PRECEDENCE">CAVEAT ON PRECEDENCE
+ </a></li><li><a href="#WHY-YOU-SHOULD-ALWAYS-use-strict">WHY YOU SHOULD ALWAYS use strict</a></li><li><a href="#DEBUGGING">DEBUGGING
+ 
+   
+ 
+ </a></li><li><a href="#CODE-EXAMPLES">CODE EXAMPLES</a></li><li><a href="#ARRAYS-OF-ARRAYS">ARRAYS OF ARRAYS
+ </a></li><ul><li><a href="#Declaration-of-an-ARRAY-OF-ARRAYS">Declaration of an ARRAY OF ARRAYS</a></li><li><a href="#Generation-of-an-ARRAY-OF-ARRAYS">Generation of an ARRAY OF ARRAYS</a></li><li><a href="#Access-and-Printing-of-an-ARRAY-OF-ARRAYS">Access and Printing of an ARRAY OF ARRAYS</a></li></ul><li><a href="#HASHES-OF-ARRAYS">HASHES OF ARRAYS
+ </a></li><ul><li><a href="#Declaration-of-a-HASH-OF-ARRAYS">Declaration of a HASH OF ARRAYS</a></li><li><a href="#Generation-of-a-HASH-OF-ARRAYS">Generation of a HASH OF ARRAYS</a></li><li><a href="#Access-and-Printing-of-a-HASH-OF-ARRAYS">Access and Printing of a HASH OF ARRAYS</a></li></ul><li><a href="#ARRAYS-OF-HASHES">ARRAYS OF HASHES
+ </a></li><ul><li><a href="#Declaration-of-an-ARRAY-OF-HASHES">Declaration of an ARRAY OF HASHES</a></li><li><a href="#Generation-of-an-ARRAY-OF-HASHES">Generation of an ARRAY OF HASHES</a></li><li><a href="#Access-and-Printing-of-an-ARRAY-OF-HASHES">Access and Printing of an ARRAY OF HASHES</a></li></ul><li><a href="#HASHES-OF-HASHES">HASHES OF HASHES
+ </a></li><ul><li><a href="#Declaration-of-a-HASH-OF-HASHES">Declaration of a HASH OF HASHES</a></li><li><a href="#Generation-of-a-HASH-OF-HASHES">Generation of a HASH OF HASHES</a></li><li><a href="#Access-and-Printing-of-a-HASH-OF-HASHES">Access and Printing of a HASH OF HASHES</a></li></ul><li><a href="#MORE-ELABORATE-RECORDS">MORE ELABORATE RECORDS
+  </a></li><ul><li><a href="#Declaration-of-MORE-ELABORATE-RECORDS">Declaration of MORE ELABORATE RECORDS</a></li><li><a href="#Declaration-of-a-HASH-OF-COMPLEX-RECORDS">Declaration of a HASH OF COMPLEX RECORDS</a></li><li><a href="#Generation-of-a-HASH-OF-COMPLEX-RECORDS">Generation of a HASH OF COMPLEX RECORDS</a></li></ul><li><a href="#Database-Ties">Database Ties</a></li><li><a href="#SEE-ALSO">SEE ALSO</a></li><li><a href="#AUTHOR">AUTHOR</a></li></ul><a class='view-head1' id="NAME"></a><h2 class='h2' >NAME
+  </h2>
+<p>perldsc - Perl Data Structures Cookbook</p>
+<a class='view-head1' id="DESCRIPTION"></a><h2 class='h2' >DESCRIPTION</h2>
+<p>Perl lets us have complex data structures.  You can write something like
+this and all of a sudden, you'd have an array with three dimensions!</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="functions/for.html">for</a> <span class="i">$x</span> <span class="s">(</span><span class="n">1</span> .. <span class="n">10</span><span class="s">)</span> <span class="s">{</span></li><li>	<a class="l_k" href="functions/for.html">for</a> <span class="i">$y</span> <span class="s">(</span><span class="n">1</span> .. <span class="n">10</span><span class="s">)</span> <span class="s">{</span></li><li>	    <a class="l_k" href="functions/for.html">for</a> <span class="i">$z</span> <span class="s">(</span><span class="n">1</span> .. <span class="n">10</span><span class="s">)</span> <span class="s">{</span></li><li>		<span class="i">$AoA</span>[<span class="i">$x</span>][<span class="i">$y</span>][<span class="i">$z</span>] =</li><li>		    <span class="i">$x</span> ** <span class="i">$y</span> + <span class="i">$z</span><span class="sc">;</span></li><li>	    <span class="s">}</span></li><li>	<span class="s">}</span></li><li>    <span class="s">}</span></li></ol></pre><p>Alas, however simple this may appear, underneath it's a much more
+elaborate construct than meets the eye!</p>
+<p>How do you print it out?  Why can't you say just <code class="inline"><a class="l_k" href="functions/print.html">print</a> <span class="i">@AoA</span></code>
+?  How do
+you sort it?  How can you pass it to a function or get one of these back
+from a function?  Is it an object?  Can you save it to disk to read
+back later?  How do you access whole rows or columns of that matrix?  Do
+all the values have to be numeric?</p>
+<p>As you see, it's quite easy to become confused.  While some small portion
+of the blame for this can be attributed to the reference-based
+implementation, it's really more due to a lack of existing documentation with
+examples designed for the beginner.</p>
+<p>This document is meant to be a detailed but understandable treatment of the
+many different sorts of data structures you might want to develop.  It
+should also serve as a cookbook of examples.  That way, when you need to
+create one of these complex data structures, you can just pinch, pilfer, or
+purloin a drop-in example from here.</p>
+<p>Let's look at each of these possible constructs in detail.  There are separate
+sections on each of the following:</p>
+<ul>
+<li><a class='view-title' id="*-arrays-of-arrays"></a><strong>arrays of arrays</strong>
+</li>
+<li><a class='view-title' id="*-hashes-of-arrays"></a><strong>hashes of arrays</strong>
+</li>
+<li><a class='view-title' id="*-arrays-of-hashes"></a><strong>arrays of hashes</strong>
+</li>
+<li><a class='view-title' id="*-hashes-of-hashes"></a><strong>hashes of hashes</strong>
+</li>
+<li><a class='view-title' id="*-more-elaborate-constructs"></a><strong>more elaborate constructs</strong>
+</li>
+</ul>
+<p>But for now, let's look at general issues common to all
+these types of data structures.</p>
+<a class='view-head1' id="REFERENCES"></a><h2 class='h2' >REFERENCES
+   </h2>
+<p>The most important thing to understand about all data structures in
+Perl--including multidimensional arrays--is that even though they might
+appear otherwise, Perl <code class="inline"><span class="i">@ARRAY</span></code>
+s and <code class="inline"><span class="i">%HASH</span></code>
+es are all internally
+one-dimensional.  They can hold only scalar values (meaning a string,
+number, or a reference).  They cannot directly contain other arrays or
+hashes, but instead contain <i>references</i> to other arrays or hashes.
+ </p>
+<p>You can't use a reference to an array or hash in quite the same way that you
+would a real array or hash.  For C or C++ programmers unused to
+distinguishing between arrays and pointers to the same, this can be
+confusing.  If so, just think of it as the difference between a structure
+and a pointer to a structure.</p>
+<p>You can (and should) read more about references in <a href="perlref.html">perlref</a>.
+Briefly, references are rather like pointers that know what they
+point to.  (Objects are also a kind of reference, but we won't be needing
+them right away--if ever.)  This means that when you have something which
+looks to you like an access to a two-or-more-dimensional array and/or hash,
+what's really going on is that the base type is
+merely a one-dimensional entity that contains references to the next
+level.  It's just that you can <i>use</i> it as though it were a
+two-dimensional one.  This is actually the way almost all C
+multidimensional arrays work as well.</p>
+<pre class="verbatim"><ol><li>    <span class="i">$array</span>[<span class="n">7</span>][<span class="n">12</span>]			<span class="c"># array of arrays</span></li><li>    <span class="i">$array</span>[<span class="n">7</span>]{<span class="w">string</span>}			<span class="c"># array of hashes</span></li><li>    <span class="i">$hash</span>{<span class="w">string</span>}[<span class="n">7</span>]			<span class="c"># hash of arrays</span></li><li>    <span class="i">$hash</span>{<span class="w">string</span>}{<span class="q">&#39;another string&#39;</span>}	<span class="c"># hash of hashes</span></li></ol></pre><p>Now, because the top level contains only references, if you try to print
+out your array in with a simple print() function, you'll get something
+that doesn't look very nice, like this:</p>
+<pre class="verbatim"><ol><li>    <span class="i">@AoA</span> = <span class="s">(</span> <span class="s">[</span><span class="n">2</span><span class="cm">,</span> <span class="n">3</span><span class="s">]</span><span class="cm">,</span> <span class="s">[</span><span class="n">4</span><span class="cm">,</span> <span class="n">5</span><span class="cm">,</span> <span class="n">7</span><span class="s">]</span><span class="cm">,</span> <span class="s">[</span><span class="n">0</span><span class="s">]</span> <span class="s">)</span><span class="sc">;</span></li><li>    <a class="l_k" href="functions/print.html">print</a> <span class="i">$AoA</span>[<span class="n">1</span>][<span class="n">2</span>]<span class="sc">;</span></li><li>  <span class="n">7</span></li><li>    <a class="l_k" href="functions/print.html">print</a> <span class="i">@AoA</span><span class="sc">;</span></li><li>  <span class="i">ARRAY</span><span class="s">(</span><span class="n">0x83c38</span><span class="s">)</span><span class="i">ARRAY</span><span class="s">(</span><span class="n">0x8b194</span><span class="s">)</span><span class="i">ARRAY</span><span class="s">(</span><span class="n">0x8b1d0</span><span class="s">)</span></li></ol></pre><p>That's because Perl doesn't (ever) implicitly dereference your variables.
+If you want to get at the thing a reference is referring to, then you have
+to do this yourself using either prefix typing indicators, like
+<code class="inline"><span class="i">$</span>{<span class="i">$blah</span>}</code>
+, <code class="inline"><span class="i">@</span>{<span class="i">$blah</span>}</code>
+, <code class="inline"><span class="i">@</span>{<span class="i">$blah</span>[<span class="i">$i</span>]}</code>
+, or else postfix pointer arrows,
+like <code class="inline"><span class="i">$a</span>-&gt;[<span class="n">3</span>]</code>
+, <code class="inline"><span class="i">$h</span>-&gt;{<span class="w">fred</span>}</code>
+, or even <code class="inline"><span class="i">$ob</span><span class="i">-&gt;method</span><span class="s">(</span><span class="s">)</span>-&gt;[<span class="n">3</span>]</code>
+.</p>
+<a class='view-head1' id="COMMON-MISTAKES"></a><h2 class='h2' >COMMON MISTAKES</h2>
+<p>The two most common mistakes made in constructing something like
+an array of arrays is either accidentally counting the number of
+elements or else taking a reference to the same memory location
+repeatedly.  Here's the case where you just get the count instead
+of a nested array:</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="functions/for.html">for</a> <span class="i">$i</span> <span class="s">(</span><span class="n">1</span>..<span class="n">10</span><span class="s">)</span> <span class="s">{</span></li><li>	<span class="i">@array</span> = <span class="i">somefunc</span><span class="s">(</span><span class="i">$i</span><span class="s">)</span><span class="sc">;</span></li><li>	<span class="i">$AoA</span>[<span class="i">$i</span>] = <span class="i">@array</span><span class="sc">;</span>	<span class="c"># WRONG!</span></li><li>    <span class="s">}</span></li></ol></pre><p>That's just the simple case of assigning an array to a scalar and getting
+its element count.  If that's what you really and truly want, then you
+might do well to consider being a tad more explicit about it, like this:</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="functions/for.html">for</a> <span class="i">$i</span> <span class="s">(</span><span class="n">1</span>..<span class="n">10</span><span class="s">)</span> <span class="s">{</span></li><li>	<span class="i">@array</span> = <span class="i">somefunc</span><span class="s">(</span><span class="i">$i</span><span class="s">)</span><span class="sc">;</span></li><li>	<span class="i">$counts</span>[<span class="i">$i</span>] = <a class="l_k" href="functions/scalar.html">scalar</a> <span class="i">@array</span><span class="sc">;</span></li><li>    <span class="s">}</span></li></ol></pre><p>Here's the case of taking a reference to the same memory location
+again and again:</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="functions/for.html">for</a> <span class="i">$i</span> <span class="s">(</span><span class="n">1</span>..<span class="n">10</span><span class="s">)</span> <span class="s">{</span></li><li>	<span class="i">@array</span> = <span class="i">somefunc</span><span class="s">(</span><span class="i">$i</span><span class="s">)</span><span class="sc">;</span></li><li>	<span class="i">$AoA</span>[<span class="i">$i</span>] = \<span class="i">@array</span><span class="sc">;</span>	<span class="c"># WRONG!</span></li><li>    <span class="s">}</span></li></ol></pre><p>So, what's the big problem with that?  It looks right, doesn't it?
+After all, I just told you that you need an array of references, so by
+golly, you've made me one!</p>
+<p>Unfortunately, while this is true, it's still broken.  All the references
+in @AoA refer to the <i>very same place</i>, and they will therefore all hold
+whatever was last in @array!  It's similar to the problem demonstrated in
+the following C program:</p>
+<pre class="verbatim"><ol><li>    <span class="c">#include &lt;pwd.h&gt;</span></li><li>    <span class="i">main</span><span class="s">(</span><span class="s">)</span> <span class="s">{</span></li><li>	<span class="w">struct</span> <span class="w">passwd</span> *<a class="l_k" href="functions/getpwnam.html">getpwnam</a><span class="s">(</span><span class="s">)</span><span class="cm">,</span> <span class="i">*rp</span><span class="cm">,</span> <span class="i">*dp</span><span class="sc">;</span></li><li>	<span class="w">rp</span> = <a class="l_k" href="functions/getpwnam.html">getpwnam</a><span class="s">(</span><span class="q">&quot;root&quot;</span><span class="s">)</span><span class="sc">;</span></li><li>	<span class="w">dp</span> = <a class="l_k" href="functions/getpwnam.html">getpwnam</a><span class="s">(</span><span class="q">&quot;daemon&quot;</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>	<a class="l_k" href="functions/printf.html">printf</a><span class="s">(</span><span class="q">&quot;daemon name is %s\nroot name is %s\n&quot;</span><span class="cm">,</span></li><li>		<span class="w">dp</span><span class="w">-&gt;pw_name</span><span class="cm">,</span> <span class="w">rp</span><span class="w">-&gt;pw_name</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="s">}</span></li></ol></pre><p>Which will print</p>
+<pre class="verbatim"><ol><li>    <span class="w">daemon</span> <span class="w">name</span> <span class="w">is</span> <span class="w">daemon</span></li><li>    <span class="w">root</span> <span class="w">name</span> <span class="w">is</span> <span class="w">daemon</span></li></ol></pre><p>The problem is that both <code class="inline"><span class="w">rp</span></code>
+ and <code class="inline"><span class="w">dp</span></code>
+ are pointers to the same location
+in memory!  In C, you'd have to remember to malloc() yourself some new
+memory.  In Perl, you'll want to use the array constructor <code class="inline"><span class="s">[</span><span class="s">]</span></code>
+ or the
+hash constructor <code class="inline"><span class="s">{</span><span class="s">}</span></code>
+ instead.   Here's the right way to do the preceding
+broken code fragments:
+ </p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="functions/for.html">for</a> <span class="i">$i</span> <span class="s">(</span><span class="n">1</span>..<span class="n">10</span><span class="s">)</span> <span class="s">{</span></li><li>	<span class="i">@array</span> = <span class="i">somefunc</span><span class="s">(</span><span class="i">$i</span><span class="s">)</span><span class="sc">;</span></li><li>	<span class="i">$AoA</span>[<span class="i">$i</span>] = <span class="s">[</span> <span class="i">@array</span> <span class="s">]</span><span class="sc">;</span></li><li>    <span class="s">}</span></li></ol></pre><p>The square brackets make a reference to a new array with a <i>copy</i>
+of what's in @array at the time of the assignment.  This is what
+you want.</p>
+<p>Note that this will produce something similar, but it's
+much harder to read:</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="functions/for.html">for</a> <span class="i">$i</span> <span class="s">(</span><span class="n">1</span>..<span class="n">10</span><span class="s">)</span> <span class="s">{</span></li><li>	<span class="i">@array</span> = <span class="n">0</span> .. <span class="i">$i</span><span class="sc">;</span></li><li>	<span class="i">@</span>{<span class="i">$AoA</span>[<span class="i">$i</span>]} = <span class="i">@array</span><span class="sc">;</span></li><li>    <span class="s">}</span></li></ol></pre><p>Is it the same?  Well, maybe so--and maybe not.  The subtle difference
+is that when you assign something in square brackets, you know for sure
+it's always a brand new reference with a new <i>copy</i> of the data.
+Something else could be going on in this new case with the <code class="inline"><span class="i">@</span>{<span class="i">$AoA</span>[<span class="i">$i</span>]}</code>
+
+dereference on the left-hand-side of the assignment.  It all depends on
+whether <code class="inline"><span class="i">$AoA</span>[<span class="i">$i</span>]</code>
+ had been undefined to start with, or whether it
+already contained a reference.  If you had already populated @AoA with
+references, as in</p>
+<pre class="verbatim"><ol><li>    <span class="i">$AoA</span>[<span class="n">3</span>] = \<span class="i">@another_array</span><span class="sc">;</span></li></ol></pre><p>Then the assignment with the indirection on the left-hand-side would
+use the existing reference that was already there:</p>
+<pre class="verbatim"><ol><li>    <span class="i">@</span>{<span class="i">$AoA</span>[<span class="n">3</span>]} = <span class="i">@array</span><span class="sc">;</span></li></ol></pre><p>Of course, this <i>would</i> have the "interesting" effect of clobbering
+@another_array.  (Have you ever noticed how when a programmer says
+something is "interesting", that rather than meaning "intriguing",
+they're disturbingly more apt to mean that it's "annoying",
+"difficult", or both?  :-)</p>
+<p>So just remember always to use the array or hash constructors with <code class="inline"><span class="s">[</span><span class="s">]</span></code>
+
+or <code class="inline"><span class="s">{</span><span class="s">}</span></code>
+, and you'll be fine, although it's not always optimally
+efficient.</p>
+<p>Surprisingly, the following dangerous-looking construct will
+actually work out fine:</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="functions/for.html">for</a> <span class="i">$i</span> <span class="s">(</span><span class="n">1</span>..<span class="n">10</span><span class="s">)</span> <span class="s">{</span></li><li>        <a class="l_k" href="functions/my.html">my</a> <span class="i">@array</span> = <span class="i">somefunc</span><span class="s">(</span><span class="i">$i</span><span class="s">)</span><span class="sc">;</span></li><li>        <span class="i">$AoA</span>[<span class="i">$i</span>] = \<span class="i">@array</span><span class="sc">;</span></li><li>    <span class="s">}</span></li></ol></pre><p>That's because my() is more of a run-time statement than it is a
+compile-time declaration <i>per se</i>.  This means that the my() variable is
+remade afresh each time through the loop.  So even though it <i>looks</i> as
+though you stored the same variable reference each time, you actually did
+not!  This is a subtle distinction that can produce more efficient code at
+the risk of misleading all but the most experienced of programmers.  So I
+usually advise against teaching it to beginners.  In fact, except for
+passing arguments to functions, I seldom like to see the gimme-a-reference
+operator (backslash) used much at all in code.  Instead, I advise
+beginners that they (and most of the rest of us) should try to use the
+much more easily understood constructors <code class="inline"><span class="s">[</span><span class="s">]</span></code>
+ and <code class="inline"><span class="s">{</span><span class="s">}</span></code>
+ instead of
+relying upon lexical (or dynamic) scoping and hidden reference-counting to
+do the right thing behind the scenes.</p>
+<p>In summary:</p>
+<pre class="verbatim"><ol><li>    <span class="i">$AoA</span>[<span class="i">$i</span>] = <span class="s">[</span> <span class="i">@array</span> <span class="s">]</span><span class="sc">;</span>	<span class="c"># usually best</span></li><li>    <span class="i">$AoA</span>[<span class="i">$i</span>] = \<span class="i">@array</span><span class="sc">;</span>		<span class="c"># perilous; just how my() was that array?</span></li><li>    <span class="i">@</span>{ <span class="i">$AoA</span>[<span class="i">$i</span>] } = <span class="i">@array</span><span class="sc">;</span>	<span class="c"># way too tricky for most programmers</span></li></ol></pre><a class='view-head1' id="CAVEAT-ON-PRECEDENCE"></a><h2 class='h2' >CAVEAT ON PRECEDENCE
+ </h2>
+<p>Speaking of things like <code class="inline"><span class="i">@</span>{<span class="i">$AoA</span>[<span class="i">$i</span>]}</code>
+, the following are actually the
+same thing:
+</p>
+<pre class="verbatim"><ol><li>    <span class="i">$aref</span>-&gt;[<span class="n">2</span>][<span class="n">2</span>]	<span class="c"># clear</span></li><li>    <span class="i">$$aref</span>[<span class="n">2</span>][<span class="n">2</span>]	<span class="c"># confusing</span></li></ol></pre><p>That's because Perl's precedence rules on its five prefix dereferencers
+(which look like someone swearing: <code class="inline"><span class="i">$ @</span> * <span class="i">% &amp;</span></code>
+) make them bind more
+tightly than the postfix subscripting brackets or braces!  This will no
+doubt come as a great shock to the C or C++ programmer, who is quite
+accustomed to using <code class="inline"><span class="i">*a</span>[<span class="w">i</span>]</code>
+ to mean what's pointed to by the <i>i'th</i>
+element of <code class="inline"><span class="w">a</span></code>
+.  That is, they first take the subscript, and only then
+dereference the thing at that subscript.  That's fine in C, but this isn't C.</p>
+<p>The seemingly equivalent construct in Perl, <code class="inline"><span class="i">$$aref</span>[<span class="i">$i</span>]</code>
+ first does
+the deref of $aref, making it take $aref as a reference to an
+array, and then dereference that, and finally tell you the <i>i'th</i> value
+of the array pointed to by $AoA. If you wanted the C notion, you'd have to
+write <code class="inline"><span class="i">$</span>{<span class="i">$AoA</span>[<span class="i">$i</span>]}</code>
+ to force the <code class="inline"><span class="i">$AoA</span>[<span class="i">$i</span>]</code>
+ to get evaluated first
+before the leading <code class="inline"><span class="i">$</span></code>
+ dereferencer.</p>
+<a class='view-head1' id="WHY-YOU-SHOULD-ALWAYS-use-strict"></a><h2 class='h2' >WHY YOU SHOULD ALWAYS <code class="inline"><a class="l_k" href="functions/use.html">use</a> <span class="w">strict</span></code>
+</h2>
+<p>If this is starting to sound scarier than it's worth, relax.  Perl has
+some features to help you avoid its most common pitfalls.  The best
+way to avoid getting confused is to start every program like this:</p>
+<pre class="verbatim"><ol><li>    <span class="c">#!/usr/bin/perl -w</span></li><li>    <a class="l_k" href="functions/use.html">use</a> <span class="w">strict</span><span class="sc">;</span></li></ol></pre><p>This way, you'll be forced to declare all your variables with my() and
+also disallow accidental "symbolic dereferencing".  Therefore if you'd done
+this:</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="functions/my.html">my</a> <span class="i">$aref</span> = <span class="s">[</span></li><li>	<span class="s">[</span> <span class="q">&quot;fred&quot;</span><span class="cm">,</span> <span class="q">&quot;barney&quot;</span><span class="cm">,</span> <span class="q">&quot;pebbles&quot;</span><span class="cm">,</span> <span class="q">&quot;bambam&quot;</span><span class="cm">,</span> <span class="q">&quot;dino&quot;</span><span class="cm">,</span> <span class="s">]</span><span class="cm">,</span></li><li>	<span class="s">[</span> <span class="q">&quot;homer&quot;</span><span class="cm">,</span> <span class="q">&quot;bart&quot;</span><span class="cm">,</span> <span class="q">&quot;marge&quot;</span><span class="cm">,</span> <span class="q">&quot;maggie&quot;</span><span class="cm">,</span> <span class="s">]</span><span class="cm">,</span></li><li>	<span class="s">[</span> <span class="q">&quot;george&quot;</span><span class="cm">,</span> <span class="q">&quot;jane&quot;</span><span class="cm">,</span> <span class="q">&quot;elroy&quot;</span><span class="cm">,</span> <span class="q">&quot;judy&quot;</span><span class="cm">,</span> <span class="s">]</span><span class="cm">,</span></li><li>    <span class="s">]</span><span class="sc">;</span></li><li></li><li>    <a class="l_k" href="functions/print.html">print</a> <span class="i">$aref</span>[<span class="n">2</span>][<span class="n">2</span>]<span class="sc">;</span></li></ol></pre><p>The compiler would immediately flag that as an error <i>at compile time</i>,
+because you were accidentally accessing <code class="inline"><span class="i">@aref</span></code>
+, an undeclared
+variable, and it would thereby remind you to write instead:</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="functions/print.html">print</a> <span class="i">$aref</span>-&gt;[<span class="n">2</span>][<span class="n">2</span>]</li></ol></pre><a class='view-head1' id="DEBUGGING"></a><h2 class='h2' >DEBUGGING
+ 
+   
+ 
+ </h2>
+<p>You can use the debugger's <code class="inline"><a class="l_k" href="functions/x.html">x</a></code> command to dump out complex data structures.
+For example, given the assignment to $AoA above, here's the debugger output:</p>
+<pre class="verbatim"><ol><li>    <span class="w">DB</span><span class="q">&lt;1&gt;</span> x <span class="i">$AoA</span></li><li>    <span class="i">$AoA</span> = <span class="i">ARRAY</span><span class="s">(</span><span class="n">0x13b5a0</span><span class="s">)</span></li><li>       <span class="n">0</span>  <span class="i">ARRAY</span><span class="s">(</span><span class="n">0x1f0a24</span><span class="s">)</span></li><li>	  <span class="n">0</span>  <span class="q">&#39;fred&#39;</span></li><li>	  <span class="n">1</span>  <span class="q">&#39;barney&#39;</span></li><li>	  <span class="n">2</span>  <span class="q">&#39;pebbles&#39;</span></li><li>	  <span class="n">3</span>  <span class="q">&#39;bambam&#39;</span></li><li>	  <span class="n">4</span>  <span class="q">&#39;dino&#39;</span></li><li>       <span class="n">1</span>  <span class="i">ARRAY</span><span class="s">(</span><span class="n">0x13b558</span><span class="s">)</span></li><li>	  <span class="n">0</span>  <span class="q">&#39;homer&#39;</span></li><li>	  <span class="n">1</span>  <span class="q">&#39;bart&#39;</span></li><li>	  <span class="n">2</span>  <span class="q">&#39;marge&#39;</span></li><li>	  <span class="n">3</span>  <span class="q">&#39;maggie&#39;</span></li><li>       <span class="n">2</span>  <span class="i">ARRAY</span><span class="s">(</span><span class="n">0x13b540</span><span class="s">)</span></li><li>	  <span class="n">0</span>  <span class="q">&#39;george&#39;</span></li><li>	  <span class="n">1</span>  <span class="q">&#39;jane&#39;</span></li><li>	  <span class="n">2</span>  <span class="q">&#39;elroy&#39;</span></li><li>	  <span class="n">3</span>  <span class="q">&#39;judy&#39;</span></li></ol></pre><a class='view-head1' id="CODE-EXAMPLES"></a><h2 class='h2' >CODE EXAMPLES</h2>
+<p>Presented with little comment (these will get their own manpages someday)
+here are short code examples illustrating access of various
+types of data structures.</p>
+<a class='view-head1' id="ARRAYS-OF-ARRAYS"></a><h2 class='h2' >ARRAYS OF ARRAYS
+ </h2>
+<a class='view-head2' id="Declaration-of-an-ARRAY-OF-ARRAYS"></a><h3 class='h3' >Declaration of an ARRAY OF ARRAYS</h3>
+<pre class="verbatim"><ol><li> <span class="i">@AoA</span> = <span class="s">(</span></li><li>        <span class="s">[</span> <span class="q">&quot;fred&quot;</span><span class="cm">,</span> <span class="q">&quot;barney&quot;</span> <span class="s">]</span><span class="cm">,</span></li><li>        <span class="s">[</span> <span class="q">&quot;george&quot;</span><span class="cm">,</span> <span class="q">&quot;jane&quot;</span><span class="cm">,</span> <span class="q">&quot;elroy&quot;</span> <span class="s">]</span><span class="cm">,</span></li><li>        <span class="s">[</span> <span class="q">&quot;homer&quot;</span><span class="cm">,</span> <span class="q">&quot;marge&quot;</span><span class="cm">,</span> <span class="q">&quot;bart&quot;</span> <span class="s">]</span><span class="cm">,</span></li><li>      <span class="s">)</span><span class="sc">;</span></li></ol></pre><a class='view-head2' id="Generation-of-an-ARRAY-OF-ARRAYS"></a><h3 class='h3' >Generation of an ARRAY OF ARRAYS</h3>
+<pre class="verbatim"><ol><li> <span class="c"># reading from file</span></li><li> <a class="l_k" href="functions/while.html">while</a> <span class="s">(</span> &lt;&gt; <span class="s">)</span> <span class="s">{</span></li><li>     <a class="l_k" href="functions/push.html">push</a> <span class="i">@AoA</span><span class="cm">,</span> <span class="s">[</span> <a class="l_k" href="functions/split.html">split</a> <span class="s">]</span><span class="sc">;</span></li><li> <span class="s">}</span></li><li></li><li> <span class="c"># calling a function</span></li><li> <a class="l_k" href="functions/for.html">for</a> <span class="i">$i</span> <span class="s">(</span> <span class="n">1</span> .. <span class="n">10</span> <span class="s">)</span> <span class="s">{</span></li><li>     <span class="i">$AoA</span>[<span class="i">$i</span>] = <span class="s">[</span> <span class="i">somefunc</span><span class="s">(</span><span class="i">$i</span><span class="s">)</span> <span class="s">]</span><span class="sc">;</span></li><li> <span class="s">}</span></li><li></li><li> <span class="c"># using temp vars</span></li><li> <a class="l_k" href="functions/for.html">for</a> <span class="i">$i</span> <span class="s">(</span> <span class="n">1</span> .. <span class="n">10</span> <span class="s">)</span> <span class="s">{</span></li><li>     <span class="i">@tmp</span> = <span class="i">somefunc</span><span class="s">(</span><span class="i">$i</span><span class="s">)</span><span class="sc">;</span></li><li>     <span class="i">$AoA</span>[<span class="i">$i</span>] = <span class="s">[</span> <span class="i">@tmp</span> <span class="s">]</span><span class="sc">;</span></li><li> <span class="s">}</span></li><li></li><li> <span class="c"># add to an existing row</span></li><li> <a class="l_k" href="functions/push.html">push</a> <span class="i">@</span>{ <span class="i">$AoA</span>[<span class="n">0</span>] }<span class="cm">,</span> <span class="q">&quot;wilma&quot;</span><span class="cm">,</span> <span class="q">&quot;betty&quot;</span><span class="sc">;</span></li></ol></pre><a class='view-head2' id="Access-and-Printing-of-an-ARRAY-OF-ARRAYS"></a><h3 class='h3' >Access and Printing of an ARRAY OF ARRAYS</h3>
+<pre class="verbatim"><ol><li> <span class="c"># one element</span></li><li> <span class="i">$AoA</span>[<span class="n">0</span>][<span class="n">0</span>] = <span class="q">&quot;Fred&quot;</span><span class="sc">;</span></li><li></li><li> <span class="c"># another element</span></li><li> <span class="i">$AoA</span>[<span class="n">1</span>][<span class="n">1</span>] =~ <span class="q">s/(\w)/\u$1/</span><span class="sc">;</span></li><li></li><li> <span class="c"># print the whole thing with refs</span></li><li> <a class="l_k" href="functions/for.html">for</a> <span class="i">$aref</span> <span class="s">(</span> <span class="i">@AoA</span> <span class="s">)</span> <span class="s">{</span></li><li>     <a class="l_k" href="functions/print.html">print</a> <span class="q">&quot;\t [ @$aref ],\n&quot;</span><span class="sc">;</span></li><li> <span class="s">}</span></li><li></li><li> <span class="c"># print the whole thing with indices</span></li><li> <a class="l_k" href="functions/for.html">for</a> <span class="i">$i</span> <span class="s">(</span> <span class="n">0</span> .. <span class="i">$#AoA</span> <span class="s">)</span> <span class="s">{</span></li><li>     <a class="l_k" href="functions/print.html">print</a> <span class="q">&quot;\t [ @{$AoA[$i]} ],\n&quot;</span><span class="sc">;</span></li><li> <span class="s">}</span></li><li></li><li> <span class="c"># print the whole thing one at a time</span></li><li> <a class="l_k" href="functions/for.html">for</a> <span class="i">$i</span> <span class="s">(</span> <span class="n">0</span> .. <span class="i">$#AoA</span> <span class="s">)</span> <span class="s">{</span></li><li>     <a class="l_k" href="functions/for.html">for</a> <span class="i">$j</span> <span class="s">(</span> <span class="n">0</span> .. <span class="i">$#</span>{ <span class="i">$AoA</span>[<span class="i">$i</span>] } <span class="s">)</span> <span class="s">{</span></li><li>         <a class="l_k" href="functions/print.html">print</a> <span class="q">&quot;elt $i $j is $AoA[$i][$j]\n&quot;</span><span class="sc">;</span></li><li>     <span class="s">}</span></li><li> <span class="s">}</span></li></ol></pre><a class='view-head1' id="HASHES-OF-ARRAYS"></a><h2 class='h2' >HASHES OF ARRAYS
+ </h2>
+<a class='view-head2' id="Declaration-of-a-HASH-OF-ARRAYS"></a><h3 class='h3' >Declaration of a HASH OF ARRAYS</h3>
+<pre class="verbatim"><ol><li> <span class="i">%HoA</span> = <span class="s">(</span></li><li>        <span class="w">flintstones</span>        <span class="cm">=&gt;</span> <span class="s">[</span> <span class="q">&quot;fred&quot;</span><span class="cm">,</span> <span class="q">&quot;barney&quot;</span> <span class="s">]</span><span class="cm">,</span></li><li>        <span class="w">jetsons</span>            <span class="cm">=&gt;</span> <span class="s">[</span> <span class="q">&quot;george&quot;</span><span class="cm">,</span> <span class="q">&quot;jane&quot;</span><span class="cm">,</span> <span class="q">&quot;elroy&quot;</span> <span class="s">]</span><span class="cm">,</span></li><li>        <span class="w">simpsons</span>           <span class="cm">=&gt;</span> <span class="s">[</span> <span class="q">&quot;homer&quot;</span><span class="cm">,</span> <span class="q">&quot;marge&quot;</span><span class="cm">,</span> <span class="q">&quot;bart&quot;</span> <span class="s">]</span><span class="cm">,</span></li><li>      <span class="s">)</span><span class="sc">;</span></li></ol></pre><a class='view-head2' id="Generation-of-a-HASH-OF-ARRAYS"></a><h3 class='h3' >Generation of a HASH OF ARRAYS</h3>
+<pre class="verbatim"><ol><li> <span class="c"># reading from file</span></li><li> <span class="c"># flintstones: fred barney wilma dino</span></li><li> <a class="l_k" href="functions/while.html">while</a> <span class="s">(</span> &lt;&gt; <span class="s">)</span> <span class="s">{</span></li><li>     <a class="l_k" href="functions/next.html">next</a> <a class="l_k" href="functions/unless.html">unless</a> <span class="q">s/^(.*?):\s*//</span><span class="sc">;</span></li><li>     <span class="i">$HoA</span>{<span class="i">$1</span>} = <span class="s">[</span> <a class="l_k" href="functions/split.html">split</a> <span class="s">]</span><span class="sc">;</span></li><li> <span class="s">}</span></li><li></li><li> <span class="c"># reading from file; more temps</span></li><li> <span class="c"># flintstones: fred barney wilma dino</span></li><li> <a class="l_k" href="functions/while.html">while</a> <span class="s">(</span> <span class="i">$line</span> = &lt;&gt; <span class="s">)</span> <span class="s">{</span></li><li>     <span class="s">(</span><span class="i">$who</span><span class="cm">,</span> <span class="i">$rest</span><span class="s">)</span> = <a class="l_k" href="functions/split.html">split</a> <span class="q">/:\s*/</span><span class="cm">,</span> <span class="i">$line</span><span class="cm">,</span> <span class="n">2</span><span class="sc">;</span></li><li>     <span class="i">@fields</span> = <a class="l_k" href="functions/split.html">split</a> <span class="q">&#39; &#39;</span><span class="cm">,</span> <span class="i">$rest</span><span class="sc">;</span></li><li>     <span class="i">$HoA</span>{<span class="i">$who</span>} = <span class="s">[</span> <span class="i">@fields</span> <span class="s">]</span><span class="sc">;</span></li><li> <span class="s">}</span></li><li></li><li> <span class="c"># calling a function that returns a list</span></li><li> <a class="l_k" href="functions/for.html">for</a> <span class="i">$group</span> <span class="s">(</span> <span class="q">&quot;simpsons&quot;</span><span class="cm">,</span> <span class="q">&quot;jetsons&quot;</span><span class="cm">,</span> <span class="q">&quot;flintstones&quot;</span> <span class="s">)</span> <span class="s">{</span></li><li>     <span class="i">$HoA</span>{<span class="i">$group</span>} = <span class="s">[</span> <span class="i">get_family</span><span class="s">(</span><span class="i">$group</span><span class="s">)</span> <span class="s">]</span><span class="sc">;</span></li><li> <span class="s">}</span></li><li></li><li> <span class="c"># likewise, but using temps</span></li><li> <a class="l_k" href="functions/for.html">for</a> <span class="i">$group</span> <span class="s">(</span> <span class="q">&quot;simpsons&quot;</span><span class="cm">,</span> <span class="q">&quot;jetsons&quot;</span><span class="cm">,</span> <span class="q">&quot;flintstones&quot;</span> <span class="s">)</span> <span class="s">{</span></li><li>     <span class="i">@members</span> = <span class="i">get_family</span><span class="s">(</span><span class="i">$group</span><span class="s">)</span><span class="sc">;</span></li><li>     <span class="i">$HoA</span>{<span class="i">$group</span>} = <span class="s">[</span> <span class="i">@members</span> <span class="s">]</span><span class="sc">;</span></li><li> <span class="s">}</span></li><li></li><li> <span class="c"># append new members to an existing family</span></li><li> <a class="l_k" href="functions/push.html">push</a> <span class="i">@</span>{ <span class="i">$HoA</span>{<span class="q">&quot;flintstones&quot;</span>} }<span class="cm">,</span> <span class="q">&quot;wilma&quot;</span><span class="cm">,</span> <span class="q">&quot;betty&quot;</span><span class="sc">;</span></li></ol></pre><a class='view-head2' id="Access-and-Printing-of-a-HASH-OF-ARRAYS"></a><h3 class='h3' >Access and Printing of a HASH OF ARRAYS</h3>
+<pre class="verbatim"><ol><li> <span class="c"># one element</span></li><li> <span class="i">$HoA</span>{<span class="w">flintstones</span>}[<span class="n">0</span>] = <span class="q">&quot;Fred&quot;</span><span class="sc">;</span></li><li></li><li> <span class="c"># another element</span></li><li> <span class="i">$HoA</span>{<span class="w">simpsons</span>}[<span class="n">1</span>] =~ <span class="q">s/(\w)/\u$1/</span><span class="sc">;</span></li><li></li><li> <span class="c"># print the whole thing</span></li><li> <a class="l_k" href="functions/foreach.html">foreach</a> <span class="i">$family</span> <span class="s">(</span> <a class="l_k" href="functions/keys.html">keys</a> <span class="i">%HoA</span> <span class="s">)</span> <span class="s">{</span></li><li>     <a class="l_k" href="functions/print.html">print</a> <span class="q">&quot;$family: @{ $HoA{$family} }\n&quot;</span></li><li> <span class="s">}</span></li><li></li><li> <span class="c"># print the whole thing with indices</span></li><li> <a class="l_k" href="functions/foreach.html">foreach</a> <span class="i">$family</span> <span class="s">(</span> <a class="l_k" href="functions/keys.html">keys</a> <span class="i">%HoA</span> <span class="s">)</span> <span class="s">{</span></li><li>     <a class="l_k" href="functions/print.html">print</a> <span class="q">&quot;family: &quot;</span><span class="sc">;</span></li><li>     <a class="l_k" href="functions/foreach.html">foreach</a> <span class="i">$i</span> <span class="s">(</span> <span class="n">0</span> .. <span class="i">$#</span>{ <span class="i">$HoA</span>{<span class="i">$family</span>} } <span class="s">)</span> <span class="s">{</span></li><li>         <a class="l_k" href="functions/print.html">print</a> <span class="q">&quot; $i = $HoA{$family}[$i]&quot;</span><span class="sc">;</span></li><li>     <span class="s">}</span></li><li>     <a class="l_k" href="functions/print.html">print</a> <span class="q">&quot;\n&quot;</span><span class="sc">;</span></li><li> <span class="s">}</span></li><li></li><li> <span class="c"># print the whole thing sorted by number of members</span></li><li> <a class="l_k" href="functions/foreach.html">foreach</a> <span class="i">$family</span> <span class="s">(</span> <a class="l_k" href="functions/sort.html">sort</a> <span class="s">{</span> <span class="i">@</span>{<span class="i">$HoA</span>{<span class="i">$b</span>}} &lt;=&gt; <span class="i">@</span>{<span class="i">$HoA</span>{<span class="i">$a</span>}} <span class="s">}</span> <a class="l_k" href="functions/keys.html">keys</a> <span class="i">%HoA</span> <span class="s">)</span> <span class="s">{</span></li><li>     <a class="l_k" href="functions/print.html">print</a> <span class="q">&quot;$family: @{ $HoA{$family} }\n&quot;</span></li><li> <span class="s">}</span></li><li></li><li> <span class="c"># print the whole thing sorted by number of members and name</span></li><li> <a class="l_k" href="functions/foreach.html">foreach</a> <span class="i">$family</span> <span class="s">(</span> <a class="l_k" href="functions/sort.html">sort</a> <span class="s">{</span></li><li>			    <span class="i">@</span>{<span class="i">$HoA</span>{<span class="i">$b</span>}} &lt;=&gt; <span class="i">@</span>{<span class="i">$HoA</span>{<span class="i">$a</span>}}</li><li>					||</li><li>				    <span class="i">$a</span> <a class="l_k" href="functions/cmp.html">cmp</a> <span class="i">$b</span></li><li>	    <span class="s">}</span> <a class="l_k" href="functions/keys.html">keys</a> <span class="i">%HoA</span> <span class="s">)</span></li><li> <span class="s">{</span></li><li>     <a class="l_k" href="functions/print.html">print</a> <span class="q">&quot;$family: &quot;</span><span class="cm">,</span> <a class="l_k" href="functions/join.html">join</a><span class="s">(</span><span class="q">&quot;, &quot;</span><span class="cm">,</span> <a class="l_k" href="functions/sort.html">sort</a> <span class="i">@</span>{ <span class="i">$HoA</span>{<span class="i">$family</span>} }<span class="s">)</span><span class="cm">,</span> <span class="q">&quot;\n&quot;</span><span class="sc">;</span></li><li> <span class="s">}</span></li></ol></pre><a class='view-head1' id="ARRAYS-OF-HASHES"></a><h2 class='h2' >ARRAYS OF HASHES
+ </h2>
+<a class='view-head2' id="Declaration-of-an-ARRAY-OF-HASHES"></a><h3 class='h3' >Declaration of an ARRAY OF HASHES</h3>
+<pre class="verbatim"><ol><li> <span class="i">@AoH</span> = <span class="s">(</span></li><li>        <span class="s">{</span></li><li>            <span class="w">Lead</span>     <span class="cm">=&gt;</span> <span class="q">&quot;fred&quot;</span><span class="cm">,</span></li><li>            <span class="w">Friend</span>   <span class="cm">=&gt;</span> <span class="q">&quot;barney&quot;</span><span class="cm">,</span></li><li>        <span class="s">}</span><span class="cm">,</span></li><li>        <span class="s">{</span></li><li>            <span class="w">Lead</span>     <span class="cm">=&gt;</span> <span class="q">&quot;george&quot;</span><span class="cm">,</span></li><li>            <span class="w">Wife</span>     <span class="cm">=&gt;</span> <span class="q">&quot;jane&quot;</span><span class="cm">,</span></li><li>            <span class="w">Son</span>      <span class="cm">=&gt;</span> <span class="q">&quot;elroy&quot;</span><span class="cm">,</span></li><li>        <span class="s">}</span><span class="cm">,</span></li><li>        <span class="s">{</span></li><li>            <span class="w">Lead</span>     <span class="cm">=&gt;</span> <span class="q">&quot;homer&quot;</span><span class="cm">,</span></li><li>            <span class="w">Wife</span>     <span class="cm">=&gt;</span> <span class="q">&quot;marge&quot;</span><span class="cm">,</span></li><li>            <span class="w">Son</span>      <span class="cm">=&gt;</span> <span class="q">&quot;bart&quot;</span><span class="cm">,</span></li><li>        <span class="s">}</span></li><li>  <span class="s">)</span><span class="sc">;</span></li></ol></pre><a class='view-head2' id="Generation-of-an-ARRAY-OF-HASHES"></a><h3 class='h3' >Generation of an ARRAY OF HASHES</h3>
+<pre class="verbatim"><ol><li> <span class="c"># reading from file</span></li><li> <span class="c"># format: LEAD=fred FRIEND=barney</span></li><li> <a class="l_k" href="functions/while.html">while</a> <span class="s">(</span> &lt;&gt; <span class="s">)</span> <span class="s">{</span></li><li>     <span class="i">$rec</span> = <span class="s">{</span><span class="s">}</span><span class="sc">;</span></li><li>     <a class="l_k" href="functions/for.html">for</a> <span class="i">$field</span> <span class="s">(</span> <a class="l_k" href="functions/split.html">split</a> <span class="s">)</span> <span class="s">{</span></li><li>         <span class="s">(</span><span class="i">$key</span><span class="cm">,</span> <span class="i">$value</span><span class="s">)</span> = <a class="l_k" href="functions/split.html">split</a> <span class="q">/=/</span><span class="cm">,</span> <span class="i">$field</span><span class="sc">;</span></li><li>         <span class="i">$rec</span>-&gt;{<span class="i">$key</span>} = <span class="i">$value</span><span class="sc">;</span></li><li>     <span class="s">}</span></li><li>     <a class="l_k" href="functions/push.html">push</a> <span class="i">@AoH</span><span class="cm">,</span> <span class="i">$rec</span><span class="sc">;</span></li><li> <span class="s">}</span></li><li></li><li></li><li> <span class="c"># reading from file</span></li><li> <span class="c"># format: LEAD=fred FRIEND=barney</span></li><li> <span class="c"># no temp</span></li><li> <a class="l_k" href="functions/while.html">while</a> <span class="s">(</span> &lt;&gt; <span class="s">)</span> <span class="s">{</span></li><li>     <a class="l_k" href="functions/push.html">push</a> <span class="i">@AoH</span><span class="cm">,</span> <span class="s">{</span> <a class="l_k" href="functions/split.html">split</a> <span class="q">/[\s+=]/</span> <span class="s">}</span><span class="sc">;</span></li><li> <span class="s">}</span></li><li></li><li> <span class="c"># calling a function  that returns a key/value pair list, like</span></li><li> <span class="c"># &quot;lead&quot;,&quot;fred&quot;,&quot;daughter&quot;,&quot;pebbles&quot;</span></li><li> <a class="l_k" href="functions/while.html">while</a> <span class="s">(</span> <span class="i">%fields</span> = <span class="i">getnextpairset</span><span class="s">(</span><span class="s">)</span> <span class="s">)</span> <span class="s">{</span></li><li>     <a class="l_k" href="functions/push.html">push</a> <span class="i">@AoH</span><span class="cm">,</span> <span class="s">{</span> <span class="i">%fields</span> <span class="s">}</span><span class="sc">;</span></li><li> <span class="s">}</span></li><li></li><li> <span class="c"># likewise, but using no temp vars</span></li><li> <a class="l_k" href="functions/while.html">while</a> <span class="s">(</span>&lt;&gt;<span class="s">)</span> <span class="s">{</span></li><li>     <a class="l_k" href="functions/push.html">push</a> <span class="i">@AoH</span><span class="cm">,</span> <span class="s">{</span> <span class="i">parsepairs</span><span class="s">(</span><span class="i">$_</span><span class="s">)</span> <span class="s">}</span><span class="sc">;</span></li><li> <span class="s">}</span></li><li></li><li> <span class="c"># add key/value to an element</span></li><li> <span class="i">$AoH</span>[<span class="n">0</span>]{<span class="w">pet</span>} = <span class="q">&quot;dino&quot;</span><span class="sc">;</span></li><li> <span class="i">$AoH</span>[<span class="n">2</span>]{<span class="w">pet</span>} = <span class="q">&quot;santa&#39;s little helper&quot;</span><span class="sc">;</span></li></ol></pre><a class='view-head2' id="Access-and-Printing-of-an-ARRAY-OF-HASHES"></a><h3 class='h3' >Access and Printing of an ARRAY OF HASHES</h3>
+<pre class="verbatim"><ol><li> <span class="c"># one element</span></li><li> <span class="i">$AoH</span>[<span class="n">0</span>]{<span class="w">lead</span>} = <span class="q">&quot;fred&quot;</span><span class="sc">;</span></li><li></li><li> <span class="c"># another element</span></li><li> <span class="i">$AoH</span>[<span class="n">1</span>]{<span class="w">lead</span>} =~ <span class="q">s/(\w)/\u$1/</span><span class="sc">;</span></li><li></li><li> <span class="c"># print the whole thing with refs</span></li><li> <a class="l_k" href="functions/for.html">for</a> <span class="i">$href</span> <span class="s">(</span> <span class="i">@AoH</span> <span class="s">)</span> <span class="s">{</span></li><li>     <a class="l_k" href="functions/print.html">print</a> <span class="q">&quot;{ &quot;</span><span class="sc">;</span></li><li>     <a class="l_k" href="functions/for.html">for</a> <span class="i">$role</span> <span class="s">(</span> <a class="l_k" href="functions/keys.html">keys</a> <span class="i">%$href</span> <span class="s">)</span> <span class="s">{</span></li><li>         <a class="l_k" href="functions/print.html">print</a> <span class="q">&quot;$role=$href-&gt;{$role} &quot;</span><span class="sc">;</span></li><li>     <span class="s">}</span></li><li>     <a class="l_k" href="functions/print.html">print</a> <span class="q">&quot;}\n&quot;</span><span class="sc">;</span></li><li> <span class="s">}</span></li><li></li><li> <span class="c"># print the whole thing with indices</span></li><li> <a class="l_k" href="functions/for.html">for</a> <span class="i">$i</span> <span class="s">(</span> <span class="n">0</span> .. <span class="i">$#AoH</span> <span class="s">)</span> <span class="s">{</span></li><li>     <a class="l_k" href="functions/print.html">print</a> <span class="q">&quot;$i is { &quot;</span><span class="sc">;</span></li><li>     <a class="l_k" href="functions/for.html">for</a> <span class="i">$role</span> <span class="s">(</span> <a class="l_k" href="functions/keys.html">keys</a> <span class="i">%</span>{ <span class="i">$AoH</span>[<span class="i">$i</span>] } <span class="s">)</span> <span class="s">{</span></li><li>         <a class="l_k" href="functions/print.html">print</a> <span class="q">&quot;$role=$AoH[$i]{$role} &quot;</span><span class="sc">;</span></li><li>     <span class="s">}</span></li><li>     <a class="l_k" href="functions/print.html">print</a> <span class="q">&quot;}\n&quot;</span><span class="sc">;</span></li><li> <span class="s">}</span></li><li></li><li> <span class="c"># print the whole thing one at a time</span></li><li> <a class="l_k" href="functions/for.html">for</a> <span class="i">$i</span> <span class="s">(</span> <span class="n">0</span> .. <span class="i">$#AoH</span> <span class="s">)</span> <span class="s">{</span></li><li>     <a class="l_k" href="functions/for.html">for</a> <span class="i">$role</span> <span class="s">(</span> <a class="l_k" href="functions/keys.html">keys</a> <span class="i">%</span>{ <span class="i">$AoH</span>[<span class="i">$i</span>] } <span class="s">)</span> <span class="s">{</span></li><li>         <a class="l_k" href="functions/print.html">print</a> <span class="q">&quot;elt $i $role is $AoH[$i]{$role}\n&quot;</span><span class="sc">;</span></li><li>     <span class="s">}</span></li><li> <span class="s">}</span></li></ol></pre><a class='view-head1' id="HASHES-OF-HASHES"></a><h2 class='h2' >HASHES OF HASHES
+ </h2>
+<a class='view-head2' id="Declaration-of-a-HASH-OF-HASHES"></a><h3 class='h3' >Declaration of a HASH OF HASHES</h3>
+<pre class="verbatim"><ol><li> <span class="i">%HoH</span> = <span class="s">(</span></li><li>        <span class="w">flintstones</span> <span class="cm">=&gt;</span> <span class="s">{</span></li><li>		<span class="w">lead</span>      <span class="cm">=&gt;</span> <span class="q">&quot;fred&quot;</span><span class="cm">,</span></li><li>		<span class="w">pal</span>       <span class="cm">=&gt;</span> <span class="q">&quot;barney&quot;</span><span class="cm">,</span></li><li>        <span class="s">}</span><span class="cm">,</span></li><li>        <span class="w">jetsons</span>     <span class="cm">=&gt;</span> <span class="s">{</span></li><li>		<span class="w">lead</span>      <span class="cm">=&gt;</span> <span class="q">&quot;george&quot;</span><span class="cm">,</span></li><li>		<span class="w">wife</span>      <span class="cm">=&gt;</span> <span class="q">&quot;jane&quot;</span><span class="cm">,</span></li><li>		<span class="q">&quot;his boy&quot;</span> <span class="cm">=&gt;</span> <span class="q">&quot;elroy&quot;</span><span class="cm">,</span></li><li>        <span class="s">}</span><span class="cm">,</span></li><li>        <span class="w">simpsons</span>    <span class="cm">=&gt;</span> <span class="s">{</span></li><li>		<span class="w">lead</span>      <span class="cm">=&gt;</span> <span class="q">&quot;homer&quot;</span><span class="cm">,</span></li><li>		<span class="w">wife</span>      <span class="cm">=&gt;</span> <span class="q">&quot;marge&quot;</span><span class="cm">,</span></li><li>		<span class="w">kid</span>       <span class="cm">=&gt;</span> <span class="q">&quot;bart&quot;</span><span class="cm">,</span></li><li>	<span class="s">}</span><span class="cm">,</span></li><li> <span class="s">)</span><span class="sc">;</span></li></ol></pre><a class='view-head2' id="Generation-of-a-HASH-OF-HASHES"></a><h3 class='h3' >Generation of a HASH OF HASHES</h3>
+<pre class="verbatim"><ol><li> <span class="c"># reading from file</span></li><li> <span class="c"># flintstones: lead=fred pal=barney wife=wilma pet=dino</span></li><li> <a class="l_k" href="functions/while.html">while</a> <span class="s">(</span> &lt;&gt; <span class="s">)</span> <span class="s">{</span></li><li>     <a class="l_k" href="functions/next.html">next</a> <a class="l_k" href="functions/unless.html">unless</a> <span class="q">s/^(.*?):\s*//</span><span class="sc">;</span></li><li>     <span class="i">$who</span> = <span class="i">$1</span><span class="sc">;</span></li><li>     <a class="l_k" href="functions/for.html">for</a> <span class="i">$field</span> <span class="s">(</span> <a class="l_k" href="functions/split.html">split</a> <span class="s">)</span> <span class="s">{</span></li><li>         <span class="s">(</span><span class="i">$key</span><span class="cm">,</span> <span class="i">$value</span><span class="s">)</span> = <a class="l_k" href="functions/split.html">split</a> <span class="q">/=/</span><span class="cm">,</span> <span class="i">$field</span><span class="sc">;</span></li><li>         <span class="i">$HoH</span>{<span class="i">$who</span>}{<span class="i">$key</span>} = <span class="i">$value</span><span class="sc">;</span></li><li>     <span class="s">}</span></li><li></li><li></li><li> <span class="c"># reading from file; more temps</span></li><li> <a class="l_k" href="functions/while.html">while</a> <span class="s">(</span> &lt;&gt; <span class="s">)</span> <span class="s">{</span></li><li>     <a class="l_k" href="functions/next.html">next</a> <a class="l_k" href="functions/unless.html">unless</a> <span class="q">s/^(.*?):\s*//</span><span class="sc">;</span></li><li>     <span class="i">$who</span> = <span class="i">$1</span><span class="sc">;</span></li><li>     <span class="i">$rec</span> = <span class="s">{</span><span class="s">}</span><span class="sc">;</span></li><li>     <span class="i">$HoH</span>{<span class="i">$who</span>} = <span class="i">$rec</span><span class="sc">;</span></li><li>     <a class="l_k" href="functions/for.html">for</a> <span class="i">$field</span> <span class="s">(</span> <a class="l_k" href="functions/split.html">split</a> <span class="s">)</span> <span class="s">{</span></li><li>         <span class="s">(</span><span class="i">$key</span><span class="cm">,</span> <span class="i">$value</span><span class="s">)</span> = <a class="l_k" href="functions/split.html">split</a> <span class="q">/=/</span><span class="cm">,</span> <span class="i">$field</span><span class="sc">;</span></li><li>         <span class="i">$rec</span>-&gt;{<span class="i">$key</span>} = <span class="i">$value</span><span class="sc">;</span></li><li>     <span class="s">}</span></li><li> <span class="s">}</span></li><li></li><li> <span class="c"># calling a function  that returns a key,value hash</span></li><li> <a class="l_k" href="functions/for.html">for</a> <span class="i">$group</span> <span class="s">(</span> <span class="q">&quot;simpsons&quot;</span><span class="cm">,</span> <span class="q">&quot;jetsons&quot;</span><span class="cm">,</span> <span class="q">&quot;flintstones&quot;</span> <span class="s">)</span> <span class="s">{</span></li><li>     <span class="i">$HoH</span>{<span class="i">$group</span>} = <span class="s">{</span> <span class="i">get_family</span><span class="s">(</span><span class="i">$group</span><span class="s">)</span> <span class="s">}</span><span class="sc">;</span></li><li> <span class="s">}</span></li><li></li><li> <span class="c"># likewise, but using temps</span></li><li> <a class="l_k" href="functions/for.html">for</a> <span class="i">$group</span> <span class="s">(</span> <span class="q">&quot;simpsons&quot;</span><span class="cm">,</span> <span class="q">&quot;jetsons&quot;</span><span class="cm">,</span> <span class="q">&quot;flintstones&quot;</span> <span class="s">)</span> <span class="s">{</span></li><li>     <span class="i">%members</span> = <span class="i">get_family</span><span class="s">(</span><span class="i">$group</span><span class="s">)</span><span class="sc">;</span></li><li>     <span class="i">$HoH</span>{<span class="i">$group</span>} = <span class="s">{</span> <span class="i">%members</span> <span class="s">}</span><span class="sc">;</span></li><li> <span class="s">}</span></li><li></li><li> <span class="c"># append new members to an existing family</span></li><li> <span class="i">%new_folks</span> = <span class="s">(</span></li><li>     <span class="w">wife</span> <span class="cm">=&gt;</span> <span class="q">&quot;wilma&quot;</span><span class="cm">,</span></li><li>     <span class="w">pet</span>  <span class="cm">=&gt;</span> <span class="q">&quot;dino&quot;</span><span class="cm">,</span></li><li> <span class="s">)</span><span class="sc">;</span></li><li></li><li> <a class="l_k" href="functions/for.html">for</a> <span class="i">$what</span> <span class="s">(</span><a class="l_k" href="functions/keys.html">keys</a> <span class="i">%new_folks</span><span class="s">)</span> <span class="s">{</span></li><li>     <span class="i">$HoH</span>{<span class="w">flintstones</span>}{<span class="i">$what</span>} = <span class="i">$new_folks</span>{<span class="i">$what</span>}<span class="sc">;</span></li><li> <span class="s">}</span></li></ol></pre><a class='view-head2' id="Access-and-Printing-of-a-HASH-OF-HASHES"></a><h3 class='h3' >Access and Printing of a HASH OF HASHES</h3>
+<pre class="verbatim"><ol><li> <span class="c"># one element</span></li><li> <span class="i">$HoH</span>{<span class="w">flintstones</span>}{<span class="w">wife</span>} = <span class="q">&quot;wilma&quot;</span><span class="sc">;</span></li><li></li><li> <span class="c"># another element</span></li><li> <span class="i">$HoH</span>{<span class="w">simpsons</span>}{<span class="w">lead</span>} =~ <span class="q">s/(\w)/\u$1/</span><span class="sc">;</span></li><li></li><li> <span class="c"># print the whole thing</span></li><li> <a class="l_k" href="functions/foreach.html">foreach</a> <span class="i">$family</span> <span class="s">(</span> <a class="l_k" href="functions/keys.html">keys</a> <span class="i">%HoH</span> <span class="s">)</span> <span class="s">{</span></li><li>     <a class="l_k" href="functions/print.html">print</a> <span class="q">&quot;$family: { &quot;</span><span class="sc">;</span></li><li>     <a class="l_k" href="functions/for.html">for</a> <span class="i">$role</span> <span class="s">(</span> <a class="l_k" href="functions/keys.html">keys</a> <span class="i">%</span>{ <span class="i">$HoH</span>{<span class="i">$family</span>} } <span class="s">)</span> <span class="s">{</span></li><li>         <a class="l_k" href="functions/print.html">print</a> <span class="q">&quot;$role=$HoH{$family}{$role} &quot;</span><span class="sc">;</span></li><li>     <span class="s">}</span></li><li>     <a class="l_k" href="functions/print.html">print</a> <span class="q">&quot;}\n&quot;</span><span class="sc">;</span></li><li> <span class="s">}</span></li><li></li><li> <span class="c"># print the whole thing  somewhat sorted</span></li><li> <a class="l_k" href="functions/foreach.html">foreach</a> <span class="i">$family</span> <span class="s">(</span> <a class="l_k" href="functions/sort.html">sort</a> <a class="l_k" href="functions/keys.html">keys</a> <span class="i">%HoH</span> <span class="s">)</span> <span class="s">{</span></li><li>     <a class="l_k" href="functions/print.html">print</a> <span class="q">&quot;$family: { &quot;</span><span class="sc">;</span></li><li>     <a class="l_k" href="functions/for.html">for</a> <span class="i">$role</span> <span class="s">(</span> <a class="l_k" href="functions/sort.html">sort</a> <a class="l_k" href="functions/keys.html">keys</a> <span class="i">%</span>{ <span class="i">$HoH</span>{<span class="i">$family</span>} } <span class="s">)</span> <span class="s">{</span></li><li>         <a class="l_k" href="functions/print.html">print</a> <span class="q">&quot;$role=$HoH{$family}{$role} &quot;</span><span class="sc">;</span></li><li>     <span class="s">}</span></li><li>     <a class="l_k" href="functions/print.html">print</a> <span class="q">&quot;}\n&quot;</span><span class="sc">;</span></li><li> <span class="s">}</span></li><li></li><li></li><li> <span class="c"># print the whole thing sorted by number of members</span></li><li> <a class="l_k" href="functions/foreach.html">foreach</a> <span class="i">$family</span> <span class="s">(</span> <a class="l_k" href="functions/sort.html">sort</a> <span class="s">{</span> <a class="l_k" href="functions/keys.html">keys</a> <span class="i">%</span>{<span class="i">$HoH</span>{<span class="i">$b</span>}} &lt;=&gt; <a class="l_k" href="functions/keys.html">keys</a> <span class="i">%</span>{<span class="i">$HoH</span>{<span class="i">$a</span>}} <span class="s">}</span> <a class="l_k" href="functions/keys.html">keys</a> <span class="i">%HoH</span> <span class="s">)</span> <span class="s">{</span></li><li>     <a class="l_k" href="functions/print.html">print</a> <span class="q">&quot;$family: { &quot;</span><span class="sc">;</span></li><li>     <a class="l_k" href="functions/for.html">for</a> <span class="i">$role</span> <span class="s">(</span> <a class="l_k" href="functions/sort.html">sort</a> <a class="l_k" href="functions/keys.html">keys</a> <span class="i">%</span>{ <span class="i">$HoH</span>{<span class="i">$family</span>} } <span class="s">)</span> <span class="s">{</span></li><li>         <a class="l_k" href="functions/print.html">print</a> <span class="q">&quot;$role=$HoH{$family}{$role} &quot;</span><span class="sc">;</span></li><li>     <span class="s">}</span></li><li>     <a class="l_k" href="functions/print.html">print</a> <span class="q">&quot;}\n&quot;</span><span class="sc">;</span></li><li> <span class="s">}</span></li><li></li><li> <span class="c"># establish a sort order (rank) for each role</span></li><li> <span class="i">$i</span> = <span class="n">0</span><span class="sc">;</span></li><li> <a class="l_k" href="functions/for.html">for</a> <span class="s">(</span> <span class="q">qw(lead wife son daughter pal pet)</span> <span class="s">)</span> <span class="s">{</span> <span class="i">$rank</span>{<span class="i">$_</span>} = ++<span class="i">$i</span> <span class="s">}</span></li><li></li><li> <span class="c"># now print the whole thing sorted by number of members</span></li><li> <a class="l_k" href="functions/foreach.html">foreach</a> <span class="i">$family</span> <span class="s">(</span> <a class="l_k" href="functions/sort.html">sort</a> <span class="s">{</span> <a class="l_k" href="functions/keys.html">keys</a> <span class="i">%</span>{ <span class="i">$HoH</span>{<span class="i">$b</span>} } &lt;=&gt; <a class="l_k" href="functions/keys.html">keys</a> <span class="i">%</span>{ <span class="i">$HoH</span>{<span class="i">$a</span>} } <span class="s">}</span> <a class="l_k" href="functions/keys.html">keys</a> <span class="i">%HoH</span> <span class="s">)</span> <span class="s">{</span></li><li>     <a class="l_k" href="functions/print.html">print</a> <span class="q">&quot;$family: { &quot;</span><span class="sc">;</span></li><li>     <span class="c"># and print these according to rank order</span></li><li>     <a class="l_k" href="functions/for.html">for</a> <span class="i">$role</span> <span class="s">(</span> <a class="l_k" href="functions/sort.html">sort</a> <span class="s">{</span> <span class="i">$rank</span>{<span class="i">$a</span>} &lt;=&gt; <span class="i">$rank</span>{<span class="i">$b</span>} <span class="s">}</span>  <a class="l_k" href="functions/keys.html">keys</a> <span class="i">%</span>{ <span class="i">$HoH</span>{<span class="i">$family</span>} } <span class="s">)</span> <span class="s">{</span></li><li>         <a class="l_k" href="functions/print.html">print</a> <span class="q">&quot;$role=$HoH{$family}{$role} &quot;</span><span class="sc">;</span></li><li>     <span class="s">}</span></li><li>     <a class="l_k" href="functions/print.html">print</a> <span class="q">&quot;}\n&quot;</span><span class="sc">;</span></li><li> <span class="s">}</span></li></ol></pre><a class='view-head1' id="MORE-ELABORATE-RECORDS"></a><h2 class='h2' >MORE ELABORATE RECORDS
+  </h2>
+<a class='view-head2' id="Declaration-of-MORE-ELABORATE-RECORDS"></a><h3 class='h3' >Declaration of MORE ELABORATE RECORDS</h3>
+<p>Here's a sample showing how to create and use a record whose fields are of
+many different sorts:</p>
+<pre class="verbatim"><ol><li>     <span class="i">$rec</span> = <span class="s">{</span></li><li>	 <span class="w">TEXT</span>      <span class="cm">=&gt;</span> <span class="i">$string</span><span class="cm">,</span></li><li>	 <span class="w">SEQUENCE</span>  <span class="cm">=&gt;</span> <span class="s">[</span> <span class="i">@old_values</span> <span class="s">]</span><span class="cm">,</span></li><li>	 <span class="w">LOOKUP</span>    <span class="cm">=&gt;</span> <span class="s">{</span> <span class="i">%some_table</span> <span class="s">}</span><span class="cm">,</span></li><li>	 <span class="w">THATCODE</span>  <span class="cm">=&gt;</span> \<span class="i">&amp;some_function</span><span class="cm">,</span></li><li>	 <span class="w">THISCODE</span>  <span class="cm">=&gt;</span> <a class="l_k" href="functions/sub.html">sub</a> <span class="s">{</span> <span class="i">$_</span>[<span class="n">0</span>] ** <span class="i">$_</span>[<span class="n">1</span>] <span class="s">}</span><span class="cm">,</span></li><li>	 <span class="w">HANDLE</span>    <span class="cm">=&gt;</span> \<span class="i">*STDOUT</span><span class="cm">,</span></li><li>     <span class="s">}</span><span class="sc">;</span></li><li></li><li>     <a class="l_k" href="functions/print.html">print</a> <span class="i">$rec</span>-&gt;{<span class="w">TEXT</span>}<span class="sc">;</span></li><li></li><li>     <a class="l_k" href="functions/print.html">print</a> <span class="i">$rec</span>-&gt;{<span class="w">SEQUENCE</span>}[<span class="n">0</span>]<span class="sc">;</span></li><li>     <span class="i">$last</span> = <a class="l_k" href="functions/pop.html">pop</a> <span class="i">@</span> { <span class="i">$rec</span>-&gt;{<span class="w">SEQUENCE</span>} }<span class="sc">;</span></li><li></li><li>     <a class="l_k" href="functions/print.html">print</a> <span class="i">$rec</span>-&gt;{<span class="w">LOOKUP</span>}{<span class="q">&quot;key&quot;</span>}<span class="sc">;</span></li><li>     <span class="s">(</span><span class="i">$first_k</span><span class="cm">,</span> <span class="i">$first_v</span><span class="s">)</span> = <a class="l_k" href="functions/each.html">each</a> <span class="i">%</span>{ <span class="i">$rec</span>-&gt;{<span class="w">LOOKUP</span>} }<span class="sc">;</span></li><li></li><li>     <span class="i">$answer</span> = <span class="i">$rec</span>-&gt;{<span class="w">THATCODE</span>}-&gt;<span class="s">(</span><span class="i">$arg</span><span class="s">)</span><span class="sc">;</span></li><li>     <span class="i">$answer</span> = <span class="i">$rec</span>-&gt;{<span class="w">THISCODE</span>}-&gt;<span class="s">(</span><span class="i">$arg1</span><span class="cm">,</span> <span class="i">$arg2</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>     <span class="c"># careful of extra block braces on fh ref</span></li><li>     <a class="l_k" href="functions/print.html">print</a> <span class="s">{</span> <span class="i">$rec</span>-&gt;{<span class="w">HANDLE</span>} <span class="s">}</span> <span class="q">&quot;a string\n&quot;</span><span class="sc">;</span></li><li></li><li>     <a class="l_k" href="functions/use.html">use</a> <span class="w">FileHandle</span><span class="sc">;</span></li><li>     <span class="i">$rec</span>-&gt;{<span class="w">HANDLE</span>}<span class="i">-&gt;autoflush</span><span class="s">(</span><span class="n">1</span><span class="s">)</span><span class="sc">;</span></li><li>     <span class="i">$rec</span>-&gt;{<span class="w">HANDLE</span>}<span class="i">-&gt;print</span><span class="s">(</span><span class="q">&quot; a string\n&quot;</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><a class='view-head2' id="Declaration-of-a-HASH-OF-COMPLEX-RECORDS"></a><h3 class='h3' >Declaration of a HASH OF COMPLEX RECORDS</h3>
+<pre class="verbatim"><ol><li>     <span class="i">%TV</span> = <span class="s">(</span></li><li>        <span class="w">flintstones</span> <span class="cm">=&gt;</span> <span class="s">{</span></li><li>            <span class="w">series</span>   <span class="cm">=&gt;</span> <span class="q">&quot;flintstones&quot;</span><span class="cm">,</span></li><li>            <span class="w">nights</span>   <span class="cm">=&gt;</span> <span class="s">[</span> <span class="q">qw(monday thursday friday)</span> <span class="s">]</span><span class="cm">,</span></li><li>            <span class="w">members</span>  <span class="cm">=&gt;</span> <span class="s">[</span></li><li>                <span class="s">{</span> <span class="w">name</span> <span class="cm">=&gt;</span> <span class="q">&quot;fred&quot;</span><span class="cm">,</span>    <span class="w">role</span> <span class="cm">=&gt;</span> <span class="q">&quot;lead&quot;</span><span class="cm">,</span> <span class="w">age</span>  <span class="cm">=&gt;</span> <span class="n">36</span><span class="cm">,</span> <span class="s">}</span><span class="cm">,</span></li><li>                <span class="s">{</span> <span class="w">name</span> <span class="cm">=&gt;</span> <span class="q">&quot;wilma&quot;</span><span class="cm">,</span>   <span class="w">role</span> <span class="cm">=&gt;</span> <span class="q">&quot;wife&quot;</span><span class="cm">,</span> <span class="w">age</span>  <span class="cm">=&gt;</span> <span class="n">31</span><span class="cm">,</span> <span class="s">}</span><span class="cm">,</span></li><li>                <span class="s">{</span> <span class="w">name</span> <span class="cm">=&gt;</span> <span class="q">&quot;pebbles&quot;</span><span class="cm">,</span> <span class="w">role</span> <span class="cm">=&gt;</span> <span class="q">&quot;kid&quot;</span><span class="cm">,</span>  <span class="w">age</span>  <span class="cm">=&gt;</span>  <span class="n">4</span><span class="cm">,</span> <span class="s">}</span><span class="cm">,</span></li><li>            <span class="s">]</span><span class="cm">,</span></li><li>        <span class="s">}</span><span class="cm">,</span></li><li></li><li>        <span class="w">jetsons</span>     <span class="cm">=&gt;</span> <span class="s">{</span></li><li>            <span class="w">series</span>   <span class="cm">=&gt;</span> <span class="q">&quot;jetsons&quot;</span><span class="cm">,</span></li><li>            <span class="w">nights</span>   <span class="cm">=&gt;</span> <span class="s">[</span> <span class="q">qw(wednesday saturday)</span> <span class="s">]</span><span class="cm">,</span></li><li>            <span class="w">members</span>  <span class="cm">=&gt;</span> <span class="s">[</span></li><li>                <span class="s">{</span> <span class="w">name</span> <span class="cm">=&gt;</span> <span class="q">&quot;george&quot;</span><span class="cm">,</span>  <span class="w">role</span> <span class="cm">=&gt;</span> <span class="q">&quot;lead&quot;</span><span class="cm">,</span> <span class="w">age</span>  <span class="cm">=&gt;</span> <span class="n">41</span><span class="cm">,</span> <span class="s">}</span><span class="cm">,</span></li><li>                <span class="s">{</span> <span class="w">name</span> <span class="cm">=&gt;</span> <span class="q">&quot;jane&quot;</span><span class="cm">,</span>    <span class="w">role</span> <span class="cm">=&gt;</span> <span class="q">&quot;wife&quot;</span><span class="cm">,</span> <span class="w">age</span>  <span class="cm">=&gt;</span> <span class="n">39</span><span class="cm">,</span> <span class="s">}</span><span class="cm">,</span></li><li>                <span class="s">{</span> <span class="w">name</span> <span class="cm">=&gt;</span> <span class="q">&quot;elroy&quot;</span><span class="cm">,</span>   <span class="w">role</span> <span class="cm">=&gt;</span> <span class="q">&quot;kid&quot;</span><span class="cm">,</span>  <span class="w">age</span>  <span class="cm">=&gt;</span>  <span class="n">9</span><span class="cm">,</span> <span class="s">}</span><span class="cm">,</span></li><li>            <span class="s">]</span><span class="cm">,</span></li><li>         <span class="s">}</span><span class="cm">,</span></li><li></li><li>        <span class="w">simpsons</span>    <span class="cm">=&gt;</span> <span class="s">{</span></li><li>            <span class="w">series</span>   <span class="cm">=&gt;</span> <span class="q">&quot;simpsons&quot;</span><span class="cm">,</span></li><li>            <span class="w">nights</span>   <span class="cm">=&gt;</span> <span class="s">[</span> <span class="q">qw(monday)</span> <span class="s">]</span><span class="cm">,</span></li><li>            <span class="w">members</span>  <span class="cm">=&gt;</span> <span class="s">[</span></li><li>                <span class="s">{</span> <span class="w">name</span> <span class="cm">=&gt;</span> <span class="q">&quot;homer&quot;</span><span class="cm">,</span> <span class="w">role</span> <span class="cm">=&gt;</span> <span class="q">&quot;lead&quot;</span><span class="cm">,</span> <span class="w">age</span>  <span class="cm">=&gt;</span> <span class="n">34</span><span class="cm">,</span> <span class="s">}</span><span class="cm">,</span></li><li>                <span class="s">{</span> <span class="w">name</span> <span class="cm">=&gt;</span> <span class="q">&quot;marge&quot;</span><span class="cm">,</span> <span class="w">role</span> <span class="cm">=&gt;</span> <span class="q">&quot;wife&quot;</span><span class="cm">,</span> <span class="w">age</span> <span class="cm">=&gt;</span> <span class="n">37</span><span class="cm">,</span> <span class="s">}</span><span class="cm">,</span></li><li>                <span class="s">{</span> <span class="w">name</span> <span class="cm">=&gt;</span> <span class="q">&quot;bart&quot;</span><span class="cm">,</span>  <span class="w">role</span> <span class="cm">=&gt;</span> <span class="q">&quot;kid&quot;</span><span class="cm">,</span>  <span class="w">age</span>  <span class="cm">=&gt;</span>  <span class="n">11</span><span class="cm">,</span> <span class="s">}</span><span class="cm">,</span></li><li>            <span class="s">]</span><span class="cm">,</span></li><li>         <span class="s">}</span><span class="cm">,</span></li><li>      <span class="s">)</span><span class="sc">;</span></li></ol></pre><a class='view-head2' id="Generation-of-a-HASH-OF-COMPLEX-RECORDS"></a><h3 class='h3' >Generation of a HASH OF COMPLEX RECORDS</h3>
+<pre class="verbatim"><ol><li>     <span class="c"># reading from file</span></li><li>     <span class="c"># this is most easily done by having the file itself be</span></li><li>     <span class="c"># in the raw data format as shown above.  perl is happy</span></li><li>     <span class="c"># to parse complex data structures if declared as data, so</span></li><li>     <span class="c"># sometimes it&#39;s easiest to do that</span></li><li></li><li>     <span class="c"># here&#39;s a piece by piece build up</span></li><li>     <span class="i">$rec</span> = <span class="s">{</span><span class="s">}</span><span class="sc">;</span></li><li>     <span class="i">$rec</span>-&gt;{<span class="w">series</span>} = <span class="q">&quot;flintstones&quot;</span><span class="sc">;</span></li><li>     <span class="i">$rec</span>-&gt;{<span class="w">nights</span>} = <span class="s">[</span> <span class="i">find_days</span><span class="s">(</span><span class="s">)</span> <span class="s">]</span><span class="sc">;</span></li><li></li><li>     <span class="i">@members</span> = <span class="s">(</span><span class="s">)</span><span class="sc">;</span></li><li>     <span class="c"># assume this file in field=value syntax</span></li><li>     <a class="l_k" href="functions/while.html">while</a> <span class="s">(</span>&lt;&gt;<span class="s">)</span> <span class="s">{</span></li><li>         <span class="i">%fields</span> = <a class="l_k" href="functions/split.html">split</a> <span class="q">/[\s=]+/</span><span class="sc">;</span></li><li>         <a class="l_k" href="functions/push.html">push</a> <span class="i">@members</span><span class="cm">,</span> <span class="s">{</span> <span class="i">%fields</span> <span class="s">}</span><span class="sc">;</span></li><li>     <span class="s">}</span></li><li>     <span class="i">$rec</span>-&gt;{<span class="w">members</span>} = <span class="s">[</span> <span class="i">@members</span> <span class="s">]</span><span class="sc">;</span></li><li></li><li>     <span class="c"># now remember the whole thing</span></li><li>     <span class="i">$TV</span>{ <span class="i">$rec</span>-&gt;{<span class="w">series</span>} } = <span class="i">$rec</span><span class="sc">;</span></li><li></li><li>     <span class="c">###########################################################</span></li><li>     <span class="c"># now, you might want to make interesting extra fields that</span></li><li>     <span class="c"># include pointers back into the same data structure so if</span></li><li>     <span class="c"># change one piece, it changes everywhere, like for example</span></li><li>     <span class="c"># if you wanted a {kids} field that was a reference</span></li><li>     <span class="c"># to an array of the kids&#39; records without having duplicate</span></li><li>     <span class="c"># records and thus update problems.</span></li><li>     <span class="c">###########################################################</span></li><li>     <a class="l_k" href="functions/foreach.html">foreach</a> <span class="i">$family</span> <span class="s">(</span><a class="l_k" href="functions/keys.html">keys</a> <span class="i">%TV</span><span class="s">)</span> <span class="s">{</span></li><li>         <span class="i">$rec</span> = <span class="i">$TV</span>{<span class="i">$family</span>}<span class="sc">;</span> <span class="c"># temp pointer</span></li><li>         <span class="i">@kids</span> = <span class="s">(</span><span class="s">)</span><span class="sc">;</span></li><li>         <a class="l_k" href="functions/for.html">for</a> <span class="i">$person</span> <span class="s">(</span> <span class="i">@</span>{ <span class="i">$rec</span>-&gt;{<span class="w">members</span>} } <span class="s">)</span> <span class="s">{</span></li><li>             <a class="l_k" href="functions/if.html">if</a> <span class="s">(</span><span class="i">$person</span>-&gt;{<span class="w">role</span>} =~ <span class="q">/kid|son|daughter/</span><span class="s">)</span> <span class="s">{</span></li><li>                 <a class="l_k" href="functions/push.html">push</a> <span class="i">@kids</span><span class="cm">,</span> <span class="i">$person</span><span class="sc">;</span></li><li>             <span class="s">}</span></li><li>         <span class="s">}</span></li><li>         <span class="c"># REMEMBER: $rec and $TV{$family} point to same data!!</span></li><li>         <span class="i">$rec</span>-&gt;{<span class="w">kids</span>} = <span class="s">[</span> <span class="i">@kids</span> <span class="s">]</span><span class="sc">;</span></li><li>     <span class="s">}</span></li><li></li><li>     <span class="c"># you copied the array, but the array itself contains pointers</span></li><li>     <span class="c"># to uncopied objects. this means that if you make bart get</span></li><li>     <span class="c"># older via</span></li><li></li><li>     <span class="i">$TV</span>{<span class="w">simpsons</span>}{<span class="w">kids</span>}[<span class="n">0</span>]{<span class="w">age</span>}++<span class="sc">;</span></li><li></li><li>     <span class="c"># then this would also change in</span></li><li>     <a class="l_k" href="functions/print.html">print</a> <span class="i">$TV</span>{<span class="w">simpsons</span>}{<span class="w">members</span>}[<span class="n">2</span>]{<span class="w">age</span>}<span class="sc">;</span></li><li></li><li>     <span class="c"># because $TV{simpsons}{kids}[0] and $TV{simpsons}{members}[2]</span></li><li>     <span class="c"># both point to the same underlying anonymous hash table</span></li><li></li><li>     <span class="c"># print the whole thing</span></li><li>     <a class="l_k" href="functions/foreach.html">foreach</a> <span class="i">$family</span> <span class="s">(</span> <a class="l_k" href="functions/keys.html">keys</a> <span class="i">%TV</span> <span class="s">)</span> <span class="s">{</span></li><li>         <a class="l_k" href="functions/print.html">print</a> <span class="q">&quot;the $family&quot;</span><span class="sc">;</span></li><li>         <a class="l_k" href="functions/print.html">print</a> <span class="q">&quot; is on during @{ $TV{$family}{nights} }\n&quot;</span><span class="sc">;</span></li><li>         <a class="l_k" href="functions/print.html">print</a> <span class="q">&quot;its members are:\n&quot;</span><span class="sc">;</span></li><li>         <a class="l_k" href="functions/for.html">for</a> <span class="i">$who</span> <span class="s">(</span> <span class="i">@</span>{ <span class="i">$TV</span>{<span class="i">$family</span>}{<span class="w">members</span>} } <span class="s">)</span> <span class="s">{</span></li><li>             <a class="l_k" href="functions/print.html">print</a> <span class="q">&quot; $who-&gt;{name} ($who-&gt;{role}), age $who-&gt;{age}\n&quot;</span><span class="sc">;</span></li><li>         <span class="s">}</span></li><li>         <a class="l_k" href="functions/print.html">print</a> <span class="q">&quot;it turns out that $TV{$family}{lead} has &quot;</span><span class="sc">;</span></li><li>         <a class="l_k" href="functions/print.html">print</a> <a class="l_k" href="functions/scalar.html">scalar</a> <span class="s">(</span> <span class="i">@</span>{ <span class="i">$TV</span>{<span class="i">$family</span>}{<span class="w">kids</span>} } <span class="s">)</span><span class="cm">,</span> <span class="q">&quot; kids named &quot;</span><span class="sc">;</span></li><li>         <a class="l_k" href="functions/print.html">print</a> <a class="l_k" href="functions/join.html">join</a> <span class="s">(</span><span class="q">&quot;, &quot;</span><span class="cm">,</span> <a class="l_k" href="functions/map.html">map</a> <span class="s">{</span> <span class="i">$_</span>-&gt;{<span class="w">name</span>} <span class="s">}</span> <span class="i">@</span>{ <span class="i">$TV</span>{<span class="i">$family</span>}{<span class="w">kids</span>} } <span class="s">)</span><span class="sc">;</span></li><li>         <a class="l_k" href="functions/print.html">print</a> <span class="q">&quot;\n&quot;</span><span class="sc">;</span></li><li>     <span class="s">}</span></li></ol></pre><a class='view-head1' id="Database-Ties"></a><h2 class='h2' >Database Ties</h2>
+<p>You cannot easily tie a multilevel data structure (such as a hash of
+hashes) to a dbm file.  The first problem is that all but GDBM and
+Berkeley DB have size limitations, but beyond that, you also have problems
+with how references are to be represented on disk.  One experimental
+module that does partially attempt to address this need is the MLDBM
+module.  Check your nearest CPAN site as described in <a href="perlmodlib.html">perlmodlib</a> for
+source code to MLDBM.</p>
+<a class='view-head1' id="SEE-ALSO"></a><h2 class='h2' >SEE ALSO</h2>
+<p><a href="perlref.html">perlref</a>, <a href="perllol.html">perllol</a>, <a href="perldata.html">perldata</a>, <a href="perlobj.html">perlobj</a></p>
+<a class='view-head1' id="AUTHOR"></a><h2 class='h2' >AUTHOR</h2>
+<p>Tom Christiansen &lt;<i>tchrist@perl.com</i>&gt;</p>
+
+
+
+
+      <ul><li><a href="#NAME">NAME
+  </a></li><li><a href="#DESCRIPTION">DESCRIPTION</a></li><li><a href="#REFERENCES">REFERENCES
+   </a></li><li><a href="#COMMON-MISTAKES">COMMON MISTAKES</a></li><li><a href="#CAVEAT-ON-PRECEDENCE">CAVEAT ON PRECEDENCE
+ </a></li><li><a href="#WHY-YOU-SHOULD-ALWAYS-use-strict">WHY YOU SHOULD ALWAYS use strict</a></li><li><a href="#DEBUGGING">DEBUGGING
+ 
+   
+ 
+ </a></li><li><a href="#CODE-EXAMPLES">CODE EXAMPLES</a></li><li><a href="#ARRAYS-OF-ARRAYS">ARRAYS OF ARRAYS
+ </a></li><ul><li><a href="#Declaration-of-an-ARRAY-OF-ARRAYS">Declaration of an ARRAY OF ARRAYS</a></li><li><a href="#Generation-of-an-ARRAY-OF-ARRAYS">Generation of an ARRAY OF ARRAYS</a></li><li><a href="#Access-and-Printing-of-an-ARRAY-OF-ARRAYS">Access and Printing of an ARRAY OF ARRAYS</a></li></ul><li><a href="#HASHES-OF-ARRAYS">HASHES OF ARRAYS
+ </a></li><ul><li><a href="#Declaration-of-a-HASH-OF-ARRAYS">Declaration of a HASH OF ARRAYS</a></li><li><a href="#Generation-of-a-HASH-OF-ARRAYS">Generation of a HASH OF ARRAYS</a></li><li><a href="#Access-and-Printing-of-a-HASH-OF-ARRAYS">Access and Printing of a HASH OF ARRAYS</a></li></ul><li><a href="#ARRAYS-OF-HASHES">ARRAYS OF HASHES
+ </a></li><ul><li><a href="#Declaration-of-an-ARRAY-OF-HASHES">Declaration of an ARRAY OF HASHES</a></li><li><a href="#Generation-of-an-ARRAY-OF-HASHES">Generation of an ARRAY OF HASHES</a></li><li><a href="#Access-and-Printing-of-an-ARRAY-OF-HASHES">Access and Printing of an ARRAY OF HASHES</a></li></ul><li><a href="#HASHES-OF-HASHES">HASHES OF HASHES
+ </a></li><ul><li><a href="#Declaration-of-a-HASH-OF-HASHES">Declaration of a HASH OF HASHES</a></li><li><a href="#Generation-of-a-HASH-OF-HASHES">Generation of a HASH OF HASHES</a></li><li><a href="#Access-and-Printing-of-a-HASH-OF-HASHES">Access and Printing of a HASH OF HASHES</a></li></ul><li><a href="#MORE-ELABORATE-RECORDS">MORE ELABORATE RECORDS
+  </a></li><ul><li><a href="#Declaration-of-MORE-ELABORATE-RECORDS">Declaration of MORE ELABORATE RECORDS</a></li><li><a href="#Declaration-of-a-HASH-OF-COMPLEX-RECORDS">Declaration of a HASH OF COMPLEX RECORDS</a></li><li><a href="#Generation-of-a-HASH-OF-COMPLEX-RECORDS">Generation of a HASH OF COMPLEX RECORDS</a></li></ul><li><a href="#Database-Ties">Database Ties</a></li><li><a href="#SEE-ALSO">SEE ALSO</a></li><li><a href="#AUTHOR">AUTHOR</a></li></ul>
+
+
+                  </div>
+                </article>
+              </div>
+            </div>
+          </main>
+        </div>
+           <footer class="footer row bg-light pt-5 pb-5">
+       <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+           <div class="row">
+               <div class="col-md-4">
+                   <ul class="list-unstyled">
+                       <li>
+                           <h4>Site info</h4>
+                       </li>
+                       <li>Docs mantained by
+                           <a href="//lists.perl.org/list/perl5-porters.html"
+                               rel="noopener">Perl 5 Porters</a>
+                       </li>
+                       <li>Perldoc site development sponsored by
+                           <a href="//opusvl.com" rel="noopener">
+                           <img style="margin: 20px 20px 5px 10px" class="opus-logo" src="/public/img/opusvl_logo.svg" alt="OpusVL Logo">
+                        </a>
+                    <li><span class="about_perldoc"><a href="//about.html">About PerlDOC</a></span>
+                    </li>
+                       </li>
+                   </ul>
+               </div>
+               <div class="col-md-8">
+                   <div class="row">
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Manuals</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.18.1/index-overview.html">Overview</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.18.1/index-tutorials.html">Tutorials</a>
+                               </li>
+                               <li>
+                                   <a href="/5.18.1/index-faq.html">FAQs</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.18.1/index-history.html">Changes</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Reference</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.18.1/index-language.html">Language</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.18.1/index-functions.html">Functions</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.18.1/perlop.html">Operators</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.18.1/perlvar.html">Variables</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Modules</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.18.1/index-modules-A.html">Modules</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.18.1/index-pragmas.html">Pragmas</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.18.1/index-utilities.html">Utilities</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Misc</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.18.1/index-licence.html">License</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.18.1/index-internals.html">Internals</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.18.1/index-platforms.html">Platforms</a>
+                               </li>
+                            <li>
+                                <a
+                                    href="/5.18.1/index-about.html">About</a>
+                            </li>
+                           </ul>
+                       </div>
+                   </div>
+               </div>
+               <div class=" col-12 footer-inf text-center">
+                   <small>perldoc.perl.org - Official documentation for the Perl
+                       programming language</small>
+               </div>
+           </div>
+       </div>
+   </footer>
+
+        	<div class="beta-wrapper beta-bottom-right ">
+		<div class="beta beta-blue  ">
+			<a class="beta-link "
+				href="//github.com/OpusVL/perldoc.perl.org/issues/new" rel="noopener">
+				<span class="beta-text">
+					This website is a Beta release.
+				</span>
+				<span class="beta-text">
+					For any issues please raise a ticket on GitHub
+				</span>
+			</a>
+		</div>
+	</div>
+
+        <script src="/public/js/main.min.js"></script>
+      </body>
+
+      </html>

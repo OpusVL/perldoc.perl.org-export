@@ -1,0 +1,982 @@
+      
+      
+      
+      
+
+      <!DOCTYPE html>
+      <html lang="en">
+
+      <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="B::Deparse - perldoc.perl.org">
+        <link rel="icon" href="/public/img/favicon.ico">
+        <title>B::Deparse - perldoc.perl.org</title>
+        <link href="/public/css/main.min.css" rel="stylesheet">
+        <link rel="canonical" href="/B/Deparse.html">
+        <link
+          href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900'
+          rel='stylesheet' type='text/css'>
+        <script>
+          window.ga = window.ga || function () {
+            (ga.q = ga.q || []).push(arguments)
+          };
+          ga.l = +new Date;
+          ga('create', 'UA-1892152-2', 'auto'); // JJ's account
+          ga('create', 'UA-50555-3', 'auto', 'perlOrg'); // perl.org account
+          ga('require', 'outboundLinkTracker', {
+            events: ['click', 'auxclick', 'contextmenu'],
+          });
+          ga('require', 'maxScrollTracker');
+          ga('send', 'pageview');
+          ga('perlOrg.send', 'pageview');
+        </script>
+        <script async src="https://www.google-analytics.com/analytics.js">
+        </script>
+        <script async src="/public/js/tracking.min.js"></script>
+      </head>
+
+      <body class="body container-fluid ">
+        <div class="wrapper">
+
+          <nav
+    class="navbar navbar-dark bg-primary bg-perl fixed-top justify-content-between navbar-expand-lg">
+    <a href="#content" class="skippy sr-only sr-only-focusable">
+        <span class=' skippy-text'>Skip to main content</span>
+    </a>
+    <a class="navbar-brand" href="/">
+        <img class="logo" src="/public/img/logo_perl_doc.svg"
+            alt="Perl Documentation Logo" />
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse"
+        data-target="#navbar" aria-controls="navbar" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="navbar" class="collapse navbar-collapse ">
+        <ul class="navbar-nav ml-auto navbar-right">
+            <form class="nav-item dropdown search-wrapper">
+                <input type="text" id='searchinput' aria-describedby='navbarDropdown5'
+                    placeholder="Type query" class='search-input-field' value=''>
+
+                <button href="#" data-toggle='dropdown' type="button"
+                    aria-haspopup="true" aria-expanded='false' id="navbarDropdown5"
+                    class="nav-link dropdown-toggle search-link">
+                    <object tabindex='-1' focusable="false" class='search-icon'
+                        data="/public/img/search.svg" type="image/svg+xml"
+                        name='search icon'>search
+                        icon</object>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown5"
+                    id='search-results'>
+                    <p class='dropdown-item major-version'>
+                        No results
+                    </p>
+                </div>
+            </form>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown" href="#" class="nav-link dropdown-toggle"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Perl versions</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    
+                        <p class='dropdown-item major-version'>
+                            5.32
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.32.0/">5.32.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.30
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.3/">5.30.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.2/">5.30.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.1/">5.30.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.0/">5.30.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.28
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.3/">5.28.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.2/">5.28.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.1/">5.28.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.0/">5.28.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.26
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.3/">5.26.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.2/">5.26.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.1/">5.26.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.0/">5.26.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.24
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.4/">5.24.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.3/">5.24.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.2/">5.24.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.1/">5.24.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.0/">5.24.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.22
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.4/">5.22.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.3/">5.22.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.2/">5.22.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.1/">5.22.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.0/">5.22.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.20
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.3/">5.20.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.2/">5.20.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.1/">5.20.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.0/">5.20.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.18
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.4/">5.18.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.3/">5.18.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.2/">5.18.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.1/">5.18.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.0/">5.18.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.16
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.3/">5.16.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.2/">5.16.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.1/">5.16.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.0/">5.16.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.14
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.4/">5.14.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.3/">5.14.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.2/">5.14.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.1/">5.14.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.0/">5.14.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.12
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.5/">5.12.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.4/">5.12.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.3/">5.12.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.2/">5.12.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.1/">5.12.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.0/">5.12.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.10
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.1/">5.10.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.0/">5.10.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.8
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.9/">5.8.9</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.8/">5.8.8</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.7/">5.8.7</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.6/">5.8.6</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.5/">5.8.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.4/">5.8.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.3/">5.8.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.2/">5.8.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.1/">5.8.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.0/">5.8.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.6
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.2/">5.6.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.1/">5.6.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.0/">5.6.0</a>
+                        
+                        
+                    
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown1" href="#" class="dropdown-toggle nav-link"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Manuals</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                    <a class="dropdown-item"
+                        href="/5.16.2/index-overview.html">Overview</a>
+                    <a class="dropdown-item"
+                        href="/5.16.2/index-tutorials.html">Tutorials</a>
+                    <a class="dropdown-item"
+                        href="/5.16.2/index-faq.html">FAQs</a>
+                    <a class="dropdown-item"
+                        href="/5.16.2/index-history.html">Changes</a>
+                    <a class="dropdown-item"
+                        href="/5.16.2/index-licence.html">License</a>
+                    <a class="dropdown-item"
+                        href="/5.16.2/index-language.html">Language</a>
+                    <a class="dropdown-item"
+                        href="/5.16.2/index-functions.html">Functions</a>
+                    <a class="dropdown-item"
+                        href="/5.16.2/perlop.html">Operators</a>
+                    <a class="dropdown-item"
+                        href="/5.16.2/perlvar.html">Variables</a>
+                    <a class="dropdown-item"
+                        href="/5.16.2/index-pragmas.html">Pragmas</a>
+                    <a class="dropdown-item"
+                        href="/5.16.2/index-utilities.html">Utilities</a>
+                    <a class="dropdown-item"
+                        href="/5.16.2/index-internals.html">Internals</a>
+                    <a class="dropdown-item"
+                        href="/5.16.2/index-platforms.html">Platforms</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown3" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Modules</a>
+                <div aria-labelledby="navbarDropdown3"
+                    class="dropdown-menu letters-wrap">
+                    <!--<a class="dropdown-item"
+                        href="/5.16.2/index-modules.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.16.2/index-modules-by-cat.html">By
+                        Category</a>-->
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.16.2/index-modules-A.html">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.2/index-modules-B.html">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.2/index-modules-C.html">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.2/index-modules-D.html">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.2/index-modules-E.html">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.2/index-modules-F.html">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.2/index-modules-G.html">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.2/index-modules-H.html">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.2/index-modules-I.html">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.2/index-modules-J.html">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.2/index-modules-K.html">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.2/index-modules-L.html">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.2/index-modules-M.html">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.2/index-modules-N.html">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.2/index-modules-O.html">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.2/index-modules-P.html">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.2/index-modules-Q.html">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.2/index-modules-R.html">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.2/index-modules-S.html">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.2/index-modules-T.html">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.2/index-modules-U.html">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.2/index-modules-V.html">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.2/index-modules-W.html">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.2/index-modules-X.html">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.2/index-modules-Y.html">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.2/index-modules-Z.html">Z</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown4" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Functions</a>
+                <div aria-labelledby="navbarDropdown4"
+                    class="dropdown-menu letters-wrap">
+                    <a class="dropdown-item"
+                        href="/5.16.2/index-functions.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.16.2/index-functions-by-cat.html">By
+                        Category</a>
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.16.2/index-functions.html#A">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.2/index-functions.html#B">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.2/index-functions.html#C">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.2/index-functions.html#D">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.2/index-functions.html#E">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.2/index-functions.html#F">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.2/index-functions.html#G">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.2/index-functions.html#H">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.2/index-functions.html#I">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.2/index-functions.html#J">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.2/index-functions.html#K">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.2/index-functions.html#L">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.2/index-functions.html#M">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.2/index-functions.html#N">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.2/index-functions.html#O">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.2/index-functions.html#P">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.2/index-functions.html#Q">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.2/index-functions.html#R">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.2/index-functions.html#S">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.2/index-functions.html#T">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.2/index-functions.html#U">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.2/index-functions.html#V">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.2/index-functions.html#W">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.2/index-functions.html#X">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.2/index-functions.html#Y">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.2/index-functions.html#Z">Z</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!--/.nav-collapse -->
+</nav>
+
+
+          <main class="row main-content pb-5 pt-5" id='content'>
+            <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+              <div class="row">
+                <div class="col-sm-12">
+                  <div id="breadcrumbs">
+                      
+    <a href="../index.html">Home</a>&nbsp; &gt;
+    
+      
+        <a href="../index-modules-B.html">Core modules (B)</a> &gt;
+      
+    
+    B::Deparse
+  
+
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <article class="col-sm-12 content">
+                  <div class="documentation-wrapper">
+                    <div id="perl_version">
+                      <h7 class='page-title'> Perl 5 version 16.2
+                        documentation</h7>
+                    </div>
+                    <h1>B::Deparse</h1>
+
+
+  <!--    -->
+<ul><li><a href="#NAME">NAME</a></li><li><a href="#SYNOPSIS">SYNOPSIS</a></li><li><a href="#DESCRIPTION">DESCRIPTION</a></li><li><a href="#OPTIONS">OPTIONS</a></li><li><a href="#USING-B%3a%3aDeparse-AS-A-MODULE">USING B::Deparse AS A MODULE</a></li><ul><li><a href="#Synopsis">Synopsis</a></li><li><a href="#Description">Description</a></li><li><a href="#new">new</a></li><li><a href="#ambient_pragmas">ambient_pragmas</a></li><li><a href="#coderef2text">coderef2text</a></li></ul><li><a href="#BUGS">BUGS</a></li><li><a href="#AUTHOR">AUTHOR</a></li></ul><a class='view-head1' id="NAME"></a><h2 class='h2' >NAME</h2>
+<p>B::Deparse - Perl compiler backend to produce perl code</p>
+<a class='view-head1' id="SYNOPSIS"></a><h2 class='h2' >SYNOPSIS</h2>
+<p><strong>perl</strong> <strong>-MO=Deparse</strong>[<strong>,-d</strong>][<strong>,-f</strong><i>FILE</i>][<strong>,-p</strong>][<strong>,-q</strong>][<strong>,-l</strong>]
+        [<strong>,-s</strong><i>LETTERS</i>][<strong>,-x</strong><i>LEVEL</i>] <i>prog.pl</i></p>
+<a class='view-head1' id="DESCRIPTION"></a><h2 class='h2' >DESCRIPTION</h2>
+<p>B::Deparse is a backend module for the Perl compiler that generates
+perl source code, based on the internal compiled structure that perl
+itself creates after parsing a program.  The output of B::Deparse won't
+be exactly the same as the original source, since perl doesn't keep
+track of comments or whitespace, and there isn't a one-to-one
+correspondence between perl's syntactical constructions and their
+compiled form, but it will often be close.  When you use the <strong>-p</strong>
+option, the output also includes parentheses even when they are not
+required by precedence, which can make it easy to see if perl is
+parsing your expressions the way you intended.</p>
+<p>While B::Deparse goes to some lengths to try to figure out what your
+original program was doing, some parts of the language can still trip
+it up; it still fails even on some parts of Perl's own test suite.  If
+you encounter a failure other than the most common ones described in
+the BUGS section below, you can help contribute to B::Deparse's
+ongoing development by submitting a bug report with a small
+example.</p>
+<a class='view-head1' id="OPTIONS"></a><h2 class='h2' >OPTIONS</h2>
+<p>As with all compiler backend options, these must follow directly after
+the '-MO=Deparse', separated by a comma but not any white space.</p>
+<ul>
+<li><a class='view-title' id="*-d*"></a><strong><strong>-d</strong></strong>
+<p>Output data values (when they appear as constants) using Data::Dumper.
+Without this option, B::Deparse will use some simple routines of its
+own for the same purpose.  Currently, Data::Dumper is better for some
+kinds of data (such as complex structures with sharing and
+self-reference) while the built-in routines are better for others
+(such as odd floating-point values).</p>
+</li>
+<li><a class='view-title' id="*-f*_FILE_"></a><strong><strong>-f</strong><i>FILE</i></strong>
+<p>Normally, B::Deparse deparses the main code of a program, and all the subs
+defined in the same file.  To include subs defined in
+other files, pass the <strong>-f</strong> option with the filename.
+You can pass the <strong>-f</strong> option several times, to
+include more than one secondary file.  (Most of the time you don't want to
+use it at all.)  You can also use this option to include subs which are
+defined in the scope of a <strong>#line</strong> directive with two parameters.</p>
+</li>
+<li><a class='view-title' id="*-l*"></a><strong><strong>-l</strong></strong>
+<p>Add '#line' declarations to the output based on the line and file
+locations of the original code.</p>
+</li>
+<li><a class='view-title' id="*-p*"></a><strong><strong>-p</strong></strong>
+<p>Print extra parentheses.  Without this option, B::Deparse includes
+parentheses in its output only when they are needed, based on the
+structure of your program.  With <strong>-p</strong>, it uses parentheses (almost)
+whenever they would be legal.  This can be useful if you are used to
+LISP, or if you want to see how perl parses your input.  If you say</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/if.html">if</a> <span class="s">(</span><span class="i">$var</span> &amp; <span class="n">0x7f</span> == <span class="n">65</span><span class="s">)</span> <span class="s">{</span><a class="l_k" href="../functions/print.html">print</a> <span class="q">&quot;Gimme an A!&quot;</span><span class="s">}</span></li><li>    <a class="l_k" href="../functions/print.html">print</a> <span class="s">(</span><span class="i">$which</span> ? <span class="i">$a</span> <span class="co">:</span> <span class="i">$b</span><span class="s">)</span><span class="cm">,</span> <span class="q">&quot;\n&quot;</span><span class="sc">;</span></li><li>    <span class="i">$name</span> = <span class="i">$ENV</span>{<span class="w">USER</span>} <a class="l_k" href="../functions/or.html">or</a> <span class="q">&quot;Bob&quot;</span><span class="sc">;</span></li></ol></pre><p><code class="inline"><span class="w">B::Deparse</span><span class="cm">,</span>-p</code>
+ will print</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/if.html">if</a> <span class="s">(</span><span class="s">(</span><span class="i">$var</span> &amp; <span class="n">0</span><span class="s">)</span><span class="s">)</span> <span class="s">{</span></li><li>        <a class="l_k" href="../functions/print.html">print</a><span class="s">(</span><span class="q">&#39;Gimme an A!&#39;</span><span class="s">)</span></li><li>    <span class="s">}</span><span class="sc">;</span></li><li>    <span class="s">(</span><a class="l_k" href="../functions/print.html">print</a><span class="s">(</span><span class="s">(</span><span class="i">$which</span> ? <span class="i">$a</span> <span class="co">:</span> <span class="i">$b</span><span class="s">)</span><span class="s">)</span><span class="cm">,</span> <span class="q">&#39;???&#39;</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="s">(</span><span class="s">(</span><span class="i">$name</span> = <span class="i">$ENV</span>{<span class="q">&#39;USER&#39;</span>}<span class="s">)</span> <a class="l_k" href="../functions/or.html">or</a> <span class="q">&#39;???&#39;</span><span class="s">)</span></li></ol></pre><p>which probably isn't what you intended (the <code class="inline"><span class="q">&#39;???&#39;</span></code>
+ is a sign that
+perl optimized away a constant value).</p>
+</li>
+<li><a class='view-title' id="*-P*"></a><strong><strong>-P</strong></strong>
+<p>Disable prototype checking.  With this option, all function calls are
+deparsed as if no prototype was defined for them.  In other words,</p>
+<pre class="verbatim"><ol><li>    <span class="w">perl</span> -<span class="w">MO</span>=<span class="w">Deparse</span><span class="cm">,</span>-<span class="w">P</span> -e <span class="q">&#39;sub foo (\@) { 1 } foo @x&#39;</span></li></ol></pre><p>will print</p>
+<pre class="verbatim"><ol><li><a name="foo"></a>    sub <span class="m">foo (\@)</span> <span class="s">{</span></li><li>	<span class="n">1</span><span class="sc">;</span></li><li>    <span class="s">}</span></li><li>    <span class="i">&amp;foo</span><span class="s">(</span>\<span class="i">@x</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>making clear how the parameters are actually passed to <code class="inline"><span class="w">foo</span></code>
+.</p>
+</li>
+<li><a class='view-title' id="*-q*"></a><strong><strong>-q</strong></strong>
+<p>Expand double-quoted strings into the corresponding combinations of
+concatenation, uc, ucfirst, lc, lcfirst, quotemeta, and join.  For
+instance, print</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/print.html">print</a> <span class="q">&quot;Hello, $world, @ladies, \u$gentlemen\E, \u\L$me!&quot;</span><span class="sc">;</span></li></ol></pre><p>as</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/print.html">print</a> <span class="q">&#39;Hello, &#39;</span> . <span class="i">$world</span> . <span class="q">&#39;, &#39;</span> . <a class="l_k" href="../functions/join.html">join</a><span class="s">(</span><span class="i">$&quot;</span><span class="cm">,</span> <span class="i">@ladies</span><span class="s">)</span> . <span class="q">&#39;, &#39;</span></li><li>          . <a class="l_k" href="../functions/ucfirst.html">ucfirst</a><span class="s">(</span><span class="i">$gentlemen</span><span class="s">)</span> . <span class="q">&#39;, &#39;</span> . <a class="l_k" href="../functions/ucfirst.html">ucfirst</a><span class="s">(</span><a class="l_k" href="../functions/lc.html">lc</a> <span class="i">$me</span> . <span class="q">&#39;!&#39;</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>Note that the expanded form represents the way perl handles such
+constructions internally -- this option actually turns off the reverse
+translation that B::Deparse usually does.  On the other hand, note that
+<code class="inline"><span class="i">$x</span> = <span class="q">&quot;$y&quot;</span></code>
+ is not the same as <code class="inline"><span class="i">$x</span> = <span class="i">$y</span></code>
+: the former makes the value
+of $y into a string before doing the assignment.</p>
+</li>
+<li><a class='view-title' id="*-s*_LETTERS_"></a><strong><strong>-s</strong><i>LETTERS</i></strong>
+<p>Tweak the style of B::Deparse's output.  The letters should follow
+directly after the 's', with no space or punctuation.  The following
+options are available:</p>
+<ul>
+<li><a class='view-title' id="*C*"></a><strong><strong>C</strong></strong>
+<p>Cuddle <code class="inline"><a class="l_k" href="../functions/elsif.html">elsif</a></code>, <code class="inline"><a class="l_k" href="../functions/else.html">else</a></code>, and <code class="inline"><a class="l_k" href="../functions/continue.html">continue</a></code> blocks.  For example, print</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/if.html">if</a> <span class="s">(</span>...<span class="s">)</span> <span class="s">{</span></li><li>         ...</li><li>    <span class="s">}</span> <a class="l_k" href="../functions/else.html">else</a> <span class="s">{</span></li><li>         ...</li><li>    <span class="s">}</span></li></ol></pre><p>instead of</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/if.html">if</a> <span class="s">(</span>...<span class="s">)</span> <span class="s">{</span></li><li>         ...</li><li>    <span class="s">}</span></li><li>    <a class="l_k" href="../functions/else.html">else</a> <span class="s">{</span></li><li>         ...</li><li>    <span class="s">}</span></li></ol></pre><p>The default is not to cuddle.</p>
+</li>
+<li><a class='view-title' id="*i*_NUMBER_"></a><strong><strong>i</strong><i>NUMBER</i></strong>
+<p>Indent lines by multiples of <i>NUMBER</i> columns.  The default is 4 columns.</p>
+</li>
+<li><a class='view-title' id="*T*"></a><strong><strong>T</strong></strong>
+<p>Use tabs for each 8 columns of indent.  The default is to use only spaces.
+For instance, if the style options are <strong>-si4T</strong>, a line that's indented
+3 times will be preceded by one tab and four spaces; if the options were
+<strong>-si8T</strong>, the same line would be preceded by three tabs.</p>
+</li>
+<li><a class='view-title' id="*v*_STRING_*.*"></a><strong><strong>v</strong><i>STRING</i><strong>.</strong></strong>
+<p>Print <i>STRING</i> for the value of a constant that can't be determined
+because it was optimized away (mnemonic: this happens when a constant
+is used in <strong>v</strong>oid context).  The end of the string is marked by a period.
+The string should be a valid perl expression, generally a constant.
+Note that unless it's a number, it probably needs to be quoted, and on
+a command line quotes need to be protected from the shell.  Some
+conventional values include 0, 1, 42, '', 'foo', and
+'Useless use of constant omitted' (which may need to be
+<strong>-sv"'Useless use of constant omitted'."</strong>
+or something similar depending on your shell).  The default is '???'.
+If you're using B::Deparse on a module or other file that's require'd,
+you shouldn't use a value that evaluates to false, since the customary
+true constant at the end of a module will be in void context when the
+file is compiled as a main program.</p>
+</li>
+</ul>
+</li>
+<li><a class='view-title' id="*-x*_LEVEL_"></a><strong><strong>-x</strong><i>LEVEL</i></strong>
+<p>Expand conventional syntax constructions into equivalent ones that expose
+their internal operation.  <i>LEVEL</i> should be a digit, with higher values
+meaning more expansion.  As with <strong>-q</strong>, this actually involves turning off
+special cases in B::Deparse's normal operations.</p>
+<p>If <i>LEVEL</i> is at least 3, <code class="inline"><a class="l_k" href="../functions/for.html">for</a></code> loops will be translated into equivalent
+while loops with continue blocks; for instance</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/for.html">for</a> <span class="s">(</span><span class="i">$i</span> = <span class="n">0</span><span class="sc">;</span> <span class="i">$i</span> &lt; <span class="n">10</span><span class="sc">;</span> ++<span class="i">$i</span><span class="s">)</span> <span class="s">{</span></li><li>        <a class="l_k" href="../functions/print.html">print</a> <span class="i">$i</span><span class="sc">;</span></li><li>    <span class="s">}</span></li></ol></pre><p>turns into</p>
+<pre class="verbatim"><ol><li>    <span class="i">$i</span> = <span class="n">0</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/while.html">while</a> <span class="s">(</span><span class="i">$i</span> &lt; <span class="n">10</span><span class="s">)</span> <span class="s">{</span></li><li>        <a class="l_k" href="../functions/print.html">print</a> <span class="i">$i</span><span class="sc">;</span></li><li>    <span class="s">}</span> <a class="l_k" href="../functions/continue.html">continue</a> <span class="s">{</span></li><li>        ++<span class="i">$i</span></li><li>    <span class="s">}</span></li></ol></pre><p>Note that in a few cases this translation can't be perfectly carried back
+into the source code -- if the loop's initializer declares a my variable,
+for instance, it won't have the correct scope outside of the loop.</p>
+<p>If <i>LEVEL</i> is at least 5, <code class="inline"><a class="l_k" href="../functions/use.html">use</a></code> declarations will be translated into
+<code class="inline"><a class="l_k" href="../functions/BEGIN.html">BEGIN</a></code> blocks containing calls to <code class="inline"><a class="l_k" href="../functions/require.html">require</a></code> and <code class="inline"><a class="l_k" href="../functions/import.html">import</a></code>; for
+instance,</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">strict</span> <span class="q">&#39;refs&#39;</span><span class="sc">;</span></li></ol></pre><p>turns into</p>
+<pre class="verbatim"><ol><li><a name="BEGIN"></a>    sub <span class="m">BEGIN</span> <span class="s">{</span></li><li>        <a class="l_k" href="../functions/require.html">require</a> <span class="w">strict</span><span class="sc">;</span></li><li>        <a class="l_k" href="../functions/do.html">do</a> <span class="s">{</span></li><li>            <span class="q">&#39;strict&#39;</span><span class="i">-&gt;import</span><span class="s">(</span><span class="q">&#39;refs&#39;</span><span class="s">)</span></li><li>        <span class="s">}</span><span class="sc">;</span></li><li>    <span class="s">}</span></li></ol></pre><p>If <i>LEVEL</i> is at least 7, <code class="inline"><a class="l_k" href="../functions/if.html">if</a></code> statements will be translated into
+equivalent expressions using <code class="inline">&amp;&amp;</code>
+, <code class="inline"><span class="q">?:</span></code>
+ and <code class="inline"><a class="l_k" href="../functions/do.html">do</a> <span class="s">{</span><span class="s">}</span></code>
+; for instance</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/print.html">print</a> <span class="q">&#39;hi&#39;</span> <a class="l_k" href="../functions/if.html">if</a> <span class="i">$nice</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/if.html">if</a> <span class="s">(</span><span class="i">$nice</span><span class="s">)</span> <span class="s">{</span></li><li>        <a class="l_k" href="../functions/print.html">print</a> <span class="q">&#39;hi&#39;</span><span class="sc">;</span></li><li>    <span class="s">}</span></li><li>    <a class="l_k" href="../functions/if.html">if</a> <span class="s">(</span><span class="i">$nice</span><span class="s">)</span> <span class="s">{</span></li><li>        <a class="l_k" href="../functions/print.html">print</a> <span class="q">&#39;hi&#39;</span><span class="sc">;</span></li><li>    <span class="s">}</span> <a class="l_k" href="../functions/else.html">else</a> <span class="s">{</span></li><li>        <a class="l_k" href="../functions/print.html">print</a> <span class="q">&#39;bye&#39;</span><span class="sc">;</span></li><li>    <span class="s">}</span></li></ol></pre><p>turns into</p>
+<pre class="verbatim"><ol><li>    <span class="i">$nice</span> <a class="l_k" href="../functions/and.html">and</a> <a class="l_k" href="../functions/print.html">print</a> <span class="q">&#39;hi&#39;</span><span class="sc">;</span></li><li>    <span class="i">$nice</span> <a class="l_k" href="../functions/and.html">and</a> <a class="l_k" href="../functions/do.html">do</a> <span class="s">{</span> <a class="l_k" href="../functions/print.html">print</a> <span class="q">&#39;hi&#39;</span> <span class="s">}</span><span class="sc">;</span></li><li>    <span class="i">$nice</span> ? <a class="l_k" href="../functions/do.html">do</a> <span class="s">{</span> <a class="l_k" href="../functions/print.html">print</a> <span class="q">&#39;hi&#39;</span> <span class="s">}</span> <span class="co">:</span> <a class="l_k" href="../functions/do.html">do</a> <span class="s">{</span> <a class="l_k" href="../functions/print.html">print</a> <span class="q">&#39;bye&#39;</span> <span class="s">}</span><span class="sc">;</span></li></ol></pre><p>Long sequences of elsifs will turn into nested ternary operators, which
+B::Deparse doesn't know how to indent nicely.</p>
+</li>
+</ul>
+<a class='view-head1' id="USING-B%3a%3aDeparse-AS-A-MODULE"></a><h2 class='h2' >USING B::Deparse AS A MODULE</h2>
+<a class='view-head2' id="Synopsis"></a><h3 class='h3' >Synopsis</h3>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">B::Deparse</span><span class="sc">;</span></li><li>    <span class="i">$deparse</span> = <span class="w">B::Deparse</span><span class="w">-&gt;new</span><span class="s">(</span><span class="q">&quot;-p&quot;</span><span class="cm">,</span> <span class="q">&quot;-sC&quot;</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="i">$body</span> = <span class="i">$deparse</span><span class="i">-&gt;coderef2text</span><span class="s">(</span>\<span class="i">&amp;func</span><span class="s">)</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/eval.html">eval</a> <span class="q">&quot;sub func $body&quot;</span><span class="sc">;</span> <span class="c"># the inverse operation</span></li></ol></pre><a class='view-head2' id="Description"></a><h3 class='h3' >Description</h3>
+<p>B::Deparse can also be used on a sub-by-sub basis from other perl
+programs.</p>
+<a class='view-head2' id="new"></a><h3 class='h3' >new</h3>
+<pre class="verbatim"><ol><li>    <span class="i">$deparse</span> = <span class="w">B::Deparse</span><span class="w">-&gt;new</span><span class="s">(</span><span class="w">OPTIONS</span><span class="s">)</span></li></ol></pre><p>Create an object to store the state of a deparsing operation and any
+options.  The options are the same as those that can be given on the
+command line (see <a href="#OPTIONS">OPTIONS</a>); options that are separated by commas
+after <strong>-MO=Deparse</strong> should be given as separate strings.</p>
+<a class='view-head2' id="ambient_pragmas"></a><h3 class='h3' >ambient_pragmas</h3>
+<pre class="verbatim"><ol><li>    <span class="i">$deparse</span><span class="i">-&gt;ambient_pragmas</span><span class="s">(</span><span class="w">strict</span> <span class="cm">=&gt;</span> <span class="q">&#39;all&#39;</span><span class="cm">,</span> <span class="q">&#39;$[&#39;</span> <span class="cm">=&gt;</span> <span class="i">$[</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>The compilation of a subroutine can be affected by a few compiler
+directives, <strong>pragmas</strong>.  These are:</p>
+<ul>
+<li>
+<p>use strict;</p>
+</li>
+<li>
+<p>use warnings;</p>
+</li>
+<li>
+<p>Assigning to the special variable $[</p>
+</li>
+<li>
+<p>use integer;</p>
+</li>
+<li>
+<p>use bytes;</p>
+</li>
+<li>
+<p>use utf8;</p>
+</li>
+<li>
+<p>use re;</p>
+</li>
+</ul>
+<p>Ordinarily, if you use B::Deparse on a subroutine which has
+been compiled in the presence of one or more of these pragmas,
+the output will include statements to turn on the appropriate
+directives.  So if you then compile the code returned by coderef2text,
+it will behave the same way as the subroutine which you deparsed.</p>
+<p>However, you may know that you intend to use the results in a
+particular context, where some pragmas are already in scope.  In
+this case, you use the <strong>ambient_pragmas</strong> method to describe the
+assumptions you wish to make.</p>
+<p>Not all of the options currently have any useful effect.  See
+<a href="#BUGS">BUGS</a> for more details.</p>
+<p>The parameters it accepts are:</p>
+<ul>
+<li><a class='view-title' id="strict"></a><strong>strict</strong>
+<p>Takes a string, possibly containing several values separated
+by whitespace.  The special values "all" and "none" mean what you'd
+expect.</p>
+<pre class="verbatim"><ol><li>    <span class="i">$deparse</span><span class="i">-&gt;ambient_pragmas</span><span class="s">(</span><span class="w">strict</span> <span class="cm">=&gt;</span> <span class="q">&#39;subs refs&#39;</span><span class="s">)</span><span class="sc">;</span></li></ol></pre></li>
+<li><a class='view-title' id="%24%5b"></a><strong>$[</strong>
+<p>Takes a number, the value of the array base $[.
+Cannot be non-zero on Perl 5.15.3 or later.</p>
+</li>
+<li><a class='view-title' id="bytes"></a><strong>bytes</strong>
+</li>
+<li><a class='view-title' id="utf8"></a><strong>utf8</strong>
+</li>
+<li><a class='view-title' id="integer"></a><strong>integer</strong>
+<p>If the value is true, then the appropriate pragma is assumed to
+be in the ambient scope, otherwise not.</p>
+</li>
+<li><a class='view-title' id="re"></a><strong>re</strong>
+<p>Takes a string, possibly containing a whitespace-separated list of
+values.  The values "all" and "none" are special.  It's also permissible
+to pass an array reference here.</p>
+<pre class="verbatim"><ol><li>    <span class="i">$deparser</span><span class="i">-&gt;ambient_pragmas</span><span class="s">(</span><span class="w">re</span> <span class="cm">=&gt;</span> <span class="q">&#39;eval&#39;</span><span class="s">)</span><span class="sc">;</span></li></ol></pre></li>
+<li><a class='view-title' id="warnings"></a><strong>warnings</strong>
+<p>Takes a string, possibly containing a whitespace-separated list of
+values.  The values "all" and "none" are special, again.  It's also
+permissible to pass an array reference here.</p>
+<pre class="verbatim"><ol><li>    <span class="i">$deparser</span><span class="i">-&gt;ambient_pragmas</span><span class="s">(</span><span class="w">warnings</span> <span class="cm">=&gt;</span> <span class="s">[</span><span class="q">qw[void io]</span><span class="s">]</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>If one of the values is the string "FATAL", then all the warnings
+in that list will be considered fatal, just as with the <strong>warnings</strong>
+pragma itself.  Should you need to specify that some warnings are
+fatal, and others are merely enabled, you can pass the <strong>warnings</strong>
+parameter twice:</p>
+<pre class="verbatim"><ol><li>    <span class="i">$deparser</span><span class="i">-&gt;ambient_pragmas</span><span class="s">(</span></li><li>	<span class="w">warnings</span> <span class="cm">=&gt;</span> <span class="q">&#39;all&#39;</span><span class="cm">,</span></li><li>	<span class="w">warnings</span> <span class="cm">=&gt;</span> <span class="s">[</span><span class="w">FATAL</span> <span class="cm">=&gt;</span> <span class="q">qw/void io/</span><span class="s">]</span><span class="cm">,</span></li><li>    <span class="s">)</span><span class="sc">;</span></li></ol></pre><p>See <a href="../perllexwarn.html">perllexwarn</a> for more information about lexical warnings.</p>
+</li>
+<li><a class='view-title' id="hint_bits"></a><strong>hint_bits</strong>
+</li>
+<li><a class='view-title' id="warning_bits"></a><strong>warning_bits</strong>
+<p>These two parameters are used to specify the ambient pragmas in
+the format used by the special variables $^H and ${^WARNING_BITS}.</p>
+<p>They exist principally so that you can write code like:</p>
+<pre class="verbatim"><ol><li>    <span class="s">{</span> <a class="l_k" href="../functions/my.html">my</a> <span class="s">(</span><span class="i">$hint_bits</span><span class="cm">,</span> <span class="i">$warning_bits</span><span class="s">)</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/BEGIN.html">BEGIN</a> <span class="s">{</span><span class="s">(</span><span class="i">$hint_bits</span><span class="cm">,</span> <span class="i">$warning_bits</span><span class="s">)</span> = <span class="s">(</span><span class="i">$^H</span><span class="cm">,</span> <span class="i">$</span>{<span class="w">^WARNING_BITS</span>}<span class="s">)</span><span class="s">}</span></li><li>    <span class="i">$deparser</span><span class="i">-&gt;ambient_pragmas</span> <span class="s">(</span></li><li>	<span class="w">hint_bits</span>    <span class="cm">=&gt;</span> <span class="i">$hint_bits</span><span class="cm">,</span></li><li>	<span class="w">warning_bits</span> <span class="cm">=&gt;</span> <span class="i">$warning_bits</span><span class="cm">,</span></li><li>	<span class="q">&#39;$[&#39;</span>         <span class="cm">=&gt;</span> <span class="n">0</span> + <span class="i">$[</span></li><li>    <span class="s">)</span><span class="sc">;</span> <span class="s">}</span></li></ol></pre><p>which specifies that the ambient pragmas are exactly those which
+are in scope at the point of calling.</p>
+</li>
+<li><a class='view-title' id="%25%5eH"></a><strong>%^H</strong>
+<p>This parameter is used to specify the ambient pragmas which are
+stored in the special hash %^H.</p>
+</li>
+</ul>
+<a class='view-head2' id="coderef2text"></a><h3 class='h3' >coderef2text</h3>
+<pre class="verbatim"><ol><li>    <span class="i">$body</span> = <span class="i">$deparse</span><span class="i">-&gt;coderef2text</span><span class="s">(</span>\<span class="i">&amp;func</span><span class="s">)</span></li><li>    <span class="i">$body</span> = <span class="i">$deparse</span><span class="i">-&gt;coderef2text</span><span class="s">(</span><span class="i">sub ($$)</span> <span class="s">{</span> ... <span class="s">}</span><span class="s">)</span></li></ol></pre><p>Return source code for the body of a subroutine (a block, optionally
+preceded by a prototype in parens), given a reference to the
+sub.  Because a subroutine can have no names, or more than one name,
+this method doesn't return a complete subroutine definition -- if you
+want to eval the result, you should prepend "sub subname ", or "sub "
+for an anonymous function constructor.  Unless the sub was defined in
+the main:: package, the code will include a package declaration.</p>
+<a class='view-head1' id="BUGS"></a><h2 class='h2' >BUGS</h2>
+<ul>
+<li>
+<p>The only pragmas to be completely supported are: <code class="inline"><a class="l_k" href="../functions/use.html">use</a> <span class="w">warnings</span></code>
+,
+<code class="inline"><a class="l_k" href="../functions/use.html">use</a> <span class="w">strict</span></code>
+, <code class="inline"><a class="l_k" href="../functions/use.html">use</a> <span class="w">bytes</span></code>
+, <code class="inline"><a class="l_k" href="../functions/use.html">use</a> <span class="w">integer</span></code>
+
+and <code class="inline"><a class="l_k" href="../functions/use.html">use</a> <span class="w">feature</span></code>
+.  (<code class="inline"><span class="i">$[</span></code>
+, which
+behaves like a pragma, is also supported.)</p>
+<p>Excepting those listed above, we're currently unable to guarantee that
+B::Deparse will produce a pragma at the correct point in the program.
+(Specifically, pragmas at the beginning of a block often appear right
+before the start of the block instead.)
+Since the effects of pragmas are often lexically scoped, this can mean
+that the pragma holds sway over a different portion of the program
+than in the input file.</p>
+</li>
+<li>
+<p>In fact, the above is a specific instance of a more general problem:
+we can't guarantee to produce BEGIN blocks or <code class="inline"><a class="l_k" href="../functions/use.html">use</a></code> declarations in
+exactly the right place.  So if you use a module which affects compilation
+(such as by over-riding keywords, overloading constants or whatever)
+then the output code might not work as intended.</p>
+<p>This is the most serious outstanding problem, and will require some help
+from the Perl core to fix.</p>
+</li>
+<li>
+<p>Some constants don't print correctly either with or without <strong>-d</strong>.
+For instance, neither B::Deparse nor Data::Dumper know how to print
+dual-valued scalars correctly, as in:</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">constant</span> <span class="i">E2BIG</span> <span class="cm">=&gt;</span> <span class="s">(</span><span class="i">$!</span>=<span class="n">7</span><span class="s">)</span><span class="sc">;</span> <span class="i">$y</span> = <span class="i">E2BIG</span><span class="sc">;</span> <a class="l_k" href="../functions/print.html">print</a> <span class="i">$y</span><span class="cm">,</span> <span class="n">0</span>+<span class="i">$y</span><span class="sc">;</span></li><li></li><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">constant</span> <span class="i">H</span> <span class="cm">=&gt;</span> <span class="s">{</span> <span class="q">&quot;#&quot;</span> <span class="cm">=&gt;</span> <span class="n">1</span> <span class="s">}</span><span class="sc">;</span> <span class="i">H</span>-&gt;{<span class="q">&quot;#&quot;</span>}<span class="sc">;</span></li></ol></pre></li>
+<li>
+<p>An input file that uses source filtering probably won't be deparsed into
+runnable code, because it will still include the <strong>use</strong> declaration
+for the source filtering module, even though the code that is
+produced is already ordinary Perl which shouldn't be filtered again.</p>
+</li>
+<li>
+<p>Optimised away statements are rendered as
+'???'.  This includes statements that
+have a compile-time side-effect, such as the obscure</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">$x</span> <a class="l_k" href="../functions/if.html">if</a> <span class="n">0</span><span class="sc">;</span></li></ol></pre><p>which is not, consequently, deparsed correctly.</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/foreach.html">foreach</a> <a class="l_k" href="../functions/my.html">my</a> <span class="i">$i</span> <span class="s">(</span><span class="i">@_</span><span class="s">)</span> <span class="s">{</span> <span class="n">0</span> <span class="s">}</span></li><li>  <span class="cm">=&gt;</span></li><li>    <a class="l_k" href="../functions/foreach.html">foreach</a> <a class="l_k" href="../functions/my.html">my</a> <span class="i">$i</span> <span class="s">(</span><span class="i">@_</span><span class="s">)</span> { <span class="q">&#39;???&#39;</span> }</li></ol></pre></li>
+<li>
+<p>Lexical (my) variables declared in scopes external to a subroutine
+appear in code2ref output text as package variables.  This is a tricky
+problem, as perl has no native facility for referring to a lexical variable
+defined within a different scope, although <a href="https://search.cpan.org/perldoc/PadWalker">PadWalker</a> is a good start.</p>
+</li>
+<li>
+<p>There are probably many more bugs on non-ASCII platforms (EBCDIC).</p>
+</li>
+</ul>
+<a class='view-head1' id="AUTHOR"></a><h2 class='h2' >AUTHOR</h2>
+<p>Stephen McCamant &lt;smcc@CSUA.Berkeley.EDU&gt;, based on an earlier version
+by Malcolm Beattie &lt;mbeattie@sable.ox.ac.uk&gt;, with contributions from
+Gisle Aas, James Duncan, Albert Dvornik, Robin Houston, Dave Mitchell,
+Hugo van der Sanden, Gurusamy Sarathy, Nick Ing-Simmons, and Rafael
+Garcia-Suarez.</p>
+
+
+
+
+      <ul><li><a href="#NAME">NAME</a></li><li><a href="#SYNOPSIS">SYNOPSIS</a></li><li><a href="#DESCRIPTION">DESCRIPTION</a></li><li><a href="#OPTIONS">OPTIONS</a></li><li><a href="#USING-B%3a%3aDeparse-AS-A-MODULE">USING B::Deparse AS A MODULE</a></li><ul><li><a href="#Synopsis">Synopsis</a></li><li><a href="#Description">Description</a></li><li><a href="#new">new</a></li><li><a href="#ambient_pragmas">ambient_pragmas</a></li><li><a href="#coderef2text">coderef2text</a></li></ul><li><a href="#BUGS">BUGS</a></li><li><a href="#AUTHOR">AUTHOR</a></li></ul>
+
+
+                  </div>
+                </article>
+              </div>
+            </div>
+          </main>
+        </div>
+           <footer class="footer row bg-light pt-5 pb-5">
+       <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+           <div class="row">
+               <div class="col-md-4">
+                   <ul class="list-unstyled">
+                       <li>
+                           <h4>Site info</h4>
+                       </li>
+                       <li>Docs mantained by
+                           <a href="//lists.perl.org/list/perl5-porters.html"
+                               rel="noopener">Perl 5 Porters</a>
+                       </li>
+                       <li>Perldoc site development sponsored by
+                           <a href="//opusvl.com" rel="noopener">
+                           <img style="margin: 20px 20px 5px 10px" class="opus-logo" src="/public/img/opusvl_logo.svg" alt="OpusVL Logo">
+                        </a>
+                    <li><span class="about_perldoc"><a href="//about.html">About PerlDOC</a></span>
+                    </li>
+                       </li>
+                   </ul>
+               </div>
+               <div class="col-md-8">
+                   <div class="row">
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Manuals</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.16.2/index-overview.html">Overview</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.16.2/index-tutorials.html">Tutorials</a>
+                               </li>
+                               <li>
+                                   <a href="/5.16.2/index-faq.html">FAQs</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.16.2/index-history.html">Changes</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Reference</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.16.2/index-language.html">Language</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.16.2/index-functions.html">Functions</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.16.2/perlop.html">Operators</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.16.2/perlvar.html">Variables</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Modules</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.16.2/index-modules-A.html">Modules</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.16.2/index-pragmas.html">Pragmas</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.16.2/index-utilities.html">Utilities</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Misc</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.16.2/index-licence.html">License</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.16.2/index-internals.html">Internals</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.16.2/index-platforms.html">Platforms</a>
+                               </li>
+                            <li>
+                                <a
+                                    href="/5.16.2/index-about.html">About</a>
+                            </li>
+                           </ul>
+                       </div>
+                   </div>
+               </div>
+               <div class=" col-12 footer-inf text-center">
+                   <small>perldoc.perl.org - Official documentation for the Perl
+                       programming language</small>
+               </div>
+           </div>
+       </div>
+   </footer>
+
+        	<div class="beta-wrapper beta-bottom-right ">
+		<div class="beta beta-blue  ">
+			<a class="beta-link "
+				href="//github.com/OpusVL/perldoc.perl.org/issues/new" rel="noopener">
+				<span class="beta-text">
+					This website is a Beta release.
+				</span>
+				<span class="beta-text">
+					For any issues please raise a ticket on GitHub
+				</span>
+			</a>
+		</div>
+	</div>
+
+        <script src="/public/js/main.min.js"></script>
+      </body>
+
+      </html>

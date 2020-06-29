@@ -1,0 +1,1444 @@
+      
+      
+      
+      
+
+      <!DOCTYPE html>
+      <html lang="en">
+
+      <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="TAP::Parser - perldoc.perl.org">
+        <link rel="icon" href="/public/img/favicon.ico">
+        <title>TAP::Parser - perldoc.perl.org</title>
+        <link href="/public/css/main.min.css" rel="stylesheet">
+        <link rel="canonical" href="/TAP/Parser.html">
+        <link
+          href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900'
+          rel='stylesheet' type='text/css'>
+        <script>
+          window.ga = window.ga || function () {
+            (ga.q = ga.q || []).push(arguments)
+          };
+          ga.l = +new Date;
+          ga('create', 'UA-1892152-2', 'auto'); // JJ's account
+          ga('create', 'UA-50555-3', 'auto', 'perlOrg'); // perl.org account
+          ga('require', 'outboundLinkTracker', {
+            events: ['click', 'auxclick', 'contextmenu'],
+          });
+          ga('require', 'maxScrollTracker');
+          ga('send', 'pageview');
+          ga('perlOrg.send', 'pageview');
+        </script>
+        <script async src="https://www.google-analytics.com/analytics.js">
+        </script>
+        <script async src="/public/js/tracking.min.js"></script>
+      </head>
+
+      <body class="body container-fluid ">
+        <div class="wrapper">
+
+          <nav
+    class="navbar navbar-dark bg-primary bg-perl fixed-top justify-content-between navbar-expand-lg">
+    <a href="#content" class="skippy sr-only sr-only-focusable">
+        <span class=' skippy-text'>Skip to main content</span>
+    </a>
+    <a class="navbar-brand" href="/">
+        <img class="logo" src="/public/img/logo_perl_doc.svg"
+            alt="Perl Documentation Logo" />
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse"
+        data-target="#navbar" aria-controls="navbar" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="navbar" class="collapse navbar-collapse ">
+        <ul class="navbar-nav ml-auto navbar-right">
+            <form class="nav-item dropdown search-wrapper">
+                <input type="text" id='searchinput' aria-describedby='navbarDropdown5'
+                    placeholder="Type query" class='search-input-field' value=''>
+
+                <button href="#" data-toggle='dropdown' type="button"
+                    aria-haspopup="true" aria-expanded='false' id="navbarDropdown5"
+                    class="nav-link dropdown-toggle search-link">
+                    <object tabindex='-1' focusable="false" class='search-icon'
+                        data="/public/img/search.svg" type="image/svg+xml"
+                        name='search icon'>search
+                        icon</object>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown5"
+                    id='search-results'>
+                    <p class='dropdown-item major-version'>
+                        No results
+                    </p>
+                </div>
+            </form>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown" href="#" class="nav-link dropdown-toggle"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Perl versions</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    
+                        <p class='dropdown-item major-version'>
+                            5.32
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.32.0/">5.32.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.30
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.3/">5.30.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.2/">5.30.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.1/">5.30.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.0/">5.30.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.28
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.3/">5.28.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.2/">5.28.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.1/">5.28.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.0/">5.28.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.26
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.3/">5.26.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.2/">5.26.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.1/">5.26.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.0/">5.26.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.24
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.4/">5.24.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.3/">5.24.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.2/">5.24.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.1/">5.24.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.0/">5.24.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.22
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.4/">5.22.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.3/">5.22.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.2/">5.22.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.1/">5.22.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.0/">5.22.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.20
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.3/">5.20.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.2/">5.20.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.1/">5.20.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.0/">5.20.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.18
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.4/">5.18.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.3/">5.18.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.2/">5.18.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.1/">5.18.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.0/">5.18.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.16
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.3/">5.16.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.2/">5.16.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.1/">5.16.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.0/">5.16.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.14
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.4/">5.14.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.3/">5.14.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.2/">5.14.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.1/">5.14.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.0/">5.14.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.12
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.5/">5.12.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.4/">5.12.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.3/">5.12.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.2/">5.12.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.1/">5.12.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.0/">5.12.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.10
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.1/">5.10.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.0/">5.10.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.8
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.9/">5.8.9</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.8/">5.8.8</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.7/">5.8.7</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.6/">5.8.6</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.5/">5.8.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.4/">5.8.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.3/">5.8.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.2/">5.8.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.1/">5.8.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.0/">5.8.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.6
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.2/">5.6.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.1/">5.6.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.0/">5.6.0</a>
+                        
+                        
+                    
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown1" href="#" class="dropdown-toggle nav-link"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Manuals</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                    <a class="dropdown-item"
+                        href="/5.30.2/index-overview.html">Overview</a>
+                    <a class="dropdown-item"
+                        href="/5.30.2/index-tutorials.html">Tutorials</a>
+                    <a class="dropdown-item"
+                        href="/5.30.2/index-faq.html">FAQs</a>
+                    <a class="dropdown-item"
+                        href="/5.30.2/index-history.html">Changes</a>
+                    <a class="dropdown-item"
+                        href="/5.30.2/index-licence.html">License</a>
+                    <a class="dropdown-item"
+                        href="/5.30.2/index-language.html">Language</a>
+                    <a class="dropdown-item"
+                        href="/5.30.2/index-functions.html">Functions</a>
+                    <a class="dropdown-item"
+                        href="/5.30.2/perlop.html">Operators</a>
+                    <a class="dropdown-item"
+                        href="/5.30.2/perlvar.html">Variables</a>
+                    <a class="dropdown-item"
+                        href="/5.30.2/index-pragmas.html">Pragmas</a>
+                    <a class="dropdown-item"
+                        href="/5.30.2/index-utilities.html">Utilities</a>
+                    <a class="dropdown-item"
+                        href="/5.30.2/index-internals.html">Internals</a>
+                    <a class="dropdown-item"
+                        href="/5.30.2/index-platforms.html">Platforms</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown3" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Modules</a>
+                <div aria-labelledby="navbarDropdown3"
+                    class="dropdown-menu letters-wrap">
+                    <!--<a class="dropdown-item"
+                        href="/5.30.2/index-modules.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.30.2/index-modules-by-cat.html">By
+                        Category</a>-->
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-modules-A.html">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-modules-B.html">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-modules-C.html">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-modules-D.html">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-modules-E.html">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-modules-F.html">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-modules-G.html">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-modules-H.html">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-modules-I.html">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-modules-J.html">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-modules-K.html">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-modules-L.html">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-modules-M.html">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-modules-N.html">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-modules-O.html">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-modules-P.html">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-modules-Q.html">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-modules-R.html">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-modules-S.html">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-modules-T.html">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-modules-U.html">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-modules-V.html">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-modules-W.html">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-modules-X.html">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-modules-Y.html">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-modules-Z.html">Z</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown4" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Functions</a>
+                <div aria-labelledby="navbarDropdown4"
+                    class="dropdown-menu letters-wrap">
+                    <a class="dropdown-item"
+                        href="/5.30.2/index-functions.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.30.2/index-functions-by-cat.html">By
+                        Category</a>
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-functions.html#A">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-functions.html#B">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-functions.html#C">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-functions.html#D">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-functions.html#E">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-functions.html#F">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-functions.html#G">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-functions.html#H">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-functions.html#I">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-functions.html#J">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-functions.html#K">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-functions.html#L">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-functions.html#M">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-functions.html#N">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-functions.html#O">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-functions.html#P">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-functions.html#Q">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-functions.html#R">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-functions.html#S">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-functions.html#T">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-functions.html#U">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-functions.html#V">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-functions.html#W">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-functions.html#X">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-functions.html#Y">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-functions.html#Z">Z</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!--/.nav-collapse -->
+</nav>
+
+
+          <main class="row main-content pb-5 pt-5" id='content'>
+            <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+              <div class="row">
+                <div class="col-sm-12">
+                  <div id="breadcrumbs">
+                      
+    <a href="../index.html">Home</a>&nbsp; &gt;
+    
+      
+        <a href="../index-modules-T.html">Core modules (T)</a> &gt;
+      
+    
+    TAP::Parser
+  
+
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <article class="col-sm-12 content">
+                  <div class="documentation-wrapper">
+                    <div id="perl_version">
+                      <h7 class='page-title'> Perl 5 version 30.2
+                        documentation</h7>
+                    </div>
+                    <h1>TAP::Parser</h1>
+
+
+  <!--    -->
+<ul><li><a href="#NAME">NAME</a></li><li><a href="#VERSION">VERSION</a></li><li><a href="#SYNOPSIS">SYNOPSIS</a></li><li><a href="#DESCRIPTION">DESCRIPTION</a></li><li><a href="#METHODS">METHODS</a></li><ul><li><a href="#Class-Methods">Class Methods</a></li><li><a href="#Instance-Methods">Instance Methods</a></li></ul><li><a href="#INDIVIDUAL-RESULTS">INDIVIDUAL RESULTS</a></li><ul><li><a href="#Result-types">Result types</a></li><li><a href="#Common-type-methods">Common type methods</a></li><li><a href="#plan-methods">plan methods</a></li><li><a href="#pragma-methods">pragma methods</a></li><li><a href="#comment-methods">comment methods</a></li><li><a href="#bailout-methods">bailout methods</a></li><li><a href="#unknown-methods">unknown methods</a></li><li><a href="#test-methods">test methods</a></li></ul><li><a href="#TOTAL-RESULTS">TOTAL RESULTS</a></li><ul><li><a href="#Individual-Results">Individual Results</a></li><li><a href="#Pragmas">Pragmas</a></li><li><a href="#Summary-Results">Summary Results</a></li><li><a href="#ignore_exit">ignore_exit</a></li></ul><li><a href="#CALLBACKS">CALLBACKS</a></li><li><a href="#TAP-GRAMMAR">TAP GRAMMAR</a></li><li><a href="#BACKWARDS-COMPATIBILITY">BACKWARDS COMPATIBILITY</a></li><ul><li><a href="#Differences">Differences</a></li></ul><li><a href="#SUBCLASSING">SUBCLASSING</a></li><ul><li><a href="#Parser-Components">Parser Components</a></li></ul><li><a href="#ACKNOWLEDGMENTS">ACKNOWLEDGMENTS</a></li><li><a href="#AUTHORS">AUTHORS</a></li><li><a href="#BUGS">BUGS</a></li><li><a href="#COPYRIGHT-%26-LICENSE">COPYRIGHT & LICENSE</a></li></ul><a class='view-head1' id="NAME"></a><h2 class='h2' >NAME</h2>
+<p>TAP::Parser - Parse <a href="https://search.cpan.org/perldoc/Test::Harness::TAP">TAP</a> output</p>
+<a class='view-head1' id="VERSION"></a><h2 class='h2' >VERSION</h2>
+<p>Version 3.42</p>
+<a class='view-head1' id="SYNOPSIS"></a><h2 class='h2' >SYNOPSIS</h2>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">TAP::Parser</span><span class="sc">;</span></li><li></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">$parser</span> = <span class="w">TAP::Parser</span><span class="w">-&gt;new</span><span class="s">(</span> <span class="s">{</span> <span class="w">source</span> <span class="cm">=&gt;</span> <span class="i">$source</span> <span class="s">}</span> <span class="s">)</span><span class="sc">;</span></li><li></li><li>    <a class="l_k" href="../functions/while.html">while</a> <span class="s">(</span> <a class="l_k" href="../functions/my.html">my</a> <span class="i">$result</span> = <span class="i">$parser</span><span class="i">-&gt;next</span> <span class="s">)</span> <span class="s">{</span></li><li>        <a class="l_k" href="../functions/print.html">print</a> <span class="i">$result</span><span class="i">-&gt;as_string</span><span class="sc">;</span></li><li>    <span class="s">}</span></li></ol></pre><a class='view-head1' id="DESCRIPTION"></a><h2 class='h2' >DESCRIPTION</h2>
+<p><code class="inline"><span class="w">TAP::Parser</span></code>
+ is designed to produce a proper parse of TAP output. For
+an example of how to run tests through this module, see the simple
+harnesses <code class="inline"><span class="w">examples</span>/</code>
+.</p>
+<p>There's a wiki dedicated to the Test Anything Protocol:</p>
+<p><a href="http://testanything.org">http://testanything.org</a></p>
+<p>It includes the TAP::Parser Cookbook:</p>
+<p><a href="http://testanything.org/testing-with-tap/perl/tap::parser-cookbook.html">http://testanything.org/testing-with-tap/perl/tap::parser-cookbook.html</a></p>
+<a class='view-head1' id="METHODS"></a><h2 class='h2' >METHODS</h2>
+<a class='view-head2' id="Class-Methods"></a><h3 class='h3' >Class Methods</h3>
+<a class='view-head3' id="new"></a><h4 class='h4' ><code class="inline"><span class="w">new</span></code>
+</h4>
+<pre class="verbatim"><ol><li> <a class="l_k" href="../functions/my.html">my</a> <span class="i">$parser</span> = <span class="w">TAP::Parser</span><span class="w">-&gt;new</span><span class="s">(</span>\<span class="i">%args</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>Returns a new <code class="inline"><span class="w">TAP::Parser</span></code>
+ object.</p>
+<p>The arguments should be a hashref with <i>one</i> of the following keys:</p>
+<ul>
+<li><a class='view-title' id="*-source"></a><strong><code class="inline"><span class="w">source</span></code>
+</strong>
+<p><i>CHANGED in 3.18</i></p>
+<p>This is the preferred method of passing input to the constructor.</p>
+<p>The <code class="inline"><span class="w">source</span></code>
+ is used to create a <a href="../TAP/Parser/Source.html">TAP::Parser::Source</a> that is passed to the
+<a href="#iterator_factory_class">iterator_factory_class</a> which in turn figures out how to handle the source and
+creates a &lt;TAP::Parser::Iterator&gt; for it.  The iterator is used by the parser to
+read in the TAP stream.</p>
+<p>To configure the <i>IteratorFactory</i> use the <code class="inline"><span class="w">sources</span></code>
+ parameter below.</p>
+<p>Note that <code class="inline"><span class="w">source</span></code>
+, <code class="inline"><span class="w">tap</span></code>
+ and <code class="inline"><a class="l_k" href="../functions/exec.html">exec</a></code> are <i>mutually exclusive</i>.</p>
+</li>
+<li><a class='view-title' id="*-tap"></a><strong><code class="inline"><span class="w">tap</span></code>
+</strong>
+<p><i>CHANGED in 3.18</i></p>
+<p>The value should be the complete TAP output.</p>
+<p>The <i>tap</i> is used to create a <a href="../TAP/Parser/Source.html">TAP::Parser::Source</a> that is passed to the
+<a href="#iterator_factory_class">iterator_factory_class</a> which in turn figures out how to handle the source and
+creates a &lt;TAP::Parser::Iterator&gt; for it.  The iterator is used by the parser to
+read in the TAP stream.</p>
+<p>To configure the <i>IteratorFactory</i> use the <code class="inline"><span class="w">sources</span></code>
+ parameter below.</p>
+<p>Note that <code class="inline"><span class="w">source</span></code>
+, <code class="inline"><span class="w">tap</span></code>
+ and <code class="inline"><a class="l_k" href="../functions/exec.html">exec</a></code> are <i>mutually exclusive</i>.</p>
+</li>
+<li><a class='view-title' id="*-exec"></a><strong><code class="inline"><a class="l_k" href="../functions/exec.html">exec</a></code></strong>
+<p>Must be passed an array reference.</p>
+<p>The <i>exec</i> array ref is used to create a <a href="../TAP/Parser/Source.html">TAP::Parser::Source</a> that is passed
+to the <a href="#iterator_factory_class">iterator_factory_class</a> which in turn figures out how to handle the
+source and creates a &lt;TAP::Parser::Iterator&gt; for it.  The iterator is used by
+the parser to read in the TAP stream.</p>
+<p>By default the <a href="../TAP/Parser/SourceHandler/Executable.html">TAP::Parser::SourceHandler::Executable</a> class will create a
+<a href="../TAP/Parser/Iterator/Process.html">TAP::Parser::Iterator::Process</a> object to handle the source.  This passes the
+array reference strings as command arguments to <a href="../IPC/Open3.html">IPC::Open3::open3</a>:</p>
+<pre class="verbatim"><ol><li> <span class="w">exec</span> <span class="cm">=&gt;</span> <span class="s">[</span> <span class="q">&#39;/usr/bin/ruby&#39;</span><span class="cm">,</span> <span class="q">&#39;t/my_test.rb&#39;</span> <span class="s">]</span></li></ol></pre><p>If any <code class="inline"><span class="w">test_args</span></code>
+ are given they will be appended to the end of the command
+argument list.</p>
+<p>To configure the <i>IteratorFactory</i> use the <code class="inline"><span class="w">sources</span></code>
+ parameter below.</p>
+<p>Note that <code class="inline"><span class="w">source</span></code>
+, <code class="inline"><span class="w">tap</span></code>
+ and <code class="inline"><a class="l_k" href="../functions/exec.html">exec</a></code> are <i>mutually exclusive</i>.</p>
+</li>
+</ul>
+<p>The following keys are optional.</p>
+<ul>
+<li><a class='view-title' id="*-sources"></a><strong><code class="inline"><span class="w">sources</span></code>
+</strong>
+<p><i>NEW to 3.18</i>.</p>
+<p>If set, <code class="inline"><span class="w">sources</span></code>
+ must be a hashref containing the names of the
+<a href="../TAP/Parser/SourceHandler.html">TAP::Parser::SourceHandler</a>s to load and/or configure.  The values are a
+hash of configuration that will be accessible to the source handlers via
+<a href="../TAP/Parser/Source.html#config_for">config_for in TAP::Parser::Source</a>.</p>
+<p>For example:</p>
+<pre class="verbatim"><ol><li>  <span class="w">sources</span> <span class="cm">=&gt;</span> <span class="s">{</span></li><li>    <span class="w">Perl</span> <span class="cm">=&gt;</span> <span class="s">{</span> <span class="w">exec</span> <span class="cm">=&gt;</span> <span class="q">&#39;/path/to/custom/perl&#39;</span> <span class="s">}</span><span class="cm">,</span></li><li>    <span class="w">File</span> <span class="cm">=&gt;</span> <span class="s">{</span> <span class="w">extensions</span> <span class="cm">=&gt;</span> <span class="s">[</span> <span class="q">&#39;.tap&#39;</span><span class="cm">,</span> <span class="q">&#39;.txt&#39;</span> <span class="s">]</span> <span class="s">}</span><span class="cm">,</span></li><li>    <span class="w">MyCustom</span> <span class="cm">=&gt;</span> <span class="s">{</span> <span class="w">some</span> <span class="cm">=&gt;</span> <span class="q">&#39;config&#39;</span> <span class="s">}</span><span class="cm">,</span></li><li>  <span class="s">}</span></li></ol></pre><p>This will cause <code class="inline"><span class="w">TAP::Parser</span></code>
+ to pass custom configuration to two of the built-
+in source handlers - <a href="../TAP/Parser/SourceHandler/Perl.html">TAP::Parser::SourceHandler::Perl</a>,
+<a href="../TAP/Parser/SourceHandler/File.html">TAP::Parser::SourceHandler::File</a> - and attempt to load the <code class="inline"><span class="w">MyCustom</span></code>
+
+class.  See <a href="../TAP/Parser/IteratorFactory.html#load_handlers">load_handlers in TAP::Parser::IteratorFactory</a> for more detail.</p>
+<p>The <code class="inline"><span class="w">sources</span></code>
+ parameter affects how <code class="inline"><span class="w">source</span></code>
+, <code class="inline"><span class="w">tap</span></code>
+ and <code class="inline"><a class="l_k" href="../functions/exec.html">exec</a></code> parameters
+are handled.</p>
+<p>See <a href="../TAP/Parser/IteratorFactory.html">TAP::Parser::IteratorFactory</a>, <a href="../TAP/Parser/SourceHandler.html">TAP::Parser::SourceHandler</a> and subclasses for
+more details.</p>
+</li>
+<li><a class='view-title' id="*-callback"></a><strong><code class="inline"><span class="w">callback</span></code>
+</strong>
+<p>If present, each callback corresponding to a given result type will be called
+with the result as the argument if the <code class="inline"><span class="w">run</span></code>
+ method is used:</p>
+<pre class="verbatim"><ol><li> <a class="l_k" href="../functions/my.html">my</a> <span class="i">%callbacks</span> = <span class="s">(</span></li><li>     <span class="w">test</span>    <span class="cm">=&gt;</span> \<span class="i">&amp;test_callback</span><span class="cm">,</span></li><li>     <span class="w">plan</span>    <span class="cm">=&gt;</span> \<span class="i">&amp;plan_callback</span><span class="cm">,</span></li><li>     <span class="w">comment</span> <span class="cm">=&gt;</span> \<span class="i">&amp;comment_callback</span><span class="cm">,</span></li><li>     <span class="w">bailout</span> <span class="cm">=&gt;</span> \<span class="i">&amp;bailout_callback</span><span class="cm">,</span></li><li>     <span class="w">unknown</span> <span class="cm">=&gt;</span> \<span class="i">&amp;unknown_callback</span><span class="cm">,</span></li><li> <span class="s">)</span><span class="sc">;</span></li><li></li><li> <a class="l_k" href="../functions/my.html">my</a> <span class="i">$aggregator</span> = <span class="w">TAP::Parser::Aggregator</span><span class="w">-&gt;new</span><span class="sc">;</span></li><li> <a class="l_k" href="../functions/for.html">for</a> <a class="l_k" href="../functions/my.html">my</a> <span class="i">$file</span> <span class="s">(</span> <span class="i">@test_files</span> <span class="s">)</span> <span class="s">{</span></li><li>     <a class="l_k" href="../functions/my.html">my</a> <span class="i">$parser</span> = <span class="w">TAP::Parser</span><span class="w">-&gt;new</span><span class="s">(</span></li><li>         <span class="s">{</span></li><li>             <span class="w">source</span>    <span class="cm">=&gt;</span> <span class="i">$file</span><span class="cm">,</span></li><li>             <span class="w">callbacks</span> <span class="cm">=&gt;</span> \<span class="i">%callbacks</span><span class="cm">,</span></li><li>         <span class="s">}</span></li><li>     <span class="s">)</span><span class="sc">;</span></li><li>     <span class="i">$parser</span><span class="i">-&gt;run</span><span class="sc">;</span></li><li>     <span class="i">$aggregator</span><span class="i">-&gt;add</span><span class="s">(</span> <span class="i">$file</span><span class="cm">,</span> <span class="i">$parser</span> <span class="s">)</span><span class="sc">;</span></li><li> <span class="s">}</span></li></ol></pre></li>
+<li><a class='view-title' id="*-switches"></a><strong><code class="inline"><span class="w">switches</span></code>
+</strong>
+<p>If using a Perl file as a source, optional switches may be passed which will
+be used when invoking the perl executable.</p>
+<pre class="verbatim"><ol><li> <a class="l_k" href="../functions/my.html">my</a> <span class="i">$parser</span> = <span class="w">TAP::Parser</span><span class="w">-&gt;new</span><span class="s">(</span> <span class="s">{</span></li><li>     <span class="w">source</span>   <span class="cm">=&gt;</span> <span class="i">$test_file</span><span class="cm">,</span></li><li>     <span class="w">switches</span> <span class="cm">=&gt;</span> <span class="s">[</span> <span class="q">&#39;-Ilib&#39;</span> <span class="s">]</span><span class="cm">,</span></li><li> <span class="s">}</span> <span class="s">)</span><span class="sc">;</span></li></ol></pre></li>
+<li><a class='view-title' id="*-test_args"></a><strong><code class="inline"><span class="w">test_args</span></code>
+</strong>
+<p>Used in conjunction with the <code class="inline"><span class="w">source</span></code>
+ and <code class="inline"><a class="l_k" href="../functions/exec.html">exec</a></code> option to supply a reference
+to an <code class="inline"><span class="i">@ARGV</span></code>
+ style array of arguments to pass to the test program.</p>
+</li>
+<li><a class='view-title' id="*-spool"></a><strong><code class="inline"><span class="w">spool</span></code>
+</strong>
+<p>If passed a filehandle will write a copy of all parsed TAP to that handle.</p>
+</li>
+<li><a class='view-title' id="*-merge"></a><strong><code class="inline"><span class="w">merge</span></code>
+</strong>
+<p>If false, STDERR is not captured (though it is 'relayed' to keep it
+somewhat synchronized with STDOUT.)</p>
+<p>If true, STDERR and STDOUT are the same filehandle.  This may cause
+breakage if STDERR contains anything resembling TAP format, but does
+allow exact synchronization.</p>
+<p>Subtleties of this behavior may be platform-dependent and may change in
+the future.</p>
+</li>
+<li><a class='view-title' id="*-grammar_class"></a><strong><code class="inline"><span class="w">grammar_class</span></code>
+</strong>
+<p>This option was introduced to let you easily customize which <i>grammar</i> class
+the parser should use.  It defaults to <a href="../TAP/Parser/Grammar.html">TAP::Parser::Grammar</a>.</p>
+<p>See also <a href="#make_grammar">make_grammar</a>.</p>
+</li>
+<li><a class='view-title' id="*-result_factory_class"></a><strong><code class="inline"><span class="w">result_factory_class</span></code>
+</strong>
+<p>This option was introduced to let you easily customize which <i>result</i>
+factory class the parser should use.  It defaults to
+<a href="../TAP/Parser/ResultFactory.html">TAP::Parser::ResultFactory</a>.</p>
+<p>See also <a href="#make_result">make_result</a>.</p>
+</li>
+<li><a class='view-title' id="*-iterator_factory_class"></a><strong><code class="inline"><span class="w">iterator_factory_class</span></code>
+</strong>
+<p><i>CHANGED in 3.18</i></p>
+<p>This option was introduced to let you easily customize which <i>iterator</i>
+factory class the parser should use.  It defaults to
+<a href="../TAP/Parser/IteratorFactory.html">TAP::Parser::IteratorFactory</a>.</p>
+</li>
+</ul>
+<a class='view-head2' id="Instance-Methods"></a><h3 class='h3' >Instance Methods</h3>
+<a class='view-head3' id="next"></a><h4 class='h4' ><code class="inline"><a class="l_k" href="../functions/next.html">next</a></code></h4>
+<pre class="verbatim"><ol><li>  <a class="l_k" href="../functions/my.html">my</a> <span class="i">$parser</span> = <span class="w">TAP::Parser</span><span class="w">-&gt;new</span><span class="s">(</span> <span class="s">{</span> <span class="w">source</span> <span class="cm">=&gt;</span> <span class="i">$file</span> <span class="s">}</span> <span class="s">)</span><span class="sc">;</span></li><li>  <a class="l_k" href="../functions/while.html">while</a> <span class="s">(</span> <a class="l_k" href="../functions/my.html">my</a> <span class="i">$result</span> = <span class="i">$parser</span><span class="i">-&gt;next</span> <span class="s">)</span> <span class="s">{</span></li><li>      <a class="l_k" href="../functions/print.html">print</a> <span class="i">$result</span><span class="i">-&gt;as_string</span><span class="cm">,</span> <span class="q">&quot;\n&quot;</span><span class="sc">;</span></li><li>  <span class="s">}</span></li></ol></pre><p>This method returns the results of the parsing, one result at a time.  Note
+that it is destructive.  You can't rewind and examine previous results.</p>
+<p>If callbacks are used, they will be issued before this call returns.</p>
+<p>Each result returned is a subclass of <a href="../TAP/Parser/Result.html">TAP::Parser::Result</a>.  See that
+module and related classes for more information on how to use them.</p>
+<a class='view-head3' id="run"></a><h4 class='h4' ><code class="inline"><span class="w">run</span></code>
+</h4>
+<pre class="verbatim"><ol><li>  <span class="i">$parser</span><span class="i">-&gt;run</span><span class="sc">;</span></li></ol></pre><p>This method merely runs the parser and parses all of the TAP.</p>
+<a class='view-head3' id="make_grammar"></a><h4 class='h4' ><code class="inline"><span class="w">make_grammar</span></code>
+</h4>
+<p>Make a new <a href="../TAP/Parser/Grammar.html">TAP::Parser::Grammar</a> object and return it.  Passes through any
+arguments given.</p>
+<p>The <code class="inline"><span class="w">grammar_class</span></code>
+ can be customized, as described in <a href="#new">new</a>.</p>
+<a class='view-head3' id="make_result"></a><h4 class='h4' ><code class="inline"><span class="w">make_result</span></code>
+</h4>
+<p>Make a new <a href="../TAP/Parser/Result.html">TAP::Parser::Result</a> object using the parser's
+<a href="../TAP/Parser/ResultFactory.html">TAP::Parser::ResultFactory</a>, and return it.  Passes through any arguments
+given.</p>
+<p>The <code class="inline"><span class="w">result_factory_class</span></code>
+ can be customized, as described in <a href="#new">new</a>.</p>
+<a class='view-head3' id="make_iterator_factory"></a><h4 class='h4' ><code class="inline"><span class="w">make_iterator_factory</span></code>
+</h4>
+<p><i>NEW to 3.18</i>.</p>
+<p>Make a new <a href="../TAP/Parser/IteratorFactory.html">TAP::Parser::IteratorFactory</a> object and return it.  Passes through
+any arguments given.</p>
+<p><code class="inline"><span class="w">iterator_factory_class</span></code>
+ can be customized, as described in <a href="#new">new</a>.</p>
+<a class='view-head1' id="INDIVIDUAL-RESULTS"></a><h2 class='h2' >INDIVIDUAL RESULTS</h2>
+<p>If you've read this far in the docs, you've seen this:</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/while.html">while</a> <span class="s">(</span> <a class="l_k" href="../functions/my.html">my</a> <span class="i">$result</span> = <span class="i">$parser</span><span class="i">-&gt;next</span> <span class="s">)</span> <span class="s">{</span></li><li>        <a class="l_k" href="../functions/print.html">print</a> <span class="i">$result</span><span class="i">-&gt;as_string</span><span class="sc">;</span></li><li>    <span class="s">}</span></li></ol></pre><p>Each result returned is a <a href="../TAP/Parser/Result.html">TAP::Parser::Result</a> subclass, referred to as
+<i>result types</i>.</p>
+<a class='view-head2' id="Result-types"></a><h3 class='h3' >Result types</h3>
+<p>Basically, you fetch individual results from the TAP.  The six types, with
+examples of each, are as follows:</p>
+<ul>
+<li><a class='view-title' id="*-Version"></a><strong>Version</strong>
+<pre class="verbatim"><ol><li> <span class="w">TAP</span> <span class="w">version</span> <span class="n">12</span></li></ol></pre></li>
+<li><a class='view-title' id="*-Plan"></a><strong>Plan</strong>
+<pre class="verbatim"><ol><li> <span class="n">1</span>..<span class="n">42</span></li></ol></pre></li>
+<li><a class='view-title' id="*-Pragma"></a><strong>Pragma</strong>
+<pre class="verbatim"><ol><li> <span class="w">pragma</span> +<span class="w">strict</span></li></ol></pre></li>
+<li><a class='view-title' id="*-Test"></a><strong>Test</strong>
+<pre class="verbatim"><ol><li> <span class="w">ok</span> <span class="n">3</span> - <span class="w">We</span> <span class="w">should</span> <span class="w">start</span> <span class="w">with</span> <span class="w">some</span> <span class="w">foobar</span>!</li></ol></pre></li>
+<li><a class='view-title' id="*-Comment"></a><strong>Comment</strong>
+<pre class="verbatim"><ol><li> <span class="c"># Hope we don&#39;t use up the foobar.</span></li></ol></pre></li>
+<li><a class='view-title' id="*-Bailout"></a><strong>Bailout</strong>
+<pre class="verbatim"><ol><li> <span class="w">Bail</span> <span class="w">out</span>!  <span class="w">We</span> <span class="w">ran</span> <span class="w">out</span> <span class="w">of</span> <span class="w">foobar</span>!</li></ol></pre></li>
+<li><a class='view-title' id="*-Unknown"></a><strong>Unknown</strong>
+<pre class="verbatim"><ol><li> ... <span class="w">yo</span><span class="cm">,</span> <span class="w">this</span> <span class="w">ain&#39;t</span> <span class="w">TAP</span>! ...</li></ol></pre></li>
+</ul>
+<p>Each result fetched is a result object of a different type.  There are common
+methods to each result object and different types may have methods unique to
+their type.  Sometimes a type method may be overridden in a subclass, but its
+use is guaranteed to be identical.</p>
+<a class='view-head2' id="Common-type-methods"></a><h3 class='h3' >Common type methods</h3>
+<a class='view-head3' id="type"></a><h4 class='h4' ><code class="inline"><span class="w">type</span></code>
+</h4>
+<p>Returns the type of result, such as <code class="inline"><span class="w">comment</span></code>
+ or <code class="inline"><span class="w">test</span></code>
+.</p>
+<a class='view-head3' id="as_string"></a><h4 class='h4' ><code class="inline"><span class="w">as_string</span></code>
+</h4>
+<p>Prints a string representation of the token.  This might not be the exact
+output, however.  Tests will have test numbers added if not present, TODO and
+SKIP directives will be capitalized and, in general, things will be cleaned
+up.  If you need the original text for the token, see the <code class="inline"><span class="w">raw</span></code>
+ method.</p>
+<a class='view-head3' id="raw"></a><h4 class='h4' ><code class="inline"><span class="w">raw</span></code>
+</h4>
+<p>Returns the original line of text which was parsed.</p>
+<a class='view-head3' id="is_plan"></a><h4 class='h4' ><code class="inline"><span class="w">is_plan</span></code>
+</h4>
+<p>Indicates whether or not this is the test plan line.</p>
+<a class='view-head3' id="is_test"></a><h4 class='h4' ><code class="inline"><span class="w">is_test</span></code>
+</h4>
+<p>Indicates whether or not this is a test line.</p>
+<a class='view-head3' id="is_comment"></a><h4 class='h4' ><code class="inline"><span class="w">is_comment</span></code>
+</h4>
+<p>Indicates whether or not this is a comment. Comments will generally only
+appear in the TAP stream if STDERR is merged to STDOUT. See the
+<code class="inline"><span class="w">merge</span></code>
+ option.</p>
+<a class='view-head3' id="is_bailout"></a><h4 class='h4' ><code class="inline"><span class="w">is_bailout</span></code>
+</h4>
+<p>Indicates whether or not this is bailout line.</p>
+<a class='view-head3' id="is_yaml"></a><h4 class='h4' ><code class="inline"><span class="w">is_yaml</span></code>
+</h4>
+<p>Indicates whether or not the current item is a YAML block.</p>
+<a class='view-head3' id="is_unknown"></a><h4 class='h4' ><code class="inline"><span class="w">is_unknown</span></code>
+</h4>
+<p>Indicates whether or not the current line could be parsed.</p>
+<a class='view-head3' id="is_ok"></a><h4 class='h4' ><code class="inline"><span class="w">is_ok</span></code>
+</h4>
+<pre class="verbatim"><ol><li>  <a class="l_k" href="../functions/if.html">if</a> <span class="s">(</span> <span class="i">$result</span><span class="i">-&gt;is_ok</span> <span class="s">)</span> <span class="s">{</span> ... <span class="s">}</span></li></ol></pre><p>Reports whether or not a given result has passed.  Anything which is <strong>not</strong> a
+test result returns true.  This is merely provided as a convenient shortcut
+which allows you to do this:</p>
+<pre class="verbatim"><ol><li> <a class="l_k" href="../functions/my.html">my</a> <span class="i">$parser</span> = <span class="w">TAP::Parser</span><span class="w">-&gt;new</span><span class="s">(</span> <span class="s">{</span> <span class="w">source</span> <span class="cm">=&gt;</span> <span class="i">$source</span> <span class="s">}</span> <span class="s">)</span><span class="sc">;</span></li><li> <a class="l_k" href="../functions/while.html">while</a> <span class="s">(</span> <a class="l_k" href="../functions/my.html">my</a> <span class="i">$result</span> = <span class="i">$parser</span><span class="i">-&gt;next</span> <span class="s">)</span> <span class="s">{</span></li><li>     <span class="c"># only print failing results</span></li><li>     <a class="l_k" href="../functions/print.html">print</a> <span class="i">$result</span><span class="i">-&gt;as_string</span> <a class="l_k" href="../functions/unless.html">unless</a> <span class="i">$result</span><span class="i">-&gt;is_ok</span><span class="sc">;</span></li><li> <span class="s">}</span></li></ol></pre><a class='view-head2' id="plan-methods"></a><h3 class='h3' ><code class="inline"><span class="w">plan</span></code>
+ methods</h3>
+<pre class="verbatim"><ol><li> <a class="l_k" href="../functions/if.html">if</a> <span class="s">(</span> <span class="i">$result</span><span class="i">-&gt;is_plan</span> <span class="s">)</span> <span class="s">{</span> ... <span class="s">}</span></li></ol></pre><p>If the above evaluates as true, the following methods will be available on the
+<code class="inline"><span class="i">$result</span></code>
+ object.</p>
+<a class='view-head3' id="plan"></a><h4 class='h4' ><code class="inline"><span class="w">plan</span></code>
+</h4>
+<pre class="verbatim"><ol><li>  <a class="l_k" href="../functions/if.html">if</a> <span class="s">(</span> <span class="i">$result</span><span class="i">-&gt;is_plan</span> <span class="s">)</span> <span class="s">{</span></li><li>     <a class="l_k" href="../functions/print.html">print</a> <span class="i">$result</span><span class="i">-&gt;plan</span><span class="sc">;</span></li><li>  <span class="s">}</span></li></ol></pre><p>This is merely a synonym for <code class="inline"><span class="w">as_string</span></code>
+.</p>
+<a class='view-head3' id="directive"></a><h4 class='h4' ><code class="inline"><span class="w">directive</span></code>
+</h4>
+<pre class="verbatim"><ol><li> <a class="l_k" href="../functions/my.html">my</a> <span class="i">$directive</span> = <span class="i">$result</span><span class="i">-&gt;directive</span><span class="sc">;</span></li></ol></pre><p>If a SKIP directive is included with the plan, this method will return it.</p>
+<pre class="verbatim"><ol><li> <span class="n">1</span>..<span class="n">0</span> <span class="c"># SKIP: why bother?</span></li></ol></pre><a class='view-head3' id="explanation"></a><h4 class='h4' ><code class="inline"><span class="w">explanation</span></code>
+</h4>
+<pre class="verbatim"><ol><li> <a class="l_k" href="../functions/my.html">my</a> <span class="i">$explanation</span> = <span class="i">$result</span><span class="i">-&gt;explanation</span><span class="sc">;</span></li></ol></pre><p>If a SKIP directive was included with the plan, this method will return the
+explanation, if any.</p>
+<a class='view-head2' id="pragma-methods"></a><h3 class='h3' ><code class="inline"><span class="w">pragma</span></code>
+ methods</h3>
+<pre class="verbatim"><ol><li> <a class="l_k" href="../functions/if.html">if</a> <span class="s">(</span> <span class="i">$result</span><span class="i">-&gt;is_pragma</span> <span class="s">)</span> <span class="s">{</span> ... <span class="s">}</span></li></ol></pre><p>If the above evaluates as true, the following methods will be available on the
+<code class="inline"><span class="i">$result</span></code>
+ object.</p>
+<a class='view-head3' id="pragmas"></a><h4 class='h4' ><code class="inline"><span class="w">pragmas</span></code>
+</h4>
+<p>Returns a list of pragmas each of which is a + or - followed by the
+pragma name.</p>
+<a class='view-head2' id="comment-methods"></a><h3 class='h3' ><code class="inline"><span class="w">comment</span></code>
+ methods</h3>
+<pre class="verbatim"><ol><li> <a class="l_k" href="../functions/if.html">if</a> <span class="s">(</span> <span class="i">$result</span><span class="i">-&gt;is_comment</span> <span class="s">)</span> <span class="s">{</span> ... <span class="s">}</span></li></ol></pre><p>If the above evaluates as true, the following methods will be available on the
+<code class="inline"><span class="i">$result</span></code>
+ object.</p>
+<a class='view-head3' id="comment"></a><h4 class='h4' ><code class="inline"><span class="w">comment</span></code>
+</h4>
+<pre class="verbatim"><ol><li>  <a class="l_k" href="../functions/if.html">if</a> <span class="s">(</span> <span class="i">$result</span><span class="i">-&gt;is_comment</span> <span class="s">)</span> <span class="s">{</span></li><li>      <a class="l_k" href="../functions/my.html">my</a> <span class="i">$comment</span> = <span class="i">$result</span><span class="i">-&gt;comment</span><span class="sc">;</span></li><li>      <a class="l_k" href="../functions/print.html">print</a> <span class="q">&quot;I have something to say:  $comment&quot;</span><span class="sc">;</span></li><li>  <span class="s">}</span></li></ol></pre><a class='view-head2' id="bailout-methods"></a><h3 class='h3' ><code class="inline"><span class="w">bailout</span></code>
+ methods</h3>
+<pre class="verbatim"><ol><li> <a class="l_k" href="../functions/if.html">if</a> <span class="s">(</span> <span class="i">$result</span><span class="i">-&gt;is_bailout</span> <span class="s">)</span> <span class="s">{</span> ... <span class="s">}</span></li></ol></pre><p>If the above evaluates as true, the following methods will be available on the
+<code class="inline"><span class="i">$result</span></code>
+ object.</p>
+<a class='view-head3' id="explanation"></a><h4 class='h4' ><code class="inline"><span class="w">explanation</span></code>
+</h4>
+<pre class="verbatim"><ol><li>  <a class="l_k" href="../functions/if.html">if</a> <span class="s">(</span> <span class="i">$result</span><span class="i">-&gt;is_bailout</span> <span class="s">)</span> <span class="s">{</span></li><li>      <a class="l_k" href="../functions/my.html">my</a> <span class="i">$explanation</span> = <span class="i">$result</span><span class="i">-&gt;explanation</span><span class="sc">;</span></li><li>      <a class="l_k" href="../functions/print.html">print</a> <span class="q">&quot;We bailed out because ($explanation)&quot;</span><span class="sc">;</span></li><li>  <span class="s">}</span></li></ol></pre><p>If, and only if, a token is a bailout token, you can get an "explanation" via
+this method.  The explanation is the text after the mystical "Bail out!" words
+which appear in the tap output.</p>
+<a class='view-head2' id="unknown-methods"></a><h3 class='h3' ><code class="inline"><span class="w">unknown</span></code>
+ methods</h3>
+<pre class="verbatim"><ol><li> <a class="l_k" href="../functions/if.html">if</a> <span class="s">(</span> <span class="i">$result</span><span class="i">-&gt;is_unknown</span> <span class="s">)</span> <span class="s">{</span> ... <span class="s">}</span></li></ol></pre><p>There are no unique methods for unknown results.</p>
+<a class='view-head2' id="test-methods"></a><h3 class='h3' ><code class="inline"><span class="w">test</span></code>
+ methods</h3>
+<pre class="verbatim"><ol><li> <a class="l_k" href="../functions/if.html">if</a> <span class="s">(</span> <span class="i">$result</span><span class="i">-&gt;is_test</span> <span class="s">)</span> <span class="s">{</span> ... <span class="s">}</span></li></ol></pre><p>If the above evaluates as true, the following methods will be available on the
+<code class="inline"><span class="i">$result</span></code>
+ object.</p>
+<a class='view-head3' id="ok"></a><h4 class='h4' ><code class="inline"><span class="w">ok</span></code>
+</h4>
+<pre class="verbatim"><ol><li>  <a class="l_k" href="../functions/my.html">my</a> <span class="i">$ok</span> = <span class="i">$result</span><span class="i">-&gt;ok</span><span class="sc">;</span></li></ol></pre><p>Returns the literal text of the <code class="inline"><span class="w">ok</span></code>
+ or <code class="inline"><a class="l_k" href="../functions/not.html">not</a> <span class="w">ok</span></code>
+ status.</p>
+<a class='view-head3' id="number"></a><h4 class='h4' ><code class="inline"><span class="w">number</span></code>
+</h4>
+<pre class="verbatim"><ol><li>  <a class="l_k" href="../functions/my.html">my</a> <span class="i">$test_number</span> = <span class="i">$result</span><span class="i">-&gt;number</span><span class="sc">;</span></li></ol></pre><p>Returns the number of the test, even if the original TAP output did not supply
+that number.</p>
+<a class='view-head3' id="description"></a><h4 class='h4' ><code class="inline"><span class="w">description</span></code>
+</h4>
+<pre class="verbatim"><ol><li>  <a class="l_k" href="../functions/my.html">my</a> <span class="i">$description</span> = <span class="i">$result</span><span class="i">-&gt;description</span><span class="sc">;</span></li></ol></pre><p>Returns the description of the test, if any.  This is the portion after the
+test number but before the directive.</p>
+<a class='view-head3' id="directive"></a><h4 class='h4' ><code class="inline"><span class="w">directive</span></code>
+</h4>
+<pre class="verbatim"><ol><li>  <a class="l_k" href="../functions/my.html">my</a> <span class="i">$directive</span> = <span class="i">$result</span><span class="i">-&gt;directive</span><span class="sc">;</span></li></ol></pre><p>Returns either <code class="inline"><span class="w">TODO</span></code>
+ or <code class="inline"><span class="w">SKIP</span></code>
+ if either directive was present for a test
+line.</p>
+<a class='view-head3' id="explanation"></a><h4 class='h4' ><code class="inline"><span class="w">explanation</span></code>
+</h4>
+<pre class="verbatim"><ol><li>  <a class="l_k" href="../functions/my.html">my</a> <span class="i">$explanation</span> = <span class="i">$result</span><span class="i">-&gt;explanation</span><span class="sc">;</span></li></ol></pre><p>If a test had either a <code class="inline"><span class="w">TODO</span></code>
+ or <code class="inline"><span class="w">SKIP</span></code>
+ directive, this method will return
+the accompanying explanation, if present.</p>
+<pre class="verbatim"><ol><li>  <a class="l_k" href="../functions/not.html">not</a> <span class="w">ok</span> <span class="n">17</span> - <span class="q">&#39;Pigs can fly&#39;</span> <span class="c"># TODO not enough acid</span></li></ol></pre><p>For the above line, the explanation is <i>not enough acid</i>.</p>
+<a class='view-head3' id="is_ok"></a><h4 class='h4' ><code class="inline"><span class="w">is_ok</span></code>
+</h4>
+<pre class="verbatim"><ol><li>  <a class="l_k" href="../functions/if.html">if</a> <span class="s">(</span> <span class="i">$result</span><span class="i">-&gt;is_ok</span> <span class="s">)</span> <span class="s">{</span> ... <span class="s">}</span></li></ol></pre><p>Returns a boolean value indicating whether or not the test passed.  Remember
+that for TODO tests, the test always passes.</p>
+<p><strong>Note:</strong>  this was formerly <code class="inline"><span class="w">passed</span></code>
+.  The latter method is deprecated and
+will issue a warning.</p>
+<a class='view-head3' id="is_actual_ok"></a><h4 class='h4' ><code class="inline"><span class="w">is_actual_ok</span></code>
+</h4>
+<pre class="verbatim"><ol><li>  <a class="l_k" href="../functions/if.html">if</a> <span class="s">(</span> <span class="i">$result</span><span class="i">-&gt;is_actual_ok</span> <span class="s">)</span> <span class="s">{</span> ... <span class="s">}</span></li></ol></pre><p>Returns a boolean value indicating whether or not the test passed, regardless
+of its TODO status.</p>
+<p><strong>Note:</strong>  this was formerly <code class="inline"><span class="w">actual_passed</span></code>
+.  The latter method is deprecated
+and will issue a warning.</p>
+<a class='view-head3' id="is_unplanned"></a><h4 class='h4' ><code class="inline"><span class="w">is_unplanned</span></code>
+</h4>
+<pre class="verbatim"><ol><li>  <a class="l_k" href="../functions/if.html">if</a> <span class="s">(</span> <span class="i">$test</span><span class="i">-&gt;is_unplanned</span> <span class="s">)</span> <span class="s">{</span> ... <span class="s">}</span></li></ol></pre><p>If a test number is greater than the number of planned tests, this method will
+return true.  Unplanned tests will <i>always</i> return false for <code class="inline"><span class="w">is_ok</span></code>
+,
+regardless of whether or not the test <code class="inline"><span class="w">has_todo</span></code>
+ (see
+<a href="../TAP/Parser/Result/Test.html">TAP::Parser::Result::Test</a> for more information about this).</p>
+<a class='view-head3' id="has_skip"></a><h4 class='h4' ><code class="inline"><span class="w">has_skip</span></code>
+</h4>
+<pre class="verbatim"><ol><li>  <a class="l_k" href="../functions/if.html">if</a> <span class="s">(</span> <span class="i">$result</span><span class="i">-&gt;has_skip</span> <span class="s">)</span> <span class="s">{</span> ... <span class="s">}</span></li></ol></pre><p>Returns a boolean value indicating whether or not this test had a SKIP
+directive.</p>
+<a class='view-head3' id="has_todo"></a><h4 class='h4' ><code class="inline"><span class="w">has_todo</span></code>
+</h4>
+<pre class="verbatim"><ol><li>  <a class="l_k" href="../functions/if.html">if</a> <span class="s">(</span> <span class="i">$result</span><span class="i">-&gt;has_todo</span> <span class="s">)</span> <span class="s">{</span> ... <span class="s">}</span></li></ol></pre><p>Returns a boolean value indicating whether or not this test had a TODO
+directive.</p>
+<p>Note that TODO tests <i>always</i> pass.  If you need to know whether or not
+they really passed, check the <code class="inline"><span class="w">is_actual_ok</span></code>
+ method.</p>
+<a class='view-head3' id="in_todo"></a><h4 class='h4' ><code class="inline"><span class="w">in_todo</span></code>
+</h4>
+<pre class="verbatim"><ol><li>  <a class="l_k" href="../functions/if.html">if</a> <span class="s">(</span> <span class="i">$parser</span><span class="i">-&gt;in_todo</span> <span class="s">)</span> <span class="s">{</span> ... <span class="s">}</span></li></ol></pre><p>True while the most recent result was a TODO. Becomes true before the
+TODO result is returned and stays true until just before the next non-
+TODO test is returned.</p>
+<a class='view-head1' id="TOTAL-RESULTS"></a><h2 class='h2' >TOTAL RESULTS</h2>
+<p>After parsing the TAP, there are many methods available to let you dig through
+the results and determine what is meaningful to you.</p>
+<a class='view-head2' id="Individual-Results"></a><h3 class='h3' >Individual Results</h3>
+<p>These results refer to individual tests which are run.</p>
+<a class='view-head3' id="passed"></a><h4 class='h4' ><code class="inline"><span class="w">passed</span></code>
+</h4>
+<pre class="verbatim"><ol><li> <a class="l_k" href="../functions/my.html">my</a> <span class="i">@passed</span> = <span class="i">$parser</span><span class="i">-&gt;passed</span><span class="sc">;</span> <span class="c"># the test numbers which passed</span></li><li> <a class="l_k" href="../functions/my.html">my</a> <span class="i">$passed</span> = <span class="i">$parser</span><span class="i">-&gt;passed</span><span class="sc">;</span> <span class="c"># the number of tests which passed</span></li></ol></pre><p>This method lets you know which (or how many) tests passed.  If a test failed
+but had a TODO directive, it will be counted as a passed test.</p>
+<a class='view-head3' id="failed"></a><h4 class='h4' ><code class="inline"><span class="w">failed</span></code>
+</h4>
+<pre class="verbatim"><ol><li> <a class="l_k" href="../functions/my.html">my</a> <span class="i">@failed</span> = <span class="i">$parser</span><span class="i">-&gt;failed</span><span class="sc">;</span> <span class="c"># the test numbers which failed</span></li><li> <a class="l_k" href="../functions/my.html">my</a> <span class="i">$failed</span> = <span class="i">$parser</span><span class="i">-&gt;failed</span><span class="sc">;</span> <span class="c"># the number of tests which failed</span></li></ol></pre><p>This method lets you know which (or how many) tests failed.  If a test passed
+but had a TODO directive, it will <strong>NOT</strong> be counted as a failed test.</p>
+<a class='view-head3' id="actual_passed"></a><h4 class='h4' ><code class="inline"><span class="w">actual_passed</span></code>
+</h4>
+<pre class="verbatim"><ol><li> <span class="c"># the test numbers which actually passed</span></li><li> <a class="l_k" href="../functions/my.html">my</a> <span class="i">@actual_passed</span> = <span class="i">$parser</span><span class="i">-&gt;actual_passed</span><span class="sc">;</span></li><li></li><li> <span class="c"># the number of tests which actually passed</span></li><li> <a class="l_k" href="../functions/my.html">my</a> <span class="i">$actual_passed</span> = <span class="i">$parser</span><span class="i">-&gt;actual_passed</span><span class="sc">;</span></li></ol></pre><p>This method lets you know which (or how many) tests actually passed,
+regardless of whether or not a TODO directive was found.</p>
+<a class='view-head3' id="actual_ok"></a><h4 class='h4' ><code class="inline"><span class="w">actual_ok</span></code>
+</h4>
+<p>This method is a synonym for <code class="inline"><span class="w">actual_passed</span></code>
+.</p>
+<a class='view-head3' id="actual_failed"></a><h4 class='h4' ><code class="inline"><span class="w">actual_failed</span></code>
+</h4>
+<pre class="verbatim"><ol><li> <span class="c"># the test numbers which actually failed</span></li><li> <a class="l_k" href="../functions/my.html">my</a> <span class="i">@actual_failed</span> = <span class="i">$parser</span><span class="i">-&gt;actual_failed</span><span class="sc">;</span></li><li></li><li> <span class="c"># the number of tests which actually failed</span></li><li> <a class="l_k" href="../functions/my.html">my</a> <span class="i">$actual_failed</span> = <span class="i">$parser</span><span class="i">-&gt;actual_failed</span><span class="sc">;</span></li></ol></pre><p>This method lets you know which (or how many) tests actually failed,
+regardless of whether or not a TODO directive was found.</p>
+<a class='view-head3' id="todo"></a><h4 class='h4' ><code class="inline"><span class="w">todo</span></code>
+</h4>
+<pre class="verbatim"><ol><li> <a class="l_k" href="../functions/my.html">my</a> <span class="i">@todo</span> = <span class="i">$parser</span><span class="i">-&gt;todo</span><span class="sc">;</span> <span class="c"># the test numbers with todo directives</span></li><li> <a class="l_k" href="../functions/my.html">my</a> <span class="i">$todo</span> = <span class="i">$parser</span><span class="i">-&gt;todo</span><span class="sc">;</span> <span class="c"># the number of tests with todo directives</span></li></ol></pre><p>This method lets you know which (or how many) tests had TODO directives.</p>
+<a class='view-head3' id="todo_passed"></a><h4 class='h4' ><code class="inline"><span class="w">todo_passed</span></code>
+</h4>
+<pre class="verbatim"><ol><li> <span class="c"># the test numbers which unexpectedly succeeded</span></li><li> <a class="l_k" href="../functions/my.html">my</a> <span class="i">@todo_passed</span> = <span class="i">$parser</span><span class="i">-&gt;todo_passed</span><span class="sc">;</span></li><li></li><li> <span class="c"># the number of tests which unexpectedly succeeded</span></li><li> <a class="l_k" href="../functions/my.html">my</a> <span class="i">$todo_passed</span> = <span class="i">$parser</span><span class="i">-&gt;todo_passed</span><span class="sc">;</span></li></ol></pre><p>This method lets you know which (or how many) tests actually passed but were
+declared as "TODO" tests.</p>
+<a class='view-head3' id="todo_failed"></a><h4 class='h4' ><code class="inline"><span class="w">todo_failed</span></code>
+</h4>
+<pre class="verbatim"><ol><li>  <span class="c"># deprecated in favor of &#39;todo_passed&#39;.  This method was horribly misnamed.</span></li></ol></pre><p>This was a badly misnamed method.  It indicates which TODO tests unexpectedly
+succeeded.  Will now issue a warning and call <code class="inline"><span class="w">todo_passed</span></code>
+.</p>
+<a class='view-head3' id="skipped"></a><h4 class='h4' ><code class="inline"><span class="w">skipped</span></code>
+</h4>
+<pre class="verbatim"><ol><li> <a class="l_k" href="../functions/my.html">my</a> <span class="i">@skipped</span> = <span class="i">$parser</span><span class="i">-&gt;skipped</span><span class="sc">;</span> <span class="c"># the test numbers with SKIP directives</span></li><li> <a class="l_k" href="../functions/my.html">my</a> <span class="i">$skipped</span> = <span class="i">$parser</span><span class="i">-&gt;skipped</span><span class="sc">;</span> <span class="c"># the number of tests with SKIP directives</span></li></ol></pre><p>This method lets you know which (or how many) tests had SKIP directives.</p>
+<a class='view-head2' id="Pragmas"></a><h3 class='h3' >Pragmas</h3>
+<a class='view-head3' id="pragma"></a><h4 class='h4' ><code class="inline"><span class="w">pragma</span></code>
+</h4>
+<p>Get or set a pragma. To get the state of a pragma:</p>
+<pre class="verbatim"><ol><li>  <a class="l_k" href="../functions/if.html">if</a> <span class="s">(</span> <span class="i">$p</span><span class="i">-&gt;pragma</span><span class="s">(</span><span class="q">&#39;strict&#39;</span><span class="s">)</span> <span class="s">)</span> <span class="s">{</span></li><li>      <span class="c"># be strict</span></li><li>  <span class="s">}</span></li></ol></pre><p>To set the state of a pragma:</p>
+<pre class="verbatim"><ol><li>  <span class="i">$p</span><span class="i">-&gt;pragma</span><span class="s">(</span><span class="q">&#39;strict&#39;</span><span class="cm">,</span> <span class="n">1</span><span class="s">)</span><span class="sc">;</span> <span class="c"># enable strict mode</span></li></ol></pre><a class='view-head3' id="pragmas"></a><h4 class='h4' ><code class="inline"><span class="w">pragmas</span></code>
+</h4>
+<p>Get a list of all the currently enabled pragmas:</p>
+<pre class="verbatim"><ol><li>  <a class="l_k" href="../functions/my.html">my</a> <span class="i">@pragmas_enabled</span> = <span class="i">$p</span><span class="i">-&gt;pragmas</span><span class="sc">;</span></li></ol></pre><a class='view-head2' id="Summary-Results"></a><h3 class='h3' >Summary Results</h3>
+<p>These results are "meta" information about the total results of an individual
+test program.</p>
+<a class='view-head3' id="plan"></a><h4 class='h4' ><code class="inline"><span class="w">plan</span></code>
+</h4>
+<pre class="verbatim"><ol><li> <a class="l_k" href="../functions/my.html">my</a> <span class="i">$plan</span> = <span class="i">$parser</span><span class="i">-&gt;plan</span><span class="sc">;</span></li></ol></pre><p>Returns the test plan, if found.</p>
+<a class='view-head3' id="good_plan"></a><h4 class='h4' ><code class="inline"><span class="w">good_plan</span></code>
+</h4>
+<p>Deprecated.  Use <code class="inline"><span class="w">is_good_plan</span></code>
+ instead.</p>
+<a class='view-head3' id="is_good_plan"></a><h4 class='h4' ><code class="inline"><span class="w">is_good_plan</span></code>
+</h4>
+<pre class="verbatim"><ol><li>  <a class="l_k" href="../functions/if.html">if</a> <span class="s">(</span> <span class="i">$parser</span><span class="i">-&gt;is_good_plan</span> <span class="s">)</span> <span class="s">{</span> ... <span class="s">}</span></li></ol></pre><p>Returns a boolean value indicating whether or not the number of tests planned
+matches the number of tests run.</p>
+<p><strong>Note:</strong>  this was formerly <code class="inline"><span class="w">good_plan</span></code>
+.  The latter method is deprecated and
+will issue a warning.</p>
+<p>And since we're on that subject ...</p>
+<a class='view-head3' id="tests_planned"></a><h4 class='h4' ><code class="inline"><span class="w">tests_planned</span></code>
+</h4>
+<pre class="verbatim"><ol><li>  <a class="l_k" href="../functions/print.html">print</a> <span class="i">$parser</span><span class="i">-&gt;tests_planned</span><span class="sc">;</span></li></ol></pre><p>Returns the number of tests planned, according to the plan.  For example, a
+plan of '1..17' will mean that 17 tests were planned.</p>
+<a class='view-head3' id="tests_run"></a><h4 class='h4' ><code class="inline"><span class="w">tests_run</span></code>
+</h4>
+<pre class="verbatim"><ol><li>  <a class="l_k" href="../functions/print.html">print</a> <span class="i">$parser</span><span class="i">-&gt;tests_run</span><span class="sc">;</span></li></ol></pre><p>Returns the number of tests which actually were run.  Hopefully this will
+match the number of <code class="inline"><span class="i">$parser</span><span class="i">-&gt;tests_planned</span></code>
+.</p>
+<a class='view-head3' id="skip_all"></a><h4 class='h4' ><code class="inline"><span class="w">skip_all</span></code>
+</h4>
+<p>Returns a true value (actually the reason for skipping) if all tests
+were skipped.</p>
+<a class='view-head3' id="start_time"></a><h4 class='h4' ><code class="inline"><span class="w">start_time</span></code>
+</h4>
+<p>Returns the wall-clock time when the Parser was created.</p>
+<a class='view-head3' id="end_time"></a><h4 class='h4' ><code class="inline"><span class="w">end_time</span></code>
+</h4>
+<p>Returns the wall-clock time when the end of TAP input was seen.</p>
+<a class='view-head3' id="start_times"></a><h4 class='h4' ><code class="inline"><span class="w">start_times</span></code>
+</h4>
+<p>Returns the CPU times (like <a class='function-name' href="../functions/times.html">times</a> when the Parser was created.</p>
+<a class='view-head3' id="end_times"></a><h4 class='h4' ><code class="inline"><span class="w">end_times</span></code>
+</h4>
+<p>Returns the CPU times (like <a class='function-name' href="../functions/times.html">times</a> when the end of TAP
+input was seen.</p>
+<a class='view-head3' id="has_problems"></a><h4 class='h4' ><code class="inline"><span class="w">has_problems</span></code>
+</h4>
+<pre class="verbatim"><ol><li>  <a class="l_k" href="../functions/if.html">if</a> <span class="s">(</span> <span class="i">$parser</span><span class="i">-&gt;has_problems</span> <span class="s">)</span> <span class="s">{</span></li><li>      ...</li><li>  <span class="s">}</span></li></ol></pre><p>This is a 'catch-all' method which returns true if any tests have currently
+failed, any TODO tests unexpectedly succeeded, or any parse errors occurred.</p>
+<a class='view-head3' id="version"></a><h4 class='h4' ><code class="inline"><span class="w">version</span></code>
+</h4>
+<pre class="verbatim"><ol><li>  <span class="i">$parser</span><span class="i">-&gt;version</span><span class="sc">;</span></li></ol></pre><p>Once the parser is done, this will return the version number for the
+parsed TAP. Version numbers were introduced with TAP version 13 so if no
+version number is found version 12 is assumed.</p>
+<a class='view-head3' id="exit"></a><h4 class='h4' ><code class="inline"><a class="l_k" href="../functions/exit.html">exit</a></code></h4>
+<pre class="verbatim"><ol><li>  <span class="i">$parser</span><span class="i">-&gt;exit</span><span class="sc">;</span></li></ol></pre><p>Once the parser is done, this will return the exit status.  If the parser ran
+an executable, it returns the exit status of the executable.</p>
+<a class='view-head3' id="wait"></a><h4 class='h4' ><code class="inline"><a class="l_k" href="../functions/wait.html">wait</a></code></h4>
+<pre class="verbatim"><ol><li>  <span class="i">$parser</span><span class="i">-&gt;wait</span><span class="sc">;</span></li></ol></pre><p>Once the parser is done, this will return the wait status.  If the parser ran
+an executable, it returns the wait status of the executable.  Otherwise, this
+merely returns the <code class="inline"><a class="l_k" href="../functions/exit.html">exit</a></code> status.</p>
+<a class='view-head2' id="ignore_exit"></a><h3 class='h3' ><code class="inline"><span class="w">ignore_exit</span></code>
+</h3>
+<pre class="verbatim"><ol><li>  <span class="i">$parser</span><span class="i">-&gt;ignore_exit</span><span class="s">(</span><span class="n">1</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>Tell the parser to ignore the exit status from the test when determining
+whether the test passed. Normally tests with non-zero exit status are
+considered to have failed even if all individual tests passed. In cases
+where it is not possible to control the exit value of the test script
+use this option to ignore it.</p>
+<a class='view-head3' id="parse_errors"></a><h4 class='h4' ><code class="inline"><span class="w">parse_errors</span></code>
+</h4>
+<pre class="verbatim"><ol><li> <a class="l_k" href="../functions/my.html">my</a> <span class="i">@errors</span> = <span class="i">$parser</span><span class="i">-&gt;parse_errors</span><span class="sc">;</span> <span class="c"># the parser errors</span></li><li> <a class="l_k" href="../functions/my.html">my</a> <span class="i">$errors</span> = <span class="i">$parser</span><span class="i">-&gt;parse_errors</span><span class="sc">;</span> <span class="c"># the number of parser_errors</span></li></ol></pre><p>Fortunately, all TAP output is perfect.  In the event that it is not, this
+method will return parser errors.  Note that a junk line which the parser does
+not recognize is <code class="inline"><a class="l_k" href="../functions/not.html">not</a></code> an error.  This allows this parser to handle future
+versions of TAP.  The following are all TAP errors reported by the parser:</p>
+<ul>
+<li><a class='view-title' id="*-Misplaced-plan"></a><strong>Misplaced plan</strong>
+<p>The plan (for example, '1..5'), must only come at the beginning or end of the
+TAP output.</p>
+</li>
+<li><a class='view-title' id="*-No-plan"></a><strong>No plan</strong>
+<p>Gotta have a plan!</p>
+</li>
+<li><a class='view-title' id="*-More-than-one-plan"></a><strong>More than one plan</strong>
+<pre class="verbatim"><ol><li> <span class="n">1</span>..<span class="n">3</span></li><li> <span class="w">ok</span> <span class="n">1</span> - <span class="w">input</span> <span class="w">file</span> <span class="w">opened</span></li><li> <a class="l_k" href="../functions/not.html">not</a> <span class="w">ok</span> <span class="n">2</span> - <span class="w">first</span> <span class="w">line</span> <span class="w">of</span> <span class="w">the</span> <span class="w">input</span> <span class="w">valid</span> <span class="c"># todo some data</span></li><li> <span class="w">ok</span> <span class="n">3</span> <a class="l_k" href="../functions/read.html">read</a> <span class="w">the</span> <span class="w">rest</span> <span class="w">of</span> <span class="w">the</span> <span class="w">file</span></li><li> <span class="n">1</span>..<span class="n">3</span></li></ol></pre><p>Right.  Very funny.  Don't do that.</p>
+</li>
+<li><a class='view-title' id="*-Test-numbers-out-of-sequence"></a><strong>Test numbers out of sequence</strong>
+<pre class="verbatim"><ol><li> <span class="n">1</span>..<span class="n">3</span></li><li> <span class="w">ok</span> <span class="n">1</span> - <span class="w">input</span> <span class="w">file</span> <span class="w">opened</span></li><li> <a class="l_k" href="../functions/not.html">not</a> <span class="w">ok</span> <span class="n">2</span> - <span class="w">first</span> <span class="w">line</span> <span class="w">of</span> <span class="w">the</span> <span class="w">input</span> <span class="w">valid</span> <span class="c"># todo some data</span></li><li> <span class="w">ok</span> <span class="n">2</span> <a class="l_k" href="../functions/read.html">read</a> <span class="w">the</span> <span class="w">rest</span> <span class="w">of</span> <span class="w">the</span> <span class="w">file</span></li></ol></pre><p>That last test line above should have the number '3' instead of '2'.</p>
+<p>Note that it's perfectly acceptable for some lines to have test numbers and
+others to not have them.  However, when a test number is found, it must be in
+sequence.  The following is also an error:</p>
+<pre class="verbatim"><ol><li> <span class="n">1</span>..<span class="n">3</span></li><li> <span class="w">ok</span> <span class="n">1</span> - <span class="w">input</span> <span class="w">file</span> <span class="w">opened</span></li><li> <a class="l_k" href="../functions/not.html">not</a> <span class="w">ok</span> - <span class="w">first</span> <span class="w">line</span> <span class="w">of</span> <span class="w">the</span> <span class="w">input</span> <span class="w">valid</span> <span class="c"># todo some data</span></li><li> <span class="w">ok</span> <span class="n">2</span> <a class="l_k" href="../functions/read.html">read</a> <span class="w">the</span> <span class="w">rest</span> <span class="w">of</span> <span class="w">the</span> <span class="w">file</span></li></ol></pre><p>But this is not:</p>
+<pre class="verbatim"><ol><li> <span class="n">1</span>..<span class="n">3</span></li><li> <span class="w">ok</span>  - <span class="w">input</span> <span class="w">file</span> <span class="w">opened</span></li><li> <a class="l_k" href="../functions/not.html">not</a> <span class="w">ok</span> - <span class="w">first</span> <span class="w">line</span> <span class="w">of</span> <span class="w">the</span> <span class="w">input</span> <span class="w">valid</span> <span class="c"># todo some data</span></li><li> <span class="w">ok</span> <span class="n">3</span> <a class="l_k" href="../functions/read.html">read</a> <span class="w">the</span> <span class="w">rest</span> <span class="w">of</span> <span class="w">the</span> <span class="w">file</span></li></ol></pre></li>
+</ul>
+<a class='view-head3' id="get_select_handles"></a><h4 class='h4' ><code class="inline"><span class="w">get_select_handles</span></code>
+</h4>
+<p>Get an a list of file handles which can be passed to <code class="inline"><a class="l_k" href="../functions/select.html">select</a></code> to
+determine the readiness of this parser.</p>
+<a class='view-head3' id="delete_spool"></a><h4 class='h4' ><code class="inline"><span class="w">delete_spool</span></code>
+</h4>
+<p>Delete and return the spool.</p>
+<pre class="verbatim"><ol><li>  <a class="l_k" href="../functions/my.html">my</a> <span class="i">$fh</span> = <span class="i">$parser</span><span class="i">-&gt;delete_spool</span><span class="sc">;</span></li></ol></pre><a class='view-head1' id="CALLBACKS"></a><h2 class='h2' >CALLBACKS</h2>
+<p>As mentioned earlier, a "callback" key may be added to the
+<code class="inline"><span class="w">TAP::Parser</span></code>
+ constructor. If present, each callback corresponding to a
+given result type will be called with the result as the argument if the
+<code class="inline"><span class="w">run</span></code>
+ method is used. The callback is expected to be a subroutine
+reference (or anonymous subroutine) which is invoked with the parser
+result as its argument.</p>
+<pre class="verbatim"><ol><li> <a class="l_k" href="../functions/my.html">my</a> <span class="i">%callbacks</span> = <span class="s">(</span></li><li>     <span class="w">test</span>    <span class="cm">=&gt;</span> \<span class="i">&amp;test_callback</span><span class="cm">,</span></li><li>     <span class="w">plan</span>    <span class="cm">=&gt;</span> \<span class="i">&amp;plan_callback</span><span class="cm">,</span></li><li>     <span class="w">comment</span> <span class="cm">=&gt;</span> \<span class="i">&amp;comment_callback</span><span class="cm">,</span></li><li>     <span class="w">bailout</span> <span class="cm">=&gt;</span> \<span class="i">&amp;bailout_callback</span><span class="cm">,</span></li><li>     <span class="w">unknown</span> <span class="cm">=&gt;</span> \<span class="i">&amp;unknown_callback</span><span class="cm">,</span></li><li> <span class="s">)</span><span class="sc">;</span></li><li></li><li> <a class="l_k" href="../functions/my.html">my</a> <span class="i">$aggregator</span> = <span class="w">TAP::Parser::Aggregator</span><span class="w">-&gt;new</span><span class="sc">;</span></li><li> <a class="l_k" href="../functions/for.html">for</a> <a class="l_k" href="../functions/my.html">my</a> <span class="i">$file</span> <span class="s">(</span> <span class="i">@test_files</span> <span class="s">)</span> <span class="s">{</span></li><li>     <a class="l_k" href="../functions/my.html">my</a> <span class="i">$parser</span> = <span class="w">TAP::Parser</span><span class="w">-&gt;new</span><span class="s">(</span></li><li>         <span class="s">{</span></li><li>             <span class="w">source</span>    <span class="cm">=&gt;</span> <span class="i">$file</span><span class="cm">,</span></li><li>             <span class="w">callbacks</span> <span class="cm">=&gt;</span> \<span class="i">%callbacks</span><span class="cm">,</span></li><li>         <span class="s">}</span></li><li>     <span class="s">)</span><span class="sc">;</span></li><li>     <span class="i">$parser</span><span class="i">-&gt;run</span><span class="sc">;</span></li><li>     <span class="i">$aggregator</span><span class="i">-&gt;add</span><span class="s">(</span> <span class="i">$file</span><span class="cm">,</span> <span class="i">$parser</span> <span class="s">)</span><span class="sc">;</span></li><li> <span class="s">}</span></li></ol></pre><p>Callbacks may also be added like this:</p>
+<pre class="verbatim"><ol><li> <span class="i">$parser</span><span class="i">-&gt;callback</span><span class="s">(</span> <span class="w">test</span> <span class="cm">=&gt;</span> \<span class="i">&amp;test_callback</span> <span class="s">)</span><span class="sc">;</span></li><li> <span class="i">$parser</span><span class="i">-&gt;callback</span><span class="s">(</span> <span class="w">plan</span> <span class="cm">=&gt;</span> \<span class="i">&amp;plan_callback</span> <span class="s">)</span><span class="sc">;</span></li></ol></pre><p>The following keys allowed for callbacks. These keys are case-sensitive.</p>
+<ul>
+<li><a class='view-title' id="*-test"></a><strong><code class="inline"><span class="w">test</span></code>
+</strong>
+<p>Invoked if <code class="inline"><span class="i">$result</span><span class="i">-&gt;is_test</span></code>
+ returns true.</p>
+</li>
+<li><a class='view-title' id="*-version"></a><strong><code class="inline"><span class="w">version</span></code>
+</strong>
+<p>Invoked if <code class="inline"><span class="i">$result</span><span class="i">-&gt;is_version</span></code>
+ returns true.</p>
+</li>
+<li><a class='view-title' id="*-plan"></a><strong><code class="inline"><span class="w">plan</span></code>
+</strong>
+<p>Invoked if <code class="inline"><span class="i">$result</span><span class="i">-&gt;is_plan</span></code>
+ returns true.</p>
+</li>
+<li><a class='view-title' id="*-comment"></a><strong><code class="inline"><span class="w">comment</span></code>
+</strong>
+<p>Invoked if <code class="inline"><span class="i">$result</span><span class="i">-&gt;is_comment</span></code>
+ returns true.</p>
+</li>
+<li><a class='view-title' id="*-bailout"></a><strong><code class="inline"><span class="w">bailout</span></code>
+</strong>
+<p>Invoked if <code class="inline"><span class="i">$result</span><span class="i">-&gt;is_unknown</span></code>
+ returns true.</p>
+</li>
+<li><a class='view-title' id="*-yaml"></a><strong><code class="inline"><span class="w">yaml</span></code>
+</strong>
+<p>Invoked if <code class="inline"><span class="i">$result</span><span class="i">-&gt;is_yaml</span></code>
+ returns true.</p>
+</li>
+<li><a class='view-title' id="*-unknown"></a><strong><code class="inline"><span class="w">unknown</span></code>
+</strong>
+<p>Invoked if <code class="inline"><span class="i">$result</span><span class="i">-&gt;is_unknown</span></code>
+ returns true.</p>
+</li>
+<li><a class='view-title' id="*-ELSE"></a><strong><code class="inline"><span class="w">ELSE</span></code>
+</strong>
+<p>If a result does not have a callback defined for it, this callback will
+be invoked. Thus, if all of the previous result types are specified as
+callbacks, this callback will <i>never</i> be invoked.</p>
+</li>
+<li><a class='view-title' id="*-ALL"></a><strong><code class="inline"><span class="w">ALL</span></code>
+</strong>
+<p>This callback will always be invoked and this will happen for each
+result after one of the above callbacks is invoked.  For example, if
+<a href="../Term/ANSIColor.html">Term::ANSIColor</a> is loaded, you could use the following to color your
+test output:</p>
+<pre class="verbatim"><ol><li> <a class="l_k" href="../functions/my.html">my</a> <span class="i">%callbacks</span> = <span class="s">(</span></li><li>     <span class="w">test</span> <span class="cm">=&gt;</span> <a class="l_k" href="../functions/sub.html">sub</a> <span class="s">{</span></li><li>         <a class="l_k" href="../functions/my.html">my</a> <span class="i">$test</span> = <a class="l_k" href="../functions/shift.html">shift</a><span class="sc">;</span></li><li>         <a class="l_k" href="../functions/if.html">if</a> <span class="s">(</span> <span class="i">$test</span><span class="i">-&gt;is_ok</span> &amp;&amp; <a class="l_k" href="../functions/not.html">not</a> <span class="i">$test</span><span class="i">-&gt;directive</span> <span class="s">)</span> <span class="s">{</span></li><li>             <span class="c"># normal passing test</span></li><li>             <a class="l_k" href="../functions/print.html">print</a> <span class="i">color</span> <span class="q">&#39;green&#39;</span><span class="sc">;</span></li><li>         <span class="s">}</span></li><li>         <a class="l_k" href="../functions/elsif.html">elsif</a> <span class="s">(</span> !<span class="i">$test</span><span class="i">-&gt;is_ok</span> <span class="s">)</span> <span class="s">{</span>    <span class="c"># even if it&#39;s TODO</span></li><li>             <a class="l_k" href="../functions/print.html">print</a> <span class="i">color</span> <span class="q">&#39;white on_red&#39;</span><span class="sc">;</span></li><li>         <span class="s">}</span></li><li>         <a class="l_k" href="../functions/elsif.html">elsif</a> <span class="s">(</span> <span class="i">$test</span><span class="i">-&gt;has_skip</span> <span class="s">)</span> <span class="s">{</span></li><li>             <a class="l_k" href="../functions/print.html">print</a> <span class="i">color</span> <span class="q">&#39;white on_blue&#39;</span><span class="sc">;</span></li><li></li><li>         <span class="s">}</span></li><li>         <a class="l_k" href="../functions/elsif.html">elsif</a> <span class="s">(</span> <span class="i">$test</span><span class="i">-&gt;has_todo</span> <span class="s">)</span> <span class="s">{</span></li><li>             <a class="l_k" href="../functions/print.html">print</a> <span class="i">color</span> <span class="q">&#39;white&#39;</span><span class="sc">;</span></li><li>         <span class="s">}</span></li><li>     <span class="s">}</span><span class="cm">,</span></li><li>     <span class="w">ELSE</span> <span class="cm">=&gt;</span> <a class="l_k" href="../functions/sub.html">sub</a> <span class="s">{</span></li><li>         <span class="c"># plan, comment, and so on (anything which isn&#39;t a test line)</span></li><li>         <a class="l_k" href="../functions/print.html">print</a> <span class="i">color</span> <span class="q">&#39;black on_white&#39;</span><span class="sc">;</span></li><li>     <span class="s">}</span><span class="cm">,</span></li><li>     <span class="w">ALL</span> <span class="cm">=&gt;</span> <a class="l_k" href="../functions/sub.html">sub</a> <span class="s">{</span></li><li>         <span class="c"># now print them</span></li><li>         <a class="l_k" href="../functions/print.html">print</a> <a class="l_k" href="../functions/shift.html">shift</a><span class="i">-&gt;as_string</span><span class="sc">;</span></li><li>         <a class="l_k" href="../functions/print.html">print</a> <span class="i">color</span> <span class="q">&#39;reset&#39;</span><span class="sc">;</span></li><li>         <a class="l_k" href="../functions/print.html">print</a> <span class="q">&quot;\n&quot;</span><span class="sc">;</span></li><li>     <span class="s">}</span><span class="cm">,</span></li><li> <span class="s">)</span><span class="sc">;</span></li></ol></pre></li>
+<li><a class='view-title' id="*-EOF"></a><strong><code class="inline"><span class="w">EOF</span></code>
+</strong>
+<p>Invoked when there are no more lines to be parsed. Since there is no
+accompanying <a href="../TAP/Parser/Result.html">TAP::Parser::Result</a> object the <code class="inline"><span class="w">TAP::Parser</span></code>
+ object is
+passed instead.</p>
+</li>
+</ul>
+<a class='view-head1' id="TAP-GRAMMAR"></a><h2 class='h2' >TAP GRAMMAR</h2>
+<p>If you're looking for an EBNF grammar, see <a href="../TAP/Parser/Grammar.html">TAP::Parser::Grammar</a>.</p>
+<a class='view-head1' id="BACKWARDS-COMPATIBILITY"></a><h2 class='h2' >BACKWARDS COMPATIBILITY</h2>
+<p>The Perl-QA list attempted to ensure backwards compatibility with
+<a href="../Test/Harness.html">Test::Harness</a>.  However, there are some minor differences.</p>
+<a class='view-head2' id="Differences"></a><h3 class='h3' >Differences</h3>
+<ul>
+<li><a class='view-title' id="*-TODO-plans"></a><strong>TODO plans</strong>
+<p>A little-known feature of <a href="../Test/Harness.html">Test::Harness</a> is that it supported TODO
+lists in the plan:</p>
+<pre class="verbatim"><ol><li> <span class="n">1</span>..<span class="n">2</span> <span class="w">todo</span> <span class="n">2</span></li><li> <span class="w">ok</span> <span class="n">1</span> - <span class="w">We</span> <span class="w">have</span> <span class="w">liftoff</span></li><li> <a class="l_k" href="../functions/not.html">not</a> <span class="w">ok</span> <span class="n">2</span> - <span class="w">Anti</span>-<span class="w">gravity</span> <span class="w">device</span> <span class="w">activated</span></li></ol></pre><p>Under <a href="../Test/Harness.html">Test::Harness</a>, test number 2 would <i>pass</i> because it was
+listed as a TODO test on the plan line. However, we are not aware of
+anyone actually using this feature and hard-coding test numbers is
+discouraged because it's very easy to add a test and break the test
+number sequence. This makes test suites very fragile. Instead, the
+following should be used:</p>
+<pre class="verbatim"><ol><li> <span class="n">1</span>..<span class="n">2</span></li><li> <span class="w">ok</span> <span class="n">1</span> - <span class="w">We</span> <span class="w">have</span> <span class="w">liftoff</span></li><li> <a class="l_k" href="../functions/not.html">not</a> <span class="w">ok</span> <span class="n">2</span> - <span class="w">Anti</span>-<span class="w">gravity</span> <span class="w">device</span> <span class="w">activated</span> <span class="c"># TODO</span></li></ol></pre></li>
+<li><a class='view-title' id="*-'Missing'-tests"></a><strong>'Missing' tests</strong>
+<p>It rarely happens, but sometimes a harness might encounter
+'missing tests:</p>
+<pre class="verbatim"><ol><li> <span class="w">ok</span> <span class="n">1</span></li><li> <span class="w">ok</span> <span class="n">2</span></li><li> <span class="w">ok</span> <span class="n">15</span></li><li> <span class="w">ok</span> <span class="n">16</span></li><li> <span class="w">ok</span> <span class="n">17</span></li></ol></pre><p><a href="../Test/Harness.html">Test::Harness</a> would report tests 3-14 as having failed. For the
+<code class="inline"><span class="w">TAP::Parser</span></code>
+, these tests are not considered failed because they've
+never run. They're reported as parse failures (tests out of sequence).</p>
+</li>
+</ul>
+<a class='view-head1' id="SUBCLASSING"></a><h2 class='h2' >SUBCLASSING</h2>
+<p>If you find you need to provide custom functionality (as you would have using
+<a href="https://search.cpan.org/perldoc/Test::Harness::Straps">Test::Harness::Straps</a>), you're in luck: <code class="inline"><span class="w">TAP::Parser</span></code>
+ and friends are
+designed to be easily plugged-into and/or subclassed.</p>
+<p>Before you start, it's important to know a few things:</p>
+<dl>
+<li>
+<p>All <code class="inline"><span class="w">TAP::</span>*</code>
+ objects inherit from <a href="../TAP/Object.html">TAP::Object</a>.</p>
+</li>
+<li>
+<p>Many <code class="inline"><span class="w">TAP::</span>*</code>
+ classes have a <i>SUBCLASSING</i> section to guide you.</p>
+</li>
+<li>
+<p>Note that <code class="inline"><span class="w">TAP::Parser</span></code>
+ is designed to be the central "maker" - ie: it is
+responsible for creating most new objects in the <code class="inline"><span class="w">TAP::Parser::</span>*</code>
+ namespace.</p>
+<p>This makes it possible for you to have a single point of configuring what
+subclasses should be used, which means that in many cases you'll find
+you only need to sub-class one of the parser's components.</p>
+<p>The exception to this rule are <i>SourceHandlers</i> &amp; <i>Iterators</i>, but those are
+both created with customizable <i>IteratorFactory</i>.</p>
+</li>
+<li>
+<p>By subclassing, you may end up overriding undocumented methods.  That's not
+a bad thing per se, but be forewarned that undocumented methods may change
+without warning from one release to the next - we cannot guarantee backwards
+compatibility.  If any <i>documented</i> method needs changing, it will be
+deprecated first, and changed in a later release.</p>
+</li>
+</dl>
+<a class='view-head2' id="Parser-Components"></a><h3 class='h3' >Parser Components</h3>
+<a class='view-head3' id="Sources"></a><h4 class='h4' >Sources</h4>
+<p>A TAP parser consumes input from a single <i>raw source</i> of TAP, which could come
+from anywhere (a file, an executable, a database, an IO handle, a URI, etc..).
+The source gets bundled up in a <a href="../TAP/Parser/Source.html">TAP::Parser::Source</a> object which gathers some
+meta data about it.  The parser then uses a <a href="../TAP/Parser/IteratorFactory.html">TAP::Parser::IteratorFactory</a> to
+determine which <a href="../TAP/Parser/SourceHandler.html">TAP::Parser::SourceHandler</a> to use to turn the raw source
+into a stream of TAP by way of <a href="#Iterators">Iterators</a>.</p>
+<p>If you simply want <code class="inline"><span class="w">TAP::Parser</span></code>
+ to handle a new source of TAP you probably
+don't need to subclass <code class="inline"><span class="w">TAP::Parser</span></code>
+ itself.  Rather, you'll need to create a
+new <a href="../TAP/Parser/SourceHandler.html">TAP::Parser::SourceHandler</a> class, and just plug it into the parser using
+the <i>sources</i> param to <a href="#new">new</a>.  Before you start writing one, read through
+<a href="../TAP/Parser/IteratorFactory.html">TAP::Parser::IteratorFactory</a> to get a feel for how the system works first.</p>
+<p>If you find you really need to use your own iterator factory you can still do
+so without sub-classing <code class="inline"><span class="w">TAP::Parser</span></code>
+ by setting <a href="#iterator_factory_class">iterator_factory_class</a>.</p>
+<p>If you just need to customize the objects on creation, subclass <a href="../TAP/Parser.html">TAP::Parser</a>
+and override <a href="#make_iterator_factory">make_iterator_factory</a>.</p>
+<p>Note that <code class="inline"><span class="w">make_source</span></code>
+ &amp; <code class="inline"><span class="w">make_perl_source</span></code>
+ have been <i>DEPRECATED</i> and
+are now removed.</p>
+<a class='view-head3' id="Iterators"></a><h4 class='h4' >Iterators</h4>
+<p>A TAP parser uses <i>iterators</i> to loop through the <i>stream</i> of TAP read in
+from the <i>source</i> it was given.  There are a few types of Iterators available
+by default, all sub-classes of <a href="../TAP/Parser/Iterator.html">TAP::Parser::Iterator</a>.  Choosing which
+iterator to use is the responsibility of the <i>iterator factory</i>, though it
+simply delegates to the <i>Source Handler</i> it uses.</p>
+<p>If you're writing your own <a href="../TAP/Parser/SourceHandler.html">TAP::Parser::SourceHandler</a>, you may need to
+create your own iterators too.  If so you'll need to subclass
+<a href="../TAP/Parser/Iterator.html">TAP::Parser::Iterator</a>.</p>
+<p>Note that <a href="#make_iterator">make_iterator</a> has been <i>DEPRECATED</i> and is now removed.</p>
+<a class='view-head3' id="Results"></a><h4 class='h4' >Results</h4>
+<p>A TAP parser creates <a href="../TAP/Parser/Result.html">TAP::Parser::Result</a>s as it iterates through the
+input <i>stream</i>.  There are quite a few result types available; choosing
+which class to use is the responsibility of the <i>result factory</i>.</p>
+<p>To create your own result types you have two options:</p>
+<ul>
+<li><a class='view-title' id="option-1"></a><strong>option 1</strong>
+<p>Subclass <a href="../TAP/Parser/Result.html">TAP::Parser::Result</a> and register your new result type/class with
+the default <a href="../TAP/Parser/ResultFactory.html">TAP::Parser::ResultFactory</a>.</p>
+</li>
+<li><a class='view-title' id="option-2"></a><strong>option 2</strong>
+<p>Subclass <a href="../TAP/Parser/ResultFactory.html">TAP::Parser::ResultFactory</a> itself and implement your own
+<a href="../TAP/Parser/Result.html">TAP::Parser::Result</a> creation logic.  Then you'll need to customize the
+class used by your parser by setting the <code class="inline"><span class="w">result_factory_class</span></code>
+ parameter.
+See <a href="#new">new</a> for more details.</p>
+</li>
+</ul>
+<p>If you need to customize the objects on creation, subclass <a href="../TAP/Parser.html">TAP::Parser</a> and
+override <a href="#make_result">make_result</a>.</p>
+<a class='view-head3' id="Grammar"></a><h4 class='h4' >Grammar</h4>
+<p><a href="../TAP/Parser/Grammar.html">TAP::Parser::Grammar</a> is the heart of the parser.  It tokenizes the TAP
+input <i>stream</i> and produces results.  If you need to customize its behaviour
+you should probably familiarize yourself with the source first.  Enough
+lecturing.</p>
+<p>Subclass <a href="../TAP/Parser/Grammar.html">TAP::Parser::Grammar</a> and customize your parser by setting the
+<code class="inline"><span class="w">grammar_class</span></code>
+ parameter.  See <a href="#new">new</a> for more details.</p>
+<p>If you need to customize the objects on creation, subclass <a href="../TAP/Parser.html">TAP::Parser</a> and
+override <a href="#make_grammar">make_grammar</a></p>
+<a class='view-head1' id="ACKNOWLEDGMENTS"></a><h2 class='h2' >ACKNOWLEDGMENTS</h2>
+<p>All of the following have helped. Bug reports, patches, (im)moral
+support, or just words of encouragement have all been forthcoming.</p>
+<ul>
+<li><a class='view-title' id="*-Michael-Schwern"></a><strong>Michael Schwern</strong>
+</li>
+<li><a class='view-title' id="*-Andy-Lester"></a><strong>Andy Lester</strong>
+</li>
+<li><a class='view-title' id="*-chromatic"></a><strong>chromatic</strong>
+</li>
+<li><a class='view-title' id="*-GEOFFR"></a><strong>GEOFFR</strong>
+</li>
+<li><a class='view-title' id="*-Shlomi-Fish"></a><strong>Shlomi Fish</strong>
+</li>
+<li><a class='view-title' id="*-Torsten-Schoenfeld"></a><strong>Torsten Schoenfeld</strong>
+</li>
+<li><a class='view-title' id="*-Jerry-Gay"></a><strong>Jerry Gay</strong>
+</li>
+<li><a class='view-title' id="*-Aristotle"></a><strong>Aristotle</strong>
+</li>
+<li><a class='view-title' id="*-Adam-Kennedy"></a><strong>Adam Kennedy</strong>
+</li>
+<li><a class='view-title' id="*-Yves-Orton"></a><strong>Yves Orton</strong>
+</li>
+<li><a class='view-title' id="*-Adrian-Howard"></a><strong>Adrian Howard</strong>
+</li>
+<li><a class='view-title' id="*-Sean-%26-Lil"></a><strong>Sean &amp; Lil</strong>
+</li>
+<li><a class='view-title' id="*-Andreas-J.-Koenig"></a><strong>Andreas J. Koenig</strong>
+</li>
+<li><a class='view-title' id="*-Florian-Ragwitz"></a><strong>Florian Ragwitz</strong>
+</li>
+<li><a class='view-title' id="*-Corion"></a><strong>Corion</strong>
+</li>
+<li><a class='view-title' id="*-Mark-Stosberg"></a><strong>Mark Stosberg</strong>
+</li>
+<li><a class='view-title' id="*-Matt-Kraai"></a><strong>Matt Kraai</strong>
+</li>
+<li><a class='view-title' id="*-David-Wheeler"></a><strong>David Wheeler</strong>
+</li>
+<li><a class='view-title' id="*-Alex-Vandiver"></a><strong>Alex Vandiver</strong>
+</li>
+<li><a class='view-title' id="*-Cosimo-Streppone"></a><strong>Cosimo Streppone</strong>
+</li>
+<li><a class='view-title' id="*-Ville-Skytt&#xe4;"></a><strong>Ville Skytt&#xe4;</strong>
+</li>
+</ul>
+<a class='view-head1' id="AUTHORS"></a><h2 class='h2' >AUTHORS</h2>
+<p>Curtis "Ovid" Poe &lt;ovid@cpan.org&gt;</p>
+<p>Andy Armstong &lt;andy@hexten.net&gt;</p>
+<p>Eric Wilhelm @ &lt;ewilhelm at cpan dot org&gt;</p>
+<p>Michael Peters &lt;mpeters at plusthree dot com&gt;</p>
+<p>Leif Eriksen &lt;leif dot eriksen at bigpond dot com&gt;</p>
+<p>Steve Purkis &lt;spurkis@cpan.org&gt;</p>
+<p>Nicholas Clark &lt;nick@ccl4.org&gt;</p>
+<p>Lee Johnson &lt;notfadeaway at btinternet dot com&gt;</p>
+<p>Philippe Bruhat &lt;book@cpan.org&gt;</p>
+<a class='view-head1' id="BUGS"></a><h2 class='h2' >BUGS</h2>
+<p>Please report any bugs or feature requests to
+<code class="inline"><span class="w">bug</span>-<span class="w">test</span>-<span class="w">harness</span><span class="i">@rt</span>.<span class="w">cpan</span>.<span class="w">org</span></code>
+, or through the web interface at
+<a href="http://rt.cpan.org/NoAuth/ReportBug.html?Queue=Test-Harness">http://rt.cpan.org/NoAuth/ReportBug.html?Queue=Test-Harness</a>.
+We will be notified, and then you'll automatically be notified of
+progress on your bug as we make changes.</p>
+<p>Obviously, bugs which include patches are best. If you prefer, you can
+patch against bleed by via anonymous checkout of the latest version:</p>
+<pre class="verbatim"><ol><li> <span class="w">git</span> <span class="w">clone</span> <span class="w">git</span><span class="co">:</span><span class="q">//github</span>.<span class="w">com</span>/<span class="w">Perl</span>-<span class="w">Toolchain</span>-<span class="w">Gang</span>/<span class="w">Test</span>-<span class="w">Harness</span>.<span class="w">git</span></li></ol></pre><a class='view-head1' id="COPYRIGHT-%26-LICENSE"></a><h2 class='h2' >COPYRIGHT &amp; LICENSE</h2>
+<p>Copyright 2006-2008 Curtis "Ovid" Poe, all rights reserved.</p>
+<p>This program is free software; you can redistribute it and/or modify it
+under the same terms as Perl itself.</p>
+
+
+
+
+      <ul><li><a href="#NAME">NAME</a></li><li><a href="#VERSION">VERSION</a></li><li><a href="#SYNOPSIS">SYNOPSIS</a></li><li><a href="#DESCRIPTION">DESCRIPTION</a></li><li><a href="#METHODS">METHODS</a></li><ul><li><a href="#Class-Methods">Class Methods</a></li><li><a href="#Instance-Methods">Instance Methods</a></li></ul><li><a href="#INDIVIDUAL-RESULTS">INDIVIDUAL RESULTS</a></li><ul><li><a href="#Result-types">Result types</a></li><li><a href="#Common-type-methods">Common type methods</a></li><li><a href="#plan-methods">plan methods</a></li><li><a href="#pragma-methods">pragma methods</a></li><li><a href="#comment-methods">comment methods</a></li><li><a href="#bailout-methods">bailout methods</a></li><li><a href="#unknown-methods">unknown methods</a></li><li><a href="#test-methods">test methods</a></li></ul><li><a href="#TOTAL-RESULTS">TOTAL RESULTS</a></li><ul><li><a href="#Individual-Results">Individual Results</a></li><li><a href="#Pragmas">Pragmas</a></li><li><a href="#Summary-Results">Summary Results</a></li><li><a href="#ignore_exit">ignore_exit</a></li></ul><li><a href="#CALLBACKS">CALLBACKS</a></li><li><a href="#TAP-GRAMMAR">TAP GRAMMAR</a></li><li><a href="#BACKWARDS-COMPATIBILITY">BACKWARDS COMPATIBILITY</a></li><ul><li><a href="#Differences">Differences</a></li></ul><li><a href="#SUBCLASSING">SUBCLASSING</a></li><ul><li><a href="#Parser-Components">Parser Components</a></li></ul><li><a href="#ACKNOWLEDGMENTS">ACKNOWLEDGMENTS</a></li><li><a href="#AUTHORS">AUTHORS</a></li><li><a href="#BUGS">BUGS</a></li><li><a href="#COPYRIGHT-%26-LICENSE">COPYRIGHT & LICENSE</a></li></ul>
+
+
+                  </div>
+                </article>
+              </div>
+            </div>
+          </main>
+        </div>
+           <footer class="footer row bg-light pt-5 pb-5">
+       <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+           <div class="row">
+               <div class="col-md-4">
+                   <ul class="list-unstyled">
+                       <li>
+                           <h4>Site info</h4>
+                       </li>
+                       <li>Docs mantained by
+                           <a href="//lists.perl.org/list/perl5-porters.html"
+                               rel="noopener">Perl 5 Porters</a>
+                       </li>
+                       <li>Perldoc site development sponsored by
+                           <a href="//opusvl.com" rel="noopener">
+                           <img style="margin: 20px 20px 5px 10px" class="opus-logo" src="/public/img/opusvl_logo.svg" alt="OpusVL Logo">
+                        </a>
+                    <li><span class="about_perldoc"><a href="//about.html">About PerlDOC</a></span>
+                    </li>
+                       </li>
+                   </ul>
+               </div>
+               <div class="col-md-8">
+                   <div class="row">
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Manuals</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.30.2/index-overview.html">Overview</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.30.2/index-tutorials.html">Tutorials</a>
+                               </li>
+                               <li>
+                                   <a href="/5.30.2/index-faq.html">FAQs</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.30.2/index-history.html">Changes</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Reference</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.30.2/index-language.html">Language</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.30.2/index-functions.html">Functions</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.30.2/perlop.html">Operators</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.30.2/perlvar.html">Variables</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Modules</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.30.2/index-modules-A.html">Modules</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.30.2/index-pragmas.html">Pragmas</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.30.2/index-utilities.html">Utilities</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Misc</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.30.2/index-licence.html">License</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.30.2/index-internals.html">Internals</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.30.2/index-platforms.html">Platforms</a>
+                               </li>
+                            <li>
+                                <a
+                                    href="/5.30.2/index-about.html">About</a>
+                            </li>
+                           </ul>
+                       </div>
+                   </div>
+               </div>
+               <div class=" col-12 footer-inf text-center">
+                   <small>perldoc.perl.org - Official documentation for the Perl
+                       programming language</small>
+               </div>
+           </div>
+       </div>
+   </footer>
+
+        	<div class="beta-wrapper beta-bottom-right ">
+		<div class="beta beta-blue  ">
+			<a class="beta-link "
+				href="//github.com/OpusVL/perldoc.perl.org/issues/new" rel="noopener">
+				<span class="beta-text">
+					This website is a Beta release.
+				</span>
+				<span class="beta-text">
+					For any issues please raise a ticket on GitHub
+				</span>
+			</a>
+		</div>
+	</div>
+
+        <script src="/public/js/main.min.js"></script>
+      </body>
+
+      </html>

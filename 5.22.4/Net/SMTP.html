@@ -1,0 +1,922 @@
+      
+      
+      
+      
+
+      <!DOCTYPE html>
+      <html lang="en">
+
+      <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Net::SMTP - perldoc.perl.org">
+        <link rel="icon" href="/public/img/favicon.ico">
+        <title>Net::SMTP - perldoc.perl.org</title>
+        <link href="/public/css/main.min.css" rel="stylesheet">
+        <link rel="canonical" href="/Net/SMTP.html">
+        <link
+          href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900'
+          rel='stylesheet' type='text/css'>
+        <script>
+          window.ga = window.ga || function () {
+            (ga.q = ga.q || []).push(arguments)
+          };
+          ga.l = +new Date;
+          ga('create', 'UA-1892152-2', 'auto'); // JJ's account
+          ga('create', 'UA-50555-3', 'auto', 'perlOrg'); // perl.org account
+          ga('require', 'outboundLinkTracker', {
+            events: ['click', 'auxclick', 'contextmenu'],
+          });
+          ga('require', 'maxScrollTracker');
+          ga('send', 'pageview');
+          ga('perlOrg.send', 'pageview');
+        </script>
+        <script async src="https://www.google-analytics.com/analytics.js">
+        </script>
+        <script async src="/public/js/tracking.min.js"></script>
+      </head>
+
+      <body class="body container-fluid ">
+        <div class="wrapper">
+
+          <nav
+    class="navbar navbar-dark bg-primary bg-perl fixed-top justify-content-between navbar-expand-lg">
+    <a href="#content" class="skippy sr-only sr-only-focusable">
+        <span class=' skippy-text'>Skip to main content</span>
+    </a>
+    <a class="navbar-brand" href="/">
+        <img class="logo" src="/public/img/logo_perl_doc.svg"
+            alt="Perl Documentation Logo" />
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse"
+        data-target="#navbar" aria-controls="navbar" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="navbar" class="collapse navbar-collapse ">
+        <ul class="navbar-nav ml-auto navbar-right">
+            <form class="nav-item dropdown search-wrapper">
+                <input type="text" id='searchinput' aria-describedby='navbarDropdown5'
+                    placeholder="Type query" class='search-input-field' value=''>
+
+                <button href="#" data-toggle='dropdown' type="button"
+                    aria-haspopup="true" aria-expanded='false' id="navbarDropdown5"
+                    class="nav-link dropdown-toggle search-link">
+                    <object tabindex='-1' focusable="false" class='search-icon'
+                        data="/public/img/search.svg" type="image/svg+xml"
+                        name='search icon'>search
+                        icon</object>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown5"
+                    id='search-results'>
+                    <p class='dropdown-item major-version'>
+                        No results
+                    </p>
+                </div>
+            </form>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown" href="#" class="nav-link dropdown-toggle"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Perl versions</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    
+                        <p class='dropdown-item major-version'>
+                            5.32
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.32.0/">5.32.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.30
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.3/">5.30.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.2/">5.30.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.1/">5.30.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.0/">5.30.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.28
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.3/">5.28.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.2/">5.28.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.1/">5.28.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.0/">5.28.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.26
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.3/">5.26.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.2/">5.26.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.1/">5.26.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.0/">5.26.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.24
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.4/">5.24.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.3/">5.24.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.2/">5.24.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.1/">5.24.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.0/">5.24.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.22
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.4/">5.22.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.3/">5.22.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.2/">5.22.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.1/">5.22.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.0/">5.22.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.20
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.3/">5.20.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.2/">5.20.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.1/">5.20.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.0/">5.20.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.18
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.4/">5.18.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.3/">5.18.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.2/">5.18.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.1/">5.18.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.0/">5.18.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.16
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.3/">5.16.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.2/">5.16.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.1/">5.16.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.0/">5.16.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.14
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.4/">5.14.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.3/">5.14.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.2/">5.14.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.1/">5.14.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.0/">5.14.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.12
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.5/">5.12.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.4/">5.12.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.3/">5.12.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.2/">5.12.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.1/">5.12.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.0/">5.12.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.10
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.1/">5.10.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.0/">5.10.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.8
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.9/">5.8.9</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.8/">5.8.8</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.7/">5.8.7</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.6/">5.8.6</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.5/">5.8.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.4/">5.8.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.3/">5.8.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.2/">5.8.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.1/">5.8.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.0/">5.8.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.6
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.2/">5.6.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.1/">5.6.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.0/">5.6.0</a>
+                        
+                        
+                    
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown1" href="#" class="dropdown-toggle nav-link"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Manuals</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                    <a class="dropdown-item"
+                        href="/5.22.4/index-overview.html">Overview</a>
+                    <a class="dropdown-item"
+                        href="/5.22.4/index-tutorials.html">Tutorials</a>
+                    <a class="dropdown-item"
+                        href="/5.22.4/index-faq.html">FAQs</a>
+                    <a class="dropdown-item"
+                        href="/5.22.4/index-history.html">Changes</a>
+                    <a class="dropdown-item"
+                        href="/5.22.4/index-licence.html">License</a>
+                    <a class="dropdown-item"
+                        href="/5.22.4/index-language.html">Language</a>
+                    <a class="dropdown-item"
+                        href="/5.22.4/index-functions.html">Functions</a>
+                    <a class="dropdown-item"
+                        href="/5.22.4/perlop.html">Operators</a>
+                    <a class="dropdown-item"
+                        href="/5.22.4/perlvar.html">Variables</a>
+                    <a class="dropdown-item"
+                        href="/5.22.4/index-pragmas.html">Pragmas</a>
+                    <a class="dropdown-item"
+                        href="/5.22.4/index-utilities.html">Utilities</a>
+                    <a class="dropdown-item"
+                        href="/5.22.4/index-internals.html">Internals</a>
+                    <a class="dropdown-item"
+                        href="/5.22.4/index-platforms.html">Platforms</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown3" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Modules</a>
+                <div aria-labelledby="navbarDropdown3"
+                    class="dropdown-menu letters-wrap">
+                    <!--<a class="dropdown-item"
+                        href="/5.22.4/index-modules.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.22.4/index-modules-by-cat.html">By
+                        Category</a>-->
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.22.4/index-modules-A.html">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.4/index-modules-B.html">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.4/index-modules-C.html">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.4/index-modules-D.html">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.4/index-modules-E.html">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.4/index-modules-F.html">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.4/index-modules-G.html">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.4/index-modules-H.html">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.4/index-modules-I.html">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.4/index-modules-J.html">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.4/index-modules-K.html">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.4/index-modules-L.html">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.4/index-modules-M.html">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.4/index-modules-N.html">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.4/index-modules-O.html">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.4/index-modules-P.html">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.4/index-modules-Q.html">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.4/index-modules-R.html">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.4/index-modules-S.html">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.4/index-modules-T.html">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.4/index-modules-U.html">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.4/index-modules-V.html">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.4/index-modules-W.html">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.4/index-modules-X.html">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.4/index-modules-Y.html">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.4/index-modules-Z.html">Z</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown4" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Functions</a>
+                <div aria-labelledby="navbarDropdown4"
+                    class="dropdown-menu letters-wrap">
+                    <a class="dropdown-item"
+                        href="/5.22.4/index-functions.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.22.4/index-functions-by-cat.html">By
+                        Category</a>
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.22.4/index-functions.html#A">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.4/index-functions.html#B">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.4/index-functions.html#C">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.4/index-functions.html#D">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.4/index-functions.html#E">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.4/index-functions.html#F">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.4/index-functions.html#G">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.4/index-functions.html#H">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.4/index-functions.html#I">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.4/index-functions.html#J">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.4/index-functions.html#K">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.4/index-functions.html#L">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.4/index-functions.html#M">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.4/index-functions.html#N">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.4/index-functions.html#O">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.4/index-functions.html#P">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.4/index-functions.html#Q">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.4/index-functions.html#R">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.4/index-functions.html#S">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.4/index-functions.html#T">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.4/index-functions.html#U">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.4/index-functions.html#V">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.4/index-functions.html#W">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.4/index-functions.html#X">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.4/index-functions.html#Y">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.4/index-functions.html#Z">Z</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!--/.nav-collapse -->
+</nav>
+
+
+          <main class="row main-content pb-5 pt-5" id='content'>
+            <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+              <div class="row">
+                <div class="col-sm-12">
+                  <div id="breadcrumbs">
+                      
+    <a href="../index.html">Home</a>&nbsp; &gt;
+    
+      
+        <a href="../index-modules-N.html">Core modules (N)</a> &gt;
+      
+    
+    Net::SMTP
+  
+
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <article class="col-sm-12 content">
+                  <div class="documentation-wrapper">
+                    <div id="perl_version">
+                      <h7 class='page-title'> Perl 5 version 22.4
+                        documentation</h7>
+                    </div>
+                    <h1>Net::SMTP</h1>
+
+
+  <!--    -->
+<ul><li><a href="#NAME">NAME</a></li><li><a href="#SYNOPSIS">SYNOPSIS</a></li><li><a href="#DESCRIPTION">DESCRIPTION</a></li><li><a href="#EXAMPLES">EXAMPLES</a></li><li><a href="#CONSTRUCTOR">CONSTRUCTOR</a></li><li><a href="#METHODS">METHODS</a></li><li><a href="#ADDRESSES">ADDRESSES</a></li><li><a href="#SEE-ALSO">SEE ALSO</a></li><li><a href="#AUTHOR">AUTHOR</a></li><li><a href="#COPYRIGHT">COPYRIGHT</a></li></ul><a class='view-head1' id="NAME"></a><h2 class='h2' >NAME</h2>
+<p>Net::SMTP - Simple Mail Transfer Protocol Client</p>
+<a class='view-head1' id="SYNOPSIS"></a><h2 class='h2' >SYNOPSIS</h2>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">Net::SMTP</span><span class="sc">;</span></li><li></li><li>    <span class="c"># Constructors</span></li><li>    <span class="i">$smtp</span> = <span class="w">Net::SMTP</span><span class="w">-&gt;new</span><span class="s">(</span><span class="q">&#39;mailhost&#39;</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="i">$smtp</span> = <span class="w">Net::SMTP</span><span class="w">-&gt;new</span><span class="s">(</span><span class="q">&#39;mailhost&#39;</span><span class="cm">,</span> <span class="w">Timeout</span> <span class="cm">=&gt;</span> <span class="n">60</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><a class='view-head1' id="DESCRIPTION"></a><h2 class='h2' >DESCRIPTION</h2>
+<p>This module implements a client interface to the SMTP and ESMTP
+protocol, enabling a perl5 application to talk to SMTP servers. This
+documentation assumes that you are familiar with the concepts of the
+SMTP protocol described in RFC821.</p>
+<p>A new Net::SMTP object must be created with the <i>new</i> method. Once
+this has been done, all SMTP commands are accessed through this object.</p>
+<p>The Net::SMTP class is a subclass of Net::Cmd and IO::Socket::INET.</p>
+<a class='view-head1' id="EXAMPLES"></a><h2 class='h2' >EXAMPLES</h2>
+<p>This example prints the mail domain name of the SMTP server known as mailhost:</p>
+<pre class="verbatim"><ol><li>    <span class="c">#!/usr/local/bin/perl -w</span></li><li></li><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">Net::SMTP</span><span class="sc">;</span></li><li></li><li>    <span class="i">$smtp</span> = <span class="w">Net::SMTP</span><span class="w">-&gt;new</span><span class="s">(</span><span class="q">&#39;mailhost&#39;</span><span class="s">)</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/print.html">print</a> <span class="i">$smtp</span><span class="i">-&gt;domain</span><span class="cm">,</span><span class="q">&quot;\n&quot;</span><span class="sc">;</span></li><li>    <span class="i">$smtp</span><span class="i">-&gt;quit</span><span class="sc">;</span></li></ol></pre><p>This example sends a small message to the postmaster at the SMTP server
+known as mailhost:</p>
+<pre class="verbatim"><ol><li>    <span class="c">#!/usr/local/bin/perl -w</span></li><li></li><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">Net::SMTP</span><span class="sc">;</span></li><li></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">$smtp</span> = <span class="w">Net::SMTP</span><span class="w">-&gt;new</span><span class="s">(</span><span class="q">&#39;mailhost&#39;</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>    <span class="i">$smtp</span><span class="i">-&gt;mail</span><span class="s">(</span><span class="i">$ENV</span>{<span class="w">USER</span>}<span class="s">)</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/if.html">if</a> <span class="s">(</span><span class="i">$smtp</span><span class="i">-&gt;to</span><span class="s">(</span><span class="q">&#39;postmaster&#39;</span><span class="s">)</span><span class="s">)</span> <span class="s">{</span></li><li>     <span class="i">$smtp</span><span class="i">-&gt;data</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li><li>     <span class="i">$smtp</span><span class="i">-&gt;datasend</span><span class="s">(</span><span class="q">&quot;To: postmaster\n&quot;</span><span class="s">)</span><span class="sc">;</span></li><li>     <span class="i">$smtp</span><span class="i">-&gt;datasend</span><span class="s">(</span><span class="q">&quot;\n&quot;</span><span class="s">)</span><span class="sc">;</span></li><li>     <span class="i">$smtp</span><span class="i">-&gt;datasend</span><span class="s">(</span><span class="q">&quot;A simple test message\n&quot;</span><span class="s">)</span><span class="sc">;</span></li><li>     <span class="i">$smtp</span><span class="i">-&gt;dataend</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="s">}</span> <a class="l_k" href="../functions/else.html">else</a> <span class="s">{</span></li><li>     <a class="l_k" href="../functions/print.html">print</a> <span class="q">&quot;Error: &quot;</span><span class="cm">,</span> <span class="i">$smtp</span><span class="i">-&gt;message</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="s">}</span></li><li></li><li>    <span class="i">$smtp</span><span class="i">-&gt;quit</span><span class="sc">;</span></li></ol></pre><a class='view-head1' id="CONSTRUCTOR"></a><h2 class='h2' >CONSTRUCTOR</h2>
+<ul>
+<li><a class='view-title' id="new-(-%5b-HOST-%5d-%5b%2c-OPTIONS-%5d-)"></a><strong>new ( [ HOST ] [, OPTIONS ] )</strong>
+<p>This is the constructor for a new Net::SMTP object. <code class="inline"><span class="w">HOST</span></code>
+ is the
+name of the remote host to which an SMTP connection is required.</p>
+<p>On failure <code class="inline"><a class="l_k" href="../functions/undef.html">undef</a></code> will be returned and <code class="inline"><span class="i">$@</span></code>
+ will contain the reason
+for the failure.</p>
+<p><code class="inline"><span class="w">HOST</span></code>
+ is optional. If <code class="inline"><span class="w">HOST</span></code>
+ is not given then it may instead be
+passed as the <code class="inline"><span class="w">Host</span></code>
+ option described below. If neither is given then
+the <code class="inline"><span class="w">SMTP_Hosts</span></code>
+ specified in <code class="inline"><span class="w">Net::Config</span></code>
+ will be used.</p>
+<p><code class="inline"><span class="w">OPTIONS</span></code>
+ are passed in a hash like fashion, using key and value pairs.
+Possible options are:</p>
+<p><strong>Hello</strong> - SMTP requires that you identify yourself. This option
+specifies a string to pass as your mail domain. If not given localhost.localdomain
+will be used.</p>
+<p><strong>Host</strong> - SMTP host to connect to. It may be a single scalar (hostname[:port]),
+as defined for the <code class="inline"><span class="w">PeerAddr</span></code>
+ option in <a href="../IO/Socket/INET.html">IO::Socket::INET</a>, or a reference to
+an array with hosts to try in turn. The <a href="#host">host</a> method will return the value
+which was used to connect to the host.
+Format - <code class="inline"><span class="w">PeerHost</span></code>
+ from <a href="../IO/Socket/INET.html">IO::Socket::INET</a> new method.</p>
+<p><strong>Port</strong> - port to connect to.
+Default - 25 for plain SMTP and 465 for immediate SSL.</p>
+<p><strong>SSL</strong> - If the connection should be done from start with SSL, contrary to later
+upgrade with <code class="inline"><span class="w">starttls</span></code>
+.
+You can use SSL arguments as documented in <a href="https://search.cpan.org/perldoc/IO::Socket::SSL">IO::Socket::SSL</a>, but it will
+usually use the right arguments already.</p>
+<p><strong>LocalAddr</strong> and <strong>LocalPort</strong> - These parameters are passed directly
+to IO::Socket to allow binding the socket to a local port.</p>
+<p><strong>Timeout</strong> - Maximum time, in seconds, to wait for a response from the
+SMTP server (default: 120)</p>
+<p><strong>ExactAddresses</strong> - If true the all ADDRESS arguments must be as
+defined by <code class="inline"><span class="w">addr</span>-<span class="w">spec</span></code>
+ in RFC2822. If not given, or false, then
+Net::SMTP will attempt to extract the address from the value passed.</p>
+<p><strong>Debug</strong> - Enable debugging information</p>
+<p>Example:</p>
+<pre class="verbatim"><ol><li>    <span class="i">$smtp</span> = <span class="w">Net::SMTP</span><span class="w">-&gt;new</span><span class="s">(</span><span class="q">&#39;mailhost&#39;</span><span class="cm">,</span></li><li>                           <span class="w">Hello</span> <span class="cm">=&gt;</span> <span class="q">&#39;my.mail.domain&#39;</span><span class="cm">,</span></li><li>                           <span class="w">Timeout</span> <span class="cm">=&gt;</span> <span class="n">30</span><span class="cm">,</span></li><li>                           <span class="w">Debug</span>   <span class="cm">=&gt;</span> <span class="n">1</span><span class="cm">,</span></li><li>                          <span class="s">)</span><span class="sc">;</span></li><li></li><li>    <span class="c"># the same</span></li><li>    <span class="i">$smtp</span> = <span class="w">Net::SMTP</span><span class="w">-&gt;new</span><span class="s">(</span></li><li>                           <span class="w">Host</span> <span class="cm">=&gt;</span> <span class="q">&#39;mailhost&#39;</span><span class="cm">,</span></li><li>                           <span class="w">Hello</span> <span class="cm">=&gt;</span> <span class="q">&#39;my.mail.domain&#39;</span><span class="cm">,</span></li><li>                           <span class="w">Timeout</span> <span class="cm">=&gt;</span> <span class="n">30</span><span class="cm">,</span></li><li>                           <span class="w">Debug</span>   <span class="cm">=&gt;</span> <span class="n">1</span><span class="cm">,</span></li><li>                          <span class="s">)</span><span class="sc">;</span></li><li></li><li>    <span class="c"># the same with direct SSL</span></li><li>    <span class="i">$smtp</span> = <span class="w">Net::SMTP</span><span class="w">-&gt;new</span><span class="s">(</span><span class="q">&#39;mailhost&#39;</span><span class="cm">,</span></li><li>			   <span class="w">Hello</span> <span class="cm">=&gt;</span> <span class="q">&#39;my.mail.domain&#39;</span><span class="cm">,</span></li><li>			   <span class="w">Timeout</span> <span class="cm">=&gt;</span> <span class="n">30</span><span class="cm">,</span></li><li>			   <span class="w">Debug</span>   <span class="cm">=&gt;</span> <span class="n">1</span><span class="cm">,</span></li><li>			   <span class="w">SSL</span>     <span class="cm">=&gt;</span> <span class="n">1</span><span class="cm">,</span></li><li>			  <span class="s">)</span><span class="sc">;</span></li><li></li><li>    <span class="c"># Connect to the default server from Net::config</span></li><li>    <span class="i">$smtp</span> = <span class="w">Net::SMTP</span><span class="w">-&gt;new</span><span class="s">(</span></li><li>                           <span class="w">Hello</span> <span class="cm">=&gt;</span> <span class="q">&#39;my.mail.domain&#39;</span><span class="cm">,</span></li><li>                           <span class="w">Timeout</span> <span class="cm">=&gt;</span> <span class="n">30</span><span class="cm">,</span></li><li>                          <span class="s">)</span><span class="sc">;</span></li></ol></pre></li>
+</ul>
+<a class='view-head1' id="METHODS"></a><h2 class='h2' >METHODS</h2>
+<p>Unless otherwise stated all methods return either a <i>true</i> or <i>false</i>
+value, with <i>true</i> meaning that the operation was a success. When a method
+states that it returns a value, failure will be returned as <i>undef</i> or an
+empty list.</p>
+<p><code class="inline"><span class="w">Net::SMTP</span></code>
+ inherits from <code class="inline"><span class="w">Net::Cmd</span></code>
+ so methods defined in <code class="inline"><span class="w">Net::Cmd</span></code>
+ may
+be used to send commands to the remote SMTP server in addition to the methods
+documented here.</p>
+<ul>
+<li><a class='view-title' id="banner-()"></a><strong>banner ()</strong>
+<p>Returns the banner message which the server replied with when the
+initial connection was made.</p>
+</li>
+<li><a class='view-title' id="domain-()"></a><strong>domain ()</strong>
+<p>Returns the domain that the remote SMTP server identified itself as during
+connection.</p>
+</li>
+<li><a class='view-title' id="hello-(-DOMAIN-)"></a><strong>hello ( DOMAIN )</strong>
+<p>Tell the remote server the mail domain which you are in using the EHLO
+command (or HELO if EHLO fails).  Since this method is invoked
+automatically when the Net::SMTP object is constructed the user should
+normally not have to call it manually.</p>
+</li>
+<li><a class='view-title' id="host-()"></a><strong>host ()</strong>
+<p>Returns the value used by the constructor, and passed to IO::Socket::INET,
+to connect to the host.</p>
+</li>
+<li><a class='view-title' id="etrn-(-DOMAIN-)"></a><strong>etrn ( DOMAIN )</strong>
+<p>Request a queue run for the DOMAIN given.</p>
+</li>
+<li><a class='view-title' id="starttls-(-SSLARGS-)"></a><strong>starttls ( SSLARGS )</strong>
+<p>Upgrade existing plain connection to SSL.
+You can use SSL arguments as documented in <a href="https://search.cpan.org/perldoc/IO::Socket::SSL">IO::Socket::SSL</a>, but it will
+usually use the right arguments already.</p>
+</li>
+<li><a class='view-title' id="auth-(-USERNAME%2c-PASSWORD-)"></a><strong>auth ( USERNAME, PASSWORD )</strong>
+<p>Attempt SASL authentication. Requires Authen::SASL module.</p>
+</li>
+<li><a class='view-title' id="mail-(-ADDRESS-%5b%2c-OPTIONS%5d-)"></a><strong>mail ( ADDRESS [, OPTIONS] )</strong>
+</li>
+<li><a class='view-title' id="send-(-ADDRESS-)"></a><strong>send ( ADDRESS )</strong>
+</li>
+<li><a class='view-title' id="send_or_mail-(-ADDRESS-)"></a><strong>send_or_mail ( ADDRESS )</strong>
+</li>
+<li><a class='view-title' id="send_and_mail-(-ADDRESS-)"></a><strong>send_and_mail ( ADDRESS )</strong>
+<p>Send the appropriate command to the server MAIL, SEND, SOML or SAML. <code class="inline"><span class="w">ADDRESS</span></code>
+
+is the address of the sender. This initiates the sending of a message. The
+method <code class="inline"><span class="w">recipient</span></code>
+ should be called for each address that the message is to
+be sent to.</p>
+<p>The <code class="inline"><span class="w">mail</span></code>
+ method can some additional ESMTP OPTIONS which is passed
+in hash like fashion, using key and value pairs.  Possible options are:</p>
+<pre class="verbatim"><ol><li> <span class="w">Size</span>        <span class="cm">=&gt;</span> <span class="q">&lt;bytes&gt;</span></li><li> <span class="w">Return</span>      <span class="cm">=&gt;</span> <span class="q">&quot;FULL&quot;</span> | <span class="q">&quot;HDRS&quot;</span></li><li> <span class="w">Bits</span>        <span class="cm">=&gt;</span> <span class="q">&quot;7&quot;</span> | <span class="q">&quot;8&quot;</span> | <span class="q">&quot;binary&quot;</span></li><li> <span class="w">Transaction</span> <span class="cm">=&gt;</span> <span class="q">&lt;ADDRESS&gt;</span></li><li> <span class="w">Envelope</span>    <span class="cm">=&gt;</span> <span class="q">&lt;ENVID&gt;</span>     <span class="c"># xtext-encodes its argument</span></li><li> <span class="w">ENVID</span>       <span class="cm">=&gt;</span> <span class="q">&lt;ENVID&gt;</span>     <span class="c"># similar to Envelope, but expects argument encoded</span></li><li> <span class="w">XVERP</span>       <span class="cm">=&gt;</span> <span class="n">1</span></li><li> <span class="w">AUTH</span>        <span class="cm">=&gt;</span> <span class="q">&lt;submitter&gt;</span> <span class="c"># encoded address according to RFC 2554</span></li></ol></pre><p>The <code class="inline"><span class="w">Return</span></code>
+ and <code class="inline"><span class="w">Envelope</span></code>
+ parameters are used for DSN (Delivery
+Status Notification).</p>
+<p>The submitter address in <code class="inline"><span class="w">AUTH</span></code>
+ option is expected to be in a format as
+required by RFC 2554, in an RFC2821-quoted form and xtext-encoded, or &lt;&gt; .</p>
+</li>
+<li><a class='view-title' id="reset-()"></a><strong>reset ()</strong>
+<p>Reset the status of the server. This may be called after a message has been 
+initiated, but before any data has been sent, to cancel the sending of the
+message.</p>
+</li>
+<li><a class='view-title' id="recipient-(-ADDRESS-%5b%2c-ADDRESS%2c-%5b...%5d%5d-%5b%2c-OPTIONS-%5d-)"></a><strong>recipient ( ADDRESS [, ADDRESS, [...]] [, OPTIONS ] )</strong>
+<p>Notify the server that the current message should be sent to all of the
+addresses given. Each address is sent as a separate command to the server.
+Should the sending of any address result in a failure then the process is
+aborted and a <i>false</i> value is returned. It is up to the user to call
+<code class="inline"><a class="l_k" href="../functions/reset.html">reset</a></code> if they so desire.</p>
+<p>The <code class="inline"><span class="w">recipient</span></code>
+ method can also pass additional case-sensitive OPTIONS as an
+anonymous hash using key and value pairs.  Possible options are:</p>
+<pre class="verbatim"><ol><li>  <span class="w">Notify</span>  <span class="cm">=&gt;</span> <span class="s">[</span><span class="q">&#39;NEVER&#39;</span><span class="s">]</span> <a class="l_k" href="../functions/or.html">or</a> <span class="s">[</span><span class="q">&#39;SUCCESS&#39;</span><span class="cm">,</span><span class="q">&#39;FAILURE&#39;</span><span class="cm">,</span><span class="q">&#39;DELAY&#39;</span><span class="s">]</span>  <span class="s">(</span><span class="w">see</span> <span class="w">below</span><span class="s">)</span></li><li>  <span class="w">ORcpt</span>   <span class="cm">=&gt;</span> <span class="q">&lt;ORCPT&gt;</span></li><li>  <span class="w">SkipBad</span> <span class="cm">=&gt;</span> <span class="n">1</span>        <span class="s">(</span><span class="w">to</span> <span class="w">ignore</span> <span class="w">bad</span> <span class="w">addresses</span><span class="s">)</span></li></ol></pre><p>If <code class="inline"><span class="w">SkipBad</span></code>
+ is true the <code class="inline"><span class="w">recipient</span></code>
+ will not return an error when a bad
+address is encountered and it will return an array of addresses that did
+succeed.</p>
+<pre class="verbatim"><ol><li>  <span class="i">$smtp</span><span class="i">-&gt;recipient</span><span class="s">(</span><span class="i">$recipient1</span><span class="cm">,</span><span class="i">$recipient2</span><span class="s">)</span><span class="sc">;</span>  <span class="c"># Good</span></li><li>  <span class="i">$smtp</span><span class="i">-&gt;recipient</span><span class="s">(</span><span class="i">$recipient1</span><span class="cm">,</span><span class="i">$recipient2</span><span class="cm">,</span> <span class="s">{</span> <span class="w">SkipBad</span> <span class="cm">=&gt;</span> <span class="n">1</span> <span class="s">}</span><span class="s">)</span><span class="sc">;</span>  <span class="c"># Good</span></li><li>  <span class="i">$smtp</span><span class="i">-&gt;recipient</span><span class="s">(</span><span class="i">$recipient1</span><span class="cm">,</span><span class="i">$recipient2</span><span class="cm">,</span> <span class="s">{</span> <span class="w">Notify</span> <span class="cm">=&gt;</span> <span class="s">[</span><span class="q">&#39;FAILURE&#39;</span><span class="cm">,</span><span class="q">&#39;DELAY&#39;</span><span class="s">]</span><span class="cm">,</span> <span class="w">SkipBad</span> <span class="cm">=&gt;</span> <span class="n">1</span> <span class="s">}</span><span class="s">)</span><span class="sc">;</span>  <span class="c"># Good</span></li><li>  <span class="i">@goodrecips</span>=<span class="i">$smtp</span><span class="i">-&gt;recipient</span><span class="s">(</span><span class="i">@recipients</span><span class="cm">,</span> <span class="s">{</span> <span class="w">Notify</span> <span class="cm">=&gt;</span> <span class="s">[</span><span class="q">&#39;FAILURE&#39;</span><span class="s">]</span><span class="cm">,</span> <span class="w">SkipBad</span> <span class="cm">=&gt;</span> <span class="n">1</span> <span class="s">}</span><span class="s">)</span><span class="sc">;</span>  <span class="c"># Good</span></li><li>  <span class="i">$smtp</span><span class="i">-&gt;recipient</span><span class="s">(</span><span class="q">&quot;$recipient,$recipient2&quot;</span><span class="s">)</span><span class="sc">;</span> <span class="c"># BAD</span></li></ol></pre><p>Notify is used to request Delivery Status Notifications (DSNs), but your
+SMTP/ESMTP service may not respect this request depending upon its version and
+your site's SMTP configuration.</p>
+<p>Leaving out the Notify option usually defaults an SMTP service to its default
+behavior equivalent to ['FAILURE'] notifications only, but again this may be
+dependent upon your site's SMTP configuration.</p>
+<p>The NEVER keyword must appear by itself if used within the Notify option and "requests
+that a DSN not be returned to the sender under any conditions."</p>
+<pre class="verbatim"><ol><li>  <span class="s">{</span><span class="w">Notify</span> <span class="cm">=&gt;</span> <span class="s">[</span><span class="q">&#39;NEVER&#39;</span><span class="s">]</span><span class="s">}</span></li><li></li><li>  <span class="i">$smtp</span><span class="i">-&gt;recipient</span><span class="s">(</span><span class="i">@recipients</span><span class="cm">,</span> <span class="s">{</span> <span class="w">Notify</span> <span class="cm">=&gt;</span> <span class="s">[</span><span class="q">&#39;NEVER&#39;</span><span class="s">]</span><span class="cm">,</span> <span class="w">SkipBad</span> <span class="cm">=&gt;</span> <span class="n">1</span> <span class="s">}</span><span class="s">)</span><span class="sc">;</span>  <span class="c"># Good</span></li></ol></pre><p>You may use any combination of these three values 'SUCCESS','FAILURE','DELAY' in
+the anonymous array reference as defined by RFC3461 (see <a href="http://www.ietf.org/rfc/rfc3461.txt">http://www.ietf.org/rfc/rfc3461.txt</a>
+for more information.  Note: quotations in this topic from same.).</p>
+<p>A Notify parameter of 'SUCCESS' or 'FAILURE' "requests that a DSN be issued on
+successful delivery or delivery failure, respectively."</p>
+<p>A Notify parameter of 'DELAY' "indicates the sender's willingness to receive
+delayed DSNs.  Delayed DSNs may be issued if delivery of a message has been
+delayed for an unusual amount of time (as determined by the Message Transfer
+Agent (MTA) at which the message is delayed), but the final delivery status
+(whether successful or failure) cannot be determined.  The absence of the DELAY
+keyword in a NOTIFY parameter requests that a "delayed" DSN NOT be issued under
+any conditions."</p>
+<pre class="verbatim"><ol><li>  <span class="s">{</span><span class="w">Notify</span> <span class="cm">=&gt;</span> <span class="s">[</span><span class="q">&#39;SUCCESS&#39;</span><span class="cm">,</span><span class="q">&#39;FAILURE&#39;</span><span class="cm">,</span><span class="q">&#39;DELAY&#39;</span><span class="s">]</span><span class="s">}</span></li><li></li><li>  <span class="i">$smtp</span><span class="i">-&gt;recipient</span><span class="s">(</span><span class="i">@recipients</span><span class="cm">,</span> <span class="s">{</span> <span class="w">Notify</span> <span class="cm">=&gt;</span> <span class="s">[</span><span class="q">&#39;FAILURE&#39;</span><span class="cm">,</span><span class="q">&#39;DELAY&#39;</span><span class="s">]</span><span class="cm">,</span> <span class="w">SkipBad</span> <span class="cm">=&gt;</span> <span class="n">1</span> <span class="s">}</span><span class="s">)</span><span class="sc">;</span>  <span class="c"># Good</span></li></ol></pre><p>ORcpt is also part of the SMTP DSN extension according to RFC3461.
+It is used to pass along the original recipient that the mail was first
+sent to.  The machine that generates a DSN will use this address to inform
+the sender, because he can't know if recipients get rewritten by mail servers.
+It is expected to be in a format as required by RFC3461, xtext-encoded.</p>
+</li>
+<li><a class='view-title' id="to-(-ADDRESS-%5b%2c-ADDRESS-%5b...%5d%5d-)"></a><strong>to ( ADDRESS [, ADDRESS [...]] )</strong>
+</li>
+<li><a class='view-title' id="cc-(-ADDRESS-%5b%2c-ADDRESS-%5b...%5d%5d-)"></a><strong>cc ( ADDRESS [, ADDRESS [...]] )</strong>
+</li>
+<li><a class='view-title' id="bcc-(-ADDRESS-%5b%2c-ADDRESS-%5b...%5d%5d-)"></a><strong>bcc ( ADDRESS [, ADDRESS [...]] )</strong>
+<p>Synonyms for <code class="inline"><span class="w">recipient</span></code>
+.</p>
+</li>
+<li><a class='view-title' id="data-(-%5b-DATA-%5d-)"></a><strong>data ( [ DATA ] )</strong>
+<p>Initiate the sending of the data from the current message.</p>
+<p><code class="inline"><span class="w">DATA</span></code>
+ may be a reference to a list or a list. If specified the contents
+of <code class="inline"><span class="w">DATA</span></code>
+ and a termination string <code class="inline"><span class="q">&quot;.\r\n&quot;</span></code>
+ is sent to the server. And the
+result will be true if the data was accepted.</p>
+<p>If <code class="inline"><span class="w">DATA</span></code>
+ is not specified then the result will indicate that the server
+wishes the data to be sent. The data must then be sent using the <code class="inline"><span class="w">datasend</span></code>
+
+and <code class="inline"><span class="w">dataend</span></code>
+ methods described in <a href="../Net/Cmd.html">Net::Cmd</a>.</p>
+</li>
+<li><a class='view-title' id="bdat-(-DATA-)"></a><strong>bdat ( DATA )</strong>
+</li>
+<li><a class='view-title' id="bdatlast-(-DATA-)"></a><strong>bdatlast ( DATA )</strong>
+<p>Use the alternate DATA command "BDAT" of the data chunking service extension
+defined in RFC1830 for efficiently sending large MIME messages.</p>
+</li>
+<li><a class='view-title' id="expand-(-ADDRESS-)"></a><strong>expand ( ADDRESS )</strong>
+<p>Request the server to expand the given address Returns an array
+which contains the text read from the server.</p>
+</li>
+<li><a class='view-title' id="verify-(-ADDRESS-)"></a><strong>verify ( ADDRESS )</strong>
+<p>Verify that <code class="inline"><span class="w">ADDRESS</span></code>
+ is a legitimate mailing address.</p>
+<p>Most sites usually disable this feature in their SMTP service configuration.
+Use "Debug =&gt; 1" option under new() to see if disabled.</p>
+</li>
+<li><a class='view-title' id="help-(-%5b-%24subject-%5d-)"></a><strong>help ( [ $subject ] )</strong>
+<p>Request help text from the server. Returns the text or undef upon failure</p>
+</li>
+<li><a class='view-title' id="quit-()"></a><strong>quit ()</strong>
+<p>Send the QUIT command to the remote SMTP server and close the socket connection.</p>
+</li>
+<li><a class='view-title' id="can_inet6-()"></a><strong>can_inet6 ()</strong>
+<p>Returns whether we can use IPv6.</p>
+</li>
+<li><a class='view-title' id="can_ssl-()"></a><strong>can_ssl ()</strong>
+<p>Returns whether we can use SSL.</p>
+</li>
+</ul>
+<a class='view-head1' id="ADDRESSES"></a><h2 class='h2' >ADDRESSES</h2>
+<p>Net::SMTP attempts to DWIM with addresses that are passed. For
+example an application might extract The From: line from an email
+and pass that to mail(). While this may work, it is not recommended.
+The application should really use a module like <a href="https://search.cpan.org/perldoc/Mail::Address">Mail::Address</a>
+to extract the mail address and pass that.</p>
+<p>If <code class="inline"><span class="w">ExactAddresses</span></code>
+ is passed to the constructor, then addresses
+should be a valid rfc2821-quoted address, although Net::SMTP will
+accept the address surrounded by angle brackets.</p>
+<pre class="verbatim"><ol><li> <span class="w">funny</span> <span class="w">user</span><span class="i">@domain</span>      <span class="w">WRONG</span></li><li> <span class="q">&quot;funny user&quot;</span><span class="i">@domain</span>    <span class="w">RIGHT</span><span class="cm">,</span> <span class="w">recommended</span></li><li> <span class="q">&lt;&quot;funny user&quot;@domain&gt;</span>  <span class="w">OK</span></li></ol></pre><a class='view-head1' id="SEE-ALSO"></a><h2 class='h2' >SEE ALSO</h2>
+<p><a href="../Net/Cmd.html">Net::Cmd</a>,
+<a href="https://search.cpan.org/perldoc/IO::Socket::SSL">IO::Socket::SSL</a></p>
+<a class='view-head1' id="AUTHOR"></a><h2 class='h2' >AUTHOR</h2>
+<p>Graham Barr &lt;<i>gbarr@pobox.com</i>&gt;</p>
+<p>Steve Hay &lt;<i>shay@cpan.org</i>&gt; is now maintaining libnet as of version
+1.22_02</p>
+<a class='view-head1' id="COPYRIGHT"></a><h2 class='h2' >COPYRIGHT</h2>
+<p>Versions up to 2.31_1 Copyright (c) 1995-2004 Graham Barr. All rights reserved.
+Changes in Version 2.31_2 onwards Copyright (C) 2013-2014 Steve Hay.  All rights
+reserved.</p>
+<p>This program is free software; you can redistribute it and/or modify
+it under the same terms as Perl itself.</p>
+
+
+
+
+      <ul><li><a href="#NAME">NAME</a></li><li><a href="#SYNOPSIS">SYNOPSIS</a></li><li><a href="#DESCRIPTION">DESCRIPTION</a></li><li><a href="#EXAMPLES">EXAMPLES</a></li><li><a href="#CONSTRUCTOR">CONSTRUCTOR</a></li><li><a href="#METHODS">METHODS</a></li><li><a href="#ADDRESSES">ADDRESSES</a></li><li><a href="#SEE-ALSO">SEE ALSO</a></li><li><a href="#AUTHOR">AUTHOR</a></li><li><a href="#COPYRIGHT">COPYRIGHT</a></li></ul>
+
+
+                  </div>
+                </article>
+              </div>
+            </div>
+          </main>
+        </div>
+           <footer class="footer row bg-light pt-5 pb-5">
+       <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+           <div class="row">
+               <div class="col-md-4">
+                   <ul class="list-unstyled">
+                       <li>
+                           <h4>Site info</h4>
+                       </li>
+                       <li>Docs mantained by
+                           <a href="//lists.perl.org/list/perl5-porters.html"
+                               rel="noopener">Perl 5 Porters</a>
+                       </li>
+                       <li>Perldoc site development sponsored by
+                           <a href="//opusvl.com" rel="noopener">
+                           <img style="margin: 20px 20px 5px 10px" class="opus-logo" src="/public/img/opusvl_logo.svg" alt="OpusVL Logo">
+                        </a>
+                    <li><span class="about_perldoc"><a href="//about.html">About PerlDOC</a></span>
+                    </li>
+                       </li>
+                   </ul>
+               </div>
+               <div class="col-md-8">
+                   <div class="row">
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Manuals</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.22.4/index-overview.html">Overview</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.22.4/index-tutorials.html">Tutorials</a>
+                               </li>
+                               <li>
+                                   <a href="/5.22.4/index-faq.html">FAQs</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.22.4/index-history.html">Changes</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Reference</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.22.4/index-language.html">Language</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.22.4/index-functions.html">Functions</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.22.4/perlop.html">Operators</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.22.4/perlvar.html">Variables</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Modules</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.22.4/index-modules-A.html">Modules</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.22.4/index-pragmas.html">Pragmas</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.22.4/index-utilities.html">Utilities</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Misc</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.22.4/index-licence.html">License</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.22.4/index-internals.html">Internals</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.22.4/index-platforms.html">Platforms</a>
+                               </li>
+                            <li>
+                                <a
+                                    href="/5.22.4/index-about.html">About</a>
+                            </li>
+                           </ul>
+                       </div>
+                   </div>
+               </div>
+               <div class=" col-12 footer-inf text-center">
+                   <small>perldoc.perl.org - Official documentation for the Perl
+                       programming language</small>
+               </div>
+           </div>
+       </div>
+   </footer>
+
+        	<div class="beta-wrapper beta-bottom-right ">
+		<div class="beta beta-blue  ">
+			<a class="beta-link "
+				href="//github.com/OpusVL/perldoc.perl.org/issues/new" rel="noopener">
+				<span class="beta-text">
+					This website is a Beta release.
+				</span>
+				<span class="beta-text">
+					For any issues please raise a ticket on GitHub
+				</span>
+			</a>
+		</div>
+	</div>
+
+        <script src="/public/js/main.min.js"></script>
+      </body>
+
+      </html>

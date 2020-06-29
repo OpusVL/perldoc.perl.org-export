@@ -1,0 +1,949 @@
+      
+      
+      
+      
+
+      <!DOCTYPE html>
+      <html lang="en">
+
+      <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="perlbug - perldoc.perl.org">
+        <link rel="icon" href="/public/img/favicon.ico">
+        <title>perlbug - perldoc.perl.org</title>
+        <link href="/public/css/main.min.css" rel="stylesheet">
+        <link rel="canonical" href="/perlbug.html">
+        <link
+          href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900'
+          rel='stylesheet' type='text/css'>
+        <script>
+          window.ga = window.ga || function () {
+            (ga.q = ga.q || []).push(arguments)
+          };
+          ga.l = +new Date;
+          ga('create', 'UA-1892152-2', 'auto'); // JJ's account
+          ga('create', 'UA-50555-3', 'auto', 'perlOrg'); // perl.org account
+          ga('require', 'outboundLinkTracker', {
+            events: ['click', 'auxclick', 'contextmenu'],
+          });
+          ga('require', 'maxScrollTracker');
+          ga('send', 'pageview');
+          ga('perlOrg.send', 'pageview');
+        </script>
+        <script async src="https://www.google-analytics.com/analytics.js">
+        </script>
+        <script async src="/public/js/tracking.min.js"></script>
+      </head>
+
+      <body class="body container-fluid ">
+        <div class="wrapper">
+
+          <nav
+    class="navbar navbar-dark bg-primary bg-perl fixed-top justify-content-between navbar-expand-lg">
+    <a href="#content" class="skippy sr-only sr-only-focusable">
+        <span class=' skippy-text'>Skip to main content</span>
+    </a>
+    <a class="navbar-brand" href="/">
+        <img class="logo" src="/public/img/logo_perl_doc.svg"
+            alt="Perl Documentation Logo" />
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse"
+        data-target="#navbar" aria-controls="navbar" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="navbar" class="collapse navbar-collapse ">
+        <ul class="navbar-nav ml-auto navbar-right">
+            <form class="nav-item dropdown search-wrapper">
+                <input type="text" id='searchinput' aria-describedby='navbarDropdown5'
+                    placeholder="Type query" class='search-input-field' value=''>
+
+                <button href="#" data-toggle='dropdown' type="button"
+                    aria-haspopup="true" aria-expanded='false' id="navbarDropdown5"
+                    class="nav-link dropdown-toggle search-link">
+                    <object tabindex='-1' focusable="false" class='search-icon'
+                        data="/public/img/search.svg" type="image/svg+xml"
+                        name='search icon'>search
+                        icon</object>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown5"
+                    id='search-results'>
+                    <p class='dropdown-item major-version'>
+                        No results
+                    </p>
+                </div>
+            </form>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown" href="#" class="nav-link dropdown-toggle"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Perl versions</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    
+                        <p class='dropdown-item major-version'>
+                            5.32
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.32.0/">5.32.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.30
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.3/">5.30.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.2/">5.30.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.1/">5.30.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.0/">5.30.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.28
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.3/">5.28.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.2/">5.28.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.1/">5.28.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.0/">5.28.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.26
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.3/">5.26.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.2/">5.26.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.1/">5.26.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.0/">5.26.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.24
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.4/">5.24.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.3/">5.24.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.2/">5.24.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.1/">5.24.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.0/">5.24.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.22
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.4/">5.22.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.3/">5.22.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.2/">5.22.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.1/">5.22.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.0/">5.22.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.20
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.3/">5.20.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.2/">5.20.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.1/">5.20.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.0/">5.20.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.18
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.4/">5.18.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.3/">5.18.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.2/">5.18.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.1/">5.18.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.0/">5.18.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.16
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.3/">5.16.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.2/">5.16.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.1/">5.16.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.0/">5.16.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.14
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.4/">5.14.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.3/">5.14.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.2/">5.14.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.1/">5.14.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.0/">5.14.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.12
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.5/">5.12.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.4/">5.12.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.3/">5.12.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.2/">5.12.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.1/">5.12.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.0/">5.12.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.10
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.1/">5.10.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.0/">5.10.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.8
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.9/">5.8.9</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.8/">5.8.8</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.7/">5.8.7</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.6/">5.8.6</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.5/">5.8.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.4/">5.8.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.3/">5.8.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.2/">5.8.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.1/">5.8.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.0/">5.8.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.6
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.2/">5.6.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.1/">5.6.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.0/">5.6.0</a>
+                        
+                        
+                    
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown1" href="#" class="dropdown-toggle nav-link"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Manuals</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                    <a class="dropdown-item"
+                        href="/5.26.2/index-overview.html">Overview</a>
+                    <a class="dropdown-item"
+                        href="/5.26.2/index-tutorials.html">Tutorials</a>
+                    <a class="dropdown-item"
+                        href="/5.26.2/index-faq.html">FAQs</a>
+                    <a class="dropdown-item"
+                        href="/5.26.2/index-history.html">Changes</a>
+                    <a class="dropdown-item"
+                        href="/5.26.2/index-licence.html">License</a>
+                    <a class="dropdown-item"
+                        href="/5.26.2/index-language.html">Language</a>
+                    <a class="dropdown-item"
+                        href="/5.26.2/index-functions.html">Functions</a>
+                    <a class="dropdown-item"
+                        href="/5.26.2/perlop.html">Operators</a>
+                    <a class="dropdown-item"
+                        href="/5.26.2/perlvar.html">Variables</a>
+                    <a class="dropdown-item"
+                        href="/5.26.2/index-pragmas.html">Pragmas</a>
+                    <a class="dropdown-item"
+                        href="/5.26.2/index-utilities.html">Utilities</a>
+                    <a class="dropdown-item"
+                        href="/5.26.2/index-internals.html">Internals</a>
+                    <a class="dropdown-item"
+                        href="/5.26.2/index-platforms.html">Platforms</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown3" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Modules</a>
+                <div aria-labelledby="navbarDropdown3"
+                    class="dropdown-menu letters-wrap">
+                    <!--<a class="dropdown-item"
+                        href="/5.26.2/index-modules.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.26.2/index-modules-by-cat.html">By
+                        Category</a>-->
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.26.2/index-modules-A.html">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.2/index-modules-B.html">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.2/index-modules-C.html">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.2/index-modules-D.html">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.2/index-modules-E.html">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.2/index-modules-F.html">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.2/index-modules-G.html">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.2/index-modules-H.html">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.2/index-modules-I.html">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.2/index-modules-J.html">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.2/index-modules-K.html">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.2/index-modules-L.html">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.2/index-modules-M.html">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.2/index-modules-N.html">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.2/index-modules-O.html">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.2/index-modules-P.html">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.2/index-modules-Q.html">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.2/index-modules-R.html">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.2/index-modules-S.html">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.2/index-modules-T.html">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.2/index-modules-U.html">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.2/index-modules-V.html">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.2/index-modules-W.html">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.2/index-modules-X.html">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.2/index-modules-Y.html">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.2/index-modules-Z.html">Z</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown4" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Functions</a>
+                <div aria-labelledby="navbarDropdown4"
+                    class="dropdown-menu letters-wrap">
+                    <a class="dropdown-item"
+                        href="/5.26.2/index-functions.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.26.2/index-functions-by-cat.html">By
+                        Category</a>
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.26.2/index-functions.html#A">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.2/index-functions.html#B">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.2/index-functions.html#C">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.2/index-functions.html#D">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.2/index-functions.html#E">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.2/index-functions.html#F">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.2/index-functions.html#G">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.2/index-functions.html#H">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.2/index-functions.html#I">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.2/index-functions.html#J">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.2/index-functions.html#K">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.2/index-functions.html#L">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.2/index-functions.html#M">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.2/index-functions.html#N">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.2/index-functions.html#O">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.2/index-functions.html#P">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.2/index-functions.html#Q">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.2/index-functions.html#R">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.2/index-functions.html#S">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.2/index-functions.html#T">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.2/index-functions.html#U">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.2/index-functions.html#V">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.2/index-functions.html#W">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.2/index-functions.html#X">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.2/index-functions.html#Y">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.2/index-functions.html#Z">Z</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!--/.nav-collapse -->
+</nav>
+
+
+          <main class="row main-content pb-5 pt-5" id='content'>
+            <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+              <div class="row">
+                <div class="col-sm-12">
+                  <div id="breadcrumbs">
+                      
+    <a href="index.html">Home</a>&nbsp; &gt;
+    
+      
+        <a href="index-utilities.html">Utilities</a> &gt;
+      
+    
+    perlbug
+  
+
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <article class="col-sm-12 content">
+                  <div class="documentation-wrapper">
+                    <div id="perl_version">
+                      <h7 class='page-title'> Perl 5 version 26.2
+                        documentation</h7>
+                    </div>
+                    <h1>perlbug</h1>
+
+
+  <!--    -->
+<ul><li><a href="#NAME">NAME</a></li><li><a href="#SYNOPSIS">SYNOPSIS</a></li><li><a href="#DESCRIPTION">DESCRIPTION</a></li><li><a href="#OPTIONS">OPTIONS</a></li><li><a href="#AUTHORS">AUTHORS</a></li><li><a href="#SEE-ALSO">SEE ALSO</a></li><li><a href="#BUGS">BUGS</a></li></ul><a class='view-head1' id="NAME"></a><h2 class='h2' >NAME</h2>
+<p>perlbug - how to submit bug reports on Perl</p>
+<a class='view-head1' id="SYNOPSIS"></a><h2 class='h2' >SYNOPSIS</h2>
+<p><strong>perlbug</strong></p>
+<p><strong>perlbug</strong> [ <strong>-v</strong> ] [ <strong>-a</strong> <i>address</i> ] [ <strong>-s</strong> <i>subject</i> ]
+[ <strong>-b</strong> <i>body</i> | <strong>-f</strong> <i>inputfile</i> ] [ <strong>-F</strong> <i>outputfile</i> ]
+[ <strong>-r</strong> <i>returnaddress</i> ]
+[ <strong>-e</strong> <i>editor</i> ] [ <strong>-c</strong> <i>adminaddress</i> | <strong>-C</strong> ]
+[ <strong>-S</strong> ] [ <strong>-t</strong> ]  [ <strong>-d</strong> ]  [ <strong>-A</strong> ]  [ <strong>-h</strong> ] [ <strong>-T</strong> ]</p>
+<p><strong>perlbug</strong> [ <strong>-v</strong> ] [ <strong>-r</strong> <i>returnaddress</i> ]
+ [ <strong>-A</strong> ] [ <strong>-ok</strong> | <strong>-okay</strong> | <strong>-nok</strong> | <strong>-nokay</strong> ]</p>
+<p><strong>perlthanks</strong></p>
+<a class='view-head1' id="DESCRIPTION"></a><h2 class='h2' >DESCRIPTION</h2>
+<p>This program is designed to help you generate and send bug reports
+(and thank-you notes) about perl5 and the modules which ship with it.</p>
+<p>In most cases, you can just run it interactively from a command
+line without any special arguments and follow the prompts.</p>
+<p>If you have found a bug with a non-standard port (one that was not
+part of the <i>standard distribution</i>), a binary distribution, or a
+non-core module (such as Tk, DBI, etc), then please see the
+documentation that came with that distribution to determine the
+correct place to report bugs.</p>
+<p>If you are unable to send your report using <strong>perlbug</strong> (most likely
+because your system doesn't have a way to send mail that perlbug
+recognizes), you may be able to use this tool to compose your report
+and save it to a file which you can then send to <strong>perlbug@perl.org</strong>
+using your regular mail client.</p>
+<p>In extreme cases, <strong>perlbug</strong> may not work well enough on your system
+to guide you through composing a bug report. In those cases, you
+may be able to use <strong>perlbug -d</strong> to get system configuration
+information to include in a manually composed bug report to
+<strong>perlbug@perl.org</strong>.</p>
+<p>When reporting a bug, please run through this checklist:</p>
+<ul>
+<li><a class='view-title' id="What-version-of-Perl-you-are-running%3f"></a><strong>What version of Perl you are running?</strong>
+<p>Type <code class="inline"><span class="w">perl</span> -<span class="w">v</span></code>
+ at the command line to find out.</p>
+</li>
+<li><a class='view-title' id="Are-you-running-the-latest-released-version-of-perl%3f"></a><strong>Are you running the latest released version of perl?</strong>
+<p>Look at <a href="http://www.perl.org/">http://www.perl.org/</a> to find out.  If you are not using the
+latest released version, please try to replicate your bug on the
+latest stable release.</p>
+<p>Note that reports about bugs in old versions of Perl, especially
+those which indicate you haven't also tested the current stable
+release of Perl, are likely to receive less attention from the
+volunteers who build and maintain Perl than reports about bugs in
+the current release.</p>
+<p>This tool isn't appropriate for reporting bugs in any version
+prior to Perl 5.0.</p>
+</li>
+<li><a class='view-title' id="Are-you-sure-what-you-have-is-a-bug%3f"></a><strong>Are you sure what you have is a bug?</strong>
+<p>A significant number of the bug reports we get turn out to be
+documented features in Perl.  Make sure the issue you've run into
+isn't intentional by glancing through the documentation that comes
+with the Perl distribution.</p>
+<p>Given the sheer volume of Perl documentation, this isn't a trivial
+undertaking, but if you can point to documentation that suggests
+the behaviour you're seeing is <i>wrong</i>, your issue is likely to
+receive more attention. You may want to start with <strong>perldoc</strong>
+<a href="perltrap.html">perltrap</a> for pointers to common traps that new (and experienced)
+Perl programmers run into.</p>
+<p>If you're unsure of the meaning of an error message you've run
+across, <strong>perldoc</strong> <a href="perldiag.html">perldiag</a> for an explanation.  If the message
+isn't in perldiag, it probably isn't generated by Perl.  You may
+have luck consulting your operating system documentation instead.</p>
+<p>If you are on a non-UNIX platform <strong>perldoc</strong> <a href="perlport.html">perlport</a>, as some
+features may be unimplemented or work differently.</p>
+<p>You may be able to figure out what's going wrong using the Perl
+debugger.  For information about how to use the debugger <strong>perldoc</strong>
+<a href="perldebug.html">perldebug</a>.</p>
+</li>
+<li><a class='view-title' id="Do-you-have-a-proper-test-case%3f"></a><strong>Do you have a proper test case?</strong>
+<p>The easier it is to reproduce your bug, the more likely it will be
+fixed -- if nobody can duplicate your problem, it probably won't be 
+addressed.</p>
+<p>A good test case has most of these attributes: short, simple code;
+few dependencies on external commands, modules, or libraries; no
+platform-dependent code (unless it's a platform-specific bug);
+clear, simple documentation.</p>
+<p>A good test case is almost always a good candidate to be included in
+Perl's test suite.  If you have the time, consider writing your test case so
+that it can be easily included into the standard test suite.</p>
+</li>
+<li><a class='view-title' id="Have-you-included-all-relevant-information%3f"></a><strong>Have you included all relevant information?</strong>
+<p>Be sure to include the <strong>exact</strong> error messages, if any.
+"Perl gave an error" is not an exact error message.</p>
+<p>If you get a core dump (or equivalent), you may use a debugger
+(<strong>dbx</strong>, <strong>gdb</strong>, etc) to produce a stack trace to include in the bug
+report.</p>
+<p>NOTE: unless your Perl has been compiled with debug info
+(often <strong>-g</strong>), the stack trace is likely to be somewhat hard to use
+because it will most probably contain only the function names and not
+their arguments.  If possible, recompile your Perl with debug info and
+reproduce the crash and the stack trace.</p>
+</li>
+<li><a class='view-title' id="Can-you-describe-the-bug-in-plain-English%3f"></a><strong>Can you describe the bug in plain English?</strong>
+<p>The easier it is to understand a reproducible bug, the more likely
+it will be fixed.  Any insight you can provide into the problem
+will help a great deal.  In other words, try to analyze the problem
+(to the extent you can) and report your discoveries.</p>
+</li>
+<li><a class='view-title' id="Can-you-fix-the-bug-yourself%3f"></a><strong>Can you fix the bug yourself?</strong>
+<p>If so, that's great news; bug reports with patches are likely to
+receive significantly more attention and interest than those without
+patches.  Please attach your patch to the report using the <code class="inline">-p</code>
+ option.
+When sending a patch, create it using <code class="inline"><span class="w">git</span> format-patch</code>
+ if possible,
+though a unified diff created with <code class="inline"><span class="w">diff</span> -<span class="w">pu</span></code>
+ will do nearly as well.</p>
+<p>Your patch may be returned with requests for changes, or requests for more
+detailed explanations about your fix.</p>
+<p>Here are a few hints for creating high-quality patches:</p>
+<p>Make sure the patch is not reversed (the first argument to diff is
+typically the original file, the second argument your changed file).
+Make sure you test your patch by applying it with <code class="inline"><span class="w">git</span> <span class="w">am</span></code>
+ or the
+<code class="inline"><span class="w">patch</span></code>
+ program before you send it on its way.  Try to follow the
+same style as the code you are trying to patch.  Make sure your patch
+really does work (<code class="inline"><span class="w">make</span> <span class="w">test</span></code>
+, if the thing you're patching is covered
+by Perl's test suite).</p>
+</li>
+<li><a class='view-title' id="Can-you-use-perlbug-to-submit-the-report%3f"></a><strong>Can you use <code class="inline"><span class="w">perlbug</span></code>
+ to submit the report?</strong>
+<p><strong>perlbug</strong> will, amongst other things, ensure your report includes
+crucial information about your version of perl.  If <code class="inline"><span class="w">perlbug</span></code>
+ is
+unable to mail your report after you have typed it in, you may have
+to compose the message yourself, add the output produced by <code class="inline"><span class="w">perlbug</span>
+-d</code>
+ and email it to <strong>perlbug@perl.org</strong>.  If, for some reason, you
+cannot run <code class="inline"><span class="w">perlbug</span></code>
+ at all on your system, be sure to include the
+entire output produced by running <code class="inline"><span class="w">perl</span> -<span class="w">V</span></code>
+ (note the uppercase V).</p>
+<p>Whether you use <code class="inline"><span class="w">perlbug</span></code>
+ or send the email manually, please make
+your Subject line informative.  "a bug" is not informative.  Neither
+is "perl crashes" nor is "HELP!!!".  These don't help.  A compact
+description of what's wrong is fine.</p>
+</li>
+<li><a class='view-title' id="Can-you-use-perlbug-to-submit-a-thank-you-note%3f"></a><strong>Can you use <code class="inline"><span class="w">perlbug</span></code>
+ to submit a thank-you note?</strong>
+<p>Yes, you can do this by either using the <code class="inline">-T</code>
+ option, or by invoking
+the program as <code class="inline"><span class="w">perlthanks</span></code>
+. Thank-you notes are good. It makes people
+smile.</p>
+</li>
+</ul>
+<p>Having done your bit, please be prepared to wait, to be told the
+bug is in your code, or possibly to get no reply at all.  The
+volunteers who maintain Perl are busy folks, so if your problem is
+an obvious bug in your own code, is difficult to understand or is
+a duplicate of an existing report, you may not receive a personal
+reply.</p>
+<p>If it is important to you that your bug be fixed, do monitor the
+perl5-porters@perl.org mailing list (mailing lists are moderated, your
+message may take a while to show up) and the commit logs to development
+versions of Perl, and encourage the maintainers with kind words or
+offers of frosty beverages.  (Please do be kind to the maintainers.
+Harassing or flaming them is likely to have the opposite effect of the
+one you want.)</p>
+<p>Feel free to update the ticket about your bug on <a href="http://rt.perl.org">http://rt.perl.org</a>
+if a new version of Perl is released and your bug is still present.</p>
+<a class='view-head1' id="OPTIONS"></a><h2 class='h2' >OPTIONS</h2>
+<ul>
+<li><a class='view-title' id="*-a*"></a><strong><strong>-a</strong></strong>
+<p>Address to send the report to.  Defaults to <strong>perlbug@perl.org</strong>.</p>
+</li>
+<li><a class='view-title' id="*-A*"></a><strong><strong>-A</strong></strong>
+<p>Don't send a bug received acknowledgement to the reply address.
+Generally it is only a sensible to use this option if you are a
+perl maintainer actively watching perl porters for your message to
+arrive.</p>
+</li>
+<li><a class='view-title' id="*-b*"></a><strong><strong>-b</strong></strong>
+<p>Body of the report.  If not included on the command line, or
+in a file with <strong>-f</strong>, you will get a chance to edit the message.</p>
+</li>
+<li><a class='view-title' id="*-C*"></a><strong><strong>-C</strong></strong>
+<p>Don't send copy to administrator.</p>
+</li>
+<li><a class='view-title' id="*-c*"></a><strong><strong>-c</strong></strong>
+<p>Address to send copy of report to.  Defaults to the address of the
+local perl administrator (recorded when perl was built).</p>
+</li>
+<li><a class='view-title' id="*-d*"></a><strong><strong>-d</strong></strong>
+<p>Data mode (the default if you redirect or pipe output).  This prints out
+your configuration data, without mailing anything.  You can use this
+with <strong>-v</strong> to get more complete data.</p>
+</li>
+<li><a class='view-title' id="*-e*"></a><strong><strong>-e</strong></strong>
+<p>Editor to use.</p>
+</li>
+<li><a class='view-title' id="*-f*"></a><strong><strong>-f</strong></strong>
+<p>File containing the body of the report.  Use this to quickly send a
+prepared message.</p>
+</li>
+<li><a class='view-title' id="*-F*"></a><strong><strong>-F</strong></strong>
+<p>File to output the results to instead of sending as an email. Useful
+particularly when running perlbug on a machine with no direct internet
+connection.</p>
+</li>
+<li><a class='view-title' id="*-h*"></a><strong><strong>-h</strong></strong>
+<p>Prints a brief summary of the options.</p>
+</li>
+<li><a class='view-title' id="*-ok*"></a><strong><strong>-ok</strong></strong>
+<p>Report successful build on this system to perl porters. Forces <strong>-S</strong>
+and <strong>-C</strong>. Forces and supplies values for <strong>-s</strong> and <strong>-b</strong>. Only
+prompts for a return address if it cannot guess it (for use with
+<strong>make</strong>). Honors return address specified with <strong>-r</strong>.  You can use this
+with <strong>-v</strong> to get more complete data.   Only makes a report if this
+system is less than 60 days old.</p>
+</li>
+<li><a class='view-title' id="*-okay*"></a><strong><strong>-okay</strong></strong>
+<p>As <strong>-ok</strong> except it will report on older systems.</p>
+</li>
+<li><a class='view-title' id="*-nok*"></a><strong><strong>-nok</strong></strong>
+<p>Report unsuccessful build on this system.  Forces <strong>-C</strong>.  Forces and
+supplies a value for <strong>-s</strong>, then requires you to edit the report
+and say what went wrong.  Alternatively, a prepared report may be
+supplied using <strong>-f</strong>.  Only prompts for a return address if it
+cannot guess it (for use with <strong>make</strong>). Honors return address
+specified with <strong>-r</strong>.  You can use this with <strong>-v</strong> to get more
+complete data.  Only makes a report if this system is less than 60
+days old.</p>
+</li>
+<li><a class='view-title' id="*-nokay*"></a><strong><strong>-nokay</strong></strong>
+<p>As <strong>-nok</strong> except it will report on older systems.</p>
+</li>
+<li><a class='view-title' id="*-p*"></a><strong><strong>-p</strong></strong>
+<p>The names of one or more patch files or other text attachments to be
+included with the report.  Multiple files must be separated with commas.</p>
+</li>
+<li><a class='view-title' id="*-r*"></a><strong><strong>-r</strong></strong>
+<p>Your return address.  The program will ask you to confirm its default
+if you don't use this option.</p>
+</li>
+<li><a class='view-title' id="*-S*"></a><strong><strong>-S</strong></strong>
+<p>Send without asking for confirmation.</p>
+</li>
+<li><a class='view-title' id="*-s*"></a><strong><strong>-s</strong></strong>
+<p>Subject to include with the message.  You will be prompted if you don't
+supply one on the command line.</p>
+</li>
+<li><a class='view-title' id="*-t*"></a><strong><strong>-t</strong></strong>
+<p>Test mode.  The target address defaults to <strong>perlbug-test@perl.org</strong>.
+Also makes it possible to command perlbug from a pipe or file, for
+testing purposes.</p>
+</li>
+<li><a class='view-title' id="*-T*"></a><strong><strong>-T</strong></strong>
+<p>Send a thank-you note instead of a bug report.</p>
+</li>
+<li><a class='view-title' id="*-v*"></a><strong><strong>-v</strong></strong>
+<p>Include verbose configuration data in the report.</p>
+</li>
+</ul>
+<a class='view-head1' id="AUTHORS"></a><h2 class='h2' >AUTHORS</h2>
+<p>Kenneth Albanowski (&lt;kjahds@kjahds.com&gt;), subsequently
+<i>doc</i>tored by Gurusamy Sarathy (&lt;gsar@activestate.com&gt;),
+Tom Christiansen (&lt;tchrist@perl.com&gt;), Nathan Torkington
+(&lt;gnat@frii.com&gt;), Charles F. Randall (&lt;cfr@pobox.com&gt;),
+Mike Guy (&lt;mjtg@cam.ac.uk&gt;), Dominic Dunlop
+(&lt;domo@computer.org&gt;), Hugo van der Sanden (&lt;hv@crypt.org&gt;),
+Jarkko Hietaniemi (&lt;jhi@iki.fi&gt;), Chris Nandor
+(&lt;pudge@pobox.com&gt;), Jon Orwant (&lt;orwant@media.mit.edu&gt;,
+Richard Foley (&lt;richard.foley@rfi.net&gt;), Jesse Vincent
+(&lt;jesse@bestpractical.com&gt;), and Craig A. Berry (&lt;craigberry@mac.com&gt;).</p>
+<a class='view-head1' id="SEE-ALSO"></a><h2 class='h2' >SEE ALSO</h2>
+<p>perl(1), perldebug(1), perldiag(1), perlport(1), perltrap(1),
+diff(1), patch(1), dbx(1), gdb(1)</p>
+<a class='view-head1' id="BUGS"></a><h2 class='h2' >BUGS</h2>
+<p>None known (guess what must have been used to report them?)</p>
+
+
+
+
+      <ul><li><a href="#NAME">NAME</a></li><li><a href="#SYNOPSIS">SYNOPSIS</a></li><li><a href="#DESCRIPTION">DESCRIPTION</a></li><li><a href="#OPTIONS">OPTIONS</a></li><li><a href="#AUTHORS">AUTHORS</a></li><li><a href="#SEE-ALSO">SEE ALSO</a></li><li><a href="#BUGS">BUGS</a></li></ul>
+
+
+                  </div>
+                </article>
+              </div>
+            </div>
+          </main>
+        </div>
+           <footer class="footer row bg-light pt-5 pb-5">
+       <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+           <div class="row">
+               <div class="col-md-4">
+                   <ul class="list-unstyled">
+                       <li>
+                           <h4>Site info</h4>
+                       </li>
+                       <li>Docs mantained by
+                           <a href="//lists.perl.org/list/perl5-porters.html"
+                               rel="noopener">Perl 5 Porters</a>
+                       </li>
+                       <li>Perldoc site development sponsored by
+                           <a href="//opusvl.com" rel="noopener">
+                           <img style="margin: 20px 20px 5px 10px" class="opus-logo" src="/public/img/opusvl_logo.svg" alt="OpusVL Logo">
+                        </a>
+                    <li><span class="about_perldoc"><a href="//about.html">About PerlDOC</a></span>
+                    </li>
+                       </li>
+                   </ul>
+               </div>
+               <div class="col-md-8">
+                   <div class="row">
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Manuals</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.26.2/index-overview.html">Overview</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.26.2/index-tutorials.html">Tutorials</a>
+                               </li>
+                               <li>
+                                   <a href="/5.26.2/index-faq.html">FAQs</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.26.2/index-history.html">Changes</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Reference</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.26.2/index-language.html">Language</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.26.2/index-functions.html">Functions</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.26.2/perlop.html">Operators</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.26.2/perlvar.html">Variables</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Modules</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.26.2/index-modules-A.html">Modules</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.26.2/index-pragmas.html">Pragmas</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.26.2/index-utilities.html">Utilities</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Misc</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.26.2/index-licence.html">License</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.26.2/index-internals.html">Internals</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.26.2/index-platforms.html">Platforms</a>
+                               </li>
+                            <li>
+                                <a
+                                    href="/5.26.2/index-about.html">About</a>
+                            </li>
+                           </ul>
+                       </div>
+                   </div>
+               </div>
+               <div class=" col-12 footer-inf text-center">
+                   <small>perldoc.perl.org - Official documentation for the Perl
+                       programming language</small>
+               </div>
+           </div>
+       </div>
+   </footer>
+
+        	<div class="beta-wrapper beta-bottom-right ">
+		<div class="beta beta-blue  ">
+			<a class="beta-link "
+				href="//github.com/OpusVL/perldoc.perl.org/issues/new" rel="noopener">
+				<span class="beta-text">
+					This website is a Beta release.
+				</span>
+				<span class="beta-text">
+					For any issues please raise a ticket on GitHub
+				</span>
+			</a>
+		</div>
+	</div>
+
+        <script src="/public/js/main.min.js"></script>
+      </body>
+
+      </html>

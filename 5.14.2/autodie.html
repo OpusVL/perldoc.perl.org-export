@@ -1,0 +1,866 @@
+      
+      
+      
+      
+
+      <!DOCTYPE html>
+      <html lang="en">
+
+      <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="autodie - perldoc.perl.org">
+        <link rel="icon" href="/public/img/favicon.ico">
+        <title>autodie - perldoc.perl.org</title>
+        <link href="/public/css/main.min.css" rel="stylesheet">
+        <link rel="canonical" href="/autodie.html">
+        <link
+          href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900'
+          rel='stylesheet' type='text/css'>
+        <script>
+          window.ga = window.ga || function () {
+            (ga.q = ga.q || []).push(arguments)
+          };
+          ga.l = +new Date;
+          ga('create', 'UA-1892152-2', 'auto'); // JJ's account
+          ga('create', 'UA-50555-3', 'auto', 'perlOrg'); // perl.org account
+          ga('require', 'outboundLinkTracker', {
+            events: ['click', 'auxclick', 'contextmenu'],
+          });
+          ga('require', 'maxScrollTracker');
+          ga('send', 'pageview');
+          ga('perlOrg.send', 'pageview');
+        </script>
+        <script async src="https://www.google-analytics.com/analytics.js">
+        </script>
+        <script async src="/public/js/tracking.min.js"></script>
+      </head>
+
+      <body class="body container-fluid ">
+        <div class="wrapper">
+
+          <nav
+    class="navbar navbar-dark bg-primary bg-perl fixed-top justify-content-between navbar-expand-lg">
+    <a href="#content" class="skippy sr-only sr-only-focusable">
+        <span class=' skippy-text'>Skip to main content</span>
+    </a>
+    <a class="navbar-brand" href="/">
+        <img class="logo" src="/public/img/logo_perl_doc.svg"
+            alt="Perl Documentation Logo" />
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse"
+        data-target="#navbar" aria-controls="navbar" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="navbar" class="collapse navbar-collapse ">
+        <ul class="navbar-nav ml-auto navbar-right">
+            <form class="nav-item dropdown search-wrapper">
+                <input type="text" id='searchinput' aria-describedby='navbarDropdown5'
+                    placeholder="Type query" class='search-input-field' value=''>
+
+                <button href="#" data-toggle='dropdown' type="button"
+                    aria-haspopup="true" aria-expanded='false' id="navbarDropdown5"
+                    class="nav-link dropdown-toggle search-link">
+                    <object tabindex='-1' focusable="false" class='search-icon'
+                        data="/public/img/search.svg" type="image/svg+xml"
+                        name='search icon'>search
+                        icon</object>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown5"
+                    id='search-results'>
+                    <p class='dropdown-item major-version'>
+                        No results
+                    </p>
+                </div>
+            </form>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown" href="#" class="nav-link dropdown-toggle"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Perl versions</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    
+                        <p class='dropdown-item major-version'>
+                            5.32
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.32.0/">5.32.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.30
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.3/">5.30.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.2/">5.30.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.1/">5.30.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.0/">5.30.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.28
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.3/">5.28.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.2/">5.28.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.1/">5.28.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.0/">5.28.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.26
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.3/">5.26.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.2/">5.26.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.1/">5.26.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.0/">5.26.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.24
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.4/">5.24.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.3/">5.24.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.2/">5.24.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.1/">5.24.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.0/">5.24.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.22
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.4/">5.22.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.3/">5.22.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.2/">5.22.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.1/">5.22.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.0/">5.22.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.20
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.3/">5.20.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.2/">5.20.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.1/">5.20.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.0/">5.20.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.18
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.4/">5.18.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.3/">5.18.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.2/">5.18.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.1/">5.18.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.0/">5.18.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.16
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.3/">5.16.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.2/">5.16.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.1/">5.16.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.0/">5.16.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.14
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.4/">5.14.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.3/">5.14.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.2/">5.14.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.1/">5.14.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.0/">5.14.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.12
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.5/">5.12.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.4/">5.12.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.3/">5.12.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.2/">5.12.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.1/">5.12.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.0/">5.12.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.10
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.1/">5.10.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.0/">5.10.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.8
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.9/">5.8.9</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.8/">5.8.8</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.7/">5.8.7</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.6/">5.8.6</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.5/">5.8.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.4/">5.8.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.3/">5.8.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.2/">5.8.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.1/">5.8.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.0/">5.8.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.6
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.2/">5.6.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.1/">5.6.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.0/">5.6.0</a>
+                        
+                        
+                    
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown1" href="#" class="dropdown-toggle nav-link"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Manuals</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                    <a class="dropdown-item"
+                        href="/5.14.2/index-overview.html">Overview</a>
+                    <a class="dropdown-item"
+                        href="/5.14.2/index-tutorials.html">Tutorials</a>
+                    <a class="dropdown-item"
+                        href="/5.14.2/index-faq.html">FAQs</a>
+                    <a class="dropdown-item"
+                        href="/5.14.2/index-history.html">Changes</a>
+                    <a class="dropdown-item"
+                        href="/5.14.2/index-licence.html">License</a>
+                    <a class="dropdown-item"
+                        href="/5.14.2/index-language.html">Language</a>
+                    <a class="dropdown-item"
+                        href="/5.14.2/index-functions.html">Functions</a>
+                    <a class="dropdown-item"
+                        href="/5.14.2/perlop.html">Operators</a>
+                    <a class="dropdown-item"
+                        href="/5.14.2/perlvar.html">Variables</a>
+                    <a class="dropdown-item"
+                        href="/5.14.2/index-pragmas.html">Pragmas</a>
+                    <a class="dropdown-item"
+                        href="/5.14.2/index-utilities.html">Utilities</a>
+                    <a class="dropdown-item"
+                        href="/5.14.2/index-internals.html">Internals</a>
+                    <a class="dropdown-item"
+                        href="/5.14.2/index-platforms.html">Platforms</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown3" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Modules</a>
+                <div aria-labelledby="navbarDropdown3"
+                    class="dropdown-menu letters-wrap">
+                    <!--<a class="dropdown-item"
+                        href="/5.14.2/index-modules.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.14.2/index-modules-by-cat.html">By
+                        Category</a>-->
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.14.2/index-modules-A.html">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.2/index-modules-B.html">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.2/index-modules-C.html">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.2/index-modules-D.html">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.2/index-modules-E.html">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.2/index-modules-F.html">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.2/index-modules-G.html">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.2/index-modules-H.html">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.2/index-modules-I.html">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.2/index-modules-J.html">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.2/index-modules-K.html">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.2/index-modules-L.html">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.2/index-modules-M.html">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.2/index-modules-N.html">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.2/index-modules-O.html">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.2/index-modules-P.html">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.2/index-modules-Q.html">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.2/index-modules-R.html">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.2/index-modules-S.html">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.2/index-modules-T.html">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.2/index-modules-U.html">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.2/index-modules-V.html">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.2/index-modules-W.html">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.2/index-modules-X.html">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.2/index-modules-Y.html">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.2/index-modules-Z.html">Z</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown4" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Functions</a>
+                <div aria-labelledby="navbarDropdown4"
+                    class="dropdown-menu letters-wrap">
+                    <a class="dropdown-item"
+                        href="/5.14.2/index-functions.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.14.2/index-functions-by-cat.html">By
+                        Category</a>
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.14.2/index-functions.html#A">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.2/index-functions.html#B">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.2/index-functions.html#C">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.2/index-functions.html#D">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.2/index-functions.html#E">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.2/index-functions.html#F">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.2/index-functions.html#G">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.2/index-functions.html#H">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.2/index-functions.html#I">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.2/index-functions.html#J">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.2/index-functions.html#K">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.2/index-functions.html#L">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.2/index-functions.html#M">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.2/index-functions.html#N">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.2/index-functions.html#O">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.2/index-functions.html#P">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.2/index-functions.html#Q">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.2/index-functions.html#R">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.2/index-functions.html#S">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.2/index-functions.html#T">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.2/index-functions.html#U">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.2/index-functions.html#V">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.2/index-functions.html#W">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.2/index-functions.html#X">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.2/index-functions.html#Y">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.2/index-functions.html#Z">Z</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!--/.nav-collapse -->
+</nav>
+
+
+          <main class="row main-content pb-5 pt-5" id='content'>
+            <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+              <div class="row">
+                <div class="col-sm-12">
+                  <div id="breadcrumbs">
+                      
+    <a href="index.html">Home</a>&nbsp; &gt;
+    
+      
+        <a href="index-pragmas.html">Pragmas</a> &gt;
+      
+    
+    autodie
+  
+
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <article class="col-sm-12 content">
+                  <div class="documentation-wrapper">
+                    <div id="perl_version">
+                      <h7 class='page-title'> Perl 5 version 14.2
+                        documentation</h7>
+                    </div>
+                    <h1>autodie</h1>
+
+
+  <!--    -->
+<ul><li><a href="#NAME">NAME</a></li><li><a href="#SYNOPSIS">SYNOPSIS</a></li><li><a href="#DESCRIPTION">DESCRIPTION</a></li><li><a href="#EXCEPTIONS">EXCEPTIONS</a></li><li><a href="#CATEGORIES">CATEGORIES</a></li><li><a href="#FUNCTION-SPECIFIC-NOTES">FUNCTION SPECIFIC NOTES</a></li><ul><li><a href="#flock">flock</a></li><li><a href="#system%2fexec">system/exec</a></li></ul><li><a href="#GOTCHAS">GOTCHAS</a></li><li><a href="#DIAGNOSTICS">DIAGNOSTICS</a></li><li><a href="#BUGS">BUGS</a></li><ul><li><a href="#autodie-and-string-eval">autodie and string eval</a></li><li><a href="#REPORTING-BUGS">REPORTING BUGS</a></li></ul><li><a href="#FEEDBACK">FEEDBACK</a></li><li><a href="#AUTHOR">AUTHOR</a></li><li><a href="#LICENSE">LICENSE</a></li><li><a href="#SEE-ALSO">SEE ALSO</a></li><li><a href="#ACKNOWLEDGEMENTS">ACKNOWLEDGEMENTS</a></li></ul><a class='view-head1' id="NAME"></a><h2 class='h2' >NAME</h2>
+<p>autodie - Replace functions with ones that succeed or die with lexical scope</p>
+<a class='view-head1' id="SYNOPSIS"></a><h2 class='h2' >SYNOPSIS</h2>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="functions/use.html">use</a> <span class="w">autodie</span><span class="sc">;</span>            <span class="c"># Recommended: implies &#39;use autodie qw(:default)&#39;</span></li><li></li><li>    <a class="l_k" href="functions/use.html">use</a> <span class="w">autodie</span> <span class="q">qw(:all)</span><span class="sc">;</span>   <span class="c"># Recommended more: defaults and system/exec.</span></li><li></li><li>    <a class="l_k" href="functions/use.html">use</a> <span class="w">autodie</span> <span class="q">qw(open close)</span><span class="sc">;</span>   <span class="c"># open/close succeed or die</span></li><li></li><li>    <a class="l_k" href="functions/open.html">open</a><span class="s">(</span><a class="l_k" href="functions/my.html">my</a> <span class="i">$fh</span><span class="cm">,</span> <span class="q">&quot;&lt;&quot;</span><span class="cm">,</span> <span class="i">$filename</span><span class="s">)</span><span class="sc">;</span> <span class="c"># No need to check!</span></li><li></li><li>    <span class="s">{</span></li><li>        <a class="l_k" href="functions/no.html">no</a> <span class="w">autodie</span> <span class="q">qw(open)</span><span class="sc">;</span>          <span class="c"># open failures won&#39;t die</span></li><li>        <a class="l_k" href="functions/open.html">open</a><span class="s">(</span><a class="l_k" href="functions/my.html">my</a> <span class="i">$fh</span><span class="cm">,</span> <span class="q">&quot;&lt;&quot;</span><span class="cm">,</span> <span class="i">$filename</span><span class="s">)</span><span class="sc">;</span> <span class="c"># Could fail silently!</span></li><li>        <a class="l_k" href="functions/no.html">no</a> <span class="w">autodie</span><span class="sc">;</span>                   <span class="c"># disable all autodies</span></li><li>    <span class="s">}</span></li></ol></pre><a class='view-head1' id="DESCRIPTION"></a><h2 class='h2' >DESCRIPTION</h2>
+<pre class="verbatim"><ol><li>        <span class="w">bIlujDI</span><span class="q">&#39; yIchegh()Qo&#39;</span><span class="sc">;</span> <span class="i">yIHegh</span><span class="s">(</span><span class="s">)</span>!</li><li></li><li>        <span class="w">It</span> <span class="w">is</span> <span class="w">better</span> <span class="w">to</span> <a class="l_k" href="functions/die.html">die</a><span class="s">(</span><span class="s">)</span> <span class="w">than</span> <span class="w">to</span> <a class="l_k" href="functions/return.html">return</a><span class="s">(</span><span class="s">)</span> <span class="w">in</span> <span class="w">failure</span>.</li><li></li><li>                -- <span class="w">Klingon</span> <span class="w">programming</span> <span class="w">proverb</span>.</li></ol></pre><p>The <code class="inline"><span class="w">autodie</span></code>
+ pragma provides a convenient way to replace functions
+that normally return false on failure with equivalents that throw
+an exception on failure.</p>
+<p>The <code class="inline"><span class="w">autodie</span></code>
+ pragma has <i>lexical scope</i>, meaning that functions
+and subroutines altered with <code class="inline"><span class="w">autodie</span></code>
+ will only change their behaviour
+until the end of the enclosing block, file, or <code class="inline"><a class="l_k" href="functions/eval.html">eval</a></code>.</p>
+<p>If <code class="inline"><a class="l_k" href="functions/system.html">system</a></code> is specified as an argument to <code class="inline"><span class="w">autodie</span></code>
+, then it
+uses <a href="https://search.cpan.org/perldoc/IPC::System::Simple">IPC::System::Simple</a> to do the heavy lifting.  See the
+description of that module for more information.</p>
+<a class='view-head1' id="EXCEPTIONS"></a><h2 class='h2' >EXCEPTIONS</h2>
+<p>Exceptions produced by the <code class="inline"><span class="w">autodie</span></code>
+ pragma are members of the
+<a href="autodie/exception.html">autodie::exception</a> class.  The preferred way to work with
+these exceptions under Perl 5.10 is as follows:</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="functions/use.html">use</a> <span class="w">feature</span> <span class="q">qw(switch)</span><span class="sc">;</span></li><li></li><li>    <a class="l_k" href="functions/eval.html">eval</a> <span class="s">{</span></li><li>        <a class="l_k" href="functions/use.html">use</a> <span class="w">autodie</span><span class="sc">;</span></li><li></li><li>        <a class="l_k" href="functions/open.html">open</a><span class="s">(</span><a class="l_k" href="functions/my.html">my</a> <span class="i">$fh</span><span class="cm">,</span> <span class="q">&#39;&lt;&#39;</span><span class="cm">,</span> <span class="i">$some_file</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>        <a class="l_k" href="functions/my.html">my</a> <span class="i">@records</span> = <span class="q">&lt;$fh&gt;</span><span class="sc">;</span></li><li></li><li>        <span class="c"># Do things with @records...</span></li><li></li><li>        <a class="l_k" href="functions/close.html">close</a><span class="s">(</span><span class="i">$fh</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>    <span class="s">}</span><span class="sc">;</span></li><li></li><li>    <a class="l_k" href="functions/given.html">given</a> <span class="s">(</span><span class="i">$@</span><span class="s">)</span> <span class="s">{</span></li><li>        <a class="l_k" href="functions/when.html">when</a> <span class="s">(</span><a class="l_k" href="functions/undef.html">undef</a><span class="s">)</span>   <span class="s">{</span> <a class="l_k" href="functions/say.html">say</a> <span class="q">&quot;No error&quot;</span><span class="sc">;</span>                    <span class="s">}</span></li><li>        <a class="l_k" href="functions/when.html">when</a> <span class="s">(</span><span class="q">&#39;open&#39;</span><span class="s">)</span>  <span class="s">{</span> <a class="l_k" href="functions/say.html">say</a> <span class="q">&quot;Error from open&quot;</span><span class="sc">;</span>             <span class="s">}</span></li><li>        <a class="l_k" href="functions/when.html">when</a> <span class="s">(</span><span class="q">&#39;:io&#39;</span><span class="s">)</span>   <span class="s">{</span> <a class="l_k" href="functions/say.html">say</a> <span class="q">&quot;Non-open, IO error.&quot;</span><span class="sc">;</span>         <span class="s">}</span></li><li>        <a class="l_k" href="functions/when.html">when</a> <span class="s">(</span><span class="q">&#39;:all&#39;</span><span class="s">)</span>  <span class="s">{</span> <a class="l_k" href="functions/say.html">say</a> <span class="q">&quot;All other autodie errors.&quot;</span>    <span class="s">}</span></li><li>        <span class="i">default</span>        <span class="s">{</span> <a class="l_k" href="functions/say.html">say</a> <span class="q">&quot;Not an autodie error at all.&quot;</span> <span class="s">}</span></li><li>    <span class="s">}</span></li></ol></pre><p>Under Perl 5.8, the <code class="inline"><a class="l_k" href="functions/given.html">given/when</a></code> structure is not available, so the
+following structure may be used:</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="functions/eval.html">eval</a> <span class="s">{</span></li><li>        <a class="l_k" href="functions/use.html">use</a> <span class="w">autodie</span><span class="sc">;</span></li><li></li><li>        <a class="l_k" href="functions/open.html">open</a><span class="s">(</span><a class="l_k" href="functions/my.html">my</a> <span class="i">$fh</span><span class="cm">,</span> <span class="q">&#39;&lt;&#39;</span><span class="cm">,</span> <span class="i">$some_file</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>        <a class="l_k" href="functions/my.html">my</a> <span class="i">@records</span> = <span class="q">&lt;$fh&gt;</span><span class="sc">;</span></li><li></li><li>        <span class="c"># Do things with @records...</span></li><li></li><li>        <a class="l_k" href="functions/close.html">close</a><span class="s">(</span><span class="i">$fh</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="s">}</span><span class="sc">;</span></li><li></li><li>    if <span class="s">(</span><span class="i">$@</span> and <span class="i">$@</span><span class="i">-&gt;isa</span><span class="s">(</span><span class="q">&#39;autodie::exception&#39;</span><span class="s">)</span><span class="s">)</span> <span class="s">{</span></li><li>        if <span class="s">(</span><span class="i">$@</span><span class="i">-&gt;matches</span><span class="s">(</span><span class="q">&#39;open&#39;</span><span class="s">)</span><span class="s">)</span> <span class="s">{</span> <a class="l_k" href="functions/print.html">print</a> <span class="q">&quot;Error from open\n&quot;</span><span class="sc">;</span>   <span class="s">}</span></li><li>        if <span class="s">(</span><span class="i">$@</span><span class="i">-&gt;matches</span><span class="s">(</span><span class="q">&#39;:io&#39;</span> <span class="s">)</span><span class="s">)</span> <span class="s">{</span> <a class="l_k" href="functions/print.html">print</a> <span class="q">&quot;Non-open, IO error.&quot;</span><span class="sc">;</span> <span class="s">}</span></li><li>    <span class="s">}</span> elsif <span class="s">(</span><span class="i">$@</span><span class="s">)</span> <span class="s">{</span></li><li>        <span class="c"># A non-autodie exception.</span></li><li>    <span class="s">}</span></li></ol></pre><p>See <a href="autodie/exception.html">autodie::exception</a> for further information on interrogating
+exceptions.</p>
+<a class='view-head1' id="CATEGORIES"></a><h2 class='h2' >CATEGORIES</h2>
+<p>Autodie uses a simple set of categories to group together similar
+built-ins.  Requesting a category type (starting with a colon) will
+enable autodie for all built-ins beneath that category.  For example,
+requesting <code class="inline"><span class="j">:</span><span class="w">file</span></code>
+ will enable autodie for <code class="inline"><a class="l_k" href="functions/close.html">close</a></code>, <code class="inline"><a class="l_k" href="functions/fcntl.html">fcntl</a></code>,
+<code class="inline"><a class="l_k" href="functions/fileno.html">fileno</a></code>, <code class="inline"><a class="l_k" href="functions/open.html">open</a></code> and <code class="inline"><a class="l_k" href="functions/sysopen.html">sysopen</a></code>.</p>
+<p>The categories are currently:</p>
+<pre class="verbatim"><ol><li>    <span class="j">:</span><span class="w">all</span></li><li>        <span class="co">:</span><span class="w">default</span></li><li>            <span class="co">:</span><span class="w">io</span></li><li>                <a class="l_k" href="functions/read.html">read</a></li><li>                <a class="l_k" href="functions/seek.html">seek</a></li><li>                <a class="l_k" href="functions/sysread.html">sysread</a></li><li>                <a class="l_k" href="functions/sysseek.html">sysseek</a></li><li>                <a class="l_k" href="functions/syswrite.html">syswrite</a></li><li>                <span class="co">:</span><span class="w">dbm</span></li><li>                    <a class="l_k" href="functions/dbmclose.html">dbmclose</a></li><li>                    <a class="l_k" href="functions/dbmopen.html">dbmopen</a></li><li>                <span class="co">:</span><span class="w">file</span></li><li>                    <a class="l_k" href="functions/binmode.html">binmode</a></li><li>                    <a class="l_k" href="functions/close.html">close</a></li><li>                    <a class="l_k" href="functions/fcntl.html">fcntl</a></li><li>                    <a class="l_k" href="functions/fileno.html">fileno</a></li><li>                    <a class="l_k" href="functions/flock.html">flock</a></li><li>                    <a class="l_k" href="functions/ioctl.html">ioctl</a></li><li>                    <a class="l_k" href="functions/open.html">open</a></li><li>                    <a class="l_k" href="functions/sysopen.html">sysopen</a></li><li>                    <a class="l_k" href="functions/truncate.html">truncate</a></li><li>                <span class="co">:</span><span class="w">filesys</span></li><li>                    <a class="l_k" href="functions/chdir.html">chdir</a></li><li>                    <a class="l_k" href="functions/closedir.html">closedir</a></li><li>                    <a class="l_k" href="functions/opendir.html">opendir</a></li><li>                    <a class="l_k" href="functions/link.html">link</a></li><li>                    <a class="l_k" href="functions/mkdir.html">mkdir</a></li><li>                    <a class="l_k" href="functions/readlink.html">readlink</a></li><li>                    <a class="l_k" href="functions/rename.html">rename</a></li><li>                    <a class="l_k" href="functions/rmdir.html">rmdir</a></li><li>                    <a class="l_k" href="functions/symlink.html">symlink</a></li><li>                    <a class="l_k" href="functions/unlink.html">unlink</a></li><li>                <span class="co">:</span><span class="w">ipc</span></li><li>                    <a class="l_k" href="functions/pipe.html">pipe</a></li><li>                    <span class="co">:</span><span class="w">msg</span></li><li>                        <a class="l_k" href="functions/msgctl.html">msgctl</a></li><li>                        <a class="l_k" href="functions/msgget.html">msgget</a></li><li>                        <a class="l_k" href="functions/msgrcv.html">msgrcv</a></li><li>                        <a class="l_k" href="functions/msgsnd.html">msgsnd</a></li><li>                    <span class="co">:</span><span class="w">semaphore</span></li><li>                        <a class="l_k" href="functions/semctl.html">semctl</a></li><li>                        <a class="l_k" href="functions/semget.html">semget</a></li><li>                        <a class="l_k" href="functions/semop.html">semop</a></li><li>                    <span class="co">:</span><span class="w">shm</span></li><li>                        <a class="l_k" href="functions/shmctl.html">shmctl</a></li><li>                        <a class="l_k" href="functions/shmget.html">shmget</a></li><li>                        <a class="l_k" href="functions/shmread.html">shmread</a></li><li>                <span class="co">:</span><a class="l_k" href="functions/socket.html">socket</a></li><li>                    <a class="l_k" href="functions/accept.html">accept</a></li><li>                    <a class="l_k" href="functions/bind.html">bind</a></li><li>                    <a class="l_k" href="functions/connect.html">connect</a></li><li>                    <a class="l_k" href="functions/getsockopt.html">getsockopt</a></li><li>                    <a class="l_k" href="functions/listen.html">listen</a></li><li>                    <a class="l_k" href="functions/recv.html">recv</a></li><li>                    <a class="l_k" href="functions/send.html">send</a></li><li>                    <a class="l_k" href="functions/setsockopt.html">setsockopt</a></li><li>                    <a class="l_k" href="functions/shutdown.html">shutdown</a></li><li>                    <a class="l_k" href="functions/socketpair.html">socketpair</a></li><li>            <span class="co">:</span><span class="w">threads</span></li><li>                <a class="l_k" href="functions/fork.html">fork</a></li><li>        <span class="co">:</span><a class="l_k" href="functions/system.html">system</a></li><li>            <a class="l_k" href="functions/system.html">system</a></li><li>            <a class="l_k" href="functions/exec.html">exec</a></li></ol></pre><p>Note that while the above category system is presently a strict
+hierarchy, this should not be assumed.</p>
+<p>A plain <code class="inline"><a class="l_k" href="functions/use.html">use</a> <span class="w">autodie</span></code>
+ implies <code class="inline"><a class="l_k" href="functions/use.html">use</a> <span class="w">autodie</span> <span class="q">qw(:default)</span></code>
+.  Note that
+<code class="inline"><a class="l_k" href="functions/system.html">system</a></code> and <code class="inline"><a class="l_k" href="functions/exec.html">exec</a></code> are not enabled by default.  <code class="inline"><a class="l_k" href="functions/system.html">system</a></code> requires
+the optional <a href="https://search.cpan.org/perldoc/IPC::System::Simple">IPC::System::Simple</a> module to be installed, and enabling
+<code class="inline"><a class="l_k" href="functions/system.html">system</a></code> or <code class="inline"><a class="l_k" href="functions/exec.html">exec</a></code> will invalidate their exotic forms.  See <a href="#BUGS">BUGS</a>
+below for more details.</p>
+<p>The syntax:</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="functions/use.html">use</a> <span class="w">autodie</span> <span class="q">qw(:1.994)</span><span class="sc">;</span></li></ol></pre><p>allows the <code class="inline"><span class="j">:</span><span class="w">default</span></code>
+ list from a particular version to be used.  This
+provides the convenience of using the default methods, but the surety
+that no behavorial changes will occur if the <code class="inline"><span class="w">autodie</span></code>
+ module is
+upgraded.</p>
+<p><code class="inline"><span class="w">autodie</span></code>
+ can be enabled for all of Perl's built-ins, including
+<code class="inline"><a class="l_k" href="functions/system.html">system</a></code> and <code class="inline"><a class="l_k" href="functions/exec.html">exec</a></code> with:</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="functions/use.html">use</a> <span class="w">autodie</span> <span class="q">qw(:all)</span><span class="sc">;</span></li></ol></pre><a class='view-head1' id="FUNCTION-SPECIFIC-NOTES"></a><h2 class='h2' >FUNCTION SPECIFIC NOTES</h2>
+<a class='view-head2' id="flock"></a><h3 class='h3' >flock</h3>
+<p>It is not considered an error for <code class="inline"><a class="l_k" href="functions/flock.html">flock</a></code> to return false if it fails
+due to an <code class="inline"><span class="w">EWOULDBLOCK</span></code>
+ (or equivalent) condition.  This means one can
+still use the common convention of testing the return value of
+<code class="inline"><a class="l_k" href="functions/flock.html">flock</a></code> when called with the <code class="inline"><span class="w">LOCK_NB</span></code>
+ option:</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="functions/use.html">use</a> <span class="w">autodie</span><span class="sc">;</span></li><li></li><li>    if <span class="s">(</span> <a class="l_k" href="functions/flock.html">flock</a><span class="s">(</span><span class="i">$fh</span><span class="cm">,</span> <span class="w">LOCK_EX</span> | <span class="w">LOCK_NB</span><span class="s">)</span> <span class="s">)</span> <span class="s">{</span></li><li>        <span class="c"># We have a lock</span></li><li>    <span class="s">}</span></li></ol></pre><p>Autodying <code class="inline"><a class="l_k" href="functions/flock.html">flock</a></code> will generate an exception if <code class="inline"><a class="l_k" href="functions/flock.html">flock</a></code> returns
+false with any other error.</p>
+<a class='view-head2' id="system%2fexec"></a><h3 class='h3' >system/exec</h3>
+<p>The <code class="inline"><a class="l_k" href="functions/system.html">system</a></code> built-in is considered to have failed in the following
+circumstances:</p>
+<ul>
+<li>
+<p>The command does not start.</p>
+</li>
+<li>
+<p>The command is killed by a signal.</p>
+</li>
+<li>
+<p>The command returns a non-zero exit value (but see below).</p>
+</li>
+</ul>
+<p>On success, the autodying form of <code class="inline"><a class="l_k" href="functions/system.html">system</a></code> returns the <i>exit value</i>
+rather than the contents of <code class="inline"><span class="i">$?</span></code>
+.</p>
+<p>Additional allowable exit values can be supplied as an optional first
+argument to autodying <code class="inline"><a class="l_k" href="functions/system.html">system</a></code>:</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="functions/system.html">system</a><span class="s">(</span> <span class="s">[</span> <span class="n">0</span><span class="cm">,</span> <span class="n">1</span><span class="cm">,</span> <span class="n">2</span> <span class="s">]</span><span class="cm">,</span> <span class="i">$cmd</span><span class="cm">,</span> <span class="i">@args</span><span class="s">)</span><span class="sc">;</span>  <span class="c"># 0,1,2 are good exit values</span></li></ol></pre><p><code class="inline"><span class="w">autodie</span></code>
+ uses the <a href="https://search.cpan.org/perldoc/IPC::System::Simple">IPC::System::Simple</a> module to change <code class="inline"><a class="l_k" href="functions/system.html">system</a></code>.
+See its documentation for further information.</p>
+<p>Applying <code class="inline"><span class="w">autodie</span></code>
+ to <code class="inline"><a class="l_k" href="functions/system.html">system</a></code> or <code class="inline"><a class="l_k" href="functions/exec.html">exec</a></code> causes the exotic
+forms <code class="inline"><a class="l_k" href="functions/system.html">system</a> <span class="s">{</span> <span class="i">$cmd</span> <span class="s">}</span> <span class="i">@args</span> </code>
+ or <code class="inline"><a class="l_k" href="functions/exec.html">exec</a> <span class="s">{</span> <span class="i">$cmd</span> <span class="s">}</span> <span class="i">@args</span></code>
+
+to be considered a syntax error until the end of the lexical scope.
+If you really need to use the exotic form, you can call <code class="inline"><span class="w">CORE::system</span></code>
+
+or <code class="inline"><span class="w">CORE::exec</span></code>
+ instead, or use <code class="inline"><a class="l_k" href="functions/no.html">no</a> <span class="w">autodie</span> <span class="q">qw(system exec)</span></code>
+ before
+calling the exotic form.</p>
+<a class='view-head1' id="GOTCHAS"></a><h2 class='h2' >GOTCHAS</h2>
+<p>Functions called in list context are assumed to have failed if they
+return an empty list, or a list consisting only of a single undef
+element.</p>
+<a class='view-head1' id="DIAGNOSTICS"></a><h2 class='h2' >DIAGNOSTICS</h2>
+<ul>
+<li><a class='view-title' id="%3avoid-cannot-be-used-with-lexical-scope"></a><strong>:void cannot be used with lexical scope</strong>
+<p>The <code class="inline"><span class="j">:</span><span class="w">void</span></code>
+ option is supported in <a href="Fatal.html">Fatal</a>, but not
+<code class="inline"><span class="w">autodie</span></code>
+.  To workaround this, <code class="inline"><span class="w">autodie</span></code>
+ may be explicitly disabled until
+the end of the current block with <code class="inline"><a class="l_k" href="functions/no.html">no</a> <span class="w">autodie</span></code>
+.
+To disable autodie for only a single function (eg, open)
+use <code class="inline"><a class="l_k" href="functions/no.html">no</a> <span class="w">autodie</span> <span class="q">qw(open)</span></code>
+.</p>
+</li>
+<li><a class='view-title' id="No-user-hints-defined-for-%25s"></a><strong>No user hints defined for %s</strong>
+<p>You've insisted on hints for user-subroutines, either by pre-pending
+a <code class="inline">!</code>
+ to the subroutine name itself, or earlier in the list of arguments
+to <code class="inline"><span class="w">autodie</span></code>
+.  However the subroutine in question does not have
+any hints available.</p>
+</li>
+</ul>
+<p>See also <a href="Fatal.html#DIAGNOSTICS">DIAGNOSTICS in Fatal</a>.</p>
+<a class='view-head1' id="BUGS"></a><h2 class='h2' >BUGS</h2>
+<p>"Used only once" warnings can be generated when <code class="inline"><span class="w">autodie</span></code>
+ or <code class="inline"><span class="w">Fatal</span></code>
+
+is used with package filehandles (eg, <code class="inline"><span class="w">FILE</span></code>
+).  Scalar filehandles are
+strongly recommended instead.</p>
+<p>When using <code class="inline"><span class="w">autodie</span></code>
+ or <code class="inline"><span class="w">Fatal</span></code>
+ with user subroutines, the
+declaration of those subroutines must appear before the first use of
+<code class="inline"><span class="w">Fatal</span></code>
+ or <code class="inline"><span class="w">autodie</span></code>
+, or have been exported from a module.
+Attempting to use <code class="inline"><span class="w">Fatal</span></code>
+ or <code class="inline"><span class="w">autodie</span></code>
+ on other user subroutines will
+result in a compile-time error.</p>
+<p>Due to a bug in Perl, <code class="inline"><span class="w">autodie</span></code>
+ may "lose" any format which has the
+same name as an autodying built-in or function.</p>
+<p><code class="inline"><span class="w">autodie</span></code>
+ may not work correctly if used inside a file with a
+name that looks like a string eval, such as <i>eval (3)</i>.</p>
+<a class='view-head2' id="autodie-and-string-eval"></a><h3 class='h3' >autodie and string eval</h3>
+<p>Due to the current implementation of <code class="inline"><span class="w">autodie</span></code>
+, unexpected results
+may be seen when used near or with the string version of eval.
+<i>None of these bugs exist when using block eval</i>.</p>
+<p>Under Perl 5.8 only, <code class="inline"><span class="w">autodie</span></code>
+ <i>does not</i> propagate into string <code class="inline"><a class="l_k" href="functions/eval.html">eval</a></code>
+statements, although it can be explicitly enabled inside a string
+<code class="inline"><a class="l_k" href="functions/eval.html">eval</a></code>.</p>
+<p>Under Perl 5.10 only, using a string eval when <code class="inline"><span class="w">autodie</span></code>
+ is in
+effect can cause the autodie behaviour to leak into the surrounding
+scope.  This can be worked around by using a <code class="inline"><a class="l_k" href="functions/no.html">no</a> <span class="w">autodie</span></code>
+ at the
+end of the scope to explicitly remove autodie's effects, or by
+avoiding the use of string eval.</p>
+<p><i>None of these bugs exist when using block eval</i>.  The use of
+<code class="inline"><span class="w">autodie</span></code>
+ with block eval is considered good practice.</p>
+<a class='view-head2' id="REPORTING-BUGS"></a><h3 class='h3' >REPORTING BUGS</h3>
+<p>Please report bugs via the CPAN Request Tracker at
+<a href="http://rt.cpan.org/NoAuth/Bugs.html?Dist=autodie">http://rt.cpan.org/NoAuth/Bugs.html?Dist=autodie</a>.</p>
+<a class='view-head1' id="FEEDBACK"></a><h2 class='h2' >FEEDBACK</h2>
+<p>If you find this module useful, please consider rating it on the
+CPAN Ratings service at
+<a href="http://cpanratings.perl.org/rate?distribution=autodie">http://cpanratings.perl.org/rate?distribution=autodie</a> .</p>
+<p>The module author loves to hear how <code class="inline"><span class="w">autodie</span></code>
+ has made your life
+better (or worse).  Feedback can be sent to
+&lt;pjf@perltraining.com.au&gt;.</p>
+<a class='view-head1' id="AUTHOR"></a><h2 class='h2' >AUTHOR</h2>
+<p>Copyright 2008-2009, Paul Fenwick &lt;pjf@perltraining.com.au&gt;</p>
+<a class='view-head1' id="LICENSE"></a><h2 class='h2' >LICENSE</h2>
+<p>This module is free software.  You may distribute it under the
+same terms as Perl itself.</p>
+<a class='view-head1' id="SEE-ALSO"></a><h2 class='h2' >SEE ALSO</h2>
+<p><a href="Fatal.html">Fatal</a>, <a href="autodie/exception.html">autodie::exception</a>, <a href="autodie/hints.html">autodie::hints</a>, <a href="https://search.cpan.org/perldoc/IPC::System::Simple">IPC::System::Simple</a></p>
+<p><i>Perl tips, autodie</i> at
+<a href="http://perltraining.com.au/tips/2008-08-20.html">http://perltraining.com.au/tips/2008-08-20.html</a></p>
+<a class='view-head1' id="ACKNOWLEDGEMENTS"></a><h2 class='h2' >ACKNOWLEDGEMENTS</h2>
+<p>Mark Reed and Roland Giersig -- Klingon translators.</p>
+<p>See the <i>AUTHORS</i> file for full credits.  The latest version of this
+file can be found at
+<a href="http://github.com/pfenwick/autodie/tree/master/AUTHORS">http://github.com/pfenwick/autodie/tree/master/AUTHORS</a> .</p>
+
+
+
+
+      <ul><li><a href="#NAME">NAME</a></li><li><a href="#SYNOPSIS">SYNOPSIS</a></li><li><a href="#DESCRIPTION">DESCRIPTION</a></li><li><a href="#EXCEPTIONS">EXCEPTIONS</a></li><li><a href="#CATEGORIES">CATEGORIES</a></li><li><a href="#FUNCTION-SPECIFIC-NOTES">FUNCTION SPECIFIC NOTES</a></li><ul><li><a href="#flock">flock</a></li><li><a href="#system%2fexec">system/exec</a></li></ul><li><a href="#GOTCHAS">GOTCHAS</a></li><li><a href="#DIAGNOSTICS">DIAGNOSTICS</a></li><li><a href="#BUGS">BUGS</a></li><ul><li><a href="#autodie-and-string-eval">autodie and string eval</a></li><li><a href="#REPORTING-BUGS">REPORTING BUGS</a></li></ul><li><a href="#FEEDBACK">FEEDBACK</a></li><li><a href="#AUTHOR">AUTHOR</a></li><li><a href="#LICENSE">LICENSE</a></li><li><a href="#SEE-ALSO">SEE ALSO</a></li><li><a href="#ACKNOWLEDGEMENTS">ACKNOWLEDGEMENTS</a></li></ul>
+
+
+                  </div>
+                </article>
+              </div>
+            </div>
+          </main>
+        </div>
+           <footer class="footer row bg-light pt-5 pb-5">
+       <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+           <div class="row">
+               <div class="col-md-4">
+                   <ul class="list-unstyled">
+                       <li>
+                           <h4>Site info</h4>
+                       </li>
+                       <li>Docs mantained by
+                           <a href="//lists.perl.org/list/perl5-porters.html"
+                               rel="noopener">Perl 5 Porters</a>
+                       </li>
+                       <li>Perldoc site development sponsored by
+                           <a href="//opusvl.com" rel="noopener">
+                           <img style="margin: 20px 20px 5px 10px" class="opus-logo" src="/public/img/opusvl_logo.svg" alt="OpusVL Logo">
+                        </a>
+                    <li><span class="about_perldoc"><a href="//about.html">About PerlDOC</a></span>
+                    </li>
+                       </li>
+                   </ul>
+               </div>
+               <div class="col-md-8">
+                   <div class="row">
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Manuals</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.14.2/index-overview.html">Overview</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.14.2/index-tutorials.html">Tutorials</a>
+                               </li>
+                               <li>
+                                   <a href="/5.14.2/index-faq.html">FAQs</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.14.2/index-history.html">Changes</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Reference</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.14.2/index-language.html">Language</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.14.2/index-functions.html">Functions</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.14.2/perlop.html">Operators</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.14.2/perlvar.html">Variables</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Modules</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.14.2/index-modules-A.html">Modules</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.14.2/index-pragmas.html">Pragmas</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.14.2/index-utilities.html">Utilities</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Misc</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.14.2/index-licence.html">License</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.14.2/index-internals.html">Internals</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.14.2/index-platforms.html">Platforms</a>
+                               </li>
+                            <li>
+                                <a
+                                    href="/5.14.2/index-about.html">About</a>
+                            </li>
+                           </ul>
+                       </div>
+                   </div>
+               </div>
+               <div class=" col-12 footer-inf text-center">
+                   <small>perldoc.perl.org - Official documentation for the Perl
+                       programming language</small>
+               </div>
+           </div>
+       </div>
+   </footer>
+
+        	<div class="beta-wrapper beta-bottom-right ">
+		<div class="beta beta-blue  ">
+			<a class="beta-link "
+				href="//github.com/OpusVL/perldoc.perl.org/issues/new" rel="noopener">
+				<span class="beta-text">
+					This website is a Beta release.
+				</span>
+				<span class="beta-text">
+					For any issues please raise a ticket on GitHub
+				</span>
+			</a>
+		</div>
+	</div>
+
+        <script src="/public/js/main.min.js"></script>
+      </body>
+
+      </html>

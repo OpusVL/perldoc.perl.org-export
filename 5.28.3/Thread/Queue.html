@@ -1,0 +1,857 @@
+      
+      
+      
+      
+
+      <!DOCTYPE html>
+      <html lang="en">
+
+      <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Thread::Queue - perldoc.perl.org">
+        <link rel="icon" href="/public/img/favicon.ico">
+        <title>Thread::Queue - perldoc.perl.org</title>
+        <link href="/public/css/main.min.css" rel="stylesheet">
+        <link rel="canonical" href="/Thread/Queue.html">
+        <link
+          href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900'
+          rel='stylesheet' type='text/css'>
+        <script>
+          window.ga = window.ga || function () {
+            (ga.q = ga.q || []).push(arguments)
+          };
+          ga.l = +new Date;
+          ga('create', 'UA-1892152-2', 'auto'); // JJ's account
+          ga('create', 'UA-50555-3', 'auto', 'perlOrg'); // perl.org account
+          ga('require', 'outboundLinkTracker', {
+            events: ['click', 'auxclick', 'contextmenu'],
+          });
+          ga('require', 'maxScrollTracker');
+          ga('send', 'pageview');
+          ga('perlOrg.send', 'pageview');
+        </script>
+        <script async src="https://www.google-analytics.com/analytics.js">
+        </script>
+        <script async src="/public/js/tracking.min.js"></script>
+      </head>
+
+      <body class="body container-fluid ">
+        <div class="wrapper">
+
+          <nav
+    class="navbar navbar-dark bg-primary bg-perl fixed-top justify-content-between navbar-expand-lg">
+    <a href="#content" class="skippy sr-only sr-only-focusable">
+        <span class=' skippy-text'>Skip to main content</span>
+    </a>
+    <a class="navbar-brand" href="/">
+        <img class="logo" src="/public/img/logo_perl_doc.svg"
+            alt="Perl Documentation Logo" />
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse"
+        data-target="#navbar" aria-controls="navbar" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="navbar" class="collapse navbar-collapse ">
+        <ul class="navbar-nav ml-auto navbar-right">
+            <form class="nav-item dropdown search-wrapper">
+                <input type="text" id='searchinput' aria-describedby='navbarDropdown5'
+                    placeholder="Type query" class='search-input-field' value=''>
+
+                <button href="#" data-toggle='dropdown' type="button"
+                    aria-haspopup="true" aria-expanded='false' id="navbarDropdown5"
+                    class="nav-link dropdown-toggle search-link">
+                    <object tabindex='-1' focusable="false" class='search-icon'
+                        data="/public/img/search.svg" type="image/svg+xml"
+                        name='search icon'>search
+                        icon</object>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown5"
+                    id='search-results'>
+                    <p class='dropdown-item major-version'>
+                        No results
+                    </p>
+                </div>
+            </form>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown" href="#" class="nav-link dropdown-toggle"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Perl versions</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    
+                        <p class='dropdown-item major-version'>
+                            5.32
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.32.0/">5.32.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.30
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.3/">5.30.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.2/">5.30.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.1/">5.30.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.0/">5.30.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.28
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.3/">5.28.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.2/">5.28.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.1/">5.28.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.0/">5.28.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.26
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.3/">5.26.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.2/">5.26.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.1/">5.26.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.0/">5.26.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.24
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.4/">5.24.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.3/">5.24.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.2/">5.24.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.1/">5.24.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.0/">5.24.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.22
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.4/">5.22.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.3/">5.22.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.2/">5.22.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.1/">5.22.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.0/">5.22.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.20
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.3/">5.20.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.2/">5.20.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.1/">5.20.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.0/">5.20.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.18
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.4/">5.18.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.3/">5.18.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.2/">5.18.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.1/">5.18.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.0/">5.18.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.16
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.3/">5.16.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.2/">5.16.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.1/">5.16.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.0/">5.16.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.14
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.4/">5.14.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.3/">5.14.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.2/">5.14.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.1/">5.14.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.0/">5.14.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.12
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.5/">5.12.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.4/">5.12.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.3/">5.12.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.2/">5.12.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.1/">5.12.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.0/">5.12.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.10
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.1/">5.10.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.0/">5.10.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.8
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.9/">5.8.9</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.8/">5.8.8</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.7/">5.8.7</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.6/">5.8.6</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.5/">5.8.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.4/">5.8.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.3/">5.8.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.2/">5.8.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.1/">5.8.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.0/">5.8.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.6
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.2/">5.6.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.1/">5.6.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.0/">5.6.0</a>
+                        
+                        
+                    
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown1" href="#" class="dropdown-toggle nav-link"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Manuals</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                    <a class="dropdown-item"
+                        href="/5.28.3/index-overview.html">Overview</a>
+                    <a class="dropdown-item"
+                        href="/5.28.3/index-tutorials.html">Tutorials</a>
+                    <a class="dropdown-item"
+                        href="/5.28.3/index-faq.html">FAQs</a>
+                    <a class="dropdown-item"
+                        href="/5.28.3/index-history.html">Changes</a>
+                    <a class="dropdown-item"
+                        href="/5.28.3/index-licence.html">License</a>
+                    <a class="dropdown-item"
+                        href="/5.28.3/index-language.html">Language</a>
+                    <a class="dropdown-item"
+                        href="/5.28.3/index-functions.html">Functions</a>
+                    <a class="dropdown-item"
+                        href="/5.28.3/perlop.html">Operators</a>
+                    <a class="dropdown-item"
+                        href="/5.28.3/perlvar.html">Variables</a>
+                    <a class="dropdown-item"
+                        href="/5.28.3/index-pragmas.html">Pragmas</a>
+                    <a class="dropdown-item"
+                        href="/5.28.3/index-utilities.html">Utilities</a>
+                    <a class="dropdown-item"
+                        href="/5.28.3/index-internals.html">Internals</a>
+                    <a class="dropdown-item"
+                        href="/5.28.3/index-platforms.html">Platforms</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown3" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Modules</a>
+                <div aria-labelledby="navbarDropdown3"
+                    class="dropdown-menu letters-wrap">
+                    <!--<a class="dropdown-item"
+                        href="/5.28.3/index-modules.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.28.3/index-modules-by-cat.html">By
+                        Category</a>-->
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-A.html">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-B.html">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-C.html">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-D.html">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-E.html">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-F.html">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-G.html">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-H.html">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-I.html">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-J.html">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-K.html">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-L.html">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-M.html">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-N.html">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-O.html">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-P.html">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-Q.html">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-R.html">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-S.html">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-T.html">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-U.html">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-V.html">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-W.html">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-X.html">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-Y.html">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-Z.html">Z</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown4" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Functions</a>
+                <div aria-labelledby="navbarDropdown4"
+                    class="dropdown-menu letters-wrap">
+                    <a class="dropdown-item"
+                        href="/5.28.3/index-functions.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.28.3/index-functions-by-cat.html">By
+                        Category</a>
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#A">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#B">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#C">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#D">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#E">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#F">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#G">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#H">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#I">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#J">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#K">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#L">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#M">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#N">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#O">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#P">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#Q">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#R">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#S">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#T">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#U">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#V">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#W">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#X">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#Y">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#Z">Z</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!--/.nav-collapse -->
+</nav>
+
+
+          <main class="row main-content pb-5 pt-5" id='content'>
+            <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+              <div class="row">
+                <div class="col-sm-12">
+                  <div id="breadcrumbs">
+                      
+    <a href="../index.html">Home</a>&nbsp; &gt;
+    
+      
+        <a href="../index-modules-T.html">Core modules (T)</a> &gt;
+      
+    
+    Thread::Queue
+  
+
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <article class="col-sm-12 content">
+                  <div class="documentation-wrapper">
+                    <div id="perl_version">
+                      <h7 class='page-title'> Perl 5 version 28.3
+                        documentation</h7>
+                    </div>
+                    <h1>Thread::Queue</h1>
+
+
+  <!--    -->
+<ul><li><a href="#NAME">NAME</a></li><li><a href="#VERSION">VERSION</a></li><li><a href="#SYNOPSIS">SYNOPSIS</a></li><li><a href="#DESCRIPTION">DESCRIPTION</a></li><li><a href="#QUEUE-CREATION">QUEUE CREATION</a></li><li><a href="#BASIC-METHODS">BASIC METHODS</a></li><li><a href="#ADVANCED-METHODS">ADVANCED METHODS</a></li><li><a href="#NOTES">NOTES</a></li><li><a href="#LIMITATIONS">LIMITATIONS</a></li><li><a href="#SEE-ALSO">SEE ALSO</a></li><li><a href="#MAINTAINER">MAINTAINER</a></li><li><a href="#LICENSE">LICENSE</a></li></ul><a class='view-head1' id="NAME"></a><h2 class='h2' >NAME</h2>
+<p>Thread::Queue - Thread-safe queues</p>
+<a class='view-head1' id="VERSION"></a><h2 class='h2' >VERSION</h2>
+<p>This document describes Thread::Queue version 3.12</p>
+<a class='view-head1' id="SYNOPSIS"></a><h2 class='h2' >SYNOPSIS</h2>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">strict</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">warnings</span><span class="sc">;</span></li><li></li><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">threads</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">Thread::Queue</span><span class="sc">;</span></li><li></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">$q</span> = <span class="w">Thread::Queue</span><span class="w">-&gt;new</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span>    <span class="c"># A new empty queue</span></li><li></li><li>    <span class="c"># Worker thread</span></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">$thr</span> = <span class="w">threads</span><span class="w">-&gt;create</span><span class="s">(</span></li><li>        <a class="l_k" href="../functions/sub.html">sub</a> <span class="s">{</span></li><li>            <span class="c"># Thread will loop until no more work</span></li><li>            <a class="l_k" href="../functions/while.html">while</a> <span class="s">(</span><a class="l_k" href="../functions/defined.html">defined</a><span class="s">(</span><a class="l_k" href="../functions/my.html">my</a> <span class="i">$item</span> = <span class="i">$q</span><span class="i">-&gt;dequeue</span><span class="s">(</span><span class="s">)</span><span class="s">)</span><span class="s">)</span> <span class="s">{</span></li><li>                <span class="c"># Do work on $item</span></li><li>                ...</li><li>            <span class="s">}</span></li><li>        <span class="s">}</span></li><li>    <span class="s">)</span><span class="sc">;</span></li><li></li><li>    <span class="c"># Send work to the thread</span></li><li>    <span class="i">$q</span><span class="i">-&gt;enqueue</span><span class="s">(</span><span class="i">$item1</span><span class="cm">,</span> ...<span class="s">)</span><span class="sc">;</span></li><li>    <span class="c"># Signal that there is no more work to be sent</span></li><li>    <span class="i">$q</span><span class="i">-&gt;end</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="c"># Join up with the thread when it finishes</span></li><li>    <span class="i">$thr</span><span class="i">-&gt;join</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>    ...</li><li></li><li>    <span class="c"># Count of items in the queue</span></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">$left</span> = <span class="i">$q</span><span class="i">-&gt;pending</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>    <span class="c"># Non-blocking dequeue</span></li><li>    <a class="l_k" href="../functions/if.html">if</a> <span class="s">(</span><a class="l_k" href="../functions/defined.html">defined</a><span class="s">(</span><a class="l_k" href="../functions/my.html">my</a> <span class="i">$item</span> = <span class="i">$q</span><span class="i">-&gt;dequeue_nb</span><span class="s">(</span><span class="s">)</span><span class="s">)</span><span class="s">)</span> <span class="s">{</span></li><li>        <span class="c"># Work on $item</span></li><li>    <span class="s">}</span></li><li></li><li>    <span class="c"># Blocking dequeue with 5-second timeout</span></li><li>    <a class="l_k" href="../functions/if.html">if</a> <span class="s">(</span><a class="l_k" href="../functions/defined.html">defined</a><span class="s">(</span><a class="l_k" href="../functions/my.html">my</a> <span class="i">$item</span> = <span class="i">$q</span><span class="i">-&gt;dequeue_timed</span><span class="s">(</span><span class="n">5</span><span class="s">)</span><span class="s">)</span><span class="s">)</span> <span class="s">{</span></li><li>        <span class="c"># Work on $item</span></li><li>    <span class="s">}</span></li><li></li><li>    <span class="c"># Set a size for a queue</span></li><li>    <span class="i">$q</span><span class="i">-&gt;limit</span> = <span class="n">5</span><span class="sc">;</span></li><li></li><li>    <span class="c"># Get the second item in the queue without dequeuing anything</span></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">$item</span> = <span class="i">$q</span><span class="i">-&gt;peek</span><span class="s">(</span><span class="n">1</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>    <span class="c"># Insert two items into the queue just behind the head</span></li><li>    <span class="i">$q</span><span class="i">-&gt;insert</span><span class="s">(</span><span class="n">1</span><span class="cm">,</span> <span class="i">$item1</span><span class="cm">,</span> <span class="i">$item2</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>    <span class="c"># Extract the last two items on the queue</span></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="s">(</span><span class="i">$item1</span><span class="cm">,</span> <span class="i">$item2</span><span class="s">)</span> = <span class="i">$q</span><span class="i">-&gt;extract</span><span class="s">(</span><span class="n">-2</span><span class="cm">,</span> <span class="n">2</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><a class='view-head1' id="DESCRIPTION"></a><h2 class='h2' >DESCRIPTION</h2>
+<p>This module provides thread-safe FIFO queues that can be accessed safely by
+any number of threads.</p>
+<p>Any data types supported by <a href="../threads/shared.html">threads::shared</a> can be passed via queues:</p>
+<ul>
+<li><a class='view-title' id="Ordinary-scalars"></a><strong>Ordinary scalars</strong>
+</li>
+<li><a class='view-title' id="Array-refs"></a><strong>Array refs</strong>
+</li>
+<li><a class='view-title' id="Hash-refs"></a><strong>Hash refs</strong>
+</li>
+<li><a class='view-title' id="Scalar-refs"></a><strong>Scalar refs</strong>
+</li>
+<li><a class='view-title' id="Objects-based-on-the-above"></a><strong>Objects based on the above</strong>
+</li>
+</ul>
+<p>Ordinary scalars are added to queues as they are.</p>
+<p>If not already thread-shared, the other complex data types will be cloned
+(recursively, if needed, and including any <code class="inline"><a class="l_k" href="../functions/bless.html">bless</a></code>ings and read-only
+settings) into thread-shared structures before being placed onto a queue.</p>
+<p>For example, the following would cause <a href="../Thread/Queue.html">Thread::Queue</a> to create a empty,
+shared array reference via <code class="inline"><span class="i">&amp;shared</span><span class="s">(</span><span class="s">[</span><span class="s">]</span><span class="s">)</span></code>
+, copy the elements 'foo', 'bar'
+and 'baz' from <code class="inline"><span class="i">@ary</span></code>
+ into it, and then place that shared reference onto
+the queue:</p>
+<pre class="verbatim"><ol><li> <a class="l_k" href="../functions/my.html">my</a> <span class="i">@ary</span> = <span class="q">qw/foo bar baz/</span><span class="sc">;</span></li><li> <span class="i">$q</span><span class="i">-&gt;enqueue</span><span class="s">(</span>\<span class="i">@ary</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>However, for the following, the items are already shared, so their references
+are added directly to the queue, and no cloning takes place:</p>
+<pre class="verbatim"><ol><li> <a class="l_k" href="../functions/my.html">my</a> <span class="i">@ary</span> <span class="co">:</span><span class="w">shared</span> = <span class="q">qw/foo bar baz/</span><span class="sc">;</span></li><li> <span class="i">$q</span><span class="i">-&gt;enqueue</span><span class="s">(</span>\<span class="i">@ary</span><span class="s">)</span><span class="sc">;</span></li><li></li><li> <a class="l_k" href="../functions/my.html">my</a> <span class="i">$obj</span> = <span class="i">&amp;shared</span><span class="s">(</span><span class="s">{</span><span class="s">}</span><span class="s">)</span><span class="sc">;</span></li><li> <span class="i">$$obj</span>{<span class="q">&#39;foo&#39;</span>} = <span class="q">&#39;bar&#39;</span><span class="sc">;</span></li><li> <span class="i">$$obj</span>{<span class="q">&#39;qux&#39;</span>} = <span class="n">99</span><span class="sc">;</span></li><li> <a class="l_k" href="../functions/bless.html">bless</a><span class="s">(</span><span class="i">$obj</span><span class="cm">,</span> <span class="q">&#39;My::Class&#39;</span><span class="s">)</span><span class="sc">;</span></li><li> <span class="i">$q</span><span class="i">-&gt;enqueue</span><span class="s">(</span><span class="i">$obj</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>See <a href="#LIMITATIONS">LIMITATIONS</a> for caveats related to passing objects via queues.</p>
+<a class='view-head1' id="QUEUE-CREATION"></a><h2 class='h2' >QUEUE CREATION</h2>
+<ul>
+<li><a class='view-title' id="-%3enew()"></a><strong>-&gt;new()</strong>
+<p>Creates a new empty queue.</p>
+</li>
+<li><a class='view-title' id="-%3enew(LIST)"></a><strong>-&gt;new(LIST)</strong>
+<p>Creates a new queue pre-populated with the provided list of items.</p>
+</li>
+</ul>
+<a class='view-head1' id="BASIC-METHODS"></a><h2 class='h2' >BASIC METHODS</h2>
+<p>The following methods deal with queues on a FIFO basis.</p>
+<ul>
+<li><a class='view-title' id="-%3eenqueue(LIST)"></a><strong>-&gt;enqueue(LIST)</strong>
+<p>Adds a list of items onto the end of the queue.</p>
+</li>
+<li><a class='view-title' id="-%3edequeue()"></a><strong>-&gt;dequeue()</strong>
+</li>
+<li><a class='view-title' id="-%3edequeue(COUNT)"></a><strong>-&gt;dequeue(COUNT)</strong>
+<p>Removes the requested number of items (default is 1) from the head of the
+queue, and returns them.  If the queue contains fewer than the requested
+number of items, then the thread will be blocked until the requisite number
+of items are available (i.e., until other threads <code class="inline"><span class="w">enqueue</span></code>
+ more items).</p>
+</li>
+<li><a class='view-title' id="-%3edequeue_nb()"></a><strong>-&gt;dequeue_nb()</strong>
+</li>
+<li><a class='view-title' id="-%3edequeue_nb(COUNT)"></a><strong>-&gt;dequeue_nb(COUNT)</strong>
+<p>Removes the requested number of items (default is 1) from the head of the
+queue, and returns them.  If the queue contains fewer than the requested
+number of items, then it immediately (i.e., non-blocking) returns whatever
+items there are on the queue.  If the queue is empty, then <code class="inline"><a class="l_k" href="../functions/undef.html">undef</a></code> is
+returned.</p>
+</li>
+<li><a class='view-title' id="-%3edequeue_timed(TIMEOUT)"></a><strong>-&gt;dequeue_timed(TIMEOUT)</strong>
+</li>
+<li><a class='view-title' id="-%3edequeue_timed(TIMEOUT%2c-COUNT)"></a><strong>-&gt;dequeue_timed(TIMEOUT, COUNT)</strong>
+<p>Removes the requested number of items (default is 1) from the head of the
+queue, and returns them.  If the queue contains fewer than the requested
+number of items, then the thread will be blocked until the requisite number of
+items are available, or until the timeout is reached.  If the timeout is
+reached, it returns whatever items there are on the queue, or <code class="inline"><a class="l_k" href="../functions/undef.html">undef</a></code> if the
+queue is empty.</p>
+<p>The timeout may be a number of seconds relative to the current time (e.g., 5
+seconds from when the call is made), or may be an absolute timeout in <i>epoch</i>
+seconds the same as would be used with
+<a href="../threads/shared.html#cond_timedwait-VARIABLE%2c-ABS_TIMEOUT">cond_timedwait()</a>.
+Fractional seconds (e.g., 2.5 seconds) are also supported (to the extent of
+the underlying implementation).</p>
+<p>If <code class="inline"><span class="w">TIMEOUT</span></code>
+ is missing, <code class="inline"><a class="l_k" href="../functions/undef.html">undef</a></code>, or less than or equal to 0, then this call
+behaves the same as <code class="inline"><span class="w">dequeue_nb</span></code>
+.</p>
+</li>
+<li><a class='view-title' id="-%3epending()"></a><strong>-&gt;pending()</strong>
+<p>Returns the number of items still in the queue.  Returns <code class="inline"><a class="l_k" href="../functions/undef.html">undef</a></code> if the queue
+has been ended (see below), and there are no more items in the queue.</p>
+</li>
+<li><a class='view-title' id="-%3elimit"></a><strong>-&gt;limit</strong>
+<p>Sets the size of the queue.  If set, calls to <code class="inline"><span class="i">enqueue</span><span class="s">(</span><span class="s">)</span></code>
+ will block until
+the number of pending items in the queue drops below the <code class="inline"><span class="w">limit</span></code>
+.  The
+<code class="inline"><span class="w">limit</span></code>
+ does not prevent enqueuing items beyond that count:</p>
+<pre class="verbatim"><ol><li> <a class="l_k" href="../functions/my.html">my</a> <span class="i">$q</span> = <span class="w">Thread::Queue</span><span class="w">-&gt;new</span><span class="s">(</span><span class="n">1</span><span class="cm">,</span> <span class="n">2</span><span class="s">)</span><span class="sc">;</span></li><li> <span class="i">$q</span><span class="i">-&gt;limit</span> = <span class="n">4</span><span class="sc">;</span></li><li> <span class="i">$q</span><span class="i">-&gt;enqueue</span><span class="s">(</span><span class="n">3</span><span class="cm">,</span> <span class="n">4</span><span class="cm">,</span> <span class="n">5</span><span class="s">)</span><span class="sc">;</span>   <span class="c"># Does not block</span></li><li> <span class="i">$q</span><span class="i">-&gt;enqueue</span><span class="s">(</span><span class="n">6</span><span class="s">)</span><span class="sc">;</span>         <span class="c"># Blocks until at least 2 items are</span></li><li>                         <span class="c"># dequeued</span></li><li> <a class="l_k" href="../functions/my.html">my</a> <span class="i">$size</span> = <span class="i">$q</span><span class="i">-&gt;limit</span><span class="sc">;</span>   <span class="c"># Returns the current limit (may return</span></li><li>                         <span class="c"># &#39;undef&#39;)</span></li><li> <span class="i">$q</span><span class="i">-&gt;limit</span> = <span class="n">0</span><span class="sc">;</span>          <span class="c"># Queue size is now unlimited</span></li></ol></pre><p>Calling any of the dequeue methods with <code class="inline"><span class="w">COUNT</span></code>
+ greater than a queue's
+<code class="inline"><span class="w">limit</span></code>
+ will generate an error.</p>
+</li>
+<li><a class='view-title' id="-%3eend()"></a><strong>-&gt;end()</strong>
+<p>Declares that no more items will be added to the queue.</p>
+<p>All threads blocking on <code class="inline"><span class="i">dequeue</span><span class="s">(</span><span class="s">)</span></code>
+ calls will be unblocked with any
+remaining items in the queue and/or <code class="inline"><a class="l_k" href="../functions/undef.html">undef</a></code> being returned.  Any subsequent
+calls to <code class="inline"><span class="i">dequeue</span><span class="s">(</span><span class="s">)</span></code>
+ will behave like <code class="inline"><span class="i">dequeue_nb</span><span class="s">(</span><span class="s">)</span></code>
+.</p>
+<p>Once ended, no more items may be placed in the queue.</p>
+</li>
+</ul>
+<a class='view-head1' id="ADVANCED-METHODS"></a><h2 class='h2' >ADVANCED METHODS</h2>
+<p>The following methods can be used to manipulate items anywhere in a queue.</p>
+<p>To prevent the contents of a queue from being modified by another thread
+while it is being examined and/or changed, <a href="../threads/shared.html#lock-VARIABLE">lock</a> the queue inside a local block:</p>
+<pre class="verbatim"><ol><li> <span class="s">{</span></li><li>     <a class="l_k" href="../functions/lock.html">lock</a><span class="s">(</span><span class="i">$q</span><span class="s">)</span><span class="sc">;</span>   <span class="c"># Keep other threads from changing the queue&#39;s contents</span></li><li>     <a class="l_k" href="../functions/my.html">my</a> <span class="i">$item</span> = <span class="i">$q</span><span class="i">-&gt;peek</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li><li>     <a class="l_k" href="../functions/if.html">if</a> <span class="s">(</span><span class="i">$item</span> ...<span class="s">)</span> <span class="s">{</span></li><li>         ...</li><li>     <span class="s">}</span></li><li> <span class="s">}</span></li><li> <span class="c"># Queue is now unlocked</span></li></ol></pre><ul>
+<li><a class='view-title' id="-%3epeek()"></a><strong>-&gt;peek()</strong>
+</li>
+<li><a class='view-title' id="-%3epeek(INDEX)"></a><strong>-&gt;peek(INDEX)</strong>
+<p>Returns an item from the queue without dequeuing anything.  Defaults to the
+the head of queue (at index position 0) if no index is specified.  Negative
+index values are supported as with <a href="../perldata.html#Subscripts">arrays</a> (i.e., -1
+is the end of the queue, -2 is next to last, and so on).</p>
+<p>If no items exists at the specified index (i.e., the queue is empty, or the
+index is beyond the number of items on the queue), then <code class="inline"><a class="l_k" href="../functions/undef.html">undef</a></code> is returned.</p>
+<p>Remember, the returned item is not removed from the queue, so manipulating a
+<code class="inline"><span class="w">peek</span></code>
+ed at reference affects the item on the queue.</p>
+</li>
+<li><a class='view-title' id="-%3einsert(INDEX%2c-LIST)"></a><strong>-&gt;insert(INDEX, LIST)</strong>
+<p>Adds the list of items to the queue at the specified index position (0
+is the head of the list).  Any existing items at and beyond that position are
+pushed back past the newly added items:</p>
+<pre class="verbatim"><ol><li> <span class="i">$q</span><span class="i">-&gt;enqueue</span><span class="s">(</span><span class="n">1</span><span class="cm">,</span> <span class="n">2</span><span class="cm">,</span> <span class="n">3</span><span class="cm">,</span> <span class="n">4</span><span class="s">)</span><span class="sc">;</span></li><li> <span class="i">$q</span><span class="i">-&gt;insert</span><span class="s">(</span><span class="n">1</span><span class="cm">,</span> <span class="q">qw/foo bar/</span><span class="s">)</span><span class="sc">;</span></li><li> <span class="c"># Queue now contains:  1, foo, bar, 2, 3, 4</span></li></ol></pre><p>Specifying an index position greater than the number of items in the queue
+just adds the list to the end.</p>
+<p>Negative index positions are supported:</p>
+<pre class="verbatim"><ol><li> <span class="i">$q</span><span class="i">-&gt;enqueue</span><span class="s">(</span><span class="n">1</span><span class="cm">,</span> <span class="n">2</span><span class="cm">,</span> <span class="n">3</span><span class="cm">,</span> <span class="n">4</span><span class="s">)</span><span class="sc">;</span></li><li> <span class="i">$q</span><span class="i">-&gt;insert</span><span class="s">(</span><span class="n">-2</span><span class="cm">,</span> <span class="q">qw/foo bar/</span><span class="s">)</span><span class="sc">;</span></li><li> <span class="c"># Queue now contains:  1, 2, foo, bar, 3, 4</span></li></ol></pre><p>Specifying a negative index position greater than the number of items in the
+queue adds the list to the head of the queue.</p>
+</li>
+<li><a class='view-title' id="-%3eextract()"></a><strong>-&gt;extract()</strong>
+</li>
+<li><a class='view-title' id="-%3eextract(INDEX)"></a><strong>-&gt;extract(INDEX)</strong>
+</li>
+<li><a class='view-title' id="-%3eextract(INDEX%2c-COUNT)"></a><strong>-&gt;extract(INDEX, COUNT)</strong>
+<p>Removes and returns the specified number of items (defaults to 1) from the
+specified index position in the queue (0 is the head of the queue).  When
+called with no arguments, <code class="inline"><span class="w">extract</span></code>
+ operates the same as <code class="inline"><span class="w">dequeue_nb</span></code>
+.</p>
+<p>This method is non-blocking, and will return only as many items as are
+available to fulfill the request:</p>
+<pre class="verbatim"><ol><li> <span class="i">$q</span><span class="i">-&gt;enqueue</span><span class="s">(</span><span class="n">1</span><span class="cm">,</span> <span class="n">2</span><span class="cm">,</span> <span class="n">3</span><span class="cm">,</span> <span class="n">4</span><span class="s">)</span><span class="sc">;</span></li><li> <a class="l_k" href="../functions/my.html">my</a> <span class="i">$item</span>  = <span class="i">$q</span><span class="i">-&gt;extract</span><span class="s">(</span><span class="n">2</span><span class="s">)</span>     <span class="c"># Returns 3</span></li><li>                                <span class="c"># Queue now contains:  1, 2, 4</span></li><li> <a class="l_k" href="../functions/my.html">my</a> <span class="i">@items</span> = <span class="i">$q</span><span class="i">-&gt;extract</span><span class="s">(</span><span class="n">1</span><span class="cm">,</span> <span class="n">3</span><span class="s">)</span>  <span class="c"># Returns (2, 4)</span></li><li>                                <span class="c"># Queue now contains:  1</span></li></ol></pre><p>Specifying an index position greater than the number of items in the
+queue results in <code class="inline"><a class="l_k" href="../functions/undef.html">undef</a></code> or an empty list being returned.</p>
+<pre class="verbatim"><ol><li> <span class="i">$q</span><span class="i">-&gt;enqueue</span><span class="s">(</span><span class="q">&#39;foo&#39;</span><span class="s">)</span><span class="sc">;</span></li><li> <a class="l_k" href="../functions/my.html">my</a> <span class="i">$nada</span> = <span class="i">$q</span><span class="i">-&gt;extract</span><span class="s">(</span><span class="n">3</span><span class="s">)</span>      <span class="c"># Returns undef</span></li><li> <a class="l_k" href="../functions/my.html">my</a> <span class="i">@nada</span> = <span class="i">$q</span><span class="i">-&gt;extract</span><span class="s">(</span><span class="n">1</span><span class="cm">,</span> <span class="n">3</span><span class="s">)</span>   <span class="c"># Returns ()</span></li></ol></pre><p>Negative index positions are supported.  Specifying a negative index position
+greater than the number of items in the queue may return items from the head
+of the queue (similar to <code class="inline"><span class="w">dequeue_nb</span></code>
+) if the count overlaps the head of the
+queue from the specified position (i.e. if queue size + index + count is
+greater than zero):</p>
+<pre class="verbatim"><ol><li> <span class="i">$q</span><span class="i">-&gt;enqueue</span><span class="s">(</span><span class="q">qw/foo bar baz/</span><span class="s">)</span><span class="sc">;</span></li><li> <a class="l_k" href="../functions/my.html">my</a> <span class="i">@nada</span> = <span class="i">$q</span><span class="i">-&gt;extract</span><span class="s">(</span><span class="n">-6</span><span class="cm">,</span> <span class="n">2</span><span class="s">)</span><span class="sc">;</span>  <span class="c"># Returns ()      - (3+(-6)+2) &lt;= 0</span></li><li> <a class="l_k" href="../functions/my.html">my</a> <span class="i">@some</span> = <span class="i">$q</span><span class="i">-&gt;extract</span><span class="s">(</span><span class="n">-6</span><span class="cm">,</span> <span class="n">4</span><span class="s">)</span><span class="sc">;</span>  <span class="c"># Returns (foo)   - (3+(-6)+4) &gt; 0</span></li><li>                                 <span class="c"># Queue now contains:  bar, baz</span></li><li> <a class="l_k" href="../functions/my.html">my</a> <span class="i">@rest</span> = <span class="i">$q</span><span class="i">-&gt;extract</span><span class="s">(</span><span class="n">-3</span><span class="cm">,</span> <span class="n">4</span><span class="s">)</span><span class="sc">;</span>  <span class="c"># Returns (bar, baz) -</span></li><li>                                 <span class="c">#                   (2+(-3)+4) &gt; 0</span></li></ol></pre></li>
+</ul>
+<a class='view-head1' id="NOTES"></a><h2 class='h2' >NOTES</h2>
+<p>Queues created by <a href="../Thread/Queue.html">Thread::Queue</a> can be used in both threaded and
+non-threaded applications.</p>
+<a class='view-head1' id="LIMITATIONS"></a><h2 class='h2' >LIMITATIONS</h2>
+<p>Passing objects on queues may not work if the objects' classes do not support
+sharing.  See <a href="../threads/shared.html#BUGS-AND-LIMITATIONS">BUGS AND LIMITATIONS in threads::shared</a> for more.</p>
+<p>Passing array/hash refs that contain objects may not work for Perl prior to
+5.10.0.</p>
+<a class='view-head1' id="SEE-ALSO"></a><h2 class='h2' >SEE ALSO</h2>
+<p>Thread::Queue on MetaCPAN:
+<a class='link-to-page' href="https://metacpan.org/release/Thread-Queue">https://metacpan.org/release/Thread-Queue</a></p>
+<p>Code repository for CPAN distribution:
+<a class='link-to-page' href="https://github.com/Dual-Life/Thread-Queue">https://github.com/Dual-Life/Thread-Queue</a></p>
+<p><a href="../threads.html">threads</a>, <a href="../threads/shared.html">threads::shared</a></p>
+<p>Sample code in the <i>examples</i> directory of this distribution on CPAN.</p>
+<a class='view-head1' id="MAINTAINER"></a><h2 class='h2' >MAINTAINER</h2>
+<p>Jerry D. Hedden, &lt;jdhedden AT cpan DOT org&gt;</p>
+<a class='view-head1' id="LICENSE"></a><h2 class='h2' >LICENSE</h2>
+<p>This program is free software; you can redistribute it and/or modify it under
+the same terms as Perl itself.</p>
+
+
+
+
+      <ul><li><a href="#NAME">NAME</a></li><li><a href="#VERSION">VERSION</a></li><li><a href="#SYNOPSIS">SYNOPSIS</a></li><li><a href="#DESCRIPTION">DESCRIPTION</a></li><li><a href="#QUEUE-CREATION">QUEUE CREATION</a></li><li><a href="#BASIC-METHODS">BASIC METHODS</a></li><li><a href="#ADVANCED-METHODS">ADVANCED METHODS</a></li><li><a href="#NOTES">NOTES</a></li><li><a href="#LIMITATIONS">LIMITATIONS</a></li><li><a href="#SEE-ALSO">SEE ALSO</a></li><li><a href="#MAINTAINER">MAINTAINER</a></li><li><a href="#LICENSE">LICENSE</a></li></ul>
+
+
+                  </div>
+                </article>
+              </div>
+            </div>
+          </main>
+        </div>
+           <footer class="footer row bg-light pt-5 pb-5">
+       <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+           <div class="row">
+               <div class="col-md-4">
+                   <ul class="list-unstyled">
+                       <li>
+                           <h4>Site info</h4>
+                       </li>
+                       <li>Docs mantained by
+                           <a href="//lists.perl.org/list/perl5-porters.html"
+                               rel="noopener">Perl 5 Porters</a>
+                       </li>
+                       <li>Perldoc site development sponsored by
+                           <a href="//opusvl.com" rel="noopener">
+                           <img style="margin: 20px 20px 5px 10px" class="opus-logo" src="/public/img/opusvl_logo.svg" alt="OpusVL Logo">
+                        </a>
+                    <li><span class="about_perldoc"><a href="//about.html">About PerlDOC</a></span>
+                    </li>
+                       </li>
+                   </ul>
+               </div>
+               <div class="col-md-8">
+                   <div class="row">
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Manuals</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.28.3/index-overview.html">Overview</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.28.3/index-tutorials.html">Tutorials</a>
+                               </li>
+                               <li>
+                                   <a href="/5.28.3/index-faq.html">FAQs</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.28.3/index-history.html">Changes</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Reference</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.28.3/index-language.html">Language</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.28.3/index-functions.html">Functions</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.28.3/perlop.html">Operators</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.28.3/perlvar.html">Variables</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Modules</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.28.3/index-modules-A.html">Modules</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.28.3/index-pragmas.html">Pragmas</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.28.3/index-utilities.html">Utilities</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Misc</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.28.3/index-licence.html">License</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.28.3/index-internals.html">Internals</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.28.3/index-platforms.html">Platforms</a>
+                               </li>
+                            <li>
+                                <a
+                                    href="/5.28.3/index-about.html">About</a>
+                            </li>
+                           </ul>
+                       </div>
+                   </div>
+               </div>
+               <div class=" col-12 footer-inf text-center">
+                   <small>perldoc.perl.org - Official documentation for the Perl
+                       programming language</small>
+               </div>
+           </div>
+       </div>
+   </footer>
+
+        	<div class="beta-wrapper beta-bottom-right ">
+		<div class="beta beta-blue  ">
+			<a class="beta-link "
+				href="//github.com/OpusVL/perldoc.perl.org/issues/new" rel="noopener">
+				<span class="beta-text">
+					This website is a Beta release.
+				</span>
+				<span class="beta-text">
+					For any issues please raise a ticket on GitHub
+				</span>
+			</a>
+		</div>
+	</div>
+
+        <script src="/public/js/main.min.js"></script>
+      </body>
+
+      </html>

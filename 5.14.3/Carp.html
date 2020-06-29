@@ -1,0 +1,864 @@
+      
+      
+      
+      
+
+      <!DOCTYPE html>
+      <html lang="en">
+
+      <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Carp - perldoc.perl.org">
+        <link rel="icon" href="/public/img/favicon.ico">
+        <title>Carp - perldoc.perl.org</title>
+        <link href="/public/css/main.min.css" rel="stylesheet">
+        <link rel="canonical" href="/Carp.html">
+        <link
+          href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900'
+          rel='stylesheet' type='text/css'>
+        <script>
+          window.ga = window.ga || function () {
+            (ga.q = ga.q || []).push(arguments)
+          };
+          ga.l = +new Date;
+          ga('create', 'UA-1892152-2', 'auto'); // JJ's account
+          ga('create', 'UA-50555-3', 'auto', 'perlOrg'); // perl.org account
+          ga('require', 'outboundLinkTracker', {
+            events: ['click', 'auxclick', 'contextmenu'],
+          });
+          ga('require', 'maxScrollTracker');
+          ga('send', 'pageview');
+          ga('perlOrg.send', 'pageview');
+        </script>
+        <script async src="https://www.google-analytics.com/analytics.js">
+        </script>
+        <script async src="/public/js/tracking.min.js"></script>
+      </head>
+
+      <body class="body container-fluid ">
+        <div class="wrapper">
+
+          <nav
+    class="navbar navbar-dark bg-primary bg-perl fixed-top justify-content-between navbar-expand-lg">
+    <a href="#content" class="skippy sr-only sr-only-focusable">
+        <span class=' skippy-text'>Skip to main content</span>
+    </a>
+    <a class="navbar-brand" href="/">
+        <img class="logo" src="/public/img/logo_perl_doc.svg"
+            alt="Perl Documentation Logo" />
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse"
+        data-target="#navbar" aria-controls="navbar" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="navbar" class="collapse navbar-collapse ">
+        <ul class="navbar-nav ml-auto navbar-right">
+            <form class="nav-item dropdown search-wrapper">
+                <input type="text" id='searchinput' aria-describedby='navbarDropdown5'
+                    placeholder="Type query" class='search-input-field' value=''>
+
+                <button href="#" data-toggle='dropdown' type="button"
+                    aria-haspopup="true" aria-expanded='false' id="navbarDropdown5"
+                    class="nav-link dropdown-toggle search-link">
+                    <object tabindex='-1' focusable="false" class='search-icon'
+                        data="/public/img/search.svg" type="image/svg+xml"
+                        name='search icon'>search
+                        icon</object>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown5"
+                    id='search-results'>
+                    <p class='dropdown-item major-version'>
+                        No results
+                    </p>
+                </div>
+            </form>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown" href="#" class="nav-link dropdown-toggle"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Perl versions</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    
+                        <p class='dropdown-item major-version'>
+                            5.32
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.32.0/">5.32.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.30
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.3/">5.30.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.2/">5.30.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.1/">5.30.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.0/">5.30.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.28
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.3/">5.28.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.2/">5.28.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.1/">5.28.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.0/">5.28.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.26
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.3/">5.26.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.2/">5.26.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.1/">5.26.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.0/">5.26.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.24
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.4/">5.24.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.3/">5.24.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.2/">5.24.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.1/">5.24.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.0/">5.24.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.22
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.4/">5.22.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.3/">5.22.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.2/">5.22.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.1/">5.22.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.0/">5.22.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.20
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.3/">5.20.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.2/">5.20.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.1/">5.20.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.0/">5.20.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.18
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.4/">5.18.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.3/">5.18.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.2/">5.18.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.1/">5.18.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.0/">5.18.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.16
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.3/">5.16.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.2/">5.16.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.1/">5.16.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.0/">5.16.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.14
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.4/">5.14.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.3/">5.14.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.2/">5.14.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.1/">5.14.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.0/">5.14.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.12
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.5/">5.12.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.4/">5.12.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.3/">5.12.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.2/">5.12.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.1/">5.12.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.0/">5.12.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.10
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.1/">5.10.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.0/">5.10.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.8
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.9/">5.8.9</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.8/">5.8.8</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.7/">5.8.7</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.6/">5.8.6</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.5/">5.8.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.4/">5.8.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.3/">5.8.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.2/">5.8.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.1/">5.8.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.0/">5.8.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.6
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.2/">5.6.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.1/">5.6.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.0/">5.6.0</a>
+                        
+                        
+                    
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown1" href="#" class="dropdown-toggle nav-link"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Manuals</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                    <a class="dropdown-item"
+                        href="/5.14.3/index-overview.html">Overview</a>
+                    <a class="dropdown-item"
+                        href="/5.14.3/index-tutorials.html">Tutorials</a>
+                    <a class="dropdown-item"
+                        href="/5.14.3/index-faq.html">FAQs</a>
+                    <a class="dropdown-item"
+                        href="/5.14.3/index-history.html">Changes</a>
+                    <a class="dropdown-item"
+                        href="/5.14.3/index-licence.html">License</a>
+                    <a class="dropdown-item"
+                        href="/5.14.3/index-language.html">Language</a>
+                    <a class="dropdown-item"
+                        href="/5.14.3/index-functions.html">Functions</a>
+                    <a class="dropdown-item"
+                        href="/5.14.3/perlop.html">Operators</a>
+                    <a class="dropdown-item"
+                        href="/5.14.3/perlvar.html">Variables</a>
+                    <a class="dropdown-item"
+                        href="/5.14.3/index-pragmas.html">Pragmas</a>
+                    <a class="dropdown-item"
+                        href="/5.14.3/index-utilities.html">Utilities</a>
+                    <a class="dropdown-item"
+                        href="/5.14.3/index-internals.html">Internals</a>
+                    <a class="dropdown-item"
+                        href="/5.14.3/index-platforms.html">Platforms</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown3" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Modules</a>
+                <div aria-labelledby="navbarDropdown3"
+                    class="dropdown-menu letters-wrap">
+                    <!--<a class="dropdown-item"
+                        href="/5.14.3/index-modules.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.14.3/index-modules-by-cat.html">By
+                        Category</a>-->
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.14.3/index-modules-A.html">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.3/index-modules-B.html">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.3/index-modules-C.html">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.3/index-modules-D.html">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.3/index-modules-E.html">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.3/index-modules-F.html">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.3/index-modules-G.html">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.3/index-modules-H.html">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.3/index-modules-I.html">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.3/index-modules-J.html">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.3/index-modules-K.html">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.3/index-modules-L.html">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.3/index-modules-M.html">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.3/index-modules-N.html">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.3/index-modules-O.html">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.3/index-modules-P.html">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.3/index-modules-Q.html">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.3/index-modules-R.html">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.3/index-modules-S.html">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.3/index-modules-T.html">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.3/index-modules-U.html">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.3/index-modules-V.html">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.3/index-modules-W.html">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.3/index-modules-X.html">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.3/index-modules-Y.html">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.3/index-modules-Z.html">Z</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown4" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Functions</a>
+                <div aria-labelledby="navbarDropdown4"
+                    class="dropdown-menu letters-wrap">
+                    <a class="dropdown-item"
+                        href="/5.14.3/index-functions.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.14.3/index-functions-by-cat.html">By
+                        Category</a>
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.14.3/index-functions.html#A">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.3/index-functions.html#B">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.3/index-functions.html#C">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.3/index-functions.html#D">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.3/index-functions.html#E">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.3/index-functions.html#F">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.3/index-functions.html#G">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.3/index-functions.html#H">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.3/index-functions.html#I">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.3/index-functions.html#J">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.3/index-functions.html#K">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.3/index-functions.html#L">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.3/index-functions.html#M">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.3/index-functions.html#N">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.3/index-functions.html#O">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.3/index-functions.html#P">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.3/index-functions.html#Q">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.3/index-functions.html#R">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.3/index-functions.html#S">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.3/index-functions.html#T">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.3/index-functions.html#U">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.3/index-functions.html#V">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.3/index-functions.html#W">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.3/index-functions.html#X">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.3/index-functions.html#Y">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.3/index-functions.html#Z">Z</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!--/.nav-collapse -->
+</nav>
+
+
+          <main class="row main-content pb-5 pt-5" id='content'>
+            <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+              <div class="row">
+                <div class="col-sm-12">
+                  <div id="breadcrumbs">
+                      
+    <a href="index.html">Home</a>&nbsp; &gt;
+    
+      
+        <a href="index-modules-C.html">Core modules (C)</a> &gt;
+      
+    
+    Carp
+  
+
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <article class="col-sm-12 content">
+                  <div class="documentation-wrapper">
+                    <div id="perl_version">
+                      <h7 class='page-title'> Perl 5 version 14.3
+                        documentation</h7>
+                    </div>
+                    <h1>Carp</h1>
+
+
+  <!--    -->
+<ul><li><a href="#NAME">NAME</a></li><li><a href="#SYNOPSIS">SYNOPSIS</a></li><li><a href="#DESCRIPTION">DESCRIPTION</a></li><ul><li><a href="#Forcing-a-Stack-Trace">Forcing a Stack Trace</a></li></ul><li><a href="#GLOBAL-VARIABLES">GLOBAL VARIABLES</a></li><ul><li><a href="#%24Carp%3a%3aMaxEvalLen">$Carp::MaxEvalLen</a></li><li><a href="#%24Carp%3a%3aMaxArgLen">$Carp::MaxArgLen</a></li><li><a href="#%24Carp%3a%3aMaxArgNums">$Carp::MaxArgNums</a></li><li><a href="#%24Carp%3a%3aVerbose">$Carp::Verbose</a></li><li><a href="#%40CARP_NOT">@CARP_NOT</a></li><li><a href="#%25Carp%3a%3aInternal">%Carp::Internal</a></li><li><a href="#%25Carp%3a%3aCarpInternal">%Carp::CarpInternal</a></li><li><a href="#%24Carp%3a%3aCarpLevel">$Carp::CarpLevel</a></li></ul><li><a href="#BUGS">BUGS</a></li></ul><a class='view-head1' id="NAME"></a><h2 class='h2' >NAME</h2>
+<p>Carp - alternative warn and die for modules</p>
+<a class='view-head1' id="SYNOPSIS"></a><h2 class='h2' >SYNOPSIS</h2>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="functions/use.html">use</a> <span class="w">Carp</span><span class="sc">;</span></li><li></li><li>    <span class="c"># warn user (from perspective of caller)</span></li><li>    <span class="w">carp</span> <span class="q">&quot;string trimmed to 80 chars&quot;</span><span class="sc">;</span></li><li></li><li>    <span class="c"># die of errors (from perspective of caller)</span></li><li>    <span class="w">croak</span> <span class="q">&quot;We&#39;re outta here!&quot;</span><span class="sc">;</span></li><li></li><li>    <span class="c"># die of errors with stack backtrace</span></li><li>    <span class="w">confess</span> <span class="q">&quot;not implemented&quot;</span><span class="sc">;</span></li><li></li><li>    <span class="c"># cluck not exported by default</span></li><li>    <a class="l_k" href="functions/use.html">use</a> <span class="w">Carp</span> <span class="q">qw(cluck)</span><span class="sc">;</span></li><li>    <span class="w">cluck</span> <span class="q">&quot;This is how we got here!&quot;</span><span class="sc">;</span></li></ol></pre><a class='view-head1' id="DESCRIPTION"></a><h2 class='h2' >DESCRIPTION</h2>
+<p>The Carp routines are useful in your own modules because
+they act like die() or warn(), but with a message which is more
+likely to be useful to a user of your module.  In the case of
+cluck, confess, and longmess that context is a summary of every
+call in the call-stack.  For a shorter message you can use <code class="inline"><span class="w">carp</span></code>
+
+or <code class="inline"><span class="w">croak</span></code>
+ which report the error as being from where your module
+was called.  There is no guarantee that that is where the error
+was, but it is a good educated guess.</p>
+<p>You can also alter the way the output and logic of <code class="inline"><span class="w">Carp</span></code>
+ works, by
+changing some global variables in the <code class="inline"><span class="w">Carp</span></code>
+ namespace. See the
+section on <code class="inline"><span class="w">GLOBAL</span> <span class="w">VARIABLES</span></code>
+ below.</p>
+<p>Here is a more complete description of how <code class="inline"><span class="w">carp</span></code>
+ and <code class="inline"><span class="w">croak</span></code>
+ work.
+What they do is search the call-stack for a function call stack where
+they have not been told that there shouldn't be an error.  If every
+call is marked safe, they give up and give a full stack backtrace
+instead.  In other words they presume that the first likely looking
+potential suspect is guilty.  Their rules for telling whether
+a call shouldn't generate errors work as follows:</p>
+<dl>
+<li>
+<p>Any call from a package to itself is safe.</p>
+</li>
+<li>
+<p>Packages claim that there won't be errors on calls to or from
+packages explicitly marked as safe by inclusion in <code class="inline"><span class="i">@CARP_NOT</span></code>
+, or
+(if that array is empty) <code class="inline"><span class="i">@ISA</span></code>
+.  The ability to override what
+@ISA says is new in 5.8.</p>
+</li>
+<li>
+<p>The trust in item 2 is transitive.  If A trusts B, and B
+trusts C, then A trusts C.  So if you do not override <code class="inline"><span class="i">@ISA</span></code>
+
+with <code class="inline"><span class="i">@CARP_NOT</span></code>
+, then this trust relationship is identical to,
+"inherits from".</p>
+</li>
+<li>
+<p>Any call from an internal Perl module is safe.  (Nothing keeps
+user modules from marking themselves as internal to Perl, but
+this practice is discouraged.)</p>
+</li>
+<li>
+<p>Any call to Perl's warning system (eg Carp itself) is safe.
+(This rule is what keeps it from reporting the error at the
+point where you call <code class="inline"><span class="w">carp</span></code>
+ or <code class="inline"><span class="w">croak</span></code>
+.)</p>
+</li>
+<li>
+<p><code class="inline"><span class="i">$Carp::CarpLevel</span></code>
+ can be set to skip a fixed number of additional
+call levels.  Using this is not recommended because it is very
+difficult to get it to behave correctly.</p>
+</li>
+</dl>
+<a class='view-head2' id="Forcing-a-Stack-Trace"></a><h3 class='h3' >Forcing a Stack Trace</h3>
+<p>As a debugging aid, you can force Carp to treat a croak as a confess
+and a carp as a cluck across <i>all</i> modules. In other words, force a
+detailed stack trace to be given.  This can be very helpful when trying
+to understand why, or from where, a warning or error is being generated.</p>
+<p>This feature is enabled by 'importing' the non-existent symbol
+'verbose'. You would typically enable it by saying</p>
+<pre class="verbatim"><ol><li>    <span class="w">perl</span> -<span class="w">MCarp</span>=<span class="w">verbose</span> <span class="w">script</span>.<span class="w">pl</span></li></ol></pre><p>or by including the string <code class="inline">-<span class="w">MCarp</span>=<span class="w">verbose</span></code>
+ in the PERL5OPT
+environment variable.</p>
+<p>Alternately, you can set the global variable <code class="inline"><span class="i">$Carp::Verbose</span></code>
+ to true.
+See the <code class="inline"><span class="w">GLOBAL</span> <span class="w">VARIABLES</span></code>
+ section below.</p>
+<a class='view-head1' id="GLOBAL-VARIABLES"></a><h2 class='h2' >GLOBAL VARIABLES</h2>
+<a class='view-head2' id="%24Carp%3a%3aMaxEvalLen"></a><h3 class='h3' >$Carp::MaxEvalLen</h3>
+<p>This variable determines how many characters of a string-eval are to
+be shown in the output. Use a value of <code class="inline"><span class="n">0</span></code>
+ to show all text.</p>
+<p>Defaults to <code class="inline"><span class="n">0</span></code>
+.</p>
+<a class='view-head2' id="%24Carp%3a%3aMaxArgLen"></a><h3 class='h3' >$Carp::MaxArgLen</h3>
+<p>This variable determines how many characters of each argument to a
+function to print. Use a value of <code class="inline"><span class="n">0</span></code>
+ to show the full length of the
+argument.</p>
+<p>Defaults to <code class="inline"><span class="n">64</span></code>
+.</p>
+<a class='view-head2' id="%24Carp%3a%3aMaxArgNums"></a><h3 class='h3' >$Carp::MaxArgNums</h3>
+<p>This variable determines how many arguments to each function to show.
+Use a value of <code class="inline"><span class="n">0</span></code>
+ to show all arguments to a function call.</p>
+<p>Defaults to <code class="inline"><span class="n">8</span></code>
+.</p>
+<a class='view-head2' id="%24Carp%3a%3aVerbose"></a><h3 class='h3' >$Carp::Verbose</h3>
+<p>This variable makes <code class="inline"><span class="w">carp</span></code>
+ and <code class="inline"><span class="w">croak</span></code>
+ generate stack backtraces
+just like <code class="inline"><span class="w">cluck</span></code>
+ and <code class="inline"><span class="w">confess</span></code>
+.  This is how <code class="inline"><a class="l_k" href="functions/use.html">use</a> <span class="w">Carp</span> <span class="q">&#39;verbose&#39;</span></code>
+
+is implemented internally.</p>
+<p>Defaults to <code class="inline"><span class="n">0</span></code>
+.</p>
+<a class='view-head2' id="%40CARP_NOT"></a><h3 class='h3' >@CARP_NOT</h3>
+<p>This variable, <i>in your package</i>, says which packages are <i>not</i> to be
+considered as the location of an error. The <code class="inline"><span class="i">carp</span><span class="s">(</span><span class="s">)</span></code>
+ and <code class="inline"><span class="i">cluck</span><span class="s">(</span><span class="s">)</span></code>
+
+functions will skip over callers when reporting where an error occurred.</p>
+<p>NB: This variable must be in the package's symbol table, thus:</p>
+<pre class="verbatim"><ol><li>    <span class="c"># These work</span></li><li>    <a class="l_k" href="functions/our.html">our</a> <span class="i">@CARP_NOT</span><span class="sc">;</span> <span class="c"># file scope</span></li><li>    <a class="l_k" href="functions/use.html">use</a> <span class="w">vars</span> <span class="q">qw(@CARP_NOT)</span><span class="sc">;</span> <span class="c"># package scope</span></li><li>    <span class="i">@My::Package::CARP_NOT</span> = ... <span class="sc">;</span> <span class="c"># explicit package variable</span></li><li></li><li>    <span class="c"># These don&#39;t work</span></li><li><a name="xyz"></a>    sub <span class="m">xyz</span> <span class="s">{</span> ... <span class="i">@CARP_NOT</span> = ... <span class="s">}</span> <span class="c"># w/o declarations above</span></li><li>    <a class="l_k" href="functions/my.html">my</a> <span class="i">@CARP_NOT</span><span class="sc">;</span> <span class="c"># even at top-level</span></li></ol></pre><p>Example of use:</p>
+<pre class="verbatim"><ol><li><a name="package-My::Carping::Package"></a>    package <span class="i">My::Carping::Package</span><span class="sc">;</span></li><li>    <a class="l_k" href="functions/use.html">use</a> <span class="w">Carp</span><span class="sc">;</span></li><li>    <a class="l_k" href="functions/our.html">our</a> <span class="i">@CARP_NOT</span><span class="sc">;</span></li><li><a name="bar"></a>    sub <span class="m">bar</span>     <span class="s">{</span> .... or <span class="i">_error</span><span class="s">(</span><span class="q">&#39;Wrong input&#39;</span><span class="s">)</span> <span class="s">}</span></li><li><a name="_error"></a>    sub <span class="m">_error</span>  <span class="s">{</span></li><li>        <span class="c"># temporary control of where&#39;ness, __PACKAGE__ is implicit</span></li><li>        <a class="l_k" href="functions/local.html">local</a> <span class="i">@CARP_NOT</span> = <span class="q">qw(My::Friendly::Caller)</span><span class="sc">;</span></li><li>        <span class="i">carp</span><span class="s">(</span><span class="i">@_</span><span class="s">)</span></li><li>    <span class="s">}</span></li></ol></pre><p>This would make <code class="inline"><span class="w">Carp</span></code>
+ report the error as coming from a caller not
+in <code class="inline"><span class="w">My::Carping::Package</span></code>
+, nor from <code class="inline"><span class="w">My::Friendly::Caller</span></code>
+.</p>
+<p>Also read the <a href="#DESCRIPTION">DESCRIPTION</a> section above, about how <code class="inline"><span class="w">Carp</span></code>
+ decides
+where the error is reported from.</p>
+<p>Use <code class="inline"><span class="i">@CARP_NOT</span></code>
+, instead of <code class="inline"><span class="i">$Carp::CarpLevel</span></code>
+.</p>
+<p>Overrides <code class="inline"><span class="w">Carp</span></code>
+'s use of <code class="inline"><span class="i">@ISA</span></code>
+.</p>
+<a class='view-head2' id="%25Carp%3a%3aInternal"></a><h3 class='h3' >%Carp::Internal</h3>
+<p>This says what packages are internal to Perl.  <code class="inline"><span class="w">Carp</span></code>
+ will never
+report an error as being from a line in a package that is internal to
+Perl.  For example:</p>
+<pre class="verbatim"><ol><li>    <span class="i">$Carp::Internal</span>{ <span class="s">(</span><span class="w">__PACKAGE__</span><span class="s">)</span> }++<span class="sc">;</span></li><li>    <span class="c"># time passes...</span></li><li><a name="foo"></a>    sub <span class="m">foo</span> <span class="s">{</span> ... or <span class="i">confess</span><span class="s">(</span><span class="q">&quot;whatever&quot;</span><span class="s">)</span> <span class="s">}</span><span class="sc">;</span></li></ol></pre><p>would give a full stack backtrace starting from the first caller
+outside of __PACKAGE__.  (Unless that package was also internal to
+Perl.)</p>
+<a class='view-head2' id="%25Carp%3a%3aCarpInternal"></a><h3 class='h3' >%Carp::CarpInternal</h3>
+<p>This says which packages are internal to Perl's warning system.  For
+generating a full stack backtrace this is the same as being internal
+to Perl, the stack backtrace will not start inside packages that are
+listed in <code class="inline"><span class="i">%Carp::CarpInternal</span></code>
+.  But it is slightly different for
+the summary message generated by <code class="inline"><span class="w">carp</span></code>
+ or <code class="inline"><span class="w">croak</span></code>
+.  There errors
+will not be reported on any lines that are calling packages in
+<code class="inline"><span class="i">%Carp::CarpInternal</span></code>
+.</p>
+<p>For example <code class="inline"><span class="w">Carp</span></code>
+ itself is listed in <code class="inline"><span class="i">%Carp::CarpInternal</span></code>
+.
+Therefore the full stack backtrace from <code class="inline"><span class="w">confess</span></code>
+ will not start
+inside of <code class="inline"><span class="w">Carp</span></code>
+, and the short message from calling <code class="inline"><span class="w">croak</span></code>
+ is
+not placed on the line where <code class="inline"><span class="w">croak</span></code>
+ was called.</p>
+<a class='view-head2' id="%24Carp%3a%3aCarpLevel"></a><h3 class='h3' >$Carp::CarpLevel</h3>
+<p>This variable determines how many additional call frames are to be
+skipped that would not otherwise be when reporting where an error
+occurred on a call to one of <code class="inline"><span class="w">Carp</span></code>
+'s functions.  It is fairly easy
+to count these call frames on calls that generate a full stack
+backtrace.  However it is much harder to do this accounting for calls
+that generate a short message.  Usually people skip too many call
+frames.  If they are lucky they skip enough that <code class="inline"><span class="w">Carp</span></code>
+ goes all of
+the way through the call stack, realizes that something is wrong, and
+then generates a full stack backtrace.  If they are unlucky then the
+error is reported from somewhere misleading very high in the call
+stack.</p>
+<p>Therefore it is best to avoid <code class="inline"><span class="i">$Carp::CarpLevel</span></code>
+.  Instead use
+<code class="inline"><span class="i">@CARP_NOT</span></code>
+, <code class="inline"><span class="i">%Carp::Internal</span></code>
+ and <code class="inline"><span class="i">%Carp::CarpInternal</span></code>
+.</p>
+<p>Defaults to <code class="inline"><span class="n">0</span></code>
+.</p>
+<a class='view-head1' id="BUGS"></a><h2 class='h2' >BUGS</h2>
+<p>The Carp routines don't handle exception objects currently.
+If called with a first argument that is a reference, they simply
+call die() or warn(), as appropriate.</p>
+
+
+
+
+      <ul><li><a href="#NAME">NAME</a></li><li><a href="#SYNOPSIS">SYNOPSIS</a></li><li><a href="#DESCRIPTION">DESCRIPTION</a></li><ul><li><a href="#Forcing-a-Stack-Trace">Forcing a Stack Trace</a></li></ul><li><a href="#GLOBAL-VARIABLES">GLOBAL VARIABLES</a></li><ul><li><a href="#%24Carp%3a%3aMaxEvalLen">$Carp::MaxEvalLen</a></li><li><a href="#%24Carp%3a%3aMaxArgLen">$Carp::MaxArgLen</a></li><li><a href="#%24Carp%3a%3aMaxArgNums">$Carp::MaxArgNums</a></li><li><a href="#%24Carp%3a%3aVerbose">$Carp::Verbose</a></li><li><a href="#%40CARP_NOT">@CARP_NOT</a></li><li><a href="#%25Carp%3a%3aInternal">%Carp::Internal</a></li><li><a href="#%25Carp%3a%3aCarpInternal">%Carp::CarpInternal</a></li><li><a href="#%24Carp%3a%3aCarpLevel">$Carp::CarpLevel</a></li></ul><li><a href="#BUGS">BUGS</a></li></ul>
+
+
+                  </div>
+                </article>
+              </div>
+            </div>
+          </main>
+        </div>
+           <footer class="footer row bg-light pt-5 pb-5">
+       <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+           <div class="row">
+               <div class="col-md-4">
+                   <ul class="list-unstyled">
+                       <li>
+                           <h4>Site info</h4>
+                       </li>
+                       <li>Docs mantained by
+                           <a href="//lists.perl.org/list/perl5-porters.html"
+                               rel="noopener">Perl 5 Porters</a>
+                       </li>
+                       <li>Perldoc site development sponsored by
+                           <a href="//opusvl.com" rel="noopener">
+                           <img style="margin: 20px 20px 5px 10px" class="opus-logo" src="/public/img/opusvl_logo.svg" alt="OpusVL Logo">
+                        </a>
+                    <li><span class="about_perldoc"><a href="//about.html">About PerlDOC</a></span>
+                    </li>
+                       </li>
+                   </ul>
+               </div>
+               <div class="col-md-8">
+                   <div class="row">
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Manuals</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.14.3/index-overview.html">Overview</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.14.3/index-tutorials.html">Tutorials</a>
+                               </li>
+                               <li>
+                                   <a href="/5.14.3/index-faq.html">FAQs</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.14.3/index-history.html">Changes</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Reference</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.14.3/index-language.html">Language</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.14.3/index-functions.html">Functions</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.14.3/perlop.html">Operators</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.14.3/perlvar.html">Variables</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Modules</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.14.3/index-modules-A.html">Modules</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.14.3/index-pragmas.html">Pragmas</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.14.3/index-utilities.html">Utilities</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Misc</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.14.3/index-licence.html">License</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.14.3/index-internals.html">Internals</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.14.3/index-platforms.html">Platforms</a>
+                               </li>
+                            <li>
+                                <a
+                                    href="/5.14.3/index-about.html">About</a>
+                            </li>
+                           </ul>
+                       </div>
+                   </div>
+               </div>
+               <div class=" col-12 footer-inf text-center">
+                   <small>perldoc.perl.org - Official documentation for the Perl
+                       programming language</small>
+               </div>
+           </div>
+       </div>
+   </footer>
+
+        	<div class="beta-wrapper beta-bottom-right ">
+		<div class="beta beta-blue  ">
+			<a class="beta-link "
+				href="//github.com/OpusVL/perldoc.perl.org/issues/new" rel="noopener">
+				<span class="beta-text">
+					This website is a Beta release.
+				</span>
+				<span class="beta-text">
+					For any issues please raise a ticket on GitHub
+				</span>
+			</a>
+		</div>
+	</div>
+
+        <script src="/public/js/main.min.js"></script>
+      </body>
+
+      </html>

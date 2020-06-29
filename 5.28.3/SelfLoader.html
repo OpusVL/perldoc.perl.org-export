@@ -1,0 +1,873 @@
+      
+      
+      
+      
+
+      <!DOCTYPE html>
+      <html lang="en">
+
+      <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="SelfLoader - perldoc.perl.org">
+        <link rel="icon" href="/public/img/favicon.ico">
+        <title>SelfLoader - perldoc.perl.org</title>
+        <link href="/public/css/main.min.css" rel="stylesheet">
+        <link rel="canonical" href="/SelfLoader.html">
+        <link
+          href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900'
+          rel='stylesheet' type='text/css'>
+        <script>
+          window.ga = window.ga || function () {
+            (ga.q = ga.q || []).push(arguments)
+          };
+          ga.l = +new Date;
+          ga('create', 'UA-1892152-2', 'auto'); // JJ's account
+          ga('create', 'UA-50555-3', 'auto', 'perlOrg'); // perl.org account
+          ga('require', 'outboundLinkTracker', {
+            events: ['click', 'auxclick', 'contextmenu'],
+          });
+          ga('require', 'maxScrollTracker');
+          ga('send', 'pageview');
+          ga('perlOrg.send', 'pageview');
+        </script>
+        <script async src="https://www.google-analytics.com/analytics.js">
+        </script>
+        <script async src="/public/js/tracking.min.js"></script>
+      </head>
+
+      <body class="body container-fluid ">
+        <div class="wrapper">
+
+          <nav
+    class="navbar navbar-dark bg-primary bg-perl fixed-top justify-content-between navbar-expand-lg">
+    <a href="#content" class="skippy sr-only sr-only-focusable">
+        <span class=' skippy-text'>Skip to main content</span>
+    </a>
+    <a class="navbar-brand" href="/">
+        <img class="logo" src="/public/img/logo_perl_doc.svg"
+            alt="Perl Documentation Logo" />
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse"
+        data-target="#navbar" aria-controls="navbar" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="navbar" class="collapse navbar-collapse ">
+        <ul class="navbar-nav ml-auto navbar-right">
+            <form class="nav-item dropdown search-wrapper">
+                <input type="text" id='searchinput' aria-describedby='navbarDropdown5'
+                    placeholder="Type query" class='search-input-field' value=''>
+
+                <button href="#" data-toggle='dropdown' type="button"
+                    aria-haspopup="true" aria-expanded='false' id="navbarDropdown5"
+                    class="nav-link dropdown-toggle search-link">
+                    <object tabindex='-1' focusable="false" class='search-icon'
+                        data="/public/img/search.svg" type="image/svg+xml"
+                        name='search icon'>search
+                        icon</object>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown5"
+                    id='search-results'>
+                    <p class='dropdown-item major-version'>
+                        No results
+                    </p>
+                </div>
+            </form>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown" href="#" class="nav-link dropdown-toggle"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Perl versions</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    
+                        <p class='dropdown-item major-version'>
+                            5.32
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.32.0/">5.32.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.30
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.3/">5.30.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.2/">5.30.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.1/">5.30.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.0/">5.30.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.28
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.3/">5.28.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.2/">5.28.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.1/">5.28.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.0/">5.28.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.26
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.3/">5.26.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.2/">5.26.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.1/">5.26.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.0/">5.26.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.24
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.4/">5.24.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.3/">5.24.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.2/">5.24.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.1/">5.24.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.0/">5.24.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.22
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.4/">5.22.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.3/">5.22.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.2/">5.22.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.1/">5.22.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.0/">5.22.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.20
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.3/">5.20.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.2/">5.20.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.1/">5.20.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.0/">5.20.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.18
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.4/">5.18.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.3/">5.18.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.2/">5.18.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.1/">5.18.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.0/">5.18.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.16
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.3/">5.16.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.2/">5.16.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.1/">5.16.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.0/">5.16.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.14
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.4/">5.14.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.3/">5.14.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.2/">5.14.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.1/">5.14.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.0/">5.14.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.12
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.5/">5.12.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.4/">5.12.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.3/">5.12.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.2/">5.12.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.1/">5.12.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.0/">5.12.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.10
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.1/">5.10.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.0/">5.10.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.8
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.9/">5.8.9</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.8/">5.8.8</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.7/">5.8.7</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.6/">5.8.6</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.5/">5.8.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.4/">5.8.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.3/">5.8.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.2/">5.8.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.1/">5.8.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.0/">5.8.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.6
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.2/">5.6.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.1/">5.6.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.0/">5.6.0</a>
+                        
+                        
+                    
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown1" href="#" class="dropdown-toggle nav-link"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Manuals</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                    <a class="dropdown-item"
+                        href="/5.28.3/index-overview.html">Overview</a>
+                    <a class="dropdown-item"
+                        href="/5.28.3/index-tutorials.html">Tutorials</a>
+                    <a class="dropdown-item"
+                        href="/5.28.3/index-faq.html">FAQs</a>
+                    <a class="dropdown-item"
+                        href="/5.28.3/index-history.html">Changes</a>
+                    <a class="dropdown-item"
+                        href="/5.28.3/index-licence.html">License</a>
+                    <a class="dropdown-item"
+                        href="/5.28.3/index-language.html">Language</a>
+                    <a class="dropdown-item"
+                        href="/5.28.3/index-functions.html">Functions</a>
+                    <a class="dropdown-item"
+                        href="/5.28.3/perlop.html">Operators</a>
+                    <a class="dropdown-item"
+                        href="/5.28.3/perlvar.html">Variables</a>
+                    <a class="dropdown-item"
+                        href="/5.28.3/index-pragmas.html">Pragmas</a>
+                    <a class="dropdown-item"
+                        href="/5.28.3/index-utilities.html">Utilities</a>
+                    <a class="dropdown-item"
+                        href="/5.28.3/index-internals.html">Internals</a>
+                    <a class="dropdown-item"
+                        href="/5.28.3/index-platforms.html">Platforms</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown3" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Modules</a>
+                <div aria-labelledby="navbarDropdown3"
+                    class="dropdown-menu letters-wrap">
+                    <!--<a class="dropdown-item"
+                        href="/5.28.3/index-modules.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.28.3/index-modules-by-cat.html">By
+                        Category</a>-->
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-A.html">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-B.html">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-C.html">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-D.html">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-E.html">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-F.html">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-G.html">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-H.html">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-I.html">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-J.html">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-K.html">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-L.html">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-M.html">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-N.html">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-O.html">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-P.html">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-Q.html">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-R.html">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-S.html">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-T.html">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-U.html">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-V.html">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-W.html">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-X.html">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-Y.html">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-Z.html">Z</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown4" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Functions</a>
+                <div aria-labelledby="navbarDropdown4"
+                    class="dropdown-menu letters-wrap">
+                    <a class="dropdown-item"
+                        href="/5.28.3/index-functions.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.28.3/index-functions-by-cat.html">By
+                        Category</a>
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#A">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#B">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#C">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#D">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#E">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#F">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#G">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#H">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#I">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#J">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#K">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#L">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#M">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#N">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#O">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#P">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#Q">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#R">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#S">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#T">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#U">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#V">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#W">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#X">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#Y">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#Z">Z</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!--/.nav-collapse -->
+</nav>
+
+
+          <main class="row main-content pb-5 pt-5" id='content'>
+            <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+              <div class="row">
+                <div class="col-sm-12">
+                  <div id="breadcrumbs">
+                      
+    <a href="index.html">Home</a>&nbsp; &gt;
+    
+      
+        <a href="index-modules-S.html">Core modules (S)</a> &gt;
+      
+    
+    SelfLoader
+  
+
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <article class="col-sm-12 content">
+                  <div class="documentation-wrapper">
+                    <div id="perl_version">
+                      <h7 class='page-title'> Perl 5 version 28.3
+                        documentation</h7>
+                    </div>
+                    <h1>SelfLoader</h1>
+
+
+  <!--    -->
+<ul><li><a href="#NAME">NAME</a></li><li><a href="#SYNOPSIS">SYNOPSIS</a></li><li><a href="#DESCRIPTION">DESCRIPTION</a></li><ul><li><a href="#The-__DATA__-token">The __DATA__ token</a></li><li><a href="#SelfLoader-autoloading">SelfLoader autoloading</a></li><li><a href="#Autoloading-and-package-lexicals">Autoloading and package lexicals</a></li><li><a href="#SelfLoader-and-AutoLoader">SelfLoader and AutoLoader</a></li><li><a href="#__DATA__%2c-__END__%2c-and-the-FOOBAR%3a%3aDATA-filehandle.">__DATA__, __END__, and the FOOBAR::DATA filehandle.</a></li><li><a href="#Classes-and-inherited-methods.">Classes and inherited methods.</a></li></ul><li><a href="#Multiple-packages-and-fully-qualified-subroutine-names">Multiple packages and fully qualified subroutine names</a></li><li><a href="#AUTHOR">AUTHOR</a></li><li><a href="#COPYRIGHT-AND-LICENSE">COPYRIGHT AND LICENSE</a></li></ul><a class='view-head1' id="NAME"></a><h2 class='h2' >NAME</h2>
+<p>SelfLoader - load functions only on demand</p>
+<a class='view-head1' id="SYNOPSIS"></a><h2 class='h2' >SYNOPSIS</h2>
+<pre class="verbatim"><ol><li><a name="package-FOOBAR"></a>    package <span class="i">FOOBAR</span><span class="sc">;</span></li><li>    <a class="l_k" href="functions/use.html">use</a> <span class="w">SelfLoader</span><span class="sc">;</span></li><li></li><li>    ... <span class="s">(</span><span class="w">initializing</span> <span class="w">code</span><span class="s">)</span></li><li></li><li><a name="__DATA__"></a>    __DATA__</li><li>    <a class="l_k" href="functions/sub.html">sub</a> <span class="s">{</span>....</li></ol></pre><a class='view-head1' id="DESCRIPTION"></a><h2 class='h2' >DESCRIPTION</h2>
+<p>This module tells its users that functions in the FOOBAR package are to be
+autoloaded from after the <code class="inline"><a class="l_k" href="functions/__DATA__.html">__DATA__</a></code> token.  See also
+<a href="perlsub.html#Autoloading">Autoloading in perlsub</a>.</p>
+<a class='view-head2' id="The-__DATA__-token"></a><h3 class='h3' >The __DATA__ token</h3>
+<p>The <code class="inline"><a class="l_k" href="functions/__DATA__.html">__DATA__</a></code> token tells the perl compiler that the perl code
+for compilation is finished. Everything after the <code class="inline"><a class="l_k" href="functions/__DATA__.html">__DATA__</a></code> token
+is available for reading via the filehandle FOOBAR::DATA,
+where FOOBAR is the name of the current package when the <code class="inline"><a class="l_k" href="functions/__DATA__.html">__DATA__</a></code>
+token is reached. This works just the same as <code class="inline"><a class="l_k" href="functions/__END__.html">__END__</a></code> does in
+package 'main', but for other modules data after <code class="inline"><a class="l_k" href="functions/__END__.html">__END__</a></code> is not
+automatically retrievable, whereas data after <code class="inline"><a class="l_k" href="functions/__DATA__.html">__DATA__</a></code> is.
+The <code class="inline"><a class="l_k" href="functions/__DATA__.html">__DATA__</a></code> token is not recognized in versions of perl prior to
+5.001m.</p>
+<p>Note that it is possible to have <code class="inline"><a class="l_k" href="functions/__DATA__.html">__DATA__</a></code> tokens in the same package
+in multiple files, and that the last <code class="inline"><a class="l_k" href="functions/__DATA__.html">__DATA__</a></code> token in a given
+package that is encountered by the compiler is the one accessible
+by the filehandle. This also applies to <code class="inline"><a class="l_k" href="functions/__END__.html">__END__</a></code> and main, i.e. if
+the 'main' program has an <code class="inline"><a class="l_k" href="functions/__END__.html">__END__</a></code>, but a module 'require'd (_not_ 'use'd)
+by that program has a 'package main;' declaration followed by an '<code class="inline"><a class="l_k" href="functions/__DATA__.html">__DATA__</a></code>',
+then the <code class="inline"><span class="w">DATA</span></code>
+ filehandle is set to access the data after the <code class="inline"><a class="l_k" href="functions/__DATA__.html">__DATA__</a></code>
+in the module, _not_ the data after the <code class="inline"><a class="l_k" href="functions/__END__.html">__END__</a></code> token in the 'main'
+program, since the compiler encounters the 'require'd file later.</p>
+<a class='view-head2' id="SelfLoader-autoloading"></a><h3 class='h3' >SelfLoader autoloading</h3>
+<p>The <strong>SelfLoader</strong> works by the user placing the <code class="inline"><a class="l_k" href="functions/__DATA__.html">__DATA__</a></code>
+token <i>after</i> perl code which needs to be compiled and
+run at 'require' time, but <i>before</i> subroutine declarations
+that can be loaded in later - usually because they may never
+be called.</p>
+<p>The <strong>SelfLoader</strong> will read from the FOOBAR::DATA filehandle to
+load in the data after <code class="inline"><a class="l_k" href="functions/__DATA__.html">__DATA__</a></code>, and load in any subroutine
+when it is called. The costs are the one-time parsing of the
+data after <code class="inline"><a class="l_k" href="functions/__DATA__.html">__DATA__</a></code>, and a load delay for the _first_
+call of any autoloaded function. The benefits (hopefully)
+are a speeded up compilation phase, with no need to load
+functions which are never used.</p>
+<p>The <strong>SelfLoader</strong> will stop reading from <code class="inline"><a class="l_k" href="functions/__DATA__.html">__DATA__</a></code> if
+it encounters the <code class="inline"><a class="l_k" href="functions/__END__.html">__END__</a></code> token - just as you would expect.
+If the <code class="inline"><a class="l_k" href="functions/__END__.html">__END__</a></code> token is present, and is followed by the
+token DATA, then the <strong>SelfLoader</strong> leaves the FOOBAR::DATA
+filehandle open on the line after that token.</p>
+<p>The <strong>SelfLoader</strong> exports the <code class="inline"><a class="l_k" href="functions/AUTOLOAD.html">AUTOLOAD</a></code> subroutine to the
+package using the <strong>SelfLoader</strong>, and this loads the called
+subroutine when it is first called.</p>
+<p>There is no advantage to putting subroutines which will _always_
+be called after the <code class="inline"><a class="l_k" href="functions/__DATA__.html">__DATA__</a></code> token.</p>
+<a class='view-head2' id="Autoloading-and-package-lexicals"></a><h3 class='h3' >Autoloading and package lexicals</h3>
+<p>A 'my $pack_lexical' statement makes the variable $pack_lexical
+local _only_ to the file up to the <code class="inline"><a class="l_k" href="functions/__DATA__.html">__DATA__</a></code> token. Subroutines
+declared elsewhere _cannot_ see these types of variables,
+just as if you declared subroutines in the package but in another
+file, they cannot see these variables.</p>
+<p>So specifically, autoloaded functions cannot see package
+lexicals (this applies to both the <strong>SelfLoader</strong> and the Autoloader).
+The <code class="inline"><span class="w">vars</span></code>
+ pragma provides an alternative to defining package-level
+globals that will be visible to autoloaded routines. See the documentation
+on <strong>vars</strong> in the pragma section of <a href="perlmod.html">perlmod</a>.</p>
+<a class='view-head2' id="SelfLoader-and-AutoLoader"></a><h3 class='h3' >SelfLoader and AutoLoader</h3>
+<p>The <strong>SelfLoader</strong> can replace the AutoLoader - just change 'use AutoLoader'
+to 'use SelfLoader' (though note that the <strong>SelfLoader</strong> exports
+the AUTOLOAD function - but if you have your own AUTOLOAD and
+are using the AutoLoader too, you probably know what you're doing),
+and the <code class="inline"><a class="l_k" href="functions/__END__.html">__END__</a></code> token to <code class="inline"><a class="l_k" href="functions/__DATA__.html">__DATA__</a></code>. You will need perl version 5.001m
+or later to use this (version 5.001 with all patches up to patch m).</p>
+<p>There is no need to inherit from the <strong>SelfLoader</strong>.</p>
+<p>The <strong>SelfLoader</strong> works similarly to the AutoLoader, but picks up the
+subs from after the <code class="inline"><a class="l_k" href="functions/__DATA__.html">__DATA__</a></code> instead of in the 'lib/auto' directory.
+There is a maintenance gain in not needing to run AutoSplit on the module
+at installation, and a runtime gain in not needing to keep opening and
+closing files to load subs. There is a runtime loss in needing
+to parse the code after the <code class="inline"><a class="l_k" href="functions/__DATA__.html">__DATA__</a></code>. Details of the <strong>AutoLoader</strong> and
+another view of these distinctions can be found in that module's
+documentation.</p>
+<a class='view-head2' id="__DATA__%2c-__END__%2c-and-the-FOOBAR%3a%3aDATA-filehandle."></a><h3 class='h3' >__DATA__, __END__, and the FOOBAR::DATA filehandle.</h3>
+<p>This section is only relevant if you want to use
+the <code class="inline"><span class="w">FOOBAR::DATA</span></code>
+ together with the <strong>SelfLoader</strong>.</p>
+<p>Data after the <code class="inline"><a class="l_k" href="functions/__DATA__.html">__DATA__</a></code> token in a module is read using the
+FOOBAR::DATA filehandle. <code class="inline"><a class="l_k" href="functions/__END__.html">__END__</a></code> can still be used to denote the end
+of the <code class="inline"><a class="l_k" href="functions/__DATA__.html">__DATA__</a></code> section if followed by the token DATA - this is supported
+by the <strong>SelfLoader</strong>. The <code class="inline"><span class="w">FOOBAR::DATA</span></code>
+ filehandle is left open if an
+<code class="inline"><a class="l_k" href="functions/__END__.html">__END__</a></code> followed by a DATA is found, with the filehandle positioned at
+the start of the line after the <code class="inline"><a class="l_k" href="functions/__END__.html">__END__</a></code> token. If no <code class="inline"><a class="l_k" href="functions/__END__.html">__END__</a></code> token is
+present, or an <code class="inline"><a class="l_k" href="functions/__END__.html">__END__</a></code> token with no DATA token on the same line, then
+the filehandle is closed.</p>
+<p>The <strong>SelfLoader</strong> reads from wherever the current
+position of the <code class="inline"><span class="w">FOOBAR::DATA</span></code>
+ filehandle is, until the
+EOF or <code class="inline"><a class="l_k" href="functions/__END__.html">__END__</a></code>. This means that if you want to use
+that filehandle (and ONLY if you want to), you should either</p>
+<p>1. Put all your subroutine declarations immediately after
+the <code class="inline"><a class="l_k" href="functions/__DATA__.html">__DATA__</a></code> token and put your own data after those
+declarations, using the <code class="inline"><a class="l_k" href="functions/__END__.html">__END__</a></code> token to mark the end
+of subroutine declarations. You must also ensure that the <strong>SelfLoader</strong>
+reads first by  calling 'SelfLoader-&gt;load_stubs();', or by using a
+function which is selfloaded;</p>
+<p>or</p>
+<p>2. You should read the <code class="inline"><span class="w">FOOBAR::DATA</span></code>
+ filehandle first, leaving
+the handle open and positioned at the first line of subroutine
+declarations.</p>
+<p>You could conceivably do both.</p>
+<a class='view-head2' id="Classes-and-inherited-methods."></a><h3 class='h3' >Classes and inherited methods.</h3>
+<p>For modules which are not classes, this section is not relevant.
+This section is only relevant if you have methods which could
+be inherited.</p>
+<p>A subroutine stub (or forward declaration) looks like</p>
+<pre class="verbatim"><ol><li>  sub <span class="m">stub</span><span class="sc">;</span></li></ol></pre><p>i.e. it is a subroutine declaration without the body of the
+subroutine. For modules which are not classes, there is no real
+need for stubs as far as autoloading is concerned.</p>
+<p>For modules which ARE classes, and need to handle inherited methods,
+stubs are needed to ensure that the method inheritance mechanism works
+properly. You can load the stubs into the module at 'require' time, by
+adding the statement 'SelfLoader-&gt;load_stubs();' to the module to do
+this.</p>
+<p>The alternative is to put the stubs in before the <code class="inline"><a class="l_k" href="functions/__DATA__.html">__DATA__</a></code> token BEFORE
+releasing the module, and for this purpose the <code class="inline"><span class="w">Devel::SelfStubber</span></code>
+
+module is available.  However this does require the extra step of ensuring
+that the stubs are in the module. If this is done I strongly recommend
+that this is done BEFORE releasing the module - it should NOT be done
+at install time in general.</p>
+<a class='view-head1' id="Multiple-packages-and-fully-qualified-subroutine-names"></a><h2 class='h2' >Multiple packages and fully qualified subroutine names</h2>
+<p>Subroutines in multiple packages within the same file are supported - but you
+should note that this requires exporting the <code class="inline"><span class="w">SelfLoader::AUTOLOAD</span></code>
+ to
+every package which requires it. This is done automatically by the
+<strong>SelfLoader</strong> when it first loads the subs into the cache, but you should
+really specify it in the initialization before the <code class="inline"><a class="l_k" href="functions/__DATA__.html">__DATA__</a></code> by putting
+a 'use SelfLoader' statement in each package.</p>
+<p>Fully qualified subroutine names are also supported. For example,</p>
+<pre class="verbatim"><ol><li><a name="__DATA__"></a>   __DATA__</li><li><span class="q">   sub foo::bar {23}</span></li><li><span class="q">   package baz;</span></li><li><span class="q">   sub dob {32}</span></li></ol></pre><p>will all be loaded correctly by the <strong>SelfLoader</strong>, and the <strong>SelfLoader</strong>
+will ensure that the packages 'foo' and 'baz' correctly have the
+<strong>SelfLoader</strong> <code class="inline"><a class="l_k" href="functions/AUTOLOAD.html">AUTOLOAD</a></code> method when the data after <code class="inline"><a class="l_k" href="functions/__DATA__.html">__DATA__</a></code> is first
+parsed.</p>
+<a class='view-head1' id="AUTHOR"></a><h2 class='h2' >AUTHOR</h2>
+<p><code class="inline"><span class="w">SelfLoader</span></code>
+ is maintained by the perl5-porters. Please direct
+any questions to the canonical mailing list. Anything that
+is applicable to the CPAN release can be sent to its maintainer,
+though.</p>
+<p>Author and Maintainer: The Perl5-Porters &lt;perl5-porters@perl.org&gt;</p>
+<p>Maintainer of the CPAN release: Steffen Mueller &lt;smueller@cpan.org&gt;</p>
+<a class='view-head1' id="COPYRIGHT-AND-LICENSE"></a><h2 class='h2' >COPYRIGHT AND LICENSE</h2>
+<p>This package has been part of the perl core since the first release
+of perl5. It has been released separately to CPAN so older installations
+can benefit from bug fixes.</p>
+<p>This package has the same copyright and license as the perl core:</p>
+<p>Copyright (C) 1993, 1994, 1995, 1996, 1997, 1998, 1999,
+2000, 2001, 2002, 2003, 2004, 2005, 2006 by Larry Wall and others</p>
+<p>All rights reserved.</p>
+<p>This program is free software; you can redistribute it and/or modify
+it under the terms of either:</p>
+<ul>
+<li><a class='view-title' id="a)"></a><strong>a)</strong>
+<p>the GNU General Public License as published by the Free Software Foundation;
+either version 1, or (at your option) any later version, or</p>
+</li>
+<li><a class='view-title' id="b)"></a><strong>b)</strong>
+<p>the "Artistic License" which comes with this Kit.</p>
+</li>
+</ul>
+<p>This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See either
+the GNU General Public License or the Artistic License for more details.</p>
+<p>You should have received a copy of the Artistic License with this
+Kit, in the file named "Artistic".  If not, I'll be glad to provide one.</p>
+<p>You should also have received a copy of the GNU General Public License
+along with this program in the file named "Copying". If not, write to the
+Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston,
+MA 02110-1301, USA or visit their web page on the internet at
+<a href="http://www.gnu.org/copyleft/gpl.html">http://www.gnu.org/copyleft/gpl.html</a>.</p>
+<p>For those of you that choose to use the GNU General Public License,
+my interpretation of the GNU General Public License is that no Perl
+script falls under the terms of the GPL unless you explicitly put
+said script under the terms of the GPL yourself.  Furthermore, any
+object code linked with perl does not automatically fall under the
+terms of the GPL, provided such object code only adds definitions
+of subroutines and variables, and does not otherwise impair the
+resulting interpreter from executing any standard Perl script.  I
+consider linking in C subroutines in this manner to be the moral
+equivalent of defining subroutines in the Perl language itself.  You
+may sell such an object file as proprietary provided that you provide
+or offer to provide the Perl source, as specified by the GNU General
+Public License.  (This is merely an alternate way of specifying input
+to the program.)  You may also sell a binary produced by the dumping of
+a running Perl script that belongs to you, provided that you provide or
+offer to provide the Perl source as specified by the GPL.  (The
+fact that a Perl interpreter and your code are in the same binary file
+is, in this case, a form of mere aggregation.)  This is my interpretation
+of the GPL.  If you still have concerns or difficulties understanding
+my intent, feel free to contact me.  Of course, the Artistic License
+spells all this out for your protection, so you may prefer to use that.</p>
+
+
+
+
+      <ul><li><a href="#NAME">NAME</a></li><li><a href="#SYNOPSIS">SYNOPSIS</a></li><li><a href="#DESCRIPTION">DESCRIPTION</a></li><ul><li><a href="#The-__DATA__-token">The __DATA__ token</a></li><li><a href="#SelfLoader-autoloading">SelfLoader autoloading</a></li><li><a href="#Autoloading-and-package-lexicals">Autoloading and package lexicals</a></li><li><a href="#SelfLoader-and-AutoLoader">SelfLoader and AutoLoader</a></li><li><a href="#__DATA__%2c-__END__%2c-and-the-FOOBAR%3a%3aDATA-filehandle.">__DATA__, __END__, and the FOOBAR::DATA filehandle.</a></li><li><a href="#Classes-and-inherited-methods.">Classes and inherited methods.</a></li></ul><li><a href="#Multiple-packages-and-fully-qualified-subroutine-names">Multiple packages and fully qualified subroutine names</a></li><li><a href="#AUTHOR">AUTHOR</a></li><li><a href="#COPYRIGHT-AND-LICENSE">COPYRIGHT AND LICENSE</a></li></ul>
+
+
+                  </div>
+                </article>
+              </div>
+            </div>
+          </main>
+        </div>
+           <footer class="footer row bg-light pt-5 pb-5">
+       <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+           <div class="row">
+               <div class="col-md-4">
+                   <ul class="list-unstyled">
+                       <li>
+                           <h4>Site info</h4>
+                       </li>
+                       <li>Docs mantained by
+                           <a href="//lists.perl.org/list/perl5-porters.html"
+                               rel="noopener">Perl 5 Porters</a>
+                       </li>
+                       <li>Perldoc site development sponsored by
+                           <a href="//opusvl.com" rel="noopener">
+                           <img style="margin: 20px 20px 5px 10px" class="opus-logo" src="/public/img/opusvl_logo.svg" alt="OpusVL Logo">
+                        </a>
+                    <li><span class="about_perldoc"><a href="//about.html">About PerlDOC</a></span>
+                    </li>
+                       </li>
+                   </ul>
+               </div>
+               <div class="col-md-8">
+                   <div class="row">
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Manuals</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.28.3/index-overview.html">Overview</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.28.3/index-tutorials.html">Tutorials</a>
+                               </li>
+                               <li>
+                                   <a href="/5.28.3/index-faq.html">FAQs</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.28.3/index-history.html">Changes</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Reference</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.28.3/index-language.html">Language</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.28.3/index-functions.html">Functions</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.28.3/perlop.html">Operators</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.28.3/perlvar.html">Variables</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Modules</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.28.3/index-modules-A.html">Modules</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.28.3/index-pragmas.html">Pragmas</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.28.3/index-utilities.html">Utilities</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Misc</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.28.3/index-licence.html">License</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.28.3/index-internals.html">Internals</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.28.3/index-platforms.html">Platforms</a>
+                               </li>
+                            <li>
+                                <a
+                                    href="/5.28.3/index-about.html">About</a>
+                            </li>
+                           </ul>
+                       </div>
+                   </div>
+               </div>
+               <div class=" col-12 footer-inf text-center">
+                   <small>perldoc.perl.org - Official documentation for the Perl
+                       programming language</small>
+               </div>
+           </div>
+       </div>
+   </footer>
+
+        	<div class="beta-wrapper beta-bottom-right ">
+		<div class="beta beta-blue  ">
+			<a class="beta-link "
+				href="//github.com/OpusVL/perldoc.perl.org/issues/new" rel="noopener">
+				<span class="beta-text">
+					This website is a Beta release.
+				</span>
+				<span class="beta-text">
+					For any issues please raise a ticket on GitHub
+				</span>
+			</a>
+		</div>
+	</div>
+
+        <script src="/public/js/main.min.js"></script>
+      </body>
+
+      </html>

@@ -1,0 +1,875 @@
+      
+      
+      
+      
+
+      <!DOCTYPE html>
+      <html lang="en">
+
+      <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="IO::Handle - perldoc.perl.org">
+        <link rel="icon" href="/public/img/favicon.ico">
+        <title>IO::Handle - perldoc.perl.org</title>
+        <link href="/public/css/main.min.css" rel="stylesheet">
+        <link rel="canonical" href="/IO/Handle.html">
+        <link
+          href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900'
+          rel='stylesheet' type='text/css'>
+        <script>
+          window.ga = window.ga || function () {
+            (ga.q = ga.q || []).push(arguments)
+          };
+          ga.l = +new Date;
+          ga('create', 'UA-1892152-2', 'auto'); // JJ's account
+          ga('create', 'UA-50555-3', 'auto', 'perlOrg'); // perl.org account
+          ga('require', 'outboundLinkTracker', {
+            events: ['click', 'auxclick', 'contextmenu'],
+          });
+          ga('require', 'maxScrollTracker');
+          ga('send', 'pageview');
+          ga('perlOrg.send', 'pageview');
+        </script>
+        <script async src="https://www.google-analytics.com/analytics.js">
+        </script>
+        <script async src="/public/js/tracking.min.js"></script>
+      </head>
+
+      <body class="body container-fluid ">
+        <div class="wrapper">
+
+          <nav
+    class="navbar navbar-dark bg-primary bg-perl fixed-top justify-content-between navbar-expand-lg">
+    <a href="#content" class="skippy sr-only sr-only-focusable">
+        <span class=' skippy-text'>Skip to main content</span>
+    </a>
+    <a class="navbar-brand" href="/">
+        <img class="logo" src="/public/img/logo_perl_doc.svg"
+            alt="Perl Documentation Logo" />
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse"
+        data-target="#navbar" aria-controls="navbar" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="navbar" class="collapse navbar-collapse ">
+        <ul class="navbar-nav ml-auto navbar-right">
+            <form class="nav-item dropdown search-wrapper">
+                <input type="text" id='searchinput' aria-describedby='navbarDropdown5'
+                    placeholder="Type query" class='search-input-field' value=''>
+
+                <button href="#" data-toggle='dropdown' type="button"
+                    aria-haspopup="true" aria-expanded='false' id="navbarDropdown5"
+                    class="nav-link dropdown-toggle search-link">
+                    <object tabindex='-1' focusable="false" class='search-icon'
+                        data="/public/img/search.svg" type="image/svg+xml"
+                        name='search icon'>search
+                        icon</object>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown5"
+                    id='search-results'>
+                    <p class='dropdown-item major-version'>
+                        No results
+                    </p>
+                </div>
+            </form>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown" href="#" class="nav-link dropdown-toggle"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Perl versions</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    
+                        <p class='dropdown-item major-version'>
+                            5.32
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.32.0/">5.32.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.30
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.3/">5.30.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.2/">5.30.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.1/">5.30.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.0/">5.30.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.28
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.3/">5.28.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.2/">5.28.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.1/">5.28.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.0/">5.28.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.26
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.3/">5.26.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.2/">5.26.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.1/">5.26.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.0/">5.26.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.24
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.4/">5.24.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.3/">5.24.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.2/">5.24.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.1/">5.24.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.0/">5.24.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.22
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.4/">5.22.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.3/">5.22.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.2/">5.22.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.1/">5.22.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.0/">5.22.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.20
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.3/">5.20.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.2/">5.20.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.1/">5.20.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.0/">5.20.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.18
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.4/">5.18.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.3/">5.18.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.2/">5.18.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.1/">5.18.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.0/">5.18.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.16
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.3/">5.16.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.2/">5.16.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.1/">5.16.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.0/">5.16.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.14
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.4/">5.14.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.3/">5.14.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.2/">5.14.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.1/">5.14.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.0/">5.14.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.12
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.5/">5.12.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.4/">5.12.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.3/">5.12.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.2/">5.12.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.1/">5.12.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.0/">5.12.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.10
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.1/">5.10.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.0/">5.10.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.8
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.9/">5.8.9</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.8/">5.8.8</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.7/">5.8.7</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.6/">5.8.6</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.5/">5.8.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.4/">5.8.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.3/">5.8.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.2/">5.8.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.1/">5.8.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.0/">5.8.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.6
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.2/">5.6.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.1/">5.6.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.0/">5.6.0</a>
+                        
+                        
+                    
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown1" href="#" class="dropdown-toggle nav-link"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Manuals</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                    <a class="dropdown-item"
+                        href="/5.12.0/index-overview.html">Overview</a>
+                    <a class="dropdown-item"
+                        href="/5.12.0/index-tutorials.html">Tutorials</a>
+                    <a class="dropdown-item"
+                        href="/5.12.0/index-faq.html">FAQs</a>
+                    <a class="dropdown-item"
+                        href="/5.12.0/index-history.html">Changes</a>
+                    <a class="dropdown-item"
+                        href="/5.12.0/index-licence.html">License</a>
+                    <a class="dropdown-item"
+                        href="/5.12.0/index-language.html">Language</a>
+                    <a class="dropdown-item"
+                        href="/5.12.0/index-functions.html">Functions</a>
+                    <a class="dropdown-item"
+                        href="/5.12.0/perlop.html">Operators</a>
+                    <a class="dropdown-item"
+                        href="/5.12.0/perlvar.html">Variables</a>
+                    <a class="dropdown-item"
+                        href="/5.12.0/index-pragmas.html">Pragmas</a>
+                    <a class="dropdown-item"
+                        href="/5.12.0/index-utilities.html">Utilities</a>
+                    <a class="dropdown-item"
+                        href="/5.12.0/index-internals.html">Internals</a>
+                    <a class="dropdown-item"
+                        href="/5.12.0/index-platforms.html">Platforms</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown3" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Modules</a>
+                <div aria-labelledby="navbarDropdown3"
+                    class="dropdown-menu letters-wrap">
+                    <!--<a class="dropdown-item"
+                        href="/5.12.0/index-modules.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.12.0/index-modules-by-cat.html">By
+                        Category</a>-->
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.12.0/index-modules-A.html">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.0/index-modules-B.html">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.0/index-modules-C.html">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.0/index-modules-D.html">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.0/index-modules-E.html">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.0/index-modules-F.html">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.0/index-modules-G.html">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.0/index-modules-H.html">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.0/index-modules-I.html">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.0/index-modules-J.html">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.0/index-modules-K.html">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.0/index-modules-L.html">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.0/index-modules-M.html">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.0/index-modules-N.html">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.0/index-modules-O.html">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.0/index-modules-P.html">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.0/index-modules-Q.html">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.0/index-modules-R.html">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.0/index-modules-S.html">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.0/index-modules-T.html">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.0/index-modules-U.html">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.0/index-modules-V.html">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.0/index-modules-W.html">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.0/index-modules-X.html">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.0/index-modules-Y.html">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.0/index-modules-Z.html">Z</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown4" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Functions</a>
+                <div aria-labelledby="navbarDropdown4"
+                    class="dropdown-menu letters-wrap">
+                    <a class="dropdown-item"
+                        href="/5.12.0/index-functions.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.12.0/index-functions-by-cat.html">By
+                        Category</a>
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.12.0/index-functions.html#A">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.0/index-functions.html#B">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.0/index-functions.html#C">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.0/index-functions.html#D">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.0/index-functions.html#E">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.0/index-functions.html#F">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.0/index-functions.html#G">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.0/index-functions.html#H">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.0/index-functions.html#I">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.0/index-functions.html#J">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.0/index-functions.html#K">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.0/index-functions.html#L">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.0/index-functions.html#M">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.0/index-functions.html#N">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.0/index-functions.html#O">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.0/index-functions.html#P">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.0/index-functions.html#Q">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.0/index-functions.html#R">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.0/index-functions.html#S">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.0/index-functions.html#T">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.0/index-functions.html#U">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.0/index-functions.html#V">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.0/index-functions.html#W">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.0/index-functions.html#X">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.0/index-functions.html#Y">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.0/index-functions.html#Z">Z</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!--/.nav-collapse -->
+</nav>
+
+
+          <main class="row main-content pb-5 pt-5" id='content'>
+            <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+              <div class="row">
+                <div class="col-sm-12">
+                  <div id="breadcrumbs">
+                      
+    <a href="../index.html">Home</a>&nbsp; &gt;
+    
+      
+        <a href="../index-modules-I.html">Core modules (I)</a> &gt;
+      
+    
+    IO::Handle
+  
+
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <article class="col-sm-12 content">
+                  <div class="documentation-wrapper">
+                    <div id="perl_version">
+                      <h7 class='page-title'> Perl 5 version 12.0
+                        documentation</h7>
+                    </div>
+                    <h1>IO::Handle</h1>
+
+
+  <!--    -->
+<ul><li><a href="#NAME">NAME</a></li><li><a href="#SYNOPSIS">SYNOPSIS</a></li><li><a href="#DESCRIPTION">DESCRIPTION</a></li><li><a href="#CONSTRUCTOR">CONSTRUCTOR</a></li><li><a href="#METHODS">METHODS</a></li><li><a href="#NOTE">NOTE</a></li><li><a href="#SEE-ALSO">SEE ALSO</a></li><li><a href="#BUGS">BUGS</a></li><li><a href="#HISTORY">HISTORY</a></li></ul><a class='view-head1' id="NAME"></a><h2 class='h2' >NAME</h2>
+<p>IO::Handle - supply object methods for I/O handles</p>
+<a class='view-head1' id="SYNOPSIS"></a><h2 class='h2' >SYNOPSIS</h2>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">IO::Handle</span><span class="sc">;</span></li><li></li><li>    <span class="i">$io</span> = <span class="w">new</span> <span class="w">IO::Handle</span><span class="sc">;</span></li><li>    if <span class="s">(</span><span class="i">$io</span><span class="i">-&gt;fdopen</span><span class="s">(</span><a class="l_k" href="../functions/fileno.html">fileno</a><span class="s">(</span><span class="w">STDIN</span><span class="s">)</span><span class="cm">,</span><span class="q">&quot;r&quot;</span><span class="s">)</span><span class="s">)</span> <span class="s">{</span></li><li>        <a class="l_k" href="../functions/print.html">print</a> <span class="i">$io</span><span class="i">-&gt;getline</span><span class="sc">;</span></li><li>        <span class="i">$io</span><span class="i">-&gt;close</span><span class="sc">;</span></li><li>    <span class="s">}</span></li><li></li><li>    <span class="i">$io</span> = <span class="w">new</span> <span class="w">IO::Handle</span><span class="sc">;</span></li><li>    if <span class="s">(</span><span class="i">$io</span><span class="i">-&gt;fdopen</span><span class="s">(</span><a class="l_k" href="../functions/fileno.html">fileno</a><span class="s">(</span><span class="w">STDOUT</span><span class="s">)</span><span class="cm">,</span><span class="q">&quot;w&quot;</span><span class="s">)</span><span class="s">)</span> <span class="s">{</span></li><li>        <span class="i">$io</span><span class="i">-&gt;print</span><span class="s">(</span><span class="q">&quot;Some text\n&quot;</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="s">}</span></li><li></li><li>    <span class="c"># setvbuf is not available by default on Perls 5.8.0 and later.</span></li><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">IO::Handle</span> <span class="q">&#39;_IOLBF&#39;</span><span class="sc">;</span></li><li>    <span class="i">$io</span><span class="i">-&gt;setvbuf</span><span class="s">(</span><span class="i">$buffer_var</span><span class="cm">,</span> <span class="w">_IOLBF</span><span class="cm">,</span> <span class="n">1024</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>    <a class="l_k" href="../functions/undef.html">undef</a> <span class="i">$io</span><span class="sc">;</span>       <span class="c"># automatically closes the file if it&#39;s open</span></li><li></li><li>    <span class="w">autoflush</span> <span class="w">STDOUT</span> <span class="n">1</span><span class="sc">;</span></li></ol></pre><a class='view-head1' id="DESCRIPTION"></a><h2 class='h2' >DESCRIPTION</h2>
+<p><code class="inline"><span class="w">IO::Handle</span></code>
+ is the base class for all other IO handle classes. It is
+not intended that objects of <code class="inline"><span class="w">IO::Handle</span></code>
+ would be created directly,
+but instead <code class="inline"><span class="w">IO::Handle</span></code>
+ is inherited from by several other classes
+in the IO hierarchy.</p>
+<p>If you are reading this documentation, looking for a replacement for
+the <code class="inline"><span class="w">FileHandle</span></code>
+ package, then I suggest you read the documentation
+for <code class="inline"><span class="w">IO::File</span></code>
+ too.</p>
+<a class='view-head1' id="CONSTRUCTOR"></a><h2 class='h2' >CONSTRUCTOR</h2>
+<ul>
+<li><a class='view-title' id="new-()"></a><strong>new ()</strong>
+<p>Creates a new <code class="inline"><span class="w">IO::Handle</span></code>
+ object.</p>
+</li>
+<li><a class='view-title' id="new_from_fd-(-FD%2c-MODE-)"></a><strong>new_from_fd ( FD, MODE )</strong>
+<p>Creates an <code class="inline"><span class="w">IO::Handle</span></code>
+ like <code class="inline"><span class="w">new</span></code>
+ does.
+It requires two parameters, which are passed to the method <code class="inline"><span class="w">fdopen</span></code>
+;
+if the fdopen fails, the object is destroyed. Otherwise, it is returned
+to the caller.</p>
+</li>
+</ul>
+<a class='view-head1' id="METHODS"></a><h2 class='h2' >METHODS</h2>
+<p>See <a href="../perlfunc.html">perlfunc</a> for complete descriptions of each of the following
+supported <code class="inline"><span class="w">IO::Handle</span></code>
+ methods, which are just front ends for the
+corresponding built-in functions:</p>
+<pre class="verbatim"><ol><li>    <span class="i">$io</span><span class="i">-&gt;close</span></li><li>    <span class="i">$io</span><span class="i">-&gt;eof</span></li><li>    <span class="i">$io</span><span class="i">-&gt;fcntl</span><span class="s">(</span> <span class="w">FUNCTION</span><span class="cm">,</span> <span class="w">SCALAR</span> <span class="s">)</span></li><li>    <span class="i">$io</span><span class="i">-&gt;fileno</span></li><li>    <span class="i">$io</span><span class="i">-&gt;format_write</span><span class="s">(</span> <span class="s">[</span><span class="w">FORMAT_NAME</span><span class="s">]</span> <span class="s">)</span></li><li>    <span class="i">$io</span><span class="i">-&gt;getc</span></li><li>    <span class="i">$io</span><span class="i">-&gt;ioctl</span><span class="s">(</span> <span class="w">FUNCTION</span><span class="cm">,</span> <span class="w">SCALAR</span> <span class="s">)</span></li><li>    <span class="i">$io</span><span class="i">-&gt;read</span> <span class="s">(</span> <span class="w">BUF</span><span class="cm">,</span> <span class="w">LEN</span><span class="cm">,</span> <span class="s">[</span><span class="w">OFFSET</span><span class="s">]</span> <span class="s">)</span></li><li>    <span class="i">$io</span><span class="i">-&gt;print</span> <span class="s">(</span> <span class="w">ARGS</span> <span class="s">)</span></li><li>    <span class="i">$io</span><span class="i">-&gt;printf</span> <span class="s">(</span> <span class="w">FMT</span><span class="cm">,</span> <span class="s">[</span><span class="w">ARGS</span><span class="s">]</span> <span class="s">)</span></li><li>    <span class="i">$io</span><span class="i">-&gt;say</span> <span class="s">(</span> <span class="w">ARGS</span> <span class="s">)</span></li><li>    <span class="i">$io</span><span class="i">-&gt;stat</span></li><li>    <span class="i">$io</span><span class="i">-&gt;sysread</span> <span class="s">(</span> <span class="w">BUF</span><span class="cm">,</span> <span class="w">LEN</span><span class="cm">,</span> <span class="s">[</span><span class="w">OFFSET</span><span class="s">]</span> <span class="s">)</span></li><li>    <span class="i">$io</span><span class="i">-&gt;syswrite</span> <span class="s">(</span> <span class="w">BUF</span><span class="cm">,</span> <span class="s">[</span><span class="w">LEN</span><span class="cm">,</span> <span class="s">[</span><span class="w">OFFSET</span><span class="s">]</span><span class="s">]</span> <span class="s">)</span></li><li>    <span class="i">$io</span><span class="i">-&gt;truncate</span> <span class="s">(</span> <span class="w">LEN</span> <span class="s">)</span></li></ol></pre><p>See <a href="../perlvar.html">perlvar</a> for complete descriptions of each of the following
+supported <code class="inline"><span class="w">IO::Handle</span></code>
+ methods.  All of them return the previous
+value of the attribute and takes an optional single argument that when
+given will set the value.  If no argument is given the previous value
+is unchanged (except for $io-&gt;autoflush will actually turn ON
+autoflush by default).</p>
+<pre class="verbatim"><ol><li>    <span class="i">$io</span><span class="i">-&gt;autoflush</span> <span class="s">(</span> <span class="s">[</span><span class="w">BOOL</span><span class="s">]</span> <span class="s">)</span>                         <span class="i">$|</span></li><li>    <span class="i">$io</span><span class="i">-&gt;format_page_number</span><span class="s">(</span> <span class="s">[</span><span class="w">NUM</span><span class="s">]</span> <span class="s">)</span>                  <span class="i">$%</span></li><li>    <span class="i">$io</span><span class="i">-&gt;format_lines_per_page</span><span class="s">(</span> <span class="s">[</span><span class="w">NUM</span><span class="s">]</span> <span class="s">)</span>               <span class="i">$=</span></li><li>    <span class="i">$io</span><span class="i">-&gt;format_lines_left</span><span class="s">(</span> <span class="s">[</span><span class="w">NUM</span><span class="s">]</span> <span class="s">)</span>                   <span class="i">$-</span></li><li>    <span class="i">$io</span><span class="i">-&gt;format_name</span><span class="s">(</span> <span class="s">[</span><span class="w">STR</span><span class="s">]</span> <span class="s">)</span>                         <span class="i">$~</span></li><li>    <span class="i">$io</span><span class="i">-&gt;format_top_name</span><span class="s">(</span> <span class="s">[</span><span class="w">STR</span><span class="s">]</span> <span class="s">)</span>                     <span class="i">$^</span></li><li>    <span class="i">$io</span><span class="i">-&gt;input_line_number</span><span class="s">(</span> <span class="s">[</span><span class="w">NUM</span><span class="s">]</span><span class="s">)</span>                    <span class="i">$.</span></li></ol></pre><p>The following methods are not supported on a per-filehandle basis.</p>
+<pre class="verbatim"><ol><li>    <span class="w">IO::Handle</span><span class="w">-&gt;format_line_break_characters</span><span class="s">(</span> <span class="s">[</span><span class="w">STR</span><span class="s">]</span> <span class="s">)</span> <span class="i">$:</span></li><li>    <span class="w">IO::Handle</span><span class="w">-&gt;format_formfeed</span><span class="s">(</span> <span class="s">[</span><span class="w">STR</span><span class="s">]</span><span class="s">)</span>               <span class="i">$^L</span></li><li>    <span class="w">IO::Handle</span><span class="w">-&gt;output_field_separator</span><span class="s">(</span> <span class="s">[</span><span class="w">STR</span><span class="s">]</span> <span class="s">)</span>       <span class="i">$,</span></li><li>    <span class="w">IO::Handle</span><span class="w">-&gt;output_record_separator</span><span class="s">(</span> <span class="s">[</span><span class="w">STR</span><span class="s">]</span> <span class="s">)</span>      <span class="i">$\</span></li><li></li><li>    <span class="w">IO::Handle</span><span class="w">-&gt;input_record_separator</span><span class="s">(</span> <span class="s">[</span><span class="w">STR</span><span class="s">]</span> <span class="s">)</span>       <span class="i">$/</span></li></ol></pre><p>Furthermore, for doing normal I/O you might need these:</p>
+<ul>
+<li><a class='view-title' id="%24io-%3efdopen-(-FD%2c-MODE-)"></a><strong>$io-&gt;fdopen ( FD, MODE )</strong>
+<p><code class="inline"><span class="w">fdopen</span></code>
+ is like an ordinary <code class="inline"><a class="l_k" href="../functions/open.html">open</a></code> except that its first parameter
+is not a filename but rather a file handle name, an IO::Handle object,
+or a file descriptor number.  (For the documentation of the <code class="inline"><a class="l_k" href="../functions/open.html">open</a></code>
+method, see <a href="../IO/File.html">IO::File</a>.)</p>
+</li>
+<li><a class='view-title' id="%24io-%3eopened"></a><strong>$io-&gt;opened</strong>
+<p>Returns true if the object is currently a valid file descriptor, false
+otherwise.</p>
+</li>
+<li><a class='view-title' id="%24io-%3egetline"></a><strong>$io-&gt;getline</strong>
+<p>This works like &lt;$io&gt; described in <a href="../perlop.html#I%2fO-Operators">I/O Operators in perlop</a>
+except that it's more readable and can be safely called in a
+list context but still returns just one line.  If used as the conditional
++within a <code class="inline">while</code>
+ or C-style <code class="inline">for</code>
+ loop, however, you will need to
++emulate the functionality of &lt;$io&gt; with <code class="inline"><a class="l_k" href="../functions/defined.html">defined</a><span class="s">(</span><span class="i">$_</span> = <span class="i">$io</span><span class="i">-&gt;getline</span><span class="s">)</span></code>
+.</p>
+</li>
+<li><a class='view-title' id="%24io-%3egetlines"></a><strong>$io-&gt;getlines</strong>
+<p>This works like &lt;$io&gt; when called in a list context to read all
+the remaining lines in a file, except that it's more readable.
+It will also croak() if accidentally called in a scalar context.</p>
+</li>
+<li><a class='view-title' id="%24io-%3eungetc-(-ORD-)"></a><strong>$io-&gt;ungetc ( ORD )</strong>
+<p>Pushes a character with the given ordinal value back onto the given
+handle's input stream.  Only one character of pushback per handle is
+guaranteed.</p>
+</li>
+<li><a class='view-title' id="%24io-%3ewrite-(-BUF%2c-LEN-%5b%2c-OFFSET-%5d-)"></a><strong>$io-&gt;write ( BUF, LEN [, OFFSET ] )</strong>
+<p>This <code class="inline"><a class="l_k" href="../functions/write.html">write</a></code> is like <code class="inline"><a class="l_k" href="../functions/write.html">write</a></code> found in C, that is it is the
+opposite of read. The wrapper for the perl <code class="inline"><a class="l_k" href="../functions/write.html">write</a></code> function is
+called <code class="inline"><span class="w">format_write</span></code>
+.</p>
+</li>
+<li><a class='view-title' id="%24io-%3eerror"></a><strong>$io-&gt;error</strong>
+<p>Returns a true value if the given handle has experienced any errors
+since it was opened or since the last call to <code class="inline"><span class="w">clearerr</span></code>
+, or if the
+handle is invalid. It only returns false for a valid handle with no
+outstanding errors.</p>
+</li>
+<li><a class='view-title' id="%24io-%3eclearerr"></a><strong>$io-&gt;clearerr</strong>
+<p>Clear the given handle's error indicator. Returns -1 if the handle is
+invalid, 0 otherwise.</p>
+</li>
+<li><a class='view-title' id="%24io-%3esync"></a><strong>$io-&gt;sync</strong>
+<p><code class="inline"><span class="w">sync</span></code>
+ synchronizes a file's in-memory state  with  that  on the
+physical medium. <code class="inline"><span class="w">sync</span></code>
+ does not operate at the perlio api level, but
+operates on the file descriptor (similar to sysread, sysseek and
+systell). This means that any data held at the perlio api level will not
+be synchronized. To synchronize data that is buffered at the perlio api
+level you must use the flush method. <code class="inline"><span class="w">sync</span></code>
+ is not implemented on all
+platforms. Returns "0 but true" on success, <code class="inline"><a class="l_k" href="../functions/undef.html">undef</a></code> on error, <code class="inline"><a class="l_k" href="../functions/undef.html">undef</a></code>
+for an invalid handle. See <i>fsync(3c)</i>.</p>
+</li>
+<li><a class='view-title' id="%24io-%3eflush"></a><strong>$io-&gt;flush</strong>
+<p><code class="inline"><span class="w">flush</span></code>
+ causes perl to flush any buffered data at the perlio api level.
+Any unread data in the buffer will be discarded, and any unwritten data
+will be written to the underlying file descriptor. Returns "0 but true"
+on success, <code class="inline"><a class="l_k" href="../functions/undef.html">undef</a></code> on error.</p>
+</li>
+<li><a class='view-title' id="%24io-%3eprintflush-(-ARGS-)"></a><strong>$io-&gt;printflush ( ARGS )</strong>
+<p>Turns on autoflush, print ARGS and then restores the autoflush status of the
+<code class="inline"><span class="w">IO::Handle</span></code>
+ object. Returns the return value from print.</p>
+</li>
+<li><a class='view-title' id="%24io-%3eblocking-(-%5b-BOOL-%5d-)"></a><strong>$io-&gt;blocking ( [ BOOL ] )</strong>
+<p>If called with an argument <code class="inline"><span class="w">blocking</span></code>
+ will turn on non-blocking IO if
+<code class="inline"><span class="w">BOOL</span></code>
+ is false, and turn it off if <code class="inline"><span class="w">BOOL</span></code>
+ is true.</p>
+<p><code class="inline"><span class="w">blocking</span></code>
+ will return the value of the previous setting, or the
+current setting if <code class="inline"><span class="w">BOOL</span></code>
+ is not given.</p>
+<p>If an error occurs <code class="inline"><span class="w">blocking</span></code>
+ will return undef and <code class="inline"><span class="i">$!</span></code>
+ will be set.</p>
+</li>
+</ul>
+<p>If the C functions setbuf() and/or setvbuf() are available, then
+<code class="inline"><span class="w">IO::Handle::setbuf</span></code>
+ and <code class="inline"><span class="w">IO::Handle::setvbuf</span></code>
+ set the buffering
+policy for an IO::Handle.  The calling sequences for the Perl functions
+are the same as their C counterparts--including the constants <code class="inline"><span class="w">_IOFBF</span></code>
+,
+<code class="inline"><span class="w">_IOLBF</span></code>
+, and <code class="inline"><span class="w">_IONBF</span></code>
+ for setvbuf()--except that the buffer parameter
+specifies a scalar variable to use as a buffer. You should only
+change the buffer before any I/O, or immediately after calling flush.</p>
+<p>WARNING: The IO::Handle::setvbuf() is not available by default on
+Perls 5.8.0 and later because setvbuf() is rather specific to using
+the stdio library, while Perl prefers the new perlio subsystem instead.</p>
+<p>WARNING: A variable used as a buffer by <code class="inline"><span class="w">setbuf</span></code>
+ or <code class="inline"><span class="w">setvbuf</span></code>
+ <strong>must not
+be modified</strong> in any way until the IO::Handle is closed or <code class="inline"><span class="w">setbuf</span></code>
+ or
+<code class="inline"><span class="w">setvbuf</span></code>
+ is called again, or memory corruption may result! Remember that
+the order of global destruction is undefined, so even if your buffer
+variable remains in scope until program termination, it may be undefined
+before the file IO::Handle is closed. Note that you need to import the
+constants <code class="inline"><span class="w">_IOFBF</span></code>
+, <code class="inline"><span class="w">_IOLBF</span></code>
+, and <code class="inline"><span class="w">_IONBF</span></code>
+ explicitly. Like C, setbuf
+returns nothing. setvbuf returns "0 but true", on success, <code class="inline"><a class="l_k" href="../functions/undef.html">undef</a></code> on
+failure.</p>
+<p>Lastly, there is a special method for working under <strong>-T</strong> and setuid/gid
+scripts:</p>
+<ul>
+<li><a class='view-title' id="%24io-%3euntaint"></a><strong>$io-&gt;untaint</strong>
+<p>Marks the object as taint-clean, and as such data read from it will also
+be considered taint-clean. Note that this is a very trusting action to
+take, and appropriate consideration for the data source and potential
+vulnerability should be kept in mind. Returns 0 on success, -1 if setting
+the taint-clean flag failed. (eg invalid handle)</p>
+</li>
+</ul>
+<a class='view-head1' id="NOTE"></a><h2 class='h2' >NOTE</h2>
+<p>An <code class="inline"><span class="w">IO::Handle</span></code>
+ object is a reference to a symbol/GLOB reference (see
+the <code class="inline"><span class="w">Symbol</span></code>
+ package).  Some modules that
+inherit from <code class="inline"><span class="w">IO::Handle</span></code>
+ may want to keep object related variables
+in the hash table part of the GLOB. In an attempt to prevent modules
+trampling on each other I propose the that any such module should prefix
+its variables with its own name separated by _'s. For example the IO::Socket
+module keeps a <code class="inline"><span class="w">timeout</span></code>
+ variable in 'io_socket_timeout'.</p>
+<a class='view-head1' id="SEE-ALSO"></a><h2 class='h2' >SEE ALSO</h2>
+<p><a href="../perlfunc.html">perlfunc</a>, 
+<a href="../perlop.html#I%2fO-Operators">I/O Operators in perlop</a>,
+<a href="../IO/File.html">IO::File</a></p>
+<a class='view-head1' id="BUGS"></a><h2 class='h2' >BUGS</h2>
+<p>Due to backwards compatibility, all filehandles resemble objects
+of class <code class="inline"><span class="w">IO::Handle</span></code>
+, or actually classes derived from that class.
+They actually aren't.  Which means you can't derive your own 
+class from <code class="inline"><span class="w">IO::Handle</span></code>
+ and inherit those methods.</p>
+<a class='view-head1' id="HISTORY"></a><h2 class='h2' >HISTORY</h2>
+<p>Derived from FileHandle.pm by Graham Barr &lt;<i>gbarr@pobox.com</i>&gt;</p>
+
+
+
+
+      <ul><li><a href="#NAME">NAME</a></li><li><a href="#SYNOPSIS">SYNOPSIS</a></li><li><a href="#DESCRIPTION">DESCRIPTION</a></li><li><a href="#CONSTRUCTOR">CONSTRUCTOR</a></li><li><a href="#METHODS">METHODS</a></li><li><a href="#NOTE">NOTE</a></li><li><a href="#SEE-ALSO">SEE ALSO</a></li><li><a href="#BUGS">BUGS</a></li><li><a href="#HISTORY">HISTORY</a></li></ul>
+
+
+                  </div>
+                </article>
+              </div>
+            </div>
+          </main>
+        </div>
+           <footer class="footer row bg-light pt-5 pb-5">
+       <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+           <div class="row">
+               <div class="col-md-4">
+                   <ul class="list-unstyled">
+                       <li>
+                           <h4>Site info</h4>
+                       </li>
+                       <li>Docs mantained by
+                           <a href="//lists.perl.org/list/perl5-porters.html"
+                               rel="noopener">Perl 5 Porters</a>
+                       </li>
+                       <li>Perldoc site development sponsored by
+                           <a href="//opusvl.com" rel="noopener">
+                           <img style="margin: 20px 20px 5px 10px" class="opus-logo" src="/public/img/opusvl_logo.svg" alt="OpusVL Logo">
+                        </a>
+                    <li><span class="about_perldoc"><a href="//about.html">About PerlDOC</a></span>
+                    </li>
+                       </li>
+                   </ul>
+               </div>
+               <div class="col-md-8">
+                   <div class="row">
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Manuals</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.12.0/index-overview.html">Overview</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.12.0/index-tutorials.html">Tutorials</a>
+                               </li>
+                               <li>
+                                   <a href="/5.12.0/index-faq.html">FAQs</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.12.0/index-history.html">Changes</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Reference</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.12.0/index-language.html">Language</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.12.0/index-functions.html">Functions</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.12.0/perlop.html">Operators</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.12.0/perlvar.html">Variables</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Modules</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.12.0/index-modules-A.html">Modules</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.12.0/index-pragmas.html">Pragmas</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.12.0/index-utilities.html">Utilities</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Misc</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.12.0/index-licence.html">License</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.12.0/index-internals.html">Internals</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.12.0/index-platforms.html">Platforms</a>
+                               </li>
+                            <li>
+                                <a
+                                    href="/5.12.0/index-about.html">About</a>
+                            </li>
+                           </ul>
+                       </div>
+                   </div>
+               </div>
+               <div class=" col-12 footer-inf text-center">
+                   <small>perldoc.perl.org - Official documentation for the Perl
+                       programming language</small>
+               </div>
+           </div>
+       </div>
+   </footer>
+
+        	<div class="beta-wrapper beta-bottom-right ">
+		<div class="beta beta-blue  ">
+			<a class="beta-link "
+				href="//github.com/OpusVL/perldoc.perl.org/issues/new" rel="noopener">
+				<span class="beta-text">
+					This website is a Beta release.
+				</span>
+				<span class="beta-text">
+					For any issues please raise a ticket on GitHub
+				</span>
+			</a>
+		</div>
+	</div>
+
+        <script src="/public/js/main.min.js"></script>
+      </body>
+
+      </html>

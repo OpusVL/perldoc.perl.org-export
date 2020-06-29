@@ -1,0 +1,832 @@
+      
+      
+      
+      
+
+      <!DOCTYPE html>
+      <html lang="en">
+
+      <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="ExtUtils::Install - perldoc.perl.org">
+        <link rel="icon" href="/public/img/favicon.ico">
+        <title>ExtUtils::Install - perldoc.perl.org</title>
+        <link href="/public/css/main.min.css" rel="stylesheet">
+        <link rel="canonical" href="/ExtUtils/Install.html">
+        <link
+          href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900'
+          rel='stylesheet' type='text/css'>
+        <script>
+          window.ga = window.ga || function () {
+            (ga.q = ga.q || []).push(arguments)
+          };
+          ga.l = +new Date;
+          ga('create', 'UA-1892152-2', 'auto'); // JJ's account
+          ga('create', 'UA-50555-3', 'auto', 'perlOrg'); // perl.org account
+          ga('require', 'outboundLinkTracker', {
+            events: ['click', 'auxclick', 'contextmenu'],
+          });
+          ga('require', 'maxScrollTracker');
+          ga('send', 'pageview');
+          ga('perlOrg.send', 'pageview');
+        </script>
+        <script async src="https://www.google-analytics.com/analytics.js">
+        </script>
+        <script async src="/public/js/tracking.min.js"></script>
+      </head>
+
+      <body class="body container-fluid ">
+        <div class="wrapper">
+
+          <nav
+    class="navbar navbar-dark bg-primary bg-perl fixed-top justify-content-between navbar-expand-lg">
+    <a href="#content" class="skippy sr-only sr-only-focusable">
+        <span class=' skippy-text'>Skip to main content</span>
+    </a>
+    <a class="navbar-brand" href="/">
+        <img class="logo" src="/public/img/logo_perl_doc.svg"
+            alt="Perl Documentation Logo" />
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse"
+        data-target="#navbar" aria-controls="navbar" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="navbar" class="collapse navbar-collapse ">
+        <ul class="navbar-nav ml-auto navbar-right">
+            <form class="nav-item dropdown search-wrapper">
+                <input type="text" id='searchinput' aria-describedby='navbarDropdown5'
+                    placeholder="Type query" class='search-input-field' value=''>
+
+                <button href="#" data-toggle='dropdown' type="button"
+                    aria-haspopup="true" aria-expanded='false' id="navbarDropdown5"
+                    class="nav-link dropdown-toggle search-link">
+                    <object tabindex='-1' focusable="false" class='search-icon'
+                        data="/public/img/search.svg" type="image/svg+xml"
+                        name='search icon'>search
+                        icon</object>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown5"
+                    id='search-results'>
+                    <p class='dropdown-item major-version'>
+                        No results
+                    </p>
+                </div>
+            </form>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown" href="#" class="nav-link dropdown-toggle"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Perl versions</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    
+                        <p class='dropdown-item major-version'>
+                            5.32
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.32.0/">5.32.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.30
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.3/">5.30.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.2/">5.30.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.1/">5.30.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.0/">5.30.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.28
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.3/">5.28.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.2/">5.28.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.1/">5.28.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.0/">5.28.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.26
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.3/">5.26.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.2/">5.26.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.1/">5.26.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.0/">5.26.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.24
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.4/">5.24.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.3/">5.24.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.2/">5.24.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.1/">5.24.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.0/">5.24.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.22
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.4/">5.22.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.3/">5.22.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.2/">5.22.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.1/">5.22.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.0/">5.22.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.20
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.3/">5.20.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.2/">5.20.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.1/">5.20.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.0/">5.20.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.18
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.4/">5.18.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.3/">5.18.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.2/">5.18.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.1/">5.18.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.0/">5.18.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.16
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.3/">5.16.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.2/">5.16.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.1/">5.16.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.0/">5.16.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.14
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.4/">5.14.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.3/">5.14.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.2/">5.14.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.1/">5.14.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.0/">5.14.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.12
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.5/">5.12.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.4/">5.12.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.3/">5.12.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.2/">5.12.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.1/">5.12.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.0/">5.12.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.10
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.1/">5.10.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.0/">5.10.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.8
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.9/">5.8.9</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.8/">5.8.8</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.7/">5.8.7</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.6/">5.8.6</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.5/">5.8.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.4/">5.8.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.3/">5.8.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.2/">5.8.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.1/">5.8.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.0/">5.8.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.6
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.2/">5.6.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.1/">5.6.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.0/">5.6.0</a>
+                        
+                        
+                    
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown1" href="#" class="dropdown-toggle nav-link"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Manuals</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                    <a class="dropdown-item"
+                        href="/5.30.2/index-overview.html">Overview</a>
+                    <a class="dropdown-item"
+                        href="/5.30.2/index-tutorials.html">Tutorials</a>
+                    <a class="dropdown-item"
+                        href="/5.30.2/index-faq.html">FAQs</a>
+                    <a class="dropdown-item"
+                        href="/5.30.2/index-history.html">Changes</a>
+                    <a class="dropdown-item"
+                        href="/5.30.2/index-licence.html">License</a>
+                    <a class="dropdown-item"
+                        href="/5.30.2/index-language.html">Language</a>
+                    <a class="dropdown-item"
+                        href="/5.30.2/index-functions.html">Functions</a>
+                    <a class="dropdown-item"
+                        href="/5.30.2/perlop.html">Operators</a>
+                    <a class="dropdown-item"
+                        href="/5.30.2/perlvar.html">Variables</a>
+                    <a class="dropdown-item"
+                        href="/5.30.2/index-pragmas.html">Pragmas</a>
+                    <a class="dropdown-item"
+                        href="/5.30.2/index-utilities.html">Utilities</a>
+                    <a class="dropdown-item"
+                        href="/5.30.2/index-internals.html">Internals</a>
+                    <a class="dropdown-item"
+                        href="/5.30.2/index-platforms.html">Platforms</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown3" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Modules</a>
+                <div aria-labelledby="navbarDropdown3"
+                    class="dropdown-menu letters-wrap">
+                    <!--<a class="dropdown-item"
+                        href="/5.30.2/index-modules.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.30.2/index-modules-by-cat.html">By
+                        Category</a>-->
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-modules-A.html">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-modules-B.html">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-modules-C.html">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-modules-D.html">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-modules-E.html">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-modules-F.html">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-modules-G.html">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-modules-H.html">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-modules-I.html">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-modules-J.html">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-modules-K.html">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-modules-L.html">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-modules-M.html">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-modules-N.html">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-modules-O.html">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-modules-P.html">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-modules-Q.html">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-modules-R.html">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-modules-S.html">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-modules-T.html">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-modules-U.html">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-modules-V.html">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-modules-W.html">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-modules-X.html">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-modules-Y.html">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-modules-Z.html">Z</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown4" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Functions</a>
+                <div aria-labelledby="navbarDropdown4"
+                    class="dropdown-menu letters-wrap">
+                    <a class="dropdown-item"
+                        href="/5.30.2/index-functions.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.30.2/index-functions-by-cat.html">By
+                        Category</a>
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-functions.html#A">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-functions.html#B">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-functions.html#C">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-functions.html#D">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-functions.html#E">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-functions.html#F">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-functions.html#G">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-functions.html#H">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-functions.html#I">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-functions.html#J">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-functions.html#K">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-functions.html#L">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-functions.html#M">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-functions.html#N">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-functions.html#O">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-functions.html#P">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-functions.html#Q">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-functions.html#R">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-functions.html#S">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-functions.html#T">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-functions.html#U">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-functions.html#V">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-functions.html#W">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-functions.html#X">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-functions.html#Y">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-functions.html#Z">Z</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!--/.nav-collapse -->
+</nav>
+
+
+          <main class="row main-content pb-5 pt-5" id='content'>
+            <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+              <div class="row">
+                <div class="col-sm-12">
+                  <div id="breadcrumbs">
+                      
+    <a href="../index.html">Home</a>&nbsp; &gt;
+    
+      
+        <a href="../index-modules-E.html">Core modules (E)</a> &gt;
+      
+    
+    ExtUtils::Install
+  
+
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <article class="col-sm-12 content">
+                  <div class="documentation-wrapper">
+                    <div id="perl_version">
+                      <h7 class='page-title'> Perl 5 version 30.2
+                        documentation</h7>
+                    </div>
+                    <h1>ExtUtils::Install</h1>
+
+
+  <!--    -->
+<ul><li><a href="#NAME">NAME</a></li><li><a href="#SYNOPSIS">SYNOPSIS</a></li><li><a href="#VERSION">VERSION</a></li><li><a href="#DESCRIPTION">DESCRIPTION</a></li><li><a href="#ENVIRONMENT">ENVIRONMENT</a></li><li><a href="#AUTHOR">AUTHOR</a></li><li><a href="#LICENSE">LICENSE</a></li></ul><a class='view-head1' id="NAME"></a><h2 class='h2' >NAME</h2>
+<p>ExtUtils::Install - install files from here to there</p>
+<a class='view-head1' id="SYNOPSIS"></a><h2 class='h2' >SYNOPSIS</h2>
+<pre class="verbatim"><ol><li>  <a class="l_k" href="../functions/use.html">use</a> <span class="w">ExtUtils::Install</span><span class="sc">;</span></li><li></li><li>  <span class="i">install</span><span class="s">(</span><span class="s">{</span> <span class="q">&#39;blib/lib&#39;</span> <span class="cm">=&gt;</span> <span class="q">&#39;some/install/dir&#39;</span> <span class="s">}</span> <span class="s">)</span><span class="sc">;</span></li><li></li><li>  <span class="i">uninstall</span><span class="s">(</span><span class="i">$packlist</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>  <span class="i">pm_to_blib</span><span class="s">(</span><span class="s">{</span> <span class="q">&#39;lib/Foo/Bar.pm&#39;</span> <span class="cm">=&gt;</span> <span class="q">&#39;blib/lib/Foo/Bar.pm&#39;</span> <span class="s">}</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><a class='view-head1' id="VERSION"></a><h2 class='h2' >VERSION</h2>
+<p>2.14</p>
+<a class='view-head1' id="DESCRIPTION"></a><h2 class='h2' >DESCRIPTION</h2>
+<p>Handles the installing and uninstalling of perl modules, scripts, man
+pages, etc...</p>
+<p>Both install() and uninstall() are specific to the way
+ExtUtils::MakeMaker handles the installation and deinstallation of
+perl modules. They are not designed as general purpose tools.</p>
+<p>On some operating systems such as Win32 installation may not be possible
+until after a reboot has occurred. This can have varying consequences:
+removing an old DLL does not impact programs using the new one, but if
+a new DLL cannot be installed properly until reboot then anything
+depending on it must wait. The package variable</p>
+<pre class="verbatim"><ol><li>  <span class="i">$ExtUtils::Install::MUST_REBOOT</span></li></ol></pre><p>is used to store this status.</p>
+<p>If this variable is true then such an operation has occurred and
+anything depending on this module cannot proceed until a reboot
+has occurred.</p>
+<p>If this value is defined but false then such an operation has
+ocurred, but should not impact later operations.</p>
+<a class='view-head2' id="Functions"></a><h3 class='h3' >Functions</h3>
+<ul>
+<li><a class='view-title' id="*install*"></a><strong><strong>install</strong></strong>
+<pre class="verbatim"><ol><li>    <span class="c"># deprecated forms</span></li><li>    <span class="i">install</span><span class="s">(</span>\<span class="i">%from_to</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="i">install</span><span class="s">(</span>\<span class="i">%from_to</span><span class="cm">,</span> <span class="i">$verbose</span><span class="cm">,</span> <span class="i">$dry_run</span><span class="cm">,</span> <span class="i">$uninstall_shadows</span><span class="cm">,</span></li><li>                <span class="i">$skip</span><span class="cm">,</span> <span class="i">$always_copy</span><span class="cm">,</span> \<span class="i">%result</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>    <span class="c"># recommended form as of 1.47</span></li><li>    <span class="i">install</span><span class="s">(</span><span class="s">[</span></li><li>        <span class="w">from_to</span> <span class="cm">=&gt;</span> \<span class="i">%from_to</span><span class="cm">,</span></li><li>        <span class="w">verbose</span> <span class="cm">=&gt;</span> <span class="n">1</span><span class="cm">,</span></li><li>        <span class="w">dry_run</span> <span class="cm">=&gt;</span> <span class="n">0</span><span class="cm">,</span></li><li>        <span class="w">uninstall_shadows</span> <span class="cm">=&gt;</span> <span class="n">1</span><span class="cm">,</span></li><li>        <span class="w">skip</span> <span class="cm">=&gt;</span> <a class="l_k" href="../functions/undef.html">undef</a><span class="cm">,</span></li><li>        <span class="w">always_copy</span> <span class="cm">=&gt;</span> <span class="n">1</span><span class="cm">,</span></li><li>        <span class="w">result</span> <span class="cm">=&gt;</span> \<span class="i">%install_results</span><span class="cm">,</span></li><li>    <span class="s">]</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>Copies each directory tree of %from_to to its corresponding value
+preserving timestamps and permissions.</p>
+<p>There are two keys with a special meaning in the hash: "read" and
+"write".  These contain packlist files.  After the copying is done,
+install() will write the list of target files to $from_to{write}. If
+$from_to{read} is given the contents of this file will be merged into
+the written file. The read and the written file may be identical, but
+on AFS it is quite likely that people are installing to a different
+directory than the one where the files later appear.</p>
+<p>If $verbose is true, will print out each file removed.  Default is
+false.  This is "make install VERBINST=1". $verbose values going
+up to 5 show increasingly more diagnostics output.</p>
+<p>If $dry_run is true it will only print what it was going to do
+without actually doing it.  Default is false.</p>
+<p>If $uninstall_shadows is true any differing versions throughout @INC
+will be uninstalled.  This is "make install UNINST=1"</p>
+<p>As of 1.37_02 install() supports the use of a list of patterns to filter out
+files that shouldn't be installed. If $skip is omitted or undefined then
+install will try to read the list from INSTALL.SKIP in the CWD. This file is
+a list of regular expressions and is just like the MANIFEST.SKIP file used
+by <a href="../ExtUtils/Manifest.html">ExtUtils::Manifest</a>.</p>
+<p>A default site INSTALL.SKIP may be provided by setting then environment
+variable EU_INSTALL_SITE_SKIPFILE, this will only be used when there isn't a
+distribution specific INSTALL.SKIP. If the environment variable
+EU_INSTALL_IGNORE_SKIP is true then no install file filtering will be
+performed.</p>
+<p>If $skip is undefined then the skip file will be autodetected and used if it
+is found. If $skip is a reference to an array then it is assumed the array
+contains the list of patterns, if $skip is a true non reference it is
+assumed to be the filename holding the list of patterns, any other value of
+$skip is taken to mean that no install filtering should occur.</p>
+<p><strong>Changes As of Version 1.47</strong></p>
+<p>As of version 1.47 the following additions were made to the install interface.
+Note that the new argument style and use of the %result hash is recommended.</p>
+<p>The $always_copy parameter which when true causes files to be updated
+regardless as to whether they have changed, if it is defined but false then
+copies are made only if the files have changed, if it is undefined then the
+value of the environment variable EU_INSTALL_ALWAYS_COPY is used as default.</p>
+<p>The %result hash will be populated with the various keys/subhashes reflecting
+the install. Currently these keys and their structure are:</p>
+<pre class="verbatim"><ol><li>    <span class="w">install</span>             <span class="cm">=&gt;</span> <span class="s">{</span> <span class="i">$target</span>    <span class="cm">=&gt;</span> <span class="i">$source</span> <span class="s">}</span><span class="cm">,</span></li><li>    <span class="w">install_fail</span>        <span class="cm">=&gt;</span> <span class="s">{</span> <span class="i">$target</span>    <span class="cm">=&gt;</span> <span class="i">$source</span> <span class="s">}</span><span class="cm">,</span></li><li>    <span class="w">install_unchanged</span>   <span class="cm">=&gt;</span> <span class="s">{</span> <span class="i">$target</span>    <span class="cm">=&gt;</span> <span class="i">$source</span> <span class="s">}</span><span class="cm">,</span></li><li></li><li>    <span class="w">install_filtered</span>    <span class="cm">=&gt;</span> <span class="s">{</span> <span class="i">$source</span>    <span class="cm">=&gt;</span> <span class="i">$pattern</span> <span class="s">}</span><span class="cm">,</span></li><li></li><li>    <span class="w">uninstall</span>           <span class="cm">=&gt;</span> <span class="s">{</span> <span class="i">$uninstalled</span> <span class="cm">=&gt;</span> <span class="i">$source</span> <span class="s">}</span><span class="cm">,</span></li><li>    <span class="w">uninstall_fail</span>      <span class="cm">=&gt;</span> <span class="s">{</span> <span class="i">$uninstalled</span> <span class="cm">=&gt;</span> <span class="i">$source</span> <span class="s">}</span><span class="cm">,</span></li></ol></pre><p>where <code class="inline"><span class="i">$source</span></code>
+ is the filespec of the file being installed. <code class="inline"><span class="i">$target</span></code>
+ is where
+it is being installed to, and <code class="inline"><span class="i">$uninstalled</span></code>
+ is any shadow file that is in <code class="inline"><span class="i">@INC</span></code>
+
+or <code class="inline"><span class="i">$ENV</span>{<span class="w">PERL5LIB</span>}</code>
+ or other standard locations, and <code class="inline"><span class="i">$pattern</span></code>
+ is the pattern that
+caused a source file to be skipped. In future more keys will be added, such as to
+show created directories, however this requires changes in other modules and must
+therefore wait.</p>
+<p>These keys will be populated before any exceptions are thrown should there be an
+error.</p>
+<p>Note that all updates of the %result are additive, the hash will not be
+cleared before use, thus allowing status results of many installs to be easily
+aggregated.</p>
+<p><strong>NEW ARGUMENT STYLE</strong></p>
+<p>If there is only one argument and it is a reference to an array then
+the array is assumed to contain a list of key-value pairs specifying
+the options. In this case the option "from_to" is mandatory. This style
+means that you do not have to supply a cryptic list of arguments and can
+use a self documenting argument list that is easier to understand.</p>
+<p>This is now the recommended interface to install().</p>
+<p><strong>RETURN</strong></p>
+<p>If all actions were successful install will return a hashref of the results
+as described above for the $result parameter. If any action is a failure
+then install will die, therefore it is recommended to pass in the $result
+parameter instead of using the return value. If the result parameter is
+provided then the returned hashref will be the passed in hashref.</p>
+</li>
+<li><a class='view-title' id="*install_default*-_DISCOURAGED_"></a><strong><strong>install_default</strong> <i>DISCOURAGED</i></strong>
+<pre class="verbatim"><ol><li>    <span class="i">install_default</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="i">install_default</span><span class="s">(</span><span class="i">$fullext</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>Calls install() with arguments to copy a module from blib/ to the
+default site installation location.</p>
+<p>$fullext is the name of the module converted to a directory
+(ie. Foo::Bar would be Foo/Bar).  If $fullext is not specified, it
+will attempt to read it from @ARGV.</p>
+<p>This is primarily useful for install scripts.</p>
+<p><strong>NOTE</strong> This function is not really useful because of the hard-coded
+install location with no way to control site vs core vs vendor
+directories and the strange way in which the module name is given.
+Consider its use discouraged.</p>
+</li>
+<li><a class='view-title' id="*uninstall*"></a><strong><strong>uninstall</strong></strong>
+<pre class="verbatim"><ol><li>    <span class="i">uninstall</span><span class="s">(</span><span class="i">$packlist_file</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="i">uninstall</span><span class="s">(</span><span class="i">$packlist_file</span><span class="cm">,</span> <span class="i">$verbose</span><span class="cm">,</span> <span class="i">$dont_execute</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>Removes the files listed in a $packlist_file.</p>
+<p>If $verbose is true, will print out each file removed.  Default is
+false.</p>
+<p>If $dont_execute is true it will only print what it was going to do
+without actually doing it.  Default is false.</p>
+</li>
+<li><a class='view-title' id="*pm_to_blib*"></a><strong><strong>pm_to_blib</strong></strong>
+<pre class="verbatim"><ol><li>    <span class="i">pm_to_blib</span><span class="s">(</span>\<span class="i">%from_to</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="i">pm_to_blib</span><span class="s">(</span>\<span class="i">%from_to</span><span class="cm">,</span> <span class="i">$autosplit_dir</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="i">pm_to_blib</span><span class="s">(</span>\<span class="i">%from_to</span><span class="cm">,</span> <span class="i">$autosplit_dir</span><span class="cm">,</span> <span class="i">$filter_cmd</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>Copies each key of %from_to to its corresponding value efficiently.
+If an $autosplit_dir is provided, all .pm files will be autosplit into it.
+Any destination directories are created.</p>
+<p>$filter_cmd is an optional shell command to run each .pm file through
+prior to splitting and copying.  Input is the contents of the module,
+output the new module contents.</p>
+<p>You can have an environment variable PERL_INSTALL_ROOT set which will
+be prepended as a directory to each installed file (and directory).</p>
+<p>By default verbose output is generated, setting the PERL_INSTALL_QUIET
+environment variable will silence this output.</p>
+</li>
+</ul>
+<a class='view-head1' id="ENVIRONMENT"></a><h2 class='h2' >ENVIRONMENT</h2>
+<ul>
+<li><a class='view-title' id="*PERL_INSTALL_ROOT*"></a><strong><strong>PERL_INSTALL_ROOT</strong></strong>
+<p>Will be prepended to each install path.</p>
+</li>
+<li><a class='view-title' id="*EU_INSTALL_IGNORE_SKIP*"></a><strong><strong>EU_INSTALL_IGNORE_SKIP</strong></strong>
+<p>Will prevent the automatic use of INSTALL.SKIP as the install skip file.</p>
+</li>
+<li><a class='view-title' id="*EU_INSTALL_SITE_SKIPFILE*"></a><strong><strong>EU_INSTALL_SITE_SKIPFILE</strong></strong>
+<p>If there is no INSTALL.SKIP file in the make directory then this value
+can be used to provide a default.</p>
+</li>
+<li><a class='view-title' id="*EU_INSTALL_ALWAYS_COPY*"></a><strong><strong>EU_INSTALL_ALWAYS_COPY</strong></strong>
+<p>If this environment variable is true then normal install processes will
+always overwrite older identical files during the install process.</p>
+<p>Note that the alias EU_ALWAYS_COPY will be supported if EU_INSTALL_ALWAYS_COPY
+is not defined until at least the 1.50 release. Please ensure you use the
+correct EU_INSTALL_ALWAYS_COPY.</p>
+</li>
+</ul>
+<a class='view-head1' id="AUTHOR"></a><h2 class='h2' >AUTHOR</h2>
+<p>Original author lost in the mists of time.  Probably the same as Makemaker.</p>
+<p>Production release currently maintained by demerphq <code class="inline"><span class="w">yves</span> <span class="w">at</span> <span class="w">cpan</span>.<span class="w">org</span></code>
+,
+extensive changes by Michael G. Schwern.</p>
+<p>Send bug reports via <a href="http://rt.cpan.org/">http://rt.cpan.org/</a>.  Please send your
+generated Makefile along with your report.</p>
+<a class='view-head1' id="LICENSE"></a><h2 class='h2' >LICENSE</h2>
+<p>This program is free software; you can redistribute it and/or
+modify it under the same terms as Perl itself.</p>
+<p>See <a href="http://www.perl.com/perl/misc/Artistic.html">http://www.perl.com/perl/misc/Artistic.html</a></p>
+
+
+
+
+      <ul><li><a href="#NAME">NAME</a></li><li><a href="#SYNOPSIS">SYNOPSIS</a></li><li><a href="#VERSION">VERSION</a></li><li><a href="#DESCRIPTION">DESCRIPTION</a></li><li><a href="#ENVIRONMENT">ENVIRONMENT</a></li><li><a href="#AUTHOR">AUTHOR</a></li><li><a href="#LICENSE">LICENSE</a></li></ul>
+
+
+                  </div>
+                </article>
+              </div>
+            </div>
+          </main>
+        </div>
+           <footer class="footer row bg-light pt-5 pb-5">
+       <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+           <div class="row">
+               <div class="col-md-4">
+                   <ul class="list-unstyled">
+                       <li>
+                           <h4>Site info</h4>
+                       </li>
+                       <li>Docs mantained by
+                           <a href="//lists.perl.org/list/perl5-porters.html"
+                               rel="noopener">Perl 5 Porters</a>
+                       </li>
+                       <li>Perldoc site development sponsored by
+                           <a href="//opusvl.com" rel="noopener">
+                           <img style="margin: 20px 20px 5px 10px" class="opus-logo" src="/public/img/opusvl_logo.svg" alt="OpusVL Logo">
+                        </a>
+                    <li><span class="about_perldoc"><a href="//about.html">About PerlDOC</a></span>
+                    </li>
+                       </li>
+                   </ul>
+               </div>
+               <div class="col-md-8">
+                   <div class="row">
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Manuals</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.30.2/index-overview.html">Overview</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.30.2/index-tutorials.html">Tutorials</a>
+                               </li>
+                               <li>
+                                   <a href="/5.30.2/index-faq.html">FAQs</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.30.2/index-history.html">Changes</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Reference</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.30.2/index-language.html">Language</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.30.2/index-functions.html">Functions</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.30.2/perlop.html">Operators</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.30.2/perlvar.html">Variables</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Modules</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.30.2/index-modules-A.html">Modules</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.30.2/index-pragmas.html">Pragmas</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.30.2/index-utilities.html">Utilities</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Misc</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.30.2/index-licence.html">License</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.30.2/index-internals.html">Internals</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.30.2/index-platforms.html">Platforms</a>
+                               </li>
+                            <li>
+                                <a
+                                    href="/5.30.2/index-about.html">About</a>
+                            </li>
+                           </ul>
+                       </div>
+                   </div>
+               </div>
+               <div class=" col-12 footer-inf text-center">
+                   <small>perldoc.perl.org - Official documentation for the Perl
+                       programming language</small>
+               </div>
+           </div>
+       </div>
+   </footer>
+
+        	<div class="beta-wrapper beta-bottom-right ">
+		<div class="beta beta-blue  ">
+			<a class="beta-link "
+				href="//github.com/OpusVL/perldoc.perl.org/issues/new" rel="noopener">
+				<span class="beta-text">
+					This website is a Beta release.
+				</span>
+				<span class="beta-text">
+					For any issues please raise a ticket on GitHub
+				</span>
+			</a>
+		</div>
+	</div>
+
+        <script src="/public/js/main.min.js"></script>
+      </body>
+
+      </html>

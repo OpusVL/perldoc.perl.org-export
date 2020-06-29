@@ -1,0 +1,1176 @@
+      
+      
+      
+      
+
+      <!DOCTYPE html>
+      <html lang="en">
+
+      <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="IO::Compress::RawDeflate - perldoc.perl.org">
+        <link rel="icon" href="/public/img/favicon.ico">
+        <title>IO::Compress::RawDeflate - perldoc.perl.org</title>
+        <link href="/public/css/main.min.css" rel="stylesheet">
+        <link rel="canonical" href="/IO/Compress/RawDeflate.html">
+        <link
+          href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900'
+          rel='stylesheet' type='text/css'>
+        <script>
+          window.ga = window.ga || function () {
+            (ga.q = ga.q || []).push(arguments)
+          };
+          ga.l = +new Date;
+          ga('create', 'UA-1892152-2', 'auto'); // JJ's account
+          ga('create', 'UA-50555-3', 'auto', 'perlOrg'); // perl.org account
+          ga('require', 'outboundLinkTracker', {
+            events: ['click', 'auxclick', 'contextmenu'],
+          });
+          ga('require', 'maxScrollTracker');
+          ga('send', 'pageview');
+          ga('perlOrg.send', 'pageview');
+        </script>
+        <script async src="https://www.google-analytics.com/analytics.js">
+        </script>
+        <script async src="/public/js/tracking.min.js"></script>
+      </head>
+
+      <body class="body container-fluid ">
+        <div class="wrapper">
+
+          <nav
+    class="navbar navbar-dark bg-primary bg-perl fixed-top justify-content-between navbar-expand-lg">
+    <a href="#content" class="skippy sr-only sr-only-focusable">
+        <span class=' skippy-text'>Skip to main content</span>
+    </a>
+    <a class="navbar-brand" href="/">
+        <img class="logo" src="/public/img/logo_perl_doc.svg"
+            alt="Perl Documentation Logo" />
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse"
+        data-target="#navbar" aria-controls="navbar" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="navbar" class="collapse navbar-collapse ">
+        <ul class="navbar-nav ml-auto navbar-right">
+            <form class="nav-item dropdown search-wrapper">
+                <input type="text" id='searchinput' aria-describedby='navbarDropdown5'
+                    placeholder="Type query" class='search-input-field' value=''>
+
+                <button href="#" data-toggle='dropdown' type="button"
+                    aria-haspopup="true" aria-expanded='false' id="navbarDropdown5"
+                    class="nav-link dropdown-toggle search-link">
+                    <object tabindex='-1' focusable="false" class='search-icon'
+                        data="/public/img/search.svg" type="image/svg+xml"
+                        name='search icon'>search
+                        icon</object>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown5"
+                    id='search-results'>
+                    <p class='dropdown-item major-version'>
+                        No results
+                    </p>
+                </div>
+            </form>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown" href="#" class="nav-link dropdown-toggle"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Perl versions</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    
+                        <p class='dropdown-item major-version'>
+                            5.32
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.32.0/">5.32.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.30
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.3/">5.30.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.2/">5.30.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.1/">5.30.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.0/">5.30.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.28
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.3/">5.28.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.2/">5.28.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.1/">5.28.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.0/">5.28.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.26
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.3/">5.26.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.2/">5.26.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.1/">5.26.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.0/">5.26.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.24
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.4/">5.24.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.3/">5.24.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.2/">5.24.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.1/">5.24.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.0/">5.24.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.22
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.4/">5.22.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.3/">5.22.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.2/">5.22.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.1/">5.22.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.0/">5.22.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.20
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.3/">5.20.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.2/">5.20.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.1/">5.20.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.0/">5.20.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.18
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.4/">5.18.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.3/">5.18.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.2/">5.18.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.1/">5.18.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.0/">5.18.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.16
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.3/">5.16.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.2/">5.16.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.1/">5.16.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.0/">5.16.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.14
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.4/">5.14.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.3/">5.14.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.2/">5.14.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.1/">5.14.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.0/">5.14.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.12
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.5/">5.12.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.4/">5.12.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.3/">5.12.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.2/">5.12.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.1/">5.12.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.0/">5.12.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.10
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.1/">5.10.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.0/">5.10.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.8
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.9/">5.8.9</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.8/">5.8.8</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.7/">5.8.7</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.6/">5.8.6</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.5/">5.8.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.4/">5.8.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.3/">5.8.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.2/">5.8.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.1/">5.8.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.0/">5.8.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.6
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.2/">5.6.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.1/">5.6.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.0/">5.6.0</a>
+                        
+                        
+                    
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown1" href="#" class="dropdown-toggle nav-link"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Manuals</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                    <a class="dropdown-item"
+                        href="/5.12.4/index-overview.html">Overview</a>
+                    <a class="dropdown-item"
+                        href="/5.12.4/index-tutorials.html">Tutorials</a>
+                    <a class="dropdown-item"
+                        href="/5.12.4/index-faq.html">FAQs</a>
+                    <a class="dropdown-item"
+                        href="/5.12.4/index-history.html">Changes</a>
+                    <a class="dropdown-item"
+                        href="/5.12.4/index-licence.html">License</a>
+                    <a class="dropdown-item"
+                        href="/5.12.4/index-language.html">Language</a>
+                    <a class="dropdown-item"
+                        href="/5.12.4/index-functions.html">Functions</a>
+                    <a class="dropdown-item"
+                        href="/5.12.4/perlop.html">Operators</a>
+                    <a class="dropdown-item"
+                        href="/5.12.4/perlvar.html">Variables</a>
+                    <a class="dropdown-item"
+                        href="/5.12.4/index-pragmas.html">Pragmas</a>
+                    <a class="dropdown-item"
+                        href="/5.12.4/index-utilities.html">Utilities</a>
+                    <a class="dropdown-item"
+                        href="/5.12.4/index-internals.html">Internals</a>
+                    <a class="dropdown-item"
+                        href="/5.12.4/index-platforms.html">Platforms</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown3" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Modules</a>
+                <div aria-labelledby="navbarDropdown3"
+                    class="dropdown-menu letters-wrap">
+                    <!--<a class="dropdown-item"
+                        href="/5.12.4/index-modules.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.12.4/index-modules-by-cat.html">By
+                        Category</a>-->
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.12.4/index-modules-A.html">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.4/index-modules-B.html">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.4/index-modules-C.html">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.4/index-modules-D.html">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.4/index-modules-E.html">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.4/index-modules-F.html">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.4/index-modules-G.html">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.4/index-modules-H.html">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.4/index-modules-I.html">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.4/index-modules-J.html">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.4/index-modules-K.html">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.4/index-modules-L.html">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.4/index-modules-M.html">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.4/index-modules-N.html">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.4/index-modules-O.html">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.4/index-modules-P.html">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.4/index-modules-Q.html">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.4/index-modules-R.html">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.4/index-modules-S.html">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.4/index-modules-T.html">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.4/index-modules-U.html">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.4/index-modules-V.html">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.4/index-modules-W.html">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.4/index-modules-X.html">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.4/index-modules-Y.html">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.4/index-modules-Z.html">Z</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown4" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Functions</a>
+                <div aria-labelledby="navbarDropdown4"
+                    class="dropdown-menu letters-wrap">
+                    <a class="dropdown-item"
+                        href="/5.12.4/index-functions.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.12.4/index-functions-by-cat.html">By
+                        Category</a>
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.12.4/index-functions.html#A">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.4/index-functions.html#B">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.4/index-functions.html#C">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.4/index-functions.html#D">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.4/index-functions.html#E">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.4/index-functions.html#F">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.4/index-functions.html#G">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.4/index-functions.html#H">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.4/index-functions.html#I">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.4/index-functions.html#J">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.4/index-functions.html#K">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.4/index-functions.html#L">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.4/index-functions.html#M">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.4/index-functions.html#N">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.4/index-functions.html#O">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.4/index-functions.html#P">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.4/index-functions.html#Q">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.4/index-functions.html#R">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.4/index-functions.html#S">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.4/index-functions.html#T">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.4/index-functions.html#U">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.4/index-functions.html#V">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.4/index-functions.html#W">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.4/index-functions.html#X">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.4/index-functions.html#Y">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.4/index-functions.html#Z">Z</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!--/.nav-collapse -->
+</nav>
+
+
+          <main class="row main-content pb-5 pt-5" id='content'>
+            <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+              <div class="row">
+                <div class="col-sm-12">
+                  <div id="breadcrumbs">
+                      
+    <a href="../../index.html">Home</a>&nbsp; &gt;
+    
+      
+        <a href="../../index-modules-I.html">Core modules (I)</a> &gt;
+      
+    
+    IO::Compress::RawDeflate
+  
+
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <article class="col-sm-12 content">
+                  <div class="documentation-wrapper">
+                    <div id="perl_version">
+                      <h7 class='page-title'> Perl 5 version 12.4
+                        documentation</h7>
+                    </div>
+                    <h1>IO::Compress::RawDeflate</h1>
+
+
+  <!--    -->
+<ul><li><a href="#NAME">NAME</a></li><li><a href="#SYNOPSIS">SYNOPSIS</a></li><li><a href="#DESCRIPTION">DESCRIPTION</a></li><li><a href="#Functional-Interface">Functional Interface</a></li><ul><li><a href="#rawdeflate-%24input-%3d%3e-%24output-%5b%2c-OPTS%5d">rawdeflate $input => $output [, OPTS]</a></li><li><a href="#Notes">Notes</a></li><li><a href="#Optional-Parameters">Optional Parameters</a></li><li><a href="#Examples">Examples</a></li></ul><li><a href="#OO-Interface">OO Interface</a></li><ul><li><a href="#Constructor">Constructor</a></li><li><a href="#Constructor-Options">Constructor Options</a></li><li><a href="#Examples">Examples</a></li></ul><li><a href="#Methods">Methods</a></li><ul><li><a href="#print">print</a></li><li><a href="#printf">printf</a></li><li><a href="#syswrite">syswrite</a></li><li><a href="#write">write</a></li><li><a href="#flush">flush</a></li><li><a href="#tell">tell</a></li><li><a href="#eof">eof</a></li><li><a href="#seek">seek</a></li><li><a href="#binmode">binmode</a></li><li><a href="#opened">opened</a></li><li><a href="#autoflush">autoflush</a></li><li><a href="#input_line_number">input_line_number</a></li><li><a href="#fileno">fileno</a></li><li><a href="#close">close</a></li><li><a href="#newStream(%5bOPTS%5d)">newStream([OPTS])</a></li><li><a href="#deflateParams">deflateParams</a></li></ul><li><a href="#Importing">Importing</a></li><li><a href="#EXAMPLES">EXAMPLES</a></li><ul><li><a href="#Apache%3a%3aGZip-Revisited">Apache::GZip Revisited</a></li><li><a href="#Working-with-Net%3a%3aFTP">Working with Net::FTP</a></li></ul><li><a href="#SEE-ALSO">SEE ALSO</a></li><li><a href="#AUTHOR">AUTHOR</a></li><li><a href="#MODIFICATION-HISTORY">MODIFICATION HISTORY</a></li><li><a href="#COPYRIGHT-AND-LICENSE">COPYRIGHT AND LICENSE</a></li></ul><a class='view-head1' id="NAME"></a><h2 class='h2' >NAME</h2>
+<p>IO::Compress::RawDeflate - Write RFC 1951 files/buffers</p>
+<a class='view-head1' id="SYNOPSIS"></a><h2 class='h2' >SYNOPSIS</h2>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../../functions/use.html">use</a> <span class="w">IO::Compress::RawDeflate</span> <span class="q">qw(rawdeflate $RawDeflateError)</span> <span class="sc">;</span></li><li></li><li>    <a class="l_k" href="../../functions/my.html">my</a> <span class="i">$status</span> = <span class="w">rawdeflate</span> <span class="i">$input</span> <span class="cm">=&gt;</span> <span class="i">$output</span> [<span class="cm">,</span><span class="w">OPTS</span>] </li><li>        or <a class="l_k" href="../../functions/die.html">die</a> <span class="q">&quot;rawdeflate failed: $RawDeflateError\n&quot;</span><span class="sc">;</span></li><li></li><li>    <a class="l_k" href="../../functions/my.html">my</a> <span class="i">$z</span> = <span class="w">new</span> <span class="w">IO::Compress::RawDeflate</span> <span class="i">$output</span> [<span class="cm">,</span><span class="w">OPTS</span>]</li><li>        or <a class="l_k" href="../../functions/die.html">die</a> <span class="q">&quot;rawdeflate failed: $RawDeflateError\n&quot;</span><span class="sc">;</span></li><li></li><li>    <span class="i">$z</span><span class="i">-&gt;print</span><span class="s">(</span><span class="i">$string</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="i">$z</span><span class="i">-&gt;printf</span><span class="s">(</span><span class="i">$format</span><span class="cm">,</span> <span class="i">$string</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="i">$z</span><span class="i">-&gt;write</span><span class="s">(</span><span class="i">$string</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="i">$z</span><span class="i">-&gt;syswrite</span><span class="s">(</span><span class="i">$string</span> [<span class="cm">,</span> <span class="i">$length</span><span class="cm">,</span> <span class="i">$offset</span>]<span class="s">)</span><span class="sc">;</span></li><li>    <span class="i">$z</span><span class="i">-&gt;flush</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="i">$z</span><span class="i">-&gt;tell</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="i">$z</span><span class="i">-&gt;eof</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="i">$z</span><span class="i">-&gt;seek</span><span class="s">(</span><span class="i">$position</span><span class="cm">,</span> <span class="i">$whence</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="i">$z</span><span class="i">-&gt;binmode</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="i">$z</span><span class="i">-&gt;fileno</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="i">$z</span><span class="i">-&gt;opened</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="i">$z</span><span class="i">-&gt;autoflush</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="i">$z</span><span class="i">-&gt;input_line_number</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="i">$z</span><span class="i">-&gt;newStream</span><span class="s">(</span> <span class="s">[</span><span class="w">OPTS</span><span class="s">]</span> <span class="s">)</span><span class="sc">;</span></li><li>    </li><li>    <span class="i">$z</span><span class="i">-&gt;deflateParams</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li><li>    </li><li>    <span class="i">$z</span><span class="i">-&gt;close</span><span class="s">(</span><span class="s">)</span> <span class="sc">;</span></li><li></li><li>    <span class="i">$RawDeflateError</span> <span class="sc">;</span></li><li></li><li>    <span class="c"># IO::File mode</span></li><li></li><li>    <a class="l_k" href="../../functions/print.html">print</a> <span class="i">$z</span> <span class="i">$string</span><span class="sc">;</span></li><li>    <a class="l_k" href="../../functions/printf.html">printf</a> <span class="i">$z</span> <span class="i">$format</span><span class="cm">,</span> <span class="i">$string</span><span class="sc">;</span></li><li>    <a class="l_k" href="../../functions/tell.html">tell</a> <span class="i">$z</span></li><li>    <a class="l_k" href="../../functions/eof.html">eof</a> <span class="i">$z</span></li><li>    <a class="l_k" href="../../functions/seek.html">seek</a> <span class="i">$z</span><span class="cm">,</span> <span class="i">$position</span><span class="cm">,</span> <span class="i">$whence</span></li><li>    <a class="l_k" href="../../functions/binmode.html">binmode</a> <span class="i">$z</span></li><li>    <a class="l_k" href="../../functions/fileno.html">fileno</a> <span class="i">$z</span></li><li>    <a class="l_k" href="../../functions/close.html">close</a> <span class="i">$z</span> <span class="sc">;</span></li></ol></pre><a class='view-head1' id="DESCRIPTION"></a><h2 class='h2' >DESCRIPTION</h2>
+<p>This module provides a Perl interface that allows writing compressed
+data to files or buffer as defined in RFC 1951.</p>
+<p>Note that RFC 1951 data is not a good choice of compression format
+to use in isolation, especially if you want to auto-detect it.</p>
+<p>For reading RFC 1951 files/buffers, see the companion module 
+<a href="../../IO/Uncompress/RawInflate.html">IO::Uncompress::RawInflate</a>.</p>
+<a class='view-head1' id="Functional-Interface"></a><h2 class='h2' >Functional Interface</h2>
+<p>A top-level function, <code class="inline"><span class="w">rawdeflate</span></code>
+, is provided to carry out
+"one-shot" compression between buffers and/or files. For finer
+control over the compression process, see the <a href="#OO-Interface">OO Interface</a>
+section.</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../../functions/use.html">use</a> <span class="w">IO::Compress::RawDeflate</span> <span class="q">qw(rawdeflate $RawDeflateError)</span> <span class="sc">;</span></li><li></li><li>    <span class="w">rawdeflate</span> <span class="i">$input</span> <span class="cm">=&gt;</span> <span class="i">$output</span> [<span class="cm">,</span><span class="w">OPTS</span>] </li><li>        or <a class="l_k" href="../../functions/die.html">die</a> <span class="q">&quot;rawdeflate failed: $RawDeflateError\n&quot;</span><span class="sc">;</span></li></ol></pre><p>The functional interface needs Perl5.005 or better.</p>
+<a class='view-head2' id="rawdeflate-%24input-%3d%3e-%24output-%5b%2c-OPTS%5d"></a><h3 class='h3' >rawdeflate $input =&gt; $output [, OPTS]</h3>
+<p><code class="inline"><span class="w">rawdeflate</span></code>
+ expects at least two parameters, <code class="inline"><span class="i">$input</span></code>
+ and <code class="inline"><span class="i">$output</span></code>
+.</p>
+<a class='view-head3' id="The-%24input-parameter"></a><h4 class='h4' >The <code class="inline"><span class="i">$input</span></code>
+ parameter</h4>
+<p>The parameter, <code class="inline"><span class="i">$input</span></code>
+, is used to define the source of
+the uncompressed data.</p>
+<p>It can take one of the following forms:</p>
+<ul>
+<li><a class='view-title' id="A-filename"></a><strong>A filename</strong>
+<p>If the <code class="inline"><span class="i">$input</span></code>
+ parameter is a simple scalar, it is assumed to be a
+filename. This file will be opened for reading and the input data
+will be read from it.</p>
+</li>
+<li><a class='view-title' id="A-filehandle"></a><strong>A filehandle</strong>
+<p>If the <code class="inline"><span class="i">$input</span></code>
+ parameter is a filehandle, the input data will be
+read from it.
+The string '-' can be used as an alias for standard input.</p>
+</li>
+<li><a class='view-title' id="A-scalar-reference"></a><strong>A scalar reference</strong>
+<p>If <code class="inline"><span class="i">$input</span></code>
+ is a scalar reference, the input data will be read
+from <code class="inline"><span class="i">$$input</span></code>
+.</p>
+</li>
+<li><a class='view-title' id="An-array-reference"></a><strong>An array reference</strong>
+<p>If <code class="inline"><span class="i">$input</span></code>
+ is an array reference, each element in the array must be a
+filename.</p>
+<p>The input data will be read from each file in turn.</p>
+<p>The complete array will be walked to ensure that it only
+contains valid filenames before any data is compressed.</p>
+</li>
+<li><a class='view-title' id="An-Input-FileGlob-string"></a><strong>An Input FileGlob string</strong>
+<p>If <code class="inline"><span class="i">$input</span></code>
+ is a string that is delimited by the characters "&lt;" and "&gt;"
+<code class="inline"><span class="w">rawdeflate</span></code>
+ will assume that it is an <i>input fileglob string</i>. The
+input is the list of files that match the fileglob.</p>
+<p>If the fileglob does not match any files ...</p>
+<p>See <a href="../../File/GlobMapper.html">File::GlobMapper</a> for more details.</p>
+</li>
+</ul>
+<p>If the <code class="inline"><span class="i">$input</span></code>
+ parameter is any other type, <code class="inline"><a class="l_k" href="../../functions/undef.html">undef</a></code> will be returned.</p>
+<a class='view-head3' id="The-%24output-parameter"></a><h4 class='h4' >The <code class="inline"><span class="i">$output</span></code>
+ parameter</h4>
+<p>The parameter <code class="inline"><span class="i">$output</span></code>
+ is used to control the destination of the
+compressed data. This parameter can take one of these forms.</p>
+<ul>
+<li><a class='view-title' id="A-filename"></a><strong>A filename</strong>
+<p>If the <code class="inline"><span class="i">$output</span></code>
+ parameter is a simple scalar, it is assumed to be a
+filename.  This file will be opened for writing and the compressed
+data will be written to it.</p>
+</li>
+<li><a class='view-title' id="A-filehandle"></a><strong>A filehandle</strong>
+<p>If the <code class="inline"><span class="i">$output</span></code>
+ parameter is a filehandle, the compressed data
+will be written to it.
+The string '-' can be used as an alias for standard output.</p>
+</li>
+<li><a class='view-title' id="A-scalar-reference"></a><strong>A scalar reference</strong>
+<p>If <code class="inline"><span class="i">$output</span></code>
+ is a scalar reference, the compressed data will be
+stored in <code class="inline"><span class="i">$$output</span></code>
+.</p>
+</li>
+<li><a class='view-title' id="An-Array-Reference"></a><strong>An Array Reference</strong>
+<p>If <code class="inline"><span class="i">$output</span></code>
+ is an array reference, the compressed data will be
+pushed onto the array.</p>
+</li>
+<li><a class='view-title' id="An-Output-FileGlob"></a><strong>An Output FileGlob</strong>
+<p>If <code class="inline"><span class="i">$output</span></code>
+ is a string that is delimited by the characters "&lt;" and "&gt;"
+<code class="inline"><span class="w">rawdeflate</span></code>
+ will assume that it is an <i>output fileglob string</i>. The
+output is the list of files that match the fileglob.</p>
+<p>When <code class="inline"><span class="i">$output</span></code>
+ is an fileglob string, <code class="inline"><span class="i">$input</span></code>
+ must also be a fileglob
+string. Anything else is an error.</p>
+</li>
+</ul>
+<p>If the <code class="inline"><span class="i">$output</span></code>
+ parameter is any other type, <code class="inline"><a class="l_k" href="../../functions/undef.html">undef</a></code> will be returned.</p>
+<a class='view-head2' id="Notes"></a><h3 class='h3' >Notes</h3>
+<p>When <code class="inline"><span class="i">$input</span></code>
+ maps to multiple files/buffers and <code class="inline"><span class="i">$output</span></code>
+ is a single
+file/buffer the input files/buffers will be stored
+in <code class="inline"><span class="i">$output</span></code>
+ as a concatenated series of compressed data streams.</p>
+<a class='view-head2' id="Optional-Parameters"></a><h3 class='h3' >Optional Parameters</h3>
+<p>Unless specified below, the optional parameters for <code class="inline"><span class="w">rawdeflate</span></code>
+,
+<code class="inline"><span class="w">OPTS</span></code>
+, are the same as those used with the OO interface defined in the
+<a href="#Constructor-Options">Constructor Options</a> section below.</p>
+<ul>
+<li><a class='view-title' id="AutoClose-%3d%3e-0%7c1"></a><strong><code class="inline"><span class="w">AutoClose</span> <span class="cm">=&gt;</span> <span class="n">0</span>|<span class="n">1</span></code>
+</strong>
+<p>This option applies to any input or output data streams to 
+<code class="inline"><span class="w">rawdeflate</span></code>
+ that are filehandles.</p>
+<p>If <code class="inline"><span class="w">AutoClose</span></code>
+ is specified, and the value is true, it will result in all
+input and/or output filehandles being closed once <code class="inline"><span class="w">rawdeflate</span></code>
+ has
+completed.</p>
+<p>This parameter defaults to 0.</p>
+</li>
+<li><a class='view-title' id="BinModeIn-%3d%3e-0%7c1"></a><strong><code class="inline"><span class="w">BinModeIn</span> <span class="cm">=&gt;</span> <span class="n">0</span>|<span class="n">1</span></code>
+</strong>
+<p>When reading from a file or filehandle, set <code class="inline"><a class="l_k" href="../../functions/binmode.html">binmode</a></code> before reading.</p>
+<p>Defaults to 0.</p>
+</li>
+<li><a class='view-title' id="Append-%3d%3e-0%7c1"></a><strong><code class="inline"><span class="w">Append</span> <span class="cm">=&gt;</span> <span class="n">0</span>|<span class="n">1</span></code>
+</strong>
+<p>The behaviour of this option is dependent on the type of output data
+stream.</p>
+<ul>
+<li><a class='view-title' id="*-A-Buffer"></a><strong>A Buffer</strong>
+<p>If <code class="inline"><span class="w">Append</span></code>
+ is enabled, all compressed data will be append to the end of
+the output buffer. Otherwise the output buffer will be cleared before any
+compressed data is written to it.</p>
+</li>
+<li><a class='view-title' id="*-A-Filename"></a><strong>A Filename</strong>
+<p>If <code class="inline"><span class="w">Append</span></code>
+ is enabled, the file will be opened in append mode. Otherwise
+the contents of the file, if any, will be truncated before any compressed
+data is written to it.</p>
+</li>
+<li><a class='view-title' id="*-A-Filehandle"></a><strong>A Filehandle</strong>
+<p>If <code class="inline"><span class="w">Append</span></code>
+ is enabled, the filehandle will be positioned to the end of
+the file via a call to <code class="inline"><a class="l_k" href="../../functions/seek.html">seek</a></code> before any compressed data is
+written to it.  Otherwise the file pointer will not be moved.</p>
+</li>
+</ul>
+<p>When <code class="inline"><span class="w">Append</span></code>
+ is specified, and set to true, it will <i>append</i> all compressed 
+data to the output data stream.</p>
+<p>So when the output is a filehandle it will carry out a seek to the eof
+before writing any compressed data. If the output is a filename, it will be opened for
+appending. If the output is a buffer, all compressed data will be appened to
+the existing buffer.</p>
+<p>Conversely when <code class="inline"><span class="w">Append</span></code>
+ is not specified, or it is present and is set to
+false, it will operate as follows.</p>
+<p>When the output is a filename, it will truncate the contents of the file
+before writing any compressed data. If the output is a filehandle
+its position will not be changed. If the output is a buffer, it will be
+wiped before any compressed data is output.</p>
+<p>Defaults to 0.</p>
+</li>
+</ul>
+<a class='view-head2' id="Examples"></a><h3 class='h3' >Examples</h3>
+<p>To read the contents of the file <code class="inline"><span class="w">file1</span>.<span class="w">txt</span></code>
+ and write the compressed
+data to the file <code class="inline"><span class="w">file1</span>.<span class="w">txt</span><span class="n">.1951</span></code>
+.</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../../functions/use.html">use</a> <span class="w">strict</span> <span class="sc">;</span></li><li>    <a class="l_k" href="../../functions/use.html">use</a> <span class="w">warnings</span> <span class="sc">;</span></li><li>    <a class="l_k" href="../../functions/use.html">use</a> <span class="w">IO::Compress::RawDeflate</span> <span class="q">qw(rawdeflate $RawDeflateError)</span> <span class="sc">;</span></li><li></li><li>    <a class="l_k" href="../../functions/my.html">my</a> <span class="i">$input</span> = <span class="q">&quot;file1.txt&quot;</span><span class="sc">;</span></li><li>    <span class="w">rawdeflate</span> <span class="i">$input</span> <span class="cm">=&gt;</span> <span class="q">&quot;$input.1951&quot;</span></li><li>        or <a class="l_k" href="../../functions/die.html">die</a> <span class="q">&quot;rawdeflate failed: $RawDeflateError\n&quot;</span><span class="sc">;</span></li></ol></pre><p>To read from an existing Perl filehandle, <code class="inline"><span class="i">$input</span></code>
+, and write the
+compressed data to a buffer, <code class="inline"><span class="i">$buffer</span></code>
+.</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../../functions/use.html">use</a> <span class="w">strict</span> <span class="sc">;</span></li><li>    <a class="l_k" href="../../functions/use.html">use</a> <span class="w">warnings</span> <span class="sc">;</span></li><li>    <a class="l_k" href="../../functions/use.html">use</a> <span class="w">IO::Compress::RawDeflate</span> <span class="q">qw(rawdeflate $RawDeflateError)</span> <span class="sc">;</span></li><li>    <a class="l_k" href="../../functions/use.html">use</a> <span class="w">IO::File</span> <span class="sc">;</span></li><li></li><li>    <a class="l_k" href="../../functions/my.html">my</a> <span class="i">$input</span> = <span class="w">new</span> <span class="w">IO::File</span> <span class="q">&quot;&lt;file1.txt&quot;</span></li><li>        or <a class="l_k" href="../../functions/die.html">die</a> <span class="q">&quot;Cannot open &#39;file1.txt&#39;: $!\n&quot;</span> <span class="sc">;</span></li><li>    <a class="l_k" href="../../functions/my.html">my</a> <span class="i">$buffer</span> <span class="sc">;</span></li><li>    <span class="w">rawdeflate</span> <span class="i">$input</span> <span class="cm">=&gt;</span> \<span class="i">$buffer</span> </li><li>        or <a class="l_k" href="../../functions/die.html">die</a> <span class="q">&quot;rawdeflate failed: $RawDeflateError\n&quot;</span><span class="sc">;</span></li></ol></pre><p>To compress all files in the directory "/my/home" that match "*.txt"
+and store the compressed data in the same directory</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../../functions/use.html">use</a> <span class="w">strict</span> <span class="sc">;</span></li><li>    <a class="l_k" href="../../functions/use.html">use</a> <span class="w">warnings</span> <span class="sc">;</span></li><li>    <a class="l_k" href="../../functions/use.html">use</a> <span class="w">IO::Compress::RawDeflate</span> <span class="q">qw(rawdeflate $RawDeflateError)</span> <span class="sc">;</span></li><li></li><li>    <span class="w">rawdeflate</span> <span class="q">&#39;&lt;/my/home/*.txt&gt;&#39;</span> <span class="cm">=&gt;</span> <span class="q">&#39;&lt;*.1951&gt;&#39;</span></li><li>        or <a class="l_k" href="../../functions/die.html">die</a> <span class="q">&quot;rawdeflate failed: $RawDeflateError\n&quot;</span><span class="sc">;</span></li></ol></pre><p>and if you want to compress each file one at a time, this will do the trick</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../../functions/use.html">use</a> <span class="w">strict</span> <span class="sc">;</span></li><li>    <a class="l_k" href="../../functions/use.html">use</a> <span class="w">warnings</span> <span class="sc">;</span></li><li>    <a class="l_k" href="../../functions/use.html">use</a> <span class="w">IO::Compress::RawDeflate</span> <span class="q">qw(rawdeflate $RawDeflateError)</span> <span class="sc">;</span></li><li></li><li>    for <a class="l_k" href="../../functions/my.html">my</a> <span class="i">$input</span> <span class="s">(</span> <a class="l_k" href="../../functions/glob.html">glob</a> <span class="q">&quot;/my/home/*.txt&quot;</span> <span class="s">)</span></li><li>    <span class="s">{</span></li><li>        <a class="l_k" href="../../functions/my.html">my</a> <span class="i">$output</span> = <span class="q">&quot;$input.1951&quot;</span> <span class="sc">;</span></li><li>        <span class="w">rawdeflate</span> <span class="i">$input</span> <span class="cm">=&gt;</span> <span class="i">$output</span> </li><li>            or <a class="l_k" href="../../functions/die.html">die</a> <span class="q">&quot;Error compressing &#39;$input&#39;: $RawDeflateError\n&quot;</span><span class="sc">;</span></li><li>    <span class="s">}</span></li></ol></pre><a class='view-head1' id="OO-Interface"></a><h2 class='h2' >OO Interface</h2>
+<a class='view-head2' id="Constructor"></a><h3 class='h3' >Constructor</h3>
+<p>The format of the constructor for <code class="inline"><span class="w">IO::Compress::RawDeflate</span></code>
+ is shown below</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../../functions/my.html">my</a> <span class="i">$z</span> = <span class="w">new</span> <span class="w">IO::Compress::RawDeflate</span> <span class="i">$output</span> [<span class="cm">,</span><span class="w">OPTS</span>]</li><li>        or <a class="l_k" href="../../functions/die.html">die</a> <span class="q">&quot;IO::Compress::RawDeflate failed: $RawDeflateError\n&quot;</span><span class="sc">;</span></li></ol></pre><p>It returns an <code class="inline"><span class="w">IO::Compress::RawDeflate</span></code>
+ object on success and undef on failure. 
+The variable <code class="inline"><span class="i">$RawDeflateError</span></code>
+ will contain an error message on failure.</p>
+<p>If you are running Perl 5.005 or better the object, <code class="inline"><span class="i">$z</span></code>
+, returned from 
+IO::Compress::RawDeflate can be used exactly like an <a href="../../IO/File.html">IO::File</a> filehandle. 
+This means that all normal output file operations can be carried out 
+with <code class="inline"><span class="i">$z</span></code>
+. 
+For example, to write to a compressed file/buffer you can use either of 
+these forms</p>
+<pre class="verbatim"><ol><li>    <span class="i">$z</span><span class="i">-&gt;print</span><span class="s">(</span><span class="q">&quot;hello world\n&quot;</span><span class="s">)</span><span class="sc">;</span></li><li>    <a class="l_k" href="../../functions/print.html">print</a> <span class="i">$z</span> <span class="q">&quot;hello world\n&quot;</span><span class="sc">;</span></li></ol></pre><p>The mandatory parameter <code class="inline"><span class="i">$output</span></code>
+ is used to control the destination
+of the compressed data. This parameter can take one of these forms.</p>
+<ul>
+<li><a class='view-title' id="A-filename"></a><strong>A filename</strong>
+<p>If the <code class="inline"><span class="i">$output</span></code>
+ parameter is a simple scalar, it is assumed to be a
+filename. This file will be opened for writing and the compressed data
+will be written to it.</p>
+</li>
+<li><a class='view-title' id="A-filehandle"></a><strong>A filehandle</strong>
+<p>If the <code class="inline"><span class="i">$output</span></code>
+ parameter is a filehandle, the compressed data will be
+written to it.
+The string '-' can be used as an alias for standard output.</p>
+</li>
+<li><a class='view-title' id="A-scalar-reference"></a><strong>A scalar reference</strong>
+<p>If <code class="inline"><span class="i">$output</span></code>
+ is a scalar reference, the compressed data will be stored
+in <code class="inline"><span class="i">$$output</span></code>
+.</p>
+</li>
+</ul>
+<p>If the <code class="inline"><span class="i">$output</span></code>
+ parameter is any other type, <code class="inline"><span class="w">IO::Compress::RawDeflate</span></code>
+::new will
+return undef.</p>
+<a class='view-head2' id="Constructor-Options"></a><h3 class='h3' >Constructor Options</h3>
+<p><code class="inline"><span class="w">OPTS</span></code>
+ is any combination of the following options:</p>
+<ul>
+<li><a class='view-title' id="AutoClose-%3d%3e-0%7c1"></a><strong><code class="inline"><span class="w">AutoClose</span> <span class="cm">=&gt;</span> <span class="n">0</span>|<span class="n">1</span></code>
+</strong>
+<p>This option is only valid when the <code class="inline"><span class="i">$output</span></code>
+ parameter is a filehandle. If
+specified, and the value is true, it will result in the <code class="inline"><span class="i">$output</span></code>
+ being
+closed once either the <code class="inline"><a class="l_k" href="../../functions/close.html">close</a></code> method is called or the <code class="inline"><span class="w">IO::Compress::RawDeflate</span></code>
+
+object is destroyed.</p>
+<p>This parameter defaults to 0.</p>
+</li>
+<li><a class='view-title' id="Append-%3d%3e-0%7c1"></a><strong><code class="inline"><span class="w">Append</span> <span class="cm">=&gt;</span> <span class="n">0</span>|<span class="n">1</span></code>
+</strong>
+<p>Opens <code class="inline"><span class="i">$output</span></code>
+ in append mode.</p>
+<p>The behaviour of this option is dependent on the type of <code class="inline"><span class="i">$output</span></code>
+.</p>
+<ul>
+<li><a class='view-title' id="*-A-Buffer"></a><strong>A Buffer</strong>
+<p>If <code class="inline"><span class="i">$output</span></code>
+ is a buffer and <code class="inline"><span class="w">Append</span></code>
+ is enabled, all compressed data
+will be append to the end of <code class="inline"><span class="i">$output</span></code>
+. Otherwise <code class="inline"><span class="i">$output</span></code>
+ will be
+cleared before any data is written to it.</p>
+</li>
+<li><a class='view-title' id="*-A-Filename"></a><strong>A Filename</strong>
+<p>If <code class="inline"><span class="i">$output</span></code>
+ is a filename and <code class="inline"><span class="w">Append</span></code>
+ is enabled, the file will be
+opened in append mode. Otherwise the contents of the file, if any, will be
+truncated before any compressed data is written to it.</p>
+</li>
+<li><a class='view-title' id="*-A-Filehandle"></a><strong>A Filehandle</strong>
+<p>If <code class="inline"><span class="i">$output</span></code>
+ is a filehandle, the file pointer will be positioned to the
+end of the file via a call to <code class="inline"><a class="l_k" href="../../functions/seek.html">seek</a></code> before any compressed data is written
+to it.  Otherwise the file pointer will not be moved.</p>
+</li>
+</ul>
+<p>This parameter defaults to 0.</p>
+</li>
+<li><a class='view-title' id="Merge-%3d%3e-0%7c1"></a><strong><code class="inline"><span class="w">Merge</span> <span class="cm">=&gt;</span> <span class="n">0</span>|<span class="n">1</span></code>
+</strong>
+<p>This option is used to compress input data and append it to an existing
+compressed data stream in <code class="inline"><span class="i">$output</span></code>
+. The end result is a single compressed
+data stream stored in <code class="inline"><span class="i">$output</span></code>
+.</p>
+<p>It is a fatal error to attempt to use this option when <code class="inline"><span class="i">$output</span></code>
+ is not an
+RFC 1951 data stream.</p>
+<p>There are a number of other limitations with the <code class="inline"><span class="w">Merge</span></code>
+ option:</p>
+<dl>
+<li>
+<p>This module needs to have been built with zlib 1.2.1 or better to work. A
+fatal error will be thrown if <code class="inline"><span class="w">Merge</span></code>
+ is used with an older version of
+zlib.</p>
+</li>
+<li>
+<p>If <code class="inline"><span class="i">$output</span></code>
+ is a file or a filehandle, it must be seekable.</p>
+</li>
+</dl>
+<p>This parameter defaults to 0.</p>
+</li>
+<li><a class='view-title' id="-Level"></a><strong>-Level</strong>
+<p>Defines the compression level used by zlib. The value should either be
+a number between 0 and 9 (0 means no compression and 9 is maximum
+compression), or one of the symbolic constants defined below.</p>
+<pre class="verbatim"><ol><li>   <span class="w">Z_NO_COMPRESSION</span></li><li>   <span class="w">Z_BEST_SPEED</span></li><li>   <span class="w">Z_BEST_COMPRESSION</span></li><li>   <span class="w">Z_DEFAULT_COMPRESSION</span></li></ol></pre><p>The default is Z_DEFAULT_COMPRESSION.</p>
+<p>Note, these constants are not imported by <code class="inline"><span class="w">IO::Compress::RawDeflate</span></code>
+ by default.</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../../functions/use.html">use</a> <span class="w">IO::Compress::RawDeflate</span> <span class="q">qw(:strategy)</span><span class="sc">;</span></li><li>    <a class="l_k" href="../../functions/use.html">use</a> <span class="w">IO::Compress::RawDeflate</span> <span class="q">qw(:constants)</span><span class="sc">;</span></li><li>    <a class="l_k" href="../../functions/use.html">use</a> <span class="w">IO::Compress::RawDeflate</span> <span class="q">qw(:all)</span><span class="sc">;</span></li></ol></pre></li>
+<li><a class='view-title' id="-Strategy"></a><strong>-Strategy</strong>
+<p>Defines the strategy used to tune the compression. Use one of the symbolic
+constants defined below.</p>
+<pre class="verbatim"><ol><li>   <span class="w">Z_FILTERED</span></li><li>   <span class="w">Z_HUFFMAN_ONLY</span></li><li>   <span class="w">Z_RLE</span></li><li>   <span class="w">Z_FIXED</span></li><li>   <span class="w">Z_DEFAULT_STRATEGY</span></li></ol></pre><p>The default is Z_DEFAULT_STRATEGY.</p>
+</li>
+<li><a class='view-title' id="Strict-%3d%3e-0%7c1"></a><strong><code class="inline"><span class="w">Strict</span> <span class="cm">=&gt;</span> <span class="n">0</span>|<span class="n">1</span></code>
+</strong>
+<p>This is a placeholder option.</p>
+</li>
+</ul>
+<a class='view-head2' id="Examples"></a><h3 class='h3' >Examples</h3>
+<p>TODO</p>
+<a class='view-head1' id="Methods"></a><h2 class='h2' >Methods</h2>
+<a class='view-head2' id="print"></a><h3 class='h3' >print</h3>
+<p>Usage is</p>
+<pre class="verbatim"><ol><li>    <span class="i">$z</span><span class="i">-&gt;print</span><span class="s">(</span><span class="i">$data</span><span class="s">)</span></li><li>    <a class="l_k" href="../../functions/print.html">print</a> <span class="i">$z</span> <span class="i">$data</span></li></ol></pre><p>Compresses and outputs the contents of the <code class="inline"><span class="i">$data</span></code>
+ parameter. This
+has the same behaviour as the <code class="inline"><a class="l_k" href="../../functions/print.html">print</a></code> built-in.</p>
+<p>Returns true if successful.</p>
+<a class='view-head2' id="printf"></a><h3 class='h3' >printf</h3>
+<p>Usage is</p>
+<pre class="verbatim"><ol><li>    <span class="i">$z</span><span class="i">-&gt;printf</span><span class="s">(</span><span class="i">$format</span><span class="cm">,</span> <span class="i">$data</span><span class="s">)</span></li><li>    <a class="l_k" href="../../functions/printf.html">printf</a> <span class="i">$z</span> <span class="i">$format</span><span class="cm">,</span> <span class="i">$data</span></li></ol></pre><p>Compresses and outputs the contents of the <code class="inline"><span class="i">$data</span></code>
+ parameter.</p>
+<p>Returns true if successful.</p>
+<a class='view-head2' id="syswrite"></a><h3 class='h3' >syswrite</h3>
+<p>Usage is</p>
+<pre class="verbatim"><ol><li>    <span class="i">$z</span><span class="i">-&gt;syswrite</span> <span class="i">$data</span></li><li>    <span class="i">$z</span><span class="i">-&gt;syswrite</span> <span class="i">$data</span><span class="cm">,</span> <span class="i">$length</span></li><li>    <span class="i">$z</span><span class="i">-&gt;syswrite</span> <span class="i">$data</span><span class="cm">,</span> <span class="i">$length</span><span class="cm">,</span> <span class="i">$offset</span></li></ol></pre><p>Compresses and outputs the contents of the <code class="inline"><span class="i">$data</span></code>
+ parameter.</p>
+<p>Returns the number of uncompressed bytes written, or <code class="inline"><a class="l_k" href="../../functions/undef.html">undef</a></code> if
+unsuccessful.</p>
+<a class='view-head2' id="write"></a><h3 class='h3' >write</h3>
+<p>Usage is</p>
+<pre class="verbatim"><ol><li>    <span class="i">$z</span><span class="i">-&gt;write</span> <span class="i">$data</span></li><li>    <span class="i">$z</span><span class="i">-&gt;write</span> <span class="i">$data</span><span class="cm">,</span> <span class="i">$length</span></li><li>    <span class="i">$z</span><span class="i">-&gt;write</span> <span class="i">$data</span><span class="cm">,</span> <span class="i">$length</span><span class="cm">,</span> <span class="i">$offset</span></li></ol></pre><p>Compresses and outputs the contents of the <code class="inline"><span class="i">$data</span></code>
+ parameter.</p>
+<p>Returns the number of uncompressed bytes written, or <code class="inline"><a class="l_k" href="../../functions/undef.html">undef</a></code> if
+unsuccessful.</p>
+<a class='view-head2' id="flush"></a><h3 class='h3' >flush</h3>
+<p>Usage is</p>
+<pre class="verbatim"><ol><li>    <span class="i">$z</span><span class="i">-&gt;flush</span><span class="sc">;</span></li><li>    <span class="i">$z</span><span class="i">-&gt;flush</span><span class="s">(</span><span class="i">$flush_type</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>Flushes any pending compressed data to the output file/buffer.</p>
+<p>This method takes an optional parameter, <code class="inline"><span class="i">$flush_type</span></code>
+, that controls
+how the flushing will be carried out. By default the <code class="inline"><span class="i">$flush_type</span></code>
+
+used is <code class="inline"><span class="w">Z_FINISH</span></code>
+. Other valid values for <code class="inline"><span class="i">$flush_type</span></code>
+ are
+<code class="inline"><span class="w">Z_NO_FLUSH</span></code>
+, <code class="inline"><span class="w">Z_SYNC_FLUSH</span></code>
+, <code class="inline"><span class="w">Z_FULL_FLUSH</span></code>
+ and <code class="inline"><span class="w">Z_BLOCK</span></code>
+. It is
+strongly recommended that you only set the <code class="inline"><span class="w">flush_type</span></code>
+ parameter if
+you fully understand the implications of what it does - overuse of <code class="inline"><span class="w">flush</span></code>
+
+can seriously degrade the level of compression achieved. See the <code class="inline"><span class="w">zlib</span></code>
+
+documentation for details.</p>
+<p>Returns true on success.</p>
+<a class='view-head2' id="tell"></a><h3 class='h3' >tell</h3>
+<p>Usage is</p>
+<pre class="verbatim"><ol><li>    <span class="i">$z</span><span class="i">-&gt;tell</span><span class="s">(</span><span class="s">)</span></li><li>    <a class="l_k" href="../../functions/tell.html">tell</a> <span class="i">$z</span></li></ol></pre><p>Returns the uncompressed file offset.</p>
+<a class='view-head2' id="eof"></a><h3 class='h3' >eof</h3>
+<p>Usage is</p>
+<pre class="verbatim"><ol><li>    <span class="i">$z</span><span class="i">-&gt;eof</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li><li>    <a class="l_k" href="../../functions/eof.html">eof</a><span class="s">(</span><span class="i">$z</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>Returns true if the <code class="inline"><a class="l_k" href="../../functions/close.html">close</a></code> method has been called.</p>
+<a class='view-head2' id="seek"></a><h3 class='h3' >seek</h3>
+<pre class="verbatim"><ol><li>    <span class="i">$z</span><span class="i">-&gt;seek</span><span class="s">(</span><span class="i">$position</span><span class="cm">,</span> <span class="i">$whence</span><span class="s">)</span><span class="sc">;</span></li><li>    <a class="l_k" href="../../functions/seek.html">seek</a><span class="s">(</span><span class="i">$z</span><span class="cm">,</span> <span class="i">$position</span><span class="cm">,</span> <span class="i">$whence</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>Provides a sub-set of the <code class="inline"><a class="l_k" href="../../functions/seek.html">seek</a></code> functionality, with the restriction
+that it is only legal to seek forward in the output file/buffer.
+It is a fatal error to attempt to seek backward.</p>
+<p>Empty parts of the file/buffer will have NULL (0x00) bytes written to them.</p>
+<p>The <code class="inline"><span class="i">$whence</span></code>
+ parameter takes one the usual values, namely SEEK_SET,
+SEEK_CUR or SEEK_END.</p>
+<p>Returns 1 on success, 0 on failure.</p>
+<a class='view-head2' id="binmode"></a><h3 class='h3' >binmode</h3>
+<p>Usage is</p>
+<pre class="verbatim"><ol><li>    <span class="i">$z</span><span class="i">-&gt;binmode</span></li><li>    <a class="l_k" href="../../functions/binmode.html">binmode</a> <span class="i">$z</span> <span class="sc">;</span></li></ol></pre><p>This is a noop provided for completeness.</p>
+<a class='view-head2' id="opened"></a><h3 class='h3' >opened</h3>
+<pre class="verbatim"><ol><li>    <span class="i">$z</span><span class="i">-&gt;opened</span><span class="s">(</span><span class="s">)</span></li></ol></pre><p>Returns true if the object currently refers to a opened file/buffer.</p>
+<a class='view-head2' id="autoflush"></a><h3 class='h3' >autoflush</h3>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../../functions/my.html">my</a> <span class="i">$prev</span> = <span class="i">$z</span><span class="i">-&gt;autoflush</span><span class="s">(</span><span class="s">)</span></li><li>    <a class="l_k" href="../../functions/my.html">my</a> <span class="i">$prev</span> = <span class="i">$z</span><span class="i">-&gt;autoflush</span><span class="s">(</span><span class="w">EXPR</span><span class="s">)</span></li></ol></pre><p>If the <code class="inline"><span class="i">$z</span></code>
+ object is associated with a file or a filehandle, this method
+returns the current autoflush setting for the underlying filehandle. If
+<code class="inline"><span class="w">EXPR</span></code>
+ is present, and is non-zero, it will enable flushing after every
+write/print operation.</p>
+<p>If <code class="inline"><span class="i">$z</span></code>
+ is associated with a buffer, this method has no effect and always
+returns <code class="inline"><a class="l_k" href="../../functions/undef.html">undef</a></code>.</p>
+<p><strong>Note</strong> that the special variable <code class="inline"><span class="i">$|</span></code>
+ <strong>cannot</strong> be used to set or
+retrieve the autoflush setting.</p>
+<a class='view-head2' id="input_line_number"></a><h3 class='h3' >input_line_number</h3>
+<pre class="verbatim"><ol><li>    <span class="i">$z</span><span class="i">-&gt;input_line_number</span><span class="s">(</span><span class="s">)</span></li><li>    <span class="i">$z</span><span class="i">-&gt;input_line_number</span><span class="s">(</span><span class="w">EXPR</span><span class="s">)</span></li></ol></pre><p>This method always returns <code class="inline"><a class="l_k" href="../../functions/undef.html">undef</a></code> when compressing.</p>
+<a class='view-head2' id="fileno"></a><h3 class='h3' >fileno</h3>
+<pre class="verbatim"><ol><li>    <span class="i">$z</span><span class="i">-&gt;fileno</span><span class="s">(</span><span class="s">)</span></li><li>    <a class="l_k" href="../../functions/fileno.html">fileno</a><span class="s">(</span><span class="i">$z</span><span class="s">)</span></li></ol></pre><p>If the <code class="inline"><span class="i">$z</span></code>
+ object is associated with a file or a filehandle, <code class="inline"><a class="l_k" href="../../functions/fileno.html">fileno</a></code>
+will return the underlying file descriptor. Once the <code class="inline"><a class="l_k" href="../../functions/close.html">close</a></code> method is
+called <code class="inline"><a class="l_k" href="../../functions/fileno.html">fileno</a></code> will return <code class="inline"><a class="l_k" href="../../functions/undef.html">undef</a></code>.</p>
+<p>If the <code class="inline"><span class="i">$z</span></code>
+ object is is associated with a buffer, this method will return
+<code class="inline"><a class="l_k" href="../../functions/undef.html">undef</a></code>.</p>
+<a class='view-head2' id="close"></a><h3 class='h3' >close</h3>
+<pre class="verbatim"><ol><li>    <span class="i">$z</span><span class="i">-&gt;close</span><span class="s">(</span><span class="s">)</span> <span class="sc">;</span></li><li>    <a class="l_k" href="../../functions/close.html">close</a> <span class="i">$z</span> <span class="sc">;</span></li></ol></pre><p>Flushes any pending compressed data and then closes the output file/buffer.</p>
+<p>For most versions of Perl this method will be automatically invoked if
+the IO::Compress::RawDeflate object is destroyed (either explicitly or by the
+variable with the reference to the object going out of scope). The
+exceptions are Perl versions 5.005 through 5.00504 and 5.8.0. In
+these cases, the <code class="inline"><a class="l_k" href="../../functions/close.html">close</a></code> method will be called automatically, but
+not until global destruction of all live objects when the program is
+terminating.</p>
+<p>Therefore, if you want your scripts to be able to run on all versions
+of Perl, you should call <code class="inline"><a class="l_k" href="../../functions/close.html">close</a></code> explicitly and not rely on automatic
+closing.</p>
+<p>Returns true on success, otherwise 0.</p>
+<p>If the <code class="inline"><span class="w">AutoClose</span></code>
+ option has been enabled when the IO::Compress::RawDeflate
+object was created, and the object is associated with a file, the
+underlying file will also be closed.</p>
+<a class='view-head2' id="newStream(%5bOPTS%5d)"></a><h3 class='h3' >newStream([OPTS])</h3>
+<p>Usage is</p>
+<pre class="verbatim"><ol><li>    <span class="i">$z</span><span class="i">-&gt;newStream</span><span class="s">(</span> <span class="s">[</span><span class="w">OPTS</span><span class="s">]</span> <span class="s">)</span></li></ol></pre><p>Closes the current compressed data stream and starts a new one.</p>
+<p>OPTS consists of any of the the options that are available when creating
+the <code class="inline"><span class="i">$z</span></code>
+ object.</p>
+<p>See the <a href="#Constructor-Options">Constructor Options</a> section for more details.</p>
+<a class='view-head2' id="deflateParams"></a><h3 class='h3' >deflateParams</h3>
+<p>Usage is</p>
+<pre class="verbatim"><ol><li>    <span class="i">$z</span><span class="i">-&gt;deflateParams</span></li></ol></pre><p>TODO</p>
+<a class='view-head1' id="Importing"></a><h2 class='h2' >Importing</h2>
+<p>A number of symbolic constants are required by some methods in 
+<code class="inline"><span class="w">IO::Compress::RawDeflate</span></code>
+. None are imported by default.</p>
+<ul>
+<li><a class='view-title' id="%3aall"></a><strong>:all</strong>
+<p>Imports <code class="inline"><span class="w">rawdeflate</span></code>
+, <code class="inline"><span class="i">$RawDeflateError</span></code>
+ and all symbolic
+constants that can be used by <code class="inline"><span class="w">IO::Compress::RawDeflate</span></code>
+. Same as doing this</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../../functions/use.html">use</a> <span class="w">IO::Compress::RawDeflate</span> <span class="q">qw(rawdeflate $RawDeflateError :constants)</span> <span class="sc">;</span></li></ol></pre></li>
+<li><a class='view-title' id="%3aconstants"></a><strong>:constants</strong>
+<p>Import all symbolic constants. Same as doing this</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../../functions/use.html">use</a> <span class="w">IO::Compress::RawDeflate</span> <span class="q">qw(:flush :level :strategy)</span> <span class="sc">;</span></li></ol></pre></li>
+<li><a class='view-title' id="%3aflush"></a><strong>:flush</strong>
+<p>These symbolic constants are used by the <code class="inline"><span class="w">flush</span></code>
+ method.</p>
+<pre class="verbatim"><ol><li>    <span class="w">Z_NO_FLUSH</span></li><li>    <span class="w">Z_PARTIAL_FLUSH</span></li><li>    <span class="w">Z_SYNC_FLUSH</span></li><li>    <span class="w">Z_FULL_FLUSH</span></li><li>    <span class="w">Z_FINISH</span></li><li>    <span class="w">Z_BLOCK</span></li></ol></pre></li>
+<li><a class='view-title' id="%3alevel"></a><strong>:level</strong>
+<p>These symbolic constants are used by the <code class="inline"><span class="w">Level</span></code>
+ option in the constructor.</p>
+<pre class="verbatim"><ol><li>    <span class="w">Z_NO_COMPRESSION</span></li><li>    <span class="w">Z_BEST_SPEED</span></li><li>    <span class="w">Z_BEST_COMPRESSION</span></li><li>    <span class="w">Z_DEFAULT_COMPRESSION</span></li></ol></pre></li>
+<li><a class='view-title' id="%3astrategy"></a><strong>:strategy</strong>
+<p>These symbolic constants are used by the <code class="inline"><span class="w">Strategy</span></code>
+ option in the constructor.</p>
+<pre class="verbatim"><ol><li>    <span class="w">Z_FILTERED</span></li><li>    <span class="w">Z_HUFFMAN_ONLY</span></li><li>    <span class="w">Z_RLE</span></li><li>    <span class="w">Z_FIXED</span></li><li>    <span class="w">Z_DEFAULT_STRATEGY</span></li></ol></pre></li>
+</ul>
+<a class='view-head1' id="EXAMPLES"></a><h2 class='h2' >EXAMPLES</h2>
+<a class='view-head2' id="Apache%3a%3aGZip-Revisited"></a><h3 class='h3' >Apache::GZip Revisited</h3>
+<p>See <a href="https://search.cpan.org/perldoc/IO::Compress::FAQ#Apache%3a%3aGZip-Revisited">IO::Compress::FAQ</a></p>
+<a class='view-head2' id="Working-with-Net%3a%3aFTP"></a><h3 class='h3' >Working with Net::FTP</h3>
+<p>See <a href="https://search.cpan.org/perldoc/IO::Compress::FAQ#Compressed-files-and-Net%3a%3aFTP">IO::Compress::FAQ</a></p>
+<a class='view-head1' id="SEE-ALSO"></a><h2 class='h2' >SEE ALSO</h2>
+<p><a href="../../Compress/Zlib.html">Compress::Zlib</a>, <a href="../../IO/Compress/Gzip.html">IO::Compress::Gzip</a>, <a href="../../IO/Uncompress/Gunzip.html">IO::Uncompress::Gunzip</a>, <a href="../../IO/Compress/Deflate.html">IO::Compress::Deflate</a>, <a href="../../IO/Uncompress/Inflate.html">IO::Uncompress::Inflate</a>, <a href="../../IO/Uncompress/RawInflate.html">IO::Uncompress::RawInflate</a>, <a href="../../IO/Compress/Bzip2.html">IO::Compress::Bzip2</a>, <a href="../../IO/Uncompress/Bunzip2.html">IO::Uncompress::Bunzip2</a>, <a href="https://search.cpan.org/perldoc/IO::Compress::Lzma">IO::Compress::Lzma</a>, <a href="https://search.cpan.org/perldoc/IO::Uncompress::UnLzma">IO::Uncompress::UnLzma</a>, <a href="https://search.cpan.org/perldoc/IO::Compress::Xz">IO::Compress::Xz</a>, <a href="https://search.cpan.org/perldoc/IO::Uncompress::UnXz">IO::Uncompress::UnXz</a>, <a href="https://search.cpan.org/perldoc/IO::Compress::Lzop">IO::Compress::Lzop</a>, <a href="https://search.cpan.org/perldoc/IO::Uncompress::UnLzop">IO::Uncompress::UnLzop</a>, <a href="https://search.cpan.org/perldoc/IO::Compress::Lzf">IO::Compress::Lzf</a>, <a href="https://search.cpan.org/perldoc/IO::Uncompress::UnLzf">IO::Uncompress::UnLzf</a>, <a href="../../IO/Uncompress/AnyInflate.html">IO::Uncompress::AnyInflate</a>, <a href="../../IO/Uncompress/AnyUncompress.html">IO::Uncompress::AnyUncompress</a></p>
+<p><a href="https://search.cpan.org/perldoc/Compress::Zlib::FAQ">Compress::Zlib::FAQ</a></p>
+<p><a href="../../File/GlobMapper.html">File::GlobMapper</a>, <a href="https://search.cpan.org/perldoc/Archive::Zip">Archive::Zip</a>,
+<a href="../../Archive/Tar.html">Archive::Tar</a>,
+<a href="../../IO/Zlib.html">IO::Zlib</a></p>
+<p>For RFC 1950, 1951 and 1952 see 
+<i><a href="http://www.faqs.org/rfcs/rfc1950.html">http://www.faqs.org/rfcs/rfc1950.html</a></i>,
+<i><a href="http://www.faqs.org/rfcs/rfc1951.html">http://www.faqs.org/rfcs/rfc1951.html</a></i> and
+<i><a href="http://www.faqs.org/rfcs/rfc1952.html">http://www.faqs.org/rfcs/rfc1952.html</a></i></p>
+<p>The <i>zlib</i> compression library was written by Jean-loup Gailly
+<i>gzip@prep.ai.mit.edu</i> and Mark Adler <i>madler@alumni.caltech.edu</i>.</p>
+<p>The primary site for the <i>zlib</i> compression library is
+<i><a href="http://www.zlib.org">http://www.zlib.org</a></i>.</p>
+<p>The primary site for gzip is <i><a href="http://www.gzip.org">http://www.gzip.org</a></i>.</p>
+<a class='view-head1' id="AUTHOR"></a><h2 class='h2' >AUTHOR</h2>
+<p>This module was written by Paul Marquess, <i>pmqs@cpan.org</i>.</p>
+<a class='view-head1' id="MODIFICATION-HISTORY"></a><h2 class='h2' >MODIFICATION HISTORY</h2>
+<p>See the Changes file.</p>
+<a class='view-head1' id="COPYRIGHT-AND-LICENSE"></a><h2 class='h2' >COPYRIGHT AND LICENSE</h2>
+<p>Copyright (c) 2005-2010 Paul Marquess. All rights reserved.</p>
+<p>This program is free software; you can redistribute it and/or
+modify it under the same terms as Perl itself.</p>
+
+
+
+
+      <ul><li><a href="#NAME">NAME</a></li><li><a href="#SYNOPSIS">SYNOPSIS</a></li><li><a href="#DESCRIPTION">DESCRIPTION</a></li><li><a href="#Functional-Interface">Functional Interface</a></li><ul><li><a href="#rawdeflate-%24input-%3d%3e-%24output-%5b%2c-OPTS%5d">rawdeflate $input => $output [, OPTS]</a></li><li><a href="#Notes">Notes</a></li><li><a href="#Optional-Parameters">Optional Parameters</a></li><li><a href="#Examples">Examples</a></li></ul><li><a href="#OO-Interface">OO Interface</a></li><ul><li><a href="#Constructor">Constructor</a></li><li><a href="#Constructor-Options">Constructor Options</a></li><li><a href="#Examples">Examples</a></li></ul><li><a href="#Methods">Methods</a></li><ul><li><a href="#print">print</a></li><li><a href="#printf">printf</a></li><li><a href="#syswrite">syswrite</a></li><li><a href="#write">write</a></li><li><a href="#flush">flush</a></li><li><a href="#tell">tell</a></li><li><a href="#eof">eof</a></li><li><a href="#seek">seek</a></li><li><a href="#binmode">binmode</a></li><li><a href="#opened">opened</a></li><li><a href="#autoflush">autoflush</a></li><li><a href="#input_line_number">input_line_number</a></li><li><a href="#fileno">fileno</a></li><li><a href="#close">close</a></li><li><a href="#newStream(%5bOPTS%5d)">newStream([OPTS])</a></li><li><a href="#deflateParams">deflateParams</a></li></ul><li><a href="#Importing">Importing</a></li><li><a href="#EXAMPLES">EXAMPLES</a></li><ul><li><a href="#Apache%3a%3aGZip-Revisited">Apache::GZip Revisited</a></li><li><a href="#Working-with-Net%3a%3aFTP">Working with Net::FTP</a></li></ul><li><a href="#SEE-ALSO">SEE ALSO</a></li><li><a href="#AUTHOR">AUTHOR</a></li><li><a href="#MODIFICATION-HISTORY">MODIFICATION HISTORY</a></li><li><a href="#COPYRIGHT-AND-LICENSE">COPYRIGHT AND LICENSE</a></li></ul>
+
+
+                  </div>
+                </article>
+              </div>
+            </div>
+          </main>
+        </div>
+           <footer class="footer row bg-light pt-5 pb-5">
+       <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+           <div class="row">
+               <div class="col-md-4">
+                   <ul class="list-unstyled">
+                       <li>
+                           <h4>Site info</h4>
+                       </li>
+                       <li>Docs mantained by
+                           <a href="//lists.perl.org/list/perl5-porters.html"
+                               rel="noopener">Perl 5 Porters</a>
+                       </li>
+                       <li>Perldoc site development sponsored by
+                           <a href="//opusvl.com" rel="noopener">
+                           <img style="margin: 20px 20px 5px 10px" class="opus-logo" src="/public/img/opusvl_logo.svg" alt="OpusVL Logo">
+                        </a>
+                    <li><span class="about_perldoc"><a href="//about.html">About PerlDOC</a></span>
+                    </li>
+                       </li>
+                   </ul>
+               </div>
+               <div class="col-md-8">
+                   <div class="row">
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Manuals</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.12.4/index-overview.html">Overview</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.12.4/index-tutorials.html">Tutorials</a>
+                               </li>
+                               <li>
+                                   <a href="/5.12.4/index-faq.html">FAQs</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.12.4/index-history.html">Changes</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Reference</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.12.4/index-language.html">Language</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.12.4/index-functions.html">Functions</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.12.4/perlop.html">Operators</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.12.4/perlvar.html">Variables</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Modules</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.12.4/index-modules-A.html">Modules</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.12.4/index-pragmas.html">Pragmas</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.12.4/index-utilities.html">Utilities</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Misc</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.12.4/index-licence.html">License</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.12.4/index-internals.html">Internals</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.12.4/index-platforms.html">Platforms</a>
+                               </li>
+                            <li>
+                                <a
+                                    href="/5.12.4/index-about.html">About</a>
+                            </li>
+                           </ul>
+                       </div>
+                   </div>
+               </div>
+               <div class=" col-12 footer-inf text-center">
+                   <small>perldoc.perl.org - Official documentation for the Perl
+                       programming language</small>
+               </div>
+           </div>
+       </div>
+   </footer>
+
+        	<div class="beta-wrapper beta-bottom-right ">
+		<div class="beta beta-blue  ">
+			<a class="beta-link "
+				href="//github.com/OpusVL/perldoc.perl.org/issues/new" rel="noopener">
+				<span class="beta-text">
+					This website is a Beta release.
+				</span>
+				<span class="beta-text">
+					For any issues please raise a ticket on GitHub
+				</span>
+			</a>
+		</div>
+	</div>
+
+        <script src="/public/js/main.min.js"></script>
+      </body>
+
+      </html>

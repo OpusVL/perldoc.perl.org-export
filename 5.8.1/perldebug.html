@@ -1,0 +1,1585 @@
+      
+      
+      
+      
+
+      <!DOCTYPE html>
+      <html lang="en">
+
+      <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="perldebug - perldoc.perl.org">
+        <link rel="icon" href="/public/img/favicon.ico">
+        <title>perldebug - perldoc.perl.org</title>
+        <link href="/public/css/main.min.css" rel="stylesheet">
+        <link rel="canonical" href="/perldebug.html">
+        <link
+          href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900'
+          rel='stylesheet' type='text/css'>
+        <script>
+          window.ga = window.ga || function () {
+            (ga.q = ga.q || []).push(arguments)
+          };
+          ga.l = +new Date;
+          ga('create', 'UA-1892152-2', 'auto'); // JJ's account
+          ga('create', 'UA-50555-3', 'auto', 'perlOrg'); // perl.org account
+          ga('require', 'outboundLinkTracker', {
+            events: ['click', 'auxclick', 'contextmenu'],
+          });
+          ga('require', 'maxScrollTracker');
+          ga('send', 'pageview');
+          ga('perlOrg.send', 'pageview');
+        </script>
+        <script async src="https://www.google-analytics.com/analytics.js">
+        </script>
+        <script async src="/public/js/tracking.min.js"></script>
+      </head>
+
+      <body class="body container-fluid ">
+        <div class="wrapper">
+
+          <nav
+    class="navbar navbar-dark bg-primary bg-perl fixed-top justify-content-between navbar-expand-lg">
+    <a href="#content" class="skippy sr-only sr-only-focusable">
+        <span class=' skippy-text'>Skip to main content</span>
+    </a>
+    <a class="navbar-brand" href="/">
+        <img class="logo" src="/public/img/logo_perl_doc.svg"
+            alt="Perl Documentation Logo" />
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse"
+        data-target="#navbar" aria-controls="navbar" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="navbar" class="collapse navbar-collapse ">
+        <ul class="navbar-nav ml-auto navbar-right">
+            <form class="nav-item dropdown search-wrapper">
+                <input type="text" id='searchinput' aria-describedby='navbarDropdown5'
+                    placeholder="Type query" class='search-input-field' value=''>
+
+                <button href="#" data-toggle='dropdown' type="button"
+                    aria-haspopup="true" aria-expanded='false' id="navbarDropdown5"
+                    class="nav-link dropdown-toggle search-link">
+                    <object tabindex='-1' focusable="false" class='search-icon'
+                        data="/public/img/search.svg" type="image/svg+xml"
+                        name='search icon'>search
+                        icon</object>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown5"
+                    id='search-results'>
+                    <p class='dropdown-item major-version'>
+                        No results
+                    </p>
+                </div>
+            </form>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown" href="#" class="nav-link dropdown-toggle"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Perl versions</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    
+                        <p class='dropdown-item major-version'>
+                            5.32
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.32.0/">5.32.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.30
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.3/">5.30.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.2/">5.30.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.1/">5.30.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.0/">5.30.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.28
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.3/">5.28.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.2/">5.28.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.1/">5.28.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.0/">5.28.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.26
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.3/">5.26.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.2/">5.26.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.1/">5.26.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.0/">5.26.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.24
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.4/">5.24.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.3/">5.24.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.2/">5.24.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.1/">5.24.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.0/">5.24.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.22
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.4/">5.22.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.3/">5.22.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.2/">5.22.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.1/">5.22.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.0/">5.22.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.20
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.3/">5.20.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.2/">5.20.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.1/">5.20.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.0/">5.20.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.18
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.4/">5.18.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.3/">5.18.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.2/">5.18.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.1/">5.18.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.0/">5.18.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.16
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.3/">5.16.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.2/">5.16.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.1/">5.16.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.0/">5.16.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.14
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.4/">5.14.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.3/">5.14.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.2/">5.14.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.1/">5.14.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.0/">5.14.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.12
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.5/">5.12.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.4/">5.12.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.3/">5.12.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.2/">5.12.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.1/">5.12.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.0/">5.12.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.10
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.1/">5.10.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.0/">5.10.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.8
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.9/">5.8.9</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.8/">5.8.8</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.7/">5.8.7</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.6/">5.8.6</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.5/">5.8.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.4/">5.8.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.3/">5.8.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.2/">5.8.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.1/">5.8.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.0/">5.8.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.6
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.2/">5.6.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.1/">5.6.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.0/">5.6.0</a>
+                        
+                        
+                    
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown1" href="#" class="dropdown-toggle nav-link"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Manuals</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                    <a class="dropdown-item"
+                        href="/5.8.1/index-overview.html">Overview</a>
+                    <a class="dropdown-item"
+                        href="/5.8.1/index-tutorials.html">Tutorials</a>
+                    <a class="dropdown-item"
+                        href="/5.8.1/index-faq.html">FAQs</a>
+                    <a class="dropdown-item"
+                        href="/5.8.1/index-history.html">Changes</a>
+                    <a class="dropdown-item"
+                        href="/5.8.1/index-licence.html">License</a>
+                    <a class="dropdown-item"
+                        href="/5.8.1/index-language.html">Language</a>
+                    <a class="dropdown-item"
+                        href="/5.8.1/index-functions.html">Functions</a>
+                    <a class="dropdown-item"
+                        href="/5.8.1/perlop.html">Operators</a>
+                    <a class="dropdown-item"
+                        href="/5.8.1/perlvar.html">Variables</a>
+                    <a class="dropdown-item"
+                        href="/5.8.1/index-pragmas.html">Pragmas</a>
+                    <a class="dropdown-item"
+                        href="/5.8.1/index-utilities.html">Utilities</a>
+                    <a class="dropdown-item"
+                        href="/5.8.1/index-internals.html">Internals</a>
+                    <a class="dropdown-item"
+                        href="/5.8.1/index-platforms.html">Platforms</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown3" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Modules</a>
+                <div aria-labelledby="navbarDropdown3"
+                    class="dropdown-menu letters-wrap">
+                    <!--<a class="dropdown-item"
+                        href="/5.8.1/index-modules.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.8.1/index-modules-by-cat.html">By
+                        Category</a>-->
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.8.1/index-modules-A.html">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.1/index-modules-B.html">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.1/index-modules-C.html">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.1/index-modules-D.html">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.1/index-modules-E.html">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.1/index-modules-F.html">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.1/index-modules-G.html">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.1/index-modules-H.html">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.1/index-modules-I.html">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.1/index-modules-J.html">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.1/index-modules-K.html">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.1/index-modules-L.html">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.1/index-modules-M.html">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.1/index-modules-N.html">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.1/index-modules-O.html">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.1/index-modules-P.html">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.1/index-modules-Q.html">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.1/index-modules-R.html">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.1/index-modules-S.html">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.1/index-modules-T.html">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.1/index-modules-U.html">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.1/index-modules-V.html">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.1/index-modules-W.html">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.1/index-modules-X.html">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.1/index-modules-Y.html">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.1/index-modules-Z.html">Z</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown4" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Functions</a>
+                <div aria-labelledby="navbarDropdown4"
+                    class="dropdown-menu letters-wrap">
+                    <a class="dropdown-item"
+                        href="/5.8.1/index-functions.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.8.1/index-functions-by-cat.html">By
+                        Category</a>
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.8.1/index-functions.html#A">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.1/index-functions.html#B">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.1/index-functions.html#C">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.1/index-functions.html#D">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.1/index-functions.html#E">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.1/index-functions.html#F">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.1/index-functions.html#G">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.1/index-functions.html#H">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.1/index-functions.html#I">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.1/index-functions.html#J">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.1/index-functions.html#K">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.1/index-functions.html#L">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.1/index-functions.html#M">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.1/index-functions.html#N">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.1/index-functions.html#O">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.1/index-functions.html#P">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.1/index-functions.html#Q">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.1/index-functions.html#R">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.1/index-functions.html#S">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.1/index-functions.html#T">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.1/index-functions.html#U">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.1/index-functions.html#V">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.1/index-functions.html#W">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.1/index-functions.html#X">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.1/index-functions.html#Y">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.1/index-functions.html#Z">Z</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!--/.nav-collapse -->
+</nav>
+
+
+          <main class="row main-content pb-5 pt-5" id='content'>
+            <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+              <div class="row">
+                <div class="col-sm-12">
+                  <div id="breadcrumbs">
+                      
+    <a href="index.html">Home</a>&nbsp; &gt;
+    
+      
+        <a href="index-language.html">Language reference</a> &gt;
+      
+    
+    perldebug
+  
+
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <article class="col-sm-12 content">
+                  <div class="documentation-wrapper">
+                    <div id="perl_version">
+                      <h7 class='page-title'> Perl 5 version 8.1
+                        documentation</h7>
+                    </div>
+                    <h1>perldebug</h1>
+
+
+  <!--    -->
+<ul><li><a href="#NAME">NAME</a></li><li><a href="#DESCRIPTION">DESCRIPTION</a></li><li><a href="#The-Perl-Debugger">The Perl Debugger</a></li><ul><li><a href="#Debugger-Commands">Debugger Commands</a></li><li><a href="#Configurable-Options">Configurable Options</a></li><li><a href="#Debugger-input%2foutput">Debugger input/output</a></li><li><a href="#Debugging-compile-time-statements">Debugging compile-time statements</a></li><li><a href="#Debugger-Customization">Debugger Customization</a></li><li><a href="#Readline-Support">Readline Support</a></li><li><a href="#Editor-Support-for-Debugging">Editor Support for Debugging</a></li><li><a href="#The-Perl-Profiler">The Perl Profiler</a></li></ul><li><a href="#Debugging-regular-expressions">Debugging regular expressions</a></li><li><a href="#Debugging-memory-usage">Debugging memory usage</a></li><li><a href="#SEE-ALSO">SEE ALSO</a></li><li><a href="#BUGS">BUGS</a></li></ul><a class='view-head1' id="NAME"></a><h2 class='h2' >NAME</h2>
+<p>perldebug - Perl debugging</p>
+<a class='view-head1' id="DESCRIPTION"></a><h2 class='h2' >DESCRIPTION</h2>
+<p>First of all, have you tried using the <strong>-w</strong> switch?</p>
+<p>If you're new to the Perl debugger, you may prefer to read
+<a href="perldebtut.html">perldebtut</a>, which is a tutorial introduction to the debugger .</p>
+<a class='view-head1' id="The-Perl-Debugger"></a><h2 class='h2' >The Perl Debugger</h2>
+<p>If you invoke Perl with the <strong>-d</strong> switch, your script runs under the
+Perl source debugger.  This works like an interactive Perl
+environment, prompting for debugger commands that let you examine
+source code, set breakpoints, get stack backtraces, change the values of
+variables, etc.  This is so convenient that you often fire up
+the debugger all by itself just to test out Perl constructs
+interactively to see what they do.  For example:</p>
+<pre class="verbatim"><ol><li>    <span class="i">$ perl</span> -<span class="w">d</span> -e <span class="n">42</span></li></ol></pre><p>In Perl, the debugger is not a separate program the way it usually is in the
+typical compiled environment.  Instead, the <strong>-d</strong> flag tells the compiler
+to insert source information into the parse trees it's about to hand off
+to the interpreter.  That means your code must first compile correctly
+for the debugger to work on it.  Then when the interpreter starts up, it
+preloads a special Perl library file containing the debugger.</p>
+<p>The program will halt <i>right before</i> the first run-time executable
+statement (but see below regarding compile-time statements) and ask you
+to enter a debugger command.  Contrary to popular expectations, whenever
+the debugger halts and shows you a line of code, it always displays the
+line it's <i>about</i> to execute, rather than the one it has just executed.</p>
+<p>Any command not recognized by the debugger is directly executed
+(<code class="inline"><a class="l_k" href="functions/eval.html">eval</a></code>'d) as Perl code in the current package.  (The debugger
+uses the DB package for keeping its own state information.)</p>
+<p>Note that the said <code class="inline"><a class="l_k" href="functions/eval.html">eval</a></code> is bound by an implicit scope. As a
+result any newly introduced lexical variable or any modified
+capture buffer content is lost after the eval. The debugger is a
+nice environment to learn Perl, but if you interactively experiment using
+material which should be in the same scope, stuff it in one line.</p>
+<p>For any text entered at the debugger prompt, leading and trailing whitespace
+is first stripped before further processing.  If a debugger command
+coincides with some function in your own program, merely precede the
+function with something that doesn't look like a debugger command, such
+as a leading <code class="inline"><span class="sc">;</span></code>
+ or perhaps a <code class="inline">+</code>
+, or by wrapping it with parentheses
+or braces.</p>
+<a class='view-head2' id="Debugger-Commands"></a><h3 class='h3' >Debugger Commands</h3>
+<p>The debugger understands the following commands:</p>
+<ul>
+<li><a class='view-title' id="h"></a><strong>h</strong>
+<p>Prints out a summary help message</p>
+</li>
+<li><a class='view-title' id="h-%5bcommand%5d"></a><strong>h [command]</strong>
+<p>Prints out a help message for the given debugger command.</p>
+</li>
+<li><a class='view-title' id="h-h"></a><strong>h h</strong>
+<p>The special argument of <code class="inline"><span class="w">h</span> <span class="w">h</span></code>
+ produces the entire help page, which is quite long.</p>
+<p>If the output of the <code class="inline"><span class="w">h</span> <span class="w">h</span></code>
+ command (or any command, for that matter) scrolls
+past your screen, precede the command with a leading pipe symbol so
+that it's run through your pager, as in</p>
+<pre class="verbatim"><ol><li>    <span class="w">DB</span>&gt; |<span class="w">h</span> <span class="w">h</span></li></ol></pre><p>You may change the pager which is used via <code class="inline"><span class="w">o</span> <span class="w">pager</span>=...</code>
+ command.</p>
+</li>
+<li><a class='view-title' id="p-expr"></a><strong>p expr</strong>
+<p>Same as <code class="inline"><a class="l_k" href="functions/print.html">print</a> <span class="s">{</span><span class="i">$DB::OUT</span><span class="s">}</span> <span class="w">expr</span></code>
+ in the current package.  In particular,
+because this is just Perl's own <code class="inline"><a class="l_k" href="functions/print.html">print</a></code> function, this means that nested
+data structures and objects are not dumped, unlike with the <code class="inline"><span class="w">x</span></code>
+ command.</p>
+<p>The <code class="inline"><span class="w">DB::OUT</span></code>
+ filehandle is opened to <i>/dev/tty</i>, regardless of
+where STDOUT may be redirected to.</p>
+</li>
+<li><a class='view-title' id="x-%5bmaxdepth%5d-expr"></a><strong>x [maxdepth] expr</strong>
+<p>Evaluates its expression in list context and dumps out the result in a
+pretty-printed fashion.  Nested data structures are printed out
+recursively, unlike the real <code class="inline"><a class="l_k" href="functions/print.html">print</a></code> function in Perl.  When dumping
+hashes, you'll probably prefer 'x \%h' rather than 'x %h'.
+See <a href="Dumpvalue.html">Dumpvalue</a> if you'd like to do this yourself.</p>
+<p>The output format is governed by multiple options described under
+<a href="#Configurable-Options">Configurable Options</a>.</p>
+<p>If the <code class="inline"><span class="w">maxdepth</span></code>
+ is included, it must be a numeral <i>N</i>; the value is
+dumped only <i>N</i> levels deep, as if the <code class="inline"><span class="w">dumpDepth</span></code>
+ option had been
+temporarily set to <i>N</i>.</p>
+</li>
+<li><a class='view-title' id="V-%5bpkg-%5bvars%5d%5d"></a><strong>V [pkg [vars]]</strong>
+<p>Display all (or some) variables in package (defaulting to <code class="inline"><span class="w">main</span></code>
+) 
+using a data pretty-printer (hashes show their keys and values so
+you see what's what, control characters are made printable, etc.).
+Make sure you don't put the type specifier (like <code class="inline"><span class="i">$</span></code>
+) there, just
+the symbol names, like this:</p>
+<pre class="verbatim"><ol><li>    <span class="w">V</span> <span class="w">DB</span> <span class="w">filename</span> <span class="w">line</span></li></ol></pre><p>Use <code class="inline">~<span class="w">pattern</span></code>
+ and <code class="inline">!<span class="w">pattern</span></code>
+ for positive and negative regexes.</p>
+<p>This is similar to calling the <code class="inline"><span class="w">x</span></code>
+ command on each applicable var.</p>
+</li>
+<li><a class='view-title' id="X-%5bvars%5d"></a><strong>X [vars]</strong>
+<p>Same as <code class="inline"><span class="w">V</span> <span class="w">currentpackage</span> <span class="s">[</span><span class="w">vars</span><span class="s">]</span></code>
+.</p>
+</li>
+<li><a class='view-title' id="y-%5blevel-%5bvars%5d%5d"></a><strong>y [level [vars]]</strong>
+<p>Display all (or some) lexical variables (mnemonic: <code class="inline"><span class="w">mY</span></code>
+ variables)
+in the current scope or <i>level</i> scopes higher.  You can limit the
+variables that you see with <i>vars</i> which works exactly as it does
+for the <code class="inline"><span class="w">V</span></code>
+ and <code class="inline"><span class="w">X</span></code>
+ commands.  Requires the <code class="inline"><span class="w">PadWalker</span></code>
+ module
+version 0.08 or higher; will warn if this isn't installed.  Output
+is pretty-printed in the same style as for <code class="inline"><span class="w">V</span></code>
+ and the format is
+controlled by the same options.</p>
+</li>
+<li><a class='view-title' id="T"></a><strong>T</strong>
+<p>Produce a stack backtrace.  See below for details on its output.</p>
+</li>
+<li><a class='view-title' id="s-%5bexpr%5d"></a><strong>s [expr]</strong>
+<p>Single step.  Executes until the beginning of another
+statement, descending into subroutine calls.  If an expression is
+supplied that includes function calls, it too will be single-stepped.</p>
+</li>
+<li><a class='view-title' id="n-%5bexpr%5d"></a><strong>n [expr]</strong>
+<p>Next.  Executes over subroutine calls, until the beginning
+of the next statement.  If an expression is supplied that includes
+function calls, those functions will be executed with stops before
+each statement.</p>
+</li>
+<li><a class='view-title' id="r"></a><strong>r</strong>
+<p>Continue until the return from the current subroutine.
+Dump the return value if the <code class="inline"><span class="w">PrintRet</span></code>
+ option is set (default).</p>
+</li>
+<li><a class='view-title' id="%3cCR%3e"></a><strong>&lt;CR&gt;</strong>
+<p>Repeat last <code class="inline"><span class="w">n</span></code>
+ or <code class="inline"><a class="l_k" href="functions/s.html">s</a></code> command.</p>
+</li>
+<li><a class='view-title' id="c-%5bline%7csub%5d"></a><strong>c [line|sub]</strong>
+<p>Continue, optionally inserting a one-time-only breakpoint
+at the specified line or subroutine.</p>
+</li>
+<li><a class='view-title' id="l"></a><strong>l</strong>
+<p>List next window of lines.</p>
+</li>
+<li><a class='view-title' id="l-min%2bincr"></a><strong>l min+incr</strong>
+<p>List <code class="inline"><span class="w">incr</span>+<span class="n">1</span></code>
+ lines starting at <code class="inline"><span class="w">min</span></code>
+.</p>
+</li>
+<li><a class='view-title' id="l-min-max"></a><strong>l min-max</strong>
+<p>List lines <code class="inline"><span class="w">min</span></code>
+ through <code class="inline"><span class="w">max</span></code>
+.  <code class="inline"><span class="w">l</span> -</code>
+ is synonymous to <code class="inline">-</code>
+.</p>
+</li>
+<li><a class='view-title' id="l-line"></a><strong>l line</strong>
+<p>List a single line.</p>
+</li>
+<li><a class='view-title' id="l-subname"></a><strong>l subname</strong>
+<p>List first window of lines from subroutine.  <i>subname</i> may
+be a variable that contains a code reference.</p>
+</li>
+<li><a class='view-title' id="-"></a><strong>-</strong>
+<p>List previous window of lines.</p>
+</li>
+<li><a class='view-title' id="v-%5bline%5d"></a><strong>v [line]</strong>
+<p>View a few lines of code around the current line.</p>
+</li>
+<li><a class='view-title' id="."></a><strong>.</strong>
+<p>Return the internal debugger pointer to the line last
+executed, and print out that line.</p>
+</li>
+<li><a class='view-title' id="f-filename"></a><strong>f filename</strong>
+<p>Switch to viewing a different file or <code class="inline"><a class="l_k" href="functions/eval.html">eval</a></code> statement.  If <i>filename</i>
+is not a full pathname found in the values of %INC, it is considered 
+a regex.</p>
+<p><code class="inline"><a class="l_k" href="functions/eval.html">eval</a></code>ed strings (when accessible) are considered to be filenames:
+<code class="inline"><span class="w">f</span> <span class="s">(</span><a class="l_k" href="functions/eval.html">eval</a> <span class="n">7</span><span class="s">)</span></code>
+ and <code class="inline"><span class="w">f</span> <a class="l_k" href="functions/eval.html">eval</a> <span class="n">7</span>\<span class="w">b</span></code>
+ access the body of the 7th <code class="inline"><a class="l_k" href="functions/eval.html">eval</a></code>ed string
+(in the order of execution).  The bodies of the currently executed <code class="inline"><a class="l_k" href="functions/eval.html">eval</a></code>
+and of <code class="inline"><a class="l_k" href="functions/eval.html">eval</a></code>ed strings that define subroutines are saved and thus
+accessible.</p>
+</li>
+<li><a class='view-title' id="%2fpattern%2f"></a><strong>/pattern/</strong>
+<p>Search forwards for pattern (a Perl regex); final / is optional.
+The search is case-insensitive by default.</p>
+</li>
+<li><a class='view-title' id="%3fpattern%3f"></a><strong>?pattern?</strong>
+<p>Search backwards for pattern; final ? is optional.
+The search is case-insensitive by default.</p>
+</li>
+<li><a class='view-title' id="L-%5babw%5d"></a><strong>L [abw]</strong>
+<p>List (default all) actions, breakpoints and watch expressions</p>
+</li>
+<li><a class='view-title' id="S-%5b%5b!%5dregex%5d"></a><strong>S [[!]regex]</strong>
+<p>List subroutine names [not] matching the regex.</p>
+</li>
+<li><a class='view-title' id="t"></a><strong>t</strong>
+<p>Toggle trace mode (see also the <code class="inline"><span class="w">AutoTrace</span></code>
+ option).</p>
+</li>
+<li><a class='view-title' id="t-expr"></a><strong>t expr</strong>
+<p>Trace through execution of <code class="inline"><span class="w">expr</span></code>
+.
+See <a href="perldebguts.html#Frame-Listing-Output-Examples">Frame Listing Output Examples in perldebguts</a> for examples.</p>
+</li>
+<li><a class='view-title' id="b"></a><strong>b</strong>
+<p>Sets breakpoint on current line</p>
+</li>
+<li><a class='view-title' id="b-%5bline%5d-%5bcondition%5d"></a><strong>b [line] [condition]</strong>
+<p>Set a breakpoint before the given line.  If a condition
+is specified, it's evaluated each time the statement is reached: a
+breakpoint is taken only if the condition is true.  Breakpoints may
+only be set on lines that begin an executable statement.  Conditions
+don't use <code class="inline">if</code>
+:</p>
+<pre class="verbatim"><ol><li>    <span class="w">b</span> <span class="n">237</span> <span class="i">$x</span> &gt; <span class="n">30</span></li><li>    <span class="w">b</span> <span class="n">237</span> ++<span class="i">$count237</span> &lt; <span class="n">11</span></li><li>    <span class="w">b</span> <span class="n">33</span> /<span class="w">pattern</span>/<span class="w">i</span></li></ol></pre></li>
+<li><a class='view-title' id="b-subname-%5bcondition%5d"></a><strong>b subname [condition]</strong>
+<p>Set a breakpoint before the first line of the named subroutine.  <i>subname</i> may
+be a variable containing a code reference (in this case <i>condition</i>
+is not supported).</p>
+</li>
+<li><a class='view-title' id="b-postpone-subname-%5bcondition%5d"></a><strong>b postpone subname [condition]</strong>
+<p>Set a breakpoint at first line of subroutine after it is compiled.</p>
+</li>
+<li><a class='view-title' id="b-load-filename"></a><strong>b load filename</strong>
+<p>Set a breakpoint before the first executed line of the <i>filename</i>,
+which should be a full pathname found amongst the %INC values.</p>
+</li>
+<li><a class='view-title' id="b-compile-subname"></a><strong>b compile subname</strong>
+<p>Sets a breakpoint before the first statement executed after the specified
+subroutine is compiled.</p>
+</li>
+<li><a class='view-title' id="B-line"></a><strong>B line</strong>
+<p>Delete a breakpoint from the specified <i>line</i>.</p>
+</li>
+<li><a class='view-title' id="B-*"></a><strong>B *</strong>
+<p>Delete all installed breakpoints.</p>
+</li>
+<li><a class='view-title' id="a-%5bline%5d-command"></a><strong>a [line] command</strong>
+<p>Set an action to be done before the line is executed.  If <i>line</i> is
+omitted, set an action on the line about to be executed.
+The sequence of steps taken by the debugger is</p>
+<pre class="verbatim"><ol><li>  <span class="n">1.</span> <span class="w">check</span> for <span class="w">a</span> <span class="w">breakpoint</span> <span class="w">at</span> <span class="w">this</span> <span class="w">line</span></li><li>  <span class="n">2.</span> <a class="l_k" href="functions/print.html">print</a> <span class="i">the</span> <span class="w">line</span> if <span class="w">necessary</span> <span class="s">(</span><span class="w">tracing</span><span class="s">)</span></li><li>  <span class="n">3.</span> <a class="l_k" href="functions/do.html">do</a> <span class="w">any</span> <span class="w">actions</span> <span class="w">associated</span> <span class="w">with</span> <span class="w">that</span> <span class="w">line</span></li><li>  <span class="n">4.</span> <span class="w">prompt</span> <span class="w">user</span> if <span class="w">at</span> <span class="w">a</span> <span class="w">breakpoint</span> or <span class="w">in</span> <span class="w">single</span>-<span class="w">step</span></li><li>  <span class="n">5.</span> <span class="w">evaluate</span> <span class="w">line</span></li></ol></pre><p>For example, this will print out $foo every time line
+53 is passed:</p>
+<pre class="verbatim"><ol><li>    <span class="w">a</span> <span class="n">53</span> <a class="l_k" href="functions/print.html">print</a> <span class="q">&quot;DB FOUND $foo\n&quot;</span></li></ol></pre></li>
+<li><a class='view-title' id="A-line"></a><strong>A line</strong>
+<p>Delete an action from the specified line.</p>
+</li>
+<li><a class='view-title' id="A-*"></a><strong>A *</strong>
+<p>Delete all installed actions.</p>
+</li>
+<li><a class='view-title' id="w-expr"></a><strong>w expr</strong>
+<p>Add a global watch-expression.  We hope you know what one of these
+is, because they're supposed to be obvious.</p>
+</li>
+<li><a class='view-title' id="W-expr"></a><strong>W expr</strong>
+<p>Delete watch-expression</p>
+</li>
+<li><a class='view-title' id="W-*"></a><strong>W *</strong>
+<p>Delete all watch-expressions.</p>
+</li>
+<li><a class='view-title' id="o"></a><strong>o</strong>
+<p>Display all options</p>
+</li>
+<li><a class='view-title' id="o-booloption-..."></a><strong>o booloption ...</strong>
+<p>Set each listed Boolean option to the value <code class="inline"><span class="n">1</span></code>
+.</p>
+</li>
+<li><a class='view-title' id="o-anyoption%3f-..."></a><strong>o anyoption? ...</strong>
+<p>Print out the value of one or more options.</p>
+</li>
+<li><a class='view-title' id="o-option%3dvalue-..."></a><strong>o option=value ...</strong>
+<p>Set the value of one or more options.  If the value has internal
+whitespace, it should be quoted.  For example, you could set <code class="inline"><span class="w">o</span>
+<span class="w">pager</span>=<span class="q">&quot;less -MQeicsNfr&quot;</span></code>
+ to call <strong>less</strong> with those specific options.
+You may use either single or double quotes, but if you do, you must
+escape any embedded instances of same sort of quote you began with,
+as well as any escaping any escapes that immediately precede that
+quote but which are not meant to escape the quote itself.  In other
+words, you follow single-quoting rules irrespective of the quote;
+eg: <code class="inline"><span class="w">o</span> <span class="w">option</span>=<span class="q">&#39;this isn\&#39;t bad&#39;</span></code>
+ or <code class="inline"><span class="w">o</span> <span class="w">option</span>=<span class="q">&quot;She said, \&quot;Isn&#39;t</span>
+<span class="q">it?\&quot;&quot;</span></code>
+.</p>
+<p>For historical reasons, the <code class="inline"><span class="pd">=value</span></code>
+ is optional, but defaults to
+1 only where it is safe to do so--that is, mostly for Boolean
+options.  It is always better to assign a specific value using <code class="inline">=</code>
+.
+The <code class="inline"><span class="w">option</span></code>
+ can be abbreviated, but for clarity probably should
+not be.  Several options can be set together.  See <a href="#Configurable-Options">Configurable Options</a> 
+for a list of these.</p>
+</li>
+<li><a class='view-title' id="%3c-%3f"></a><strong>&lt; ?</strong>
+<p>List out all pre-prompt Perl command actions.</p>
+</li>
+<li><a class='view-title' id="%3c-%5b-command-%5d"></a><strong>&lt; [ command ]</strong>
+<p>Set an action (Perl command) to happen before every debugger prompt.
+A multi-line command may be entered by backslashing the newlines.</p>
+</li>
+<li><a class='view-title' id="%3c-*"></a><strong>&lt; *</strong>
+<p>Delete all pre-prompt Perl command actions.</p>
+</li>
+<li><a class='view-title' id="%3c%3c-command"></a><strong>&lt;&lt; command</strong>
+<p>Add an action (Perl command) to happen before every debugger prompt.
+A multi-line command may be entered by backwhacking the newlines.</p>
+</li>
+<li><a class='view-title' id="%3e-%3f"></a><strong>&gt; ?</strong>
+<p>List out post-prompt Perl command actions.</p>
+</li>
+<li><a class='view-title' id="%3e-command"></a><strong>&gt; command</strong>
+<p>Set an action (Perl command) to happen after the prompt when you've
+just given a command to return to executing the script.  A multi-line
+command may be entered by backslashing the newlines (we bet you
+couldn't've guessed this by now).</p>
+</li>
+<li><a class='view-title' id="%3e-*"></a><strong>&gt; *</strong>
+<p>Delete all post-prompt Perl command actions.</p>
+</li>
+<li><a class='view-title' id="%3e%3e-command"></a><strong>&gt;&gt; command</strong>
+<p>Adds an action (Perl command) to happen after the prompt when you've
+just given a command to return to executing the script.  A multi-line
+command may be entered by backslashing the newlines.</p>
+</li>
+<li><a class='view-title' id="%7b-%3f"></a><strong>{ ?</strong>
+<p>List out pre-prompt debugger commands.</p>
+</li>
+<li><a class='view-title' id="%7b-%5b-command-%5d"></a><strong>{ [ command ]</strong>
+<p>Set an action (debugger command) to happen before every debugger prompt.
+A multi-line command may be entered in the customary fashion.</p>
+<p>Because this command is in some senses new, a warning is issued if
+you appear to have accidentally entered a block instead.  If that's
+what you mean to do, write it as with <code class="inline"><span class="sc">;</span><span class="s">{</span> ... <span class="s">}</span></code>
+ or even 
+<code class="inline"><a class="l_k" href="functions/do.html">do</a> <span class="s">{</span> ... <span class="s">}</span></code>
+.</p>
+</li>
+<li><a class='view-title' id="%7b-*"></a><strong>{ *</strong>
+<p>Delete all pre-prompt debugger commands.</p>
+</li>
+<li><a class='view-title' id="%7b%7b-command"></a><strong>{{ command</strong>
+<p>Add an action (debugger command) to happen before every debugger prompt.
+A multi-line command may be entered, if you can guess how: see above.</p>
+</li>
+<li><a class='view-title' id="!-number"></a><strong>! number</strong>
+<p>Redo a previous command (defaults to the previous command).</p>
+</li>
+<li><a class='view-title' id="!--number"></a><strong>! -number</strong>
+<p>Redo number'th previous command.</p>
+</li>
+<li><a class='view-title' id="!-pattern"></a><strong>! pattern</strong>
+<p>Redo last command that started with pattern.
+See <code class="inline"><span class="w">o</span> <span class="w">recallCommand</span></code>
+, too.</p>
+</li>
+<li><a class='view-title' id="!!-cmd"></a><strong>!! cmd</strong>
+<p>Run cmd in a subprocess (reads from DB::IN, writes to DB::OUT) See
+<code class="inline"><span class="w">o</span> <span class="w">shellBang</span></code>
+, also.  Note that the user's current shell (well,
+their <code class="inline"><span class="i">$ENV</span>{<span class="w">SHELL</span>}</code>
+ variable) will be used, which can interfere
+with proper interpretation of exit status or signal and coredump
+information.</p>
+</li>
+<li><a class='view-title' id="source-file"></a><strong>source file</strong>
+<p>Read and execute debugger commands from <i>file</i>.
+<i>file</i> may itself contain <code class="inline"><span class="w">source</span></code>
+ commands.</p>
+</li>
+<li><a class='view-title' id="H--number"></a><strong>H -number</strong>
+<p>Display last n commands.  Only commands longer than one character are
+listed.  If <i>number</i> is omitted, list them all.</p>
+</li>
+<li><a class='view-title' id="q-or-%5eD"></a><strong>q or ^D</strong>
+<p>Quit.  ("quit" doesn't work for this, unless you've made an alias)
+This is the only supported way to exit the debugger, though typing
+<code class="inline"><a class="l_k" href="functions/exit.html">exit</a></code> twice might work.</p>
+<p>Set the <code class="inline"><span class="w">inhibit_exit</span></code>
+ option to 0 if you want to be able to step
+off the end the script.  You may also need to set $finished to 0 
+if you want to step through global destruction.</p>
+</li>
+<li><a class='view-title' id="R"></a><strong>R</strong>
+<p>Restart the debugger by <code class="inline"><a class="l_k" href="functions/exec.html">exec()</a></code>ing a new session.  We try to maintain
+your history across this, but internal settings and command-line options
+may be lost.</p>
+<p>The following setting are currently preserved: history, breakpoints,
+actions, debugger options, and the Perl command-line
+options <strong>-w</strong>, <strong>-I</strong>, and <strong>-e</strong>.</p>
+</li>
+<li><a class='view-title' id="%7cdbcmd"></a><strong>|dbcmd</strong>
+<p>Run the debugger command, piping DB::OUT into your current pager.</p>
+</li>
+<li><a class='view-title' id="%7c%7cdbcmd"></a><strong>||dbcmd</strong>
+<p>Same as <code class="inline">|<span class="w">dbcmd</span></code>
+ but DB::OUT is temporarily <code class="inline"><a class="l_k" href="functions/select.html">select</a></code>ed as well.</p>
+</li>
+<li><a class='view-title' id="%3d-%5balias-value%5d"></a><strong>= [alias value]</strong>
+<p>Define a command alias, like</p>
+<pre class="verbatim"><ol><li>    = <span class="w">quit</span> <span class="q">q</span></li></ol></pre><p>or list current aliases.</p>
+</li>
+<li><a class='view-title' id="command"></a><strong>command</strong>
+<p>Execute command as a Perl statement.  A trailing semicolon will be
+supplied.  If the Perl statement would otherwise be confused for a
+Perl debugger, use a leading semicolon, too.</p>
+</li>
+<li><a class='view-title' id="m-expr"></a><strong>m expr</strong>
+<p>List which methods may be called on the result of the evaluated
+expression.  The expression may evaluated to a reference to a 
+blessed object, or to a package name.</p>
+</li>
+<li><a class='view-title' id="M"></a><strong>M</strong>
+<p>Displays all loaded modules and their versions</p>
+</li>
+<li><a class='view-title' id="man-%5bmanpage%5d"></a><strong>man [manpage]</strong>
+<p>Despite its name, this calls your system's default documentation
+viewer on the given page, or on the viewer itself if <i>manpage</i> is
+omitted.  If that viewer is <strong>man</strong>, the current <code class="inline"><span class="w">Config</span></code>
+ information
+is used to invoke <strong>man</strong> using the proper MANPATH or <strong>-M</strong>
+<i>manpath</i> option.  Failed lookups of the form <code class="inline"><span class="w">XXX</span></code>
+ that match
+known manpages of the form <i>perlXXX</i> will be retried.  This lets
+you type <code class="inline"><span class="w">man</span> <span class="w">debug</span></code>
+ or <code class="inline"><span class="w">man</span> <span class="w">op</span></code>
+ from the debugger.</p>
+<p>On systems traditionally bereft of a usable <strong>man</strong> command, the
+debugger invokes <strong>perldoc</strong>.  Occasionally this determination is
+incorrect due to recalcitrant vendors or rather more felicitously,
+to enterprising users.  If you fall into either category, just
+manually set the $DB::doccmd variable to whatever viewer to view
+the Perl documentation on your system.  This may be set in an rc
+file, or through direct assignment.  We're still waiting for a
+working example of something along the lines of:</p>
+<pre class="verbatim"><ol><li>    <span class="i">$DB::doccmd</span> = <span class="q">&#39;netscape -remote <a href="http://something.here/">http://something.here/</a>&#39;</span><span class="sc">;</span></li></ol></pre></li>
+</ul>
+<a class='view-head2' id="Configurable-Options"></a><h3 class='h3' >Configurable Options</h3>
+<p>The debugger has numerous options settable using the <code class="inline"><span class="w">o</span></code>
+ command,
+either interactively or from the environment or an rc file.
+(./.perldb or ~/.perldb under Unix.)</p>
+<ul>
+<li><a class='view-title' id="recallCommand%2c-ShellBang"></a><strong><code class="inline"><span class="w">recallCommand</span></code>
+, <code class="inline"><span class="w">ShellBang</span></code>
+</strong>
+<p>The characters used to recall command or spawn shell.  By
+default, both are set to <code class="inline">!</code>
+, which is unfortunate.</p>
+</li>
+<li><a class='view-title' id="pager"></a><strong><code class="inline"><span class="w">pager</span></code>
+</strong>
+<p>Program to use for output of pager-piped commands (those beginning
+with a <code class="inline">|</code>
+ character.)  By default, <code class="inline"><span class="i">$ENV</span>{<span class="w">PAGER</span>}</code>
+ will be used.
+Because the debugger uses your current terminal characteristics
+for bold and underlining, if the chosen pager does not pass escape
+sequences through unchanged, the output of some debugger commands
+will not be readable when sent through the pager.</p>
+</li>
+<li><a class='view-title' id="tkRunning"></a><strong><code class="inline"><span class="w">tkRunning</span></code>
+</strong>
+<p>Run Tk while prompting (with ReadLine).</p>
+</li>
+<li><a class='view-title' id="signalLevel%2c-warnLevel%2c-dieLevel"></a><strong><code class="inline"><span class="w">signalLevel</span></code>
+, <code class="inline"><span class="w">warnLevel</span></code>
+, <code class="inline"><span class="w">dieLevel</span></code>
+</strong>
+<p>Level of verbosity.  By default, the debugger leaves your exceptions
+and warnings alone, because altering them can break correctly running
+programs.  It will attempt to print a message when uncaught INT, BUS, or
+SEGV signals arrive.  (But see the mention of signals in <a href="https://search.cpan.org/perldoc/BUGS">BUGS</a> below.)</p>
+<p>To disable this default safe mode, set these values to something higher
+than 0.  At a level of 1, you get backtraces upon receiving any kind
+of warning (this is often annoying) or exception (this is
+often valuable).  Unfortunately, the debugger cannot discern fatal
+exceptions from non-fatal ones.  If <code class="inline"><span class="w">dieLevel</span></code>
+ is even 1, then your
+non-fatal exceptions are also traced and unceremoniously altered if they
+came from <code class="inline"><a class="l_k" href="functions/eval.html">eval'd</a></code> strings or from any kind of <code class="inline"><a class="l_k" href="functions/eval.html">eval</a></code> within modules
+you're attempting to load.  If <code class="inline"><span class="w">dieLevel</span></code>
+ is 2, the debugger doesn't
+care where they came from:  It usurps your exception handler and prints
+out a trace, then modifies all exceptions with its own embellishments.
+This may perhaps be useful for some tracing purposes, but tends to hopelessly
+destroy any program that takes its exception handling seriously.</p>
+</li>
+<li><a class='view-title' id="AutoTrace"></a><strong><code class="inline"><span class="w">AutoTrace</span></code>
+</strong>
+<p>Trace mode (similar to <code class="inline"><span class="w">t</span></code>
+ command, but can be put into
+<code class="inline"><span class="w">PERLDB_OPTS</span></code>
+).</p>
+</li>
+<li><a class='view-title' id="LineInfo"></a><strong><code class="inline"><span class="w">LineInfo</span></code>
+</strong>
+<p>File or pipe to print line number info to.  If it is a pipe (say,
+<code class="inline">|<span class="w">visual_perl_db</span></code>
+), then a short message is used.  This is the
+mechanism used to interact with a slave editor or visual debugger,
+such as the special <code class="inline"><span class="w">vi</span></code>
+ or <code class="inline"><span class="w">emacs</span></code>
+ hooks, or the <code class="inline"><span class="w">ddd</span></code>
+ graphical
+debugger.</p>
+</li>
+<li><a class='view-title' id="inhibit_exit"></a><strong><code class="inline"><span class="w">inhibit_exit</span></code>
+</strong>
+<p>If 0, allows <i>stepping off</i> the end of the script.</p>
+</li>
+<li><a class='view-title' id="PrintRet"></a><strong><code class="inline"><span class="w">PrintRet</span></code>
+</strong>
+<p>Print return value after <code class="inline"><span class="w">r</span></code>
+ command if set (default).</p>
+</li>
+<li><a class='view-title' id="ornaments"></a><strong><code class="inline"><span class="w">ornaments</span></code>
+</strong>
+<p>Affects screen appearance of the command line (see <a href="Term/ReadLine.html">Term::ReadLine</a>).
+There is currently no way to disable these, which can render
+some output illegible on some displays, or with some pagers.
+This is considered a bug.</p>
+</li>
+<li><a class='view-title' id="frame"></a><strong><code class="inline"><span class="w">frame</span></code>
+</strong>
+<p>Affects the printing of messages upon entry and exit from subroutines.  If
+<code class="inline"><span class="w">frame</span> <span class="i">&amp; 2</span></code>
+ is false, messages are printed on entry only. (Printing
+on exit might be useful if interspersed with other messages.)</p>
+<p>If <code class="inline"><span class="w">frame</span> <span class="i">&amp; 4</span></code>
+, arguments to functions are printed, plus context
+and caller info.  If <code class="inline"><span class="w">frame</span> <span class="i">&amp; 8</span></code>
+, overloaded <code class="inline"><span class="w">stringify</span></code>
+ and
+<code class="inline"><a class="l_k" href="functions/tie.html">tie</a></code>d <code class="inline"><span class="w">FETCH</span></code>
+ is enabled on the printed arguments.  If <code class="inline"><span class="w">frame</span>
+<span class="i">&amp; 16</span></code>
+, the return value from the subroutine is printed.</p>
+<p>The length at which the argument list is truncated is governed by the
+next option:</p>
+</li>
+<li><a class='view-title' id="maxTraceLen"></a><strong><code class="inline"><span class="w">maxTraceLen</span></code>
+</strong>
+<p>Length to truncate the argument list when the <code class="inline"><span class="w">frame</span></code>
+ option's
+bit 4 is set.</p>
+</li>
+<li><a class='view-title' id="windowSize"></a><strong><code class="inline"><span class="w">windowSize</span></code>
+</strong>
+<p>Change the size of code list window (default is 10 lines).</p>
+</li>
+</ul>
+<p>The following options affect what happens with <code class="inline"><span class="w">V</span></code>
+, <code class="inline"><span class="w">X</span></code>
+, and <code class="inline"><span class="w">x</span></code>
+
+commands:</p>
+<ul>
+<li><a class='view-title' id="arrayDepth%2c-hashDepth"></a><strong><code class="inline"><span class="w">arrayDepth</span></code>
+, <code class="inline"><span class="w">hashDepth</span></code>
+</strong>
+<p>Print only first N elements ('' for all).</p>
+</li>
+<li><a class='view-title' id="dumpDepth"></a><strong><code class="inline"><span class="w">dumpDepth</span></code>
+</strong>
+<p>Limit recursion depth to N levels when dumping structures.
+Negative values are interpreted as infinity.  Default: infinity.</p>
+</li>
+<li><a class='view-title' id="compactDump%2c-veryCompact"></a><strong><code class="inline"><span class="w">compactDump</span></code>
+, <code class="inline"><span class="w">veryCompact</span></code>
+</strong>
+<p>Change the style of array and hash output.  If <code class="inline"><span class="w">compactDump</span></code>
+, short array
+may be printed on one line.</p>
+</li>
+<li><a class='view-title' id="globPrint"></a><strong><code class="inline"><span class="w">globPrint</span></code>
+</strong>
+<p>Whether to print contents of globs.</p>
+</li>
+<li><a class='view-title' id="DumpDBFiles"></a><strong><code class="inline"><span class="w">DumpDBFiles</span></code>
+</strong>
+<p>Dump arrays holding debugged files.</p>
+</li>
+<li><a class='view-title' id="DumpPackages"></a><strong><code class="inline"><span class="w">DumpPackages</span></code>
+</strong>
+<p>Dump symbol tables of packages.</p>
+</li>
+<li><a class='view-title' id="DumpReused"></a><strong><code class="inline"><span class="w">DumpReused</span></code>
+</strong>
+<p>Dump contents of "reused" addresses.</p>
+</li>
+<li><a class='view-title' id="quote%2c-HighBit%2c-undefPrint"></a><strong><code class="inline"><span class="w">quote</span></code>
+, <code class="inline"><span class="w">HighBit</span></code>
+, <code class="inline"><span class="w">undefPrint</span></code>
+</strong>
+<p>Change the style of string dump.  The default value for <code class="inline"><span class="w">quote</span></code>
+
+is <code class="inline"><span class="w">auto</span></code>
+; one can enable double-quotish or single-quotish format
+by setting it to <code class="inline"><span class="q">&quot;</span></code>
+ or <code class="inline"><span class="q">&#39;</span></code>
+, respectively.  By default, characters
+with their high bit set are printed verbatim.</p>
+</li>
+<li><a class='view-title' id="UsageOnly"></a><strong><code class="inline"><span class="w">UsageOnly</span></code>
+</strong>
+<p>Rudimentary per-package memory usage dump.  Calculates total
+size of strings found in variables in the package.  This does not
+include lexicals in a module's file scope, or lost in closures.</p>
+</li>
+</ul>
+<p>After the rc file is read, the debugger reads the <code class="inline"><span class="i">$ENV</span>{<span class="w">PERLDB_OPTS</span>}</code>
+
+environment variable and parses this as the remainder of a `O ...'
+line as one might enter at the debugger prompt.  You may place the
+initialization options <code class="inline"><span class="w">TTY</span></code>
+, <code class="inline"><span class="w">noTTY</span></code>
+, <code class="inline"><span class="w">ReadLine</span></code>
+, and <code class="inline"><span class="w">NonStop</span></code>
+
+there.</p>
+<p>If your rc file contains:</p>
+<pre class="verbatim"><ol><li>  <span class="i">parse_options</span><span class="s">(</span><span class="q">&quot;NonStop=1 LineInfo=db.out AutoTrace&quot;</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>then your script will run without human intervention, putting trace
+information into the file <i>db.out</i>.  (If you interrupt it, you'd
+better reset <code class="inline"><span class="w">LineInfo</span></code>
+ to <i>/dev/tty</i> if you expect to see anything.)</p>
+<ul>
+<li><a class='view-title' id="TTY"></a><strong><code class="inline"><span class="w">TTY</span></code>
+</strong>
+<p>The TTY to use for debugging I/O.</p>
+</li>
+<li><a class='view-title' id="noTTY"></a><strong><code class="inline"><span class="w">noTTY</span></code>
+</strong>
+<p>If set, the debugger goes into <code class="inline"><span class="w">NonStop</span></code>
+ mode and will not connect to a TTY.  If
+interrupted (or if control goes to the debugger via explicit setting of
+$DB::signal or $DB::single from the Perl script), it connects to a TTY
+specified in the <code class="inline"><span class="w">TTY</span></code>
+ option at startup, or to a tty found at
+runtime using the <code class="inline"><span class="w">Term::Rendezvous</span></code>
+ module of your choice.</p>
+<p>This module should implement a method named <code class="inline"><span class="w">new</span></code>
+ that returns an object
+with two methods: <code class="inline"><span class="w">IN</span></code>
+ and <code class="inline"><span class="w">OUT</span></code>
+.  These should return filehandles to use
+for debugging input and output correspondingly.  The <code class="inline"><span class="w">new</span></code>
+ method should
+inspect an argument containing the value of <code class="inline"><span class="i">$ENV</span>{<span class="w">PERLDB_NOTTY</span>}</code>
+ at
+startup, or <code class="inline"><span class="q">&quot;/tmp/perldbtty$$&quot;</span></code>
+ otherwise.  This file is not 
+inspected for proper ownership, so security hazards are theoretically
+possible.</p>
+</li>
+<li><a class='view-title' id="ReadLine"></a><strong><code class="inline"><span class="w">ReadLine</span></code>
+</strong>
+<p>If false, readline support in the debugger is disabled in order
+to debug applications that themselves use ReadLine.</p>
+</li>
+<li><a class='view-title' id="NonStop"></a><strong><code class="inline"><span class="w">NonStop</span></code>
+</strong>
+<p>If set, the debugger goes into non-interactive mode until interrupted, or
+programmatically by setting $DB::signal or $DB::single.</p>
+</li>
+</ul>
+<p>Here's an example of using the <code class="inline"><span class="i">$ENV</span>{<span class="w">PERLDB_OPTS</span>}</code>
+ variable:</p>
+<pre class="verbatim"><ol><li>    <span class="i">$ PERLDB_OPTS</span>=<span class="q">&quot;NonStop frame=2&quot;</span> <span class="w">perl</span> -d <span class="w">myprogram</span></li></ol></pre><p>That will run the script <strong>myprogram</strong> without human intervention,
+printing out the call tree with entry and exit points.  Note that
+<code class="inline"><span class="w">NonStop</span>=<span class="n">1</span> <span class="w">frame</span>=<span class="n">2</span></code>
+ is equivalent to <code class="inline"><span class="w">N</span> <span class="w">f</span>=<span class="n">2</span></code>
+, and that originally,
+options could be uniquely abbreviated by the first letter (modulo
+the <code class="inline"><span class="w">Dump</span>*</code>
+ options).  It is nevertheless recommended that you
+always spell them out in full for legibility and future compatibility.</p>
+<p>Other examples include</p>
+<pre class="verbatim"><ol><li>    <span class="i">$ PERLDB_OPTS</span>=<span class="q">&quot;NonStop LineInfo=listing frame=2&quot;</span> <span class="w">perl</span> -d <span class="w">myprogram</span></li></ol></pre><p>which runs script non-interactively, printing info on each entry
+into a subroutine and each executed line into the file named <i>listing</i>.
+(If you interrupt it, you would better reset <code class="inline"><span class="w">LineInfo</span></code>
+ to something
+"interactive"!)</p>
+<p>Other examples include (using standard shell syntax to show environment
+variable settings):</p>
+<pre class="verbatim"><ol><li>  <span class="i">$ (</span> <span class="w">PERLDB_OPTS</span>=<span class="q">&quot;NonStop frame=1 AutoTrace LineInfo=tperl.out&quot;</span></li><li>      <span class="w">perl</span> -d <span class="w">myprogram</span> <span class="p">)</span></li></ol></pre><p>which may be useful for debugging a program that uses <code class="inline"><span class="w">Term::ReadLine</span></code>
+
+itself.  Do not forget to detach your shell from the TTY in the window that
+corresponds to <i>/dev/ttyXX</i>, say, by issuing a command like</p>
+<pre class="verbatim"><ol><li>  <span class="i">$ sleep</span> <span class="n">1000000</span></li></ol></pre><p>See <a href="perldebguts.html#Debugger-Internals">Debugger Internals in perldebguts</a> for details.</p>
+<a class='view-head2' id="Debugger-input%2foutput"></a><h3 class='h3' >Debugger input/output</h3>
+<ul>
+<li><a class='view-title' id="Prompt"></a><strong>Prompt</strong>
+<p>The debugger prompt is something like</p>
+<pre class="verbatim"><ol><li>    <span class="w">DB</span><span class="q">&lt;8&gt;</span></li></ol></pre><p>or even</p>
+<pre class="verbatim"><ol><li>    <span class="w">DB</span><span class="h">&lt;&lt;17</span>&gt;&gt;</li></ol></pre><p>where that number is the command number, and which you'd use to
+access with the built-in <strong>csh</strong>-like history mechanism.  For example,
+<code class="inline">!<span class="n">17</span></code>
+ would repeat command number 17.  The depth of the angle
+brackets indicates the nesting depth of the debugger.  You could
+get more than one set of brackets, for example, if you'd already
+at a breakpoint and then printed the result of a function call that
+itself has a breakpoint, or you step into an expression via <code class="inline"><span class="q">s/n/t</span>
+<span class="q">expression</span></code>
+ command.</p>
+</li>
+<li><a class='view-title' id="Multiline-commands"></a><strong>Multiline commands</strong>
+<p>If you want to enter a multi-line command, such as a subroutine
+definition with several statements or a format, escape the newline
+that would normally end the debugger command with a backslash.
+Here's an example:</p>
+<pre class="verbatim"><ol><li>      <span class="w">DB</span><span class="q">&lt;1&gt;</span> for <span class="s">(</span><span class="n">1</span>..<span class="n">4</span><span class="s">)</span> <span class="s">{</span>         \</li><li>      <span class="w">cont</span><span class="co">:</span>     <a class="l_k" href="functions/print.html">print</a> <span class="q">&quot;ok\n&quot;</span><span class="sc">;</span>   \</li><li>      <span class="w">cont</span><span class="co">:</span> <span class="s">}</span></li><li>      <span class="w">ok</span></li><li>      <span class="w">ok</span></li><li>      <span class="w">ok</span></li><li>      <span class="w">ok</span></li></ol></pre><p>Note that this business of escaping a newline is specific to interactive
+commands typed into the debugger.</p>
+</li>
+<li><a class='view-title' id="Stack-backtrace"></a><strong>Stack backtrace</strong>
+<p>Here's an example of what a stack backtrace via <code class="inline"><span class="w">T</span></code>
+ command might
+look like:</p>
+<pre class="verbatim"><ol><li>    <span class="i">$ =</span> <span class="w">main::infested</span> <span class="w">called</span> <span class="w">from</span> <span class="w">file</span> <span class="q">`Ambulation.pm&#39; line 10</span></li><li>    <span class="q">    @ = Ambulation::legs(1, 2, 3, 4) called from file `</span><span class="w">camel_flea</span><span class="q">&#39; line 7</span></li><li>    <span class="q">    $ = main::pests(&#39;</span><span class="w">bactrian</span><span class="q">&#39;, 4) called from file `camel_flea&#39;</span> <span class="w">line</span> <span class="n">4</span></li></ol></pre><p>The left-hand character up there indicates the context in which the
+function was called, with <code class="inline"><span class="i">$</span></code>
+ and <code class="inline"><span class="i">@</span></code>
+ meaning scalar or list
+contexts respectively, and <code class="inline">.</code>
+ meaning void context (which is
+actually a sort of scalar context).  The display above says
+that you were in the function <code class="inline"><span class="w">main::infested</span></code>
+ when you ran the
+stack dump, and that it was called in scalar context from line
+10 of the file <i>Ambulation.pm</i>, but without any arguments at all,
+meaning it was called as <code class="inline"><span class="i">&amp;infested</span></code>
+.  The next stack frame shows
+that the function <code class="inline"><span class="w">Ambulation::legs</span></code>
+ was called in list context
+from the <i>camel_flea</i> file with four arguments.  The last stack
+frame shows that <code class="inline"><span class="w">main::pests</span></code>
+ was called in scalar context,
+also from <i>camel_flea</i>, but from line 4.</p>
+<p>If you execute the <code class="inline"><span class="w">T</span></code>
+ command from inside an active <code class="inline"><a class="l_k" href="functions/use.html">use</a></code>
+statement, the backtrace will contain both a <code class="inline"><a class="l_k" href="functions/require.html">require</a></code> frame and
+an <code class="inline"><a class="l_k" href="functions/eval.html">eval</a></code>) frame.</p>
+</li>
+<li><a class='view-title' id="Line-Listing-Format"></a><strong>Line Listing Format</strong>
+<p>This shows the sorts of output the <code class="inline"><span class="w">l</span></code>
+ command can produce:</p>
+<pre class="verbatim"><ol><li>    <span class="w">DB</span><span class="h">&lt;&lt;13</span>&gt;&gt; <span class="w">l</span></li><li><span class="hh">  101:                @i{@i} = ();</span></li><li><span class="hh">  102:b               @isa{@i,$pack} = ()</span></li><li><span class="hh">  103                     if(exists $i{$prevpack} || exists $isa{$pack});</span></li><li><span class="hh">  104             }</span></li><li><span class="hh">  105</span></li><li><span class="hh">  106             next</span></li><li><span class="hh">  107==&gt;              if(exists $isa{$pack});</span></li><li><span class="hh">  108</span></li><li><span class="hh">  109:a           if ($extra-- &gt; 0) {</span></li><li><span class="hh">  110:                %isa = ($pack,1);</span></li></ol></pre><p>Breakable lines are marked with <code class="inline"><span class="j">:</span></code>
+.  Lines with breakpoints are
+marked by <code class="inline"><span class="w">b</span></code>
+ and those with actions by <code class="inline"><span class="w">a</span></code>
+.  The line that's
+about to be executed is marked by <code class="inline">==&gt;</code>
+.</p>
+<p>Please be aware that code in debugger listings may not look the same
+as your original source code.  Line directives and external source
+filters can alter the code before Perl sees it, causing code to move
+from its original positions or take on entirely different forms.</p>
+</li>
+<li><a class='view-title' id="Frame-listing"></a><strong>Frame listing</strong>
+<p>When the <code class="inline"><span class="w">frame</span></code>
+ option is set, the debugger would print entered (and
+optionally exited) subroutines in different styles.  See <a href="perldebguts.html">perldebguts</a>
+for incredibly long examples of these.</p>
+</li>
+</ul>
+<a class='view-head2' id="Debugging-compile-time-statements"></a><h3 class='h3' >Debugging compile-time statements</h3>
+<p>If you have compile-time executable statements (such as code within
+BEGIN and CHECK blocks or <code class="inline"><a class="l_k" href="functions/use.html">use</a></code> statements), these will <i>not</i> be
+stopped by debugger, although <code class="inline"><a class="l_k" href="functions/require.html">require</a></code>s and INIT blocks will, and
+compile-time statements can be traced with <code class="inline"><span class="w">AutoTrace</span></code>
+ option set
+in <code class="inline"><span class="w">PERLDB_OPTS</span></code>
+).  From your own Perl code, however, you can
+transfer control back to the debugger using the following statement,
+which is harmless if the debugger is not running:</p>
+<pre class="verbatim"><ol><li>    <span class="i">$DB::single</span> = <span class="n">1</span><span class="sc">;</span></li></ol></pre><p>If you set <code class="inline"><span class="i">$DB::single</span></code>
+ to 2, it's equivalent to having
+just typed the <code class="inline"><span class="w">n</span></code>
+ command, whereas a value of 1 means the <code class="inline"><a class="l_k" href="functions/s.html">s</a></code>
+command.  The <code class="inline"><span class="i">$DB::trace</span></code>
+  variable should be set to 1 to simulate
+having typed the <code class="inline"><span class="w">t</span></code>
+ command.</p>
+<p>Another way to debug compile-time code is to start the debugger, set a
+breakpoint on the <i>load</i> of some module:</p>
+<pre class="verbatim"><ol><li>    <span class="w">DB</span><span class="q">&lt;7&gt;</span> <span class="w">b</span> <span class="w">load</span> <span class="w">f</span><span class="co">:</span><span class="q">/perllib/</span><span class="w">lib</span>/<span class="w">Carp</span>.<span class="w">pm</span></li><li>  <span class="w">Will</span> <span class="w">stop</span> <span class="w">on</span> <span class="w">load</span> <span class="w">of</span> <span class="q">`f:/perllib/lib/Carp.pm&#39;.</span></li></ol></pre><p>and then restart the debugger using the <code class="inline"><span class="w">R</span></code>
+ command (if possible).  One can use <code class="inline"><span class="w">b</span>
+<span class="w">compile</span> <span class="w">subname</span></code>
+ for the same purpose.</p>
+<a class='view-head2' id="Debugger-Customization"></a><h3 class='h3' >Debugger Customization</h3>
+<p>The debugger probably contains enough configuration hooks that you
+won't ever have to modify it yourself.  You may change the behaviour
+of debugger from within the debugger using its <code class="inline"><span class="w">o</span></code>
+ command, from
+the command line via the <code class="inline"><span class="w">PERLDB_OPTS</span></code>
+ environment variable, and
+from customization files.</p>
+<p>You can do some customization by setting up a <i>.perldb</i> file, which
+contains initialization code.  For instance, you could make aliases
+like these (the last one is one people expect to be there):</p>
+<pre class="verbatim"><ol><li>    <span class="i">$DB::alias</span>{<span class="q">&#39;len&#39;</span>}  = <span class="q">&#39;s/^len(.*)/p length($1)/&#39;</span><span class="sc">;</span></li><li>    <span class="i">$DB::alias</span>{<span class="q">&#39;stop&#39;</span>} = <span class="q">&#39;s/^stop (at|in)/b/&#39;</span><span class="sc">;</span></li><li>    <span class="i">$DB::alias</span>{<span class="q">&#39;ps&#39;</span>}   = <span class="q">&#39;s/^ps\b/p scalar /&#39;</span><span class="sc">;</span></li><li>    <span class="i">$DB::alias</span>{<span class="q">&#39;quit&#39;</span>} = <span class="q">&#39;s/^quit(\s*)/exit/&#39;</span><span class="sc">;</span></li></ol></pre><p>You can change options from <i>.perldb</i> by using calls like this one;</p>
+<pre class="verbatim"><ol><li>    <span class="i">parse_options</span><span class="s">(</span><span class="q">&quot;NonStop=1 LineInfo=db.out AutoTrace=1 frame=2&quot;</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>The code is executed in the package <code class="inline"><span class="w">DB</span></code>
+.  Note that <i>.perldb</i> is
+processed before processing <code class="inline"><span class="w">PERLDB_OPTS</span></code>
+.  If <i>.perldb</i> defines the
+subroutine <code class="inline"><span class="w">afterinit</span></code>
+, that function is called after debugger
+initialization ends.  <i>.perldb</i> may be contained in the current
+directory, or in the home directory.  Because this file is sourced
+in by Perl and may contain arbitrary commands, for security reasons,
+it must be owned by the superuser or the current user, and writable
+by no one but its owner.</p>
+<p>You can mock TTY input to debugger by adding arbitrary commands to
+@DB::typeahead. For example, your <i>.perldb</i> file might contain:</p>
+<pre class="verbatim"><ol><li><a name="afterinit"></a>    sub <span class="m">afterinit</span> <span class="s">{</span> <a class="l_k" href="functions/push.html">push</a> <span class="i">@DB::typeahead</span><span class="cm">,</span> <span class="q">&quot;b 4&quot;</span><span class="cm">,</span> <span class="q">&quot;b 6&quot;</span><span class="sc">;</span> <span class="s">}</span></li></ol></pre><p>Which would attempt to set breakpoints on lines 4 and 6 immediately
+after debugger initilization. Note that @DB::typeahead is not a supported
+interface and is subject to change in future releases.</p>
+<p>If you want to modify the debugger, copy <i>perl5db.pl</i> from the
+Perl library to another name and hack it to your heart's content.
+You'll then want to set your <code class="inline"><span class="w">PERL5DB</span></code>
+ environment variable to say
+something like this:</p>
+<pre class="verbatim"><ol><li>    BEGIN <span class="s">{</span> <a class="l_k" href="functions/require.html">require</a> <span class="q">&quot;myperl5db.pl&quot;</span> <span class="s">}</span></li></ol></pre><p>As a last resort, you could also use <code class="inline"><span class="w">PERL5DB</span></code>
+ to customize the debugger
+by directly setting internal variables or calling debugger functions.</p>
+<p>Note that any variables and functions that are not documented in
+this document (or in <a href="perldebguts.html">perldebguts</a>) are considered for internal
+use only, and as such are subject to change without notice.</p>
+<a class='view-head2' id="Readline-Support"></a><h3 class='h3' >Readline Support</h3>
+<p>As shipped, the only command-line history supplied is a simplistic one
+that checks for leading exclamation points.  However, if you install
+the Term::ReadKey and Term::ReadLine modules from CPAN, you will
+have full editing capabilities much like GNU <i>readline</i>(3) provides.
+Look for these in the <i>modules/by-module/Term</i> directory on CPAN.
+These do not support normal <strong>vi</strong> command-line editing, however.</p>
+<p>A rudimentary command-line completion is also available.
+Unfortunately, the names of lexical variables are not available for
+completion.</p>
+<a class='view-head2' id="Editor-Support-for-Debugging"></a><h3 class='h3' >Editor Support for Debugging</h3>
+<p>If you have the FSF's version of <strong>emacs</strong> installed on your system,
+it can interact with the Perl debugger to provide an integrated
+software development environment reminiscent of its interactions
+with C debuggers.</p>
+<p>Perl comes with a start file for making <strong>emacs</strong> act like a
+syntax-directed editor that understands (some of) Perl's syntax.
+Look in the <i>emacs</i> directory of the Perl source distribution.</p>
+<p>A similar setup by Tom Christiansen for interacting with any
+vendor-shipped <strong>vi</strong> and the X11 window system is also available.
+This works similarly to the integrated multiwindow support that
+<strong>emacs</strong> provides, where the debugger drives the editor.  At the
+time of this writing, however, that tool's eventual location in the
+Perl distribution was uncertain.</p>
+<p>Users of <strong>vi</strong> should also look into <strong>vim</strong> and <strong>gvim</strong>, the mousey
+and windy version, for coloring of Perl keywords.</p>
+<p>Note that only perl can truly parse Perl, so all such CASE tools
+fall somewhat short of the mark, especially if you don't program
+your Perl as a C programmer might.</p>
+<a class='view-head2' id="The-Perl-Profiler"></a><h3 class='h3' >The Perl Profiler</h3>
+<p>If you wish to supply an alternative debugger for Perl to run, just
+invoke your script with a colon and a package argument given to the
+<strong>-d</strong> flag.  The most popular alternative debuggers for Perl is the
+Perl profiler.  Devel::DProf is now included with the standard Perl
+distribution.  To profile your Perl program in the file <i>mycode.pl</i>,
+just type:</p>
+<pre class="verbatim"><ol><li>    <span class="i">$ perl</span> -<span class="w">d</span><span class="co">:</span><span class="w">DProf</span> <span class="w">mycode</span>.<span class="w">pl</span></li></ol></pre><p>When the script terminates the profiler will dump the profile
+information to a file called <i>tmon.out</i>.  A tool like <strong>dprofpp</strong>,
+also supplied with the standard Perl distribution, can be used to
+interpret the information in that profile.</p>
+<a class='view-head1' id="Debugging-regular-expressions"></a><h2 class='h2' >Debugging regular expressions</h2>
+<p><code class="inline"><a class="l_k" href="functions/use.html">use</a> <span class="w">re</span> <span class="q">&#39;debug&#39;</span></code>
+ enables you to see the gory details of how the Perl
+regular expression engine works. In order to understand this typically
+voluminous output, one must not only have some idea about how regular
+expression matching works in general, but also know how Perl's regular
+expressions are internally compiled into an automaton. These matters
+are explored in some detail in
+<a href="perldebguts.html#Debugging-regular-expressions">Debugging regular expressions in perldebguts</a>.</p>
+<a class='view-head1' id="Debugging-memory-usage"></a><h2 class='h2' >Debugging memory usage</h2>
+<p>Perl contains internal support for reporting its own memory usage,
+but this is a fairly advanced concept that requires some understanding
+of how memory allocation works.
+See <a href="perldebguts.html#Debugging-Perl-memory-usage">Debugging Perl memory usage in perldebguts</a> for the details.</p>
+<a class='view-head1' id="SEE-ALSO"></a><h2 class='h2' >SEE ALSO</h2>
+<p>You did try the <strong>-w</strong> switch, didn't you?</p>
+<p><a href="perldebtut.html">perldebtut</a>,
+<a href="perldebguts.html">perldebguts</a>,
+<a href="re.html">re</a>,
+<a href="DB.html">DB</a>,
+<a href="Devel/DProf.html">Devel::DProf</a>,
+<a href="dprofpp.html">dprofpp</a>,
+<a href="Dumpvalue.html">Dumpvalue</a>,
+and
+<a href="perlrun.html">perlrun</a>.</p>
+<a class='view-head1' id="BUGS"></a><h2 class='h2' >BUGS</h2>
+<p>You cannot get stack frame information or in any fashion debug functions
+that were not compiled by Perl, such as those from C or C++ extensions.</p>
+<p>If you alter your @_ arguments in a subroutine (such as with <code class="inline"><a class="l_k" href="functions/shift.html">shift</a></code>
+or <code class="inline"><a class="l_k" href="functions/pop.html">pop</a></code>), the stack backtrace will not show the original values.</p>
+<p>The debugger does not currently work in conjunction with the <strong>-W</strong>
+command-line switch, because it itself is not free of warnings.</p>
+<p>If you're in a slow syscall (like <code class="inline"><a class="l_k" href="functions/wait.html">wait</a></code>ing, <code class="inline"><a class="l_k" href="functions/accept.html">accept</a></code>ing, or <code class="inline"><a class="l_k" href="functions/read.html">read</a></code>ing
+from your keyboard or a socket) and haven't set up your own <code class="inline"><span class="i">$SIG</span>{<span class="w">INT</span>}</code>
+
+handler, then you won't be able to CTRL-C your way back to the debugger,
+because the debugger's own <code class="inline"><span class="i">$SIG</span>{<span class="w">INT</span>}</code>
+ handler doesn't understand that
+it needs to raise an exception to longjmp(3) out of slow syscalls.</p>
+
+
+
+
+      <ul><li><a href="#NAME">NAME</a></li><li><a href="#DESCRIPTION">DESCRIPTION</a></li><li><a href="#The-Perl-Debugger">The Perl Debugger</a></li><ul><li><a href="#Debugger-Commands">Debugger Commands</a></li><li><a href="#Configurable-Options">Configurable Options</a></li><li><a href="#Debugger-input%2foutput">Debugger input/output</a></li><li><a href="#Debugging-compile-time-statements">Debugging compile-time statements</a></li><li><a href="#Debugger-Customization">Debugger Customization</a></li><li><a href="#Readline-Support">Readline Support</a></li><li><a href="#Editor-Support-for-Debugging">Editor Support for Debugging</a></li><li><a href="#The-Perl-Profiler">The Perl Profiler</a></li></ul><li><a href="#Debugging-regular-expressions">Debugging regular expressions</a></li><li><a href="#Debugging-memory-usage">Debugging memory usage</a></li><li><a href="#SEE-ALSO">SEE ALSO</a></li><li><a href="#BUGS">BUGS</a></li></ul>
+
+
+                  </div>
+                </article>
+              </div>
+            </div>
+          </main>
+        </div>
+           <footer class="footer row bg-light pt-5 pb-5">
+       <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+           <div class="row">
+               <div class="col-md-4">
+                   <ul class="list-unstyled">
+                       <li>
+                           <h4>Site info</h4>
+                       </li>
+                       <li>Docs mantained by
+                           <a href="//lists.perl.org/list/perl5-porters.html"
+                               rel="noopener">Perl 5 Porters</a>
+                       </li>
+                       <li>Perldoc site development sponsored by
+                           <a href="//opusvl.com" rel="noopener">
+                           <img style="margin: 20px 20px 5px 10px" class="opus-logo" src="/public/img/opusvl_logo.svg" alt="OpusVL Logo">
+                        </a>
+                    <li><span class="about_perldoc"><a href="//about.html">About PerlDOC</a></span>
+                    </li>
+                       </li>
+                   </ul>
+               </div>
+               <div class="col-md-8">
+                   <div class="row">
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Manuals</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.1/index-overview.html">Overview</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.1/index-tutorials.html">Tutorials</a>
+                               </li>
+                               <li>
+                                   <a href="/5.8.1/index-faq.html">FAQs</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.1/index-history.html">Changes</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Reference</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.1/index-language.html">Language</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.1/index-functions.html">Functions</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.1/perlop.html">Operators</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.1/perlvar.html">Variables</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Modules</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.1/index-modules-A.html">Modules</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.1/index-pragmas.html">Pragmas</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.1/index-utilities.html">Utilities</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Misc</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.1/index-licence.html">License</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.1/index-internals.html">Internals</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.1/index-platforms.html">Platforms</a>
+                               </li>
+                            <li>
+                                <a
+                                    href="/5.8.1/index-about.html">About</a>
+                            </li>
+                           </ul>
+                       </div>
+                   </div>
+               </div>
+               <div class=" col-12 footer-inf text-center">
+                   <small>perldoc.perl.org - Official documentation for the Perl
+                       programming language</small>
+               </div>
+           </div>
+       </div>
+   </footer>
+
+        	<div class="beta-wrapper beta-bottom-right ">
+		<div class="beta beta-blue  ">
+			<a class="beta-link "
+				href="//github.com/OpusVL/perldoc.perl.org/issues/new" rel="noopener">
+				<span class="beta-text">
+					This website is a Beta release.
+				</span>
+				<span class="beta-text">
+					For any issues please raise a ticket on GitHub
+				</span>
+			</a>
+		</div>
+	</div>
+
+        <script src="/public/js/main.min.js"></script>
+      </body>
+
+      </html>

@@ -1,0 +1,1283 @@
+      
+      
+      
+      
+
+      <!DOCTYPE html>
+      <html lang="en">
+
+      <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="IO::Uncompress::AnyInflate - perldoc.perl.org">
+        <link rel="icon" href="/public/img/favicon.ico">
+        <title>IO::Uncompress::AnyInflate - perldoc.perl.org</title>
+        <link href="/public/css/main.min.css" rel="stylesheet">
+        <link rel="canonical" href="/IO/Uncompress/AnyInflate.html">
+        <link
+          href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900'
+          rel='stylesheet' type='text/css'>
+        <script>
+          window.ga = window.ga || function () {
+            (ga.q = ga.q || []).push(arguments)
+          };
+          ga.l = +new Date;
+          ga('create', 'UA-1892152-2', 'auto'); // JJ's account
+          ga('create', 'UA-50555-3', 'auto', 'perlOrg'); // perl.org account
+          ga('require', 'outboundLinkTracker', {
+            events: ['click', 'auxclick', 'contextmenu'],
+          });
+          ga('require', 'maxScrollTracker');
+          ga('send', 'pageview');
+          ga('perlOrg.send', 'pageview');
+        </script>
+        <script async src="https://www.google-analytics.com/analytics.js">
+        </script>
+        <script async src="/public/js/tracking.min.js"></script>
+      </head>
+
+      <body class="body container-fluid ">
+        <div class="wrapper">
+
+          <nav
+    class="navbar navbar-dark bg-primary bg-perl fixed-top justify-content-between navbar-expand-lg">
+    <a href="#content" class="skippy sr-only sr-only-focusable">
+        <span class=' skippy-text'>Skip to main content</span>
+    </a>
+    <a class="navbar-brand" href="/">
+        <img class="logo" src="/public/img/logo_perl_doc.svg"
+            alt="Perl Documentation Logo" />
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse"
+        data-target="#navbar" aria-controls="navbar" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="navbar" class="collapse navbar-collapse ">
+        <ul class="navbar-nav ml-auto navbar-right">
+            <form class="nav-item dropdown search-wrapper">
+                <input type="text" id='searchinput' aria-describedby='navbarDropdown5'
+                    placeholder="Type query" class='search-input-field' value=''>
+
+                <button href="#" data-toggle='dropdown' type="button"
+                    aria-haspopup="true" aria-expanded='false' id="navbarDropdown5"
+                    class="nav-link dropdown-toggle search-link">
+                    <object tabindex='-1' focusable="false" class='search-icon'
+                        data="/public/img/search.svg" type="image/svg+xml"
+                        name='search icon'>search
+                        icon</object>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown5"
+                    id='search-results'>
+                    <p class='dropdown-item major-version'>
+                        No results
+                    </p>
+                </div>
+            </form>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown" href="#" class="nav-link dropdown-toggle"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Perl versions</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    
+                        <p class='dropdown-item major-version'>
+                            5.32
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.32.0/">5.32.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.30
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.3/">5.30.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.2/">5.30.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.1/">5.30.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.0/">5.30.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.28
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.3/">5.28.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.2/">5.28.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.1/">5.28.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.0/">5.28.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.26
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.3/">5.26.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.2/">5.26.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.1/">5.26.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.0/">5.26.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.24
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.4/">5.24.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.3/">5.24.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.2/">5.24.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.1/">5.24.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.0/">5.24.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.22
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.4/">5.22.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.3/">5.22.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.2/">5.22.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.1/">5.22.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.0/">5.22.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.20
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.3/">5.20.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.2/">5.20.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.1/">5.20.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.0/">5.20.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.18
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.4/">5.18.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.3/">5.18.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.2/">5.18.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.1/">5.18.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.0/">5.18.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.16
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.3/">5.16.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.2/">5.16.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.1/">5.16.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.0/">5.16.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.14
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.4/">5.14.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.3/">5.14.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.2/">5.14.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.1/">5.14.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.0/">5.14.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.12
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.5/">5.12.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.4/">5.12.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.3/">5.12.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.2/">5.12.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.1/">5.12.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.0/">5.12.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.10
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.1/">5.10.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.0/">5.10.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.8
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.9/">5.8.9</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.8/">5.8.8</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.7/">5.8.7</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.6/">5.8.6</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.5/">5.8.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.4/">5.8.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.3/">5.8.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.2/">5.8.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.1/">5.8.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.0/">5.8.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.6
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.2/">5.6.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.1/">5.6.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.0/">5.6.0</a>
+                        
+                        
+                    
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown1" href="#" class="dropdown-toggle nav-link"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Manuals</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                    <a class="dropdown-item"
+                        href="/5.20.2/index-overview.html">Overview</a>
+                    <a class="dropdown-item"
+                        href="/5.20.2/index-tutorials.html">Tutorials</a>
+                    <a class="dropdown-item"
+                        href="/5.20.2/index-faq.html">FAQs</a>
+                    <a class="dropdown-item"
+                        href="/5.20.2/index-history.html">Changes</a>
+                    <a class="dropdown-item"
+                        href="/5.20.2/index-licence.html">License</a>
+                    <a class="dropdown-item"
+                        href="/5.20.2/index-language.html">Language</a>
+                    <a class="dropdown-item"
+                        href="/5.20.2/index-functions.html">Functions</a>
+                    <a class="dropdown-item"
+                        href="/5.20.2/perlop.html">Operators</a>
+                    <a class="dropdown-item"
+                        href="/5.20.2/perlvar.html">Variables</a>
+                    <a class="dropdown-item"
+                        href="/5.20.2/index-pragmas.html">Pragmas</a>
+                    <a class="dropdown-item"
+                        href="/5.20.2/index-utilities.html">Utilities</a>
+                    <a class="dropdown-item"
+                        href="/5.20.2/index-internals.html">Internals</a>
+                    <a class="dropdown-item"
+                        href="/5.20.2/index-platforms.html">Platforms</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown3" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Modules</a>
+                <div aria-labelledby="navbarDropdown3"
+                    class="dropdown-menu letters-wrap">
+                    <!--<a class="dropdown-item"
+                        href="/5.20.2/index-modules.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.20.2/index-modules-by-cat.html">By
+                        Category</a>-->
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.20.2/index-modules-A.html">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.2/index-modules-B.html">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.2/index-modules-C.html">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.2/index-modules-D.html">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.2/index-modules-E.html">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.2/index-modules-F.html">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.2/index-modules-G.html">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.2/index-modules-H.html">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.2/index-modules-I.html">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.2/index-modules-J.html">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.2/index-modules-K.html">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.2/index-modules-L.html">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.2/index-modules-M.html">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.2/index-modules-N.html">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.2/index-modules-O.html">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.2/index-modules-P.html">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.2/index-modules-Q.html">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.2/index-modules-R.html">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.2/index-modules-S.html">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.2/index-modules-T.html">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.2/index-modules-U.html">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.2/index-modules-V.html">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.2/index-modules-W.html">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.2/index-modules-X.html">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.2/index-modules-Y.html">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.2/index-modules-Z.html">Z</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown4" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Functions</a>
+                <div aria-labelledby="navbarDropdown4"
+                    class="dropdown-menu letters-wrap">
+                    <a class="dropdown-item"
+                        href="/5.20.2/index-functions.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.20.2/index-functions-by-cat.html">By
+                        Category</a>
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.20.2/index-functions.html#A">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.2/index-functions.html#B">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.2/index-functions.html#C">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.2/index-functions.html#D">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.2/index-functions.html#E">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.2/index-functions.html#F">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.2/index-functions.html#G">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.2/index-functions.html#H">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.2/index-functions.html#I">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.2/index-functions.html#J">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.2/index-functions.html#K">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.2/index-functions.html#L">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.2/index-functions.html#M">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.2/index-functions.html#N">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.2/index-functions.html#O">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.2/index-functions.html#P">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.2/index-functions.html#Q">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.2/index-functions.html#R">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.2/index-functions.html#S">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.2/index-functions.html#T">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.2/index-functions.html#U">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.2/index-functions.html#V">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.2/index-functions.html#W">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.2/index-functions.html#X">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.2/index-functions.html#Y">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.2/index-functions.html#Z">Z</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!--/.nav-collapse -->
+</nav>
+
+
+          <main class="row main-content pb-5 pt-5" id='content'>
+            <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+              <div class="row">
+                <div class="col-sm-12">
+                  <div id="breadcrumbs">
+                      
+    <a href="../../index.html">Home</a>&nbsp; &gt;
+    
+      
+        <a href="../../index-modules-I.html">Core modules (I)</a> &gt;
+      
+    
+    IO::Uncompress::AnyInflate
+  
+
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <article class="col-sm-12 content">
+                  <div class="documentation-wrapper">
+                    <div id="perl_version">
+                      <h7 class='page-title'> Perl 5 version 20.2
+                        documentation</h7>
+                    </div>
+                    <h1>IO::Uncompress::AnyInflate</h1>
+
+
+  <!--    -->
+<ul><li><a href="#NAME">NAME</a></li><li><a href="#SYNOPSIS">SYNOPSIS</a></li><li><a href="#DESCRIPTION">DESCRIPTION</a></li><li><a href="#Functional-Interface">Functional Interface</a></li><ul><li><a href="#anyinflate-%24input_filename_or_reference-%3d%3e-%24output_filename_or_reference-%5b%2c-OPTS%5d">anyinflate $input_filename_or_reference => $output_filename_or_reference [, OPTS]</a></li><li><a href="#Notes">Notes</a></li><li><a href="#Optional-Parameters">Optional Parameters</a></li><li><a href="#Examples">Examples</a></li></ul><li><a href="#OO-Interface">OO Interface</a></li><ul><li><a href="#Constructor">Constructor</a></li><li><a href="#Constructor-Options">Constructor Options</a></li><li><a href="#Examples">Examples</a></li></ul><li><a href="#Methods">Methods</a></li><ul><li><a href="#read">read</a></li><li><a href="#read">read</a></li><li><a href="#getline">getline</a></li><li><a href="#getc">getc</a></li><li><a href="#ungetc">ungetc</a></li><li><a href="#inflateSync">inflateSync</a></li><li><a href="#getHeaderInfo">getHeaderInfo</a></li><li><a href="#tell">tell</a></li><li><a href="#eof">eof</a></li><li><a href="#seek">seek</a></li><li><a href="#binmode">binmode</a></li><li><a href="#opened">opened</a></li><li><a href="#autoflush">autoflush</a></li><li><a href="#input_line_number">input_line_number</a></li><li><a href="#fileno">fileno</a></li><li><a href="#close">close</a></li><li><a href="#nextStream">nextStream</a></li><li><a href="#trailingData">trailingData</a></li></ul><li><a href="#Importing">Importing</a></li><li><a href="#EXAMPLES">EXAMPLES</a></li><ul><li><a href="#Working-with-Net%3a%3aFTP">Working with Net::FTP</a></li></ul><li><a href="#SEE-ALSO">SEE ALSO</a></li><li><a href="#AUTHOR">AUTHOR</a></li><li><a href="#MODIFICATION-HISTORY">MODIFICATION HISTORY</a></li><li><a href="#COPYRIGHT-AND-LICENSE">COPYRIGHT AND LICENSE</a></li></ul><a class='view-head1' id="NAME"></a><h2 class='h2' >NAME</h2>
+<p>IO::Uncompress::AnyInflate - Uncompress zlib-based (zip, gzip) file/buffer</p>
+<a class='view-head1' id="SYNOPSIS"></a><h2 class='h2' >SYNOPSIS</h2>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../../functions/use.html">use</a> <span class="w">IO::Uncompress::AnyInflate</span> <span class="q">qw(anyinflate $AnyInflateError)</span> <span class="sc">;</span></li><li></li><li>    <a class="l_k" href="../../functions/my.html">my</a> <span class="i">$status</span> = <span class="w">anyinflate</span> <span class="i">$input</span> <span class="cm">=&gt;</span> <span class="i">$output</span> [<span class="cm">,</span><span class="w">OPTS</span>]</li><li>        <a class="l_k" href="../../functions/or.html">or</a> <a class="l_k" href="../../functions/die.html">die</a> <span class="q">&quot;anyinflate failed: $AnyInflateError\n&quot;</span><span class="sc">;</span></li><li></li><li>    <a class="l_k" href="../../functions/my.html">my</a> <span class="i">$z</span> = <span class="w">new</span> <span class="w">IO::Uncompress::AnyInflate</span> <span class="i">$input</span> [<span class="w">OPTS</span>] </li><li>        <a class="l_k" href="../../functions/or.html">or</a> <a class="l_k" href="../../functions/die.html">die</a> <span class="q">&quot;anyinflate failed: $AnyInflateError\n&quot;</span><span class="sc">;</span></li><li></li><li>    <span class="i">$status</span> = <span class="i">$z</span><span class="i">-&gt;read</span><span class="s">(</span><span class="i">$buffer</span><span class="s">)</span></li><li>    <span class="i">$status</span> = <span class="i">$z</span><span class="i">-&gt;read</span><span class="s">(</span><span class="i">$buffer</span><span class="cm">,</span> <span class="i">$length</span><span class="s">)</span></li><li>    <span class="i">$status</span> = <span class="i">$z</span><span class="i">-&gt;read</span><span class="s">(</span><span class="i">$buffer</span><span class="cm">,</span> <span class="i">$length</span><span class="cm">,</span> <span class="i">$offset</span><span class="s">)</span></li><li>    <span class="i">$line</span> = <span class="i">$z</span><span class="i">-&gt;getline</span><span class="s">(</span><span class="s">)</span></li><li>    <span class="i">$char</span> = <span class="i">$z</span><span class="i">-&gt;getc</span><span class="s">(</span><span class="s">)</span></li><li>    <span class="i">$char</span> = <span class="i">$z</span><span class="i">-&gt;ungetc</span><span class="s">(</span><span class="s">)</span></li><li>    <span class="i">$char</span> = <span class="i">$z</span><span class="i">-&gt;opened</span><span class="s">(</span><span class="s">)</span></li><li></li><li>    <span class="i">$status</span> = <span class="i">$z</span><span class="i">-&gt;inflateSync</span><span class="s">(</span><span class="s">)</span></li><li></li><li>    <span class="i">$data</span> = <span class="i">$z</span><span class="i">-&gt;trailingData</span><span class="s">(</span><span class="s">)</span></li><li>    <span class="i">$status</span> = <span class="i">$z</span><span class="i">-&gt;nextStream</span><span class="s">(</span><span class="s">)</span></li><li>    <span class="i">$data</span> = <span class="i">$z</span><span class="i">-&gt;getHeaderInfo</span><span class="s">(</span><span class="s">)</span></li><li>    <span class="i">$z</span><span class="i">-&gt;tell</span><span class="s">(</span><span class="s">)</span></li><li>    <span class="i">$z</span><span class="i">-&gt;seek</span><span class="s">(</span><span class="i">$position</span><span class="cm">,</span> <span class="i">$whence</span><span class="s">)</span></li><li>    <span class="i">$z</span><span class="i">-&gt;binmode</span><span class="s">(</span><span class="s">)</span></li><li>    <span class="i">$z</span><span class="i">-&gt;fileno</span><span class="s">(</span><span class="s">)</span></li><li>    <span class="i">$z</span><span class="i">-&gt;eof</span><span class="s">(</span><span class="s">)</span></li><li>    <span class="i">$z</span><span class="i">-&gt;close</span><span class="s">(</span><span class="s">)</span></li><li></li><li>    <span class="i">$AnyInflateError</span> <span class="sc">;</span></li><li></li><li>    <span class="c"># IO::File mode</span></li><li></li><li>    <span class="q">&lt;$z&gt;</span></li><li>    <a class="l_k" href="../../functions/read.html">read</a><span class="s">(</span><span class="i">$z</span><span class="cm">,</span> <span class="i">$buffer</span><span class="s">)</span><span class="sc">;</span></li><li>    <a class="l_k" href="../../functions/read.html">read</a><span class="s">(</span><span class="i">$z</span><span class="cm">,</span> <span class="i">$buffer</span><span class="cm">,</span> <span class="i">$length</span><span class="s">)</span><span class="sc">;</span></li><li>    <a class="l_k" href="../../functions/read.html">read</a><span class="s">(</span><span class="i">$z</span><span class="cm">,</span> <span class="i">$buffer</span><span class="cm">,</span> <span class="i">$length</span><span class="cm">,</span> <span class="i">$offset</span><span class="s">)</span><span class="sc">;</span></li><li>    <a class="l_k" href="../../functions/tell.html">tell</a><span class="s">(</span><span class="i">$z</span><span class="s">)</span></li><li>    <a class="l_k" href="../../functions/seek.html">seek</a><span class="s">(</span><span class="i">$z</span><span class="cm">,</span> <span class="i">$position</span><span class="cm">,</span> <span class="i">$whence</span><span class="s">)</span></li><li>    <a class="l_k" href="../../functions/binmode.html">binmode</a><span class="s">(</span><span class="i">$z</span><span class="s">)</span></li><li>    <a class="l_k" href="../../functions/fileno.html">fileno</a><span class="s">(</span><span class="i">$z</span><span class="s">)</span></li><li>    <a class="l_k" href="../../functions/eof.html">eof</a><span class="s">(</span><span class="i">$z</span><span class="s">)</span></li><li>    <a class="l_k" href="../../functions/close.html">close</a><span class="s">(</span><span class="i">$z</span><span class="s">)</span></li></ol></pre><a class='view-head1' id="DESCRIPTION"></a><h2 class='h2' >DESCRIPTION</h2>
+<p>This module provides a Perl interface that allows the reading of
+files/buffers that have been compressed in a number of formats that use the
+zlib compression library.</p>
+<p>The formats supported are</p>
+<ul>
+<li><a class='view-title' id="RFC-1950"></a><strong>RFC 1950</strong>
+</li>
+<li><a class='view-title' id="RFC-1951-(optionally)"></a><strong>RFC 1951 (optionally)</strong>
+</li>
+<li><a class='view-title' id="gzip-(RFC-1952)"></a><strong>gzip (RFC 1952)</strong>
+</li>
+<li><a class='view-title' id="zip"></a><strong>zip</strong>
+</li>
+</ul>
+<p>The module will auto-detect which, if any, of the supported
+compression formats is being used.</p>
+<a class='view-head1' id="Functional-Interface"></a><h2 class='h2' >Functional Interface</h2>
+<p>A top-level function, <code class="inline"><span class="w">anyinflate</span></code>
+, is provided to carry out
+"one-shot" uncompression between buffers and/or files. For finer
+control over the uncompression process, see the <a href="#OO-Interface">OO Interface</a>
+section.</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../../functions/use.html">use</a> <span class="w">IO::Uncompress::AnyInflate</span> <span class="q">qw(anyinflate $AnyInflateError)</span> <span class="sc">;</span></li><li></li><li>    <span class="w">anyinflate</span> <span class="i">$input_filename_or_reference</span> <span class="cm">=&gt;</span> <span class="i">$output_filename_or_reference</span> [<span class="cm">,</span><span class="w">OPTS</span>] </li><li>        <a class="l_k" href="../../functions/or.html">or</a> <a class="l_k" href="../../functions/die.html">die</a> <span class="q">&quot;anyinflate failed: $AnyInflateError\n&quot;</span><span class="sc">;</span></li></ol></pre><p>The functional interface needs Perl5.005 or better.</p>
+<a class='view-head2' id="anyinflate-%24input_filename_or_reference-%3d%3e-%24output_filename_or_reference-%5b%2c-OPTS%5d"></a><h3 class='h3' >anyinflate $input_filename_or_reference =&gt; $output_filename_or_reference [, OPTS]</h3>
+<p><code class="inline"><span class="w">anyinflate</span></code>
+ expects at least two parameters,
+<code class="inline"><span class="i">$input_filename_or_reference</span></code>
+ and <code class="inline"><span class="i">$output_filename_or_reference</span></code>
+.</p>
+<a class='view-head3' id="The-%24input_filename_or_reference-parameter"></a><h4 class='h4' >The <code class="inline"><span class="i">$input_filename_or_reference</span></code>
+ parameter</h4>
+<p>The parameter, <code class="inline"><span class="i">$input_filename_or_reference</span></code>
+, is used to define the
+source of the compressed data.</p>
+<p>It can take one of the following forms:</p>
+<ul>
+<li><a class='view-title' id="A-filename"></a><strong>A filename</strong>
+<p>If the &lt;$input_filename_or_reference&gt; parameter is a simple scalar, it is
+assumed to be a filename. This file will be opened for reading and the
+input data will be read from it.</p>
+</li>
+<li><a class='view-title' id="A-filehandle"></a><strong>A filehandle</strong>
+<p>If the <code class="inline"><span class="i">$input_filename_or_reference</span></code>
+ parameter is a filehandle, the input
+data will be read from it.  The string '-' can be used as an alias for
+standard input.</p>
+</li>
+<li><a class='view-title' id="A-scalar-reference"></a><strong>A scalar reference</strong>
+<p>If <code class="inline"><span class="i">$input_filename_or_reference</span></code>
+ is a scalar reference, the input data
+will be read from <code class="inline"><span class="i">$$input_filename_or_reference</span></code>
+.</p>
+</li>
+<li><a class='view-title' id="An-array-reference"></a><strong>An array reference</strong>
+<p>If <code class="inline"><span class="i">$input_filename_or_reference</span></code>
+ is an array reference, each element in
+the array must be a filename.</p>
+<p>The input data will be read from each file in turn.</p>
+<p>The complete array will be walked to ensure that it only
+contains valid filenames before any data is uncompressed.</p>
+</li>
+<li><a class='view-title' id="An-Input-FileGlob-string"></a><strong>An Input FileGlob string</strong>
+<p>If <code class="inline"><span class="i">$input_filename_or_reference</span></code>
+ is a string that is delimited by the
+characters "&lt;" and "&gt;" <code class="inline"><span class="w">anyinflate</span></code>
+ will assume that it is an 
+<i>input fileglob string</i>. The input is the list of files that match the 
+fileglob.</p>
+<p>See <a href="../../File/GlobMapper.html">File::GlobMapper</a> for more details.</p>
+</li>
+</ul>
+<p>If the <code class="inline"><span class="i">$input_filename_or_reference</span></code>
+ parameter is any other type,
+<code class="inline"><a class="l_k" href="../../functions/undef.html">undef</a></code> will be returned.</p>
+<a class='view-head3' id="The-%24output_filename_or_reference-parameter"></a><h4 class='h4' >The <code class="inline"><span class="i">$output_filename_or_reference</span></code>
+ parameter</h4>
+<p>The parameter <code class="inline"><span class="i">$output_filename_or_reference</span></code>
+ is used to control the
+destination of the uncompressed data. This parameter can take one of
+these forms.</p>
+<ul>
+<li><a class='view-title' id="A-filename"></a><strong>A filename</strong>
+<p>If the <code class="inline"><span class="i">$output_filename_or_reference</span></code>
+ parameter is a simple scalar, it is
+assumed to be a filename.  This file will be opened for writing and the 
+uncompressed data will be written to it.</p>
+</li>
+<li><a class='view-title' id="A-filehandle"></a><strong>A filehandle</strong>
+<p>If the <code class="inline"><span class="i">$output_filename_or_reference</span></code>
+ parameter is a filehandle, the
+uncompressed data will be written to it.  The string '-' can be used as
+an alias for standard output.</p>
+</li>
+<li><a class='view-title' id="A-scalar-reference"></a><strong>A scalar reference</strong>
+<p>If <code class="inline"><span class="i">$output_filename_or_reference</span></code>
+ is a scalar reference, the
+uncompressed data will be stored in <code class="inline"><span class="i">$$output_filename_or_reference</span></code>
+.</p>
+</li>
+<li><a class='view-title' id="An-Array-Reference"></a><strong>An Array Reference</strong>
+<p>If <code class="inline"><span class="i">$output_filename_or_reference</span></code>
+ is an array reference, 
+the uncompressed data will be pushed onto the array.</p>
+</li>
+<li><a class='view-title' id="An-Output-FileGlob"></a><strong>An Output FileGlob</strong>
+<p>If <code class="inline"><span class="i">$output_filename_or_reference</span></code>
+ is a string that is delimited by the
+characters "&lt;" and "&gt;" <code class="inline"><span class="w">anyinflate</span></code>
+ will assume that it is an
+<i>output fileglob string</i>. The output is the list of files that match the
+fileglob.</p>
+<p>When <code class="inline"><span class="i">$output_filename_or_reference</span></code>
+ is an fileglob string,
+<code class="inline"><span class="i">$input_filename_or_reference</span></code>
+ must also be a fileglob string. Anything
+else is an error.</p>
+<p>See <a href="../../File/GlobMapper.html">File::GlobMapper</a> for more details.</p>
+</li>
+</ul>
+<p>If the <code class="inline"><span class="i">$output_filename_or_reference</span></code>
+ parameter is any other type,
+<code class="inline"><a class="l_k" href="../../functions/undef.html">undef</a></code> will be returned.</p>
+<a class='view-head2' id="Notes"></a><h3 class='h3' >Notes</h3>
+<p>When <code class="inline"><span class="i">$input_filename_or_reference</span></code>
+ maps to multiple compressed
+files/buffers and <code class="inline"><span class="i">$output_filename_or_reference</span></code>
+ is
+a single file/buffer, after uncompression <code class="inline"><span class="i">$output_filename_or_reference</span></code>
+ will contain a
+concatenation of all the uncompressed data from each of the input
+files/buffers.</p>
+<a class='view-head2' id="Optional-Parameters"></a><h3 class='h3' >Optional Parameters</h3>
+<p>Unless specified below, the optional parameters for <code class="inline"><span class="w">anyinflate</span></code>
+,
+<code class="inline"><span class="w">OPTS</span></code>
+, are the same as those used with the OO interface defined in the
+<a href="#Constructor-Options">Constructor Options</a> section below.</p>
+<ul>
+<li><a class='view-title' id="AutoClose-%3d%3e-0%7c1"></a><strong><code class="inline"><span class="w">AutoClose</span> <span class="cm">=&gt;</span> <span class="n">0</span>|<span class="n">1</span></code>
+</strong>
+<p>This option applies to any input or output data streams to 
+<code class="inline"><span class="w">anyinflate</span></code>
+ that are filehandles.</p>
+<p>If <code class="inline"><span class="w">AutoClose</span></code>
+ is specified, and the value is true, it will result in all
+input and/or output filehandles being closed once <code class="inline"><span class="w">anyinflate</span></code>
+ has
+completed.</p>
+<p>This parameter defaults to 0.</p>
+</li>
+<li><a class='view-title' id="BinModeOut-%3d%3e-0%7c1"></a><strong><code class="inline"><span class="w">BinModeOut</span> <span class="cm">=&gt;</span> <span class="n">0</span>|<span class="n">1</span></code>
+</strong>
+<p>When writing to a file or filehandle, set <code class="inline"><a class="l_k" href="../../functions/binmode.html">binmode</a></code> before writing to the
+file.</p>
+<p>Defaults to 0.</p>
+</li>
+<li><a class='view-title' id="Append-%3d%3e-0%7c1"></a><strong><code class="inline"><span class="w">Append</span> <span class="cm">=&gt;</span> <span class="n">0</span>|<span class="n">1</span></code>
+</strong>
+<p>The behaviour of this option is dependent on the type of output data
+stream.</p>
+<ul>
+<li><a class='view-title' id="*-A-Buffer"></a><strong>A Buffer</strong>
+<p>If <code class="inline"><span class="w">Append</span></code>
+ is enabled, all uncompressed data will be append to the end of
+the output buffer. Otherwise the output buffer will be cleared before any
+uncompressed data is written to it.</p>
+</li>
+<li><a class='view-title' id="*-A-Filename"></a><strong>A Filename</strong>
+<p>If <code class="inline"><span class="w">Append</span></code>
+ is enabled, the file will be opened in append mode. Otherwise
+the contents of the file, if any, will be truncated before any uncompressed
+data is written to it.</p>
+</li>
+<li><a class='view-title' id="*-A-Filehandle"></a><strong>A Filehandle</strong>
+<p>If <code class="inline"><span class="w">Append</span></code>
+ is enabled, the filehandle will be positioned to the end of
+the file via a call to <code class="inline"><a class="l_k" href="../../functions/seek.html">seek</a></code> before any uncompressed data is
+written to it.  Otherwise the file pointer will not be moved.</p>
+</li>
+</ul>
+<p>When <code class="inline"><span class="w">Append</span></code>
+ is specified, and set to true, it will <i>append</i> all uncompressed 
+data to the output data stream.</p>
+<p>So when the output is a filehandle it will carry out a seek to the eof
+before writing any uncompressed data. If the output is a filename, it will be opened for
+appending. If the output is a buffer, all uncompressed data will be
+appended to the existing buffer.</p>
+<p>Conversely when <code class="inline"><span class="w">Append</span></code>
+ is not specified, or it is present and is set to
+false, it will operate as follows.</p>
+<p>When the output is a filename, it will truncate the contents of the file
+before writing any uncompressed data. If the output is a filehandle
+its position will not be changed. If the output is a buffer, it will be
+wiped before any uncompressed data is output.</p>
+<p>Defaults to 0.</p>
+</li>
+<li><a class='view-title' id="MultiStream-%3d%3e-0%7c1"></a><strong><code class="inline"><span class="w">MultiStream</span> <span class="cm">=&gt;</span> <span class="n">0</span>|<span class="n">1</span></code>
+</strong>
+<p>If the input file/buffer contains multiple compressed data streams, this
+option will uncompress the whole lot as a single data stream.</p>
+<p>Defaults to 0.</p>
+</li>
+<li><a class='view-title' id="TrailingData-%3d%3e-%24scalar"></a><strong><code class="inline"><span class="w">TrailingData</span> <span class="cm">=&gt;</span> <span class="i">$scalar</span></code>
+</strong>
+<p>Returns the data, if any, that is present immediately after the compressed
+data stream once uncompression is complete.</p>
+<p>This option can be used when there is useful information immediately
+following the compressed data stream, and you don't know the length of the
+compressed data stream.</p>
+<p>If the input is a buffer, <code class="inline"><span class="w">trailingData</span></code>
+ will return everything from the
+end of the compressed data stream to the end of the buffer.</p>
+<p>If the input is a filehandle, <code class="inline"><span class="w">trailingData</span></code>
+ will return the data that is
+left in the filehandle input buffer once the end of the compressed data
+stream has been reached. You can then use the filehandle to read the rest
+of the input file.</p>
+<p>Don't bother using <code class="inline"><span class="w">trailingData</span></code>
+ if the input is a filename.</p>
+<p>If you know the length of the compressed data stream before you start
+uncompressing, you can avoid having to use <code class="inline"><span class="w">trailingData</span></code>
+ by setting the
+<code class="inline"><span class="w">InputLength</span></code>
+ option.</p>
+</li>
+</ul>
+<a class='view-head2' id="Examples"></a><h3 class='h3' >Examples</h3>
+<p>To read the contents of the file <code class="inline"><span class="w">file1</span>.<span class="w">txt</span>.<span class="w">Compressed</span></code>
+ and write the
+uncompressed data to the file <code class="inline"><span class="w">file1</span>.<span class="w">txt</span></code>
+.</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../../functions/use.html">use</a> <span class="w">strict</span> <span class="sc">;</span></li><li>    <a class="l_k" href="../../functions/use.html">use</a> <span class="w">warnings</span> <span class="sc">;</span></li><li>    <a class="l_k" href="../../functions/use.html">use</a> <span class="w">IO::Uncompress::AnyInflate</span> <span class="q">qw(anyinflate $AnyInflateError)</span> <span class="sc">;</span></li><li></li><li>    <a class="l_k" href="../../functions/my.html">my</a> <span class="i">$input</span> = <span class="q">&quot;file1.txt.Compressed&quot;</span><span class="sc">;</span></li><li>    <a class="l_k" href="../../functions/my.html">my</a> <span class="i">$output</span> = <span class="q">&quot;file1.txt&quot;</span><span class="sc">;</span></li><li>    <span class="w">anyinflate</span> <span class="i">$input</span> <span class="cm">=&gt;</span> <span class="i">$output</span></li><li>        <a class="l_k" href="../../functions/or.html">or</a> <a class="l_k" href="../../functions/die.html">die</a> <span class="q">&quot;anyinflate failed: $AnyInflateError\n&quot;</span><span class="sc">;</span></li></ol></pre><p>To read from an existing Perl filehandle, <code class="inline"><span class="i">$input</span></code>
+, and write the
+uncompressed data to a buffer, <code class="inline"><span class="i">$buffer</span></code>
+.</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../../functions/use.html">use</a> <span class="w">strict</span> <span class="sc">;</span></li><li>    <a class="l_k" href="../../functions/use.html">use</a> <span class="w">warnings</span> <span class="sc">;</span></li><li>    <a class="l_k" href="../../functions/use.html">use</a> <span class="w">IO::Uncompress::AnyInflate</span> <span class="q">qw(anyinflate $AnyInflateError)</span> <span class="sc">;</span></li><li>    <a class="l_k" href="../../functions/use.html">use</a> <span class="w">IO::File</span> <span class="sc">;</span></li><li></li><li>    <a class="l_k" href="../../functions/my.html">my</a> <span class="i">$input</span> = <span class="w">new</span> <span class="w">IO::File</span> <span class="q">&quot;&lt;file1.txt.Compressed&quot;</span></li><li>        <a class="l_k" href="../../functions/or.html">or</a> <a class="l_k" href="../../functions/die.html">die</a> <span class="q">&quot;Cannot open &#39;file1.txt.Compressed&#39;: $!\n&quot;</span> <span class="sc">;</span></li><li>    <a class="l_k" href="../../functions/my.html">my</a> <span class="i">$buffer</span> <span class="sc">;</span></li><li>    <span class="w">anyinflate</span> <span class="i">$input</span> <span class="cm">=&gt;</span> \<span class="i">$buffer</span> </li><li>        <a class="l_k" href="../../functions/or.html">or</a> <a class="l_k" href="../../functions/die.html">die</a> <span class="q">&quot;anyinflate failed: $AnyInflateError\n&quot;</span><span class="sc">;</span></li></ol></pre><p>To uncompress all files in the directory "/my/home" that match "*.txt.Compressed" and store the compressed data in the same directory</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../../functions/use.html">use</a> <span class="w">strict</span> <span class="sc">;</span></li><li>    <a class="l_k" href="../../functions/use.html">use</a> <span class="w">warnings</span> <span class="sc">;</span></li><li>    <a class="l_k" href="../../functions/use.html">use</a> <span class="w">IO::Uncompress::AnyInflate</span> <span class="q">qw(anyinflate $AnyInflateError)</span> <span class="sc">;</span></li><li></li><li>    <span class="w">anyinflate</span> <span class="q">&#39;&lt;/my/home/*.txt.Compressed&gt;&#39;</span> <span class="cm">=&gt;</span> <span class="q">&#39;&lt;/my/home/#1.txt&gt;&#39;</span></li><li>        <a class="l_k" href="../../functions/or.html">or</a> <a class="l_k" href="../../functions/die.html">die</a> <span class="q">&quot;anyinflate failed: $AnyInflateError\n&quot;</span><span class="sc">;</span></li></ol></pre><p>and if you want to compress each file one at a time, this will do the trick</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../../functions/use.html">use</a> <span class="w">strict</span> <span class="sc">;</span></li><li>    <a class="l_k" href="../../functions/use.html">use</a> <span class="w">warnings</span> <span class="sc">;</span></li><li>    <a class="l_k" href="../../functions/use.html">use</a> <span class="w">IO::Uncompress::AnyInflate</span> <span class="q">qw(anyinflate $AnyInflateError)</span> <span class="sc">;</span></li><li></li><li>    <a class="l_k" href="../../functions/for.html">for</a> <a class="l_k" href="../../functions/my.html">my</a> <span class="i">$input</span> <span class="s">(</span> <a class="l_k" href="../../functions/glob.html">glob</a> <span class="q">&quot;/my/home/*.txt.Compressed&quot;</span> <span class="s">)</span></li><li>    <span class="s">{</span></li><li>        <a class="l_k" href="../../functions/my.html">my</a> <span class="i">$output</span> = <span class="i">$input</span><span class="sc">;</span></li><li>        <span class="i">$output</span> =~ <span class="q">s/.Compressed//</span> <span class="sc">;</span></li><li>        <span class="w">anyinflate</span> <span class="i">$input</span> <span class="cm">=&gt;</span> <span class="i">$output</span> </li><li>            <a class="l_k" href="../../functions/or.html">or</a> <a class="l_k" href="../../functions/die.html">die</a> <span class="q">&quot;Error compressing &#39;$input&#39;: $AnyInflateError\n&quot;</span><span class="sc">;</span></li><li>    <span class="s">}</span></li></ol></pre><a class='view-head1' id="OO-Interface"></a><h2 class='h2' >OO Interface</h2>
+<a class='view-head2' id="Constructor"></a><h3 class='h3' >Constructor</h3>
+<p>The format of the constructor for IO::Uncompress::AnyInflate is shown below</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../../functions/my.html">my</a> <span class="i">$z</span> = <span class="w">new</span> <span class="w">IO::Uncompress::AnyInflate</span> <span class="i">$input</span> [<span class="w">OPTS</span>]</li><li>        <a class="l_k" href="../../functions/or.html">or</a> <a class="l_k" href="../../functions/die.html">die</a> <span class="q">&quot;IO::Uncompress::AnyInflate failed: $AnyInflateError\n&quot;</span><span class="sc">;</span></li></ol></pre><p>Returns an <code class="inline"><span class="w">IO::Uncompress::AnyInflate</span></code>
+ object on success and undef on failure.
+The variable <code class="inline"><span class="i">$AnyInflateError</span></code>
+ will contain an error message on failure.</p>
+<p>If you are running Perl 5.005 or better the object, <code class="inline"><span class="i">$z</span></code>
+, returned from
+IO::Uncompress::AnyInflate can be used exactly like an <a href="../../IO/File.html">IO::File</a> filehandle.
+This means that all normal input file operations can be carried out with
+<code class="inline"><span class="i">$z</span></code>
+.  For example, to read a line from a compressed file/buffer you can
+use either of these forms</p>
+<pre class="verbatim"><ol><li>    <span class="i">$line</span> = <span class="i">$z</span><span class="i">-&gt;getline</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="i">$line</span> = <span class="q">&lt;$z&gt;</span><span class="sc">;</span></li></ol></pre><p>The mandatory parameter <code class="inline"><span class="i">$input</span></code>
+ is used to determine the source of the
+compressed data. This parameter can take one of three forms.</p>
+<ul>
+<li><a class='view-title' id="A-filename"></a><strong>A filename</strong>
+<p>If the <code class="inline"><span class="i">$input</span></code>
+ parameter is a scalar, it is assumed to be a filename. This
+file will be opened for reading and the compressed data will be read from it.</p>
+</li>
+<li><a class='view-title' id="A-filehandle"></a><strong>A filehandle</strong>
+<p>If the <code class="inline"><span class="i">$input</span></code>
+ parameter is a filehandle, the compressed data will be
+read from it.
+The string '-' can be used as an alias for standard input.</p>
+</li>
+<li><a class='view-title' id="A-scalar-reference"></a><strong>A scalar reference</strong>
+<p>If <code class="inline"><span class="i">$input</span></code>
+ is a scalar reference, the compressed data will be read from
+<code class="inline"><span class="i">$$input</span></code>
+.</p>
+</li>
+</ul>
+<a class='view-head2' id="Constructor-Options"></a><h3 class='h3' >Constructor Options</h3>
+<p>The option names defined below are case insensitive and can be optionally
+prefixed by a '-'.  So all of the following are valid</p>
+<pre class="verbatim"><ol><li>    -<span class="w">AutoClose</span></li><li>    -<span class="w">autoclose</span></li><li>    <span class="w">AUTOCLOSE</span></li><li>    <span class="w">autoclose</span></li></ol></pre><p>OPTS is a combination of the following options:</p>
+<ul>
+<li><a class='view-title' id="AutoClose-%3d%3e-0%7c1"></a><strong><code class="inline"><span class="w">AutoClose</span> <span class="cm">=&gt;</span> <span class="n">0</span>|<span class="n">1</span></code>
+</strong>
+<p>This option is only valid when the <code class="inline"><span class="i">$input</span></code>
+ parameter is a filehandle. If
+specified, and the value is true, it will result in the file being closed once
+either the <code class="inline"><a class="l_k" href="../../functions/close.html">close</a></code> method is called or the IO::Uncompress::AnyInflate object is
+destroyed.</p>
+<p>This parameter defaults to 0.</p>
+</li>
+<li><a class='view-title' id="MultiStream-%3d%3e-0%7c1"></a><strong><code class="inline"><span class="w">MultiStream</span> <span class="cm">=&gt;</span> <span class="n">0</span>|<span class="n">1</span></code>
+</strong>
+<p>Allows multiple concatenated compressed streams to be treated as a single
+compressed stream. Decompression will stop once either the end of the
+file/buffer is reached, an error is encountered (premature eof, corrupt
+compressed data) or the end of a stream is not immediately followed by the
+start of another stream.</p>
+<p>This parameter defaults to 0.</p>
+</li>
+<li><a class='view-title' id="Prime-%3d%3e-%24string"></a><strong><code class="inline"><span class="w">Prime</span> <span class="cm">=&gt;</span> <span class="i">$string</span></code>
+</strong>
+<p>This option will uncompress the contents of <code class="inline"><span class="i">$string</span></code>
+ before processing the
+input file/buffer.</p>
+<p>This option can be useful when the compressed data is embedded in another
+file/data structure and it is not possible to work out where the compressed
+data begins without having to read the first few bytes. If this is the
+case, the uncompression can be <i>primed</i> with these bytes using this
+option.</p>
+</li>
+<li><a class='view-title' id="Transparent-%3d%3e-0%7c1"></a><strong><code class="inline"><span class="w">Transparent</span> <span class="cm">=&gt;</span> <span class="n">0</span>|<span class="n">1</span></code>
+</strong>
+<p>If this option is set and the input file/buffer is not compressed data,
+the module will allow reading of it anyway.</p>
+<p>In addition, if the input file/buffer does contain compressed data and
+there is non-compressed data immediately following it, setting this option
+will make this module treat the whole file/buffer as a single data stream.</p>
+<p>This option defaults to 1.</p>
+</li>
+<li><a class='view-title' id="BlockSize-%3d%3e-%24num"></a><strong><code class="inline"><span class="w">BlockSize</span> <span class="cm">=&gt;</span> <span class="i">$num</span></code>
+</strong>
+<p>When reading the compressed input data, IO::Uncompress::AnyInflate will read it in
+blocks of <code class="inline"><span class="i">$num</span></code>
+ bytes.</p>
+<p>This option defaults to 4096.</p>
+</li>
+<li><a class='view-title' id="InputLength-%3d%3e-%24size"></a><strong><code class="inline"><span class="w">InputLength</span> <span class="cm">=&gt;</span> <span class="i">$size</span></code>
+</strong>
+<p>When present this option will limit the number of compressed bytes read
+from the input file/buffer to <code class="inline"><span class="i">$size</span></code>
+. This option can be used in the
+situation where there is useful data directly after the compressed data
+stream and you know beforehand the exact length of the compressed data
+stream.</p>
+<p>This option is mostly used when reading from a filehandle, in which case
+the file pointer will be left pointing to the first byte directly after the
+compressed data stream.</p>
+<p>This option defaults to off.</p>
+</li>
+<li><a class='view-title' id="Append-%3d%3e-0%7c1"></a><strong><code class="inline"><span class="w">Append</span> <span class="cm">=&gt;</span> <span class="n">0</span>|<span class="n">1</span></code>
+</strong>
+<p>This option controls what the <code class="inline"><a class="l_k" href="../../functions/read.html">read</a></code> method does with uncompressed data.</p>
+<p>If set to 1, all uncompressed data will be appended to the output parameter
+of the <code class="inline"><a class="l_k" href="../../functions/read.html">read</a></code> method.</p>
+<p>If set to 0, the contents of the output parameter of the <code class="inline"><a class="l_k" href="../../functions/read.html">read</a></code> method
+will be overwritten by the uncompressed data.</p>
+<p>Defaults to 0.</p>
+</li>
+<li><a class='view-title' id="Strict-%3d%3e-0%7c1"></a><strong><code class="inline"><span class="w">Strict</span> <span class="cm">=&gt;</span> <span class="n">0</span>|<span class="n">1</span></code>
+</strong>
+<p>This option controls whether the extra checks defined below are used when
+carrying out the decompression. When Strict is on, the extra tests are
+carried out, when Strict is off they are not.</p>
+<p>The default for this option is off.</p>
+<p>If the input is an RFC 1950 data stream, the following will be checked:</p>
+<dl>
+<li>
+<p>The ADLER32 checksum field must be present.</p>
+</li>
+<li>
+<p>The value of the ADLER32 field read must match the adler32 value of the
+uncompressed data actually contained in the file.</p>
+</li>
+</dl>
+<p>If the input is a gzip (RFC 1952) data stream, the following will be checked:</p>
+<dl>
+<li>
+<p>If the FHCRC bit is set in the gzip FLG header byte, the CRC16 bytes in the
+header must match the crc16 value of the gzip header actually read.</p>
+</li>
+<li>
+<p>If the gzip header contains a name field (FNAME) it consists solely of ISO
+8859-1 characters.</p>
+</li>
+<li>
+<p>If the gzip header contains a comment field (FCOMMENT) it consists solely
+of ISO 8859-1 characters plus line-feed.</p>
+</li>
+<li>
+<p>If the gzip FEXTRA header field is present it must conform to the sub-field
+structure as defined in RFC 1952.</p>
+</li>
+<li>
+<p>The CRC32 and ISIZE trailer fields must be present.</p>
+</li>
+<li>
+<p>The value of the CRC32 field read must match the crc32 value of the
+uncompressed data actually contained in the gzip file.</p>
+</li>
+<li>
+<p>The value of the ISIZE fields read must match the length of the
+uncompressed data actually read from the file.</p>
+</li>
+</dl>
+</li>
+<li><a class='view-title' id="RawInflate-%3d%3e-0%7c1"></a><strong><code class="inline"><span class="w">RawInflate</span> <span class="cm">=&gt;</span> <span class="n">0</span>|<span class="n">1</span></code>
+</strong>
+<p>When auto-detecting the compressed format, try to test for raw-deflate (RFC
+1951) content using the <code class="inline"><span class="w">IO::Uncompress::RawInflate</span></code>
+ module.</p>
+<p>The reason this is not default behaviour is because RFC 1951 content can
+only be detected by attempting to uncompress it. This process is error
+prone and can result is false positives.</p>
+<p>Defaults to 0.</p>
+</li>
+<li><a class='view-title' id="ParseExtra-%3d%3e-0%7c1-If-the-gzip-FEXTRA-header-field-is-present-and-this-option-is-set%2c-it-will-force-the-module-to-check-that-it-conforms-to-the-sub-field-structure-as-defined-in-RFC-1952."></a><strong><code class="inline"><span class="w">ParseExtra</span> <span class="cm">=&gt;</span> <span class="n">0</span>|<span class="n">1</span></code>
+
+If the gzip FEXTRA header field is present and this option is set, it will
+force the module to check that it conforms to the sub-field structure as
+defined in RFC 1952.</strong>
+<p>If the <code class="inline"><span class="w">Strict</span></code>
+ is on it will automatically enable this option.</p>
+<p>Defaults to 0.</p>
+</li>
+</ul>
+<a class='view-head2' id="Examples"></a><h3 class='h3' >Examples</h3>
+<p>TODO</p>
+<a class='view-head1' id="Methods"></a><h2 class='h2' >Methods</h2>
+<a class='view-head2' id="read"></a><h3 class='h3' >read</h3>
+<p>Usage is</p>
+<pre class="verbatim"><ol><li>    <span class="i">$status</span> = <span class="i">$z</span><span class="i">-&gt;read</span><span class="s">(</span><span class="i">$buffer</span><span class="s">)</span></li></ol></pre><p>Reads a block of compressed data (the size of the compressed block is
+determined by the <code class="inline"><span class="w">Buffer</span></code>
+ option in the constructor), uncompresses it and
+writes any uncompressed data into <code class="inline"><span class="i">$buffer</span></code>
+. If the <code class="inline"><span class="w">Append</span></code>
+ parameter is
+set in the constructor, the uncompressed data will be appended to the
+<code class="inline"><span class="i">$buffer</span></code>
+ parameter. Otherwise <code class="inline"><span class="i">$buffer</span></code>
+ will be overwritten.</p>
+<p>Returns the number of uncompressed bytes written to <code class="inline"><span class="i">$buffer</span></code>
+, zero if eof
+or a negative number on error.</p>
+<a class='view-head2' id="read"></a><h3 class='h3' >read</h3>
+<p>Usage is</p>
+<pre class="verbatim"><ol><li>    <span class="i">$status</span> = <span class="i">$z</span><span class="i">-&gt;read</span><span class="s">(</span><span class="i">$buffer</span><span class="cm">,</span> <span class="i">$length</span><span class="s">)</span></li><li>    <span class="i">$status</span> = <span class="i">$z</span><span class="i">-&gt;read</span><span class="s">(</span><span class="i">$buffer</span><span class="cm">,</span> <span class="i">$length</span><span class="cm">,</span> <span class="i">$offset</span><span class="s">)</span></li><li></li><li>    <span class="i">$status</span> = <a class="l_k" href="../../functions/read.html">read</a><span class="s">(</span><span class="i">$z</span><span class="cm">,</span> <span class="i">$buffer</span><span class="cm">,</span> <span class="i">$length</span><span class="s">)</span></li><li>    <span class="i">$status</span> = <a class="l_k" href="../../functions/read.html">read</a><span class="s">(</span><span class="i">$z</span><span class="cm">,</span> <span class="i">$buffer</span><span class="cm">,</span> <span class="i">$length</span><span class="cm">,</span> <span class="i">$offset</span><span class="s">)</span></li></ol></pre><p>Attempt to read <code class="inline"><span class="i">$length</span></code>
+ bytes of uncompressed data into <code class="inline"><span class="i">$buffer</span></code>
+.</p>
+<p>The main difference between this form of the <code class="inline"><a class="l_k" href="../../functions/read.html">read</a></code> method and the
+previous one, is that this one will attempt to return <i>exactly</i> <code class="inline"><span class="i">$length</span></code>
+
+bytes. The only circumstances that this function will not is if end-of-file
+or an IO error is encountered.</p>
+<p>Returns the number of uncompressed bytes written to <code class="inline"><span class="i">$buffer</span></code>
+, zero if eof
+or a negative number on error.</p>
+<a class='view-head2' id="getline"></a><h3 class='h3' >getline</h3>
+<p>Usage is</p>
+<pre class="verbatim"><ol><li>    <span class="i">$line</span> = <span class="i">$z</span><span class="i">-&gt;getline</span><span class="s">(</span><span class="s">)</span></li><li>    <span class="i">$line</span> = <span class="q">&lt;$z&gt;</span></li></ol></pre><p>Reads a single line.</p>
+<p>This method fully supports the use of the variable <code class="inline"><span class="i">$/</span></code>
+ (or
+<code class="inline"><span class="i">$INPUT_RECORD_SEPARATOR</span></code>
+ or <code class="inline"><span class="i">$RS</span></code>
+ when <code class="inline"><span class="w">English</span></code>
+ is in use) to
+determine what constitutes an end of line. Paragraph mode, record mode and
+file slurp mode are all supported.</p>
+<a class='view-head2' id="getc"></a><h3 class='h3' >getc</h3>
+<p>Usage is</p>
+<pre class="verbatim"><ol><li>    <span class="i">$char</span> = <span class="i">$z</span><span class="i">-&gt;getc</span><span class="s">(</span><span class="s">)</span></li></ol></pre><p>Read a single character.</p>
+<a class='view-head2' id="ungetc"></a><h3 class='h3' >ungetc</h3>
+<p>Usage is</p>
+<pre class="verbatim"><ol><li>    <span class="i">$char</span> = <span class="i">$z</span><span class="i">-&gt;ungetc</span><span class="s">(</span><span class="i">$string</span><span class="s">)</span></li></ol></pre><a class='view-head2' id="inflateSync"></a><h3 class='h3' >inflateSync</h3>
+<p>Usage is</p>
+<pre class="verbatim"><ol><li>    <span class="i">$status</span> = <span class="i">$z</span><span class="i">-&gt;inflateSync</span><span class="s">(</span><span class="s">)</span></li></ol></pre><p>TODO</p>
+<a class='view-head2' id="getHeaderInfo"></a><h3 class='h3' >getHeaderInfo</h3>
+<p>Usage is</p>
+<pre class="verbatim"><ol><li>    <span class="i">$hdr</span>  = <span class="i">$z</span><span class="i">-&gt;getHeaderInfo</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="i">@hdrs</span> = <span class="i">$z</span><span class="i">-&gt;getHeaderInfo</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>This method returns either a hash reference (in scalar context) or a list
+or hash references (in array context) that contains information about each
+of the header fields in the compressed data stream(s).</p>
+<a class='view-head2' id="tell"></a><h3 class='h3' >tell</h3>
+<p>Usage is</p>
+<pre class="verbatim"><ol><li>    <span class="i">$z</span><span class="i">-&gt;tell</span><span class="s">(</span><span class="s">)</span></li><li>    <a class="l_k" href="../../functions/tell.html">tell</a> <span class="i">$z</span></li></ol></pre><p>Returns the uncompressed file offset.</p>
+<a class='view-head2' id="eof"></a><h3 class='h3' >eof</h3>
+<p>Usage is</p>
+<pre class="verbatim"><ol><li>    <span class="i">$z</span><span class="i">-&gt;eof</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li><li>    <a class="l_k" href="../../functions/eof.html">eof</a><span class="s">(</span><span class="i">$z</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>Returns true if the end of the compressed input stream has been reached.</p>
+<a class='view-head2' id="seek"></a><h3 class='h3' >seek</h3>
+<pre class="verbatim"><ol><li>    <span class="i">$z</span><span class="i">-&gt;seek</span><span class="s">(</span><span class="i">$position</span><span class="cm">,</span> <span class="i">$whence</span><span class="s">)</span><span class="sc">;</span></li><li>    <a class="l_k" href="../../functions/seek.html">seek</a><span class="s">(</span><span class="i">$z</span><span class="cm">,</span> <span class="i">$position</span><span class="cm">,</span> <span class="i">$whence</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>Provides a sub-set of the <code class="inline"><a class="l_k" href="../../functions/seek.html">seek</a></code> functionality, with the restriction
+that it is only legal to seek forward in the input file/buffer.
+It is a fatal error to attempt to seek backward.</p>
+<p>Note that the implementation of <code class="inline"><a class="l_k" href="../../functions/seek.html">seek</a></code> in this module does not provide
+true random access to a compressed file/buffer. It  works by uncompressing
+data from the current offset in the file/buffer until it reaches the
+uncompressed offset specified in the parameters to <code class="inline"><a class="l_k" href="../../functions/seek.html">seek</a></code>. For very small
+files this may be acceptable behaviour. For large files it may cause an
+unacceptable delay.</p>
+<p>The <code class="inline"><span class="i">$whence</span></code>
+ parameter takes one the usual values, namely SEEK_SET,
+SEEK_CUR or SEEK_END.</p>
+<p>Returns 1 on success, 0 on failure.</p>
+<a class='view-head2' id="binmode"></a><h3 class='h3' >binmode</h3>
+<p>Usage is</p>
+<pre class="verbatim"><ol><li>    <span class="i">$z</span><span class="i">-&gt;binmode</span></li><li>    <a class="l_k" href="../../functions/binmode.html">binmode</a> <span class="i">$z</span> <span class="sc">;</span></li></ol></pre><p>This is a noop provided for completeness.</p>
+<a class='view-head2' id="opened"></a><h3 class='h3' >opened</h3>
+<pre class="verbatim"><ol><li>    <span class="i">$z</span><span class="i">-&gt;opened</span><span class="s">(</span><span class="s">)</span></li></ol></pre><p>Returns true if the object currently refers to a opened file/buffer.</p>
+<a class='view-head2' id="autoflush"></a><h3 class='h3' >autoflush</h3>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../../functions/my.html">my</a> <span class="i">$prev</span> = <span class="i">$z</span><span class="i">-&gt;autoflush</span><span class="s">(</span><span class="s">)</span></li><li>    <a class="l_k" href="../../functions/my.html">my</a> <span class="i">$prev</span> = <span class="i">$z</span><span class="i">-&gt;autoflush</span><span class="s">(</span><span class="w">EXPR</span><span class="s">)</span></li></ol></pre><p>If the <code class="inline"><span class="i">$z</span></code>
+ object is associated with a file or a filehandle, this method
+returns the current autoflush setting for the underlying filehandle. If
+<code class="inline"><span class="w">EXPR</span></code>
+ is present, and is non-zero, it will enable flushing after every
+write/print operation.</p>
+<p>If <code class="inline"><span class="i">$z</span></code>
+ is associated with a buffer, this method has no effect and always
+returns <code class="inline"><a class="l_k" href="../../functions/undef.html">undef</a></code>.</p>
+<p><strong>Note</strong> that the special variable <code class="inline"><span class="i">$|</span></code>
+ <strong>cannot</strong> be used to set or
+retrieve the autoflush setting.</p>
+<a class='view-head2' id="input_line_number"></a><h3 class='h3' >input_line_number</h3>
+<pre class="verbatim"><ol><li>    <span class="i">$z</span><span class="i">-&gt;input_line_number</span><span class="s">(</span><span class="s">)</span></li><li>    <span class="i">$z</span><span class="i">-&gt;input_line_number</span><span class="s">(</span><span class="w">EXPR</span><span class="s">)</span></li></ol></pre><p>Returns the current uncompressed line number. If <code class="inline"><span class="w">EXPR</span></code>
+ is present it has
+the effect of setting the line number. Note that setting the line number
+does not change the current position within the file/buffer being read.</p>
+<p>The contents of <code class="inline"><span class="i">$/</span></code>
+ are used to determine what constitutes a line
+terminator.</p>
+<a class='view-head2' id="fileno"></a><h3 class='h3' >fileno</h3>
+<pre class="verbatim"><ol><li>    <span class="i">$z</span><span class="i">-&gt;fileno</span><span class="s">(</span><span class="s">)</span></li><li>    <a class="l_k" href="../../functions/fileno.html">fileno</a><span class="s">(</span><span class="i">$z</span><span class="s">)</span></li></ol></pre><p>If the <code class="inline"><span class="i">$z</span></code>
+ object is associated with a file or a filehandle, <code class="inline"><a class="l_k" href="../../functions/fileno.html">fileno</a></code>
+will return the underlying file descriptor. Once the <code class="inline"><a class="l_k" href="../../functions/close.html">close</a></code> method is
+called <code class="inline"><a class="l_k" href="../../functions/fileno.html">fileno</a></code> will return <code class="inline"><a class="l_k" href="../../functions/undef.html">undef</a></code>.</p>
+<p>If the <code class="inline"><span class="i">$z</span></code>
+ object is associated with a buffer, this method will return
+<code class="inline"><a class="l_k" href="../../functions/undef.html">undef</a></code>.</p>
+<a class='view-head2' id="close"></a><h3 class='h3' >close</h3>
+<pre class="verbatim"><ol><li>    <span class="i">$z</span><span class="i">-&gt;close</span><span class="s">(</span><span class="s">)</span> <span class="sc">;</span></li><li>    <a class="l_k" href="../../functions/close.html">close</a> <span class="i">$z</span> <span class="sc">;</span></li></ol></pre><p>Closes the output file/buffer.</p>
+<p>For most versions of Perl this method will be automatically invoked if
+the IO::Uncompress::AnyInflate object is destroyed (either explicitly or by the
+variable with the reference to the object going out of scope). The
+exceptions are Perl versions 5.005 through 5.00504 and 5.8.0. In
+these cases, the <code class="inline"><a class="l_k" href="../../functions/close.html">close</a></code> method will be called automatically, but
+not until global destruction of all live objects when the program is
+terminating.</p>
+<p>Therefore, if you want your scripts to be able to run on all versions
+of Perl, you should call <code class="inline"><a class="l_k" href="../../functions/close.html">close</a></code> explicitly and not rely on automatic
+closing.</p>
+<p>Returns true on success, otherwise 0.</p>
+<p>If the <code class="inline"><span class="w">AutoClose</span></code>
+ option has been enabled when the IO::Uncompress::AnyInflate
+object was created, and the object is associated with a file, the
+underlying file will also be closed.</p>
+<a class='view-head2' id="nextStream"></a><h3 class='h3' >nextStream</h3>
+<p>Usage is</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../../functions/my.html">my</a> <span class="i">$status</span> = <span class="i">$z</span><span class="i">-&gt;nextStream</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>Skips to the next compressed data stream in the input file/buffer. If a new
+compressed data stream is found, the eof marker will be cleared and <code class="inline"><span class="i">$.</span></code>
+
+will be reset to 0.</p>
+<p>Returns 1 if a new stream was found, 0 if none was found, and -1 if an
+error was encountered.</p>
+<a class='view-head2' id="trailingData"></a><h3 class='h3' >trailingData</h3>
+<p>Usage is</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../../functions/my.html">my</a> <span class="i">$data</span> = <span class="i">$z</span><span class="i">-&gt;trailingData</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>Returns the data, if any, that is present immediately after the compressed
+data stream once uncompression is complete. It only makes sense to call
+this method once the end of the compressed data stream has been
+encountered.</p>
+<p>This option can be used when there is useful information immediately
+following the compressed data stream, and you don't know the length of the
+compressed data stream.</p>
+<p>If the input is a buffer, <code class="inline"><span class="w">trailingData</span></code>
+ will return everything from the
+end of the compressed data stream to the end of the buffer.</p>
+<p>If the input is a filehandle, <code class="inline"><span class="w">trailingData</span></code>
+ will return the data that is
+left in the filehandle input buffer once the end of the compressed data
+stream has been reached. You can then use the filehandle to read the rest
+of the input file.</p>
+<p>Don't bother using <code class="inline"><span class="w">trailingData</span></code>
+ if the input is a filename.</p>
+<p>If you know the length of the compressed data stream before you start
+uncompressing, you can avoid having to use <code class="inline"><span class="w">trailingData</span></code>
+ by setting the
+<code class="inline"><span class="w">InputLength</span></code>
+ option in the constructor.</p>
+<a class='view-head1' id="Importing"></a><h2 class='h2' >Importing</h2>
+<p>No symbolic constants are required by this IO::Uncompress::AnyInflate at present.</p>
+<ul>
+<li><a class='view-title' id="%3aall"></a><strong>:all</strong>
+<p>Imports <code class="inline"><span class="w">anyinflate</span></code>
+ and <code class="inline"><span class="i">$AnyInflateError</span></code>
+.
+Same as doing this</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../../functions/use.html">use</a> <span class="w">IO::Uncompress::AnyInflate</span> <span class="q">qw(anyinflate $AnyInflateError)</span> <span class="sc">;</span></li></ol></pre></li>
+</ul>
+<a class='view-head1' id="EXAMPLES"></a><h2 class='h2' >EXAMPLES</h2>
+<a class='view-head2' id="Working-with-Net%3a%3aFTP"></a><h3 class='h3' >Working with Net::FTP</h3>
+<p>See <a href="../../IO/Compress/FAQ.html#Compressed-files-and-Net%3a%3aFTP">IO::Compress::FAQ</a></p>
+<a class='view-head1' id="SEE-ALSO"></a><h2 class='h2' >SEE ALSO</h2>
+<p><a href="../../Compress/Zlib.html">Compress::Zlib</a>, <a href="../../IO/Compress/Gzip.html">IO::Compress::Gzip</a>, <a href="../../IO/Uncompress/Gunzip.html">IO::Uncompress::Gunzip</a>, <a href="../../IO/Compress/Deflate.html">IO::Compress::Deflate</a>, <a href="../../IO/Uncompress/Inflate.html">IO::Uncompress::Inflate</a>, <a href="../../IO/Compress/RawDeflate.html">IO::Compress::RawDeflate</a>, <a href="../../IO/Uncompress/RawInflate.html">IO::Uncompress::RawInflate</a>, <a href="../../IO/Compress/Bzip2.html">IO::Compress::Bzip2</a>, <a href="../../IO/Uncompress/Bunzip2.html">IO::Uncompress::Bunzip2</a>, <a href="https://search.cpan.org/perldoc/IO::Compress::Lzma">IO::Compress::Lzma</a>, <a href="https://search.cpan.org/perldoc/IO::Uncompress::UnLzma">IO::Uncompress::UnLzma</a>, <a href="https://search.cpan.org/perldoc/IO::Compress::Xz">IO::Compress::Xz</a>, <a href="https://search.cpan.org/perldoc/IO::Uncompress::UnXz">IO::Uncompress::UnXz</a>, <a href="https://search.cpan.org/perldoc/IO::Compress::Lzop">IO::Compress::Lzop</a>, <a href="https://search.cpan.org/perldoc/IO::Uncompress::UnLzop">IO::Uncompress::UnLzop</a>, <a href="https://search.cpan.org/perldoc/IO::Compress::Lzf">IO::Compress::Lzf</a>, <a href="https://search.cpan.org/perldoc/IO::Uncompress::UnLzf">IO::Uncompress::UnLzf</a>, <a href="../../IO/Uncompress/AnyUncompress.html">IO::Uncompress::AnyUncompress</a></p>
+<p><a href="../../IO/Compress/FAQ.html">IO::Compress::FAQ</a></p>
+<p><a href="../../File/GlobMapper.html">File::GlobMapper</a>, <a href="https://search.cpan.org/perldoc/Archive::Zip">Archive::Zip</a>,
+<a href="../../Archive/Tar.html">Archive::Tar</a>,
+<a href="../../IO/Zlib.html">IO::Zlib</a></p>
+<p>For RFC 1950, 1951 and 1952 see 
+<i><a href="http://www.faqs.org/rfcs/rfc1950.html">http://www.faqs.org/rfcs/rfc1950.html</a></i>,
+<i><a href="http://www.faqs.org/rfcs/rfc1951.html">http://www.faqs.org/rfcs/rfc1951.html</a></i> and
+<i><a href="http://www.faqs.org/rfcs/rfc1952.html">http://www.faqs.org/rfcs/rfc1952.html</a></i></p>
+<p>The <i>zlib</i> compression library was written by Jean-loup Gailly
+<i>gzip@prep.ai.mit.edu</i> and Mark Adler <i>madler@alumni.caltech.edu</i>.</p>
+<p>The primary site for the <i>zlib</i> compression library is
+<i><a href="http://www.zlib.org">http://www.zlib.org</a></i>.</p>
+<p>The primary site for gzip is <i><a href="http://www.gzip.org">http://www.gzip.org</a></i>.</p>
+<a class='view-head1' id="AUTHOR"></a><h2 class='h2' >AUTHOR</h2>
+<p>This module was written by Paul Marquess, <i>pmqs@cpan.org</i>.</p>
+<a class='view-head1' id="MODIFICATION-HISTORY"></a><h2 class='h2' >MODIFICATION HISTORY</h2>
+<p>See the Changes file.</p>
+<a class='view-head1' id="COPYRIGHT-AND-LICENSE"></a><h2 class='h2' >COPYRIGHT AND LICENSE</h2>
+<p>Copyright (c) 2005-2014 Paul Marquess. All rights reserved.</p>
+<p>This program is free software; you can redistribute it and/or
+modify it under the same terms as Perl itself.</p>
+
+
+
+
+      <ul><li><a href="#NAME">NAME</a></li><li><a href="#SYNOPSIS">SYNOPSIS</a></li><li><a href="#DESCRIPTION">DESCRIPTION</a></li><li><a href="#Functional-Interface">Functional Interface</a></li><ul><li><a href="#anyinflate-%24input_filename_or_reference-%3d%3e-%24output_filename_or_reference-%5b%2c-OPTS%5d">anyinflate $input_filename_or_reference => $output_filename_or_reference [, OPTS]</a></li><li><a href="#Notes">Notes</a></li><li><a href="#Optional-Parameters">Optional Parameters</a></li><li><a href="#Examples">Examples</a></li></ul><li><a href="#OO-Interface">OO Interface</a></li><ul><li><a href="#Constructor">Constructor</a></li><li><a href="#Constructor-Options">Constructor Options</a></li><li><a href="#Examples">Examples</a></li></ul><li><a href="#Methods">Methods</a></li><ul><li><a href="#read">read</a></li><li><a href="#read">read</a></li><li><a href="#getline">getline</a></li><li><a href="#getc">getc</a></li><li><a href="#ungetc">ungetc</a></li><li><a href="#inflateSync">inflateSync</a></li><li><a href="#getHeaderInfo">getHeaderInfo</a></li><li><a href="#tell">tell</a></li><li><a href="#eof">eof</a></li><li><a href="#seek">seek</a></li><li><a href="#binmode">binmode</a></li><li><a href="#opened">opened</a></li><li><a href="#autoflush">autoflush</a></li><li><a href="#input_line_number">input_line_number</a></li><li><a href="#fileno">fileno</a></li><li><a href="#close">close</a></li><li><a href="#nextStream">nextStream</a></li><li><a href="#trailingData">trailingData</a></li></ul><li><a href="#Importing">Importing</a></li><li><a href="#EXAMPLES">EXAMPLES</a></li><ul><li><a href="#Working-with-Net%3a%3aFTP">Working with Net::FTP</a></li></ul><li><a href="#SEE-ALSO">SEE ALSO</a></li><li><a href="#AUTHOR">AUTHOR</a></li><li><a href="#MODIFICATION-HISTORY">MODIFICATION HISTORY</a></li><li><a href="#COPYRIGHT-AND-LICENSE">COPYRIGHT AND LICENSE</a></li></ul>
+
+
+                  </div>
+                </article>
+              </div>
+            </div>
+          </main>
+        </div>
+           <footer class="footer row bg-light pt-5 pb-5">
+       <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+           <div class="row">
+               <div class="col-md-4">
+                   <ul class="list-unstyled">
+                       <li>
+                           <h4>Site info</h4>
+                       </li>
+                       <li>Docs mantained by
+                           <a href="//lists.perl.org/list/perl5-porters.html"
+                               rel="noopener">Perl 5 Porters</a>
+                       </li>
+                       <li>Perldoc site development sponsored by
+                           <a href="//opusvl.com" rel="noopener">
+                           <img style="margin: 20px 20px 5px 10px" class="opus-logo" src="/public/img/opusvl_logo.svg" alt="OpusVL Logo">
+                        </a>
+                    <li><span class="about_perldoc"><a href="//about.html">About PerlDOC</a></span>
+                    </li>
+                       </li>
+                   </ul>
+               </div>
+               <div class="col-md-8">
+                   <div class="row">
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Manuals</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.20.2/index-overview.html">Overview</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.20.2/index-tutorials.html">Tutorials</a>
+                               </li>
+                               <li>
+                                   <a href="/5.20.2/index-faq.html">FAQs</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.20.2/index-history.html">Changes</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Reference</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.20.2/index-language.html">Language</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.20.2/index-functions.html">Functions</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.20.2/perlop.html">Operators</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.20.2/perlvar.html">Variables</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Modules</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.20.2/index-modules-A.html">Modules</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.20.2/index-pragmas.html">Pragmas</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.20.2/index-utilities.html">Utilities</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Misc</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.20.2/index-licence.html">License</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.20.2/index-internals.html">Internals</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.20.2/index-platforms.html">Platforms</a>
+                               </li>
+                            <li>
+                                <a
+                                    href="/5.20.2/index-about.html">About</a>
+                            </li>
+                           </ul>
+                       </div>
+                   </div>
+               </div>
+               <div class=" col-12 footer-inf text-center">
+                   <small>perldoc.perl.org - Official documentation for the Perl
+                       programming language</small>
+               </div>
+           </div>
+       </div>
+   </footer>
+
+        	<div class="beta-wrapper beta-bottom-right ">
+		<div class="beta beta-blue  ">
+			<a class="beta-link "
+				href="//github.com/OpusVL/perldoc.perl.org/issues/new" rel="noopener">
+				<span class="beta-text">
+					This website is a Beta release.
+				</span>
+				<span class="beta-text">
+					For any issues please raise a ticket on GitHub
+				</span>
+			</a>
+		</div>
+	</div>
+
+        <script src="/public/js/main.min.js"></script>
+      </body>
+
+      </html>

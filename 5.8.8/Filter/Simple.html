@@ -1,0 +1,995 @@
+      
+      
+      
+      
+
+      <!DOCTYPE html>
+      <html lang="en">
+
+      <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Filter::Simple - perldoc.perl.org">
+        <link rel="icon" href="/public/img/favicon.ico">
+        <title>Filter::Simple - perldoc.perl.org</title>
+        <link href="/public/css/main.min.css" rel="stylesheet">
+        <link rel="canonical" href="/Filter/Simple.html">
+        <link
+          href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900'
+          rel='stylesheet' type='text/css'>
+        <script>
+          window.ga = window.ga || function () {
+            (ga.q = ga.q || []).push(arguments)
+          };
+          ga.l = +new Date;
+          ga('create', 'UA-1892152-2', 'auto'); // JJ's account
+          ga('create', 'UA-50555-3', 'auto', 'perlOrg'); // perl.org account
+          ga('require', 'outboundLinkTracker', {
+            events: ['click', 'auxclick', 'contextmenu'],
+          });
+          ga('require', 'maxScrollTracker');
+          ga('send', 'pageview');
+          ga('perlOrg.send', 'pageview');
+        </script>
+        <script async src="https://www.google-analytics.com/analytics.js">
+        </script>
+        <script async src="/public/js/tracking.min.js"></script>
+      </head>
+
+      <body class="body container-fluid ">
+        <div class="wrapper">
+
+          <nav
+    class="navbar navbar-dark bg-primary bg-perl fixed-top justify-content-between navbar-expand-lg">
+    <a href="#content" class="skippy sr-only sr-only-focusable">
+        <span class=' skippy-text'>Skip to main content</span>
+    </a>
+    <a class="navbar-brand" href="/">
+        <img class="logo" src="/public/img/logo_perl_doc.svg"
+            alt="Perl Documentation Logo" />
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse"
+        data-target="#navbar" aria-controls="navbar" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="navbar" class="collapse navbar-collapse ">
+        <ul class="navbar-nav ml-auto navbar-right">
+            <form class="nav-item dropdown search-wrapper">
+                <input type="text" id='searchinput' aria-describedby='navbarDropdown5'
+                    placeholder="Type query" class='search-input-field' value=''>
+
+                <button href="#" data-toggle='dropdown' type="button"
+                    aria-haspopup="true" aria-expanded='false' id="navbarDropdown5"
+                    class="nav-link dropdown-toggle search-link">
+                    <object tabindex='-1' focusable="false" class='search-icon'
+                        data="/public/img/search.svg" type="image/svg+xml"
+                        name='search icon'>search
+                        icon</object>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown5"
+                    id='search-results'>
+                    <p class='dropdown-item major-version'>
+                        No results
+                    </p>
+                </div>
+            </form>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown" href="#" class="nav-link dropdown-toggle"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Perl versions</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    
+                        <p class='dropdown-item major-version'>
+                            5.32
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.32.0/">5.32.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.30
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.3/">5.30.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.2/">5.30.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.1/">5.30.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.0/">5.30.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.28
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.3/">5.28.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.2/">5.28.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.1/">5.28.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.0/">5.28.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.26
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.3/">5.26.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.2/">5.26.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.1/">5.26.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.0/">5.26.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.24
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.4/">5.24.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.3/">5.24.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.2/">5.24.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.1/">5.24.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.0/">5.24.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.22
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.4/">5.22.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.3/">5.22.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.2/">5.22.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.1/">5.22.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.0/">5.22.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.20
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.3/">5.20.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.2/">5.20.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.1/">5.20.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.0/">5.20.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.18
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.4/">5.18.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.3/">5.18.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.2/">5.18.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.1/">5.18.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.0/">5.18.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.16
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.3/">5.16.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.2/">5.16.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.1/">5.16.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.0/">5.16.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.14
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.4/">5.14.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.3/">5.14.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.2/">5.14.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.1/">5.14.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.0/">5.14.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.12
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.5/">5.12.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.4/">5.12.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.3/">5.12.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.2/">5.12.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.1/">5.12.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.0/">5.12.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.10
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.1/">5.10.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.0/">5.10.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.8
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.9/">5.8.9</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.8/">5.8.8</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.7/">5.8.7</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.6/">5.8.6</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.5/">5.8.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.4/">5.8.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.3/">5.8.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.2/">5.8.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.1/">5.8.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.0/">5.8.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.6
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.2/">5.6.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.1/">5.6.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.0/">5.6.0</a>
+                        
+                        
+                    
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown1" href="#" class="dropdown-toggle nav-link"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Manuals</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                    <a class="dropdown-item"
+                        href="/5.8.8/index-overview.html">Overview</a>
+                    <a class="dropdown-item"
+                        href="/5.8.8/index-tutorials.html">Tutorials</a>
+                    <a class="dropdown-item"
+                        href="/5.8.8/index-faq.html">FAQs</a>
+                    <a class="dropdown-item"
+                        href="/5.8.8/index-history.html">Changes</a>
+                    <a class="dropdown-item"
+                        href="/5.8.8/index-licence.html">License</a>
+                    <a class="dropdown-item"
+                        href="/5.8.8/index-language.html">Language</a>
+                    <a class="dropdown-item"
+                        href="/5.8.8/index-functions.html">Functions</a>
+                    <a class="dropdown-item"
+                        href="/5.8.8/perlop.html">Operators</a>
+                    <a class="dropdown-item"
+                        href="/5.8.8/perlvar.html">Variables</a>
+                    <a class="dropdown-item"
+                        href="/5.8.8/index-pragmas.html">Pragmas</a>
+                    <a class="dropdown-item"
+                        href="/5.8.8/index-utilities.html">Utilities</a>
+                    <a class="dropdown-item"
+                        href="/5.8.8/index-internals.html">Internals</a>
+                    <a class="dropdown-item"
+                        href="/5.8.8/index-platforms.html">Platforms</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown3" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Modules</a>
+                <div aria-labelledby="navbarDropdown3"
+                    class="dropdown-menu letters-wrap">
+                    <!--<a class="dropdown-item"
+                        href="/5.8.8/index-modules.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.8.8/index-modules-by-cat.html">By
+                        Category</a>-->
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.8.8/index-modules-A.html">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.8/index-modules-B.html">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.8/index-modules-C.html">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.8/index-modules-D.html">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.8/index-modules-E.html">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.8/index-modules-F.html">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.8/index-modules-G.html">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.8/index-modules-H.html">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.8/index-modules-I.html">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.8/index-modules-J.html">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.8/index-modules-K.html">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.8/index-modules-L.html">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.8/index-modules-M.html">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.8/index-modules-N.html">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.8/index-modules-O.html">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.8/index-modules-P.html">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.8/index-modules-Q.html">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.8/index-modules-R.html">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.8/index-modules-S.html">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.8/index-modules-T.html">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.8/index-modules-U.html">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.8/index-modules-V.html">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.8/index-modules-W.html">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.8/index-modules-X.html">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.8/index-modules-Y.html">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.8/index-modules-Z.html">Z</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown4" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Functions</a>
+                <div aria-labelledby="navbarDropdown4"
+                    class="dropdown-menu letters-wrap">
+                    <a class="dropdown-item"
+                        href="/5.8.8/index-functions.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.8.8/index-functions-by-cat.html">By
+                        Category</a>
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.8.8/index-functions.html#A">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.8/index-functions.html#B">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.8/index-functions.html#C">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.8/index-functions.html#D">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.8/index-functions.html#E">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.8/index-functions.html#F">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.8/index-functions.html#G">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.8/index-functions.html#H">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.8/index-functions.html#I">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.8/index-functions.html#J">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.8/index-functions.html#K">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.8/index-functions.html#L">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.8/index-functions.html#M">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.8/index-functions.html#N">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.8/index-functions.html#O">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.8/index-functions.html#P">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.8/index-functions.html#Q">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.8/index-functions.html#R">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.8/index-functions.html#S">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.8/index-functions.html#T">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.8/index-functions.html#U">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.8/index-functions.html#V">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.8/index-functions.html#W">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.8/index-functions.html#X">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.8/index-functions.html#Y">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.8/index-functions.html#Z">Z</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!--/.nav-collapse -->
+</nav>
+
+
+          <main class="row main-content pb-5 pt-5" id='content'>
+            <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+              <div class="row">
+                <div class="col-sm-12">
+                  <div id="breadcrumbs">
+                      
+    <a href="../index.html">Home</a>&nbsp; &gt;
+    
+      
+        <a href="../index-modules-F.html">Core modules (F)</a> &gt;
+      
+    
+    Filter::Simple
+  
+
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <article class="col-sm-12 content">
+                  <div class="documentation-wrapper">
+                    <div id="perl_version">
+                      <h7 class='page-title'> Perl 5 version 8.8
+                        documentation</h7>
+                    </div>
+                    <h1>Filter::Simple</h1>
+
+
+  <!--    -->
+<ul><li><a href="#NAME">NAME</a></li><li><a href="#SYNOPSIS">SYNOPSIS</a></li><li><a href="#DESCRIPTION">DESCRIPTION</a></li><ul><li><a href="#The-Problem">The Problem</a></li><li><a href="#A-Solution">A Solution</a></li><li><a href="#Disabling-or-changing-%3cno%3e-behaviour">Disabling or changing <no> behaviour</a></li><li><a href="#All-in-one-interface">All-in-one interface</a></li><li><a href="#Filtering-only-specific-components-of-source-code">Filtering only specific components of source code</a></li><li><a href="#Filtering-only-the-code-parts-of-source-code">Filtering only the code parts of source code</a></li><li><a href="#Using-Filter%3a%3aSimple-with-an-explicit-import-subroutine">Using Filter::Simple with an explicit import subroutine</a></li><li><a href="#Using-Filter%3a%3aSimple-and-Exporter-together">Using Filter::Simple and Exporter together</a></li><li><a href="#How-it-works">How it works</a></li></ul><li><a href="#AUTHOR">AUTHOR</a></li><li><a href="#COPYRIGHT">COPYRIGHT</a></li></ul><a class='view-head1' id="NAME"></a><h2 class='h2' >NAME</h2>
+<p>Filter::Simple - Simplified source filtering</p>
+<a class='view-head1' id="SYNOPSIS"></a><h2 class='h2' >SYNOPSIS</h2>
+<pre class="verbatim"><ol><li> <span class="c"># in MyFilter.pm:</span></li><li></li><li><a name="package-MyFilter"></a>     package <span class="i">MyFilter</span><span class="sc">;</span></li><li></li><li>     <a class="l_k" href="../functions/use.html">use</a> <span class="w">Filter::Simple</span><span class="sc">;</span></li><li>     </li><li>     <span class="i">FILTER</span> <span class="s">{</span> ... <span class="s">}</span><span class="sc">;</span></li><li></li><li>     <span class="c"># or just:</span></li><li>     <span class="c">#</span></li><li>     <span class="c"># use Filter::Simple sub { ... };</span></li><li></li><li> <span class="c"># in user&#39;s code:</span></li><li></li><li>     <a class="l_k" href="../functions/use.html">use</a> <span class="w">MyFilter</span><span class="sc">;</span></li><li></li><li>     <span class="c"># this code is filtered</span></li><li></li><li>     <a class="l_k" href="../functions/no.html">no</a> <span class="w">MyFilter</span><span class="sc">;</span></li><li></li><li>     <span class="c"># this code is not</span></li></ol></pre><a class='view-head1' id="DESCRIPTION"></a><h2 class='h2' >DESCRIPTION</h2>
+<a class='view-head2' id="The-Problem"></a><h3 class='h3' >The Problem</h3>
+<p>Source filtering is an immensely powerful feature of recent versions of Perl.
+It allows one to extend the language itself (e.g. the Switch module), to 
+simplify the language (e.g. Language::Pythonesque), or to completely recast the
+language (e.g. Lingua::Romana::Perligata). Effectively, it allows one to use
+the full power of Perl as its own, recursively applied, macro language.</p>
+<p>The excellent Filter::Util::Call module (by Paul Marquess) provides a
+usable Perl interface to source filtering, but it is often too powerful
+and not nearly as simple as it could be.</p>
+<p>To use the module it is necessary to do the following:</p>
+<dl>
+<li>
+<p>Download, build, and install the Filter::Util::Call module.
+(If you have Perl 5.7.1 or later, this is already done for you.)</p>
+</li>
+<li>
+<p>Set up a module that does a <code class="inline"><a class="l_k" href="../functions/use.html">use</a> <span class="w">Filter::Util::Call</span></code>
+.</p>
+</li>
+<li>
+<p>Within that module, create an <code class="inline"><a class="l_k" href="../functions/import.html">import</a></code> subroutine.</p>
+</li>
+<li>
+<p>Within the <code class="inline"><a class="l_k" href="../functions/import.html">import</a></code> subroutine do a call to <code class="inline"><span class="w">filter_add</span></code>
+, passing
+it either a subroutine reference.</p>
+</li>
+<li>
+<p>Within the subroutine reference, call <code class="inline"><span class="w">filter_read</span></code>
+ or <code class="inline"><span class="w">filter_read_exact</span></code>
+
+to "prime" $_ with source code data from the source file that will
+<code class="inline"><a class="l_k" href="../functions/use.html">use</a></code> your module. Check the status value returned to see if any
+source code was actually read in.</p>
+</li>
+<li>
+<p>Process the contents of $_ to change the source code in the desired manner.</p>
+</li>
+<li>
+<p>Return the status value.</p>
+</li>
+<li>
+<p>If the act of unimporting your module (via a <code class="inline"><a class="l_k" href="../functions/no.html">no</a></code>) should cause source
+code filtering to cease, create an <code class="inline"><span class="w">unimport</span></code>
+ subroutine, and have it call
+<code class="inline"><span class="w">filter_del</span></code>
+. Make sure that the call to <code class="inline"><span class="w">filter_read</span></code>
+ or
+<code class="inline"><span class="w">filter_read_exact</span></code>
+ in step 5 will not accidentally read past the
+<code class="inline"><a class="l_k" href="../functions/no.html">no</a></code>. Effectively this limits source code filters to line-by-line
+operation, unless the <code class="inline"><a class="l_k" href="../functions/import.html">import</a></code> subroutine does some fancy
+pre-pre-parsing of the source code it's filtering.</p>
+</li>
+</dl>
+<p>For example, here is a minimal source code filter in a module named
+BANG.pm. It simply converts every occurrence of the sequence <code class="inline"><span class="w">BANG</span>\<span class="q">s+BANG</span></code>
+
+to the sequence <code class="inline"><a class="l_k" href="../functions/die.html">die</a> <span class="q">&#39;BANG&#39;</span> if <span class="i">$BANG</span></code>
+ in any piece of code following a
+<code class="inline"><a class="l_k" href="../functions/use.html">use</a> <span class="w">BANG</span><span class="sc">;</span></code>
+ statement (until the next <code class="inline"><a class="l_k" href="../functions/no.html">no</a> <span class="w">BANG</span><span class="sc">;</span></code>
+ statement, if any):</p>
+<pre class="verbatim"><ol><li><a name="package-BANG"></a>    package <span class="i">BANG</span><span class="sc">;</span></li><li> </li><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">Filter::Util::Call</span> <span class="sc">;</span></li><li></li><li><a name="import"></a>    sub <span class="m">import</span> <span class="s">{</span></li><li>        <span class="i">filter_add</span><span class="s">(</span> <a class="l_k" href="../functions/sub.html">sub</a> <span class="s">{</span></li><li>        <a class="l_k" href="../functions/my.html">my</a> <span class="i">$caller</span> = <a class="l_k" href="../functions/caller.html">caller</a><span class="sc">;</span></li><li>        <a class="l_k" href="../functions/my.html">my</a> <span class="s">(</span><span class="i">$status</span><span class="cm">,</span> <span class="i">$no_seen</span><span class="cm">,</span> <span class="i">$data</span><span class="s">)</span><span class="sc">;</span></li><li>        while <span class="s">(</span><span class="i">$status</span> = <span class="i">filter_read</span><span class="s">(</span><span class="s">)</span><span class="s">)</span> <span class="s">{</span></li><li>            if <span class="s">(</span><span class="q">/^\s*no\s+$caller\s*;\s*?$/</span><span class="s">)</span> <span class="s">{</span></li><li>                <span class="i">$no_seen</span>=<span class="n">1</span><span class="sc">;</span></li><li>                <a class="l_k" href="../functions/last.html">last</a><span class="sc">;</span></li><li>            <span class="s">}</span></li><li>            <span class="i">$data</span> .= <span class="i">$_</span><span class="sc">;</span></li><li>            <span class="i">$_</span> = <span class="q">&quot;&quot;</span><span class="sc">;</span></li><li>        <span class="s">}</span></li><li>        <span class="i">$_</span> = <span class="i">$data</span><span class="sc">;</span></li><li>        <span class="q">s/BANG\s+BANG/die &#39;BANG&#39; if \$BANG/g</span></li><li>            unless <span class="i">$status</span> &lt; <span class="n">0</span><span class="sc">;</span></li><li>        <span class="i">$_</span> .= <span class="q">&quot;no $class;\n&quot;</span> if <span class="i">$no_seen</span><span class="sc">;</span></li><li>        <a class="l_k" href="../functions/return.html">return</a> <span class="n">1</span><span class="sc">;</span></li><li>        <span class="s">}</span><span class="s">)</span></li><li>    <span class="s">}</span></li><li></li><li><a name="unimport"></a>    sub <span class="m">unimport</span> <span class="s">{</span></li><li>        <span class="i">filter_del</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="s">}</span></li><li></li><li>    <span class="n">1</span> <span class="sc">;</span></li></ol></pre><p>This level of sophistication puts filtering out of the reach of
+many programmers.</p>
+<a class='view-head2' id="A-Solution"></a><h3 class='h3' >A Solution</h3>
+<p>The Filter::Simple module provides a simplified interface to
+Filter::Util::Call; one that is sufficient for most common cases.</p>
+<p>Instead of the above process, with Filter::Simple the task of setting up
+a source code filter is reduced to:</p>
+<dl>
+<li>
+<p>Download and install the Filter::Simple module.
+(If you have Perl 5.7.1 or later, this is already done for you.)</p>
+</li>
+<li>
+<p>Set up a module that does a <code class="inline"><a class="l_k" href="../functions/use.html">use</a> <span class="w">Filter::Simple</span></code>
+ and then
+calls <code class="inline"><span class="i">FILTER</span> <span class="s">{</span> ... <span class="s">}</span></code>
+.</p>
+</li>
+<li>
+<p>Within the anonymous subroutine or block that is passed to
+<code class="inline"><span class="w">FILTER</span></code>
+, process the contents of $_ to change the source code in
+the desired manner.</p>
+</li>
+</dl>
+<p>In other words, the previous example, would become:</p>
+<pre class="verbatim"><ol><li><a name="package-BANG"></a>    package <span class="i">BANG</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">Filter::Simple</span><span class="sc">;</span></li><li>    </li><li>    <span class="i">FILTER</span> <span class="s">{</span></li><li>        <span class="q">s/BANG\s+BANG/die &#39;BANG&#39; if \$BANG/g</span><span class="sc">;</span></li><li>    <span class="s">}</span><span class="sc">;</span></li><li></li><li>    <span class="n">1</span> <span class="sc">;</span></li></ol></pre><p>Note that the source code is passed as a single string, so any regex that
+uses <code class="inline">^</code>
+ or <code class="inline"><span class="i">$</span></code>
+ to detect line boundaries will need the <code class="inline"><span class="q">/m</span></code>
+ flag.</p>
+<a class='view-head2' id="Disabling-or-changing-%3cno%3e-behaviour"></a><h3 class='h3' >Disabling or changing &lt;no&gt; behaviour</h3>
+<p>By default, the installed filter only filters up to a line consisting of one of
+the three standard source "terminators":</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/no.html">no</a> <span class="w">ModuleName</span><span class="sc">;</span>  <span class="c"># optional comment</span></li></ol></pre><p>or:</p>
+<pre class="verbatim"><ol><li><a name="__END__"></a>    __END__</li></ol></pre><p>or:</p>
+<pre class="verbatim"><ol><li><a name="__DATA__"></a>    __DATA__</li></ol></pre><p>but this can be altered by passing a second argument to <code class="inline"><a class="l_k" href="../functions/use.html">use</a> <span class="w">Filter::Simple</span></code>
+
+or <code class="inline"><span class="w">FILTER</span></code>
+ (just remember: there's <i>no</i> comma after the initial block when
+you use <code class="inline"><span class="w">FILTER</span></code>
+).</p>
+<p>That second argument may be either a <code class="inline"><a class="l_k" href="../functions/qr.html">qr</a></code>'d regular expression (which is then
+used to match the terminator line), or a defined false value (which indicates
+that no terminator line should be looked for), or a reference to a hash
+(in which case the terminator is the value associated with the key
+<code class="inline"><span class="q">&#39;terminator&#39;</span></code>
+.</p>
+<p>For example, to cause the previous filter to filter only up to a line of the
+form:</p>
+<pre class="verbatim"><ol><li>    <span class="w">GNAB</span> <span class="w">esu</span><span class="sc">;</span></li></ol></pre><p>you would write:</p>
+<pre class="verbatim"><ol><li><a name="package-BANG"></a>    package <span class="i">BANG</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">Filter::Simple</span><span class="sc">;</span></li><li>    </li><li>    <span class="i">FILTER</span> <span class="s">{</span></li><li>        <span class="q">s/BANG\s+BANG/die &#39;BANG&#39; if \$BANG/g</span><span class="sc">;</span></li><li>    <span class="s">}</span></li><li>    <span class="q">qr/^\s*GNAB\s+esu\s*;\s*?$/</span><span class="sc">;</span></li></ol></pre><p>or:</p>
+<pre class="verbatim"><ol><li>    <span class="i">FILTER</span> <span class="s">{</span></li><li>        <span class="q">s/BANG\s+BANG/die &#39;BANG&#39; if \$BANG/g</span><span class="sc">;</span></li><li>    <span class="s">}</span></li><li>    <span class="s">{</span> <span class="w">terminator</span> <span class="cm">=&gt;</span> <span class="q">qr/^\s*GNAB\s+esu\s*;\s*?$/</span> <span class="s">}</span><span class="sc">;</span></li></ol></pre><p>and to prevent the filter's being turned off in any way:</p>
+<pre class="verbatim"><ol><li><a name="package-BANG"></a>    package <span class="i">BANG</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">Filter::Simple</span><span class="sc">;</span></li><li>    </li><li>    <span class="i">FILTER</span> <span class="s">{</span></li><li>        <span class="q">s/BANG\s+BANG/die &#39;BANG&#39; if \$BANG/g</span><span class="sc">;</span></li><li>    <span class="s">}</span></li><li>    <span class="q">&quot;&quot;</span><span class="sc">;</span>    <span class="c"># or: 0</span></li></ol></pre><p>or:</p>
+<pre class="verbatim"><ol><li>    <span class="i">FILTER</span> <span class="s">{</span></li><li>        <span class="q">s/BANG\s+BANG/die &#39;BANG&#39; if \$BANG/g</span><span class="sc">;</span></li><li>    <span class="s">}</span></li><li>    <span class="s">{</span> <span class="w">terminator</span> <span class="cm">=&gt;</span> <span class="q">&quot;&quot;</span> <span class="s">}</span><span class="sc">;</span></li></ol></pre><p><strong>Note that, no matter what you set the terminator pattern to,
+the actual terminator itself <i>must</i> be contained on a single source line.</strong></p>
+<a class='view-head2' id="All-in-one-interface"></a><h3 class='h3' >All-in-one interface</h3>
+<p>Separating the loading of Filter::Simple:</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">Filter::Simple</span><span class="sc">;</span></li></ol></pre><p>from the setting up of the filtering:</p>
+<pre class="verbatim"><ol><li>    <span class="i">FILTER</span> <span class="s">{</span> ... <span class="s">}</span><span class="sc">;</span></li></ol></pre><p>is useful because it allows other code (typically parser support code
+or caching variables) to be defined before the filter is invoked.
+However, there is often no need for such a separation.</p>
+<p>In those cases, it is easier to just append the filtering subroutine and
+any terminator specification directly to the <code class="inline"><a class="l_k" href="../functions/use.html">use</a></code> statement that loads
+Filter::Simple, like so:</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">Filter::Simple</span> <a class="l_k" href="../functions/sub.html">sub</a> <span class="s">{</span></li><li>        <span class="q">s/BANG\s+BANG/die &#39;BANG&#39; if \$BANG/g</span><span class="sc">;</span></li><li>    <span class="s">}</span><span class="sc">;</span></li></ol></pre><p>This is exactly the same as:</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">Filter::Simple</span><span class="sc">;</span></li><li>    BEGIN <span class="s">{</span></li><li>        <span class="i">Filter::Simple::FILTER</span> <span class="s">{</span></li><li>            <span class="q">s/BANG\s+BANG/die &#39;BANG&#39; if \$BANG/g</span><span class="sc">;</span></li><li>        <span class="s">}</span><span class="sc">;</span></li><li>    <span class="s">}</span></li></ol></pre><p>except that the <code class="inline"><span class="w">FILTER</span></code>
+ subroutine is not exported by Filter::Simple.</p>
+<a class='view-head2' id="Filtering-only-specific-components-of-source-code"></a><h3 class='h3' >Filtering only specific components of source code</h3>
+<p>One of the problems with a filter like:</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">Filter::Simple</span><span class="sc">;</span></li><li></li><li>    <span class="i">FILTER</span> <span class="s">{</span> <span class="q">s/BANG\s+BANG/die &#39;BANG&#39; if \$BANG/g</span> <span class="s">}</span><span class="sc">;</span></li></ol></pre><p>is that it indiscriminately applies the specified transformation to
+the entire text of your source program. So something like:</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/warn.html">warn</a> <span class="q">&#39;BANG BANG, YOU&#39;</span><span class="w">RE</span> <span class="w">DEAD</span><span class="q">&#39;;</span></li><li>    <span class="q">    BANG BANG;</span></li></ol></pre><p>will become:</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/warn.html">warn</a> <span class="q">&#39;die &#39;</span><span class="w">BANG</span><span class="q">&#39; if $BANG, YOU&#39;</span><span class="w">RE</span> <span class="w">DEAD</span><span class="q">&#39;;</span></li><li>    <span class="q">    die &#39;</span><span class="w">BANG</span><span class="q">&#39; if $BANG;</span></li></ol></pre><p>It is very common when filtering source to only want to apply the filter
+to the non-character-string parts of the code, or alternatively to <i>only</i>
+the character strings.</p>
+<p>Filter::Simple supports this type of filtering by automatically
+exporting the <code class="inline"><span class="w">FILTER_ONLY</span></code>
+ subroutine.</p>
+<p><code class="inline"><span class="w">FILTER_ONLY</span></code>
+ takes a sequence of specifiers that install separate
+(and possibly multiple) filters that act on only parts of the source code.
+For example:</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">Filter::Simple</span><span class="sc">;</span></li><li></li><li>    <span class="w">FILTER_ONLY</span></li><li>        <span class="w">code</span>      <span class="cm">=&gt;</span> <a class="l_k" href="../functions/sub.html">sub</a> <span class="s">{</span> <span class="q">s/BANG\s+BANG/die &#39;BANG&#39; if \$BANG/g</span> <span class="s">}</span><span class="cm">,</span></li><li>        <span class="w">quotelike</span> <span class="cm">=&gt;</span> <a class="l_k" href="../functions/sub.html">sub</a> <span class="s">{</span> <span class="q">s/BANG\s+BANG/CHITTY CHITTY/g</span> <span class="s">}</span><span class="sc">;</span></li></ol></pre><p>The <code class="inline"><span class="q">&quot;code&quot;</span></code>
+ subroutine will only be used to filter parts of the source
+code that are not quotelikes, POD, or <code class="inline"><a name="__DATA__"></a>__DATA__</code>
+. The <code class="inline"><span class="w">quotelike</span></code>
+
+subroutine only filters Perl quotelikes (including here documents).</p>
+<p>The full list of alternatives is:</p>
+<ul>
+<li><a class='view-title' id="%22code%22"></a><strong><code class="inline"><span class="q">&quot;code&quot;</span></code>
+</strong>
+<p>Filters only those sections of the source code that are not quotelikes, POD, or
+<code class="inline"><a name="__DATA__"></a>__DATA__</code>
+.</p>
+</li>
+<li><a class='view-title' id="%22code_no_comments%22"></a><strong><code class="inline"><span class="q">&quot;code_no_comments&quot;</span></code>
+</strong>
+<p>Filters only those sections of the source code that are not quotelikes, POD,
+comments, or <code class="inline"><a name="__DATA__"></a>__DATA__</code>
+.</p>
+</li>
+<li><a class='view-title' id="%22executable%22"></a><strong><code class="inline"><span class="q">&quot;executable&quot;</span></code>
+</strong>
+<p>Filters only those sections of the source code that are not POD or <code class="inline"><a name="__DATA__"></a>__DATA__</code>
+.</p>
+</li>
+<li><a class='view-title' id="%22executable_no_comments%22"></a><strong><code class="inline"><span class="q">&quot;executable_no_comments&quot;</span></code>
+</strong>
+<p>Filters only those sections of the source code that are not POD, comments, or <code class="inline"><a name="__DATA__"></a>__DATA__</code>
+.</p>
+</li>
+<li><a class='view-title' id="%22quotelike%22"></a><strong><code class="inline"><span class="q">&quot;quotelike&quot;</span></code>
+</strong>
+<p>Filters only Perl quotelikes (as interpreted by
+<code class="inline"><span class="i">&amp;Text::Balanced::extract_quotelike</span></code>
+).</p>
+</li>
+<li><a class='view-title' id="%22string%22"></a><strong><code class="inline"><span class="q">&quot;string&quot;</span></code>
+</strong>
+<p>Filters only the string literal parts of a Perl quotelike (i.e. the 
+contents of a string literal, either half of a <code class="inline"><a class="l_k" href="../functions/tr.html">tr///</a></code>, the second
+half of an <code class="inline"><a class="l_k" href="../functions/s.html">s///</a></code>).</p>
+</li>
+<li><a class='view-title' id="%22regex%22"></a><strong><code class="inline"><span class="q">&quot;regex&quot;</span></code>
+</strong>
+<p>Filters only the pattern literal parts of a Perl quotelike (i.e. the 
+contents of a <code class="inline"><a class="l_k" href="../functions/qr.html">qr//</a></code> or an <code class="inline"><a class="l_k" href="../functions/m.html">m//</a></code>, the first half of an <code class="inline"><a class="l_k" href="../functions/s.html">s///</a></code>).</p>
+</li>
+<li><a class='view-title' id="%22all%22"></a><strong><code class="inline"><span class="q">&quot;all&quot;</span></code>
+</strong>
+<p>Filters everything. Identical in effect to <code class="inline"><span class="w">FILTER</span></code>
+.</p>
+</li>
+</ul>
+<p>Except for <code class="inline"><span class="w">FILTER_ONLY</span> <span class="w">code</span> <span class="cm">=&gt;</span> <a class="l_k" href="../functions/sub.html">sub</a> <span class="s">{</span>...<span class="s">}</span></code>
+, each of
+the component filters is called repeatedly, once for each component
+found in the source code.</p>
+<p>Note that you can also apply two or more of the same type of filter in
+a single <code class="inline"><span class="w">FILTER_ONLY</span></code>
+. For example, here's a simple 
+macro-preprocessor that is only applied within regexes,
+with a final debugging pass that prints the resulting source code:</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">Regexp::Common</span><span class="sc">;</span></li><li>    <span class="w">FILTER_ONLY</span></li><li>        <span class="w">regex</span> <span class="cm">=&gt;</span> <a class="l_k" href="../functions/sub.html">sub</a> <span class="s">{</span> <span class="q">s/!\[/[^/g</span> <span class="s">}</span><span class="cm">,</span></li><li>        <span class="w">regex</span> <span class="cm">=&gt;</span> <a class="l_k" href="../functions/sub.html">sub</a> <span class="s">{</span> <span class="q">s/%d/$RE{num}{int}/g</span> <span class="s">}</span><span class="cm">,</span></li><li>        <span class="w">regex</span> <span class="cm">=&gt;</span> <a class="l_k" href="../functions/sub.html">sub</a> <span class="s">{</span> <span class="q">s/%f/$RE{num}{real}/g</span> <span class="s">}</span><span class="cm">,</span></li><li>        <span class="w">all</span>   <span class="cm">=&gt;</span> <a class="l_k" href="../functions/sub.html">sub</a> <span class="s">{</span> <a class="l_k" href="../functions/print.html">print</a> if <span class="i">$::DEBUG</span> <span class="s">}</span><span class="sc">;</span></li></ol></pre><a class='view-head2' id="Filtering-only-the-code-parts-of-source-code"></a><h3 class='h3' >Filtering only the code parts of source code</h3>
+<p>Most source code ceases to be grammatically correct when it is broken up
+into the pieces between string literals and regexes. So the <code class="inline"><span class="q">&#39;code&#39;</span></code>
+
+and <code class="inline"><span class="q">&#39;code_no_comments&#39;</span></code>
+ component filter behave slightly differently
+from the other partial filters described in the previous section.</p>
+<p>Rather than calling the specified processor on each individual piece of
+code (i.e. on the bits between quotelikes), the <code class="inline"><span class="q">&#39;code...&#39;</span></code>
+ partial
+filters operate on the entire source code, but with the quotelike bits
+(and, in the case of <code class="inline"><span class="q">&#39;code_no_comments&#39;</span></code>
+, the comments) "blanked out".</p>
+<p>That is, a <code class="inline"><span class="q">&#39;code...&#39;</span></code>
+ filter <i>replaces</i> each quoted string, quotelike,
+regex, POD, and __DATA__ section with a placeholder. The
+delimiters of this placeholder are the contents of the <code class="inline"><span class="i">$;</span></code>
+ variable
+at the time the filter is applied (normally <code class="inline"><span class="q">&quot;\034&quot;</span></code>
+). The remaining
+four bytes are a unique identifier for the component being replaced.</p>
+<p>This approach makes it comparatively easy to write code preprocessors
+without worrying about the form or contents of strings, regexes, etc.</p>
+<p>For convenience, during a <code class="inline"><span class="q">&#39;code...&#39;</span></code>
+ filtering operation, Filter::Simple
+provides a package variable (<code class="inline"><span class="i">$Filter::Simple::placeholder</span></code>
+) that
+contains a pre-compiled regex that matches any placeholder...and
+captures the identifier within the placeholder. Placeholders can be
+moved and re-ordered within the source code as needed.</p>
+<p>In addition, a second package variable (<code class="inline"><span class="i">@Filter::Simple::components</span></code>
+)
+contains a list of the various pieces of <code class="inline"><span class="i">$_</span></code>
+, as they were originally split
+up to allow placeholders to be inserted.</p>
+<p>Once the filtering has been applied, the original strings, regexes, POD,
+etc. are re-inserted into the code, by replacing each placeholder with
+the corresponding original component (from <code class="inline"><span class="i">@components</span></code>
+). Note that
+this means that the <code class="inline"><span class="i">@components</span></code>
+ variable must be treated with extreme
+care within the filter. The <code class="inline"><span class="i">@components</span></code>
+ array stores the "back-
+translations" of each placeholder inserted into <code class="inline"><span class="i">$_</span></code>
+, as well as the
+interstitial source code between placeholders. If the placeholder
+backtranslations are altered in <code class="inline"><span class="i">@components</span></code>
+, they will be similarly
+changed when the placeholders are removed from <code class="inline"><span class="i">$_</span></code>
+ after the filter
+is complete.</p>
+<p>For example, the following filter detects concatentated pairs of
+strings/quotelikes and reverses the order in which they are
+concatenated:</p>
+<pre class="verbatim"><ol><li><a name="package-DemoRevCat"></a>    package <span class="i">DemoRevCat</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">Filter::Simple</span><span class="sc">;</span></li><li></li><li>    <span class="w">FILTER_ONLY</span> <span class="w">code</span> <span class="cm">=&gt;</span> <a class="l_k" href="../functions/sub.html">sub</a> <span class="s">{</span></li><li>        <a class="l_k" href="../functions/my.html">my</a> <span class="i">$ph</span> = <span class="i">$Filter::Simple::placeholder</span><span class="sc">;</span></li><li>        <span class="q">s{ ($ph) \s* [.] \s* ($ph) }{ $2.$1 }gx</span></li><li>    <span class="s">}</span><span class="sc">;</span></li></ol></pre><p>Thus, the following code:</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">DemoRevCat</span><span class="sc">;</span></li><li></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">$str</span> = <span class="q">&quot;abc&quot;</span> . <span class="q">q(def)</span><span class="sc">;</span></li><li></li><li>    <a class="l_k" href="../functions/print.html">print</a> <span class="q">&quot;$str\n&quot;</span><span class="sc">;</span></li></ol></pre><p>would become:</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">$str</span> = <span class="q">q(def)</span>.<span class="q">&quot;abc&quot;</span><span class="sc">;</span></li><li></li><li>    <a class="l_k" href="../functions/print.html">print</a> <span class="q">&quot;$str\n&quot;</span><span class="sc">;</span></li></ol></pre><p>and hence print:</p>
+<pre class="verbatim"><ol><li>    <span class="w">defabc</span></li></ol></pre><a class='view-head2' id="Using-Filter%3a%3aSimple-with-an-explicit-import-subroutine"></a><h3 class='h3' >Using Filter::Simple with an explicit <code class="inline"><a class="l_k" href="../functions/import.html">import</a></code> subroutine</h3>
+<p>Filter::Simple generates a special <code class="inline"><a class="l_k" href="../functions/import.html">import</a></code> subroutine for
+your module (see <a href="#How-it-works">How it works</a>) which would normally replace any
+<code class="inline"><a class="l_k" href="../functions/import.html">import</a></code> subroutine you might have explicitly declared.</p>
+<p>However, Filter::Simple is smart enough to notice your existing
+<code class="inline"><a class="l_k" href="../functions/import.html">import</a></code> and Do The Right Thing with it.
+That is, if you explicitly define an <code class="inline"><a class="l_k" href="../functions/import.html">import</a></code> subroutine in a package
+that's using Filter::Simple, that <code class="inline"><a class="l_k" href="../functions/import.html">import</a></code> subroutine will still
+be invoked immediately after any filter you install.</p>
+<p>The only thing you have to remember is that the <code class="inline"><a class="l_k" href="../functions/import.html">import</a></code> subroutine
+<i>must</i> be declared <i>before</i> the filter is installed. If you use <code class="inline"><span class="w">FILTER</span></code>
+
+to install the filter:</p>
+<pre class="verbatim"><ol><li><a name="package-Filter::TurnItUpTo11"></a>    package <span class="i">Filter::TurnItUpTo11</span><span class="sc">;</span></li><li></li><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">Filter::Simple</span><span class="sc">;</span></li><li></li><li>    <span class="i">FILTER</span> <span class="s">{</span> <span class="q">s/(\w+)/\U$1/</span> <span class="s">}</span><span class="sc">;</span></li></ol></pre><p>that will almost never be a problem, but if you install a filtering
+subroutine by passing it directly to the <code class="inline"><a class="l_k" href="../functions/use.html">use</a> <span class="w">Filter::Simple</span></code>
+
+statement:</p>
+<pre class="verbatim"><ol><li><a name="package-Filter::TurnItUpTo11"></a>    package <span class="i">Filter::TurnItUpTo11</span><span class="sc">;</span></li><li></li><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">Filter::Simple</span> <a class="l_k" href="../functions/sub.html">sub</a><span class="s">{</span> <span class="q">s/(\w+)/\U$1/</span> <span class="s">}</span><span class="sc">;</span></li></ol></pre><p>then you must make sure that your <code class="inline"><a class="l_k" href="../functions/import.html">import</a></code> subroutine appears before
+that <code class="inline"><a class="l_k" href="../functions/use.html">use</a></code> statement.</p>
+<a class='view-head2' id="Using-Filter%3a%3aSimple-and-Exporter-together"></a><h3 class='h3' >Using Filter::Simple and Exporter together</h3>
+<p>Likewise, Filter::Simple is also smart enough
+to Do The Right Thing if you use Exporter:</p>
+<pre class="verbatim"><ol><li><a name="package-Switch"></a>    package <span class="i">Switch</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">base</span> <span class="w">Exporter</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">Filter::Simple</span><span class="sc">;</span></li><li></li><li>    <span class="i">@EXPORT</span>    = <span class="q">qw(switch case)</span><span class="sc">;</span></li><li>    <span class="i">@EXPORT_OK</span> = <span class="q">qw(given  when)</span><span class="sc">;</span></li><li></li><li>    <span class="i">FILTER</span> <span class="s">{</span> <span class="i">$_</span> = <span class="i">magic_Perl_filter</span><span class="s">(</span><span class="i">$_</span><span class="s">)</span> <span class="s">}</span></li></ol></pre><p>Immediately after the filter has been applied to the source,
+Filter::Simple will pass control to Exporter, so it can do its magic too.</p>
+<p>Of course, here too, Filter::Simple has to know you're using Exporter
+before it applies the filter. That's almost never a problem, but if you're
+nervous about it, you can guarantee that things will work correctly by
+ensuring that your <code class="inline"><a class="l_k" href="../functions/use.html">use</a> <span class="w">base</span> <span class="w">Exporter</span></code>
+ always precedes your
+<code class="inline"><a class="l_k" href="../functions/use.html">use</a> <span class="w">Filter::Simple</span></code>
+.</p>
+<a class='view-head2' id="How-it-works"></a><h3 class='h3' >How it works</h3>
+<p>The Filter::Simple module exports into the package that calls <code class="inline"><span class="w">FILTER</span></code>
+
+(or <code class="inline"><a class="l_k" href="../functions/use.html">use</a></code>s it directly) -- such as package "BANG" in the above example --
+two automagically constructed
+subroutines -- <code class="inline"><a class="l_k" href="../functions/import.html">import</a></code> and <code class="inline"><span class="w">unimport</span></code>
+ -- which take care of all the
+nasty details.</p>
+<p>In addition, the generated <code class="inline"><a class="l_k" href="../functions/import.html">import</a></code> subroutine passes its own argument
+list to the filtering subroutine, so the BANG.pm filter could easily 
+be made parametric:</p>
+<pre class="verbatim"><ol><li><a name="package-BANG"></a>    package <span class="i">BANG</span><span class="sc">;</span></li><li> </li><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">Filter::Simple</span><span class="sc">;</span></li><li>    </li><li>    <span class="i">FILTER</span> <span class="s">{</span></li><li>        <a class="l_k" href="../functions/my.html">my</a> <span class="s">(</span><span class="i">$die_msg</span><span class="cm">,</span> <span class="i">$var_name</span><span class="s">)</span> = <span class="i">@_</span><span class="sc">;</span></li><li>        <span class="q">s/BANG\s+BANG/die &#39;$die_msg&#39; if \${$var_name}/g</span><span class="sc">;</span></li><li>    <span class="s">}</span><span class="sc">;</span></li><li></li><li>    <span class="c"># and in some user code:</span></li><li></li><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">BANG</span> <span class="q">&quot;BOOM&quot;</span><span class="cm">,</span> <span class="q">&quot;BAM&quot;</span><span class="sc">;</span>  <span class="c"># &quot;BANG BANG&quot; becomes: die &#39;BOOM&#39; if $BAM</span></li></ol></pre><p>The specified filtering subroutine is called every time a <code class="inline"><a class="l_k" href="../functions/use.html">use</a> <span class="w">BANG</span></code>
+ is
+encountered, and passed all the source code following that call, up to
+either the next <code class="inline"><a class="l_k" href="../functions/no.html">no</a> <span class="w">BANG</span><span class="sc">;</span></code>
+ (or whatever terminator you've set) or the
+end of the source file, whichever occurs first. By default, any <code class="inline"><a class="l_k" href="../functions/no.html">no</a>
+<span class="w">BANG</span><span class="sc">;</span></code>
+ call must appear by itself on a separate line, or it is ignored.</p>
+<a class='view-head1' id="AUTHOR"></a><h2 class='h2' >AUTHOR</h2>
+<p>Damian Conway (damian@conway.org)</p>
+<a class='view-head1' id="COPYRIGHT"></a><h2 class='h2' >COPYRIGHT</h2>
+<pre class="verbatim"><ol><li>    <span class="w">Copyright</span> <span class="s">(</span><span class="w">c</span><span class="s">)</span> <span class="n">2000</span>-<span class="n">2001</span><span class="cm">,</span> <span class="w">Damian</span> <span class="w">Conway</span>. <span class="w">All</span> <span class="w">Rights</span> <span class="w">Reserved</span>.</li><li>    <span class="w">This</span> <span class="w">module</span> <span class="w">is</span> <span class="w">free</span> <span class="w">software</span>. <span class="w">It</span> <span class="w">may</span> <span class="w">be</span> <span class="w">used</span><span class="cm">,</span> <span class="w">redistributed</span></li><li>    and<span class="q">/or modified under the same terms as Perl itself.</span></li></ol></pre>
+
+
+
+      <ul><li><a href="#NAME">NAME</a></li><li><a href="#SYNOPSIS">SYNOPSIS</a></li><li><a href="#DESCRIPTION">DESCRIPTION</a></li><ul><li><a href="#The-Problem">The Problem</a></li><li><a href="#A-Solution">A Solution</a></li><li><a href="#Disabling-or-changing-%3cno%3e-behaviour">Disabling or changing <no> behaviour</a></li><li><a href="#All-in-one-interface">All-in-one interface</a></li><li><a href="#Filtering-only-specific-components-of-source-code">Filtering only specific components of source code</a></li><li><a href="#Filtering-only-the-code-parts-of-source-code">Filtering only the code parts of source code</a></li><li><a href="#Using-Filter%3a%3aSimple-with-an-explicit-import-subroutine">Using Filter::Simple with an explicit import subroutine</a></li><li><a href="#Using-Filter%3a%3aSimple-and-Exporter-together">Using Filter::Simple and Exporter together</a></li><li><a href="#How-it-works">How it works</a></li></ul><li><a href="#AUTHOR">AUTHOR</a></li><li><a href="#COPYRIGHT">COPYRIGHT</a></li></ul>
+
+
+                  </div>
+                </article>
+              </div>
+            </div>
+          </main>
+        </div>
+           <footer class="footer row bg-light pt-5 pb-5">
+       <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+           <div class="row">
+               <div class="col-md-4">
+                   <ul class="list-unstyled">
+                       <li>
+                           <h4>Site info</h4>
+                       </li>
+                       <li>Docs mantained by
+                           <a href="//lists.perl.org/list/perl5-porters.html"
+                               rel="noopener">Perl 5 Porters</a>
+                       </li>
+                       <li>Perldoc site development sponsored by
+                           <a href="//opusvl.com" rel="noopener">
+                           <img style="margin: 20px 20px 5px 10px" class="opus-logo" src="/public/img/opusvl_logo.svg" alt="OpusVL Logo">
+                        </a>
+                    <li><span class="about_perldoc"><a href="//about.html">About PerlDOC</a></span>
+                    </li>
+                       </li>
+                   </ul>
+               </div>
+               <div class="col-md-8">
+                   <div class="row">
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Manuals</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.8/index-overview.html">Overview</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.8/index-tutorials.html">Tutorials</a>
+                               </li>
+                               <li>
+                                   <a href="/5.8.8/index-faq.html">FAQs</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.8/index-history.html">Changes</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Reference</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.8/index-language.html">Language</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.8/index-functions.html">Functions</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.8/perlop.html">Operators</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.8/perlvar.html">Variables</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Modules</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.8/index-modules-A.html">Modules</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.8/index-pragmas.html">Pragmas</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.8/index-utilities.html">Utilities</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Misc</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.8/index-licence.html">License</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.8/index-internals.html">Internals</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.8/index-platforms.html">Platforms</a>
+                               </li>
+                            <li>
+                                <a
+                                    href="/5.8.8/index-about.html">About</a>
+                            </li>
+                           </ul>
+                       </div>
+                   </div>
+               </div>
+               <div class=" col-12 footer-inf text-center">
+                   <small>perldoc.perl.org - Official documentation for the Perl
+                       programming language</small>
+               </div>
+           </div>
+       </div>
+   </footer>
+
+        	<div class="beta-wrapper beta-bottom-right ">
+		<div class="beta beta-blue  ">
+			<a class="beta-link "
+				href="//github.com/OpusVL/perldoc.perl.org/issues/new" rel="noopener">
+				<span class="beta-text">
+					This website is a Beta release.
+				</span>
+				<span class="beta-text">
+					For any issues please raise a ticket on GitHub
+				</span>
+			</a>
+		</div>
+	</div>
+
+        <script src="/public/js/main.min.js"></script>
+      </body>
+
+      </html>

@@ -1,0 +1,927 @@
+      
+      
+      
+      
+
+      <!DOCTYPE html>
+      <html lang="en">
+
+      <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Pod::Usage - perldoc.perl.org">
+        <link rel="icon" href="/public/img/favicon.ico">
+        <title>Pod::Usage - perldoc.perl.org</title>
+        <link href="/public/css/main.min.css" rel="stylesheet">
+        <link rel="canonical" href="/Pod/Usage.html">
+        <link
+          href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900'
+          rel='stylesheet' type='text/css'>
+        <script>
+          window.ga = window.ga || function () {
+            (ga.q = ga.q || []).push(arguments)
+          };
+          ga.l = +new Date;
+          ga('create', 'UA-1892152-2', 'auto'); // JJ's account
+          ga('create', 'UA-50555-3', 'auto', 'perlOrg'); // perl.org account
+          ga('require', 'outboundLinkTracker', {
+            events: ['click', 'auxclick', 'contextmenu'],
+          });
+          ga('require', 'maxScrollTracker');
+          ga('send', 'pageview');
+          ga('perlOrg.send', 'pageview');
+        </script>
+        <script async src="https://www.google-analytics.com/analytics.js">
+        </script>
+        <script async src="/public/js/tracking.min.js"></script>
+      </head>
+
+      <body class="body container-fluid ">
+        <div class="wrapper">
+
+          <nav
+    class="navbar navbar-dark bg-primary bg-perl fixed-top justify-content-between navbar-expand-lg">
+    <a href="#content" class="skippy sr-only sr-only-focusable">
+        <span class=' skippy-text'>Skip to main content</span>
+    </a>
+    <a class="navbar-brand" href="/">
+        <img class="logo" src="/public/img/logo_perl_doc.svg"
+            alt="Perl Documentation Logo" />
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse"
+        data-target="#navbar" aria-controls="navbar" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="navbar" class="collapse navbar-collapse ">
+        <ul class="navbar-nav ml-auto navbar-right">
+            <form class="nav-item dropdown search-wrapper">
+                <input type="text" id='searchinput' aria-describedby='navbarDropdown5'
+                    placeholder="Type query" class='search-input-field' value=''>
+
+                <button href="#" data-toggle='dropdown' type="button"
+                    aria-haspopup="true" aria-expanded='false' id="navbarDropdown5"
+                    class="nav-link dropdown-toggle search-link">
+                    <object tabindex='-1' focusable="false" class='search-icon'
+                        data="/public/img/search.svg" type="image/svg+xml"
+                        name='search icon'>search
+                        icon</object>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown5"
+                    id='search-results'>
+                    <p class='dropdown-item major-version'>
+                        No results
+                    </p>
+                </div>
+            </form>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown" href="#" class="nav-link dropdown-toggle"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Perl versions</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    
+                        <p class='dropdown-item major-version'>
+                            5.32
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.32.0/">5.32.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.30
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.3/">5.30.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.2/">5.30.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.1/">5.30.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.0/">5.30.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.28
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.3/">5.28.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.2/">5.28.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.1/">5.28.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.0/">5.28.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.26
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.3/">5.26.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.2/">5.26.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.1/">5.26.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.0/">5.26.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.24
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.4/">5.24.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.3/">5.24.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.2/">5.24.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.1/">5.24.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.0/">5.24.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.22
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.4/">5.22.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.3/">5.22.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.2/">5.22.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.1/">5.22.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.0/">5.22.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.20
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.3/">5.20.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.2/">5.20.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.1/">5.20.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.0/">5.20.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.18
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.4/">5.18.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.3/">5.18.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.2/">5.18.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.1/">5.18.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.0/">5.18.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.16
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.3/">5.16.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.2/">5.16.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.1/">5.16.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.0/">5.16.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.14
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.4/">5.14.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.3/">5.14.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.2/">5.14.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.1/">5.14.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.0/">5.14.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.12
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.5/">5.12.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.4/">5.12.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.3/">5.12.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.2/">5.12.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.1/">5.12.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.0/">5.12.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.10
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.1/">5.10.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.0/">5.10.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.8
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.9/">5.8.9</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.8/">5.8.8</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.7/">5.8.7</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.6/">5.8.6</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.5/">5.8.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.4/">5.8.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.3/">5.8.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.2/">5.8.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.1/">5.8.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.0/">5.8.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.6
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.2/">5.6.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.1/">5.6.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.0/">5.6.0</a>
+                        
+                        
+                    
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown1" href="#" class="dropdown-toggle nav-link"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Manuals</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                    <a class="dropdown-item"
+                        href="/5.18.0/index-overview.html">Overview</a>
+                    <a class="dropdown-item"
+                        href="/5.18.0/index-tutorials.html">Tutorials</a>
+                    <a class="dropdown-item"
+                        href="/5.18.0/index-faq.html">FAQs</a>
+                    <a class="dropdown-item"
+                        href="/5.18.0/index-history.html">Changes</a>
+                    <a class="dropdown-item"
+                        href="/5.18.0/index-licence.html">License</a>
+                    <a class="dropdown-item"
+                        href="/5.18.0/index-language.html">Language</a>
+                    <a class="dropdown-item"
+                        href="/5.18.0/index-functions.html">Functions</a>
+                    <a class="dropdown-item"
+                        href="/5.18.0/perlop.html">Operators</a>
+                    <a class="dropdown-item"
+                        href="/5.18.0/perlvar.html">Variables</a>
+                    <a class="dropdown-item"
+                        href="/5.18.0/index-pragmas.html">Pragmas</a>
+                    <a class="dropdown-item"
+                        href="/5.18.0/index-utilities.html">Utilities</a>
+                    <a class="dropdown-item"
+                        href="/5.18.0/index-internals.html">Internals</a>
+                    <a class="dropdown-item"
+                        href="/5.18.0/index-platforms.html">Platforms</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown3" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Modules</a>
+                <div aria-labelledby="navbarDropdown3"
+                    class="dropdown-menu letters-wrap">
+                    <!--<a class="dropdown-item"
+                        href="/5.18.0/index-modules.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.18.0/index-modules-by-cat.html">By
+                        Category</a>-->
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.18.0/index-modules-A.html">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.0/index-modules-B.html">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.0/index-modules-C.html">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.0/index-modules-D.html">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.0/index-modules-E.html">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.0/index-modules-F.html">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.0/index-modules-G.html">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.0/index-modules-H.html">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.0/index-modules-I.html">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.0/index-modules-J.html">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.0/index-modules-K.html">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.0/index-modules-L.html">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.0/index-modules-M.html">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.0/index-modules-N.html">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.0/index-modules-O.html">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.0/index-modules-P.html">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.0/index-modules-Q.html">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.0/index-modules-R.html">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.0/index-modules-S.html">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.0/index-modules-T.html">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.0/index-modules-U.html">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.0/index-modules-V.html">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.0/index-modules-W.html">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.0/index-modules-X.html">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.0/index-modules-Y.html">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.0/index-modules-Z.html">Z</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown4" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Functions</a>
+                <div aria-labelledby="navbarDropdown4"
+                    class="dropdown-menu letters-wrap">
+                    <a class="dropdown-item"
+                        href="/5.18.0/index-functions.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.18.0/index-functions-by-cat.html">By
+                        Category</a>
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.18.0/index-functions.html#A">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.0/index-functions.html#B">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.0/index-functions.html#C">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.0/index-functions.html#D">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.0/index-functions.html#E">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.0/index-functions.html#F">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.0/index-functions.html#G">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.0/index-functions.html#H">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.0/index-functions.html#I">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.0/index-functions.html#J">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.0/index-functions.html#K">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.0/index-functions.html#L">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.0/index-functions.html#M">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.0/index-functions.html#N">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.0/index-functions.html#O">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.0/index-functions.html#P">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.0/index-functions.html#Q">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.0/index-functions.html#R">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.0/index-functions.html#S">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.0/index-functions.html#T">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.0/index-functions.html#U">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.0/index-functions.html#V">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.0/index-functions.html#W">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.0/index-functions.html#X">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.0/index-functions.html#Y">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.0/index-functions.html#Z">Z</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!--/.nav-collapse -->
+</nav>
+
+
+          <main class="row main-content pb-5 pt-5" id='content'>
+            <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+              <div class="row">
+                <div class="col-sm-12">
+                  <div id="breadcrumbs">
+                      
+    <a href="../index.html">Home</a>&nbsp; &gt;
+    
+      
+        <a href="../index-modules-P.html">Core modules (P)</a> &gt;
+      
+    
+    Pod::Usage
+  
+
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <article class="col-sm-12 content">
+                  <div class="documentation-wrapper">
+                    <div id="perl_version">
+                      <h7 class='page-title'> Perl 5 version 18.0
+                        documentation</h7>
+                    </div>
+                    <h1>Pod::Usage</h1>
+
+
+  <!--    -->
+<ul><li><a href="#NAME">NAME</a></li><li><a href="#SYNOPSIS">SYNOPSIS</a></li><li><a href="#ARGUMENTS">ARGUMENTS</a></li><ul><li><a href="#Formatting-base-class">Formatting base class</a></li><li><a href="#Pass-through-options">Pass-through options</a></li></ul><li><a href="#DESCRIPTION">DESCRIPTION</a></li><li><a href="#EXAMPLES">EXAMPLES</a></li><ul><li><a href="#Recommended-Use">Recommended Use</a></li></ul><li><a href="#CAVEATS">CAVEATS</a></li><li><a href="#AUTHOR">AUTHOR</a></li><li><a href="#ACKNOWLEDGMENTS">ACKNOWLEDGMENTS</a></li><li><a href="#SEE-ALSO">SEE ALSO</a></li></ul><a class='view-head1' id="NAME"></a><h2 class='h2' >NAME</h2>
+<p>Pod::Usage, pod2usage() - print a usage message from embedded pod documentation</p>
+<a class='view-head1' id="SYNOPSIS"></a><h2 class='h2' >SYNOPSIS</h2>
+<pre class="verbatim"><ol><li>  <a class="l_k" href="../functions/use.html">use</a> <span class="w">Pod::Usage</span></li><li></li><li>  <a class="l_k" href="../functions/my.html">my</a> <span class="i">$message_text</span>  = <span class="q">&quot;This text precedes the usage message.&quot;</span><span class="sc">;</span></li><li>  <a class="l_k" href="../functions/my.html">my</a> <span class="i">$exit_status</span>   = <span class="n">2</span><span class="sc">;</span>          <span class="c">## The exit status to use</span></li><li>  <a class="l_k" href="../functions/my.html">my</a> <span class="i">$verbose_level</span> = <span class="n">0</span><span class="sc">;</span>          <span class="c">## The verbose level to use</span></li><li>  <a class="l_k" href="../functions/my.html">my</a> <span class="i">$filehandle</span>    = \<span class="i">*STDERR</span><span class="sc">;</span>   <span class="c">## The filehandle to write to</span></li><li></li><li>  <span class="i">pod2usage</span><span class="s">(</span><span class="i">$message_text</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>  <span class="i">pod2usage</span><span class="s">(</span><span class="i">$exit_status</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>  <span class="i">pod2usage</span><span class="s">(</span> <span class="s">{</span> -<span class="w">message</span> <span class="cm">=&gt;</span> <span class="i">$message_text</span> <span class="cm">,</span></li><li>               -<span class="w">exitval</span> <span class="cm">=&gt;</span> <span class="i">$exit_status</span>  <span class="cm">,</span>  </li><li>               -<span class="w">verbose</span> <span class="cm">=&gt;</span> <span class="i">$verbose_level</span><span class="cm">,</span>  </li><li>               -<span class="w">output</span>  <span class="cm">=&gt;</span> <span class="i">$filehandle</span> <span class="s">}</span> <span class="s">)</span><span class="sc">;</span></li><li></li><li>  <span class="i">pod2usage</span><span class="s">(</span>   -<span class="w">msg</span>     <span class="cm">=&gt;</span> <span class="i">$message_text</span> <span class="cm">,</span></li><li>               -<span class="w">exitval</span> <span class="cm">=&gt;</span> <span class="i">$exit_status</span>  <span class="cm">,</span>  </li><li>               -<span class="w">verbose</span> <span class="cm">=&gt;</span> <span class="i">$verbose_level</span><span class="cm">,</span>  </li><li>               -<span class="w">output</span>  <span class="cm">=&gt;</span> <span class="i">$filehandle</span>   <span class="s">)</span><span class="sc">;</span></li><li></li><li>  <span class="i">pod2usage</span><span class="s">(</span>   -<span class="w">verbose</span> <span class="cm">=&gt;</span> <span class="n">2</span><span class="cm">,</span></li><li>               -<span class="w">noperldoc</span> <span class="cm">=&gt;</span> <span class="n">1</span>  <span class="s">)</span></li></ol></pre><a class='view-head1' id="ARGUMENTS"></a><h2 class='h2' >ARGUMENTS</h2>
+<p><strong>pod2usage</strong> should be given either a single argument, or a list of
+arguments corresponding to an associative array (a "hash"). When a single
+argument is given, it should correspond to exactly one of the following:</p>
+<ul>
+<li>
+<p>A string containing the text of a message to print <i>before</i> printing
+the usage message</p>
+</li>
+<li>
+<p>A numeric value corresponding to the desired exit status</p>
+</li>
+<li>
+<p>A reference to a hash</p>
+</li>
+</ul>
+<p>If more than one argument is given then the entire argument list is
+assumed to be a hash.  If a hash is supplied (either as a reference or
+as a list) it should contain one or more elements with the following
+keys:</p>
+<ul>
+<li><a class='view-title' id="-message"></a><strong><code class="inline">-<span class="w">message</span></code>
+</strong>
+</li>
+<li><a class='view-title' id="-msg"></a><strong><code class="inline">-<span class="w">msg</span></code>
+</strong>
+<p>The text of a message to print immediately prior to printing the
+program's usage message.</p>
+</li>
+<li><a class='view-title' id="-exitval"></a><strong><code class="inline">-<span class="w">exitval</span></code>
+</strong>
+<p>The desired exit status to pass to the <strong>exit()</strong> function.
+This should be an integer, or else the string "NOEXIT" to
+indicate that control should simply be returned without
+terminating the invoking process.</p>
+</li>
+<li><a class='view-title' id="-verbose"></a><strong><code class="inline">-<span class="w">verbose</span></code>
+</strong>
+<p>The desired level of "verboseness" to use when printing the usage
+message. If the corresponding value is 0, then only the "SYNOPSIS"
+section of the pod documentation is printed. If the corresponding value
+is 1, then the "SYNOPSIS" section, along with any section entitled
+"OPTIONS", "ARGUMENTS", or "OPTIONS AND ARGUMENTS" is printed.  If the
+corresponding value is 2 or more then the entire manpage is printed.</p>
+<p>The special verbosity level 99 requires to also specify the -sections
+parameter; then these sections are extracted (see <a href="../Pod/Select.html">Pod::Select</a>)
+and printed.</p>
+</li>
+<li><a class='view-title' id="-sections"></a><strong><code class="inline">-<span class="w">sections</span></code>
+</strong>
+<p>A string representing a selection list for sections to be printed
+when -verbose is set to 99, e.g. <code class="inline"><span class="q">&quot;NAME|SYNOPSIS|DESCRIPTION|VERSION&quot;</span></code>
+.</p>
+<p>Alternatively, an array reference of section specifications can be used:</p>
+<pre class="verbatim"><ol><li>  <span class="i">pod2usage</span><span class="s">(</span>-<span class="w">verbose</span> <span class="cm">=&gt;</span> <span class="n">99</span><span class="cm">,</span> </li><li>            -<span class="w">sections</span> <span class="cm">=&gt;</span> <span class="s">[</span> <span class="q">qw(fred fred/subsection)</span> <span class="s">]</span> <span class="s">)</span><span class="sc">;</span></li></ol></pre></li>
+<li><a class='view-title' id="-output"></a><strong><code class="inline">-<span class="w">output</span></code>
+</strong>
+<p>A reference to a filehandle, or the pathname of a file to which the
+usage message should be written. The default is <code class="inline">\<span class="i">*STDERR</span></code>
+ unless the
+exit value is less than 2 (in which case the default is <code class="inline">\<span class="i">*STDOUT</span></code>
+).</p>
+</li>
+<li><a class='view-title' id="-input"></a><strong><code class="inline">-<span class="w">input</span></code>
+</strong>
+<p>A reference to a filehandle, or the pathname of a file from which the
+invoking script's pod documentation should be read.  It defaults to the
+file indicated by <code class="inline"><span class="i">$0</span></code>
+ (<code class="inline"><span class="i">$PROGRAM_NAME</span></code>
+ for users of <i>English.pm</i>).</p>
+<p>If you are calling <strong>pod2usage()</strong> from a module and want to display
+that module's POD, you can use this:</p>
+<pre class="verbatim"><ol><li>  <a class="l_k" href="../functions/use.html">use</a> <span class="w">Pod::Find</span> <span class="q">qw(pod_where)</span><span class="sc">;</span></li><li>  <span class="i">pod2usage</span><span class="s">(</span> -<span class="w">input</span> <span class="cm">=&gt;</span> <span class="i">pod_where</span><span class="s">(</span><span class="s">{</span>-<span class="w">inc</span> <span class="cm">=&gt;</span> <span class="n">1</span><span class="s">}</span><span class="cm">,</span> <span class="w">__PACKAGE__</span><span class="s">)</span> <span class="s">)</span><span class="sc">;</span></li></ol></pre></li>
+<li><a class='view-title' id="-pathlist"></a><strong><code class="inline">-<span class="w">pathlist</span></code>
+</strong>
+<p>A list of directory paths. If the input file does not exist, then it
+will be searched for in the given directory list (in the order the
+directories appear in the list). It defaults to the list of directories
+implied by <code class="inline"><span class="i">$ENV</span>{<span class="w">PATH</span>}</code>
+. The list may be specified either by a reference
+to an array, or by a string of directory paths which use the same path
+separator as <code class="inline"><span class="i">$ENV</span>{<span class="w">PATH</span>}</code>
+ on your system (e.g., <code class="inline"><span class="j">:</span></code>
+ for Unix, <code class="inline"><span class="sc">;</span></code>
+ for
+MSWin32 and DOS).</p>
+</li>
+<li><a class='view-title' id="-noperldoc"></a><strong><code class="inline">-<span class="w">noperldoc</span></code>
+</strong>
+<p>By default, Pod::Usage will call <a href="../perldoc.html">perldoc</a> when -verbose &gt;= 2 is
+specified. This does not work well e.g. if the script was packed
+with <a href="https://search.cpan.org/perldoc/PAR">PAR</a>. The -noperldoc option suppresses the external call to
+<a href="../perldoc.html">perldoc</a> and uses the simple text formatter (<a href="../Pod/Text.html">Pod::Text</a>) to 
+output the POD.</p>
+</li>
+</ul>
+<a class='view-head2' id="Formatting-base-class"></a><h3 class='h3' >Formatting base class</h3>
+<p>The default text formatter depends on the Perl version (<a href="../Pod/Text.html">Pod::Text</a> or 
+<a href="../Pod/PlainText.html">Pod::PlainText</a> for Perl versions &lt; 5.005_58). The base class for
+Pod::Usage can be defined by pre-setting <code class="inline"><span class="i">$Pod::Usage::Formatter</span></code>
+ <i>before</i>
+loading Pod::Usage, e.g.:</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/BEGIN.html">BEGIN</a> <span class="s">{</span> <span class="i">$Pod::Usage::Formatter</span> = <span class="q">&#39;Pod::Text::Termcap&#39;</span><span class="sc">;</span> <span class="s">}</span></li><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">Pod::Usage</span> <span class="q">qw(pod2usage)</span><span class="sc">;</span></li></ol></pre><a class='view-head2' id="Pass-through-options"></a><h3 class='h3' >Pass-through options</h3>
+<p>The following options are passed through to the underlying text formatter.
+See the manual pages of these modules for more information.</p>
+<pre class="verbatim"><ol><li>  <span class="w">alt</span> <span class="w">code</span> <span class="w">indent</span> <span class="w">loose</span> <span class="w">margin</span> <span class="w">quotes</span> <span class="w">sentence</span> <span class="w">stderr</span> <span class="w">utf8</span> <span class="w">width</span></li></ol></pre><a class='view-head1' id="DESCRIPTION"></a><h2 class='h2' >DESCRIPTION</h2>
+<p><strong>pod2usage</strong> will print a usage message for the invoking script (using
+its embedded pod documentation) and then exit the script with the
+desired exit status. The usage message printed may have any one of three
+levels of "verboseness": If the verbose level is 0, then only a synopsis
+is printed. If the verbose level is 1, then the synopsis is printed
+along with a description (if present) of the command line options and
+arguments. If the verbose level is 2, then the entire manual page is
+printed.</p>
+<p>Unless they are explicitly specified, the default values for the exit
+status, verbose level, and output stream to use are determined as
+follows:</p>
+<ul>
+<li>
+<p>If neither the exit status nor the verbose level is specified, then the
+default is to use an exit status of 2 with a verbose level of 0.</p>
+</li>
+<li>
+<p>If an exit status <i>is</i> specified but the verbose level is <i>not</i>, then the
+verbose level will default to 1 if the exit status is less than 2 and
+will default to 0 otherwise.</p>
+</li>
+<li>
+<p>If an exit status is <i>not</i> specified but verbose level <i>is</i> given, then
+the exit status will default to 2 if the verbose level is 0 and will
+default to 1 otherwise.</p>
+</li>
+<li>
+<p>If the exit status used is less than 2, then output is printed on
+<code class="inline"><span class="w">STDOUT</span></code>
+.  Otherwise output is printed on <code class="inline"><span class="w">STDERR</span></code>
+.</p>
+</li>
+</ul>
+<p>Although the above may seem a bit confusing at first, it generally does
+"the right thing" in most situations.  This determination of the default
+values to use is based upon the following typical Unix conventions:</p>
+<ul>
+<li>
+<p>An exit status of 0 implies "success". For example, <strong>diff(1)</strong> exits
+with a status of 0 if the two files have the same contents.</p>
+</li>
+<li>
+<p>An exit status of 1 implies possibly abnormal, but non-defective, program
+termination.  For example, <strong>grep(1)</strong> exits with a status of 1 if
+it did <i>not</i> find a matching line for the given regular expression.</p>
+</li>
+<li>
+<p>An exit status of 2 or more implies a fatal error. For example, <strong>ls(1)</strong>
+exits with a status of 2 if you specify an illegal (unknown) option on
+the command line.</p>
+</li>
+<li>
+<p>Usage messages issued as a result of bad command-line syntax should go
+to <code class="inline"><span class="w">STDERR</span></code>
+.  However, usage messages issued due to an explicit request
+to print usage (like specifying <strong>-help</strong> on the command line) should go
+to <code class="inline"><span class="w">STDOUT</span></code>
+, just in case the user wants to pipe the output to a pager
+(such as <strong>more(1)</strong>).</p>
+</li>
+<li>
+<p>If program usage has been explicitly requested by the user, it is often
+desirable to exit with a status of 1 (as opposed to 0) after issuing
+the user-requested usage message.  It is also desirable to give a
+more verbose description of program usage in this case.</p>
+</li>
+</ul>
+<p><strong>pod2usage</strong> doesn't force the above conventions upon you, but it will
+use them by default if you don't expressly tell it to do otherwise.  The
+ability of <strong>pod2usage()</strong> to accept a single number or a string makes it
+convenient to use as an innocent looking error message handling function:</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">Pod::Usage</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">Getopt::Long</span><span class="sc">;</span></li><li></li><li>    <span class="c">## Parse options</span></li><li>    <span class="i">GetOptions</span><span class="s">(</span><span class="q">&quot;help&quot;</span><span class="cm">,</span> <span class="q">&quot;man&quot;</span><span class="cm">,</span> <span class="q">&quot;flag1&quot;</span><span class="s">)</span>  ||  <span class="i">pod2usage</span><span class="s">(</span><span class="n">2</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="i">pod2usage</span><span class="s">(</span><span class="n">1</span><span class="s">)</span>  <a class="l_k" href="../functions/if.html">if</a> <span class="s">(</span><span class="i">$opt_help</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="i">pod2usage</span><span class="s">(</span>-<span class="w">verbose</span> <span class="cm">=&gt;</span> <span class="n">2</span><span class="s">)</span>  <a class="l_k" href="../functions/if.html">if</a> <span class="s">(</span><span class="i">$opt_man</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>    <span class="c">## Check for too many filenames</span></li><li>    <span class="i">pod2usage</span><span class="s">(</span><span class="q">&quot;$0: Too many files given.\n&quot;</span><span class="s">)</span>  <a class="l_k" href="../functions/if.html">if</a> <span class="s">(</span><span class="i">@ARGV</span> &gt; <span class="n">1</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>Some user's however may feel that the above "economy of expression" is
+not particularly readable nor consistent and may instead choose to do
+something more like the following:</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">Pod::Usage</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">Getopt::Long</span><span class="sc">;</span></li><li></li><li>    <span class="c">## Parse options</span></li><li>    <span class="i">GetOptions</span><span class="s">(</span><span class="q">&quot;help&quot;</span><span class="cm">,</span> <span class="q">&quot;man&quot;</span><span class="cm">,</span> <span class="q">&quot;flag1&quot;</span><span class="s">)</span>  ||  <span class="i">pod2usage</span><span class="s">(</span>-<span class="w">verbose</span> <span class="cm">=&gt;</span> <span class="n">0</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="i">pod2usage</span><span class="s">(</span>-<span class="w">verbose</span> <span class="cm">=&gt;</span> <span class="n">1</span><span class="s">)</span>  <a class="l_k" href="../functions/if.html">if</a> <span class="s">(</span><span class="i">$opt_help</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="i">pod2usage</span><span class="s">(</span>-<span class="w">verbose</span> <span class="cm">=&gt;</span> <span class="n">2</span><span class="s">)</span>  <a class="l_k" href="../functions/if.html">if</a> <span class="s">(</span><span class="i">$opt_man</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>    <span class="c">## Check for too many filenames</span></li><li>    <span class="i">pod2usage</span><span class="s">(</span>-<span class="w">verbose</span> <span class="cm">=&gt;</span> <span class="n">2</span><span class="cm">,</span> -<span class="w">message</span> <span class="cm">=&gt;</span> <span class="q">&quot;$0: Too many files given.\n&quot;</span><span class="s">)</span></li><li>        <a class="l_k" href="../functions/if.html">if</a> <span class="s">(</span><span class="i">@ARGV</span> &gt; <span class="n">1</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>As with all things in Perl, <i>there's more than one way to do it</i>, and
+<strong>pod2usage()</strong> adheres to this philosophy.  If you are interested in
+seeing a number of different ways to invoke <strong>pod2usage</strong> (although by no
+means exhaustive), please refer to <a href="#EXAMPLES">EXAMPLES</a>.</p>
+<a class='view-head1' id="EXAMPLES"></a><h2 class='h2' >EXAMPLES</h2>
+<p>Each of the following invocations of <code class="inline"><span class="i">pod2usage</span><span class="s">(</span><span class="s">)</span></code>
+ will print just the
+"SYNOPSIS" section to <code class="inline"><span class="w">STDERR</span></code>
+ and will exit with a status of 2:</p>
+<pre class="verbatim"><ol><li>    <span class="i">pod2usage</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>    <span class="i">pod2usage</span><span class="s">(</span><span class="n">2</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>    <span class="i">pod2usage</span><span class="s">(</span>-<span class="w">verbose</span> <span class="cm">=&gt;</span> <span class="n">0</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>    <span class="i">pod2usage</span><span class="s">(</span>-<span class="w">exitval</span> <span class="cm">=&gt;</span> <span class="n">2</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>    <span class="i">pod2usage</span><span class="s">(</span><span class="s">{</span>-<span class="w">exitval</span> <span class="cm">=&gt;</span> <span class="n">2</span><span class="cm">,</span> -<span class="w">output</span> <span class="cm">=&gt;</span> \<span class="i">*STDERR</span><span class="s">}</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>    <span class="i">pod2usage</span><span class="s">(</span><span class="s">{</span>-<span class="w">verbose</span> <span class="cm">=&gt;</span> <span class="n">0</span><span class="cm">,</span> -<span class="w">output</span>  <span class="cm">=&gt;</span> \<span class="i">*STDERR</span><span class="s">}</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>    <span class="i">pod2usage</span><span class="s">(</span>-<span class="w">exitval</span> <span class="cm">=&gt;</span> <span class="n">2</span><span class="cm">,</span> -<span class="w">verbose</span> <span class="cm">=&gt;</span> <span class="n">0</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>    <span class="i">pod2usage</span><span class="s">(</span>-<span class="w">exitval</span> <span class="cm">=&gt;</span> <span class="n">2</span><span class="cm">,</span> -<span class="w">verbose</span> <span class="cm">=&gt;</span> <span class="n">0</span><span class="cm">,</span> -<span class="w">output</span> <span class="cm">=&gt;</span> \<span class="i">*STDERR</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>Each of the following invocations of <code class="inline"><span class="i">pod2usage</span><span class="s">(</span><span class="s">)</span></code>
+ will print a message
+of "Syntax error." (followed by a newline) to <code class="inline"><span class="w">STDERR</span></code>
+, immediately
+followed by just the "SYNOPSIS" section (also printed to <code class="inline"><span class="w">STDERR</span></code>
+) and
+will exit with a status of 2:</p>
+<pre class="verbatim"><ol><li>    <span class="i">pod2usage</span><span class="s">(</span><span class="q">&quot;Syntax error.&quot;</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>    <span class="i">pod2usage</span><span class="s">(</span>-<span class="w">message</span> <span class="cm">=&gt;</span> <span class="q">&quot;Syntax error.&quot;</span><span class="cm">,</span> -<span class="w">verbose</span> <span class="cm">=&gt;</span> <span class="n">0</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>    <span class="i">pod2usage</span><span class="s">(</span>-<span class="w">msg</span>  <span class="cm">=&gt;</span> <span class="q">&quot;Syntax error.&quot;</span><span class="cm">,</span> -<span class="w">exitval</span> <span class="cm">=&gt;</span> <span class="n">2</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>    <span class="i">pod2usage</span><span class="s">(</span><span class="s">{</span>-<span class="w">msg</span> <span class="cm">=&gt;</span> <span class="q">&quot;Syntax error.&quot;</span><span class="cm">,</span> -<span class="w">exitval</span> <span class="cm">=&gt;</span> <span class="n">2</span><span class="cm">,</span> -<span class="w">output</span> <span class="cm">=&gt;</span> \<span class="i">*STDERR</span><span class="s">}</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>    <span class="i">pod2usage</span><span class="s">(</span><span class="s">{</span>-<span class="w">msg</span> <span class="cm">=&gt;</span> <span class="q">&quot;Syntax error.&quot;</span><span class="cm">,</span> -<span class="w">verbose</span> <span class="cm">=&gt;</span> <span class="n">0</span><span class="cm">,</span> -<span class="w">output</span> <span class="cm">=&gt;</span> \<span class="i">*STDERR</span><span class="s">}</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>    <span class="i">pod2usage</span><span class="s">(</span>-<span class="w">msg</span>  <span class="cm">=&gt;</span> <span class="q">&quot;Syntax error.&quot;</span><span class="cm">,</span> -<span class="w">exitval</span> <span class="cm">=&gt;</span> <span class="n">2</span><span class="cm">,</span> -<span class="w">verbose</span> <span class="cm">=&gt;</span> <span class="n">0</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>    <span class="i">pod2usage</span><span class="s">(</span>-<span class="w">message</span> <span class="cm">=&gt;</span> <span class="q">&quot;Syntax error.&quot;</span><span class="cm">,</span></li><li>              -<span class="w">exitval</span> <span class="cm">=&gt;</span> <span class="n">2</span><span class="cm">,</span></li><li>              -<span class="w">verbose</span> <span class="cm">=&gt;</span> <span class="n">0</span><span class="cm">,</span></li><li>              -<span class="w">output</span>  <span class="cm">=&gt;</span> \<span class="i">*STDERR</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>Each of the following invocations of <code class="inline"><span class="i">pod2usage</span><span class="s">(</span><span class="s">)</span></code>
+ will print the
+"SYNOPSIS" section and any "OPTIONS" and/or "ARGUMENTS" sections to
+<code class="inline"><span class="w">STDOUT</span></code>
+ and will exit with a status of 1:</p>
+<pre class="verbatim"><ol><li>    <span class="i">pod2usage</span><span class="s">(</span><span class="n">1</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>    <span class="i">pod2usage</span><span class="s">(</span>-<span class="w">verbose</span> <span class="cm">=&gt;</span> <span class="n">1</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>    <span class="i">pod2usage</span><span class="s">(</span>-<span class="w">exitval</span> <span class="cm">=&gt;</span> <span class="n">1</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>    <span class="i">pod2usage</span><span class="s">(</span><span class="s">{</span>-<span class="w">exitval</span> <span class="cm">=&gt;</span> <span class="n">1</span><span class="cm">,</span> -<span class="w">output</span> <span class="cm">=&gt;</span> \<span class="i">*STDOUT</span><span class="s">}</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>    <span class="i">pod2usage</span><span class="s">(</span><span class="s">{</span>-<span class="w">verbose</span> <span class="cm">=&gt;</span> <span class="n">1</span><span class="cm">,</span> -<span class="w">output</span> <span class="cm">=&gt;</span> \<span class="i">*STDOUT</span><span class="s">}</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>    <span class="i">pod2usage</span><span class="s">(</span>-<span class="w">exitval</span> <span class="cm">=&gt;</span> <span class="n">1</span><span class="cm">,</span> -<span class="w">verbose</span> <span class="cm">=&gt;</span> <span class="n">1</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>    <span class="i">pod2usage</span><span class="s">(</span>-<span class="w">exitval</span> <span class="cm">=&gt;</span> <span class="n">1</span><span class="cm">,</span> -<span class="w">verbose</span> <span class="cm">=&gt;</span> <span class="n">1</span><span class="cm">,</span> -<span class="w">output</span> <span class="cm">=&gt;</span> \<span class="i">*STDOUT</span><span class="s">}</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>Each of the following invocations of <code class="inline"><span class="i">pod2usage</span><span class="s">(</span><span class="s">)</span></code>
+ will print the
+entire manual page to <code class="inline"><span class="w">STDOUT</span></code>
+ and will exit with a status of 1:</p>
+<pre class="verbatim"><ol><li>    <span class="i">pod2usage</span><span class="s">(</span>-<span class="w">verbose</span>  <span class="cm">=&gt;</span> <span class="n">2</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>    <span class="i">pod2usage</span><span class="s">(</span><span class="s">{</span>-<span class="w">verbose</span> <span class="cm">=&gt;</span> <span class="n">2</span><span class="cm">,</span> -<span class="w">output</span> <span class="cm">=&gt;</span> \<span class="i">*STDOUT</span><span class="s">}</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>    <span class="i">pod2usage</span><span class="s">(</span>-<span class="w">exitval</span>  <span class="cm">=&gt;</span> <span class="n">1</span><span class="cm">,</span> -<span class="w">verbose</span> <span class="cm">=&gt;</span> <span class="n">2</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>    <span class="i">pod2usage</span><span class="s">(</span><span class="s">{</span>-<span class="w">exitval</span> <span class="cm">=&gt;</span> <span class="n">1</span><span class="cm">,</span> -<span class="w">verbose</span> <span class="cm">=&gt;</span> <span class="n">2</span><span class="cm">,</span> -<span class="w">output</span> <span class="cm">=&gt;</span> \<span class="i">*STDOUT</span><span class="s">}</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><a class='view-head2' id="Recommended-Use"></a><h3 class='h3' >Recommended Use</h3>
+<p>Most scripts should print some type of usage message to <code class="inline"><span class="w">STDERR</span></code>
+ when a
+command line syntax error is detected. They should also provide an
+option (usually <code class="inline">-<span class="w">H</span></code>
+ or <code class="inline">-<span class="w">help</span></code>
+) to print a (possibly more verbose)
+usage message to <code class="inline"><span class="w">STDOUT</span></code>
+. Some scripts may even wish to go so far as to
+provide a means of printing their complete documentation to <code class="inline"><span class="w">STDOUT</span></code>
+
+(perhaps by allowing a <code class="inline">-<span class="w">man</span></code>
+ option). The following complete example
+uses <strong>Pod::Usage</strong> in combination with <strong>Getopt::Long</strong> to do all of these
+things:</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">Getopt::Long</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">Pod::Usage</span><span class="sc">;</span></li><li></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">$man</span> = <span class="n">0</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">$help</span> = <span class="n">0</span><span class="sc">;</span></li><li>    <span class="c">## Parse options and print usage if there is a syntax error,</span></li><li>    <span class="c">## or if usage was explicitly requested.</span></li><li>    <span class="i">GetOptions</span><span class="s">(</span><span class="q">&#39;help|?&#39;</span> <span class="cm">=&gt;</span> \<span class="i">$help</span><span class="cm">,</span> <span class="w">man</span> <span class="cm">=&gt;</span> \<span class="i">$man</span><span class="s">)</span> <a class="l_k" href="../functions/or.html">or</a> <span class="i">pod2usage</span><span class="s">(</span><span class="n">2</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="i">pod2usage</span><span class="s">(</span><span class="n">1</span><span class="s">)</span> <a class="l_k" href="../functions/if.html">if</a> <span class="i">$help</span><span class="sc">;</span></li><li>    <span class="i">pod2usage</span><span class="s">(</span>-<span class="w">verbose</span> <span class="cm">=&gt;</span> <span class="n">2</span><span class="s">)</span> <a class="l_k" href="../functions/if.html">if</a> <span class="i">$man</span><span class="sc">;</span></li><li></li><li>    <span class="c">## If no arguments were given, then allow STDIN to be used only</span></li><li>    <span class="c">## if it&#39;s not connected to a terminal (otherwise print usage)</span></li><li>    <span class="i">pod2usage</span><span class="s">(</span><span class="q">&quot;$0: No files given.&quot;</span><span class="s">)</span>  <a class="l_k" href="../functions/if.html">if</a> <span class="s">(</span><span class="s">(</span><span class="i">@ARGV</span> == <span class="n">0</span><span class="s">)</span> &amp;&amp; <span class="s">(</span>-t <span class="w">STDIN</span><span class="s">)</span><span class="s">)</span><span class="sc">;</span></li><li><a name="__END__"></a>    __END__</li><li></li><li><span class="q">    =head1 NAME</span></li><li></li><li><span class="q">    sample - Using GetOpt::Long and Pod::Usage</span></li><li></li><li><span class="q">    =head1 SYNOPSIS</span></li><li></li><li><span class="q">    sample [options] [file ...]</span></li><li></li><li><span class="q">     Options:</span></li><li><span class="q">       -help            brief help message</span></li><li><span class="q">       -man             full documentation</span></li><li></li><li><span class="q">    =head1 OPTIONS</span></li><li></li><li><span class="q">    =over 8</span></li><li></li><li><span class="q">    =item B&lt;-help&gt;</span></li><li></li><li><span class="q">    Print a brief help message and exits.</span></li><li></li><li><span class="q">    =item B&lt;-man&gt;</span></li><li></li><li><span class="q">    Prints the manual page and exits.</span></li><li></li><li><span class="q">    =back</span></li><li></li><li><span class="q">    =head1 DESCRIPTION</span></li><li></li><li><span class="q">    B&lt;This program&gt; will read the given input file(s) and do something</span></li><li><span class="q">    useful with the contents thereof.</span></li><li></li><li><span class="q">    =cut</span></li></ol></pre><a class='view-head1' id="CAVEATS"></a><h2 class='h2' >CAVEATS</h2>
+<p>By default, <strong>pod2usage()</strong> will use <code class="inline"><span class="i">$0</span></code>
+ as the path to the pod input
+file.  Unfortunately, not all systems on which Perl runs will set <code class="inline"><span class="i">$0</span></code>
+
+properly (although if <code class="inline"><span class="i">$0</span></code>
+ isn't found, <strong>pod2usage()</strong> will search
+<code class="inline"><span class="i">$ENV</span>{<span class="w">PATH</span>}</code>
+ or else the list specified by the <code class="inline">-<span class="w">pathlist</span></code>
+ option).
+If this is the case for your system, you may need to explicitly specify
+the path to the pod docs for the invoking script using something
+similar to the following:</p>
+<pre class="verbatim"><ol><li>    <span class="i">pod2usage</span><span class="s">(</span>-<span class="w">exitval</span> <span class="cm">=&gt;</span> <span class="n">2</span><span class="cm">,</span> -<span class="w">input</span> <span class="cm">=&gt;</span> <span class="q">&quot;/path/to/your/pod/docs&quot;</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>In the pathological case that a script is called via a relative path
+<i>and</i> the script itself changes the current working directory
+(see <a class='function-name' href="../functions/chdir.html">chdir</a>) <i>before</i> calling pod2usage, Pod::Usage will
+fail even on robust platforms. Don't do that. Or use <a href="../FindBin.html">FindBin</a> to locate
+the script:</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">FindBin</span><span class="sc">;</span></li><li>    <span class="i">pod2usage</span><span class="s">(</span>-<span class="w">input</span> <span class="cm">=&gt;</span> <span class="i">$FindBin::Bin</span> . <span class="q">&quot;/&quot;</span> . <span class="i">$FindBin::Script</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><a class='view-head1' id="AUTHOR"></a><h2 class='h2' >AUTHOR</h2>
+<p>Please report bugs using <a href="http://rt.cpan.org">http://rt.cpan.org</a>.</p>
+<p>Marek Rouchal &lt;marekr@cpan.org&gt;</p>
+<p>Brad Appleton &lt;bradapp@enteract.com&gt;</p>
+<p>Based on code for <strong>Pod::Text::pod2text()</strong> written by
+Tom Christiansen &lt;tchrist@mox.perl.com&gt;</p>
+<a class='view-head1' id="ACKNOWLEDGMENTS"></a><h2 class='h2' >ACKNOWLEDGMENTS</h2>
+<p>Steven McDougall &lt;swmcd@world.std.com&gt; for his help and patience
+with re-writing this manpage.</p>
+<a class='view-head1' id="SEE-ALSO"></a><h2 class='h2' >SEE ALSO</h2>
+<p><strong>Pod::Usage</strong> is now a standalone distribution.</p>
+<p><a href="../Pod/Parser.html">Pod::Parser</a>, <a href="../Pod/Perldoc.html">Pod::Perldoc</a>, <a href="../Getopt/Long.html">Getopt::Long</a>, <a href="../Pod/Find.html">Pod::Find</a>, <a href="../FindBin.html">FindBin</a>,
+<a href="../Pod/Text.html">Pod::Text</a>, <a href="../Pod/PlainText.html">Pod::PlainText</a>, <a href="../Pod/Text/Termcap.html">Pod::Text::Termcap</a></p>
+
+
+
+
+      <ul><li><a href="#NAME">NAME</a></li><li><a href="#SYNOPSIS">SYNOPSIS</a></li><li><a href="#ARGUMENTS">ARGUMENTS</a></li><ul><li><a href="#Formatting-base-class">Formatting base class</a></li><li><a href="#Pass-through-options">Pass-through options</a></li></ul><li><a href="#DESCRIPTION">DESCRIPTION</a></li><li><a href="#EXAMPLES">EXAMPLES</a></li><ul><li><a href="#Recommended-Use">Recommended Use</a></li></ul><li><a href="#CAVEATS">CAVEATS</a></li><li><a href="#AUTHOR">AUTHOR</a></li><li><a href="#ACKNOWLEDGMENTS">ACKNOWLEDGMENTS</a></li><li><a href="#SEE-ALSO">SEE ALSO</a></li></ul>
+
+
+                  </div>
+                </article>
+              </div>
+            </div>
+          </main>
+        </div>
+           <footer class="footer row bg-light pt-5 pb-5">
+       <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+           <div class="row">
+               <div class="col-md-4">
+                   <ul class="list-unstyled">
+                       <li>
+                           <h4>Site info</h4>
+                       </li>
+                       <li>Docs mantained by
+                           <a href="//lists.perl.org/list/perl5-porters.html"
+                               rel="noopener">Perl 5 Porters</a>
+                       </li>
+                       <li>Perldoc site development sponsored by
+                           <a href="//opusvl.com" rel="noopener">
+                           <img style="margin: 20px 20px 5px 10px" class="opus-logo" src="/public/img/opusvl_logo.svg" alt="OpusVL Logo">
+                        </a>
+                    <li><span class="about_perldoc"><a href="//about.html">About PerlDOC</a></span>
+                    </li>
+                       </li>
+                   </ul>
+               </div>
+               <div class="col-md-8">
+                   <div class="row">
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Manuals</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.18.0/index-overview.html">Overview</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.18.0/index-tutorials.html">Tutorials</a>
+                               </li>
+                               <li>
+                                   <a href="/5.18.0/index-faq.html">FAQs</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.18.0/index-history.html">Changes</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Reference</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.18.0/index-language.html">Language</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.18.0/index-functions.html">Functions</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.18.0/perlop.html">Operators</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.18.0/perlvar.html">Variables</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Modules</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.18.0/index-modules-A.html">Modules</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.18.0/index-pragmas.html">Pragmas</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.18.0/index-utilities.html">Utilities</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Misc</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.18.0/index-licence.html">License</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.18.0/index-internals.html">Internals</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.18.0/index-platforms.html">Platforms</a>
+                               </li>
+                            <li>
+                                <a
+                                    href="/5.18.0/index-about.html">About</a>
+                            </li>
+                           </ul>
+                       </div>
+                   </div>
+               </div>
+               <div class=" col-12 footer-inf text-center">
+                   <small>perldoc.perl.org - Official documentation for the Perl
+                       programming language</small>
+               </div>
+           </div>
+       </div>
+   </footer>
+
+        	<div class="beta-wrapper beta-bottom-right ">
+		<div class="beta beta-blue  ">
+			<a class="beta-link "
+				href="//github.com/OpusVL/perldoc.perl.org/issues/new" rel="noopener">
+				<span class="beta-text">
+					This website is a Beta release.
+				</span>
+				<span class="beta-text">
+					For any issues please raise a ticket on GitHub
+				</span>
+			</a>
+		</div>
+	</div>
+
+        <script src="/public/js/main.min.js"></script>
+      </body>
+
+      </html>

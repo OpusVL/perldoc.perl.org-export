@@ -1,0 +1,960 @@
+      
+      
+      
+      
+
+      <!DOCTYPE html>
+      <html lang="en">
+
+      <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="h2xs - perldoc.perl.org">
+        <link rel="icon" href="/public/img/favicon.ico">
+        <title>h2xs - perldoc.perl.org</title>
+        <link href="/public/css/main.min.css" rel="stylesheet">
+        <link rel="canonical" href="/h2xs.html">
+        <link
+          href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900'
+          rel='stylesheet' type='text/css'>
+        <script>
+          window.ga = window.ga || function () {
+            (ga.q = ga.q || []).push(arguments)
+          };
+          ga.l = +new Date;
+          ga('create', 'UA-1892152-2', 'auto'); // JJ's account
+          ga('create', 'UA-50555-3', 'auto', 'perlOrg'); // perl.org account
+          ga('require', 'outboundLinkTracker', {
+            events: ['click', 'auxclick', 'contextmenu'],
+          });
+          ga('require', 'maxScrollTracker');
+          ga('send', 'pageview');
+          ga('perlOrg.send', 'pageview');
+        </script>
+        <script async src="https://www.google-analytics.com/analytics.js">
+        </script>
+        <script async src="/public/js/tracking.min.js"></script>
+      </head>
+
+      <body class="body container-fluid ">
+        <div class="wrapper">
+
+          <nav
+    class="navbar navbar-dark bg-primary bg-perl fixed-top justify-content-between navbar-expand-lg">
+    <a href="#content" class="skippy sr-only sr-only-focusable">
+        <span class=' skippy-text'>Skip to main content</span>
+    </a>
+    <a class="navbar-brand" href="/">
+        <img class="logo" src="/public/img/logo_perl_doc.svg"
+            alt="Perl Documentation Logo" />
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse"
+        data-target="#navbar" aria-controls="navbar" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="navbar" class="collapse navbar-collapse ">
+        <ul class="navbar-nav ml-auto navbar-right">
+            <form class="nav-item dropdown search-wrapper">
+                <input type="text" id='searchinput' aria-describedby='navbarDropdown5'
+                    placeholder="Type query" class='search-input-field' value=''>
+
+                <button href="#" data-toggle='dropdown' type="button"
+                    aria-haspopup="true" aria-expanded='false' id="navbarDropdown5"
+                    class="nav-link dropdown-toggle search-link">
+                    <object tabindex='-1' focusable="false" class='search-icon'
+                        data="/public/img/search.svg" type="image/svg+xml"
+                        name='search icon'>search
+                        icon</object>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown5"
+                    id='search-results'>
+                    <p class='dropdown-item major-version'>
+                        No results
+                    </p>
+                </div>
+            </form>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown" href="#" class="nav-link dropdown-toggle"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Perl versions</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    
+                        <p class='dropdown-item major-version'>
+                            5.32
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.32.0/">5.32.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.30
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.3/">5.30.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.2/">5.30.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.1/">5.30.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.0/">5.30.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.28
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.3/">5.28.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.2/">5.28.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.1/">5.28.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.0/">5.28.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.26
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.3/">5.26.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.2/">5.26.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.1/">5.26.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.0/">5.26.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.24
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.4/">5.24.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.3/">5.24.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.2/">5.24.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.1/">5.24.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.0/">5.24.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.22
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.4/">5.22.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.3/">5.22.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.2/">5.22.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.1/">5.22.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.0/">5.22.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.20
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.3/">5.20.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.2/">5.20.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.1/">5.20.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.0/">5.20.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.18
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.4/">5.18.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.3/">5.18.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.2/">5.18.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.1/">5.18.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.0/">5.18.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.16
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.3/">5.16.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.2/">5.16.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.1/">5.16.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.0/">5.16.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.14
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.4/">5.14.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.3/">5.14.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.2/">5.14.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.1/">5.14.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.0/">5.14.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.12
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.5/">5.12.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.4/">5.12.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.3/">5.12.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.2/">5.12.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.1/">5.12.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.0/">5.12.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.10
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.1/">5.10.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.0/">5.10.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.8
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.9/">5.8.9</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.8/">5.8.8</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.7/">5.8.7</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.6/">5.8.6</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.5/">5.8.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.4/">5.8.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.3/">5.8.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.2/">5.8.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.1/">5.8.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.0/">5.8.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.6
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.2/">5.6.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.1/">5.6.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.0/">5.6.0</a>
+                        
+                        
+                    
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown1" href="#" class="dropdown-toggle nav-link"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Manuals</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                    <a class="dropdown-item"
+                        href="/5.30.0/index-overview.html">Overview</a>
+                    <a class="dropdown-item"
+                        href="/5.30.0/index-tutorials.html">Tutorials</a>
+                    <a class="dropdown-item"
+                        href="/5.30.0/index-faq.html">FAQs</a>
+                    <a class="dropdown-item"
+                        href="/5.30.0/index-history.html">Changes</a>
+                    <a class="dropdown-item"
+                        href="/5.30.0/index-licence.html">License</a>
+                    <a class="dropdown-item"
+                        href="/5.30.0/index-language.html">Language</a>
+                    <a class="dropdown-item"
+                        href="/5.30.0/index-functions.html">Functions</a>
+                    <a class="dropdown-item"
+                        href="/5.30.0/perlop.html">Operators</a>
+                    <a class="dropdown-item"
+                        href="/5.30.0/perlvar.html">Variables</a>
+                    <a class="dropdown-item"
+                        href="/5.30.0/index-pragmas.html">Pragmas</a>
+                    <a class="dropdown-item"
+                        href="/5.30.0/index-utilities.html">Utilities</a>
+                    <a class="dropdown-item"
+                        href="/5.30.0/index-internals.html">Internals</a>
+                    <a class="dropdown-item"
+                        href="/5.30.0/index-platforms.html">Platforms</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown3" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Modules</a>
+                <div aria-labelledby="navbarDropdown3"
+                    class="dropdown-menu letters-wrap">
+                    <!--<a class="dropdown-item"
+                        href="/5.30.0/index-modules.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.30.0/index-modules-by-cat.html">By
+                        Category</a>-->
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-modules-A.html">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-modules-B.html">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-modules-C.html">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-modules-D.html">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-modules-E.html">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-modules-F.html">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-modules-G.html">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-modules-H.html">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-modules-I.html">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-modules-J.html">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-modules-K.html">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-modules-L.html">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-modules-M.html">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-modules-N.html">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-modules-O.html">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-modules-P.html">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-modules-Q.html">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-modules-R.html">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-modules-S.html">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-modules-T.html">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-modules-U.html">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-modules-V.html">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-modules-W.html">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-modules-X.html">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-modules-Y.html">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-modules-Z.html">Z</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown4" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Functions</a>
+                <div aria-labelledby="navbarDropdown4"
+                    class="dropdown-menu letters-wrap">
+                    <a class="dropdown-item"
+                        href="/5.30.0/index-functions.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.30.0/index-functions-by-cat.html">By
+                        Category</a>
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-functions.html#A">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-functions.html#B">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-functions.html#C">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-functions.html#D">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-functions.html#E">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-functions.html#F">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-functions.html#G">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-functions.html#H">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-functions.html#I">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-functions.html#J">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-functions.html#K">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-functions.html#L">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-functions.html#M">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-functions.html#N">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-functions.html#O">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-functions.html#P">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-functions.html#Q">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-functions.html#R">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-functions.html#S">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-functions.html#T">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-functions.html#U">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-functions.html#V">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-functions.html#W">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-functions.html#X">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-functions.html#Y">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-functions.html#Z">Z</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!--/.nav-collapse -->
+</nav>
+
+
+          <main class="row main-content pb-5 pt-5" id='content'>
+            <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+              <div class="row">
+                <div class="col-sm-12">
+                  <div id="breadcrumbs">
+                      
+    <a href="index.html">Home</a>&nbsp; &gt;
+    
+      
+        <a href="index-utilities.html">Utilities</a> &gt;
+      
+    
+    h2xs
+  
+
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <article class="col-sm-12 content">
+                  <div class="documentation-wrapper">
+                    <div id="perl_version">
+                      <h7 class='page-title'> Perl 5 version 30.0
+                        documentation</h7>
+                    </div>
+                    <h1>h2xs</h1>
+
+
+  <!--    -->
+<ul><li><a href="#NAME">NAME</a></li><li><a href="#SYNOPSIS">SYNOPSIS</a></li><li><a href="#DESCRIPTION">DESCRIPTION</a></li><li><a href="#OPTIONS">OPTIONS</a></li><li><a href="#EXAMPLES">EXAMPLES</a></li><ul><li><a href="#Extension-based-on-_.h_-and-_.c_-files">Extension based on _.h_ and _.c_ files</a></li></ul><li><a href="#ENVIRONMENT">ENVIRONMENT</a></li><li><a href="#AUTHOR">AUTHOR</a></li><li><a href="#SEE-ALSO">SEE ALSO</a></li><li><a href="#DIAGNOSTICS">DIAGNOSTICS</a></li><li><a href="#LIMITATIONS-of-*-x*">LIMITATIONS of *-x*</a></li></ul><a class='view-head1' id="NAME"></a><h2 class='h2' >NAME</h2>
+<p>h2xs - convert .h C header files to Perl extensions</p>
+<a class='view-head1' id="SYNOPSIS"></a><h2 class='h2' >SYNOPSIS</h2>
+<p><strong>h2xs</strong> [<strong>OPTIONS</strong> ...] [headerfile ... [extra_libraries]]</p>
+<p><strong>h2xs</strong> <strong>-h</strong>|<strong>-?</strong>|<strong>--help</strong></p>
+<a class='view-head1' id="DESCRIPTION"></a><h2 class='h2' >DESCRIPTION</h2>
+<p><i>h2xs</i> builds a Perl extension from C header files.  The extension
+will include functions which can be used to retrieve the value of any
+#define statement which was in the C header files.</p>
+<p>The <i>module_name</i> will be used for the name of the extension.  If
+module_name is not supplied then the name of the first header file
+will be used, with the first character capitalized.</p>
+<p>If the extension might need extra libraries, they should be included
+here.  The extension Makefile.PL will take care of checking whether
+the libraries actually exist and how they should be loaded.  The extra
+libraries should be specified in the form -lm -lposix, etc, just as on
+the cc command line.  By default, the Makefile.PL will search through
+the library path determined by Configure.  That path can be augmented
+by including arguments of the form <strong>-L/another/library/path</strong> in the
+extra-libraries argument.</p>
+<p>In spite of its name, <i>h2xs</i> may also be used to create a skeleton pure
+Perl module. See the <strong>-X</strong> option.</p>
+<a class='view-head1' id="OPTIONS"></a><h2 class='h2' >OPTIONS</h2>
+<ul>
+<li><a class='view-title' id="*-A*%2c-*--omit-autoload*"></a><strong><strong>-A</strong>, <strong>--omit-autoload</strong></strong>
+<p>Omit all autoload facilities.  This is the same as <strong>-c</strong> but also
+removes the <code class="inline"><a class="l_k" href="functions/use.html">use</a> <span class="w">AutoLoader</span></code>
+ statement from the .pm file.</p>
+</li>
+<li><a class='view-title' id="*-B*%2c-*--beta-version*"></a><strong><strong>-B</strong>, <strong>--beta-version</strong></strong>
+<p>Use an alpha/beta style version number.  Causes version number to
+be "0.00_01" unless <strong>-v</strong> is specified.</p>
+</li>
+<li><a class='view-title' id="*-C*%2c-*--omit-changes*"></a><strong><strong>-C</strong>, <strong>--omit-changes</strong></strong>
+<p>Omits creation of the <i>Changes</i> file, and adds a HISTORY section to
+the POD template.</p>
+</li>
+<li><a class='view-title' id="*-F*%2c-*--cpp-flags*%3d_addflags_"></a><strong><strong>-F</strong>, <strong>--cpp-flags</strong>=<i>addflags</i></strong>
+<p>Additional flags to specify to C preprocessor when scanning header for
+function declarations.  Writes these options in the generated <i>Makefile.PL</i>
+too.</p>
+</li>
+<li><a class='view-title' id="*-M*%2c-*--func-mask*%3d_regular-expression_"></a><strong><strong>-M</strong>, <strong>--func-mask</strong>=<i>regular expression</i></strong>
+<p>selects functions/macros to process.</p>
+</li>
+<li><a class='view-title' id="*-O*%2c-*--overwrite-ok*"></a><strong><strong>-O</strong>, <strong>--overwrite-ok</strong></strong>
+<p>Allows a pre-existing extension directory to be overwritten.</p>
+</li>
+<li><a class='view-title' id="*-P*%2c-*--omit-pod*"></a><strong><strong>-P</strong>, <strong>--omit-pod</strong></strong>
+<p>Omit the autogenerated stub POD section.</p>
+</li>
+<li><a class='view-title' id="*-X*%2c-*--omit-XS*"></a><strong><strong>-X</strong>, <strong>--omit-XS</strong></strong>
+<p>Omit the XS portion. Used to generate a skeleton pure Perl module.
+<code class="inline">-c</code>
+ and <code class="inline">-f</code>
+ are implicitly enabled.</p>
+</li>
+<li><a class='view-title' id="*-a*%2c-*--gen-accessors*"></a><strong><strong>-a</strong>, <strong>--gen-accessors</strong></strong>
+<p>Generate an accessor method for each element of structs and unions. The
+generated methods are named after the element name; will return the current
+value of the element if called without additional arguments; and will set
+the element to the supplied value (and return the new value) if called with
+an additional argument. Embedded structures and unions are returned as a
+pointer rather than the complete structure, to facilitate chained calls.</p>
+<p>These methods all apply to the Ptr type for the structure; additionally
+two methods are constructed for the structure type itself, <code class="inline"><span class="w">_to_ptr</span></code>
+
+which returns a Ptr type pointing to the same structure, and a <code class="inline"><span class="w">new</span></code>
+
+method to construct and return a new structure, initialised to zeroes.</p>
+</li>
+<li><a class='view-title' id="*-b*%2c-*--compat-version*%3d_version_"></a><strong><strong>-b</strong>, <strong>--compat-version</strong>=<i>version</i></strong>
+<p>Generates a .pm file which is backwards compatible with the specified
+perl version.</p>
+<p>For versions &lt; 5.6.0, the changes are.
+    - no use of 'our' (uses 'use vars' instead)
+    - no 'use warnings'</p>
+<p>Specifying a compatibility version higher than the version of perl you
+are using to run h2xs will have no effect.  If unspecified h2xs will default
+to compatibility with the version of perl you are using to run h2xs.</p>
+</li>
+<li><a class='view-title' id="*-c*%2c-*--omit-constant*"></a><strong><strong>-c</strong>, <strong>--omit-constant</strong></strong>
+<p>Omit <code class="inline"><span class="i">constant</span><span class="s">(</span><span class="s">)</span></code>
+ from the .xs file and corresponding specialised
+<code class="inline"><a class="l_k" href="functions/AUTOLOAD.html">AUTOLOAD</a></code> from the .pm file.</p>
+</li>
+<li><a class='view-title' id="*-d*%2c-*--debugging*"></a><strong><strong>-d</strong>, <strong>--debugging</strong></strong>
+<p>Turn on debugging messages.</p>
+</li>
+<li><a class='view-title' id="*-e*%2c-*--omit-enums*%3d%5b_regular-expression_%5d"></a><strong><strong>-e</strong>, <strong>--omit-enums</strong>=[<i>regular expression</i>]</strong>
+<p>If <i>regular expression</i> is not given, skip all constants that are defined in
+a C enumeration. Otherwise skip only those constants that are defined in an
+enum whose name matches <i>regular expression</i>.</p>
+<p>Since <i>regular expression</i> is optional, make sure that this switch is followed
+by at least one other switch if you omit <i>regular expression</i> and have some
+pending arguments such as header-file names. This is ok:</p>
+<pre class="verbatim"><ol><li>    <span class="w">h2xs</span> -e -<span class="w">n</span> <span class="w">Module::Foo</span> <span class="w">foo</span>.<span class="w">h</span></li></ol></pre><p>This is not ok:</p>
+<pre class="verbatim"><ol><li>    <span class="w">h2xs</span> -<span class="w">n</span> <span class="w">Module::Foo</span> -e <span class="w">foo</span>.<span class="w">h</span></li></ol></pre><p>In the latter, foo.h is taken as <i>regular expression</i>.</p>
+</li>
+<li><a class='view-title' id="*-f*%2c-*--force*"></a><strong><strong>-f</strong>, <strong>--force</strong></strong>
+<p>Allows an extension to be created for a header even if that header is
+not found in standard include directories.</p>
+</li>
+<li><a class='view-title' id="*-g*%2c-*--global*"></a><strong><strong>-g</strong>, <strong>--global</strong></strong>
+<p>Include code for safely storing static data in the .xs file.
+Extensions that do no make use of static data can ignore this option.</p>
+</li>
+<li><a class='view-title' id="*-h*%2c-*-%3f*%2c-*--help*"></a><strong><strong>-h</strong>, <strong>-?</strong>, <strong>--help</strong></strong>
+<p>Print the usage, help and version for this h2xs and exit.</p>
+</li>
+<li><a class='view-title' id="*-k*%2c-*--omit-const-func*"></a><strong><strong>-k</strong>, <strong>--omit-const-func</strong></strong>
+<p>For function arguments declared as <code class="inline"><span class="w">const</span></code>
+, omit the const attribute in the
+generated XS code.</p>
+</li>
+<li><a class='view-title' id="*-m*%2c-*--gen-tied-var*"></a><strong><strong>-m</strong>, <strong>--gen-tied-var</strong></strong>
+<p><strong>Experimental</strong>: for each variable declared in the header file(s), declare
+a perl variable of the same name magically tied to the C variable.</p>
+</li>
+<li><a class='view-title' id="*-n*%2c-*--name*%3d_module_name_"></a><strong><strong>-n</strong>, <strong>--name</strong>=<i>module_name</i></strong>
+<p>Specifies a name to be used for the extension, e.g., -n RPC::DCE</p>
+</li>
+<li><a class='view-title' id="*-o*%2c-*--opaque-re*%3d_regular-expression_"></a><strong><strong>-o</strong>, <strong>--opaque-re</strong>=<i>regular expression</i></strong>
+<p>Use "opaque" data type for the C types matched by the regular
+expression, even if these types are <code class="inline"><span class="w">typedef</span></code>
+-equivalent to types
+from typemaps.  Should not be used without <strong>-x</strong>.</p>
+<p>This may be useful since, say, types which are <code class="inline"><span class="w">typedef</span></code>
+-equivalent
+to integers may represent OS-related handles, and one may want to work
+with these handles in OO-way, as in <code class="inline"><span class="i">$handle</span><span class="i">-&gt;do_something</span><span class="s">(</span><span class="s">)</span></code>
+.
+Use <code class="inline">-o .</code>
+ if you want to handle all the <code class="inline"><span class="w">typedef</span></code>
+ed types as opaque
+types.</p>
+<p>The type-to-match is whitewashed (except for commas, which have no
+whitespace before them, and multiple <code class="inline"><span class="i">*</span></code>
+ which have no whitespace
+between them).</p>
+</li>
+<li><a class='view-title' id="*-p*%2c-*--remove-prefix*%3d_prefix_"></a><strong><strong>-p</strong>, <strong>--remove-prefix</strong>=<i>prefix</i></strong>
+<p>Specify a prefix which should be removed from the Perl function names,
+e.g., -p sec_rgy_ This sets up the XS <strong>PREFIX</strong> keyword and removes
+the prefix from functions that are autoloaded via the <code class="inline"><span class="i">constant</span><span class="s">(</span><span class="s">)</span></code>
+
+mechanism.</p>
+</li>
+<li><a class='view-title' id="*-s*%2c-*--const-subs*%3d_sub1%2csub2_"></a><strong><strong>-s</strong>, <strong>--const-subs</strong>=<i>sub1,sub2</i></strong>
+<p>Create a perl subroutine for the specified macros rather than autoload
+with the constant() subroutine.  These macros are assumed to have a
+return type of <strong>char *</strong>, e.g.,
+-s sec_rgy_wildcard_name,sec_rgy_wildcard_sid.</p>
+</li>
+<li><a class='view-title' id="*-t*%2c-*--default-type*%3d_type_"></a><strong><strong>-t</strong>, <strong>--default-type</strong>=<i>type</i></strong>
+<p>Specify the internal type that the constant() mechanism uses for macros.
+The default is IV (signed integer).  Currently all macros found during the
+header scanning process will be assumed to have this type.  Future versions
+of <code class="inline"><span class="w">h2xs</span></code>
+ may gain the ability to make educated guesses.</p>
+</li>
+<li><a class='view-title' id="*--use-new-tests*"></a><strong><strong>--use-new-tests</strong></strong>
+<p>When <strong>--compat-version</strong> (<strong>-b</strong>) is present the generated tests will use
+<code class="inline"><span class="w">Test::More</span></code>
+ rather than <code class="inline"><span class="w">Test</span></code>
+ which is the default for versions before
+5.6.2.  <code class="inline"><span class="w">Test::More</span></code>
+ will be added to PREREQ_PM in the generated
+<code class="inline"><span class="w">Makefile</span>.<span class="w">PL</span></code>
+.</p>
+</li>
+<li><a class='view-title' id="*--use-old-tests*"></a><strong><strong>--use-old-tests</strong></strong>
+<p>Will force the generation of test code that uses the older <code class="inline"><span class="w">Test</span></code>
+ module.</p>
+</li>
+<li><a class='view-title' id="*--skip-exporter*"></a><strong><strong>--skip-exporter</strong></strong>
+<p>Do not use <code class="inline"><span class="w">Exporter</span></code>
+ and/or export any symbol.</p>
+</li>
+<li><a class='view-title' id="*--skip-ppport*"></a><strong><strong>--skip-ppport</strong></strong>
+<p>Do not use <code class="inline"><span class="w">Devel::PPPort</span></code>
+: no portability to older version.</p>
+</li>
+<li><a class='view-title' id="*--skip-autoloader*"></a><strong><strong>--skip-autoloader</strong></strong>
+<p>Do not use the module <code class="inline"><span class="w">AutoLoader</span></code>
+; but keep the constant() function
+and <code class="inline"><a name="AUTOLOAD"></a>sub <span class="m">AUTOLOAD</span></code>
+ for constants.</p>
+</li>
+<li><a class='view-title' id="*--skip-strict*"></a><strong><strong>--skip-strict</strong></strong>
+<p>Do not use the pragma <code class="inline"><span class="w">strict</span></code>
+.</p>
+</li>
+<li><a class='view-title' id="*--skip-warnings*"></a><strong><strong>--skip-warnings</strong></strong>
+<p>Do not use the pragma <code class="inline"><span class="w">warnings</span></code>
+.</p>
+</li>
+<li><a class='view-title' id="*-v*%2c-*--version*%3d_version_"></a><strong><strong>-v</strong>, <strong>--version</strong>=<i>version</i></strong>
+<p>Specify a version number for this extension.  This version number is added
+to the templates.  The default is 0.01, or 0.00_01 if <code class="inline">-B</code>
+ is specified.
+The version specified should be numeric.</p>
+</li>
+<li><a class='view-title' id="*-x*%2c-*--autogen-xsubs*"></a><strong><strong>-x</strong>, <strong>--autogen-xsubs</strong></strong>
+<p>Automatically generate XSUBs basing on function declarations in the
+header file.  The package <code class="inline"><span class="w">C::Scan</span></code>
+ should be installed. If this
+option is specified, the name of the header file may look like
+<code class="inline"><span class="w">NAME1</span><span class="cm">,</span><span class="w">NAME2</span></code>
+. In this case NAME1 is used instead of the specified
+string, but XSUBs are emitted only for the declarations included from
+file NAME2.</p>
+<p>Note that some types of arguments/return-values for functions may
+result in XSUB-declarations/typemap-entries which need
+hand-editing. Such may be objects which cannot be converted from/to a
+pointer (like <code class="inline"><span class="w">long</span> <span class="w">long</span></code>
+), pointers to functions, or arrays.  See
+also the section on <a href="#LIMITATIONS-of--x">LIMITATIONS of -x</a>.</p>
+</li>
+</ul>
+<a class='view-head1' id="EXAMPLES"></a><h2 class='h2' >EXAMPLES</h2>
+<pre class="verbatim"><ol><li>    <span class="c"># Default behavior, extension is Rusers</span></li><li>    <span class="w">h2xs</span> <span class="w">rpcsvc</span>/<span class="w">rusers</span></li><li></li><li>    <span class="c"># Same, but extension is RUSERS</span></li><li>    <span class="w">h2xs</span> -<span class="w">n</span> <span class="w">RUSERS</span> <span class="w">rpcsvc</span>/<span class="w">rusers</span></li><li></li><li>    <span class="c"># Extension is rpcsvc::rusers. Still finds &lt;rpcsvc/rusers.h&gt;</span></li><li>    <span class="w">h2xs</span> <span class="w">rpcsvc::rusers</span></li><li></li><li>    <span class="c"># Extension is ONC::RPC.  Still finds &lt;rpcsvc/rusers.h&gt;</span></li><li>    <span class="w">h2xs</span> -<span class="w">n</span> <span class="w">ONC::RPC</span> <span class="w">rpcsvc</span>/<span class="w">rusers</span></li><li></li><li>    <span class="c"># Without constant() or AUTOLOAD</span></li><li>    <span class="w">h2xs</span> -c <span class="w">rpcsvc</span>/<span class="w">rusers</span></li><li></li><li>    <span class="c"># Creates templates for an extension named RPC</span></li><li>    <span class="w">h2xs</span> -<span class="w">cfn</span> <span class="w">RPC</span></li><li></li><li>    <span class="c"># Extension is ONC::RPC.</span></li><li>    <span class="w">h2xs</span> -<span class="w">cfn</span> <span class="w">ONC::RPC</span></li><li></li><li>    <span class="c"># Extension is a pure Perl module with no XS code.</span></li><li>    <span class="w">h2xs</span> <a class="l_k" href="functions/-X.html">-X</a> <span class="w">My::Module</span></li><li></li><li>    <span class="c"># Extension is Lib::Foo which works at least with Perl5.005_03.</span></li><li>    <span class="c"># Constants are created for all #defines and enums h2xs can find</span></li><li>    <span class="c"># in foo.h.</span></li><li>    <span class="w">h2xs</span> -b <span class="v">5.5.3</span> -<span class="w">n</span> <span class="w">Lib::Foo</span> <span class="w">foo</span>.<span class="w">h</span></li><li></li><li>    <span class="c"># Extension is Lib::Foo which works at least with Perl5.005_03.</span></li><li>    <span class="c"># Constants are created for all #defines but only for enums</span></li><li>    <span class="c"># whose names do not start with &#39;bar_&#39;.</span></li><li>    <span class="w">h2xs</span> -b <span class="v">5.5.3</span> -<span class="w">e</span> <span class="q">&#39;^bar_&#39;</span> -<span class="w">n</span> <span class="w">Lib::Foo</span> <span class="w">foo</span>.<span class="w">h</span></li><li></li><li>    <span class="c"># Makefile.PL will look for library -lrpc in</span></li><li>    <span class="c"># additional directory /opt/net/lib</span></li><li>    <span class="w">h2xs</span> <span class="w">rpcsvc</span>/<span class="w">rusers</span> -<span class="w">L</span>/<span class="w">opt</span>/<span class="w">net</span>/<span class="w">lib</span> -<span class="w">lrpc</span></li><li></li><li>    <span class="c"># Extension is DCE::rgynbase</span></li><li>    <span class="c"># prefix &quot;sec_rgy_&quot; is dropped from perl function names</span></li><li>    <span class="w">h2xs</span> -<span class="w">n</span> <span class="w">DCE::rgynbase</span> -p <span class="w">sec_rgy_</span> <span class="w">dce</span>/<span class="w">rgynbase</span></li><li></li><li>    <span class="c"># Extension is DCE::rgynbase</span></li><li>    <span class="c"># prefix &quot;sec_rgy_&quot; is dropped from perl function names</span></li><li>    <span class="c"># subroutines are created for sec_rgy_wildcard_name and</span></li><li>    <span class="c"># sec_rgy_wildcard_sid</span></li><li>    <span class="w">h2xs</span> -<span class="w">n</span> <span class="w">DCE::rgynbase</span> -p <span class="w">sec_rgy_</span> \</li><li>    -s <span class="w">sec_rgy_wildcard_name</span><span class="cm">,</span><span class="w">sec_rgy_wildcard_sid</span> <span class="w">dce</span>/<span class="w">rgynbase</span></li><li></li><li>    <span class="c"># Make XS without defines in perl.h, but with function declarations</span></li><li>    <span class="c"># visible from perl.h. Name of the extension is perl1.</span></li><li>    <span class="c"># When scanning perl.h, define -DEXT=extern -DdEXT= -DINIT(x)=</span></li><li>    <span class="c"># Extra backslashes below because the string is passed to shell.</span></li><li>    <span class="c"># Note that a directory with perl header files would</span></li><li>    <span class="c">#  be added automatically to include path.</span></li><li>    <span class="w">h2xs</span> -<span class="w">xAn</span> <span class="w">perl1</span> -<span class="w">F</span> <span class="q">&quot;-DEXT=extern -DdEXT= -DINIT\(x\)=&quot;</span> <span class="w">perl</span>.<span class="w">h</span></li><li></li><li>    <span class="c"># Same with function declaration in proto.h as visible from perl.h.</span></li><li>    <span class="w">h2xs</span> -<span class="w">xAn</span> <span class="w">perl2</span> <span class="w">perl</span>.<span class="w">h</span><span class="cm">,</span><span class="w">proto</span>.<span class="w">h</span></li><li></li><li>    <span class="c"># Same but select only functions which match /^av_/</span></li><li>    <span class="w">h2xs</span> -M <span class="q">&#39;^av_&#39;</span> -<span class="w">xAn</span> <span class="w">perl2</span> <span class="w">perl</span>.<span class="w">h</span><span class="cm">,</span><span class="w">proto</span>.<span class="w">h</span></li><li></li><li>    <span class="c"># Same but treat SV* etc as &quot;opaque&quot; types</span></li><li>    <span class="w">h2xs</span> -o <span class="q">&#39;^[S]V \*$&#39;</span> -<span class="w">M</span> <span class="q">&#39;^av_&#39;</span> -<span class="w">xAn</span> <span class="w">perl2</span> <span class="w">perl</span>.<span class="w">h</span><span class="cm">,</span><span class="w">proto</span>.<span class="w">h</span></li></ol></pre><a class='view-head2' id="Extension-based-on-_.h_-and-_.c_-files"></a><h3 class='h3' >Extension based on <i>.h</i> and <i>.c</i> files</h3>
+<p>Suppose that you have some C files implementing some functionality,
+and the corresponding header files.  How to create an extension which
+makes this functionality accessible in Perl?  The example below
+assumes that the header files are <i>interface_simple.h</i> and
+<i>interface_hairy.h</i>, and you want the perl module be named as
+<code class="inline"><span class="w">Ext::Ension</span></code>
+.  If you need some preprocessor directives and/or
+linking with external libraries, see the flags <code class="inline">-<span class="w">F</span></code>
+, <code class="inline">-<span class="w">L</span></code>
+ and <code class="inline">-l</code>
+
+in <a href="#OPTIONS">OPTIONS</a>.</p>
+<ul>
+<li><a class='view-title' id="Find-the-directory-name"></a><strong>Find the directory name</strong>
+<p>Start with a dummy run of h2xs:</p>
+<pre class="verbatim"><ol><li>  <span class="w">h2xs</span> -<span class="w">Afn</span> <span class="w">Ext::Ension</span></li></ol></pre><p>The only purpose of this step is to create the needed directories, and
+let you know the names of these directories.  From the output you can
+see that the directory for the extension is <i>Ext/Ension</i>.</p>
+</li>
+<li><a class='view-title' id="Copy-C-files"></a><strong>Copy C files</strong>
+<p>Copy your header files and C files to this directory <i>Ext/Ension</i>.</p>
+</li>
+<li><a class='view-title' id="Create-the-extension"></a><strong>Create the extension</strong>
+<p>Run h2xs, overwriting older autogenerated files:</p>
+<pre class="verbatim"><ol><li>  <span class="w">h2xs</span> -<span class="w">Oxan</span> <span class="w">Ext::Ension</span> <span class="w">interface_simple</span>.<span class="w">h</span> <span class="w">interface_hairy</span>.<span class="w">h</span></li></ol></pre><p>h2xs looks for header files <i>after</i> changing to the extension
+directory, so it will find your header files OK.</p>
+</li>
+<li><a class='view-title' id="Archive-and-test"></a><strong>Archive and test</strong>
+<p>As usual, run</p>
+<pre class="verbatim"><ol><li>  <span class="w">cd</span> <span class="w">Ext</span>/<span class="w">Ension</span></li><li>  <span class="w">perl</span> <span class="w">Makefile</span>.<span class="w">PL</span></li><li>  <span class="w">make</span> <span class="w">dist</span></li><li>  <span class="w">make</span></li><li>  <span class="w">make</span> <span class="w">test</span></li></ol></pre></li>
+<li><a class='view-title' id="Hints"></a><strong>Hints</strong>
+<p>It is important to do <code class="inline"><span class="w">make</span> <span class="w">dist</span></code>
+ as early as possible.  This way you
+can easily merge(1) your changes to autogenerated files if you decide
+to edit your <code class="inline">.<span class="w">h</span></code>
+ files and rerun h2xs.</p>
+<p>Do not forget to edit the documentation in the generated <i>.pm</i> file.</p>
+<p>Consider the autogenerated files as skeletons only, you may invent
+better interfaces than what h2xs could guess.</p>
+<p>Consider this section as a guideline only, some other options of h2xs
+may better suit your needs.</p>
+</li>
+</ul>
+<a class='view-head1' id="ENVIRONMENT"></a><h2 class='h2' >ENVIRONMENT</h2>
+<p>No environment variables are used.</p>
+<a class='view-head1' id="AUTHOR"></a><h2 class='h2' >AUTHOR</h2>
+<p>Larry Wall and others</p>
+<a class='view-head1' id="SEE-ALSO"></a><h2 class='h2' >SEE ALSO</h2>
+<p><a href="perl.html">perl</a>, <a href="perlxstut.html">perlxstut</a>, <a href="ExtUtils/MakeMaker.html">ExtUtils::MakeMaker</a>, and <a href="AutoLoader.html">AutoLoader</a>.</p>
+<a class='view-head1' id="DIAGNOSTICS"></a><h2 class='h2' >DIAGNOSTICS</h2>
+<p>The usual warnings if it cannot read or write the files involved.</p>
+<a class='view-head1' id="LIMITATIONS-of-*-x*"></a><h2 class='h2' >LIMITATIONS of <strong>-x</strong></h2>
+<p><i>h2xs</i> would not distinguish whether an argument to a C function
+which is of the form, say, <code class="inline"><a class="l_k" href="functions/int.html">int</a> <span class="i">*</span></code>
+, is an input, output, or
+input/output parameter.  In particular, argument declarations of the
+form</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="functions/int.html">int</a></li><li>    <span class="i">foo</span><span class="s">(</span><span class="w">n</span><span class="s">)</span></li><li>	<a class="l_k" href="functions/int.html">int</a> <span class="i">*n</span></li></ol></pre><p>should be better rewritten as</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="functions/int.html">int</a></li><li>    <span class="i">foo</span><span class="s">(</span><span class="w">n</span><span class="s">)</span></li><li>	<a class="l_k" href="functions/int.html">int</a> <span class="i">&amp;n</span></li></ol></pre><p>if <code class="inline"><span class="w">n</span></code>
+ is an input parameter.</p>
+<p>Additionally, <i>h2xs</i> has no facilities to intuit that a function</p>
+<pre class="verbatim"><ol><li>   <a class="l_k" href="functions/int.html">int</a></li><li>   <span class="i">foo</span><span class="s">(</span><span class="w">addr</span><span class="cm">,</span><span class="w">l</span><span class="s">)</span></li><li>	<span class="w">char</span> *<span class="w">addr</span></li><li>	<a class="l_k" href="functions/int.html">int</a>   <span class="w">l</span></li></ol></pre><p>takes a pair of address and length of data at this address, so it is better
+to rewrite this function as</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="functions/int.html">int</a></li><li>    <span class="i">foo</span><span class="s">(</span><span class="w">sv</span><span class="s">)</span></li><li>	    <span class="w">SV</span> *<span class="w">addr</span></li><li>	<span class="w">PREINIT</span><span class="co">:</span></li><li>	    <span class="w">STRLEN</span> <span class="w">len</span><span class="sc">;</span></li><li>	    <span class="w">char</span> *<span class="q">s;</span></li><li>	<span class="q">	CODE:</span></li><li>	    <span class="q">	    s = SvPV(sv,len);</span></li><li>	    <span class="q">	    RETVAL = foo(s, len);</span></li><li>	<span class="w">OUTPUT</span><span class="co">:</span></li><li>	    <span class="w">RETVAL</span></li></ol></pre><p>or alternately</p>
+<pre class="verbatim"><ol><li>    <span class="w">static</span> <a class="l_k" href="functions/int.html">int</a></li><li>    <span class="i">my_foo</span><span class="s">(</span><span class="w">SV</span> *<span class="w">sv</span><span class="s">)</span></li><li>    <span class="s">{</span></li><li>	<span class="w">STRLEN</span> <span class="w">len</span><span class="sc">;</span></li><li>	<span class="w">char</span> *<span class="q">s = SvPV(sv,len);</span></li><li></li><li>	<span class="q">	return foo(s, len);</span></li><li>    <span class="q">    }</span></li><li></li><li>    <span class="q">    MODULE = foo	PACKAGE =</span> <span class="w">foo</span>	<span class="w">PREFIX</span> = <span class="w">my_</span></li><li></li><li>    <a class="l_k" href="functions/int.html">int</a></li><li>    <span class="i">foo</span><span class="s">(</span><span class="w">sv</span><span class="s">)</span></li><li>	<span class="w">SV</span> *<span class="w">sv</span></li></ol></pre><p>See <a href="perlxs.html">perlxs</a> and <a href="perlxstut.html">perlxstut</a> for additional details.</p>
+
+
+
+
+      <ul><li><a href="#NAME">NAME</a></li><li><a href="#SYNOPSIS">SYNOPSIS</a></li><li><a href="#DESCRIPTION">DESCRIPTION</a></li><li><a href="#OPTIONS">OPTIONS</a></li><li><a href="#EXAMPLES">EXAMPLES</a></li><ul><li><a href="#Extension-based-on-_.h_-and-_.c_-files">Extension based on _.h_ and _.c_ files</a></li></ul><li><a href="#ENVIRONMENT">ENVIRONMENT</a></li><li><a href="#AUTHOR">AUTHOR</a></li><li><a href="#SEE-ALSO">SEE ALSO</a></li><li><a href="#DIAGNOSTICS">DIAGNOSTICS</a></li><li><a href="#LIMITATIONS-of-*-x*">LIMITATIONS of *-x*</a></li></ul>
+
+
+                  </div>
+                </article>
+              </div>
+            </div>
+          </main>
+        </div>
+           <footer class="footer row bg-light pt-5 pb-5">
+       <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+           <div class="row">
+               <div class="col-md-4">
+                   <ul class="list-unstyled">
+                       <li>
+                           <h4>Site info</h4>
+                       </li>
+                       <li>Docs mantained by
+                           <a href="//lists.perl.org/list/perl5-porters.html"
+                               rel="noopener">Perl 5 Porters</a>
+                       </li>
+                       <li>Perldoc site development sponsored by
+                           <a href="//opusvl.com" rel="noopener">
+                           <img style="margin: 20px 20px 5px 10px" class="opus-logo" src="/public/img/opusvl_logo.svg" alt="OpusVL Logo">
+                        </a>
+                    <li><span class="about_perldoc"><a href="//about.html">About PerlDOC</a></span>
+                    </li>
+                       </li>
+                   </ul>
+               </div>
+               <div class="col-md-8">
+                   <div class="row">
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Manuals</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.30.0/index-overview.html">Overview</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.30.0/index-tutorials.html">Tutorials</a>
+                               </li>
+                               <li>
+                                   <a href="/5.30.0/index-faq.html">FAQs</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.30.0/index-history.html">Changes</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Reference</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.30.0/index-language.html">Language</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.30.0/index-functions.html">Functions</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.30.0/perlop.html">Operators</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.30.0/perlvar.html">Variables</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Modules</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.30.0/index-modules-A.html">Modules</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.30.0/index-pragmas.html">Pragmas</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.30.0/index-utilities.html">Utilities</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Misc</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.30.0/index-licence.html">License</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.30.0/index-internals.html">Internals</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.30.0/index-platforms.html">Platforms</a>
+                               </li>
+                            <li>
+                                <a
+                                    href="/5.30.0/index-about.html">About</a>
+                            </li>
+                           </ul>
+                       </div>
+                   </div>
+               </div>
+               <div class=" col-12 footer-inf text-center">
+                   <small>perldoc.perl.org - Official documentation for the Perl
+                       programming language</small>
+               </div>
+           </div>
+       </div>
+   </footer>
+
+        	<div class="beta-wrapper beta-bottom-right ">
+		<div class="beta beta-blue  ">
+			<a class="beta-link "
+				href="//github.com/OpusVL/perldoc.perl.org/issues/new" rel="noopener">
+				<span class="beta-text">
+					This website is a Beta release.
+				</span>
+				<span class="beta-text">
+					For any issues please raise a ticket on GitHub
+				</span>
+			</a>
+		</div>
+	</div>
+
+        <script src="/public/js/main.min.js"></script>
+      </body>
+
+      </html>

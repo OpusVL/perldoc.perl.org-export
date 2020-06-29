@@ -1,0 +1,950 @@
+      
+      
+      
+      
+
+      <!DOCTYPE html>
+      <html lang="en">
+
+      <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Hash::Util - perldoc.perl.org">
+        <link rel="icon" href="/public/img/favicon.ico">
+        <title>Hash::Util - perldoc.perl.org</title>
+        <link href="/public/css/main.min.css" rel="stylesheet">
+        <link rel="canonical" href="/Hash/Util.html">
+        <link
+          href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900'
+          rel='stylesheet' type='text/css'>
+        <script>
+          window.ga = window.ga || function () {
+            (ga.q = ga.q || []).push(arguments)
+          };
+          ga.l = +new Date;
+          ga('create', 'UA-1892152-2', 'auto'); // JJ's account
+          ga('create', 'UA-50555-3', 'auto', 'perlOrg'); // perl.org account
+          ga('require', 'outboundLinkTracker', {
+            events: ['click', 'auxclick', 'contextmenu'],
+          });
+          ga('require', 'maxScrollTracker');
+          ga('send', 'pageview');
+          ga('perlOrg.send', 'pageview');
+        </script>
+        <script async src="https://www.google-analytics.com/analytics.js">
+        </script>
+        <script async src="/public/js/tracking.min.js"></script>
+      </head>
+
+      <body class="body container-fluid ">
+        <div class="wrapper">
+
+          <nav
+    class="navbar navbar-dark bg-primary bg-perl fixed-top justify-content-between navbar-expand-lg">
+    <a href="#content" class="skippy sr-only sr-only-focusable">
+        <span class=' skippy-text'>Skip to main content</span>
+    </a>
+    <a class="navbar-brand" href="/">
+        <img class="logo" src="/public/img/logo_perl_doc.svg"
+            alt="Perl Documentation Logo" />
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse"
+        data-target="#navbar" aria-controls="navbar" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="navbar" class="collapse navbar-collapse ">
+        <ul class="navbar-nav ml-auto navbar-right">
+            <form class="nav-item dropdown search-wrapper">
+                <input type="text" id='searchinput' aria-describedby='navbarDropdown5'
+                    placeholder="Type query" class='search-input-field' value=''>
+
+                <button href="#" data-toggle='dropdown' type="button"
+                    aria-haspopup="true" aria-expanded='false' id="navbarDropdown5"
+                    class="nav-link dropdown-toggle search-link">
+                    <object tabindex='-1' focusable="false" class='search-icon'
+                        data="/public/img/search.svg" type="image/svg+xml"
+                        name='search icon'>search
+                        icon</object>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown5"
+                    id='search-results'>
+                    <p class='dropdown-item major-version'>
+                        No results
+                    </p>
+                </div>
+            </form>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown" href="#" class="nav-link dropdown-toggle"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Perl versions</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    
+                        <p class='dropdown-item major-version'>
+                            5.32
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.32.0/">5.32.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.30
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.3/">5.30.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.2/">5.30.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.1/">5.30.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.0/">5.30.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.28
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.3/">5.28.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.2/">5.28.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.1/">5.28.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.0/">5.28.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.26
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.3/">5.26.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.2/">5.26.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.1/">5.26.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.0/">5.26.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.24
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.4/">5.24.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.3/">5.24.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.2/">5.24.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.1/">5.24.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.0/">5.24.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.22
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.4/">5.22.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.3/">5.22.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.2/">5.22.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.1/">5.22.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.0/">5.22.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.20
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.3/">5.20.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.2/">5.20.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.1/">5.20.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.0/">5.20.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.18
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.4/">5.18.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.3/">5.18.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.2/">5.18.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.1/">5.18.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.0/">5.18.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.16
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.3/">5.16.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.2/">5.16.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.1/">5.16.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.0/">5.16.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.14
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.4/">5.14.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.3/">5.14.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.2/">5.14.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.1/">5.14.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.0/">5.14.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.12
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.5/">5.12.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.4/">5.12.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.3/">5.12.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.2/">5.12.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.1/">5.12.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.0/">5.12.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.10
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.1/">5.10.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.0/">5.10.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.8
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.9/">5.8.9</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.8/">5.8.8</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.7/">5.8.7</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.6/">5.8.6</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.5/">5.8.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.4/">5.8.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.3/">5.8.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.2/">5.8.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.1/">5.8.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.0/">5.8.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.6
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.2/">5.6.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.1/">5.6.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.0/">5.6.0</a>
+                        
+                        
+                    
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown1" href="#" class="dropdown-toggle nav-link"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Manuals</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                    <a class="dropdown-item"
+                        href="/5.30.3/index-overview.html">Overview</a>
+                    <a class="dropdown-item"
+                        href="/5.30.3/index-tutorials.html">Tutorials</a>
+                    <a class="dropdown-item"
+                        href="/5.30.3/index-faq.html">FAQs</a>
+                    <a class="dropdown-item"
+                        href="/5.30.3/index-history.html">Changes</a>
+                    <a class="dropdown-item"
+                        href="/5.30.3/index-licence.html">License</a>
+                    <a class="dropdown-item"
+                        href="/5.30.3/index-language.html">Language</a>
+                    <a class="dropdown-item"
+                        href="/5.30.3/index-functions.html">Functions</a>
+                    <a class="dropdown-item"
+                        href="/5.30.3/perlop.html">Operators</a>
+                    <a class="dropdown-item"
+                        href="/5.30.3/perlvar.html">Variables</a>
+                    <a class="dropdown-item"
+                        href="/5.30.3/index-pragmas.html">Pragmas</a>
+                    <a class="dropdown-item"
+                        href="/5.30.3/index-utilities.html">Utilities</a>
+                    <a class="dropdown-item"
+                        href="/5.30.3/index-internals.html">Internals</a>
+                    <a class="dropdown-item"
+                        href="/5.30.3/index-platforms.html">Platforms</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown3" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Modules</a>
+                <div aria-labelledby="navbarDropdown3"
+                    class="dropdown-menu letters-wrap">
+                    <!--<a class="dropdown-item"
+                        href="/5.30.3/index-modules.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.30.3/index-modules-by-cat.html">By
+                        Category</a>-->
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.30.3/index-modules-A.html">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.3/index-modules-B.html">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.3/index-modules-C.html">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.3/index-modules-D.html">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.3/index-modules-E.html">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.3/index-modules-F.html">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.3/index-modules-G.html">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.3/index-modules-H.html">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.3/index-modules-I.html">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.3/index-modules-J.html">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.3/index-modules-K.html">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.3/index-modules-L.html">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.3/index-modules-M.html">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.3/index-modules-N.html">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.3/index-modules-O.html">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.3/index-modules-P.html">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.3/index-modules-Q.html">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.3/index-modules-R.html">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.3/index-modules-S.html">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.3/index-modules-T.html">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.3/index-modules-U.html">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.3/index-modules-V.html">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.3/index-modules-W.html">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.3/index-modules-X.html">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.3/index-modules-Y.html">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.3/index-modules-Z.html">Z</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown4" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Functions</a>
+                <div aria-labelledby="navbarDropdown4"
+                    class="dropdown-menu letters-wrap">
+                    <a class="dropdown-item"
+                        href="/5.30.3/index-functions.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.30.3/index-functions-by-cat.html">By
+                        Category</a>
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.30.3/index-functions.html#A">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.3/index-functions.html#B">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.3/index-functions.html#C">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.3/index-functions.html#D">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.3/index-functions.html#E">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.3/index-functions.html#F">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.3/index-functions.html#G">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.3/index-functions.html#H">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.3/index-functions.html#I">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.3/index-functions.html#J">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.3/index-functions.html#K">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.3/index-functions.html#L">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.3/index-functions.html#M">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.3/index-functions.html#N">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.3/index-functions.html#O">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.3/index-functions.html#P">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.3/index-functions.html#Q">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.3/index-functions.html#R">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.3/index-functions.html#S">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.3/index-functions.html#T">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.3/index-functions.html#U">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.3/index-functions.html#V">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.3/index-functions.html#W">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.3/index-functions.html#X">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.3/index-functions.html#Y">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.3/index-functions.html#Z">Z</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!--/.nav-collapse -->
+</nav>
+
+
+          <main class="row main-content pb-5 pt-5" id='content'>
+            <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+              <div class="row">
+                <div class="col-sm-12">
+                  <div id="breadcrumbs">
+                      
+    <a href="../index.html">Home</a>&nbsp; &gt;
+    
+      
+        <a href="../index-modules-H.html">Core modules (H)</a> &gt;
+      
+    
+    Hash::Util
+  
+
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <article class="col-sm-12 content">
+                  <div class="documentation-wrapper">
+                    <div id="perl_version">
+                      <h7 class='page-title'> Perl 5 version 30.3
+                        documentation</h7>
+                    </div>
+                    <h1>Hash::Util</h1>
+
+
+  <!--    -->
+<ul><li><a href="#NAME">NAME</a></li><li><a href="#SYNOPSIS">SYNOPSIS</a></li><li><a href="#DESCRIPTION">DESCRIPTION</a></li><ul><li><a href="#Restricted-hashes">Restricted hashes</a></li><li><a href="#Operating-on-references-to-hashes.">Operating on references to hashes.</a></li></ul><li><a href="#CAVEATS">CAVEATS</a></li><li><a href="#BUGS">BUGS</a></li><li><a href="#AUTHOR">AUTHOR</a></li><li><a href="#SEE-ALSO">SEE ALSO</a></li></ul><a class='view-head1' id="NAME"></a><h2 class='h2' >NAME</h2>
+<p>Hash::Util - A selection of general-utility hash subroutines</p>
+<a class='view-head1' id="SYNOPSIS"></a><h2 class='h2' >SYNOPSIS</h2>
+<pre class="verbatim"><ol><li>  <span class="c"># Restricted hashes</span></li><li></li><li>  <a class="l_k" href="../functions/use.html">use</a> <span class="w">Hash::Util</span> <span class="q">qw(</span></li><li>                     <span class="q">fieldhash fieldhashes</span></li><li></li><li>                     <span class="q">all_keys</span></li><li>                     <span class="q">lock_keys unlock_keys</span></li><li>                     <span class="q">lock_value unlock_value</span></li><li>                     <span class="q">lock_hash unlock_hash</span></li><li>                     <span class="q">lock_keys_plus</span></li><li>                     <span class="q">hash_locked hash_unlocked</span></li><li>                     <span class="q">hashref_locked hashref_unlocked</span></li><li>                     <span class="q">hidden_keys legal_keys</span></li><li></li><li>                     <span class="q">lock_ref_keys unlock_ref_keys</span></li><li>                     <span class="q">lock_ref_value unlock_ref_value</span></li><li>                     <span class="q">lock_hashref unlock_hashref</span></li><li>                     <span class="q">lock_ref_keys_plus</span></li><li>                     <span class="q">hidden_ref_keys legal_ref_keys</span></li><li></li><li>                     <span class="q">hash_seed hash_value hv_store</span></li><li>                     <span class="q">bucket_stats bucket_info bucket_array</span></li><li>                     <span class="q">lock_hash_recurse unlock_hash_recurse</span></li><li>                     <span class="q">lock_hashref_recurse unlock_hashref_recurse</span></li><li></li><li>                     <span class="q">hash_traversal_mask</span></li><li>                   <span class="q">)</span><span class="sc">;</span></li><li></li><li>  <span class="i">%hash</span> = <span class="s">(</span><span class="w">foo</span> <span class="cm">=&gt;</span> <span class="n">42</span><span class="cm">,</span> <span class="w">bar</span> <span class="cm">=&gt;</span> <span class="n">23</span><span class="s">)</span><span class="sc">;</span></li><li>  <span class="c"># Ways to restrict a hash</span></li><li>  <span class="i">lock_keys</span><span class="s">(</span><span class="i">%hash</span><span class="s">)</span><span class="sc">;</span></li><li>  <span class="i">lock_keys</span><span class="s">(</span><span class="i">%hash</span><span class="cm">,</span> <span class="i">@keyset</span><span class="s">)</span><span class="sc">;</span></li><li>  <span class="i">lock_keys_plus</span><span class="s">(</span><span class="i">%hash</span><span class="cm">,</span> <span class="i">@additional_keys</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>  <span class="c"># Ways to inspect the properties of a restricted hash</span></li><li>  <a class="l_k" href="../functions/my.html">my</a> <span class="i">@legal</span> = <span class="i">legal_keys</span><span class="s">(</span><span class="i">%hash</span><span class="s">)</span><span class="sc">;</span></li><li>  <a class="l_k" href="../functions/my.html">my</a> <span class="i">@hidden</span> = <span class="i">hidden_keys</span><span class="s">(</span><span class="i">%hash</span><span class="s">)</span><span class="sc">;</span></li><li>  <a class="l_k" href="../functions/my.html">my</a> <span class="i">$ref</span> = <span class="i">all_keys</span><span class="s">(</span><span class="i">%hash</span><span class="cm">,</span><span class="i">@keys</span><span class="cm">,</span><span class="i">@hidden</span><span class="s">)</span><span class="sc">;</span></li><li>  <a class="l_k" href="../functions/my.html">my</a> <span class="i">$is_locked</span> = <span class="i">hash_locked</span><span class="s">(</span><span class="i">%hash</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>  <span class="c"># Remove restrictions on the hash</span></li><li>  <span class="i">unlock_keys</span><span class="s">(</span><span class="i">%hash</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>  <span class="c"># Lock individual values in a hash</span></li><li>  <span class="w">lock_value</span>  <span class="s">(</span><span class="i">%hash</span><span class="cm">,</span> <span class="q">&#39;foo&#39;</span><span class="s">)</span><span class="sc">;</span></li><li>  <span class="i">unlock_value</span><span class="s">(</span><span class="i">%hash</span><span class="cm">,</span> <span class="q">&#39;foo&#39;</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>  <span class="c"># Ways to change the restrictions on both keys and values</span></li><li>  <span class="w">lock_hash</span>  <span class="s">(</span><span class="i">%hash</span><span class="s">)</span><span class="sc">;</span></li><li>  <span class="i">unlock_hash</span><span class="s">(</span><span class="i">%hash</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>  <a class="l_k" href="../functions/my.html">my</a> <span class="i">$hashes_are_randomised</span> = <span class="i">hash_seed</span><span class="s">(</span><span class="s">)</span> != <span class="n">0</span><span class="sc">;</span></li><li></li><li>  <a class="l_k" href="../functions/my.html">my</a> <span class="i">$int_hash_value</span> = <span class="i">hash_value</span><span class="s">(</span> <span class="q">&#39;string&#39;</span> <span class="s">)</span><span class="sc">;</span></li><li></li><li>  <a class="l_k" href="../functions/my.html">my</a> <span class="i">$mask</span>= <span class="i">hash_traversal_mask</span><span class="s">(</span><span class="i">%hash</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>  <span class="i">hash_traversal_mask</span><span class="s">(</span><span class="i">%hash</span><span class="cm">,</span><span class="n">1234</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><a class='view-head1' id="DESCRIPTION"></a><h2 class='h2' >DESCRIPTION</h2>
+<p><code class="inline"><span class="w">Hash::Util</span></code>
+ and <code class="inline"><span class="w">Hash::Util::FieldHash</span></code>
+ contain special functions
+for manipulating hashes that don't really warrant a keyword.</p>
+<p><code class="inline"><span class="w">Hash::Util</span></code>
+ contains a set of functions that support
+<a href="#Restricted-hashes">restricted hashes</a>. These are described in
+this document.  <code class="inline"><span class="w">Hash::Util::FieldHash</span></code>
+ contains an (unrelated)
+set of functions that support the use of hashes in
+<i>inside-out classes</i>, described in <a href="../Hash/Util/FieldHash.html">Hash::Util::FieldHash</a>.</p>
+<p>By default <code class="inline"><span class="w">Hash::Util</span></code>
+ does not export anything.</p>
+<a class='view-head2' id="Restricted-hashes"></a><h3 class='h3' >Restricted hashes</h3>
+<p>5.8.0 introduces the ability to restrict a hash to a certain set of
+keys.  No keys outside of this set can be added.  It also introduces
+the ability to lock an individual key so it cannot be deleted and the
+ability to ensure that an individual value cannot be changed.</p>
+<p>This is intended to largely replace the deprecated pseudo-hashes.</p>
+<ul>
+<li><a class='view-title' id="*lock_keys*"></a><strong><strong>lock_keys</strong></strong>
+</li>
+<li><a class='view-title' id="*unlock_keys*"></a><strong><strong>unlock_keys</strong></strong>
+<pre class="verbatim"><ol><li>  <span class="i">lock_keys</span><span class="s">(</span><span class="i">%hash</span><span class="s">)</span><span class="sc">;</span></li><li>  <span class="i">lock_keys</span><span class="s">(</span><span class="i">%hash</span><span class="cm">,</span> <span class="i">@keys</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>Restricts the given %hash's set of keys to @keys.  If @keys is not
+given it restricts it to its current keyset.  No more keys can be
+added. delete() and exists() will still work, but will not alter
+the set of allowed keys. <strong>Note</strong>: the current implementation prevents
+the hash from being bless()ed while it is in a locked state. Any attempt
+to do so will raise an exception. Of course you can still bless()
+the hash before you call lock_keys() so this shouldn't be a problem.</p>
+<pre class="verbatim"><ol><li>  <span class="i">unlock_keys</span><span class="s">(</span><span class="i">%hash</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>Removes the restriction on the %hash's keyset.</p>
+<p><strong>Note</strong> that if any of the values of the hash have been locked they will not
+be unlocked after this sub executes.</p>
+<p>Both routines return a reference to the hash operated on.</p>
+</li>
+<li><a class='view-title' id="*lock_keys_plus*"></a><strong><strong>lock_keys_plus</strong></strong>
+<pre class="verbatim"><ol><li>  <span class="i">lock_keys_plus</span><span class="s">(</span><span class="i">%hash</span><span class="cm">,</span><span class="i">@additional_keys</span><span class="s">)</span></li></ol></pre><p>Similar to <code class="inline"><span class="i">lock_keys</span><span class="s">(</span><span class="s">)</span></code>
+, with the difference being that the optional key list
+specifies keys that may or may not be already in the hash. Essentially this is
+an easier way to say</p>
+<pre class="verbatim"><ol><li>  <span class="i">lock_keys</span><span class="s">(</span><span class="i">%hash</span><span class="cm">,</span><span class="i">@additional_keys</span><span class="cm">,</span><a class="l_k" href="../functions/keys.html">keys</a> <span class="i">%hash</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>Returns a reference to %hash</p>
+</li>
+<li><a class='view-title' id="*lock_value*"></a><strong><strong>lock_value</strong></strong>
+</li>
+<li><a class='view-title' id="*unlock_value*"></a><strong><strong>unlock_value</strong></strong>
+<pre class="verbatim"><ol><li>  <span class="w">lock_value</span>  <span class="s">(</span><span class="i">%hash</span><span class="cm">,</span> <span class="i">$key</span><span class="s">)</span><span class="sc">;</span></li><li>  <span class="i">unlock_value</span><span class="s">(</span><span class="i">%hash</span><span class="cm">,</span> <span class="i">$key</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>Locks and unlocks the value for an individual key of a hash.  The value of a
+locked key cannot be changed.</p>
+<p>Unless %hash has already been locked the key/value could be deleted
+regardless of this setting.</p>
+<p>Returns a reference to the %hash.</p>
+</li>
+<li><a class='view-title' id="*lock_hash*"></a><strong><strong>lock_hash</strong></strong>
+</li>
+<li><a class='view-title' id="*unlock_hash*"></a><strong><strong>unlock_hash</strong></strong>
+<pre class="verbatim"><ol><li>    <span class="i">lock_hash</span><span class="s">(</span><span class="i">%hash</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>lock_hash() locks an entire hash, making all keys and values read-only.
+No value can be changed, no keys can be added or deleted.</p>
+<pre class="verbatim"><ol><li>    <span class="i">unlock_hash</span><span class="s">(</span><span class="i">%hash</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>unlock_hash() does the opposite of lock_hash().  All keys and values
+are made writable.  All values can be changed and keys can be added
+and deleted.</p>
+<p>Returns a reference to the %hash.</p>
+</li>
+<li><a class='view-title' id="*lock_hash_recurse*"></a><strong><strong>lock_hash_recurse</strong></strong>
+</li>
+<li><a class='view-title' id="*unlock_hash_recurse*"></a><strong><strong>unlock_hash_recurse</strong></strong>
+<pre class="verbatim"><ol><li>    <span class="i">lock_hash_recurse</span><span class="s">(</span><span class="i">%hash</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>lock_hash() locks an entire hash and any hashes it references recursively,
+making all keys and values read-only. No value can be changed, no keys can
+be added or deleted.</p>
+<p>This method <strong>only</strong> recurses into hashes that are referenced by another hash.
+Thus a Hash of Hashes (HoH) will all be restricted, but a Hash of Arrays of
+Hashes (HoAoH) will only have the top hash restricted.</p>
+<pre class="verbatim"><ol><li>    <span class="i">unlock_hash_recurse</span><span class="s">(</span><span class="i">%hash</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>unlock_hash_recurse() does the opposite of lock_hash_recurse().  All keys and
+values are made writable.  All values can be changed and keys can be added
+and deleted. Identical recursion restrictions apply as to lock_hash_recurse().</p>
+<p>Returns a reference to the %hash.</p>
+</li>
+<li><a class='view-title' id="*hashref_locked*"></a><strong><strong>hashref_locked</strong></strong>
+</li>
+<li><a class='view-title' id="*hash_locked*"></a><strong><strong>hash_locked</strong></strong>
+<pre class="verbatim"><ol><li>  <span class="i">hashref_locked</span><span class="s">(</span>\<span class="i">%hash</span><span class="s">)</span> <a class="l_k" href="../functions/and.html">and</a> <a class="l_k" href="../functions/print.html">print</a> <span class="q">&quot;Hash is locked!\n&quot;</span><span class="sc">;</span></li><li>  <span class="i">hash_locked</span><span class="s">(</span><span class="i">%hash</span><span class="s">)</span> <a class="l_k" href="../functions/and.html">and</a> <a class="l_k" href="../functions/print.html">print</a> <span class="q">&quot;Hash is locked!\n&quot;</span><span class="sc">;</span></li></ol></pre><p>Returns true if the hash and its keys are locked.</p>
+</li>
+<li><a class='view-title' id="*hashref_unlocked*"></a><strong><strong>hashref_unlocked</strong></strong>
+</li>
+<li><a class='view-title' id="*hash_unlocked*"></a><strong><strong>hash_unlocked</strong></strong>
+<pre class="verbatim"><ol><li>  <span class="i">hashref_unlocked</span><span class="s">(</span>\<span class="i">%hash</span><span class="s">)</span> <a class="l_k" href="../functions/and.html">and</a> <a class="l_k" href="../functions/print.html">print</a> <span class="q">&quot;Hash is unlocked!\n&quot;</span><span class="sc">;</span></li><li>  <span class="i">hash_unlocked</span><span class="s">(</span><span class="i">%hash</span><span class="s">)</span> <a class="l_k" href="../functions/and.html">and</a> <a class="l_k" href="../functions/print.html">print</a> <span class="q">&quot;Hash is unlocked!\n&quot;</span><span class="sc">;</span></li></ol></pre><p>Returns true if the hash and its keys are unlocked.</p>
+</li>
+<li><a class='view-title' id="*legal_keys*"></a><strong><strong>legal_keys</strong></strong>
+<pre class="verbatim"><ol><li>  <a class="l_k" href="../functions/my.html">my</a> <span class="i">@keys</span> = <span class="i">legal_keys</span><span class="s">(</span><span class="i">%hash</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>Returns the list of the keys that are legal in a restricted hash.
+In the case of an unrestricted hash this is identical to calling
+keys(%hash).</p>
+</li>
+<li><a class='view-title' id="*hidden_keys*"></a><strong><strong>hidden_keys</strong></strong>
+<pre class="verbatim"><ol><li>  <a class="l_k" href="../functions/my.html">my</a> <span class="i">@keys</span> = <span class="i">hidden_keys</span><span class="s">(</span><span class="i">%hash</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>Returns the list of the keys that are legal in a restricted hash but
+do not have a value associated to them. Thus if 'foo' is a
+"hidden" key of the %hash it will return false for both <code class="inline"><a class="l_k" href="../functions/defined.html">defined</a></code>
+and <code class="inline"><a class="l_k" href="../functions/exists.html">exists</a></code> tests.</p>
+<p>In the case of an unrestricted hash this will return an empty list.</p>
+<p><strong>NOTE</strong> this is an experimental feature that is heavily dependent
+on the current implementation of restricted hashes. Should the
+implementation change, this routine may become meaningless, in which
+case it will return an empty list.</p>
+</li>
+<li><a class='view-title' id="*all_keys*"></a><strong><strong>all_keys</strong></strong>
+<pre class="verbatim"><ol><li>  <span class="i">all_keys</span><span class="s">(</span><span class="i">%hash</span><span class="cm">,</span><span class="i">@keys</span><span class="cm">,</span><span class="i">@hidden</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>Populates the arrays @keys with the all the keys that would pass
+an <code class="inline"><a class="l_k" href="../functions/exists.html">exists</a></code> tests, and populates @hidden with the remaining legal
+keys that have not been utilized.</p>
+<p>Returns a reference to the hash.</p>
+<p>In the case of an unrestricted hash this will be equivalent to</p>
+<pre class="verbatim"><ol><li>  <span class="i">$ref</span> = <a class="l_k" href="../functions/do.html">do</a> <span class="s">{</span></li><li>      <span class="i">@keys</span> = <a class="l_k" href="../functions/keys.html">keys</a> <span class="i">%hash</span><span class="sc">;</span></li><li>      <span class="i">@hidden</span> = <span class="s">(</span><span class="s">)</span><span class="sc">;</span></li><li>      \<span class="i">%hash</span></li><li>  <span class="s">}</span><span class="sc">;</span></li></ol></pre><p><strong>NOTE</strong> this is an experimental feature that is heavily dependent
+on the current implementation of restricted hashes. Should the
+implementation change this routine may become meaningless in which
+case it will behave identically to how it would behave on an
+unrestricted hash.</p>
+</li>
+<li><a class='view-title' id="*hash_seed*"></a><strong><strong>hash_seed</strong></strong>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">$hash_seed</span> = <span class="i">hash_seed</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>hash_seed() returns the seed bytes used to randomise hash ordering.</p>
+<p><strong>Note that the hash seed is sensitive information</strong>: by knowing it one
+can craft a denial-of-service attack against Perl code, even remotely,
+see <a href="../perlsec.html#Algorithmic-Complexity-Attacks">Algorithmic Complexity Attacks in perlsec</a> for more information.
+<strong>Do not disclose the hash seed</strong> to people who don't need to know it.
+See also <a href="../perlrun.html#PERL_HASH_SEED_DEBUG">PERL_HASH_SEED_DEBUG in perlrun</a>.</p>
+<p>Prior to Perl 5.17.6 this function returned a UV, it now returns a string,
+which may be of nearly any size as determined by the hash function your
+Perl has been built with. Possible sizes may be but are not limited to
+4 bytes (for most hash algorithms) and 16 bytes (for siphash).</p>
+</li>
+<li><a class='view-title' id="*hash_value*"></a><strong><strong>hash_value</strong></strong>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">$hash_value</span> = <span class="i">hash_value</span><span class="s">(</span><span class="i">$string</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>hash_value() returns the current perl's internal hash value for a given
+string.</p>
+<p>Returns a 32 bit integer representing the hash value of the string passed
+in. This value is only reliable for the lifetime of the process. It may
+be different depending on invocation, environment variables,  perl version,
+architectures, and build options.</p>
+<p><strong>Note that the hash value of a given string is sensitive information</strong>:
+by knowing it one can deduce the hash seed which in turn can allow one to
+craft a denial-of-service attack against Perl code, even remotely,
+see <a href="../perlsec.html#Algorithmic-Complexity-Attacks">Algorithmic Complexity Attacks in perlsec</a> for more information.
+<strong>Do not disclose the hash value of a string</strong> to people who don't need to
+know it. See also <a href="../perlrun.html#PERL_HASH_SEED_DEBUG">PERL_HASH_SEED_DEBUG in perlrun</a>.</p>
+</li>
+<li><a class='view-title' id="*bucket_info*"></a><strong><strong>bucket_info</strong></strong>
+<p>Return a set of basic information about a hash.</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="s">(</span><span class="i">$keys</span><span class="cm">,</span> <span class="i">$buckets</span><span class="cm">,</span> <span class="i">$used</span><span class="cm">,</span> <span class="i">@length_counts</span><span class="s">)</span>= <span class="i">bucket_info</span><span class="s">(</span><span class="i">$hash</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>Fields are as follows:</p>
+<pre class="verbatim"><ol><li>    <span class="n">0</span><span class="co">:</span> <span class="w">Number</span> <span class="w">of</span> <a class="l_k" href="../functions/keys.html">keys</a> <span class="w">in</span> <span class="w">the</span> <span class="w">hash</span></li><li>    <span class="n">1</span><span class="co">:</span> <span class="w">Number</span> <span class="w">of</span> <span class="w">buckets</span> <span class="w">in</span> <span class="w">the</span> <span class="w">hash</span></li><li>    <span class="n">2</span><span class="co">:</span> <span class="w">Number</span> <span class="w">of</span> <span class="w">used</span> <span class="w">buckets</span> <span class="w">in</span> <span class="w">the</span> <span class="w">hash</span></li><li>    <span class="w">rest</span> <span class="co">:</span> <span class="w">list</span> <span class="w">of</span> <span class="w">counts</span><span class="cm">,</span> <span class="w">Kth</span> <span class="w">element</span> <span class="w">is</span> <span class="w">the</span> <span class="w">number</span> <span class="w">of</span> <span class="w">buckets</span></li><li>           <span class="w">with</span> <span class="w">K</span> <a class="l_k" href="../functions/keys.html">keys</a> <span class="w">in</span> <span class="w">it</span>.</li></ol></pre><p>See also bucket_stats() and bucket_array().</p>
+</li>
+<li><a class='view-title' id="*bucket_stats*"></a><strong><strong>bucket_stats</strong></strong>
+<p>Returns a list of statistics about a hash.</p>
+<pre class="verbatim"><ol><li> <a class="l_k" href="../functions/my.html">my</a> <span class="s">(</span><span class="i">$keys</span><span class="cm">,</span> <span class="i">$buckets</span><span class="cm">,</span> <span class="i">$used</span><span class="cm">,</span> <span class="i">$quality</span><span class="cm">,</span> <span class="i">$utilization_ratio</span><span class="cm">,</span></li><li>        <span class="i">$collision_pct</span><span class="cm">,</span> <span class="i">$mean</span><span class="cm">,</span> <span class="i">$stddev</span><span class="cm">,</span> <span class="i">@length_counts</span><span class="s">)</span></li><li>    = <span class="i">bucket_stats</span><span class="s">(</span><span class="i">$hashref</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>Fields are as follows:</p>
+<pre class="verbatim"><ol><li>    <span class="n">0</span><span class="co">:</span> <span class="w">Number</span> <span class="w">of</span> <a class="l_k" href="../functions/keys.html">keys</a> <span class="w">in</span> <span class="w">the</span> <span class="w">hash</span></li><li>    <span class="n">1</span><span class="co">:</span> <span class="w">Number</span> <span class="w">of</span> <span class="w">buckets</span> <span class="w">in</span> <span class="w">the</span> <span class="w">hash</span></li><li>    <span class="n">2</span><span class="co">:</span> <span class="w">Number</span> <span class="w">of</span> <span class="w">used</span> <span class="w">buckets</span> <span class="w">in</span> <span class="w">the</span> <span class="w">hash</span></li><li>    <span class="n">3</span><span class="co">:</span> <span class="w">Hash</span> <span class="w">Quality</span> <span class="w">Score</span></li><li>    <span class="n">4</span><span class="co">:</span> <span class="w">Percent</span> <span class="w">of</span> <span class="w">buckets</span> <span class="w">used</span></li><li>    <span class="n">5</span><span class="co">:</span> <span class="w">Percent</span> <span class="w">of</span> <a class="l_k" href="../functions/keys.html">keys</a> <span class="w">which</span> <span class="w">are</span> <span class="w">in</span> <span class="w">collision</span></li><li>    <span class="n">6</span><span class="co">:</span> <span class="w">Mean</span> <span class="w">bucket</span> <a class="l_k" href="../functions/length.html">length</a> <span class="w">of</span> <span class="w">occupied</span> <span class="w">buckets</span></li><li>    <span class="n">7</span><span class="co">:</span> <span class="w">Standard</span> <span class="w">Deviation</span> <span class="w">of</span> <span class="w">bucket</span> <span class="w">lengths</span> <span class="w">of</span> <span class="w">occupied</span> <span class="w">buckets</span></li><li>    <span class="w">rest</span> <span class="co">:</span> <span class="w">list</span> <span class="w">of</span> <span class="w">counts</span><span class="cm">,</span> <span class="w">Kth</span> <span class="w">element</span> <span class="w">is</span> <span class="w">the</span> <span class="w">number</span> <span class="w">of</span> <span class="w">buckets</span></li><li>           <span class="w">with</span> <span class="w">K</span> <a class="l_k" href="../functions/keys.html">keys</a> <span class="w">in</span> <span class="w">it</span>.</li></ol></pre><p>See also bucket_info() and bucket_array().</p>
+<p>Note that Hash Quality Score would be 1 for an ideal hash, numbers
+close to and below 1 indicate good hashing, and number significantly
+above indicate a poor score. In practice it should be around 0.95 to 1.05.
+It is defined as:</p>
+<pre class="verbatim"><ol><li> <span class="i">$score</span>= <span class="i">sum</span><span class="s">(</span> <span class="i">$count</span>[<span class="i">$length</span>] * <span class="s">(</span><span class="i">$length</span> * <span class="s">(</span><span class="i">$length</span> + <span class="n">1</span><span class="s">)</span> / <span class="n">2</span><span class="s">)</span> <span class="s">)</span></li><li>            /</li><li>            <span class="s">(</span> <span class="s">(</span> <span class="i">$keys</span> / <span class="n">2</span> * <span class="i">$buckets</span> <span class="s">)</span> *</li><li>              <span class="s">(</span> <span class="i">$keys</span> + <span class="s">(</span> <span class="n">2</span> * <span class="i">$buckets</span> <span class="s">)</span> - <span class="n">1</span> <span class="s">)</span> <span class="s">)</span></li></ol></pre><p>The formula is from the Red Dragon book (reformulated to use the data available)
+and is documented at <a href="http://www.strchr.com/hash_functions">http://www.strchr.com/hash_functions</a></p>
+</li>
+<li><a class='view-title' id="*bucket_array*"></a><strong><strong>bucket_array</strong></strong>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">$array</span>= <span class="i">bucket_array</span><span class="s">(</span>\<span class="i">%hash</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>Returns a packed representation of the bucket array associated with a hash. Each element
+of the array is either an integer K, in which case it represents K empty buckets, or
+a reference to another array which contains the keys that are in that bucket.</p>
+<p><strong>Note that the information returned by bucket_array is sensitive information</strong>:
+by knowing it one can directly attack perl's hash function which in turn may allow
+one to craft a denial-of-service attack against Perl code, even remotely,
+see <a href="../perlsec.html#Algorithmic-Complexity-Attacks">Algorithmic Complexity Attacks in perlsec</a> for more information.
+<strong>Do not disclose the output of this function</strong> to people who don't need to
+know it. See also <a href="../perlrun.html#PERL_HASH_SEED_DEBUG">PERL_HASH_SEED_DEBUG in perlrun</a>. This function is provided strictly
+for  debugging and diagnostics purposes only, it is hard to imagine a reason why it
+would be used in production code.</p>
+</li>
+<li><a class='view-title' id="*bucket_stats_formatted*"></a><strong><strong>bucket_stats_formatted</strong></strong>
+<pre class="verbatim"><ol><li>  <a class="l_k" href="../functions/print.html">print</a> <span class="i">bucket_stats_formatted</span><span class="s">(</span><span class="i">$hashref</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>Return a formatted report of the information returned by bucket_stats().
+An example report looks like this:</p>
+<pre class="verbatim"><ol><li> <span class="j">Keys:</span> <span class="n">50</span> <span class="w">Buckets</span><span class="co">:</span> <span class="n">33</span>/<span class="n">64</span> <span class="w">Quality</span>-<span class="w">Score</span><span class="co">:</span> <span class="n">1.01</span> <span class="s">(</span><span class="w">Good</span><span class="s">)</span></li><li> <span class="w">Utilized</span> <span class="w">Buckets</span><span class="co">:</span> <span class="n">51.56</span>% <span class="w">Optimal</span><span class="co">:</span> <span class="n">78.12</span>% <span class="w">Keys</span> <span class="w">In</span> <span class="w">Collision</span><span class="co">:</span> <span class="n">34.00</span>%</li><li> <span class="w">Chain</span> <span class="w">Length</span> - <span class="w">mean</span><span class="co">:</span> <span class="n">1.52</span> <span class="w">stddev</span><span class="co">:</span> <span class="n">0.66</span></li><li> <span class="w">Buckets</span> <span class="n">64</span>          <span class="s">[</span><span class="n">0000000000000000000000000000000111111111111111111122222222222333</span><span class="s">]</span></li><li> <span class="w">Len</span>   <span class="n">0</span> <span class="w">Pct</span><span class="co">:</span>  <span class="n">48.44</span> <span class="s">[</span><span class="c">###############################]</span></li><li> <span class="w">Len</span>   <span class="n">1</span> <span class="w">Pct</span><span class="co">:</span>  <span class="n">29.69</span> <span class="s">[</span><span class="c">###################]</span></li><li> <span class="w">Len</span>   <span class="n">2</span> <span class="w">Pct</span><span class="co">:</span>  <span class="n">17.19</span> <span class="s">[</span><span class="c">###########]</span></li><li> <span class="w">Len</span>   <span class="n">3</span> <span class="w">Pct</span><span class="co">:</span>   <span class="n">4.69</span> <span class="s">[</span><span class="c">###]</span></li><li> <span class="w">Keys</span>    <span class="n">50</span>          <span class="s">[</span><span class="n">11111111111111111111111111111111122222222222222333</span><span class="s">]</span></li><li> <span class="w">Pos</span>   <span class="n">1</span> <span class="w">Pct</span><span class="co">:</span>  <span class="n">66.00</span> <span class="s">[</span><span class="c">#################################]</span></li><li> <span class="w">Pos</span>   <span class="n">2</span> <span class="w">Pct</span><span class="co">:</span>  <span class="n">28.00</span> <span class="s">[</span><span class="c">##############]</span></li><li> <span class="w">Pos</span>   <span class="n">3</span> <span class="w">Pct</span><span class="co">:</span>   <span class="n">6.00</span> <span class="s">[</span><span class="c">###]</span></li></ol></pre><p>The first set of stats gives some summary statistical information,
+including the quality score translated into "Good", "Poor" and "Bad",
+(score&lt;=1.05, score&lt;=1.2, score&gt;1.2). See the documentation in
+bucket_stats() for more details.</p>
+<p>The two sets of barcharts give stats and a visual indication of performance
+of the hash.</p>
+<p>The first gives data on bucket chain lengths and provides insight on how
+much work a fetch *miss* will take. In this case we have to inspect every item
+in a bucket before we can be sure the item is not in the list. The performance
+for an insert is equivalent to this case, as is a delete where the item
+is not in the hash.</p>
+<p>The second gives data on how many keys are at each depth in the chain, and
+gives an idea of how much work a fetch *hit* will take. The performance for
+an update or delete of an item in the hash is equivalent to this case.</p>
+<p>Note that these statistics are summary only. Actual performance will depend
+on real hit/miss ratios accessing the hash. If you are concerned by hit ratios
+you are recommended to "oversize" your hash by using something like:</p>
+<pre class="verbatim"><ol><li>   <a class="l_k" href="../functions/keys.html">keys</a><span class="s">(</span><span class="i">%hash</span><span class="s">)</span>= <a class="l_k" href="../functions/keys.html">keys</a><span class="s">(</span><span class="i">%hash</span><span class="s">)</span> &lt;&lt; <span class="i">$k</span><span class="sc">;</span></li></ol></pre><p>With $k chosen carefully, and likely to be a small number like 1 or 2. In
+theory the larger the bucket array the less chance of collision.</p>
+</li>
+<li><a class='view-title' id="*hv_store*"></a><strong><strong>hv_store</strong></strong>
+<pre class="verbatim"><ol><li>  <a class="l_k" href="../functions/my.html">my</a> <span class="i">$sv</span> = <span class="n">0</span><span class="sc">;</span></li><li>  <span class="i">hv_store</span><span class="s">(</span><span class="i">%hash</span><span class="cm">,</span><span class="i">$key</span><span class="cm">,</span><span class="i">$sv</span><span class="s">)</span> <a class="l_k" href="../functions/or.html">or</a> <a class="l_k" href="../functions/die.html">die</a> <span class="q">&quot;Failed to alias!&quot;</span><span class="sc">;</span></li><li>  <span class="i">$hash</span>{<span class="i">$key</span>} = <span class="n">1</span><span class="sc">;</span></li><li>  <a class="l_k" href="../functions/print.html">print</a> <span class="i">$sv</span><span class="sc">;</span> <span class="c"># prints 1</span></li></ol></pre><p>Stores an alias to a variable in a hash instead of copying the value.</p>
+</li>
+<li><a class='view-title' id="*hash_traversal_mask*"></a><strong><strong>hash_traversal_mask</strong></strong>
+<p>As of Perl 5.18 every hash has its own hash traversal order, and this order
+changes every time a new element is inserted into the hash. This functionality
+is provided by maintaining an unsigned integer mask (U32) which is xor'ed
+with the actual bucket id during a traversal of the hash buckets using keys(),
+values() or each().</p>
+<p>You can use this subroutine to get and set the traversal mask for a specific
+hash. Setting the mask ensures that a given hash will produce the same key
+order. <strong>Note</strong> that this does <strong>not</strong> guarantee that <strong>two</strong> hashes will produce
+the same key order for the same hash seed and traversal mask, items that
+collide into one bucket may have different orders regardless of this setting.</p>
+</li>
+<li><a class='view-title' id="*bucket_ratio*"></a><strong><strong>bucket_ratio</strong></strong>
+<p>This function behaves the same way that scalar(%hash) behaved prior to
+Perl 5.25. Specifically if the hash is tied, then it calls the SCALAR tied
+hash method, if untied then if the hash is empty it return 0, otherwise it
+returns a string containing the number of used buckets in the hash,
+followed by a slash, followed by the total number of buckets in the hash.</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">%hash</span>=<span class="s">(</span><span class="q">&quot;foo&quot;</span><span class="cm">=&gt;</span><span class="n">1</span><span class="s">)</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/print.html">print</a> <span class="i">Hash::Util::bucket_ratio</span><span class="s">(</span><span class="i">%hash</span><span class="s">)</span><span class="sc">;</span> <span class="c"># prints &quot;1/8&quot;</span></li></ol></pre></li>
+<li><a class='view-title' id="*used_buckets*"></a><strong><strong>used_buckets</strong></strong>
+<p>This function returns the count of used buckets in the hash. It is expensive
+to calculate and the value is NOT cached, so avoid use of this function
+in production code.</p>
+</li>
+<li><a class='view-title' id="*num_buckets*"></a><strong><strong>num_buckets</strong></strong>
+<p>This function returns the total number of buckets the hash holds, or would
+hold if the array were created. (When a hash is freshly created the array
+may not be allocated even though this value will be non-zero.)</p>
+</li>
+</ul>
+<a class='view-head2' id="Operating-on-references-to-hashes."></a><h3 class='h3' >Operating on references to hashes.</h3>
+<p>Most subroutines documented in this module have equivalent versions
+that operate on references to hashes instead of native hashes.
+The following is a list of these subs. They are identical except
+in name and in that instead of taking a %hash they take a $hashref,
+and additionally are not prototyped.</p>
+<ul>
+<li><a class='view-title' id="lock_ref_keys"></a><strong>lock_ref_keys</strong>
+</li>
+<li><a class='view-title' id="unlock_ref_keys"></a><strong>unlock_ref_keys</strong>
+</li>
+<li><a class='view-title' id="lock_ref_keys_plus"></a><strong>lock_ref_keys_plus</strong>
+</li>
+<li><a class='view-title' id="lock_ref_value"></a><strong>lock_ref_value</strong>
+</li>
+<li><a class='view-title' id="unlock_ref_value"></a><strong>unlock_ref_value</strong>
+</li>
+<li><a class='view-title' id="lock_hashref"></a><strong>lock_hashref</strong>
+</li>
+<li><a class='view-title' id="unlock_hashref"></a><strong>unlock_hashref</strong>
+</li>
+<li><a class='view-title' id="lock_hashref_recurse"></a><strong>lock_hashref_recurse</strong>
+</li>
+<li><a class='view-title' id="unlock_hashref_recurse"></a><strong>unlock_hashref_recurse</strong>
+</li>
+<li><a class='view-title' id="hash_ref_unlocked"></a><strong>hash_ref_unlocked</strong>
+</li>
+<li><a class='view-title' id="legal_ref_keys"></a><strong>legal_ref_keys</strong>
+</li>
+<li><a class='view-title' id="hidden_ref_keys"></a><strong>hidden_ref_keys</strong>
+</li>
+</ul>
+<a class='view-head1' id="CAVEATS"></a><h2 class='h2' >CAVEATS</h2>
+<p>Note that the trapping of the restricted operations is not atomic:
+for example</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/eval.html">eval</a> <span class="s">{</span> <span class="i">%hash</span> = <span class="s">(</span><span class="w">illegal_key</span> <span class="cm">=&gt;</span> <span class="n">1</span><span class="s">)</span> <span class="s">}</span></li></ol></pre><p>leaves the <code class="inline"><span class="i">%hash</span></code>
+ empty rather than with its original contents.</p>
+<a class='view-head1' id="BUGS"></a><h2 class='h2' >BUGS</h2>
+<p>The interface exposed by this module is very close to the current
+implementation of restricted hashes. Over time it is expected that
+this behavior will be extended and the interface abstracted further.</p>
+<a class='view-head1' id="AUTHOR"></a><h2 class='h2' >AUTHOR</h2>
+<p>Michael G Schwern &lt;schwern@pobox.com&gt; on top of code by Nick
+Ing-Simmons and Jeffrey Friedl.</p>
+<p>hv_store() is from Array::RefElem, Copyright 2000 Gisle Aas.</p>
+<p>Additional code by Yves Orton.</p>
+<a class='view-head1' id="SEE-ALSO"></a><h2 class='h2' >SEE ALSO</h2>
+<p><a href="../Scalar/Util.html">Scalar::Util</a>, <a href="../List/Util.html">List::Util</a> and <a href="../perlsec.html#Algorithmic-Complexity-Attacks">Algorithmic Complexity Attacks in perlsec</a>.</p>
+<p><a href="../Hash/Util/FieldHash.html">Hash::Util::FieldHash</a>.</p>
+
+
+
+
+      <ul><li><a href="#NAME">NAME</a></li><li><a href="#SYNOPSIS">SYNOPSIS</a></li><li><a href="#DESCRIPTION">DESCRIPTION</a></li><ul><li><a href="#Restricted-hashes">Restricted hashes</a></li><li><a href="#Operating-on-references-to-hashes.">Operating on references to hashes.</a></li></ul><li><a href="#CAVEATS">CAVEATS</a></li><li><a href="#BUGS">BUGS</a></li><li><a href="#AUTHOR">AUTHOR</a></li><li><a href="#SEE-ALSO">SEE ALSO</a></li></ul>
+
+
+                  </div>
+                </article>
+              </div>
+            </div>
+          </main>
+        </div>
+           <footer class="footer row bg-light pt-5 pb-5">
+       <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+           <div class="row">
+               <div class="col-md-4">
+                   <ul class="list-unstyled">
+                       <li>
+                           <h4>Site info</h4>
+                       </li>
+                       <li>Docs mantained by
+                           <a href="//lists.perl.org/list/perl5-porters.html"
+                               rel="noopener">Perl 5 Porters</a>
+                       </li>
+                       <li>Perldoc site development sponsored by
+                           <a href="//opusvl.com" rel="noopener">
+                           <img style="margin: 20px 20px 5px 10px" class="opus-logo" src="/public/img/opusvl_logo.svg" alt="OpusVL Logo">
+                        </a>
+                    <li><span class="about_perldoc"><a href="//about.html">About PerlDOC</a></span>
+                    </li>
+                       </li>
+                   </ul>
+               </div>
+               <div class="col-md-8">
+                   <div class="row">
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Manuals</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.30.3/index-overview.html">Overview</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.30.3/index-tutorials.html">Tutorials</a>
+                               </li>
+                               <li>
+                                   <a href="/5.30.3/index-faq.html">FAQs</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.30.3/index-history.html">Changes</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Reference</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.30.3/index-language.html">Language</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.30.3/index-functions.html">Functions</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.30.3/perlop.html">Operators</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.30.3/perlvar.html">Variables</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Modules</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.30.3/index-modules-A.html">Modules</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.30.3/index-pragmas.html">Pragmas</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.30.3/index-utilities.html">Utilities</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Misc</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.30.3/index-licence.html">License</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.30.3/index-internals.html">Internals</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.30.3/index-platforms.html">Platforms</a>
+                               </li>
+                            <li>
+                                <a
+                                    href="/5.30.3/index-about.html">About</a>
+                            </li>
+                           </ul>
+                       </div>
+                   </div>
+               </div>
+               <div class=" col-12 footer-inf text-center">
+                   <small>perldoc.perl.org - Official documentation for the Perl
+                       programming language</small>
+               </div>
+           </div>
+       </div>
+   </footer>
+
+        	<div class="beta-wrapper beta-bottom-right ">
+		<div class="beta beta-blue  ">
+			<a class="beta-link "
+				href="//github.com/OpusVL/perldoc.perl.org/issues/new" rel="noopener">
+				<span class="beta-text">
+					This website is a Beta release.
+				</span>
+				<span class="beta-text">
+					For any issues please raise a ticket on GitHub
+				</span>
+			</a>
+		</div>
+	</div>
+
+        <script src="/public/js/main.min.js"></script>
+      </body>
+
+      </html>

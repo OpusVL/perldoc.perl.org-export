@@ -1,0 +1,1299 @@
+      
+      
+      
+      
+
+      <!DOCTYPE html>
+      <html lang="en">
+
+      <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="threads - perldoc.perl.org">
+        <link rel="icon" href="/public/img/favicon.ico">
+        <title>threads - perldoc.perl.org</title>
+        <link href="/public/css/main.min.css" rel="stylesheet">
+        <link rel="canonical" href="/threads.html">
+        <link
+          href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900'
+          rel='stylesheet' type='text/css'>
+        <script>
+          window.ga = window.ga || function () {
+            (ga.q = ga.q || []).push(arguments)
+          };
+          ga.l = +new Date;
+          ga('create', 'UA-1892152-2', 'auto'); // JJ's account
+          ga('create', 'UA-50555-3', 'auto', 'perlOrg'); // perl.org account
+          ga('require', 'outboundLinkTracker', {
+            events: ['click', 'auxclick', 'contextmenu'],
+          });
+          ga('require', 'maxScrollTracker');
+          ga('send', 'pageview');
+          ga('perlOrg.send', 'pageview');
+        </script>
+        <script async src="https://www.google-analytics.com/analytics.js">
+        </script>
+        <script async src="/public/js/tracking.min.js"></script>
+      </head>
+
+      <body class="body container-fluid ">
+        <div class="wrapper">
+
+          <nav
+    class="navbar navbar-dark bg-primary bg-perl fixed-top justify-content-between navbar-expand-lg">
+    <a href="#content" class="skippy sr-only sr-only-focusable">
+        <span class=' skippy-text'>Skip to main content</span>
+    </a>
+    <a class="navbar-brand" href="/">
+        <img class="logo" src="/public/img/logo_perl_doc.svg"
+            alt="Perl Documentation Logo" />
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse"
+        data-target="#navbar" aria-controls="navbar" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="navbar" class="collapse navbar-collapse ">
+        <ul class="navbar-nav ml-auto navbar-right">
+            <form class="nav-item dropdown search-wrapper">
+                <input type="text" id='searchinput' aria-describedby='navbarDropdown5'
+                    placeholder="Type query" class='search-input-field' value=''>
+
+                <button href="#" data-toggle='dropdown' type="button"
+                    aria-haspopup="true" aria-expanded='false' id="navbarDropdown5"
+                    class="nav-link dropdown-toggle search-link">
+                    <object tabindex='-1' focusable="false" class='search-icon'
+                        data="/public/img/search.svg" type="image/svg+xml"
+                        name='search icon'>search
+                        icon</object>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown5"
+                    id='search-results'>
+                    <p class='dropdown-item major-version'>
+                        No results
+                    </p>
+                </div>
+            </form>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown" href="#" class="nav-link dropdown-toggle"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Perl versions</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    
+                        <p class='dropdown-item major-version'>
+                            5.32
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.32.0/">5.32.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.30
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.3/">5.30.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.2/">5.30.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.1/">5.30.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.0/">5.30.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.28
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.3/">5.28.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.2/">5.28.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.1/">5.28.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.0/">5.28.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.26
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.3/">5.26.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.2/">5.26.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.1/">5.26.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.0/">5.26.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.24
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.4/">5.24.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.3/">5.24.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.2/">5.24.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.1/">5.24.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.0/">5.24.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.22
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.4/">5.22.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.3/">5.22.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.2/">5.22.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.1/">5.22.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.0/">5.22.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.20
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.3/">5.20.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.2/">5.20.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.1/">5.20.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.0/">5.20.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.18
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.4/">5.18.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.3/">5.18.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.2/">5.18.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.1/">5.18.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.0/">5.18.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.16
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.3/">5.16.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.2/">5.16.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.1/">5.16.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.0/">5.16.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.14
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.4/">5.14.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.3/">5.14.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.2/">5.14.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.1/">5.14.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.0/">5.14.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.12
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.5/">5.12.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.4/">5.12.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.3/">5.12.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.2/">5.12.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.1/">5.12.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.0/">5.12.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.10
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.1/">5.10.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.0/">5.10.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.8
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.9/">5.8.9</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.8/">5.8.8</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.7/">5.8.7</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.6/">5.8.6</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.5/">5.8.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.4/">5.8.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.3/">5.8.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.2/">5.8.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.1/">5.8.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.0/">5.8.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.6
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.2/">5.6.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.1/">5.6.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.0/">5.6.0</a>
+                        
+                        
+                    
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown1" href="#" class="dropdown-toggle nav-link"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Manuals</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                    <a class="dropdown-item"
+                        href="/5.24.2/index-overview.html">Overview</a>
+                    <a class="dropdown-item"
+                        href="/5.24.2/index-tutorials.html">Tutorials</a>
+                    <a class="dropdown-item"
+                        href="/5.24.2/index-faq.html">FAQs</a>
+                    <a class="dropdown-item"
+                        href="/5.24.2/index-history.html">Changes</a>
+                    <a class="dropdown-item"
+                        href="/5.24.2/index-licence.html">License</a>
+                    <a class="dropdown-item"
+                        href="/5.24.2/index-language.html">Language</a>
+                    <a class="dropdown-item"
+                        href="/5.24.2/index-functions.html">Functions</a>
+                    <a class="dropdown-item"
+                        href="/5.24.2/perlop.html">Operators</a>
+                    <a class="dropdown-item"
+                        href="/5.24.2/perlvar.html">Variables</a>
+                    <a class="dropdown-item"
+                        href="/5.24.2/index-pragmas.html">Pragmas</a>
+                    <a class="dropdown-item"
+                        href="/5.24.2/index-utilities.html">Utilities</a>
+                    <a class="dropdown-item"
+                        href="/5.24.2/index-internals.html">Internals</a>
+                    <a class="dropdown-item"
+                        href="/5.24.2/index-platforms.html">Platforms</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown3" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Modules</a>
+                <div aria-labelledby="navbarDropdown3"
+                    class="dropdown-menu letters-wrap">
+                    <!--<a class="dropdown-item"
+                        href="/5.24.2/index-modules.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.24.2/index-modules-by-cat.html">By
+                        Category</a>-->
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.24.2/index-modules-A.html">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.2/index-modules-B.html">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.2/index-modules-C.html">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.2/index-modules-D.html">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.2/index-modules-E.html">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.2/index-modules-F.html">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.2/index-modules-G.html">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.2/index-modules-H.html">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.2/index-modules-I.html">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.2/index-modules-J.html">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.2/index-modules-K.html">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.2/index-modules-L.html">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.2/index-modules-M.html">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.2/index-modules-N.html">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.2/index-modules-O.html">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.2/index-modules-P.html">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.2/index-modules-Q.html">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.2/index-modules-R.html">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.2/index-modules-S.html">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.2/index-modules-T.html">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.2/index-modules-U.html">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.2/index-modules-V.html">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.2/index-modules-W.html">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.2/index-modules-X.html">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.2/index-modules-Y.html">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.2/index-modules-Z.html">Z</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown4" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Functions</a>
+                <div aria-labelledby="navbarDropdown4"
+                    class="dropdown-menu letters-wrap">
+                    <a class="dropdown-item"
+                        href="/5.24.2/index-functions.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.24.2/index-functions-by-cat.html">By
+                        Category</a>
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.24.2/index-functions.html#A">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.2/index-functions.html#B">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.2/index-functions.html#C">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.2/index-functions.html#D">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.2/index-functions.html#E">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.2/index-functions.html#F">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.2/index-functions.html#G">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.2/index-functions.html#H">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.2/index-functions.html#I">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.2/index-functions.html#J">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.2/index-functions.html#K">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.2/index-functions.html#L">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.2/index-functions.html#M">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.2/index-functions.html#N">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.2/index-functions.html#O">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.2/index-functions.html#P">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.2/index-functions.html#Q">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.2/index-functions.html#R">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.2/index-functions.html#S">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.2/index-functions.html#T">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.2/index-functions.html#U">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.2/index-functions.html#V">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.2/index-functions.html#W">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.2/index-functions.html#X">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.2/index-functions.html#Y">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.2/index-functions.html#Z">Z</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!--/.nav-collapse -->
+</nav>
+
+
+          <main class="row main-content pb-5 pt-5" id='content'>
+            <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+              <div class="row">
+                <div class="col-sm-12">
+                  <div id="breadcrumbs">
+                      
+    <a href="index.html">Home</a>&nbsp; &gt;
+    
+      
+        <a href="index-pragmas.html">Pragmas</a> &gt;
+      
+    
+    threads
+  
+
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <article class="col-sm-12 content">
+                  <div class="documentation-wrapper">
+                    <div id="perl_version">
+                      <h7 class='page-title'> Perl 5 version 24.2
+                        documentation</h7>
+                    </div>
+                    <h1>threads</h1>
+
+
+  <!--    -->
+<ul><li><a href="#NAME">NAME</a></li><li><a href="#VERSION">VERSION</a></li><li><a href="#WARNING">WARNING</a></li><li><a href="#SYNOPSIS">SYNOPSIS</a></li><li><a href="#DESCRIPTION">DESCRIPTION</a></li><li><a href="#EXITING-A-THREAD">EXITING A THREAD</a></li><li><a href="#THREAD-STATE">THREAD STATE</a></li><li><a href="#THREAD-CONTEXT">THREAD CONTEXT</a></li><ul><li><a href="#Explicit-context">Explicit context</a></li><li><a href="#Implicit-context">Implicit context</a></li><li><a href="#%24thr-%3ewantarray()">$thr->wantarray()</a></li><li><a href="#threads-%3ewantarray()">threads->wantarray()</a></li></ul><li><a href="#THREAD-STACK-SIZE">THREAD STACK SIZE</a></li><li><a href="#THREAD-SIGNALLING">THREAD SIGNALLING</a></li><li><a href="#WARNINGS">WARNINGS</a></li><li><a href="#ERRORS">ERRORS</a></li><li><a href="#BUGS-AND-LIMITATIONS">BUGS AND LIMITATIONS</a></li><li><a href="#REQUIREMENTS">REQUIREMENTS</a></li><li><a href="#SEE-ALSO">SEE ALSO</a></li><li><a href="#AUTHOR">AUTHOR</a></li><li><a href="#LICENSE">LICENSE</a></li><li><a href="#ACKNOWLEDGEMENTS">ACKNOWLEDGEMENTS</a></li></ul><a class='view-head1' id="NAME"></a><h2 class='h2' >NAME</h2>
+<p>threads - Perl interpreter-based threads</p>
+<a class='view-head1' id="VERSION"></a><h2 class='h2' >VERSION</h2>
+<p>This document describes threads version 2.07</p>
+<a class='view-head1' id="WARNING"></a><h2 class='h2' >WARNING</h2>
+<p>The "interpreter-based threads" provided by Perl are not the fast, lightweight
+system for multitasking that one might expect or hope for.  Threads are
+implemented in a way that make them easy to misuse.  Few people know how to
+use them correctly or will be able to provide help.</p>
+<p>The use of interpreter-based threads in perl is officially
+<a href="perlpolicy.html#discouraged">discouraged</a>.</p>
+<a class='view-head1' id="SYNOPSIS"></a><h2 class='h2' >SYNOPSIS</h2>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="functions/use.html">use</a> <span class="w">threads</span> <span class="s">(</span><span class="q">&#39;yield&#39;</span><span class="cm">,</span></li><li>                 <span class="q">&#39;stack_size&#39;</span> <span class="cm">=&gt;</span> <span class="n">64</span>*<span class="n">4096</span><span class="cm">,</span></li><li>                 <span class="q">&#39;exit&#39;</span> <span class="cm">=&gt;</span> <span class="q">&#39;threads_only&#39;</span><span class="cm">,</span></li><li>                 <span class="q">&#39;stringify&#39;</span><span class="s">)</span><span class="sc">;</span></li><li></li><li><a name="start_thread"></a>    sub <span class="m">start_thread</span> <span class="s">{</span></li><li>        <a class="l_k" href="functions/my.html">my</a> <span class="i">@args</span> = <span class="i">@_</span><span class="sc">;</span></li><li>        <a class="l_k" href="functions/print.html">print</a><span class="s">(</span><span class="q">&#39;Thread started: &#39;</span><span class="cm">,</span> <a class="l_k" href="functions/join.html">join</a><span class="s">(</span><span class="q">&#39; &#39;</span><span class="cm">,</span> <span class="i">@args</span><span class="s">)</span><span class="cm">,</span> <span class="q">&quot;\n&quot;</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="s">}</span></li><li>    <a class="l_k" href="functions/my.html">my</a> <span class="i">$thr</span> = <span class="w">threads</span><span class="w">-&gt;create</span><span class="s">(</span><span class="q">&#39;start_thread&#39;</span><span class="cm">,</span> <span class="q">&#39;argument&#39;</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="i">$thr</span><span class="i">-&gt;join</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>    <span class="w">threads</span><span class="w">-&gt;create</span><span class="s">(</span><a class="l_k" href="functions/sub.html">sub</a> <span class="s">{</span> <a class="l_k" href="functions/print.html">print</a><span class="s">(</span><span class="q">&quot;I am a thread\n&quot;</span><span class="s">)</span><span class="sc">;</span> <span class="s">}</span><span class="s">)</span><span class="i">-&gt;join</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>    <a class="l_k" href="functions/my.html">my</a> <span class="i">$thr2</span> = <span class="i">async</span> <span class="s">{</span> <a class="l_k" href="functions/foreach.html">foreach</a> <span class="s">(</span><span class="i">@files</span><span class="s">)</span> <span class="s">{</span> ... <span class="s">}</span> <span class="s">}</span><span class="sc">;</span></li><li>    <span class="i">$thr2</span><span class="i">-&gt;join</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li><li>    <a class="l_k" href="functions/if.html">if</a> <span class="s">(</span><a class="l_k" href="functions/my.html">my</a> <span class="i">$err</span> = <span class="i">$thr2</span><span class="i">-&gt;error</span><span class="s">(</span><span class="s">)</span><span class="s">)</span> <span class="s">{</span></li><li>        <a class="l_k" href="functions/warn.html">warn</a><span class="s">(</span><span class="q">&quot;Thread error: $err\n&quot;</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="s">}</span></li><li></li><li>    <span class="c"># Invoke thread in list context (implicit) so it can return a list</span></li><li>    <a class="l_k" href="functions/my.html">my</a> <span class="s">(</span><span class="i">$thr</span><span class="s">)</span> = <span class="w">threads</span><span class="w">-&gt;create</span><span class="s">(</span><a class="l_k" href="functions/sub.html">sub</a> <span class="s">{</span> <a class="l_k" href="functions/return.html">return</a> <span class="s">(</span><span class="q">qw/a b c/</span><span class="s">)</span><span class="sc">;</span> <span class="s">}</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="c"># or specify list context explicitly</span></li><li>    <a class="l_k" href="functions/my.html">my</a> <span class="i">$thr</span> = <span class="w">threads</span><span class="w">-&gt;create</span><span class="s">(</span><span class="s">{</span><span class="q">&#39;context&#39;</span> <span class="cm">=&gt;</span> <span class="q">&#39;list&#39;</span><span class="s">}</span><span class="cm">,</span></li><li>                              <a class="l_k" href="functions/sub.html">sub</a> <span class="s">{</span> <a class="l_k" href="functions/return.html">return</a> <span class="s">(</span><span class="q">qw/a b c/</span><span class="s">)</span><span class="sc">;</span> <span class="s">}</span><span class="s">)</span><span class="sc">;</span></li><li>    <a class="l_k" href="functions/my.html">my</a> <span class="i">@results</span> = <span class="i">$thr</span><span class="i">-&gt;join</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>    <span class="i">$thr</span><span class="i">-&gt;detach</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>    <span class="c"># Get a thread&#39;s object</span></li><li>    <span class="i">$thr</span> = <span class="w">threads</span><span class="w">-&gt;self</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="i">$thr</span> = <span class="w">threads</span><span class="w">-&gt;object</span><span class="s">(</span><span class="i">$tid</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>    <span class="c"># Get a thread&#39;s ID</span></li><li>    <span class="i">$tid</span> = <span class="w">threads</span><span class="w">-&gt;tid</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="i">$tid</span> = <span class="i">$thr</span><span class="i">-&gt;tid</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="i">$tid</span> = <span class="q">&quot;$thr&quot;</span><span class="sc">;</span></li><li></li><li>    <span class="c"># Give other threads a chance to run</span></li><li>    <span class="w">threads</span><span class="w">-&gt;yield</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="i">yield</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>    <span class="c"># Lists of non-detached threads</span></li><li>    <a class="l_k" href="functions/my.html">my</a> <span class="i">@threads</span> = <span class="w">threads</span><span class="w">-&gt;list</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li><li>    <a class="l_k" href="functions/my.html">my</a> <span class="i">$thread_count</span> = <span class="w">threads</span><span class="w">-&gt;list</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>    <a class="l_k" href="functions/my.html">my</a> <span class="i">@running</span> = <span class="w">threads</span><span class="w">-&gt;list</span><span class="s">(</span><span class="w">threads::running</span><span class="s">)</span><span class="sc">;</span></li><li>    <a class="l_k" href="functions/my.html">my</a> <span class="i">@joinable</span> = <span class="w">threads</span><span class="w">-&gt;list</span><span class="s">(</span><span class="w">threads::joinable</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>    <span class="c"># Test thread objects</span></li><li>    <a class="l_k" href="functions/if.html">if</a> <span class="s">(</span><span class="i">$thr1</span> == <span class="i">$thr2</span><span class="s">)</span> <span class="s">{</span></li><li>        ...</li><li>    <span class="s">}</span></li><li></li><li>    <span class="c"># Manage thread stack size</span></li><li>    <span class="i">$stack_size</span> = <span class="w">threads</span><span class="w">-&gt;get_stack_size</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="i">$old_size</span> = <span class="w">threads</span><span class="w">-&gt;set_stack_size</span><span class="s">(</span><span class="n">32</span>*<span class="n">4096</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>    <span class="c"># Create a thread with a specific context and stack size</span></li><li>    <a class="l_k" href="functions/my.html">my</a> <span class="i">$thr</span> = <span class="w">threads</span><span class="w">-&gt;create</span><span class="s">(</span><span class="s">{</span> <span class="q">&#39;context&#39;</span>    <span class="cm">=&gt;</span> <span class="q">&#39;list&#39;</span><span class="cm">,</span></li><li>                                <span class="q">&#39;stack_size&#39;</span> <span class="cm">=&gt;</span> <span class="n">32</span>*<span class="n">4096</span><span class="cm">,</span></li><li>                                <span class="q">&#39;exit&#39;</span>       <span class="cm">=&gt;</span> <span class="q">&#39;thread_only&#39;</span> <span class="s">}</span><span class="cm">,</span></li><li>                              \<span class="i">&amp;foo</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>    <span class="c"># Get thread&#39;s context</span></li><li>    <a class="l_k" href="functions/my.html">my</a> <span class="i">$wantarray</span> = <span class="i">$thr</span><span class="i">-&gt;wantarray</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>    <span class="c"># Check thread&#39;s state</span></li><li>    <a class="l_k" href="functions/if.html">if</a> <span class="s">(</span><span class="i">$thr</span><span class="i">-&gt;is_running</span><span class="s">(</span><span class="s">)</span><span class="s">)</span> <span class="s">{</span></li><li>        <a class="l_k" href="functions/sleep.html">sleep</a><span class="s">(</span><span class="n">1</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="s">}</span></li><li>    <a class="l_k" href="functions/if.html">if</a> <span class="s">(</span><span class="i">$thr</span><span class="i">-&gt;is_joinable</span><span class="s">(</span><span class="s">)</span><span class="s">)</span> <span class="s">{</span></li><li>        <span class="i">$thr</span><span class="i">-&gt;join</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="s">}</span></li><li></li><li>    <span class="c"># Send a signal to a thread</span></li><li>    <span class="i">$thr</span><span class="i">-&gt;kill</span><span class="s">(</span><span class="q">&#39;SIGUSR1&#39;</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>    <span class="c"># Exit a thread</span></li><li>    <span class="w">threads</span><span class="w">-&gt;exit</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><a class='view-head1' id="DESCRIPTION"></a><h2 class='h2' >DESCRIPTION</h2>
+<p>Since Perl 5.8, thread programming has been available using a model called
+<i>interpreter threads</i> which provides a new Perl interpreter for each
+thread, and, by default, results in no data or state information being shared
+between threads.</p>
+<p>(Prior to Perl 5.8, <i>5005threads</i> was available through the <code class="inline"><span class="w">Thread</span>.<span class="w">pm</span></code>
+ API.
+This threading model has been deprecated, and was removed as of Perl 5.10.0.)</p>
+<p>As just mentioned, all variables are, by default, thread local.  To use shared
+variables, you need to also load <a href="threads/shared.html">threads::shared</a>:</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="functions/use.html">use</a> <span class="w">threads</span><span class="sc">;</span></li><li>    <a class="l_k" href="functions/use.html">use</a> <span class="w">threads::shared</span><span class="sc">;</span></li></ol></pre><p>When loading <a href="threads/shared.html">threads::shared</a>, you must <code class="inline"><a class="l_k" href="functions/use.html">use</a> <span class="w">threads</span></code>
+ before you
+<code class="inline"><a class="l_k" href="functions/use.html">use</a> <span class="w">threads::shared</span></code>
+.  (<code class="inline"><span class="w">threads</span></code>
+ will emit a warning if you do it the
+other way around.)</p>
+<p>It is strongly recommended that you enable threads via <code class="inline"><a class="l_k" href="functions/use.html">use</a> <span class="w">threads</span></code>
+ as early
+as possible in your script.</p>
+<p>If needed, scripts can be written so as to run on both threaded and
+non-threaded Perls:</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="functions/my.html">my</a> <span class="i">$can_use_threads</span> = <a class="l_k" href="functions/eval.html">eval</a> <span class="q">&#39;use threads; 1&#39;</span><span class="sc">;</span></li><li>    <a class="l_k" href="functions/if.html">if</a> <span class="s">(</span><span class="i">$can_use_threads</span><span class="s">)</span> <span class="s">{</span></li><li>        <span class="c"># Do processing using threads</span></li><li>        ...</li><li>    <span class="s">}</span> <a class="l_k" href="functions/else.html">else</a> <span class="s">{</span></li><li>        <span class="c"># Do it without using threads</span></li><li>        ...</li><li>    <span class="s">}</span></li></ol></pre><ul>
+<li><a class='view-title' id="%24thr-%3d-threads-%3ecreate(FUNCTION%2c-ARGS)"></a><strong>$thr = threads-&gt;create(FUNCTION, ARGS)</strong>
+<p>This will create a new thread that will begin execution with the specified
+entry point function, and give it the <i>ARGS</i> list as parameters.  It will
+return the corresponding threads object, or <code class="inline"><a class="l_k" href="functions/undef.html">undef</a></code> if thread creation failed.</p>
+<p><i>FUNCTION</i> may either be the name of a function, an anonymous subroutine, or
+a code ref.</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="functions/my.html">my</a> <span class="i">$thr</span> = <span class="w">threads</span><span class="w">-&gt;create</span><span class="s">(</span><span class="q">&#39;func_name&#39;</span><span class="cm">,</span> ...<span class="s">)</span><span class="sc">;</span></li><li>        <span class="c"># or</span></li><li>    <a class="l_k" href="functions/my.html">my</a> <span class="i">$thr</span> = <span class="w">threads</span><span class="w">-&gt;create</span><span class="s">(</span><a class="l_k" href="functions/sub.html">sub</a> <span class="s">{</span> ... <span class="s">}</span><span class="cm">,</span> ...<span class="s">)</span><span class="sc">;</span></li><li>        <span class="c"># or</span></li><li>    <a class="l_k" href="functions/my.html">my</a> <span class="i">$thr</span> = <span class="w">threads</span><span class="w">-&gt;create</span><span class="s">(</span>\<span class="i">&amp;func</span><span class="cm">,</span> ...<span class="s">)</span><span class="sc">;</span></li></ol></pre><p>The <code class="inline"><span class="i">-&gt;new</span><span class="s">(</span><span class="s">)</span></code>
+ method is an alias for <code class="inline"><span class="i">-&gt;create</span><span class="s">(</span><span class="s">)</span></code>
+.</p>
+</li>
+<li><a class='view-title' id="%24thr-%3ejoin()"></a><strong>$thr-&gt;join()</strong>
+<p>This will wait for the corresponding thread to complete its execution.  When
+the thread finishes, <code class="inline"><span class="i">-&gt;join</span><span class="s">(</span><span class="s">)</span></code>
+ will return the return value(s) of the
+entry point function.</p>
+<p>The context (void, scalar or list) for the return value(s) for <code class="inline"><span class="i">-&gt;join</span><span class="s">(</span><span class="s">)</span></code>
+
+is determined at the time of thread creation.</p>
+<pre class="verbatim"><ol><li>    <span class="c"># Create thread in list context (implicit)</span></li><li>    <a class="l_k" href="functions/my.html">my</a> <span class="s">(</span><span class="i">$thr1</span><span class="s">)</span> = <span class="w">threads</span><span class="w">-&gt;create</span><span class="s">(</span><a class="l_k" href="functions/sub.html">sub</a> <span class="s">{</span></li><li>                                    <a class="l_k" href="functions/my.html">my</a> <span class="i">@results</span> = <span class="q">qw(a b c)</span><span class="sc">;</span></li><li>                                    <a class="l_k" href="functions/return.html">return</a> <span class="s">(</span><span class="i">@results</span><span class="s">)</span><span class="sc">;</span></li><li>                                 <span class="s">}</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="c">#   or (explicit)</span></li><li>    <a class="l_k" href="functions/my.html">my</a> <span class="i">$thr1</span> = <span class="w">threads</span><span class="w">-&gt;create</span><span class="s">(</span><span class="s">{</span><span class="q">&#39;context&#39;</span> <span class="cm">=&gt;</span> <span class="q">&#39;list&#39;</span><span class="s">}</span><span class="cm">,</span></li><li>                               <a class="l_k" href="functions/sub.html">sub</a> <span class="s">{</span></li><li>                                    <a class="l_k" href="functions/my.html">my</a> <span class="i">@results</span> = <span class="q">qw(a b c)</span><span class="sc">;</span></li><li>                                    <a class="l_k" href="functions/return.html">return</a> <span class="s">(</span><span class="i">@results</span><span class="s">)</span><span class="sc">;</span></li><li>                               <span class="s">}</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="c"># Retrieve list results from thread</span></li><li>    <a class="l_k" href="functions/my.html">my</a> <span class="i">@res1</span> = <span class="i">$thr1</span><span class="i">-&gt;join</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>    <span class="c"># Create thread in scalar context (implicit)</span></li><li>    <a class="l_k" href="functions/my.html">my</a> <span class="i">$thr2</span> = <span class="w">threads</span><span class="w">-&gt;create</span><span class="s">(</span><a class="l_k" href="functions/sub.html">sub</a> <span class="s">{</span></li><li>                                    <a class="l_k" href="functions/my.html">my</a> <span class="i">$result</span> = <span class="n">42</span><span class="sc">;</span></li><li>                                    <a class="l_k" href="functions/return.html">return</a> <span class="s">(</span><span class="i">$result</span><span class="s">)</span><span class="sc">;</span></li><li>                                 <span class="s">}</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="c"># Retrieve scalar result from thread</span></li><li>    <a class="l_k" href="functions/my.html">my</a> <span class="i">$res2</span> = <span class="i">$thr2</span><span class="i">-&gt;join</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>    <span class="c"># Create a thread in void context (explicit)</span></li><li>    <a class="l_k" href="functions/my.html">my</a> <span class="i">$thr3</span> = <span class="w">threads</span><span class="w">-&gt;create</span><span class="s">(</span><span class="s">{</span><span class="q">&#39;void&#39;</span> <span class="cm">=&gt;</span> <span class="n">1</span><span class="s">}</span><span class="cm">,</span></li><li>                               <a class="l_k" href="functions/sub.html">sub</a> <span class="s">{</span> <a class="l_k" href="functions/print.html">print</a><span class="s">(</span><span class="q">&quot;Hello, world\n&quot;</span><span class="s">)</span><span class="sc">;</span> <span class="s">}</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="c"># Join the thread in void context (i.e., no return value)</span></li><li>    <span class="i">$thr3</span><span class="i">-&gt;join</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>See <a href="#THREAD-CONTEXT">THREAD CONTEXT</a> for more details.</p>
+<p>If the program exits without all threads having either been joined or
+detached, then a warning will be issued.</p>
+<p>Calling <code class="inline"><span class="i">-&gt;join</span><span class="s">(</span><span class="s">)</span></code>
+ or <code class="inline"><span class="i">-&gt;detach</span><span class="s">(</span><span class="s">)</span></code>
+ on an already joined thread will
+cause an error to be thrown.</p>
+</li>
+<li><a class='view-title' id="%24thr-%3edetach()"></a><strong>$thr-&gt;detach()</strong>
+<p>Makes the thread unjoinable, and causes any eventual return value to be
+discarded.  When the program exits, any detached threads that are still
+running are silently terminated.</p>
+<p>If the program exits without all threads having either been joined or
+detached, then a warning will be issued.</p>
+<p>Calling <code class="inline"><span class="i">-&gt;join</span><span class="s">(</span><span class="s">)</span></code>
+ or <code class="inline"><span class="i">-&gt;detach</span><span class="s">(</span><span class="s">)</span></code>
+ on an already detached thread
+will cause an error to be thrown.</p>
+</li>
+<li><a class='view-title' id="threads-%3edetach()"></a><strong>threads-&gt;detach()</strong>
+<p>Class method that allows a thread to detach itself.</p>
+</li>
+<li><a class='view-title' id="threads-%3eself()"></a><strong>threads-&gt;self()</strong>
+<p>Class method that allows a thread to obtain its own <i>threads</i> object.</p>
+</li>
+<li><a class='view-title' id="%24thr-%3etid()"></a><strong>$thr-&gt;tid()</strong>
+<p>Returns the ID of the thread.  Thread IDs are unique integers with the main
+thread in a program being 0, and incrementing by 1 for every thread created.</p>
+</li>
+<li><a class='view-title' id="threads-%3etid()"></a><strong>threads-&gt;tid()</strong>
+<p>Class method that allows a thread to obtain its own ID.</p>
+</li>
+<li><a class='view-title' id="%22%24thr%22"></a><strong>"$thr"</strong>
+<p>If you add the <code class="inline"><span class="w">stringify</span></code>
+ import option to your <code class="inline"><a class="l_k" href="functions/use.html">use</a> <span class="w">threads</span></code>
+ declaration,
+then using a threads object in a string or a string context (e.g., as a hash
+key) will cause its ID to be used as the value:</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="functions/use.html">use</a> <span class="w">threads</span> <span class="q">qw(stringify)</span><span class="sc">;</span></li><li></li><li>    <a class="l_k" href="functions/my.html">my</a> <span class="i">$thr</span> = <span class="w">threads</span><span class="w">-&gt;create</span><span class="s">(</span>...<span class="s">)</span><span class="sc">;</span></li><li>    <a class="l_k" href="functions/print.html">print</a><span class="s">(</span><span class="q">&quot;Thread $thr started\n&quot;</span><span class="s">)</span><span class="sc">;</span>  <span class="c"># Prints: Thread 1 started</span></li></ol></pre></li>
+<li><a class='view-title' id="threads-%3eobject(%24tid)"></a><strong>threads-&gt;object($tid)</strong>
+<p>This will return the <i>threads</i> object for the <i>active</i> thread associated
+with the specified thread ID.  If <code class="inline"><span class="i">$tid</span></code>
+ is the value for the current thread,
+then this call works the same as <code class="inline"><span class="i">-&gt;self</span><span class="s">(</span><span class="s">)</span></code>
+.  Otherwise, returns <code class="inline"><a class="l_k" href="functions/undef.html">undef</a></code>
+if there is no thread associated with the TID, if the thread is joined or
+detached, if no TID is specified or if the specified TID is undef.</p>
+</li>
+<li><a class='view-title' id="threads-%3eyield()"></a><strong>threads-&gt;yield()</strong>
+<p>This is a suggestion to the OS to let this thread yield CPU time to other
+threads.  What actually happens is highly dependent upon the underlying
+thread implementation.</p>
+<p>You may do <code class="inline"><a class="l_k" href="functions/use.html">use</a> <span class="w">threads</span> <span class="q">qw(yield)</span></code>
+, and then just use <code class="inline"><span class="i">yield</span><span class="s">(</span><span class="s">)</span></code>
+ in your
+code.</p>
+</li>
+<li><a class='view-title' id="threads-%3elist()"></a><strong>threads-&gt;list()</strong>
+</li>
+<li><a class='view-title' id="threads-%3elist(threads%3a%3aall)"></a><strong>threads-&gt;list(threads::all)</strong>
+</li>
+<li><a class='view-title' id="threads-%3elist(threads%3a%3arunning)"></a><strong>threads-&gt;list(threads::running)</strong>
+</li>
+<li><a class='view-title' id="threads-%3elist(threads%3a%3ajoinable)"></a><strong>threads-&gt;list(threads::joinable)</strong>
+<p>With no arguments (or using <code class="inline"><span class="w">threads::all</span></code>
+) and in a list context, returns a
+list of all non-joined, non-detached <i>threads</i> objects.  In a scalar context,
+returns a count of the same.</p>
+<p>With a <i>true</i> argument (using <code class="inline"><span class="w">threads::running</span></code>
+), returns a list of all
+non-joined, non-detached <i>threads</i> objects that are still running.</p>
+<p>With a <i>false</i> argument (using <code class="inline"><span class="w">threads::joinable</span></code>
+), returns a list of all
+non-joined, non-detached <i>threads</i> objects that have finished running (i.e.,
+for which <code class="inline"><span class="i">-&gt;join</span><span class="s">(</span><span class="s">)</span></code>
+ will not <i>block</i>).</p>
+</li>
+<li><a class='view-title' id="%24thr1-%3eequal(%24thr2)"></a><strong>$thr1-&gt;equal($thr2)</strong>
+<p>Tests if two threads objects are the same thread or not.  This is overloaded
+to the more natural forms:</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="functions/if.html">if</a> <span class="s">(</span><span class="i">$thr1</span> == <span class="i">$thr2</span><span class="s">)</span> <span class="s">{</span></li><li>        <a class="l_k" href="functions/print.html">print</a><span class="s">(</span><span class="q">&quot;Threads are the same\n&quot;</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="s">}</span></li><li>    <span class="c"># or</span></li><li>    <a class="l_k" href="functions/if.html">if</a> <span class="s">(</span><span class="i">$thr1</span> != <span class="i">$thr2</span><span class="s">)</span> <span class="s">{</span></li><li>        <a class="l_k" href="functions/print.html">print</a><span class="s">(</span><span class="q">&quot;Threads differ\n&quot;</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="s">}</span></li></ol></pre><p>(Thread comparison is based on thread IDs.)</p>
+</li>
+<li><a class='view-title' id="async-BLOCK%3b"></a><strong>async BLOCK;</strong>
+<p><code class="inline"><span class="w">async</span></code>
+ creates a thread to execute the block immediately following
+it.  This block is treated as an anonymous subroutine, and so must have a
+semicolon after the closing brace.  Like <code class="inline"><span class="w">threads</span><span class="w">-&gt;create</span><span class="s">(</span><span class="s">)</span></code>
+, <code class="inline"><span class="w">async</span></code>
+
+returns a <i>threads</i> object.</p>
+</li>
+<li><a class='view-title' id="%24thr-%3eerror()"></a><strong>$thr-&gt;error()</strong>
+<p>Threads are executed in an <code class="inline"><a class="l_k" href="functions/eval.html">eval</a></code> context.  This method will return <code class="inline"><a class="l_k" href="functions/undef.html">undef</a></code>
+if the thread terminates <i>normally</i>.  Otherwise, it returns the value of
+<code class="inline"><span class="i">$@</span></code>
+ associated with the thread's execution status in its <code class="inline"><a class="l_k" href="functions/eval.html">eval</a></code> context.</p>
+</li>
+<li><a class='view-title' id="%24thr-%3e_handle()"></a><strong>$thr-&gt;_handle()</strong>
+<p>This <i>private</i> method returns a pointer (i.e., the memory location expressed
+as an unsigned integer) to the internal thread structure associated with a
+threads object.  For Win32, this is a pointer to the <code class="inline"><span class="w">HANDLE</span></code>
+ value returned
+by <code class="inline"><span class="w">CreateThread</span></code>
+ (i.e., <code class="inline"><span class="w">HANDLE</span> *</code>
+); for other platforms, it is a pointer
+to the <code class="inline"><span class="w">pthread_t</span></code>
+ structure used in the <code class="inline"><span class="w">pthread_create</span></code>
+ call (i.e.,
+<code class="inline"><span class="w">pthread_t</span> *</code>
+).</p>
+<p>This method is of no use for general Perl threads programming.  Its intent is
+to provide other (XS-based) thread modules with the capability to access, and
+possibly manipulate, the underlying thread structure associated with a Perl
+thread.</p>
+</li>
+<li><a class='view-title' id="threads-%3e_handle()"></a><strong>threads-&gt;_handle()</strong>
+<p>Class method that allows a thread to obtain its own <i>handle</i>.</p>
+</li>
+</ul>
+<a class='view-head1' id="EXITING-A-THREAD"></a><h2 class='h2' >EXITING A THREAD</h2>
+<p>The usual method for terminating a thread is to
+<a class='function-name' href="functions/return.html">return EXPR</a> from the entry point function with the
+appropriate return value(s).</p>
+<ul>
+<li><a class='view-title' id="threads-%3eexit()"></a><strong>threads-&gt;exit()</strong>
+<p>If needed, a thread can be exited at any time by calling
+<code class="inline"><span class="w">threads</span><span class="w">-&gt;exit</span><span class="s">(</span><span class="s">)</span></code>
+.  This will cause the thread to return <code class="inline"><a class="l_k" href="functions/undef.html">undef</a></code> in a
+scalar context, or the empty list in a list context.</p>
+<p>When called from the <i>main</i> thread, this behaves the same as <code class="inline"><a class="l_k" href="functions/exit.html">exit(0)</a></code>.</p>
+</li>
+<li><a class='view-title' id="threads-%3eexit(status)"></a><strong>threads-&gt;exit(status)</strong>
+<p>When called from a thread, this behaves like <code class="inline"><span class="w">threads</span><span class="w">-&gt;exit</span><span class="s">(</span><span class="s">)</span></code>
+ (i.e., the
+exit status code is ignored).</p>
+<p>When called from the <i>main</i> thread, this behaves the same as <code class="inline"><a class="l_k" href="functions/exit.html">exit(status)</a></code>.</p>
+</li>
+<li><a class='view-title' id="die()"></a><strong>die()</strong>
+<p>Calling <code class="inline"><a class="l_k" href="functions/die.html">die()</a></code> in a thread indicates an abnormal exit for the thread.  Any
+<code class="inline"><span class="i">$SIG</span>{<span class="w">__DIE__</span>}</code>
+ handler in the thread will be called first, and then the
+thread will exit with a warning message that will contain any arguments passed
+in the <code class="inline"><a class="l_k" href="functions/die.html">die()</a></code> call.</p>
+</li>
+<li><a class='view-title' id="exit(status)"></a><strong>exit(status)</strong>
+<p>Calling <a class='function-name' href="functions/exit.html">exit EXPR</a> inside a thread causes the whole
+application to terminate.  Because of this, the use of <code class="inline"><a class="l_k" href="functions/exit.html">exit()</a></code> inside
+threaded code, or in modules that might be used in threaded applications, is
+strongly discouraged.</p>
+<p>If <code class="inline"><a class="l_k" href="functions/exit.html">exit()</a></code> really is needed, then consider using the following:</p>
+<pre class="verbatim"><ol><li>    <span class="w">threads</span><span class="w">-&gt;exit</span><span class="s">(</span><span class="s">)</span> <a class="l_k" href="functions/if.html">if</a> <span class="w">threads</span><span class="w">-&gt;can</span><span class="s">(</span><span class="q">&#39;exit&#39;</span><span class="s">)</span><span class="sc">;</span>   <span class="c"># Thread friendly</span></li><li>    <a class="l_k" href="functions/exit.html">exit</a><span class="s">(</span><span class="w">status</span><span class="s">)</span><span class="sc">;</span></li></ol></pre></li>
+<li><a class='view-title' id="use-threads-'exit'-%3d%3e-'threads_only'"></a><strong>use threads 'exit' =&gt; 'threads_only'</strong>
+<p>This globally overrides the default behavior of calling <code class="inline"><a class="l_k" href="functions/exit.html">exit()</a></code> inside a
+thread, and effectively causes such calls to behave the same as
+<code class="inline"><span class="w">threads</span><span class="w">-&gt;exit</span><span class="s">(</span><span class="s">)</span></code>
+.  In other words, with this setting, calling <code class="inline"><a class="l_k" href="functions/exit.html">exit()</a></code>
+causes only the thread to terminate.</p>
+<p>Because of its global effect, this setting should not be used inside modules
+or the like.</p>
+<p>The <i>main</i> thread is unaffected by this setting.</p>
+</li>
+<li><a class='view-title' id="threads-%3ecreate(%7b'exit'-%3d%3e-'thread_only'%7d%2c-...)"></a><strong>threads-&gt;create({'exit' =&gt; 'thread_only'}, ...)</strong>
+<p>This overrides the default behavior of <code class="inline"><a class="l_k" href="functions/exit.html">exit()</a></code> inside the newly created
+thread only.</p>
+</li>
+<li><a class='view-title' id="%24thr-%3eset_thread_exit_only(boolean)"></a><strong>$thr-&gt;set_thread_exit_only(boolean)</strong>
+<p>This can be used to change the <i>exit thread only</i> behavior for a thread after
+it has been created.  With a <i>true</i> argument, <code class="inline"><a class="l_k" href="functions/exit.html">exit()</a></code> will cause only the
+thread to exit.  With a <i>false</i> argument, <code class="inline"><a class="l_k" href="functions/exit.html">exit()</a></code> will terminate the
+application.</p>
+<p>The <i>main</i> thread is unaffected by this call.</p>
+</li>
+<li><a class='view-title' id="threads-%3eset_thread_exit_only(boolean)"></a><strong>threads-&gt;set_thread_exit_only(boolean)</strong>
+<p>Class method for use inside a thread to change its own behavior for <code class="inline"><a class="l_k" href="functions/exit.html">exit()</a></code>.</p>
+<p>The <i>main</i> thread is unaffected by this call.</p>
+</li>
+</ul>
+<a class='view-head1' id="THREAD-STATE"></a><h2 class='h2' >THREAD STATE</h2>
+<p>The following boolean methods are useful in determining the <i>state</i> of a
+thread.</p>
+<ul>
+<li><a class='view-title' id="%24thr-%3eis_running()"></a><strong>$thr-&gt;is_running()</strong>
+<p>Returns true if a thread is still running (i.e., if its entry point function
+has not yet finished or exited).</p>
+</li>
+<li><a class='view-title' id="%24thr-%3eis_joinable()"></a><strong>$thr-&gt;is_joinable()</strong>
+<p>Returns true if the thread has finished running, is not detached and has not
+yet been joined.  In other words, the thread is ready to be joined, and a call
+to <code class="inline"><span class="i">$thr</span><span class="i">-&gt;join</span><span class="s">(</span><span class="s">)</span></code>
+ will not <i>block</i>.</p>
+</li>
+<li><a class='view-title' id="%24thr-%3eis_detached()"></a><strong>$thr-&gt;is_detached()</strong>
+<p>Returns true if the thread has been detached.</p>
+</li>
+<li><a class='view-title' id="threads-%3eis_detached()"></a><strong>threads-&gt;is_detached()</strong>
+<p>Class method that allows a thread to determine whether or not it is detached.</p>
+</li>
+</ul>
+<a class='view-head1' id="THREAD-CONTEXT"></a><h2 class='h2' >THREAD CONTEXT</h2>
+<p>As with subroutines, the type of value returned from a thread's entry point
+function may be determined by the thread's <i>context</i>:  list, scalar or void.
+The thread's context is determined at thread creation.  This is necessary so
+that the context is available to the entry point function via
+<a class='function-name' href="functions/wantarray.html">wantarray</a>.  The thread may then specify a value of
+the appropriate type to be returned from <code class="inline"><span class="i">-&gt;join</span><span class="s">(</span><span class="s">)</span></code>
+.</p>
+<a class='view-head2' id="Explicit-context"></a><h3 class='h3' >Explicit context</h3>
+<p>Because thread creation and thread joining may occur in different contexts, it
+may be desirable to state the context explicitly to the thread's entry point
+function.  This may be done by calling <code class="inline"><span class="i">-&gt;create</span><span class="s">(</span><span class="s">)</span></code>
+ with a hash reference
+as the first argument:</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="functions/my.html">my</a> <span class="i">$thr</span> = <span class="w">threads</span><span class="w">-&gt;create</span><span class="s">(</span><span class="s">{</span><span class="q">&#39;context&#39;</span> <span class="cm">=&gt;</span> <span class="q">&#39;list&#39;</span><span class="s">}</span><span class="cm">,</span> \<span class="i">&amp;foo</span><span class="s">)</span><span class="sc">;</span></li><li>    ...</li><li>    <a class="l_k" href="functions/my.html">my</a> <span class="i">@results</span> = <span class="i">$thr</span><span class="i">-&gt;join</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>In the above, the threads object is returned to the parent thread in scalar
+context, and the thread's entry point function <code class="inline"><span class="w">foo</span></code>
+ will be called in list
+(array) context such that the parent thread can receive a list (array) from
+the <code class="inline"><span class="i">-&gt;join</span><span class="s">(</span><span class="s">)</span></code>
+ call.  (<code class="inline"><span class="q">&#39;array&#39;</span></code>
+ is synonymous with <code class="inline"><span class="q">&#39;list&#39;</span></code>
+.)</p>
+<p>Similarly, if you need the threads object, but your thread will not be
+returning a value (i.e., <i>void</i> context), you would do the following:</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="functions/my.html">my</a> <span class="i">$thr</span> = <span class="w">threads</span><span class="w">-&gt;create</span><span class="s">(</span><span class="s">{</span><span class="q">&#39;context&#39;</span> <span class="cm">=&gt;</span> <span class="q">&#39;void&#39;</span><span class="s">}</span><span class="cm">,</span> \<span class="i">&amp;foo</span><span class="s">)</span><span class="sc">;</span></li><li>    ...</li><li>    <span class="i">$thr</span><span class="i">-&gt;join</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>The context type may also be used as the <i>key</i> in the hash reference followed
+by a <i>true</i> value:</p>
+<pre class="verbatim"><ol><li>    <span class="w">threads</span><span class="w">-&gt;create</span><span class="s">(</span><span class="s">{</span><span class="q">&#39;scalar&#39;</span> <span class="cm">=&gt;</span> <span class="n">1</span><span class="s">}</span><span class="cm">,</span> \<span class="i">&amp;foo</span><span class="s">)</span><span class="sc">;</span></li><li>    ...</li><li>    <a class="l_k" href="functions/my.html">my</a> <span class="s">(</span><span class="i">$thr</span><span class="s">)</span> = <span class="w">threads</span><span class="w">-&gt;list</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li><li>    <a class="l_k" href="functions/my.html">my</a> <span class="i">$result</span> = <span class="i">$thr</span><span class="i">-&gt;join</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><a class='view-head2' id="Implicit-context"></a><h3 class='h3' >Implicit context</h3>
+<p>If not explicitly stated, the thread's context is implied from the context
+of the <code class="inline"><span class="i">-&gt;create</span><span class="s">(</span><span class="s">)</span></code>
+ call:</p>
+<pre class="verbatim"><ol><li>    <span class="c"># Create thread in list context</span></li><li>    <a class="l_k" href="functions/my.html">my</a> <span class="s">(</span><span class="i">$thr</span><span class="s">)</span> = <span class="w">threads</span><span class="w">-&gt;create</span><span class="s">(</span>...<span class="s">)</span><span class="sc">;</span></li><li></li><li>    <span class="c"># Create thread in scalar context</span></li><li>    <a class="l_k" href="functions/my.html">my</a> <span class="i">$thr</span> = <span class="w">threads</span><span class="w">-&gt;create</span><span class="s">(</span>...<span class="s">)</span><span class="sc">;</span></li><li></li><li>    <span class="c"># Create thread in void context</span></li><li>    <span class="w">threads</span><span class="w">-&gt;create</span><span class="s">(</span>...<span class="s">)</span><span class="sc">;</span></li></ol></pre><a class='view-head2' id="%24thr-%3ewantarray()"></a><h3 class='h3' >$thr-&gt;wantarray()</h3>
+<p>This returns the thread's context in the same manner as
+<a class='function-name' href="functions/wantarray.html">wantarray</a>.</p>
+<a class='view-head2' id="threads-%3ewantarray()"></a><h3 class='h3' >threads-&gt;wantarray()</h3>
+<p>Class method to return the current thread's context.  This returns the same
+value as running <a class='function-name' href="functions/wantarray.html">wantarray</a> inside the current
+thread's entry point function.</p>
+<a class='view-head1' id="THREAD-STACK-SIZE"></a><h2 class='h2' >THREAD STACK SIZE</h2>
+<p>The default per-thread stack size for different platforms varies
+significantly, and is almost always far more than is needed for most
+applications.  On Win32, Perl's makefile explicitly sets the default stack to
+16 MB; on most other platforms, the system default is used, which again may be
+much larger than is needed.</p>
+<p>By tuning the stack size to more accurately reflect your application's needs,
+you may significantly reduce your application's memory usage, and increase the
+number of simultaneously running threads.</p>
+<p>Note that on Windows, address space allocation granularity is 64 KB,
+therefore, setting the stack smaller than that on Win32 Perl will not save any
+more memory.</p>
+<ul>
+<li><a class='view-title' id="threads-%3eget_stack_size()%3b"></a><strong>threads-&gt;get_stack_size();</strong>
+<p>Returns the current default per-thread stack size.  The default is zero, which
+means the system default stack size is currently in use.</p>
+</li>
+<li><a class='view-title' id="%24size-%3d-%24thr-%3eget_stack_size()%3b"></a><strong>$size = $thr-&gt;get_stack_size();</strong>
+<p>Returns the stack size for a particular thread.  A return value of zero
+indicates the system default stack size was used for the thread.</p>
+</li>
+<li><a class='view-title' id="%24old_size-%3d-threads-%3eset_stack_size(%24new_size)%3b"></a><strong>$old_size = threads-&gt;set_stack_size($new_size);</strong>
+<p>Sets a new default per-thread stack size, and returns the previous setting.</p>
+<p>Some platforms have a minimum thread stack size.  Trying to set the stack size
+below this value will result in a warning, and the minimum stack size will be
+used.</p>
+<p>Some Linux platforms have a maximum stack size.  Setting too large of a stack
+size will cause thread creation to fail.</p>
+<p>If needed, <code class="inline"><span class="i">$new_size</span></code>
+ will be rounded up to the next multiple of the memory
+page size (usually 4096 or 8192).</p>
+<p>Threads created after the stack size is set will then either call
+<code class="inline"><span class="i">pthread_attr_setstacksize</span><span class="s">(</span><span class="s">)</span></code>
+ <i>(for pthreads platforms)</i>, or supply the
+stack size to <code class="inline"><span class="i">CreateThread</span><span class="s">(</span><span class="s">)</span></code>
+ <i>(for Win32 Perl)</i>.</p>
+<p>(Obviously, this call does not affect any currently extant threads.)</p>
+</li>
+<li><a class='view-title' id="use-threads-('stack_size'-%3d%3e-VALUE)%3b"></a><strong>use threads ('stack_size' =&gt; VALUE);</strong>
+<p>This sets the default per-thread stack size at the start of the application.</p>
+</li>
+<li><a class='view-title' id="%24ENV%7b'PERL5_ITHREADS_STACK_SIZE'%7d"></a><strong>$ENV{'PERL5_ITHREADS_STACK_SIZE'}</strong>
+<p>The default per-thread stack size may be set at the start of the application
+through the use of the environment variable <code class="inline"><span class="w">PERL5_ITHREADS_STACK_SIZE</span></code>
+:</p>
+<pre class="verbatim"><ol><li>    <span class="w">PERL5_ITHREADS_STACK_SIZE</span>=<span class="n">1048576</span></li><li>    <span class="w">export</span> <span class="w">PERL5_ITHREADS_STACK_SIZE</span></li><li>    <span class="w">perl</span> -e<span class="q">&#39;use threads; print(threads-&gt;get_stack_size(), &quot;\n&quot;)&#39;</span></li></ol></pre><p>This value overrides any <code class="inline"><span class="w">stack_size</span></code>
+ parameter given to <code class="inline"><a class="l_k" href="functions/use.html">use</a> <span class="w">threads</span></code>
+.  Its
+primary purpose is to permit setting the per-thread stack size for legacy
+threaded applications.</p>
+</li>
+<li><a class='view-title' id="threads-%3ecreate(%7b'stack_size'-%3d%3e-VALUE%7d%2c-FUNCTION%2c-ARGS)"></a><strong>threads-&gt;create({'stack_size' =&gt; VALUE}, FUNCTION, ARGS)</strong>
+<p>To specify a particular stack size for any individual thread, call
+<code class="inline"><span class="i">-&gt;create</span><span class="s">(</span><span class="s">)</span></code>
+ with a hash reference as the first argument:</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="functions/my.html">my</a> <span class="i">$thr</span> = <span class="w">threads</span><span class="w">-&gt;create</span><span class="s">(</span><span class="s">{</span><span class="q">&#39;stack_size&#39;</span> <span class="cm">=&gt;</span> <span class="n">32</span>*<span class="n">4096</span><span class="s">}</span><span class="cm">,</span></li><li>                              \<span class="i">&amp;foo</span><span class="cm">,</span> <span class="i">@args</span><span class="s">)</span><span class="sc">;</span></li></ol></pre></li>
+<li><a class='view-title' id="%24thr2-%3d-%24thr1-%3ecreate(FUNCTION%2c-ARGS)"></a><strong>$thr2 = $thr1-&gt;create(FUNCTION, ARGS)</strong>
+<p>This creates a new thread (<code class="inline"><span class="i">$thr2</span></code>
+) that inherits the stack size from an
+existing thread (<code class="inline"><span class="i">$thr1</span></code>
+).  This is shorthand for the following:</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="functions/my.html">my</a> <span class="i">$stack_size</span> = <span class="i">$thr1</span><span class="i">-&gt;get_stack_size</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li><li>    <a class="l_k" href="functions/my.html">my</a> <span class="i">$thr2</span> = <span class="w">threads</span><span class="w">-&gt;create</span><span class="s">(</span><span class="s">{</span><span class="q">&#39;stack_size&#39;</span> <span class="cm">=&gt;</span> <span class="i">$stack_size</span><span class="s">}</span><span class="cm">,</span></li><li>                               <span class="w">FUNCTION</span><span class="cm">,</span> <span class="w">ARGS</span><span class="s">)</span><span class="sc">;</span></li></ol></pre></li>
+</ul>
+<a class='view-head1' id="THREAD-SIGNALLING"></a><h2 class='h2' >THREAD SIGNALLING</h2>
+<p>When safe signals is in effect (the default behavior - see <a href="#Unsafe-signals">Unsafe signals</a>
+for more details), then signals may be sent and acted upon by individual
+threads.</p>
+<ul>
+<li><a class='view-title' id="%24thr-%3ekill('SIG...')%3b"></a><strong>$thr-&gt;kill('SIG...');</strong>
+<p>Sends the specified signal to the thread.  Signal names and (positive) signal
+numbers are the same as those supported by
+<a class='function-name' href="functions/kill.html">kill SIGNAL, LIST</a>.  For example, 'SIGTERM', 'TERM' and
+(depending on the OS) 15 are all valid arguments to <code class="inline"><span class="i">-&gt;kill</span><span class="s">(</span><span class="s">)</span></code>
+.</p>
+<p>Returns the thread object to allow for method chaining:</p>
+<pre class="verbatim"><ol><li>    <span class="i">$thr</span><span class="i">-&gt;kill</span><span class="s">(</span><span class="q">&#39;SIG...&#39;</span><span class="s">)</span><span class="i">-&gt;join</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li></ol></pre></li>
+</ul>
+<p>Signal handlers need to be set up in the threads for the signals they are
+expected to act upon.  Here's an example for <i>cancelling</i> a thread:</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="functions/use.html">use</a> <span class="w">threads</span><span class="sc">;</span></li><li></li><li><a name="thr_func"></a>    sub <span class="m">thr_func</span></li><li>    <span class="s">{</span></li><li>        <span class="c"># Thread &#39;cancellation&#39; signal handler</span></li><li>        <span class="i">$SIG</span>{<span class="q">&#39;KILL&#39;</span>} = <a class="l_k" href="functions/sub.html">sub</a> <span class="s">{</span> <span class="w">threads</span><span class="w">-&gt;exit</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span> <span class="s">}</span><span class="sc">;</span></li><li></li><li>        ...</li><li>    <span class="s">}</span></li><li></li><li>    <span class="c"># Create a thread</span></li><li>    <a class="l_k" href="functions/my.html">my</a> <span class="i">$thr</span> = <span class="w">threads</span><span class="w">-&gt;create</span><span class="s">(</span><span class="q">&#39;thr_func&#39;</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>    ...</li><li></li><li>    <span class="c"># Signal the thread to terminate, and then detach</span></li><li>    <span class="c"># it so that it will get cleaned up automatically</span></li><li>    <span class="i">$thr</span><span class="i">-&gt;kill</span><span class="s">(</span><span class="q">&#39;KILL&#39;</span><span class="s">)</span><span class="i">-&gt;detach</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>Here's another simplistic example that illustrates the use of thread
+signalling in conjunction with a semaphore to provide rudimentary <i>suspend</i>
+and <i>resume</i> capabilities:</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="functions/use.html">use</a> <span class="w">threads</span><span class="sc">;</span></li><li>    <a class="l_k" href="functions/use.html">use</a> <span class="w">Thread::Semaphore</span><span class="sc">;</span></li><li></li><li><a name="thr_func"></a>    sub <span class="m">thr_func</span></li><li>    <span class="s">{</span></li><li>        <a class="l_k" href="functions/my.html">my</a> <span class="i">$sema</span> = <a class="l_k" href="functions/shift.html">shift</a><span class="sc">;</span></li><li></li><li>        <span class="c"># Thread &#39;suspend/resume&#39; signal handler</span></li><li>        <span class="i">$SIG</span>{<span class="q">&#39;STOP&#39;</span>} = <a class="l_k" href="functions/sub.html">sub</a> <span class="s">{</span></li><li>            <span class="i">$sema</span><span class="i">-&gt;down</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span>      <span class="c"># Thread suspended</span></li><li>            <span class="i">$sema</span><span class="i">-&gt;up</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span>        <span class="c"># Thread resumes</span></li><li>        <span class="s">}</span><span class="sc">;</span></li><li></li><li>        ...</li><li>    <span class="s">}</span></li><li></li><li>    <span class="c"># Create a semaphore and pass it to a thread</span></li><li>    <a class="l_k" href="functions/my.html">my</a> <span class="i">$sema</span> = <span class="w">Thread::Semaphore</span><span class="w">-&gt;new</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li><li>    <a class="l_k" href="functions/my.html">my</a> <span class="i">$thr</span> = <span class="w">threads</span><span class="w">-&gt;create</span><span class="s">(</span><span class="q">&#39;thr_func&#39;</span><span class="cm">,</span> <span class="i">$sema</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>    <span class="c"># Suspend the thread</span></li><li>    <span class="i">$sema</span><span class="i">-&gt;down</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="i">$thr</span><span class="i">-&gt;kill</span><span class="s">(</span><span class="q">&#39;STOP&#39;</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>    ...</li><li></li><li>    <span class="c"># Allow the thread to continue</span></li><li>    <span class="i">$sema</span><span class="i">-&gt;up</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>CAVEAT:  The thread signalling capability provided by this module does not
+actually send signals via the OS.  It <i>emulates</i> signals at the Perl-level
+such that signal handlers are called in the appropriate thread.  For example,
+sending <code class="inline"><span class="i">$thr</span><span class="i">-&gt;kill</span><span class="s">(</span><span class="q">&#39;STOP&#39;</span><span class="s">)</span></code>
+ does not actually suspend a thread (or the
+whole process), but does cause a <code class="inline"><span class="i">$SIG</span>{<span class="q">&#39;STOP&#39;</span>}</code>
+ handler to be called in that
+thread (as illustrated above).</p>
+<p>As such, signals that would normally not be appropriate to use in the
+<code class="inline"><a class="l_k" href="functions/kill.html">kill()</a></code> command (e.g., <code class="inline"><a class="l_k" href="functions/kill.html">kill</a><span class="s">(</span><span class="q">&#39;KILL&#39;</span><span class="cm">,</span> <span class="i">$$</span><span class="s">)</span></code>
+) are okay to use with the
+<code class="inline"><span class="i">-&gt;kill</span><span class="s">(</span><span class="s">)</span></code>
+ method (again, as illustrated above).</p>
+<p>Correspondingly, sending a signal to a thread does not disrupt the operation
+the thread is currently working on:  The signal will be acted upon after the
+current operation has completed.  For instance, if the thread is <i>stuck</i> on
+an I/O call, sending it a signal will not cause the I/O call to be interrupted
+such that the signal is acted up immediately.</p>
+<p>Sending a signal to a terminated/finished thread is ignored.</p>
+<a class='view-head1' id="WARNINGS"></a><h2 class='h2' >WARNINGS</h2>
+<ul>
+<li><a class='view-title' id="Perl-exited-with-active-threads%3a"></a><strong>Perl exited with active threads:</strong>
+<p>If the program exits without all threads having either been joined or
+detached, then this warning will be issued.</p>
+<p>NOTE:  If the <i>main</i> thread exits, then this warning cannot be suppressed
+using <code class="inline"><a class="l_k" href="functions/no.html">no</a> <span class="w">warnings</span> <span class="q">&#39;threads&#39;</span><span class="sc">;</span></code>
+ as suggested below.</p>
+</li>
+<li><a class='view-title' id="Thread-creation-failed%3a-pthread_create-returned-%23"></a><strong>Thread creation failed: pthread_create returned #</strong>
+<p>See the appropriate <i>man</i> page for <code class="inline"><span class="w">pthread_create</span></code>
+ to determine the actual
+cause for the failure.</p>
+</li>
+<li><a class='view-title' id="Thread-%23-terminated-abnormally%3a-..."></a><strong>Thread # terminated abnormally: ...</strong>
+<p>A thread terminated in some manner other than just returning from its entry
+point function, or by using <code class="inline"><span class="w">threads</span><span class="w">-&gt;exit</span><span class="s">(</span><span class="s">)</span></code>
+.  For example, the thread
+may have terminated because of an error, or by using <code class="inline"><a class="l_k" href="functions/die.html">die</a></code>.</p>
+</li>
+<li><a class='view-title' id="Using-minimum-thread-stack-size-of-%23"></a><strong>Using minimum thread stack size of #</strong>
+<p>Some platforms have a minimum thread stack size.  Trying to set the stack size
+below this value will result in the above warning, and the stack size will be
+set to the minimum.</p>
+</li>
+<li><a class='view-title' id="Thread-creation-failed%3a-pthread_attr_setstacksize(_SIZE_)-returned-22"></a><strong>Thread creation failed: pthread_attr_setstacksize(<i>SIZE</i>) returned 22</strong>
+<p>The specified <i>SIZE</i> exceeds the system's maximum stack size.  Use a smaller
+value for the stack size.</p>
+</li>
+</ul>
+<p>If needed, thread warnings can be suppressed by using:</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="functions/no.html">no</a> <span class="w">warnings</span> <span class="q">&#39;threads&#39;</span><span class="sc">;</span></li></ol></pre><p>in the appropriate scope.</p>
+<a class='view-head1' id="ERRORS"></a><h2 class='h2' >ERRORS</h2>
+<ul>
+<li><a class='view-title' id="This-Perl-not-built-to-support-threads"></a><strong>This Perl not built to support threads</strong>
+<p>The particular copy of Perl that you're trying to use was not built using the
+<code class="inline"><span class="w">useithreads</span></code>
+ configuration option.</p>
+<p>Having threads support requires all of Perl and all of the XS modules in the
+Perl installation to be rebuilt; it is not just a question of adding the
+<a href="threads.html">threads</a> module (i.e., threaded and non-threaded Perls are binary
+incompatible).</p>
+</li>
+<li><a class='view-title' id="Cannot-change-stack-size-of-an-existing-thread"></a><strong>Cannot change stack size of an existing thread</strong>
+<p>The stack size of currently extant threads cannot be changed, therefore, the
+following results in the above error:</p>
+<pre class="verbatim"><ol><li>    <span class="i">$thr</span><span class="i">-&gt;set_stack_size</span><span class="s">(</span><span class="i">$size</span><span class="s">)</span><span class="sc">;</span></li></ol></pre></li>
+<li><a class='view-title' id="Cannot-signal-threads-without-safe-signals"></a><strong>Cannot signal threads without safe signals</strong>
+<p>Safe signals must be in effect to use the <code class="inline"><span class="i">-&gt;kill</span><span class="s">(</span><span class="s">)</span></code>
+ signalling method.
+See <a href="#Unsafe-signals">Unsafe signals</a> for more details.</p>
+</li>
+<li><a class='view-title' id="Unrecognized-signal-name%3a-..."></a><strong>Unrecognized signal name: ...</strong>
+<p>The particular copy of Perl that you're trying to use does not support the
+specified signal being used in a <code class="inline"><span class="i">-&gt;kill</span><span class="s">(</span><span class="s">)</span></code>
+ call.</p>
+</li>
+</ul>
+<a class='view-head1' id="BUGS-AND-LIMITATIONS"></a><h2 class='h2' >BUGS AND LIMITATIONS</h2>
+<p>Before you consider posting a bug report, please consult, and possibly post a
+message to the discussion forum to see if what you've encountered is a known
+problem.</p>
+<ul>
+<li><a class='view-title' id="Thread-safe-modules"></a><strong>Thread-safe modules</strong>
+<p>See <a href="perlmod.html#Making-your-module-threadsafe">Making your module threadsafe in perlmod</a> when creating modules that may
+be used in threaded applications, especially if those modules use non-Perl
+data, or XS code.</p>
+</li>
+<li><a class='view-title' id="Using-non-thread-safe-modules"></a><strong>Using non-thread-safe modules</strong>
+<p>Unfortunately, you may encounter Perl modules that are not <i>thread-safe</i>.
+For example, they may crash the Perl interpreter during execution, or may dump
+core on termination.  Depending on the module and the requirements of your
+application, it may be possible to work around such difficulties.</p>
+<p>If the module will only be used inside a thread, you can try loading the
+module from inside the thread entry point function using <code class="inline"><a class="l_k" href="functions/require.html">require</a></code> (and
+<code class="inline"><a class="l_k" href="functions/import.html">import</a></code> if needed):</p>
+<pre class="verbatim"><ol><li><a name="thr_func"></a>    sub <span class="m">thr_func</span></li><li>    <span class="s">{</span></li><li>        <a class="l_k" href="functions/require.html">require</a> <span class="w">Unsafe::Module</span></li><li>        <span class="c"># Unsafe::Module-&gt;import(...);</span></li><li></li><li>        ....</li><li>    <span class="s">}</span></li></ol></pre><p>If the module is needed inside the <i>main</i> thread, try modifying your
+application so that the module is loaded (again using <code class="inline"><a class="l_k" href="functions/require.html">require</a></code> and
+<code class="inline"><span class="i">-&gt;import</span><span class="s">(</span><span class="s">)</span></code>
+) after any threads are started, and in such a way that no
+other threads are started afterwards.</p>
+<p>If the above does not work, or is not adequate for your application, then file
+a bug report on <a href="http://rt.cpan.org/Public/">http://rt.cpan.org/Public/</a> against the problematic module.</p>
+</li>
+<li><a class='view-title' id="Memory-consumption"></a><strong>Memory consumption</strong>
+<p>On most systems, frequent and continual creation and destruction of threads
+can lead to ever-increasing growth in the memory footprint of the Perl
+interpreter.  While it is simple to just launch threads and then
+<code class="inline"><span class="i">-&gt;join</span><span class="s">(</span><span class="s">)</span></code>
+ or <code class="inline"><span class="i">-&gt;detach</span><span class="s">(</span><span class="s">)</span></code>
+ them, for long-lived applications, it is
+better to maintain a pool of threads, and to reuse them for the work needed,
+using <a href="Thread/Queue.html">queues</a> to notify threads of pending work.  The CPAN
+distribution of this module contains a simple example
+(<i>examples/pool_reuse.pl</i>) illustrating the creation, use and monitoring of a
+pool of <i>reusable</i> threads.</p>
+</li>
+<li><a class='view-title' id="Current-working-directory"></a><strong>Current working directory</strong>
+<p>On all platforms except MSWin32, the setting for the current working directory
+is shared among all threads such that changing it in one thread (e.g., using
+<code class="inline"><a class="l_k" href="functions/chdir.html">chdir()</a></code>) will affect all the threads in the application.</p>
+<p>On MSWin32, each thread maintains its own the current working directory
+setting.</p>
+</li>
+<li><a class='view-title' id="Environment-variables"></a><strong>Environment variables</strong>
+<p>Currently, on all platforms except MSWin32, all <i>system</i> calls (e.g., using
+<code class="inline"><a class="l_k" href="functions/system.html">system()</a></code> or back-ticks) made from threads use the environment variable
+settings from the <i>main</i> thread.  In other words, changes made to <code class="inline"><span class="i">%ENV</span></code>
+ in
+a thread will not be visible in <i>system</i> calls made by that thread.</p>
+<p>To work around this, set environment variables as part of the <i>system</i> call.
+For example:</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="functions/my.html">my</a> <span class="i">$msg</span> = <span class="q">&#39;hello&#39;</span><span class="sc">;</span></li><li>    <a class="l_k" href="functions/system.html">system</a><span class="s">(</span><span class="q">&quot;FOO=$msg; echo \$FOO&quot;</span><span class="s">)</span><span class="sc">;</span>   <span class="c"># Outputs &#39;hello&#39; to STDOUT</span></li></ol></pre><p>On MSWin32, each thread maintains its own set of environment variables.</p>
+</li>
+<li><a class='view-title' id="Catching-signals"></a><strong>Catching signals</strong>
+<p>Signals are <i>caught</i> by the main thread (thread ID = 0) of a script.
+Therefore, setting up signal handlers in threads for purposes other than
+<a href="#THREAD-SIGNALLING">THREAD SIGNALLING</a> as documented above will not accomplish what is
+intended.</p>
+<p>This is especially true if trying to catch <code class="inline"><span class="w">SIGALRM</span></code>
+ in a thread.  To handle
+alarms in threads, set up a signal handler in the main thread, and then use
+<a href="#THREAD-SIGNALLING">THREAD SIGNALLING</a> to relay the signal to the thread:</p>
+<pre class="verbatim"><ol><li>  <span class="c"># Create thread with a task that may time out</span></li><li>  <a class="l_k" href="functions/my.html">my</a> <span class="i">$thr</span> = <span class="w">threads</span><span class="w">-&gt;create</span><span class="s">(</span><a class="l_k" href="functions/sub.html">sub</a> <span class="s">{</span></li><li>      <span class="w">threads</span><span class="w">-&gt;yield</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li><li>      <a class="l_k" href="functions/eval.html">eval</a> <span class="s">{</span></li><li>          <span class="i">$SIG</span>{<span class="w">ALRM</span>} = <a class="l_k" href="functions/sub.html">sub</a> <span class="s">{</span> <a class="l_k" href="functions/die.html">die</a><span class="s">(</span><span class="q">&quot;Timeout\n&quot;</span><span class="s">)</span><span class="sc">;</span> <span class="s">}</span><span class="sc">;</span></li><li>          <a class="l_k" href="functions/alarm.html">alarm</a><span class="s">(</span><span class="n">10</span><span class="s">)</span><span class="sc">;</span></li><li>          ...  <span class="c"># Do work here</span></li><li>          <a class="l_k" href="functions/alarm.html">alarm</a><span class="s">(</span><span class="n">0</span><span class="s">)</span><span class="sc">;</span></li><li>      <span class="s">}</span><span class="sc">;</span></li><li>      <a class="l_k" href="functions/if.html">if</a> <span class="s">(</span><span class="i">$@</span> =~ <span class="q">/Timeout/</span><span class="s">)</span> <span class="s">{</span></li><li>          <a class="l_k" href="functions/warn.html">warn</a><span class="s">(</span><span class="q">&quot;Task in thread timed out\n&quot;</span><span class="s">)</span><span class="sc">;</span></li><li>      <span class="s">}</span></li><li>  <span class="s">}</span><span class="sc">;</span></li><li></li><li>  <span class="c"># Set signal handler to relay SIGALRM to thread</span></li><li>  <span class="i">$SIG</span>{<span class="w">ALRM</span>} = <a class="l_k" href="functions/sub.html">sub</a> <span class="s">{</span> <span class="i">$thr</span><span class="i">-&gt;kill</span><span class="s">(</span><span class="q">&#39;ALRM&#39;</span><span class="s">)</span> <span class="s">}</span><span class="sc">;</span></li><li></li><li>  ... <span class="c"># Main thread continues working</span></li></ol></pre></li>
+<li><a class='view-title' id="Parent-child-threads"></a><strong>Parent-child threads</strong>
+<p>On some platforms, it might not be possible to destroy <i>parent</i> threads while
+there are still existing <i>child</i> threads.</p>
+</li>
+<li><a class='view-title' id="Creating-threads-inside-special-blocks"></a><strong>Creating threads inside special blocks</strong>
+<p>Creating threads inside <code class="inline"><a class="l_k" href="functions/BEGIN.html">BEGIN</a></code>, <code class="inline"><a class="l_k" href="functions/CHECK.html">CHECK</a></code> or <code class="inline"><a class="l_k" href="functions/INIT.html">INIT</a></code> blocks should not be
+relied upon.  Depending on the Perl version and the application code, results
+may range from success, to (apparently harmless) warnings of leaked scalar, or
+all the way up to crashing of the Perl interpreter.</p>
+</li>
+<li><a class='view-title' id="Unsafe-signals"></a><strong>Unsafe signals</strong>
+<p>Since Perl 5.8.0, signals have been made safer in Perl by postponing their
+handling until the interpreter is in a <i>safe</i> state.  See
+<a href="perl58delta.html#Safe-Signals">Safe Signals in perl58delta</a> and <a href="perlipc.html#Deferred-Signals-(Safe-Signals)">Deferred Signals (Safe Signals) in perlipc</a>
+for more details.</p>
+<p>Safe signals is the default behavior, and the old, immediate, unsafe
+signalling behavior is only in effect in the following situations:</p>
+<ul>
+<li><a class='view-title' id="*-Perl-has-been-built-with-PERL_OLD_SIGNALS-(see-perl--V)."></a><strong>Perl has been built with <code class="inline"><span class="w">PERL_OLD_SIGNALS</span></code>
+ (see <code class="inline"><span class="w">perl</span> -<span class="w">V</span></code>
+).</strong>
+</li>
+<li><a class='view-title' id="*-The-environment-variable-PERL_SIGNALS-is-set-to-unsafe-(see-the-perlrun%2f%22PERL_SIGNALS%22-manpage)."></a><strong>The environment variable <code class="inline"><span class="w">PERL_SIGNALS</span></code>
+ is set to <code class="inline"><span class="w">unsafe</span></code>
+
+(see <a href="perlrun.html#PERL_SIGNALS">PERL_SIGNALS in perlrun</a>).</strong>
+</li>
+<li><a class='view-title' id="*-The-module-the-Perl%3a%3aUnsafe%3a%3aSignals-manpage-is-used."></a><strong>The module <a href="https://search.cpan.org/perldoc/Perl::Unsafe::Signals">Perl::Unsafe::Signals</a> is used.</strong>
+</li>
+</ul>
+<p>If unsafe signals is in effect, then signal handling is not thread-safe, and
+the <code class="inline"><span class="i">-&gt;kill</span><span class="s">(</span><span class="s">)</span></code>
+ signalling method cannot be used.</p>
+</li>
+<li><a class='view-title' id="Returning-closures-from-threads"></a><strong>Returning closures from threads</strong>
+<p>Returning closures from threads should not be relied upon.  Depending on the
+Perl version and the application code, results may range from success, to
+(apparently harmless) warnings of leaked scalar, or all the way up to crashing
+of the Perl interpreter.</p>
+</li>
+<li><a class='view-title' id="Returning-objects-from-threads"></a><strong>Returning objects from threads</strong>
+<p>Returning objects from threads does not work.  Depending on the classes
+involved, you may be able to work around this by returning a serialized
+version of the object (e.g., using <a href="Data/Dumper.html">Data::Dumper</a> or <a href="Storable.html">Storable</a>), and then
+reconstituting it in the joining thread.  If you're using Perl 5.10.0 or
+later, and if the class supports <a href="threads/shared.html#OBJECTS">shared objects</a>,
+you can pass them via <a href="Thread/Queue.html">shared queues</a>.</p>
+</li>
+<li><a class='view-title' id="END-blocks-in-threads"></a><strong>END blocks in threads</strong>
+<p>It is possible to add <a href="perlmod.html#BEGIN%2c-UNITCHECK%2c-CHECK%2c-INIT-and-END">END blocks</a> to threads by using <a class='function-name' href="functions/require.html">require VERSION</a> or
+<a class='function-name' href="functions/eval.html">eval EXPR</a> with the appropriate code.  These <code class="inline"><a class="l_k" href="functions/END.html">END</a></code> blocks
+will then be executed when the thread's interpreter is destroyed (i.e., either
+during a <code class="inline"><span class="i">-&gt;join</span><span class="s">(</span><span class="s">)</span></code>
+ call, or at program termination).</p>
+<p>However, calling any <a href="threads.html">threads</a> methods in such an <code class="inline"><a class="l_k" href="functions/END.html">END</a></code> block will most
+likely <i>fail</i> (e.g., the application may hang, or generate an error) due to
+mutexes that are needed to control functionality within the <a href="threads.html">threads</a> module.</p>
+<p>For this reason, the use of <code class="inline"><a class="l_k" href="functions/END.html">END</a></code> blocks in threads is <strong>strongly</strong>
+discouraged.</p>
+</li>
+<li><a class='view-title' id="Open-directory-handles"></a><strong>Open directory handles</strong>
+<p>In perl 5.14 and higher, on systems other than Windows that do
+not support the <code class="inline"><span class="w">fchdir</span></code>
+ C function, directory handles (see
+<a class='function-name' href="functions/opendir.html">opendir DIRHANDLE,EXPR</a>) will not be copied to new
+threads. You can use the <code class="inline"><span class="w">d_fchdir</span></code>
+ variable in <a href="Config.html">Config.pm</a> to
+determine whether your system supports it.</p>
+<p>In prior perl versions, spawning threads with open directory handles would
+crash the interpreter.
+<a class='link-to-page' href="http://rt.perl.org/rt3/Public/Bug/Display.html?id=75154">[perl #75154]</a></p>
+</li>
+<li><a class='view-title' id="Perl-Bugs-and-the-CPAN-Version-of-the-threads-manpage"></a><strong>Perl Bugs and the CPAN Version of <a href="threads.html">threads</a></strong>
+<p>Support for threads extends beyond the code in this module (i.e.,
+<i>threads.pm</i> and <i>threads.xs</i>), and into the Perl interpreter itself.  Older
+versions of Perl contain bugs that may manifest themselves despite using the
+latest version of <a href="threads.html">threads</a> from CPAN.  There is no workaround for this other
+than upgrading to the latest version of Perl.</p>
+<p>Even with the latest version of Perl, it is known that certain constructs
+with threads may result in warning messages concerning leaked scalars or
+unreferenced scalars.  However, such warnings are harmless, and may safely be
+ignored.</p>
+<p>You can search for <a href="threads.html">threads</a> related bug reports at
+<a href="http://rt.cpan.org/Public/">http://rt.cpan.org/Public/</a>.  If needed submit any new bugs, problems,
+patches, etc. to: <a href="http://rt.cpan.org/Public/Dist/Display.html?Name=threads">http://rt.cpan.org/Public/Dist/Display.html?Name=threads</a></p>
+</li>
+</ul>
+<a class='view-head1' id="REQUIREMENTS"></a><h2 class='h2' >REQUIREMENTS</h2>
+<p>Perl 5.8.0 or later</p>
+<a class='view-head1' id="SEE-ALSO"></a><h2 class='h2' >SEE ALSO</h2>
+<p><a href="threads.html">threads</a> Discussion Forum on CPAN:
+<a href="http://www.cpanforum.com/dist/threads">http://www.cpanforum.com/dist/threads</a></p>
+<p><a href="threads/shared.html">threads::shared</a>, <a href="perlthrtut.html">perlthrtut</a></p>
+<p><a href="http://www.perl.com/pub/a/2002/06/11/threads.html">http://www.perl.com/pub/a/2002/06/11/threads.html</a> and
+<a href="http://www.perl.com/pub/a/2002/09/04/threads.html">http://www.perl.com/pub/a/2002/09/04/threads.html</a></p>
+<p>Perl threads mailing list:
+<a href="http://lists.perl.org/list/ithreads.html">http://lists.perl.org/list/ithreads.html</a></p>
+<p>Stack size discussion:
+<a href="http://www.perlmonks.org/?node_id=532956">http://www.perlmonks.org/?node_id=532956</a></p>
+<a class='view-head1' id="AUTHOR"></a><h2 class='h2' >AUTHOR</h2>
+<p>Artur Bergman &lt;sky AT crucially DOT net&gt;</p>
+<p>CPAN version produced by Jerry D. Hedden &lt;jdhedden AT cpan DOT org&gt;</p>
+<a class='view-head1' id="LICENSE"></a><h2 class='h2' >LICENSE</h2>
+<p>threads is released under the same license as Perl.</p>
+<a class='view-head1' id="ACKNOWLEDGEMENTS"></a><h2 class='h2' >ACKNOWLEDGEMENTS</h2>
+<p>Richard Soderberg &lt;perl AT crystalflame DOT net&gt; -
+Helping me out tons, trying to find reasons for races and other weird bugs!</p>
+<p>Simon Cozens &lt;simon AT brecon DOT co DOT uk&gt; -
+Being there to answer zillions of annoying questions</p>
+<p>Rocco Caputo &lt;troc AT netrus DOT net&gt;</p>
+<p>Vipul Ved Prakash &lt;mail AT vipul DOT net&gt; -
+Helping with debugging</p>
+<p>Dean Arnold &lt;darnold AT presicient DOT com&gt; -
+Stack size API</p>
+
+
+
+
+      <ul><li><a href="#NAME">NAME</a></li><li><a href="#VERSION">VERSION</a></li><li><a href="#WARNING">WARNING</a></li><li><a href="#SYNOPSIS">SYNOPSIS</a></li><li><a href="#DESCRIPTION">DESCRIPTION</a></li><li><a href="#EXITING-A-THREAD">EXITING A THREAD</a></li><li><a href="#THREAD-STATE">THREAD STATE</a></li><li><a href="#THREAD-CONTEXT">THREAD CONTEXT</a></li><ul><li><a href="#Explicit-context">Explicit context</a></li><li><a href="#Implicit-context">Implicit context</a></li><li><a href="#%24thr-%3ewantarray()">$thr->wantarray()</a></li><li><a href="#threads-%3ewantarray()">threads->wantarray()</a></li></ul><li><a href="#THREAD-STACK-SIZE">THREAD STACK SIZE</a></li><li><a href="#THREAD-SIGNALLING">THREAD SIGNALLING</a></li><li><a href="#WARNINGS">WARNINGS</a></li><li><a href="#ERRORS">ERRORS</a></li><li><a href="#BUGS-AND-LIMITATIONS">BUGS AND LIMITATIONS</a></li><li><a href="#REQUIREMENTS">REQUIREMENTS</a></li><li><a href="#SEE-ALSO">SEE ALSO</a></li><li><a href="#AUTHOR">AUTHOR</a></li><li><a href="#LICENSE">LICENSE</a></li><li><a href="#ACKNOWLEDGEMENTS">ACKNOWLEDGEMENTS</a></li></ul>
+
+
+                  </div>
+                </article>
+              </div>
+            </div>
+          </main>
+        </div>
+           <footer class="footer row bg-light pt-5 pb-5">
+       <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+           <div class="row">
+               <div class="col-md-4">
+                   <ul class="list-unstyled">
+                       <li>
+                           <h4>Site info</h4>
+                       </li>
+                       <li>Docs mantained by
+                           <a href="//lists.perl.org/list/perl5-porters.html"
+                               rel="noopener">Perl 5 Porters</a>
+                       </li>
+                       <li>Perldoc site development sponsored by
+                           <a href="//opusvl.com" rel="noopener">
+                           <img style="margin: 20px 20px 5px 10px" class="opus-logo" src="/public/img/opusvl_logo.svg" alt="OpusVL Logo">
+                        </a>
+                    <li><span class="about_perldoc"><a href="//about.html">About PerlDOC</a></span>
+                    </li>
+                       </li>
+                   </ul>
+               </div>
+               <div class="col-md-8">
+                   <div class="row">
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Manuals</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.24.2/index-overview.html">Overview</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.24.2/index-tutorials.html">Tutorials</a>
+                               </li>
+                               <li>
+                                   <a href="/5.24.2/index-faq.html">FAQs</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.24.2/index-history.html">Changes</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Reference</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.24.2/index-language.html">Language</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.24.2/index-functions.html">Functions</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.24.2/perlop.html">Operators</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.24.2/perlvar.html">Variables</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Modules</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.24.2/index-modules-A.html">Modules</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.24.2/index-pragmas.html">Pragmas</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.24.2/index-utilities.html">Utilities</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Misc</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.24.2/index-licence.html">License</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.24.2/index-internals.html">Internals</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.24.2/index-platforms.html">Platforms</a>
+                               </li>
+                            <li>
+                                <a
+                                    href="/5.24.2/index-about.html">About</a>
+                            </li>
+                           </ul>
+                       </div>
+                   </div>
+               </div>
+               <div class=" col-12 footer-inf text-center">
+                   <small>perldoc.perl.org - Official documentation for the Perl
+                       programming language</small>
+               </div>
+           </div>
+       </div>
+   </footer>
+
+        	<div class="beta-wrapper beta-bottom-right ">
+		<div class="beta beta-blue  ">
+			<a class="beta-link "
+				href="//github.com/OpusVL/perldoc.perl.org/issues/new" rel="noopener">
+				<span class="beta-text">
+					This website is a Beta release.
+				</span>
+				<span class="beta-text">
+					For any issues please raise a ticket on GitHub
+				</span>
+			</a>
+		</div>
+	</div>
+
+        <script src="/public/js/main.min.js"></script>
+      </body>
+
+      </html>

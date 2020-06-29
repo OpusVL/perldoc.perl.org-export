@@ -1,0 +1,867 @@
+      
+      
+      
+      
+
+      <!DOCTYPE html>
+      <html lang="en">
+
+      <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Class::Struct - perldoc.perl.org">
+        <link rel="icon" href="/public/img/favicon.ico">
+        <title>Class::Struct - perldoc.perl.org</title>
+        <link href="/public/css/main.min.css" rel="stylesheet">
+        <link rel="canonical" href="/Class/Struct.html">
+        <link
+          href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900'
+          rel='stylesheet' type='text/css'>
+        <script>
+          window.ga = window.ga || function () {
+            (ga.q = ga.q || []).push(arguments)
+          };
+          ga.l = +new Date;
+          ga('create', 'UA-1892152-2', 'auto'); // JJ's account
+          ga('create', 'UA-50555-3', 'auto', 'perlOrg'); // perl.org account
+          ga('require', 'outboundLinkTracker', {
+            events: ['click', 'auxclick', 'contextmenu'],
+          });
+          ga('require', 'maxScrollTracker');
+          ga('send', 'pageview');
+          ga('perlOrg.send', 'pageview');
+        </script>
+        <script async src="https://www.google-analytics.com/analytics.js">
+        </script>
+        <script async src="/public/js/tracking.min.js"></script>
+      </head>
+
+      <body class="body container-fluid ">
+        <div class="wrapper">
+
+          <nav
+    class="navbar navbar-dark bg-primary bg-perl fixed-top justify-content-between navbar-expand-lg">
+    <a href="#content" class="skippy sr-only sr-only-focusable">
+        <span class=' skippy-text'>Skip to main content</span>
+    </a>
+    <a class="navbar-brand" href="/">
+        <img class="logo" src="/public/img/logo_perl_doc.svg"
+            alt="Perl Documentation Logo" />
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse"
+        data-target="#navbar" aria-controls="navbar" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="navbar" class="collapse navbar-collapse ">
+        <ul class="navbar-nav ml-auto navbar-right">
+            <form class="nav-item dropdown search-wrapper">
+                <input type="text" id='searchinput' aria-describedby='navbarDropdown5'
+                    placeholder="Type query" class='search-input-field' value=''>
+
+                <button href="#" data-toggle='dropdown' type="button"
+                    aria-haspopup="true" aria-expanded='false' id="navbarDropdown5"
+                    class="nav-link dropdown-toggle search-link">
+                    <object tabindex='-1' focusable="false" class='search-icon'
+                        data="/public/img/search.svg" type="image/svg+xml"
+                        name='search icon'>search
+                        icon</object>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown5"
+                    id='search-results'>
+                    <p class='dropdown-item major-version'>
+                        No results
+                    </p>
+                </div>
+            </form>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown" href="#" class="nav-link dropdown-toggle"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Perl versions</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    
+                        <p class='dropdown-item major-version'>
+                            5.32
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.32.0/">5.32.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.30
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.3/">5.30.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.2/">5.30.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.1/">5.30.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.0/">5.30.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.28
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.3/">5.28.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.2/">5.28.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.1/">5.28.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.0/">5.28.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.26
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.3/">5.26.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.2/">5.26.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.1/">5.26.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.0/">5.26.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.24
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.4/">5.24.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.3/">5.24.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.2/">5.24.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.1/">5.24.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.0/">5.24.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.22
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.4/">5.22.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.3/">5.22.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.2/">5.22.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.1/">5.22.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.0/">5.22.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.20
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.3/">5.20.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.2/">5.20.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.1/">5.20.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.0/">5.20.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.18
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.4/">5.18.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.3/">5.18.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.2/">5.18.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.1/">5.18.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.0/">5.18.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.16
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.3/">5.16.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.2/">5.16.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.1/">5.16.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.0/">5.16.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.14
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.4/">5.14.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.3/">5.14.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.2/">5.14.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.1/">5.14.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.0/">5.14.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.12
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.5/">5.12.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.4/">5.12.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.3/">5.12.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.2/">5.12.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.1/">5.12.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.0/">5.12.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.10
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.1/">5.10.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.0/">5.10.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.8
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.9/">5.8.9</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.8/">5.8.8</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.7/">5.8.7</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.6/">5.8.6</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.5/">5.8.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.4/">5.8.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.3/">5.8.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.2/">5.8.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.1/">5.8.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.0/">5.8.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.6
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.2/">5.6.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.1/">5.6.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.0/">5.6.0</a>
+                        
+                        
+                    
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown1" href="#" class="dropdown-toggle nav-link"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Manuals</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                    <a class="dropdown-item"
+                        href="/5.14.0/index-overview.html">Overview</a>
+                    <a class="dropdown-item"
+                        href="/5.14.0/index-tutorials.html">Tutorials</a>
+                    <a class="dropdown-item"
+                        href="/5.14.0/index-faq.html">FAQs</a>
+                    <a class="dropdown-item"
+                        href="/5.14.0/index-history.html">Changes</a>
+                    <a class="dropdown-item"
+                        href="/5.14.0/index-licence.html">License</a>
+                    <a class="dropdown-item"
+                        href="/5.14.0/index-language.html">Language</a>
+                    <a class="dropdown-item"
+                        href="/5.14.0/index-functions.html">Functions</a>
+                    <a class="dropdown-item"
+                        href="/5.14.0/perlop.html">Operators</a>
+                    <a class="dropdown-item"
+                        href="/5.14.0/perlvar.html">Variables</a>
+                    <a class="dropdown-item"
+                        href="/5.14.0/index-pragmas.html">Pragmas</a>
+                    <a class="dropdown-item"
+                        href="/5.14.0/index-utilities.html">Utilities</a>
+                    <a class="dropdown-item"
+                        href="/5.14.0/index-internals.html">Internals</a>
+                    <a class="dropdown-item"
+                        href="/5.14.0/index-platforms.html">Platforms</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown3" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Modules</a>
+                <div aria-labelledby="navbarDropdown3"
+                    class="dropdown-menu letters-wrap">
+                    <!--<a class="dropdown-item"
+                        href="/5.14.0/index-modules.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.14.0/index-modules-by-cat.html">By
+                        Category</a>-->
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-modules-A.html">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-modules-B.html">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-modules-C.html">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-modules-D.html">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-modules-E.html">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-modules-F.html">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-modules-G.html">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-modules-H.html">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-modules-I.html">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-modules-J.html">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-modules-K.html">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-modules-L.html">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-modules-M.html">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-modules-N.html">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-modules-O.html">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-modules-P.html">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-modules-Q.html">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-modules-R.html">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-modules-S.html">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-modules-T.html">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-modules-U.html">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-modules-V.html">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-modules-W.html">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-modules-X.html">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-modules-Y.html">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-modules-Z.html">Z</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown4" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Functions</a>
+                <div aria-labelledby="navbarDropdown4"
+                    class="dropdown-menu letters-wrap">
+                    <a class="dropdown-item"
+                        href="/5.14.0/index-functions.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.14.0/index-functions-by-cat.html">By
+                        Category</a>
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-functions.html#A">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-functions.html#B">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-functions.html#C">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-functions.html#D">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-functions.html#E">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-functions.html#F">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-functions.html#G">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-functions.html#H">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-functions.html#I">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-functions.html#J">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-functions.html#K">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-functions.html#L">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-functions.html#M">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-functions.html#N">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-functions.html#O">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-functions.html#P">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-functions.html#Q">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-functions.html#R">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-functions.html#S">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-functions.html#T">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-functions.html#U">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-functions.html#V">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-functions.html#W">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-functions.html#X">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-functions.html#Y">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-functions.html#Z">Z</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!--/.nav-collapse -->
+</nav>
+
+
+          <main class="row main-content pb-5 pt-5" id='content'>
+            <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+              <div class="row">
+                <div class="col-sm-12">
+                  <div id="breadcrumbs">
+                      
+    <a href="../index.html">Home</a>&nbsp; &gt;
+    
+      
+        <a href="../index-modules-C.html">Core modules (C)</a> &gt;
+      
+    
+    Class::Struct
+  
+
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <article class="col-sm-12 content">
+                  <div class="documentation-wrapper">
+                    <div id="perl_version">
+                      <h7 class='page-title'> Perl 5 version 14.0
+                        documentation</h7>
+                    </div>
+                    <h1>Class::Struct</h1>
+
+
+  <!--    -->
+<ul><li><a href="#NAME">NAME</a></li><li><a href="#SYNOPSIS">SYNOPSIS</a></li><li><a href="#DESCRIPTION">DESCRIPTION</a></li><ul><li><a href="#The-struct()-function">The struct() function</a></li><li><a href="#Class-Creation-at-Compile-Time">Class Creation at Compile Time</a></li><li><a href="#Element-Types-and-Accessor-Methods">Element Types and Accessor Methods</a></li><li><a href="#Initializing-with-new">Initializing with new</a></li></ul><li><a href="#EXAMPLES">EXAMPLES</a></li><li><a href="#Author-and-Modification-History">Author and Modification History</a></li></ul><a class='view-head1' id="NAME"></a><h2 class='h2' >NAME</h2>
+<p>Class::Struct - declare struct-like datatypes as Perl classes</p>
+<a class='view-head1' id="SYNOPSIS"></a><h2 class='h2' >SYNOPSIS</h2>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">Class::Struct</span><span class="sc">;</span></li><li>            <span class="c"># declare struct, based on array:</span></li><li>    <span class="i">struct</span><span class="s">(</span> <span class="w">CLASS_NAME</span> <span class="cm">=&gt;</span> <span class="s">[</span> <span class="w">ELEMENT_NAME</span> <span class="cm">=&gt;</span> <span class="w">ELEMENT_TYPE</span><span class="cm">,</span> ... <span class="s">]</span><span class="s">)</span><span class="sc">;</span></li><li>            <span class="c"># declare struct, based on hash:</span></li><li>    <span class="i">struct</span><span class="s">(</span> <span class="w">CLASS_NAME</span> <span class="cm">=&gt;</span> <span class="s">{</span> <span class="w">ELEMENT_NAME</span> <span class="cm">=&gt;</span> <span class="w">ELEMENT_TYPE</span><span class="cm">,</span> ... <span class="s">}</span><span class="s">)</span><span class="sc">;</span></li><li></li><li><a name="package-CLASS_NAME"></a>    package <span class="i">CLASS_NAME</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">Class::Struct</span><span class="sc">;</span></li><li>            <span class="c"># declare struct, based on array, implicit class name:</span></li><li>    <span class="i">struct</span><span class="s">(</span> <span class="w">ELEMENT_NAME</span> <span class="cm">=&gt;</span> <span class="w">ELEMENT_TYPE</span><span class="cm">,</span> ... <span class="s">)</span><span class="sc">;</span></li><li></li><li>    <span class="c"># Declare struct at compile time</span></li><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">Class::Struct</span> <span class="w">CLASS_NAME</span> <span class="cm">=&gt;</span> <span class="s">[</span> <span class="w">ELEMENT_NAME</span> <span class="cm">=&gt;</span> <span class="w">ELEMENT_TYPE</span><span class="cm">,</span> ... <span class="s">]</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">Class::Struct</span> <span class="w">CLASS_NAME</span> <span class="cm">=&gt;</span> <span class="s">{</span> <span class="w">ELEMENT_NAME</span> <span class="cm">=&gt;</span> <span class="w">ELEMENT_TYPE</span><span class="cm">,</span> ... <span class="s">}</span><span class="sc">;</span></li><li></li><li>    <span class="c"># declare struct at compile time, based on array, implicit class name:</span></li><li><a name="package-CLASS_NAME-1"></a>    package <span class="i">CLASS_NAME</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">Class::Struct</span> <span class="w">ELEMENT_NAME</span> <span class="cm">=&gt;</span> <span class="w">ELEMENT_TYPE</span><span class="cm">,</span> ... <span class="sc">;</span></li><li></li><li><a name="package-Myobj"></a>    package <span class="i">Myobj</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">Class::Struct</span><span class="sc">;</span></li><li>            <span class="c"># declare struct with four types of elements:</span></li><li>    <span class="i">struct</span><span class="s">(</span> <span class="w">s</span> <span class="cm">=&gt;</span> <span class="q">&#39;$&#39;</span><span class="cm">,</span> <span class="w">a</span> <span class="cm">=&gt;</span> <span class="q">&#39;@&#39;</span><span class="cm">,</span> <span class="w">h</span> <span class="cm">=&gt;</span> <span class="q">&#39;%&#39;</span><span class="cm">,</span> <span class="w">c</span> <span class="cm">=&gt;</span> <span class="q">&#39;My_Other_Class&#39;</span> <span class="s">)</span><span class="sc">;</span></li><li></li><li>    <span class="i">$obj</span> = <span class="w">new</span> <span class="w">Myobj</span><span class="sc">;</span>               <span class="c"># constructor</span></li><li></li><li>                                    <span class="c"># scalar type accessor:</span></li><li>    <span class="i">$element_value</span> = <span class="i">$obj</span><span class="i">-&gt;s</span><span class="sc">;</span>           <span class="c"># element value</span></li><li>    <span class="i">$obj</span><span class="i">-&gt;s</span><span class="s">(</span><span class="q">&#39;new value&#39;</span><span class="s">)</span><span class="sc">;</span>               <span class="c"># assign to element</span></li><li></li><li>                                    <span class="c"># array type accessor:</span></li><li>    <span class="i">$ary_ref</span> = <span class="i">$obj</span><span class="i">-&gt;a</span><span class="sc">;</span>                 <span class="c"># reference to whole array</span></li><li>    <span class="i">$ary_element_value</span> = <span class="i">$obj</span><span class="i">-&gt;a</span><span class="s">(</span><span class="n">2</span><span class="s">)</span><span class="sc">;</span>    <span class="c"># array element value</span></li><li>    <span class="i">$obj</span><span class="i">-&gt;a</span><span class="s">(</span><span class="n">2</span><span class="cm">,</span> <span class="q">&#39;new value&#39;</span><span class="s">)</span><span class="sc">;</span>            <span class="c"># assign to array element</span></li><li></li><li>                                    <span class="c"># hash type accessor:</span></li><li>    <span class="i">$hash_ref</span> = <span class="i">$obj</span><span class="i">-&gt;h</span><span class="sc">;</span>                <span class="c"># reference to whole hash</span></li><li>    <span class="i">$hash_element_value</span> = <span class="i">$obj</span><span class="i">-&gt;h</span><span class="s">(</span><span class="q">&#39;x&#39;</span><span class="s">)</span><span class="sc">;</span> <span class="c"># hash element value</span></li><li>    <span class="i">$obj</span><span class="i">-&gt;h</span><span class="s">(</span><span class="q">&#39;x&#39;</span><span class="cm">,</span> <span class="q">&#39;new value&#39;</span><span class="s">)</span><span class="sc">;</span>          <span class="c"># assign to hash element</span></li><li></li><li>                                    <span class="c"># class type accessor:</span></li><li>    <span class="i">$element_value</span> = <span class="i">$obj</span><span class="i">-&gt;c</span><span class="sc">;</span>           <span class="c"># object reference</span></li><li>    <span class="i">$obj</span><span class="i">-&gt;c</span><span class="i">-&gt;method</span><span class="s">(</span>...<span class="s">)</span><span class="sc">;</span>               <span class="c"># call method of object</span></li><li>    <span class="i">$obj</span><span class="i">-&gt;c</span><span class="s">(</span><span class="w">new</span> <span class="w">My_Other_Class</span><span class="s">)</span><span class="sc">;</span>        <span class="c"># assign a new object</span></li></ol></pre><a class='view-head1' id="DESCRIPTION"></a><h2 class='h2' >DESCRIPTION</h2>
+<p><code class="inline"><span class="w">Class::Struct</span></code>
+ exports a single function, <code class="inline"><span class="w">struct</span></code>
+.
+Given a list of element names and types, and optionally
+a class name, <code class="inline"><span class="w">struct</span></code>
+ creates a Perl 5 class that implements
+a "struct-like" data structure.</p>
+<p>The new class is given a constructor method, <code class="inline"><span class="w">new</span></code>
+, for creating
+struct objects.</p>
+<p>Each element in the struct data has an accessor method, which is
+used to assign to the element and to fetch its value.  The
+default accessor can be overridden by declaring a <code class="inline"><a class="l_k" href="../functions/sub.html">sub</a></code> of the
+same name in the package.  (See Example 2.)</p>
+<p>Each element's type can be scalar, array, hash, or class.</p>
+<a class='view-head2' id="The-struct()-function"></a><h3 class='h3' >The <code class="inline"><span class="i">struct</span><span class="s">(</span><span class="s">)</span></code>
+ function</h3>
+<p>The <code class="inline"><span class="w">struct</span></code>
+ function has three forms of parameter-list.</p>
+<pre class="verbatim"><ol><li>    <span class="i">struct</span><span class="s">(</span> <span class="w">CLASS_NAME</span> <span class="cm">=&gt;</span> <span class="s">[</span> <span class="w">ELEMENT_LIST</span> <span class="s">]</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="i">struct</span><span class="s">(</span> <span class="w">CLASS_NAME</span> <span class="cm">=&gt;</span> <span class="s">{</span> <span class="w">ELEMENT_LIST</span> <span class="s">}</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="i">struct</span><span class="s">(</span> <span class="w">ELEMENT_LIST</span> <span class="s">)</span><span class="sc">;</span></li></ol></pre><p>The first and second forms explicitly identify the name of the
+class being created.  The third form assumes the current package
+name as the class name.</p>
+<p>An object of a class created by the first and third forms is
+based on an array, whereas an object of a class created by the
+second form is based on a hash. The array-based forms will be
+somewhat faster and smaller; the hash-based forms are more
+flexible.</p>
+<p>The class created by <code class="inline"><span class="w">struct</span></code>
+ must not be a subclass of another
+class other than <code class="inline"><span class="w">UNIVERSAL</span></code>
+.</p>
+<p>It can, however, be used as a superclass for other classes. To facilitate
+this, the generated constructor method uses a two-argument blessing.
+Furthermore, if the class is hash-based, the key of each element is
+prefixed with the class name (see <i>Perl Cookbook</i>, Recipe 13.12).</p>
+<p>A function named <code class="inline"><span class="w">new</span></code>
+ must not be explicitly defined in a class
+created by <code class="inline"><span class="w">struct</span></code>
+.</p>
+<p>The <i>ELEMENT_LIST</i> has the form</p>
+<pre class="verbatim"><ol><li>    <span class="w">NAME</span> <span class="cm">=&gt;</span> <span class="w">TYPE</span><span class="cm">,</span> ...</li></ol></pre><p>Each name-type pair declares one element of the struct. Each
+element name will be defined as an accessor method unless a
+method by that name is explicitly defined; in the latter case, a
+warning is issued if the warning flag (<strong>-w</strong>) is set.</p>
+<a class='view-head2' id="Class-Creation-at-Compile-Time"></a><h3 class='h3' >Class Creation at Compile Time</h3>
+<p><code class="inline"><span class="w">Class::Struct</span></code>
+ can create your class at compile time.  The main reason
+for doing this is obvious, so your class acts like every other class in
+Perl.  Creating your class at compile time will make the order of events
+similar to using any other class ( or Perl module ).</p>
+<p>There is no significant speed gain between compile time and run time
+class creation, there is just a new, more standard order of events.</p>
+<a class='view-head2' id="Element-Types-and-Accessor-Methods"></a><h3 class='h3' >Element Types and Accessor Methods</h3>
+<p>The four element types -- scalar, array, hash, and class -- are
+represented by strings -- <code class="inline"><span class="q">&#39;$&#39;</span></code>
+, <code class="inline"><span class="q">&#39;@&#39;</span></code>
+, <code class="inline"><span class="q">&#39;%&#39;</span></code>
+, and a class name --
+optionally preceded by a <code class="inline"><span class="q">&#39;*&#39;</span></code>
+.</p>
+<p>The accessor method provided by <code class="inline"><span class="w">struct</span></code>
+ for an element depends
+on the declared type of the element.</p>
+<ul>
+<li><a class='view-title' id="Scalar-('%24'-or-'*%24')"></a><strong>Scalar (<code class="inline"><span class="q">&#39;$&#39;</span></code>
+ or <code class="inline"><span class="q">&#39;*$&#39;</span></code>
+)</strong>
+<p>The element is a scalar, and by default is initialized to <code class="inline"><a class="l_k" href="../functions/undef.html">undef</a></code>
+(but see <a href="#Initializing-with-new">Initializing with new</a>).</p>
+<p>The accessor's argument, if any, is assigned to the element.</p>
+<p>If the element type is <code class="inline"><span class="q">&#39;$&#39;</span></code>
+, the value of the element (after
+assignment) is returned. If the element type is <code class="inline"><span class="q">&#39;*$&#39;</span></code>
+, a reference
+to the element is returned.</p>
+</li>
+<li><a class='view-title' id="Array-('%40'-or-'*%40')"></a><strong>Array (<code class="inline"><span class="q">&#39;@&#39;</span></code>
+ or <code class="inline"><span class="q">&#39;*@&#39;</span></code>
+)</strong>
+<p>The element is an array, initialized by default to <code class="inline"><span class="s">(</span><span class="s">)</span></code>
+.</p>
+<p>With no argument, the accessor returns a reference to the
+element's whole array (whether or not the element was
+specified as <code class="inline"><span class="q">&#39;@&#39;</span></code>
+ or <code class="inline"><span class="q">&#39;*@&#39;</span></code>
+).</p>
+<p>With one or two arguments, the first argument is an index
+specifying one element of the array; the second argument, if
+present, is assigned to the array element.  If the element type
+is <code class="inline"><span class="q">&#39;@&#39;</span></code>
+, the accessor returns the array element value.  If the
+element type is <code class="inline"><span class="q">&#39;*@&#39;</span></code>
+, a reference to the array element is
+returned.</p>
+<p>As a special case, when the accessor is called with an array reference
+as the sole argument, this causes an assignment of the whole array element.
+The object reference is returned.</p>
+</li>
+<li><a class='view-title' id="Hash-('%25'-or-'*%25')"></a><strong>Hash (<code class="inline"><span class="q">&#39;%&#39;</span></code>
+ or <code class="inline"><span class="q">&#39;*%&#39;</span></code>
+)</strong>
+<p>The element is a hash, initialized by default to <code class="inline"><span class="s">(</span><span class="s">)</span></code>
+.</p>
+<p>With no argument, the accessor returns a reference to the
+element's whole hash (whether or not the element was
+specified as <code class="inline"><span class="q">&#39;%&#39;</span></code>
+ or <code class="inline"><span class="q">&#39;*%&#39;</span></code>
+).</p>
+<p>With one or two arguments, the first argument is a key specifying
+one element of the hash; the second argument, if present, is
+assigned to the hash element.  If the element type is <code class="inline"><span class="q">&#39;%&#39;</span></code>
+, the
+accessor returns the hash element value.  If the element type is
+<code class="inline"><span class="q">&#39;*%&#39;</span></code>
+, a reference to the hash element is returned.</p>
+<p>As a special case, when the accessor is called with a hash reference
+as the sole argument, this causes an assignment of the whole hash element.
+The object reference is returned.</p>
+</li>
+<li><a class='view-title' id="Class-('Class_Name'-or-'*Class_Name')"></a><strong>Class (<code class="inline"><span class="q">&#39;Class_Name&#39;</span></code>
+ or <code class="inline"><span class="q">&#39;*Class_Name&#39;</span></code>
+)</strong>
+<p>The element's value must be a reference blessed to the named
+class or to one of its subclasses. The element is not initialized
+by default.</p>
+<p>The accessor's argument, if any, is assigned to the element. The
+accessor will <code class="inline"><span class="w">croak</span></code>
+ if this is not an appropriate object
+reference.</p>
+<p>If the element type does not start with a <code class="inline"><span class="q">&#39;*&#39;</span></code>
+, the accessor
+returns the element value (after assignment). If the element type
+starts with a <code class="inline"><span class="q">&#39;*&#39;</span></code>
+, a reference to the element itself is returned.</p>
+</li>
+</ul>
+<a class='view-head2' id="Initializing-with-new"></a><h3 class='h3' >Initializing with <code class="inline"><span class="w">new</span></code>
+</h3>
+<p><code class="inline"><span class="w">struct</span></code>
+ always creates a constructor called <code class="inline"><span class="w">new</span></code>
+. That constructor
+may take a list of initializers for the various elements of the new
+struct.</p>
+<p>Each initializer is a pair of values: <i>element name</i><code class="inline"> <span class="cm">=&gt;</span> </code>
+<i>value</i>.
+The initializer value for a scalar element is just a scalar value. The 
+initializer for an array element is an array reference. The initializer
+for a hash is a hash reference.</p>
+<p>The initializer for a class element is an object of the corresponding class,
+or of one of it's subclasses, or a reference to a hash containing named 
+arguments to be passed to the element's constructor.</p>
+<p>See Example 3 below for an example of initialization.</p>
+<a class='view-head1' id="EXAMPLES"></a><h2 class='h2' >EXAMPLES</h2>
+<ul>
+<li><a class='view-title' id="Example-1"></a><strong>Example 1</strong>
+<p>Giving a struct element a class type that is also a struct is how
+structs are nested.  Here, <code class="inline"><span class="w">Timeval</span></code>
+ represents a time (seconds and
+microseconds), and <code class="inline"><span class="w">Rusage</span></code>
+ has two elements, each of which is of
+type <code class="inline"><span class="w">Timeval</span></code>
+.</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">Class::Struct</span><span class="sc">;</span></li><li></li><li>    <span class="i">struct</span><span class="s">(</span> <span class="w">Rusage</span> <span class="cm">=&gt;</span> <span class="s">{</span></li><li>        <span class="w">ru_utime</span> <span class="cm">=&gt;</span> <span class="q">&#39;Timeval&#39;</span><span class="cm">,</span>  <span class="c"># user time used</span></li><li>        <span class="w">ru_stime</span> <span class="cm">=&gt;</span> <span class="q">&#39;Timeval&#39;</span><span class="cm">,</span>  <span class="c"># system time used</span></li><li>    <span class="s">}</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>    <span class="i">struct</span><span class="s">(</span> <span class="w">Timeval</span> <span class="cm">=&gt;</span> <span class="s">[</span></li><li>        <span class="w">tv_secs</span>  <span class="cm">=&gt;</span> <span class="q">&#39;$&#39;</span><span class="cm">,</span>        <span class="c"># seconds</span></li><li>        <span class="w">tv_usecs</span> <span class="cm">=&gt;</span> <span class="q">&#39;$&#39;</span><span class="cm">,</span>        <span class="c"># microseconds</span></li><li>    <span class="s">]</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>        <span class="c"># create an object:</span></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">$t</span> = <span class="w">Rusage</span><span class="w">-&gt;new</span><span class="s">(</span><span class="w">ru_utime</span><span class="cm">=&gt;</span><span class="w">Timeval</span><span class="w">-&gt;new</span><span class="s">(</span><span class="s">)</span><span class="cm">,</span> <span class="w">ru_stime</span><span class="cm">=&gt;</span><span class="w">Timeval</span><span class="w">-&gt;new</span><span class="s">(</span><span class="s">)</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>        <span class="c"># $t-&gt;ru_utime and $t-&gt;ru_stime are objects of type Timeval.</span></li><li>        <span class="c"># set $t-&gt;ru_utime to 100.0 sec and $t-&gt;ru_stime to 5.0 sec.</span></li><li>    <span class="i">$t</span><span class="i">-&gt;ru_utime</span><span class="i">-&gt;tv_secs</span><span class="s">(</span><span class="n">100</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="i">$t</span><span class="i">-&gt;ru_utime</span><span class="i">-&gt;tv_usecs</span><span class="s">(</span><span class="n">0</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="i">$t</span><span class="i">-&gt;ru_stime</span><span class="i">-&gt;tv_secs</span><span class="s">(</span><span class="n">5</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="i">$t</span><span class="i">-&gt;ru_stime</span><span class="i">-&gt;tv_usecs</span><span class="s">(</span><span class="n">0</span><span class="s">)</span><span class="sc">;</span></li></ol></pre></li>
+<li><a class='view-title' id="Example-2"></a><strong>Example 2</strong>
+<p>An accessor function can be redefined in order to provide
+additional checking of values, etc.  Here, we want the <code class="inline"><span class="w">count</span></code>
+
+element always to be nonnegative, so we redefine the <code class="inline"><span class="w">count</span></code>
+
+accessor accordingly.</p>
+<pre class="verbatim"><ol><li><a name="package-MyObj"></a>    package <span class="i">MyObj</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">Class::Struct</span><span class="sc">;</span></li><li></li><li>    <span class="c"># declare the struct</span></li><li>    <span class="w">struct</span> <span class="s">(</span> <span class="q">&#39;MyObj&#39;</span><span class="cm">,</span> <span class="s">{</span> <span class="w">count</span> <span class="cm">=&gt;</span> <span class="q">&#39;$&#39;</span><span class="cm">,</span> <span class="w">stuff</span> <span class="cm">=&gt;</span> <span class="q">&#39;%&#39;</span> <span class="s">}</span> <span class="s">)</span><span class="sc">;</span></li><li></li><li>    <span class="c"># override the default accessor method for &#39;count&#39;</span></li><li><a name="count"></a>    sub <span class="m">count</span> <span class="s">{</span></li><li>        <a class="l_k" href="../functions/my.html">my</a> <span class="i">$self</span> = <a class="l_k" href="../functions/shift.html">shift</a><span class="sc">;</span></li><li>        if <span class="s">(</span> <span class="i">@_</span> <span class="s">)</span> <span class="s">{</span></li><li>            <a class="l_k" href="../functions/die.html">die</a> <span class="q">&#39;count must be nonnegative&#39;</span> if <span class="i">$_</span>[<span class="n">0</span>] &lt; <span class="n">0</span><span class="sc">;</span></li><li>            <span class="i">$self</span>-&gt;{<span class="q">&#39;MyObj::count&#39;</span>} = <a class="l_k" href="../functions/shift.html">shift</a><span class="sc">;</span></li><li>            <a class="l_k" href="../functions/warn.html">warn</a> <span class="q">&quot;Too many args to count&quot;</span> if <span class="i">@_</span><span class="sc">;</span></li><li>        <span class="s">}</span></li><li>        <a class="l_k" href="../functions/return.html">return</a> <span class="i">$self</span>-&gt;{<span class="q">&#39;MyObj::count&#39;</span>}<span class="sc">;</span></li><li>    <span class="s">}</span></li><li></li><li><a name="package-main"></a>    package <span class="i">main</span><span class="sc">;</span></li><li>    <span class="i">$x</span> = <span class="w">new</span> <span class="w">MyObj</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/print.html">print</a> <span class="q">&quot;\$x-&gt;count(5) = &quot;</span><span class="cm">,</span> <span class="i">$x</span><span class="i">-&gt;count</span><span class="s">(</span><span class="n">5</span><span class="s">)</span><span class="cm">,</span> <span class="q">&quot;\n&quot;</span><span class="sc">;</span></li><li>                            <span class="c"># prints &#39;$x-&gt;count(5) = 5&#39;</span></li><li></li><li>    <a class="l_k" href="../functions/print.html">print</a> <span class="q">&quot;\$x-&gt;count = &quot;</span><span class="cm">,</span> <span class="i">$x</span><span class="i">-&gt;count</span><span class="cm">,</span> <span class="q">&quot;\n&quot;</span><span class="sc">;</span></li><li>                            <span class="c"># prints &#39;$x-&gt;count = 5&#39;</span></li><li></li><li>    <a class="l_k" href="../functions/print.html">print</a> <span class="q">&quot;\$x-&gt;count(-5) = &quot;</span><span class="cm">,</span> <span class="i">$x</span><span class="i">-&gt;count</span><span class="s">(</span><span class="n">-5</span><span class="s">)</span><span class="cm">,</span> <span class="q">&quot;\n&quot;</span><span class="sc">;</span></li><li>                            <span class="c"># dies due to negative argument!</span></li></ol></pre></li>
+<li><a class='view-title' id="Example-3"></a><strong>Example 3</strong>
+<p>The constructor of a generated class can be passed a list
+of <i>element</i>=&gt;<i>value</i> pairs, with which to initialize the struct.
+If no initializer is specified for a particular element, its default
+initialization is performed instead. Initializers for non-existent
+elements are silently ignored.</p>
+<p>Note that the initializer for a nested class may be specified as
+an object of that class, or as a reference to a hash of initializers
+that are passed on to the nested struct's constructor.</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">Class::Struct</span><span class="sc">;</span></li><li></li><li>    <span class="w">struct</span> <span class="w">Breed</span> <span class="cm">=&gt;</span></li><li>    <span class="s">{</span></li><li>        <span class="w">name</span>  <span class="cm">=&gt;</span> <span class="q">&#39;$&#39;</span><span class="cm">,</span></li><li>        <span class="w">cross</span> <span class="cm">=&gt;</span> <span class="q">&#39;$&#39;</span><span class="cm">,</span></li><li>    <span class="s">}</span><span class="sc">;</span></li><li></li><li>    <span class="w">struct</span> <span class="w">Cat</span> <span class="cm">=&gt;</span></li><li>    <span class="s">[</span></li><li>        <span class="w">name</span>     <span class="cm">=&gt;</span> <span class="q">&#39;$&#39;</span><span class="cm">,</span></li><li>        <span class="w">kittens</span>  <span class="cm">=&gt;</span> <span class="q">&#39;@&#39;</span><span class="cm">,</span></li><li>        <span class="w">markings</span> <span class="cm">=&gt;</span> <span class="q">&#39;%&#39;</span><span class="cm">,</span></li><li>        <span class="w">breed</span>    <span class="cm">=&gt;</span> <span class="q">&#39;Breed&#39;</span><span class="cm">,</span></li><li>    <span class="s">]</span><span class="sc">;</span></li><li></li><li></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">$cat</span> = <span class="w">Cat</span><span class="w">-&gt;new</span><span class="s">(</span> <span class="w">name</span>     <span class="cm">=&gt;</span> <span class="q">&#39;Socks&#39;</span><span class="cm">,</span></li><li>                        <span class="w">kittens</span>  <span class="cm">=&gt;</span> <span class="s">[</span><span class="q">&#39;Monica&#39;</span><span class="cm">,</span> <span class="q">&#39;Kenneth&#39;</span><span class="s">]</span><span class="cm">,</span></li><li>                        <span class="w">markings</span> <span class="cm">=&gt;</span> <span class="s">{</span> <span class="w">socks</span><span class="cm">=&gt;</span><span class="n">1</span><span class="cm">,</span> <span class="w">blaze</span><span class="cm">=&gt;</span><span class="q">&quot;white&quot;</span> <span class="s">}</span><span class="cm">,</span></li><li>                        <span class="w">breed</span>    <span class="cm">=&gt;</span> <span class="w">Breed</span><span class="w">-&gt;new</span><span class="s">(</span><span class="w">name</span><span class="cm">=&gt;</span><span class="q">&#39;short-hair&#39;</span><span class="cm">,</span> <span class="w">cross</span><span class="cm">=&gt;</span><span class="n">1</span><span class="s">)</span><span class="cm">,</span></li><li>                   or<span class="co">:</span>  <span class="w">breed</span>    <span class="cm">=&gt;</span> <span class="s">{</span><span class="w">name</span><span class="cm">=&gt;</span><span class="q">&#39;short-hair&#39;</span><span class="cm">,</span> <span class="w">cross</span><span class="cm">=&gt;</span><span class="n">1</span><span class="s">}</span><span class="cm">,</span></li><li>                      <span class="s">)</span><span class="sc">;</span></li><li></li><li>    <a class="l_k" href="../functions/print.html">print</a> <span class="q">&quot;Once a cat called &quot;</span><span class="cm">,</span> <span class="i">$cat</span><span class="i">-&gt;name</span><span class="cm">,</span> <span class="q">&quot;\n&quot;</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/print.html">print</a> <span class="q">&quot;(which was a &quot;</span><span class="cm">,</span> <span class="i">$cat</span><span class="i">-&gt;breed</span><span class="i">-&gt;name</span><span class="cm">,</span> <span class="q">&quot;)\n&quot;</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/print.html">print</a> <span class="q">&quot;had two kittens: &quot;</span><span class="cm">,</span> <a class="l_k" href="../functions/join.html">join</a><span class="s">(</span><span class="q">&#39; and &#39;</span><span class="cm">,</span> <span class="i">@</span>{<span class="i">$cat</span><span class="i">-&gt;kittens</span>}<span class="s">)</span><span class="cm">,</span> <span class="q">&quot;\n&quot;</span><span class="sc">;</span></li></ol></pre></li>
+</ul>
+<a class='view-head1' id="Author-and-Modification-History"></a><h2 class='h2' >Author and Modification History</h2>
+<p>Modified by Damian Conway, 2001-09-10, v0.62.</p>
+<pre class="verbatim"><ol><li>   <span class="w">Modified</span> <span class="w">implicit</span> <span class="w">construction</span> <span class="w">of</span> <span class="w">nested</span> <span class="w">objects</span>.</li><li>   <span class="w">Now</span> <span class="w">will</span> <span class="w">also</span> <span class="w">take</span> <span class="w">an</span> <span class="w">object</span> <a class="l_k" href="../functions/ref.html">ref</a> <span class="w">instead</span> <span class="w">of</span> <span class="w">requiring</span> <span class="w">a</span> <span class="w">hash</span> <a class="l_k" href="../functions/ref.html">ref</a>.</li><li>   <span class="w">Also</span> <span class="w">default</span> <span class="w">initializes</span> <span class="w">nested</span> <span class="w">object</span> <span class="w">attributes</span> <span class="w">to</span> <a class="l_k" href="../functions/undef.html">undef</a><span class="cm">,</span> <span class="w">rather</span></li><li>   <span class="w">than</span> <span class="w">calling</span> <span class="w">object</span> <span class="w">constructor</span> <span class="w">without</span> <span class="w">args</span></li><li>   <span class="w">Original</span> <span class="w">over</span>-<span class="w">helpfulness</span> <span class="w">was</span> <span class="w">fraught</span> <span class="w">with</span> <span class="w">problems</span><span class="co">:</span></li><li>       <span class="i">* the</span> <span class="w">class&#39;s</span> <span class="w">constructor</span> <span class="w">might</span> not <span class="w">be</span> <span class="w">called</span> <span class="q">&#39;new&#39;</span></li><li>       * <span class="w">the</span> <span class="w">class</span> <span class="w">might</span> not <span class="w">have</span> <span class="w">a</span> <span class="w">hash</span>-<span class="w">like</span>-<span class="w">arguments</span> <span class="w">constructor</span></li><li>       * <span class="w">the</span> <span class="w">class</span> <span class="w">might</span> not <span class="w">have</span> <span class="w">a</span> <a class="l_k" href="../functions/no.html">no</a>-<span class="w">argument</span> <span class="w">constructor</span></li><li>       * <span class="q">&quot;recursive&quot;</span> <span class="w">data</span> <span class="w">structures</span> <span class="w">didn&#39;t</span> <span class="w">work</span> <span class="w">well</span><span class="co">:</span></li><li><a name="package-Person"></a>                 package <span class="i">Person</span><span class="sc">;</span></li><li>                 <span class="w">struct</span> <span class="s">{</span> <span class="w">mother</span> <span class="cm">=&gt;</span> <span class="q">&#39;Person&#39;</span><span class="cm">,</span> <span class="w">father</span> <span class="cm">=&gt;</span> <span class="q">&#39;Person&#39;</span><span class="s">}</span><span class="sc">;</span></li></ol></pre><p>Modified by Casey West, 2000-11-08, v0.59.</p>
+<pre class="verbatim"><ol><li>    <span class="w">Added</span> <span class="w">the</span> <span class="w">ability</span> for <span class="w">compile</span> <a class="l_k" href="../functions/time.html">time</a> <span class="w">class</span> <span class="w">creation</span>.</li></ol></pre><p>Modified by Damian Conway, 1999-03-05, v0.58.</p>
+<pre class="verbatim"><ol><li>    <span class="w">Added</span> <span class="w">handling</span> <span class="w">of</span> <span class="w">hash</span>-<span class="w">like</span> <span class="w">arg</span> <span class="w">list</span> <span class="w">to</span> <span class="w">class</span> <span class="w">ctor</span>.</li><li></li><li>    <span class="w">Changed</span> <span class="w">to</span> <span class="w">two</span>-<span class="w">argument</span> <span class="w">blessing</span> <span class="w">in</span> <span class="w">ctor</span> <span class="w">to</span> <span class="w">support</span></li><li>    <span class="w">derivation</span> <span class="w">from</span> <span class="w">created</span> <span class="w">classes</span>.</li><li></li><li>    <span class="w">Added</span> <span class="w">classname</span> <span class="w">prefixes</span> <span class="w">to</span> <a class="l_k" href="../functions/keys.html">keys</a> <span class="w">in</span> <span class="w">hash</span>-<span class="w">based</span> <span class="i">classes</span></li><li>    <span class="s">(</span><span class="w">refer</span> <span class="w">to</span> <span class="q">&quot;Perl Cookbook&quot;</span><span class="cm">,</span> <span class="w">Recipe</span> <span class="n">13.12</span> for <span class="w">rationale</span><span class="s">)</span>.</li><li></li><li>    <span class="w">Corrected</span> <span class="w">behaviour</span> <span class="w">of</span> <span class="w">accessors</span> for <span class="q">&#39;*@&#39;</span> and <span class="q">&#39;*%&#39;</span> <span class="w">struct</span></li><li>    <span class="w">elements</span>.  <span class="w">Package</span> <span class="w">now</span> <span class="w">implements</span> <span class="w">documented</span> <span class="w">behaviour</span> when</li><li>    <span class="w">returning</span> <span class="w">a</span> <span class="w">reference</span> <span class="w">to</span> <span class="w">an</span> <span class="w">entire</span> <span class="w">hash</span> or <span class="w">array</span> <span class="w">element</span>.</li><li>    <span class="w">Previously</span> <span class="w">these</span> <span class="w">were</span> <span class="w">returned</span> <span class="w">as</span> <span class="w">a</span> <span class="w">reference</span> <span class="w">to</span> <span class="w">a</span> <span class="w">reference</span></li><li>    <span class="w">to</span> <span class="w">the</span> <span class="w">element</span>.</li></ol></pre><p>Renamed to <code class="inline"><span class="w">Class::Struct</span></code>
+ and modified by Jim Miner, 1997-04-02.</p>
+<pre class="verbatim"><ol><li>    <span class="i">members</span><span class="s">(</span><span class="s">)</span> <span class="w">function</span> <span class="w">removed</span>.</li><li>    <span class="w">Documentation</span> <span class="w">corrected</span> and <span class="w">extended</span>.</li><li>    <span class="w">Use</span> <span class="w">of</span> <span class="i">struct</span><span class="s">(</span><span class="s">)</span> <span class="w">in</span> <span class="w">a</span> <span class="w">subclass</span> <span class="w">prohibited</span>.</li><li>    <span class="w">User</span> <span class="w">definition</span> <span class="w">of</span> <span class="w">accessor</span> <span class="w">allowed</span>.</li><li>    <span class="w">Treatment</span> <span class="w">of</span> <span class="q">&#39;*&#39;</span> <span class="w">in</span> <span class="w">element</span> <span class="w">types</span> <span class="w">corrected</span>.</li><li>    <span class="w">Treatment</span> <span class="w">of</span> <span class="w">classes</span> <span class="w">as</span> <span class="w">element</span> <span class="w">types</span> <span class="w">corrected</span>.</li><li>    <span class="w">Class</span> <span class="w">name</span> <span class="w">to</span> <span class="i">struct</span><span class="s">(</span><span class="s">)</span> <span class="w">made</span> <span class="w">optional</span>.</li><li>    <span class="w">Diagnostic</span> <span class="w">checks</span> <span class="w">added</span>.</li></ol></pre><p>Originally <code class="inline"><span class="w">Class::Template</span></code>
+ by Dean Roehrich.</p>
+<pre class="verbatim"><ol><li>    <span class="c"># Template.pm   --- struct/member template builder</span></li><li>    <span class="c">#   12mar95</span></li><li>    <span class="c">#   Dean Roehrich</span></li><li>    <span class="c">#</span></li><li>    <span class="c"># changes/bugs fixed since 28nov94 version:</span></li><li>    <span class="c">#  - podified</span></li><li>    <span class="c"># changes/bugs fixed since 21nov94 version:</span></li><li>    <span class="c">#  - Fixed examples.</span></li><li>    <span class="c"># changes/bugs fixed since 02sep94 version:</span></li><li>    <span class="c">#  - Moved to Class::Template.</span></li><li>    <span class="c"># changes/bugs fixed since 20feb94 version:</span></li><li>    <span class="c">#  - Updated to be a more proper module.</span></li><li>    <span class="c">#  - Added &quot;use strict&quot;.</span></li><li>    <span class="c">#  - Bug in build_methods, was using @var when @$var needed.</span></li><li>    <span class="c">#  - Now using my() rather than local().</span></li><li>    <span class="c">#</span></li><li>    <span class="c"># Uses perl5 classes to create nested data types.</span></li><li>    <span class="c"># This is offered as one implementation of Tom Christiansen&#39;s &quot;structs.pl&quot;</span></li><li>    <span class="c"># idea.</span></li></ol></pre>
+
+
+
+      <ul><li><a href="#NAME">NAME</a></li><li><a href="#SYNOPSIS">SYNOPSIS</a></li><li><a href="#DESCRIPTION">DESCRIPTION</a></li><ul><li><a href="#The-struct()-function">The struct() function</a></li><li><a href="#Class-Creation-at-Compile-Time">Class Creation at Compile Time</a></li><li><a href="#Element-Types-and-Accessor-Methods">Element Types and Accessor Methods</a></li><li><a href="#Initializing-with-new">Initializing with new</a></li></ul><li><a href="#EXAMPLES">EXAMPLES</a></li><li><a href="#Author-and-Modification-History">Author and Modification History</a></li></ul>
+
+
+                  </div>
+                </article>
+              </div>
+            </div>
+          </main>
+        </div>
+           <footer class="footer row bg-light pt-5 pb-5">
+       <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+           <div class="row">
+               <div class="col-md-4">
+                   <ul class="list-unstyled">
+                       <li>
+                           <h4>Site info</h4>
+                       </li>
+                       <li>Docs mantained by
+                           <a href="//lists.perl.org/list/perl5-porters.html"
+                               rel="noopener">Perl 5 Porters</a>
+                       </li>
+                       <li>Perldoc site development sponsored by
+                           <a href="//opusvl.com" rel="noopener">
+                           <img style="margin: 20px 20px 5px 10px" class="opus-logo" src="/public/img/opusvl_logo.svg" alt="OpusVL Logo">
+                        </a>
+                    <li><span class="about_perldoc"><a href="//about.html">About PerlDOC</a></span>
+                    </li>
+                       </li>
+                   </ul>
+               </div>
+               <div class="col-md-8">
+                   <div class="row">
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Manuals</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.14.0/index-overview.html">Overview</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.14.0/index-tutorials.html">Tutorials</a>
+                               </li>
+                               <li>
+                                   <a href="/5.14.0/index-faq.html">FAQs</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.14.0/index-history.html">Changes</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Reference</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.14.0/index-language.html">Language</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.14.0/index-functions.html">Functions</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.14.0/perlop.html">Operators</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.14.0/perlvar.html">Variables</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Modules</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.14.0/index-modules-A.html">Modules</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.14.0/index-pragmas.html">Pragmas</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.14.0/index-utilities.html">Utilities</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Misc</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.14.0/index-licence.html">License</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.14.0/index-internals.html">Internals</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.14.0/index-platforms.html">Platforms</a>
+                               </li>
+                            <li>
+                                <a
+                                    href="/5.14.0/index-about.html">About</a>
+                            </li>
+                           </ul>
+                       </div>
+                   </div>
+               </div>
+               <div class=" col-12 footer-inf text-center">
+                   <small>perldoc.perl.org - Official documentation for the Perl
+                       programming language</small>
+               </div>
+           </div>
+       </div>
+   </footer>
+
+        	<div class="beta-wrapper beta-bottom-right ">
+		<div class="beta beta-blue  ">
+			<a class="beta-link "
+				href="//github.com/OpusVL/perldoc.perl.org/issues/new" rel="noopener">
+				<span class="beta-text">
+					This website is a Beta release.
+				</span>
+				<span class="beta-text">
+					For any issues please raise a ticket on GitHub
+				</span>
+			</a>
+		</div>
+	</div>
+
+        <script src="/public/js/main.min.js"></script>
+      </body>
+
+      </html>

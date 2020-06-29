@@ -1,0 +1,837 @@
+      
+      
+      
+      
+
+      <!DOCTYPE html>
+      <html lang="en">
+
+      <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Pod::Simple::PullParser - perldoc.perl.org">
+        <link rel="icon" href="/public/img/favicon.ico">
+        <title>Pod::Simple::PullParser - perldoc.perl.org</title>
+        <link href="/public/css/main.min.css" rel="stylesheet">
+        <link rel="canonical" href="/Pod/Simple/PullParser.html">
+        <link
+          href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900'
+          rel='stylesheet' type='text/css'>
+        <script>
+          window.ga = window.ga || function () {
+            (ga.q = ga.q || []).push(arguments)
+          };
+          ga.l = +new Date;
+          ga('create', 'UA-1892152-2', 'auto'); // JJ's account
+          ga('create', 'UA-50555-3', 'auto', 'perlOrg'); // perl.org account
+          ga('require', 'outboundLinkTracker', {
+            events: ['click', 'auxclick', 'contextmenu'],
+          });
+          ga('require', 'maxScrollTracker');
+          ga('send', 'pageview');
+          ga('perlOrg.send', 'pageview');
+        </script>
+        <script async src="https://www.google-analytics.com/analytics.js">
+        </script>
+        <script async src="/public/js/tracking.min.js"></script>
+      </head>
+
+      <body class="body container-fluid ">
+        <div class="wrapper">
+
+          <nav
+    class="navbar navbar-dark bg-primary bg-perl fixed-top justify-content-between navbar-expand-lg">
+    <a href="#content" class="skippy sr-only sr-only-focusable">
+        <span class=' skippy-text'>Skip to main content</span>
+    </a>
+    <a class="navbar-brand" href="/">
+        <img class="logo" src="/public/img/logo_perl_doc.svg"
+            alt="Perl Documentation Logo" />
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse"
+        data-target="#navbar" aria-controls="navbar" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="navbar" class="collapse navbar-collapse ">
+        <ul class="navbar-nav ml-auto navbar-right">
+            <form class="nav-item dropdown search-wrapper">
+                <input type="text" id='searchinput' aria-describedby='navbarDropdown5'
+                    placeholder="Type query" class='search-input-field' value=''>
+
+                <button href="#" data-toggle='dropdown' type="button"
+                    aria-haspopup="true" aria-expanded='false' id="navbarDropdown5"
+                    class="nav-link dropdown-toggle search-link">
+                    <object tabindex='-1' focusable="false" class='search-icon'
+                        data="/public/img/search.svg" type="image/svg+xml"
+                        name='search icon'>search
+                        icon</object>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown5"
+                    id='search-results'>
+                    <p class='dropdown-item major-version'>
+                        No results
+                    </p>
+                </div>
+            </form>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown" href="#" class="nav-link dropdown-toggle"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Perl versions</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    
+                        <p class='dropdown-item major-version'>
+                            5.32
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.32.0/">5.32.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.30
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.3/">5.30.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.2/">5.30.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.1/">5.30.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.0/">5.30.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.28
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.3/">5.28.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.2/">5.28.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.1/">5.28.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.0/">5.28.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.26
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.3/">5.26.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.2/">5.26.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.1/">5.26.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.0/">5.26.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.24
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.4/">5.24.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.3/">5.24.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.2/">5.24.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.1/">5.24.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.0/">5.24.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.22
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.4/">5.22.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.3/">5.22.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.2/">5.22.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.1/">5.22.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.0/">5.22.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.20
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.3/">5.20.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.2/">5.20.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.1/">5.20.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.0/">5.20.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.18
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.4/">5.18.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.3/">5.18.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.2/">5.18.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.1/">5.18.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.0/">5.18.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.16
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.3/">5.16.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.2/">5.16.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.1/">5.16.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.0/">5.16.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.14
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.4/">5.14.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.3/">5.14.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.2/">5.14.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.1/">5.14.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.0/">5.14.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.12
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.5/">5.12.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.4/">5.12.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.3/">5.12.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.2/">5.12.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.1/">5.12.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.0/">5.12.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.10
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.1/">5.10.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.0/">5.10.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.8
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.9/">5.8.9</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.8/">5.8.8</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.7/">5.8.7</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.6/">5.8.6</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.5/">5.8.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.4/">5.8.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.3/">5.8.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.2/">5.8.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.1/">5.8.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.0/">5.8.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.6
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.2/">5.6.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.1/">5.6.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.0/">5.6.0</a>
+                        
+                        
+                    
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown1" href="#" class="dropdown-toggle nav-link"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Manuals</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                    <a class="dropdown-item"
+                        href="/5.22.4/index-overview.html">Overview</a>
+                    <a class="dropdown-item"
+                        href="/5.22.4/index-tutorials.html">Tutorials</a>
+                    <a class="dropdown-item"
+                        href="/5.22.4/index-faq.html">FAQs</a>
+                    <a class="dropdown-item"
+                        href="/5.22.4/index-history.html">Changes</a>
+                    <a class="dropdown-item"
+                        href="/5.22.4/index-licence.html">License</a>
+                    <a class="dropdown-item"
+                        href="/5.22.4/index-language.html">Language</a>
+                    <a class="dropdown-item"
+                        href="/5.22.4/index-functions.html">Functions</a>
+                    <a class="dropdown-item"
+                        href="/5.22.4/perlop.html">Operators</a>
+                    <a class="dropdown-item"
+                        href="/5.22.4/perlvar.html">Variables</a>
+                    <a class="dropdown-item"
+                        href="/5.22.4/index-pragmas.html">Pragmas</a>
+                    <a class="dropdown-item"
+                        href="/5.22.4/index-utilities.html">Utilities</a>
+                    <a class="dropdown-item"
+                        href="/5.22.4/index-internals.html">Internals</a>
+                    <a class="dropdown-item"
+                        href="/5.22.4/index-platforms.html">Platforms</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown3" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Modules</a>
+                <div aria-labelledby="navbarDropdown3"
+                    class="dropdown-menu letters-wrap">
+                    <!--<a class="dropdown-item"
+                        href="/5.22.4/index-modules.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.22.4/index-modules-by-cat.html">By
+                        Category</a>-->
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.22.4/index-modules-A.html">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.4/index-modules-B.html">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.4/index-modules-C.html">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.4/index-modules-D.html">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.4/index-modules-E.html">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.4/index-modules-F.html">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.4/index-modules-G.html">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.4/index-modules-H.html">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.4/index-modules-I.html">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.4/index-modules-J.html">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.4/index-modules-K.html">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.4/index-modules-L.html">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.4/index-modules-M.html">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.4/index-modules-N.html">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.4/index-modules-O.html">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.4/index-modules-P.html">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.4/index-modules-Q.html">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.4/index-modules-R.html">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.4/index-modules-S.html">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.4/index-modules-T.html">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.4/index-modules-U.html">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.4/index-modules-V.html">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.4/index-modules-W.html">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.4/index-modules-X.html">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.4/index-modules-Y.html">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.4/index-modules-Z.html">Z</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown4" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Functions</a>
+                <div aria-labelledby="navbarDropdown4"
+                    class="dropdown-menu letters-wrap">
+                    <a class="dropdown-item"
+                        href="/5.22.4/index-functions.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.22.4/index-functions-by-cat.html">By
+                        Category</a>
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.22.4/index-functions.html#A">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.4/index-functions.html#B">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.4/index-functions.html#C">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.4/index-functions.html#D">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.4/index-functions.html#E">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.4/index-functions.html#F">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.4/index-functions.html#G">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.4/index-functions.html#H">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.4/index-functions.html#I">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.4/index-functions.html#J">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.4/index-functions.html#K">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.4/index-functions.html#L">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.4/index-functions.html#M">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.4/index-functions.html#N">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.4/index-functions.html#O">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.4/index-functions.html#P">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.4/index-functions.html#Q">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.4/index-functions.html#R">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.4/index-functions.html#S">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.4/index-functions.html#T">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.4/index-functions.html#U">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.4/index-functions.html#V">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.4/index-functions.html#W">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.4/index-functions.html#X">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.4/index-functions.html#Y">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.4/index-functions.html#Z">Z</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!--/.nav-collapse -->
+</nav>
+
+
+          <main class="row main-content pb-5 pt-5" id='content'>
+            <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+              <div class="row">
+                <div class="col-sm-12">
+                  <div id="breadcrumbs">
+                      
+    <a href="../../index.html">Home</a>&nbsp; &gt;
+    
+      
+        <a href="../../index-modules-P.html">Core modules (P)</a> &gt;
+      
+    
+    Pod::Simple::PullParser
+  
+
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <article class="col-sm-12 content">
+                  <div class="documentation-wrapper">
+                    <div id="perl_version">
+                      <h7 class='page-title'> Perl 5 version 22.4
+                        documentation</h7>
+                    </div>
+                    <h1>Pod::Simple::PullParser</h1>
+
+
+  <!--    -->
+<ul><li><a href="#NAME">NAME</a></li><li><a href="#SYNOPSIS">SYNOPSIS</a></li><li><a href="#DESCRIPTION">DESCRIPTION</a></li><li><a href="#METHODS">METHODS</a></li><li><a href="#NOTE">NOTE</a></li><li><a href="#SEE-ALSO">SEE ALSO</a></li><li><a href="#SUPPORT">SUPPORT</a></li><li><a href="#COPYRIGHT-AND-DISCLAIMERS">COPYRIGHT AND DISCLAIMERS</a></li><li><a href="#AUTHOR">AUTHOR</a></li></ul><a class='view-head1' id="NAME"></a><h2 class='h2' >NAME</h2>
+<p>Pod::Simple::PullParser -- a pull-parser interface to parsing Pod</p>
+<a class='view-head1' id="SYNOPSIS"></a><h2 class='h2' >SYNOPSIS</h2>
+<pre class="verbatim"><ol><li> <a class="l_k" href="../../functions/my.html">my</a> <span class="i">$parser</span> = <span class="w">SomePodProcessor</span><span class="w">-&gt;new</span><span class="sc">;</span></li><li> <span class="i">$parser</span><span class="i">-&gt;set_source</span><span class="s">(</span> <span class="q">&quot;whatever.pod&quot;</span> <span class="s">)</span><span class="sc">;</span></li><li> <span class="i">$parser</span><span class="i">-&gt;run</span><span class="sc">;</span></li></ol></pre><p>Or:</p>
+<pre class="verbatim"><ol><li> <a class="l_k" href="../../functions/my.html">my</a> <span class="i">$parser</span> = <span class="w">SomePodProcessor</span><span class="w">-&gt;new</span><span class="sc">;</span></li><li> <span class="i">$parser</span><span class="i">-&gt;set_source</span><span class="s">(</span> <span class="i">$some_filehandle_object</span> <span class="s">)</span><span class="sc">;</span></li><li> <span class="i">$parser</span><span class="i">-&gt;run</span><span class="sc">;</span></li></ol></pre><p>Or:</p>
+<pre class="verbatim"><ol><li> <a class="l_k" href="../../functions/my.html">my</a> <span class="i">$parser</span> = <span class="w">SomePodProcessor</span><span class="w">-&gt;new</span><span class="sc">;</span></li><li> <span class="i">$parser</span><span class="i">-&gt;set_source</span><span class="s">(</span> \<span class="i">$document_source</span> <span class="s">)</span><span class="sc">;</span></li><li> <span class="i">$parser</span><span class="i">-&gt;run</span><span class="sc">;</span></li></ol></pre><p>Or:</p>
+<pre class="verbatim"><ol><li> <a class="l_k" href="../../functions/my.html">my</a> <span class="i">$parser</span> = <span class="w">SomePodProcessor</span><span class="w">-&gt;new</span><span class="sc">;</span></li><li> <span class="i">$parser</span><span class="i">-&gt;set_source</span><span class="s">(</span> \<span class="i">@document_lines</span> <span class="s">)</span><span class="sc">;</span></li><li> <span class="i">$parser</span><span class="i">-&gt;run</span><span class="sc">;</span></li></ol></pre><p>And elsewhere:</p>
+<pre class="verbatim"><ol><li> <a class="l_k" href="../../functions/require.html">require</a> <span class="n">5</span><span class="sc">;</span></li><li><a name="package-SomePodProcessor"></a> package <span class="i">SomePodProcessor</span><span class="sc">;</span></li><li> <a class="l_k" href="../../functions/use.html">use</a> <span class="w">strict</span><span class="sc">;</span></li><li> <a class="l_k" href="../../functions/use.html">use</a> <span class="w">base</span> <span class="q">qw(Pod::Simple::PullParser)</span><span class="sc">;</span></li><li></li><li><a name="run"></a> sub <span class="m">run</span> <span class="s">{</span></li><li>   <a class="l_k" href="../../functions/my.html">my</a> <span class="i">$self</span> = <a class="l_k" href="../../functions/shift.html">shift</a><span class="sc">;</span></li><li>  <span class="j">Token:</span></li><li>   <a class="l_k" href="../../functions/while.html">while</a><span class="s">(</span><a class="l_k" href="../../functions/my.html">my</a> <span class="i">$token</span> = <span class="i">$self</span><span class="i">-&gt;get_token</span><span class="s">)</span> <span class="s">{</span></li><li>     ...<span class="w">process</span> <a class="l_k" href="../../functions/each.html">each</a> <span class="w">token</span>...</li><li>   <span class="s">}</span></li><li> <span class="s">}</span></li></ol></pre><a class='view-head1' id="DESCRIPTION"></a><h2 class='h2' >DESCRIPTION</h2>
+<p>This class is for using Pod::Simple to build a Pod processor -- but
+one that uses an interface based on a stream of token objects,
+instead of based on events.</p>
+<p>This is a subclass of <a href="../../Pod/Simple.html">Pod::Simple</a> and inherits all its methods.</p>
+<p>A subclass of Pod::Simple::PullParser should define a <code class="inline"><span class="w">run</span></code>
+ method
+that calls <code class="inline"><span class="i">$token</span> = <span class="i">$parser</span><span class="i">-&gt;get_token</span></code>
+ to pull tokens.</p>
+<p>See the source for Pod::Simple::RTF for an example of a formatter
+that uses Pod::Simple::PullParser.</p>
+<a class='view-head1' id="METHODS"></a><h2 class='h2' >METHODS</h2>
+<ul>
+<li><a class='view-title' id="my-%24token-%3d-%24parser-%3eget_token"></a><strong>my $token = $parser-&gt;get_token</strong>
+<p>This returns the next token object (which will be of a subclass of
+<a href="../../Pod/Simple/PullParserToken.html">Pod::Simple::PullParserToken</a>), or undef if the parser-stream has hit
+the end of the document.</p>
+</li>
+<li><a class='view-title' id="%24parser-%3eunget_token(-%24token-)"></a><strong>$parser-&gt;unget_token( $token )</strong>
+</li>
+<li><a class='view-title' id="%24parser-%3eunget_token(-%24token1%2c-%24token2%2c-...-)"></a><strong>$parser-&gt;unget_token( $token1, $token2, ... )</strong>
+<p>This restores the token object(s) to the front of the parser stream.</p>
+</li>
+</ul>
+<p>The source has to be set before you can parse anything.  The lowest-level
+way is to call <code class="inline"><span class="w">set_source</span></code>
+:</p>
+<ul>
+<li><a class='view-title' id="%24parser-%3eset_source(-%24filename-)"></a><strong>$parser-&gt;set_source( $filename )</strong>
+</li>
+<li><a class='view-title' id="%24parser-%3eset_source(-%24filehandle_object-)"></a><strong>$parser-&gt;set_source( $filehandle_object )</strong>
+</li>
+<li><a class='view-title' id="%24parser-%3eset_source(-%5c%24document_source-)"></a><strong>$parser-&gt;set_source( \$document_source )</strong>
+</li>
+<li><a class='view-title' id="%24parser-%3eset_source(-%5c%40document_lines-)"></a><strong>$parser-&gt;set_source( \@document_lines )</strong>
+</li>
+</ul>
+<p>Or you can call these methods, which Pod::Simple::PullParser has defined
+to work just like Pod::Simple's same-named methods:</p>
+<ul>
+<li><a class='view-title' id="%24parser-%3eparse_file(...)"></a><strong>$parser-&gt;parse_file(...)</strong>
+</li>
+<li><a class='view-title' id="%24parser-%3eparse_string_document(...)"></a><strong>$parser-&gt;parse_string_document(...)</strong>
+</li>
+<li><a class='view-title' id="%24parser-%3efilter(...)"></a><strong>$parser-&gt;filter(...)</strong>
+</li>
+<li><a class='view-title' id="%24parser-%3eparse_from_file(...)"></a><strong>$parser-&gt;parse_from_file(...)</strong>
+</li>
+</ul>
+<p>For those to work, the Pod-processing subclass of
+Pod::Simple::PullParser has to have defined a $parser-&gt;run method --
+so it is advised that all Pod::Simple::PullParser subclasses do so.
+See the Synopsis above, or the source for Pod::Simple::RTF.</p>
+<p>Authors of formatter subclasses might find these methods useful to
+call on a parser object that you haven't started pulling tokens
+from yet:</p>
+<ul>
+<li><a class='view-title' id="my-%24title_string-%3d-%24parser-%3eget_title"></a><strong>my $title_string = $parser-&gt;get_title</strong>
+<p>This tries to get the title string out of $parser, by getting some tokens,
+and scanning them for the title, and then ungetting them so that you can
+process the token-stream from the beginning.</p>
+<p>For example, suppose you have a document that starts out:</p>
+<pre class="verbatim"><ol><li>  =<span class="w">head1</span> <span class="w">NAME</span></li><li></li><li>  <span class="w">Hoo::Boy::Wowza</span> -- <span class="w">Stuff</span> <span class="w">B</span><span class="q">&lt;wow&gt;</span> <span class="w">yeah</span>!</li></ol></pre><p>$parser-&gt;get_title on that document will return "Hoo::Boy::Wowza --
+Stuff wow yeah!". If the document starts with:</p>
+<pre class="verbatim"><ol><li>  =<span class="w">head1</span> <span class="w">Name</span></li><li></li><li>  <span class="w">Hoo::Boy::W00t</span> -- <span class="w">Stuff</span> <span class="w">B</span><span class="q">&lt;w00t&gt;</span> <span class="w">yeah</span>!</li></ol></pre><p>Then you'll need to pass the <code class="inline"><span class="w">nocase</span></code>
+ option in order to recognize "Name":</p>
+<pre class="verbatim"><ol><li>  <span class="i">$parser</span><span class="i">-&gt;get_title</span><span class="s">(</span><span class="w">nocase</span> <span class="cm">=&gt;</span> <span class="n">1</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>In cases where get_title can't find the title, it will return empty-string
+("").</p>
+</li>
+<li><a class='view-title' id="my-%24title_string-%3d-%24parser-%3eget_short_title"></a><strong>my $title_string = $parser-&gt;get_short_title</strong>
+<p>This is just like get_title, except that it returns just the modulename, if
+the title seems to be of the form "SomeModuleName -- description".</p>
+<p>For example, suppose you have a document that starts out:</p>
+<pre class="verbatim"><ol><li>  =<span class="w">head1</span> <span class="w">NAME</span></li><li></li><li>  <span class="w">Hoo::Boy::Wowza</span> -- <span class="w">Stuff</span> <span class="w">B</span><span class="q">&lt;wow&gt;</span> <span class="w">yeah</span>!</li></ol></pre><p>then $parser-&gt;get_short_title on that document will return
+"Hoo::Boy::Wowza".</p>
+<p>But if the document starts out:</p>
+<pre class="verbatim"><ol><li>  =<span class="w">head1</span> <span class="w">NAME</span></li><li></li><li>  <span class="w">Hooboy</span><span class="cm">,</span> <span class="w">stuff</span> <span class="w">B</span><span class="q">&lt;wow&gt;</span> <span class="w">yeah</span>!</li></ol></pre><p>then $parser-&gt;get_short_title on that document will return "Hooboy,
+stuff wow yeah!". If the document starts with:</p>
+<pre class="verbatim"><ol><li>  =<span class="w">head1</span> <span class="w">Name</span></li><li></li><li>  <span class="w">Hoo::Boy::W00t</span> -- <span class="w">Stuff</span> <span class="w">B</span><span class="q">&lt;w00t&gt;</span> <span class="w">yeah</span>!</li></ol></pre><p>Then you'll need to pass the <code class="inline"><span class="w">nocase</span></code>
+ option in order to recognize "Name":</p>
+<pre class="verbatim"><ol><li>  <span class="i">$parser</span><span class="i">-&gt;get_short_title</span><span class="s">(</span><span class="w">nocase</span> <span class="cm">=&gt;</span> <span class="n">1</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>If the title can't be found, then get_short_title returns empty-string
+("").</p>
+</li>
+<li><a class='view-title' id="%24author_name---%3d-%24parser-%3eget_author"></a><strong>$author_name   = $parser-&gt;get_author</strong>
+<p>This works like get_title except that it returns the contents of the
+"=head1 AUTHOR\n\nParagraph...\n" section, assuming that that section
+isn't terribly long. To recognize a "=head1 Author\n\nParagraph\n"
+section, pass the <code class="inline"><span class="w">nocase</span></code>
+ option:</p>
+<pre class="verbatim"><ol><li>  <span class="i">$parser</span><span class="i">-&gt;get_author</span><span class="s">(</span><span class="w">nocase</span> <span class="cm">=&gt;</span> <span class="n">1</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>(This method tolerates "AUTHORS" instead of "AUTHOR" too.)</p>
+</li>
+<li><a class='view-title' id="%24description_name-%3d-%24parser-%3eget_description"></a><strong>$description_name = $parser-&gt;get_description</strong>
+<p>This works like get_title except that it returns the contents of the
+"=head1 DESCRIPTION\n\nParagraph...\n" section, assuming that that section
+isn't terribly long. To recognize a "=head1 Description\n\nParagraph\n"
+section, pass the <code class="inline"><span class="w">nocase</span></code>
+ option:</p>
+<pre class="verbatim"><ol><li>  <span class="i">$parser</span><span class="i">-&gt;get_description</span><span class="s">(</span><span class="w">nocase</span> <span class="cm">=&gt;</span> <span class="n">1</span><span class="s">)</span><span class="sc">;</span></li></ol></pre></li>
+<li><a class='view-title' id="%24version_block-%3d-%24parser-%3eget_version"></a><strong>$version_block = $parser-&gt;get_version</strong>
+<p>This works like get_title except that it returns the contents of
+the "=head1 VERSION\n\n[BIG BLOCK]\n" block.  Note that this does NOT
+return the module's <code class="inline"><span class="i">$VERSION</span></code>
+!! To recognize a
+"=head1 Version\n\n[BIG BLOCK]\n" section, pass the <code class="inline"><span class="w">nocase</span></code>
+ option:</p>
+<pre class="verbatim"><ol><li>  <span class="i">$parser</span><span class="i">-&gt;get_version</span><span class="s">(</span><span class="w">nocase</span> <span class="cm">=&gt;</span> <span class="n">1</span><span class="s">)</span><span class="sc">;</span></li></ol></pre></li>
+</ul>
+<a class='view-head1' id="NOTE"></a><h2 class='h2' >NOTE</h2>
+<p>You don't actually <i>have</i> to define a <code class="inline"><span class="w">run</span></code>
+ method.  If you're
+writing a Pod-formatter class, you should define a <code class="inline"><span class="w">run</span></code>
+ just so
+that users can call <code class="inline"><span class="w">parse_file</span></code>
+ etc, but you don't <i>have</i> to.</p>
+<p>And if you're not writing a formatter class, but are instead just
+writing a program that does something simple with a Pod::PullParser
+object (and not an object of a subclass), then there's no reason to
+bother subclassing to add a <code class="inline"><span class="w">run</span></code>
+ method.</p>
+<a class='view-head1' id="SEE-ALSO"></a><h2 class='h2' >SEE ALSO</h2>
+<p><a href="../../Pod/Simple.html">Pod::Simple</a></p>
+<p><a href="../../Pod/Simple/PullParserToken.html">Pod::Simple::PullParserToken</a> -- and its subclasses
+<a href="../../Pod/Simple/PullParserStartToken.html">Pod::Simple::PullParserStartToken</a>,
+<a href="../../Pod/Simple/PullParserTextToken.html">Pod::Simple::PullParserTextToken</a>, and
+<a href="../../Pod/Simple/PullParserEndToken.html">Pod::Simple::PullParserEndToken</a>.</p>
+<p><a href="https://search.cpan.org/perldoc/HTML::TokeParser">HTML::TokeParser</a>, which inspired this.</p>
+<a class='view-head1' id="SUPPORT"></a><h2 class='h2' >SUPPORT</h2>
+<p>Questions or discussion about POD and Pod::Simple should be sent to the
+pod-people@perl.org mail list. Send an empty email to
+pod-people-subscribe@perl.org to subscribe.</p>
+<p>This module is managed in an open GitHub repository,
+<a class='link-to-page' href="https://github.com/theory/pod-simple/">https://github.com/theory/pod-simple/</a>. Feel free to fork and contribute, or
+to clone <a class='link-to-page' href="git://github.com/theory/pod-simple.git">git://github.com/theory/pod-simple.git</a> and send patches!</p>
+<p>Patches against Pod::Simple are welcome. Please send bug reports to
+&lt;bug-pod-simple@rt.cpan.org&gt;.</p>
+<a class='view-head1' id="COPYRIGHT-AND-DISCLAIMERS"></a><h2 class='h2' >COPYRIGHT AND DISCLAIMERS</h2>
+<p>Copyright (c) 2002 Sean M. Burke.</p>
+<p>This library is free software; you can redistribute it and/or modify it
+under the same terms as Perl itself.</p>
+<p>This program is distributed in the hope that it will be useful, but
+without any warranty; without even the implied warranty of
+merchantability or fitness for a particular purpose.</p>
+<a class='view-head1' id="AUTHOR"></a><h2 class='h2' >AUTHOR</h2>
+<p>Pod::Simple was created by Sean M. Burke &lt;sburke@cpan.org&gt;.
+But don't bother him, he's retired.</p>
+<p>Pod::Simple is maintained by:</p>
+<ul>
+<li><a class='view-title' id="*-Allison-Randal-allison%40perl.org"></a><strong>Allison Randal <code class="inline"><span class="w">allison</span><span class="i">@perl</span>.<span class="w">org</span></code>
+</strong>
+</li>
+<li><a class='view-title' id="*-Hans-Dieter-Pearcey-hdp%40cpan.org"></a><strong>Hans Dieter Pearcey <code class="inline"><span class="w">hdp</span><span class="i">@cpan</span>.<span class="w">org</span></code>
+</strong>
+</li>
+<li><a class='view-title' id="*-David-E.-Wheeler-dwheeler%40cpan.org"></a><strong>David E. Wheeler <code class="inline"><span class="w">dwheeler</span><span class="i">@cpan</span>.<span class="w">org</span></code>
+</strong>
+</li>
+</ul>
+
+
+
+
+      <ul><li><a href="#NAME">NAME</a></li><li><a href="#SYNOPSIS">SYNOPSIS</a></li><li><a href="#DESCRIPTION">DESCRIPTION</a></li><li><a href="#METHODS">METHODS</a></li><li><a href="#NOTE">NOTE</a></li><li><a href="#SEE-ALSO">SEE ALSO</a></li><li><a href="#SUPPORT">SUPPORT</a></li><li><a href="#COPYRIGHT-AND-DISCLAIMERS">COPYRIGHT AND DISCLAIMERS</a></li><li><a href="#AUTHOR">AUTHOR</a></li></ul>
+
+
+                  </div>
+                </article>
+              </div>
+            </div>
+          </main>
+        </div>
+           <footer class="footer row bg-light pt-5 pb-5">
+       <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+           <div class="row">
+               <div class="col-md-4">
+                   <ul class="list-unstyled">
+                       <li>
+                           <h4>Site info</h4>
+                       </li>
+                       <li>Docs mantained by
+                           <a href="//lists.perl.org/list/perl5-porters.html"
+                               rel="noopener">Perl 5 Porters</a>
+                       </li>
+                       <li>Perldoc site development sponsored by
+                           <a href="//opusvl.com" rel="noopener">
+                           <img style="margin: 20px 20px 5px 10px" class="opus-logo" src="/public/img/opusvl_logo.svg" alt="OpusVL Logo">
+                        </a>
+                    <li><span class="about_perldoc"><a href="//about.html">About PerlDOC</a></span>
+                    </li>
+                       </li>
+                   </ul>
+               </div>
+               <div class="col-md-8">
+                   <div class="row">
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Manuals</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.22.4/index-overview.html">Overview</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.22.4/index-tutorials.html">Tutorials</a>
+                               </li>
+                               <li>
+                                   <a href="/5.22.4/index-faq.html">FAQs</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.22.4/index-history.html">Changes</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Reference</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.22.4/index-language.html">Language</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.22.4/index-functions.html">Functions</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.22.4/perlop.html">Operators</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.22.4/perlvar.html">Variables</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Modules</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.22.4/index-modules-A.html">Modules</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.22.4/index-pragmas.html">Pragmas</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.22.4/index-utilities.html">Utilities</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Misc</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.22.4/index-licence.html">License</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.22.4/index-internals.html">Internals</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.22.4/index-platforms.html">Platforms</a>
+                               </li>
+                            <li>
+                                <a
+                                    href="/5.22.4/index-about.html">About</a>
+                            </li>
+                           </ul>
+                       </div>
+                   </div>
+               </div>
+               <div class=" col-12 footer-inf text-center">
+                   <small>perldoc.perl.org - Official documentation for the Perl
+                       programming language</small>
+               </div>
+           </div>
+       </div>
+   </footer>
+
+        	<div class="beta-wrapper beta-bottom-right ">
+		<div class="beta beta-blue  ">
+			<a class="beta-link "
+				href="//github.com/OpusVL/perldoc.perl.org/issues/new" rel="noopener">
+				<span class="beta-text">
+					This website is a Beta release.
+				</span>
+				<span class="beta-text">
+					For any issues please raise a ticket on GitHub
+				</span>
+			</a>
+		</div>
+	</div>
+
+        <script src="/public/js/main.min.js"></script>
+      </body>
+
+      </html>

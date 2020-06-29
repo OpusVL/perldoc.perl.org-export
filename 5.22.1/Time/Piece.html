@@ -1,0 +1,781 @@
+      
+      
+      
+      
+
+      <!DOCTYPE html>
+      <html lang="en">
+
+      <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Time::Piece - perldoc.perl.org">
+        <link rel="icon" href="/public/img/favicon.ico">
+        <title>Time::Piece - perldoc.perl.org</title>
+        <link href="/public/css/main.min.css" rel="stylesheet">
+        <link rel="canonical" href="/Time/Piece.html">
+        <link
+          href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900'
+          rel='stylesheet' type='text/css'>
+        <script>
+          window.ga = window.ga || function () {
+            (ga.q = ga.q || []).push(arguments)
+          };
+          ga.l = +new Date;
+          ga('create', 'UA-1892152-2', 'auto'); // JJ's account
+          ga('create', 'UA-50555-3', 'auto', 'perlOrg'); // perl.org account
+          ga('require', 'outboundLinkTracker', {
+            events: ['click', 'auxclick', 'contextmenu'],
+          });
+          ga('require', 'maxScrollTracker');
+          ga('send', 'pageview');
+          ga('perlOrg.send', 'pageview');
+        </script>
+        <script async src="https://www.google-analytics.com/analytics.js">
+        </script>
+        <script async src="/public/js/tracking.min.js"></script>
+      </head>
+
+      <body class="body container-fluid ">
+        <div class="wrapper">
+
+          <nav
+    class="navbar navbar-dark bg-primary bg-perl fixed-top justify-content-between navbar-expand-lg">
+    <a href="#content" class="skippy sr-only sr-only-focusable">
+        <span class=' skippy-text'>Skip to main content</span>
+    </a>
+    <a class="navbar-brand" href="/">
+        <img class="logo" src="/public/img/logo_perl_doc.svg"
+            alt="Perl Documentation Logo" />
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse"
+        data-target="#navbar" aria-controls="navbar" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="navbar" class="collapse navbar-collapse ">
+        <ul class="navbar-nav ml-auto navbar-right">
+            <form class="nav-item dropdown search-wrapper">
+                <input type="text" id='searchinput' aria-describedby='navbarDropdown5'
+                    placeholder="Type query" class='search-input-field' value=''>
+
+                <button href="#" data-toggle='dropdown' type="button"
+                    aria-haspopup="true" aria-expanded='false' id="navbarDropdown5"
+                    class="nav-link dropdown-toggle search-link">
+                    <object tabindex='-1' focusable="false" class='search-icon'
+                        data="/public/img/search.svg" type="image/svg+xml"
+                        name='search icon'>search
+                        icon</object>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown5"
+                    id='search-results'>
+                    <p class='dropdown-item major-version'>
+                        No results
+                    </p>
+                </div>
+            </form>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown" href="#" class="nav-link dropdown-toggle"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Perl versions</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    
+                        <p class='dropdown-item major-version'>
+                            5.32
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.32.0/">5.32.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.30
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.3/">5.30.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.2/">5.30.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.1/">5.30.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.0/">5.30.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.28
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.3/">5.28.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.2/">5.28.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.1/">5.28.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.0/">5.28.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.26
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.3/">5.26.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.2/">5.26.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.1/">5.26.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.0/">5.26.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.24
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.4/">5.24.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.3/">5.24.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.2/">5.24.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.1/">5.24.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.0/">5.24.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.22
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.4/">5.22.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.3/">5.22.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.2/">5.22.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.1/">5.22.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.0/">5.22.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.20
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.3/">5.20.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.2/">5.20.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.1/">5.20.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.0/">5.20.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.18
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.4/">5.18.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.3/">5.18.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.2/">5.18.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.1/">5.18.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.0/">5.18.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.16
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.3/">5.16.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.2/">5.16.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.1/">5.16.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.0/">5.16.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.14
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.4/">5.14.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.3/">5.14.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.2/">5.14.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.1/">5.14.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.0/">5.14.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.12
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.5/">5.12.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.4/">5.12.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.3/">5.12.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.2/">5.12.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.1/">5.12.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.0/">5.12.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.10
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.1/">5.10.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.0/">5.10.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.8
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.9/">5.8.9</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.8/">5.8.8</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.7/">5.8.7</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.6/">5.8.6</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.5/">5.8.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.4/">5.8.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.3/">5.8.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.2/">5.8.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.1/">5.8.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.0/">5.8.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.6
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.2/">5.6.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.1/">5.6.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.0/">5.6.0</a>
+                        
+                        
+                    
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown1" href="#" class="dropdown-toggle nav-link"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Manuals</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                    <a class="dropdown-item"
+                        href="/5.22.1/index-overview.html">Overview</a>
+                    <a class="dropdown-item"
+                        href="/5.22.1/index-tutorials.html">Tutorials</a>
+                    <a class="dropdown-item"
+                        href="/5.22.1/index-faq.html">FAQs</a>
+                    <a class="dropdown-item"
+                        href="/5.22.1/index-history.html">Changes</a>
+                    <a class="dropdown-item"
+                        href="/5.22.1/index-licence.html">License</a>
+                    <a class="dropdown-item"
+                        href="/5.22.1/index-language.html">Language</a>
+                    <a class="dropdown-item"
+                        href="/5.22.1/index-functions.html">Functions</a>
+                    <a class="dropdown-item"
+                        href="/5.22.1/perlop.html">Operators</a>
+                    <a class="dropdown-item"
+                        href="/5.22.1/perlvar.html">Variables</a>
+                    <a class="dropdown-item"
+                        href="/5.22.1/index-pragmas.html">Pragmas</a>
+                    <a class="dropdown-item"
+                        href="/5.22.1/index-utilities.html">Utilities</a>
+                    <a class="dropdown-item"
+                        href="/5.22.1/index-internals.html">Internals</a>
+                    <a class="dropdown-item"
+                        href="/5.22.1/index-platforms.html">Platforms</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown3" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Modules</a>
+                <div aria-labelledby="navbarDropdown3"
+                    class="dropdown-menu letters-wrap">
+                    <!--<a class="dropdown-item"
+                        href="/5.22.1/index-modules.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.22.1/index-modules-by-cat.html">By
+                        Category</a>-->
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.22.1/index-modules-A.html">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.1/index-modules-B.html">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.1/index-modules-C.html">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.1/index-modules-D.html">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.1/index-modules-E.html">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.1/index-modules-F.html">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.1/index-modules-G.html">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.1/index-modules-H.html">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.1/index-modules-I.html">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.1/index-modules-J.html">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.1/index-modules-K.html">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.1/index-modules-L.html">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.1/index-modules-M.html">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.1/index-modules-N.html">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.1/index-modules-O.html">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.1/index-modules-P.html">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.1/index-modules-Q.html">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.1/index-modules-R.html">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.1/index-modules-S.html">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.1/index-modules-T.html">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.1/index-modules-U.html">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.1/index-modules-V.html">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.1/index-modules-W.html">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.1/index-modules-X.html">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.1/index-modules-Y.html">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.1/index-modules-Z.html">Z</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown4" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Functions</a>
+                <div aria-labelledby="navbarDropdown4"
+                    class="dropdown-menu letters-wrap">
+                    <a class="dropdown-item"
+                        href="/5.22.1/index-functions.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.22.1/index-functions-by-cat.html">By
+                        Category</a>
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.22.1/index-functions.html#A">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.1/index-functions.html#B">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.1/index-functions.html#C">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.1/index-functions.html#D">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.1/index-functions.html#E">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.1/index-functions.html#F">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.1/index-functions.html#G">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.1/index-functions.html#H">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.1/index-functions.html#I">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.1/index-functions.html#J">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.1/index-functions.html#K">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.1/index-functions.html#L">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.1/index-functions.html#M">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.1/index-functions.html#N">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.1/index-functions.html#O">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.1/index-functions.html#P">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.1/index-functions.html#Q">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.1/index-functions.html#R">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.1/index-functions.html#S">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.1/index-functions.html#T">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.1/index-functions.html#U">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.1/index-functions.html#V">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.1/index-functions.html#W">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.1/index-functions.html#X">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.1/index-functions.html#Y">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.1/index-functions.html#Z">Z</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!--/.nav-collapse -->
+</nav>
+
+
+          <main class="row main-content pb-5 pt-5" id='content'>
+            <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+              <div class="row">
+                <div class="col-sm-12">
+                  <div id="breadcrumbs">
+                      
+    <a href="../index.html">Home</a>&nbsp; &gt;
+    
+      
+        <a href="../index-modules-T.html">Core modules (T)</a> &gt;
+      
+    
+    Time::Piece
+  
+
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <article class="col-sm-12 content">
+                  <div class="documentation-wrapper">
+                    <div id="perl_version">
+                      <h7 class='page-title'> Perl 5 version 22.1
+                        documentation</h7>
+                    </div>
+                    <h1>Time::Piece</h1>
+
+
+  <!--    -->
+<ul><li><a href="#NAME">NAME</a></li><li><a href="#SYNOPSIS">SYNOPSIS</a></li><li><a href="#DESCRIPTION">DESCRIPTION</a></li><li><a href="#USAGE">USAGE</a></li><ul><li><a href="#Local-Locales">Local Locales</a></li><li><a href="#Date-Calculations">Date Calculations</a></li><li><a href="#Date-Comparisons">Date Comparisons</a></li><li><a href="#Date-Parsing">Date Parsing</a></li><li><a href="#YYYY-MM-DDThh%3amm%3ass">YYYY-MM-DDThh:mm:ss</a></li><li><a href="#Week-Number">Week Number</a></li><li><a href="#Global-Overriding">Global Overriding</a></li></ul><li><a href="#CAVEATS">CAVEATS</a></li><ul><li><a href="#Setting-%24ENV%7bTZ%7d-in-Threads-on-Win32">Setting $ENV{TZ} in Threads on Win32</a></li><li><a href="#Use-of-epoch-seconds">Use of epoch seconds</a></li></ul><li><a href="#AUTHOR">AUTHOR</a></li><li><a href="#COPYRIGHT-AND-LICENSE">COPYRIGHT AND LICENSE</a></li><li><a href="#SEE-ALSO">SEE ALSO</a></li><li><a href="#BUGS">BUGS</a></li></ul><a class='view-head1' id="NAME"></a><h2 class='h2' >NAME</h2>
+<p>Time::Piece - Object Oriented time objects</p>
+<a class='view-head1' id="SYNOPSIS"></a><h2 class='h2' >SYNOPSIS</h2>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">Time::Piece</span><span class="sc">;</span></li><li>    </li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">$t</span> = <a class="l_k" href="../functions/localtime.html">localtime</a><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/print.html">print</a> <span class="q">&quot;Time is $t\n&quot;</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/print.html">print</a> <span class="q">&quot;Year is &quot;</span><span class="cm">,</span> <span class="i">$t</span><span class="i">-&gt;year</span><span class="cm">,</span> <span class="q">&quot;\n&quot;</span><span class="sc">;</span></li></ol></pre><a class='view-head1' id="DESCRIPTION"></a><h2 class='h2' >DESCRIPTION</h2>
+<p>This module replaces the standard <code class="inline"><a class="l_k" href="../functions/localtime.html">localtime</a></code> and <code class="inline"><a class="l_k" href="../functions/gmtime.html">gmtime</a></code> functions with
+implementations that return objects. It does so in a backwards
+compatible manner, so that using localtime/gmtime in the way documented
+in perlfunc will still return what you expect.</p>
+<p>The module actually implements most of an interface described by
+Larry Wall on the perl5-porters mailing list here:
+<a href="http://www.xray.mpe.mpg.de/mailing-lists/perl5-porters/2000-01/msg00241.html">http://www.xray.mpe.mpg.de/mailing-lists/perl5-porters/2000-01/msg00241.html</a></p>
+<a class='view-head1' id="USAGE"></a><h2 class='h2' >USAGE</h2>
+<p>After importing this module, when you use localtime or gmtime in a scalar
+context, rather than getting an ordinary scalar string representing the
+date and time, you get a Time::Piece object, whose stringification happens
+to produce the same effect as the localtime and gmtime functions. There is 
+also a new() constructor provided, which is the same as localtime(), except
+when passed a Time::Piece object, in which case it's a copy constructor. The
+following methods are available on the object:</p>
+<pre class="verbatim"><ol><li>    <span class="i">$t</span><span class="i">-&gt;sec</span>                 <span class="c"># also available as $t-&gt;second</span></li><li>    <span class="i">$t</span><span class="i">-&gt;min</span>                 <span class="c"># also available as $t-&gt;minute</span></li><li>    <span class="i">$t</span><span class="i">-&gt;hour</span>                <span class="c"># 24 hour</span></li><li>    <span class="i">$t</span><span class="i">-&gt;mday</span>                <span class="c"># also available as $t-&gt;day_of_month</span></li><li>    <span class="i">$t</span><span class="i">-&gt;mon</span>                 <span class="c"># 1 = January</span></li><li>    <span class="i">$t</span><span class="i">-&gt;_mon</span>                <span class="c"># 0 = January</span></li><li>    <span class="i">$t</span><span class="i">-&gt;monname</span>             <span class="c"># Feb</span></li><li>    <span class="i">$t</span><span class="i">-&gt;month</span>               <span class="c"># same as $t-&gt;monname</span></li><li>    <span class="i">$t</span><span class="i">-&gt;fullmonth</span>           <span class="c"># February</span></li><li>    <span class="i">$t</span><span class="i">-&gt;year</span>                <span class="c"># based at 0 (year 0 AD is, of course 1 BC)</span></li><li>    <span class="i">$t</span><span class="i">-&gt;_year</span>               <span class="c"># year minus 1900</span></li><li>    <span class="i">$t</span><span class="i">-&gt;yy</span>                  <span class="c"># 2 digit year</span></li><li>    <span class="i">$t</span><span class="i">-&gt;wday</span>                <span class="c"># 1 = Sunday</span></li><li>    <span class="i">$t</span><span class="i">-&gt;_wday</span>               <span class="c"># 0 = Sunday</span></li><li>    <span class="i">$t</span><span class="i">-&gt;day_of_week</span>         <span class="c"># 0 = Sunday</span></li><li>    <span class="i">$t</span><span class="i">-&gt;wdayname</span>            <span class="c"># Tue</span></li><li>    <span class="i">$t</span><span class="i">-&gt;day</span>                 <span class="c"># same as wdayname</span></li><li>    <span class="i">$t</span><span class="i">-&gt;fullday</span>             <span class="c"># Tuesday</span></li><li>    <span class="i">$t</span><span class="i">-&gt;yday</span>                <span class="c"># also available as $t-&gt;day_of_year, 0 = Jan 01</span></li><li>    <span class="i">$t</span><span class="i">-&gt;isdst</span>               <span class="c"># also available as $t-&gt;daylight_savings</span></li><li></li><li>    <span class="i">$t</span><span class="i">-&gt;hms</span>                 <span class="c"># 12:34:56</span></li><li>    <span class="i">$t</span><span class="i">-&gt;hms</span><span class="s">(</span><span class="q">&quot;.&quot;</span><span class="s">)</span>            <span class="c"># 12.34.56</span></li><li>    <span class="i">$t</span><span class="i">-&gt;time</span>                <span class="c"># same as $t-&gt;hms</span></li><li></li><li>    <span class="i">$t</span><span class="i">-&gt;ymd</span>                 <span class="c"># 2000-02-29</span></li><li>    <span class="i">$t</span><span class="i">-&gt;date</span>                <span class="c"># same as $t-&gt;ymd</span></li><li>    <span class="i">$t</span><span class="i">-&gt;mdy</span>                 <span class="c"># 02-29-2000</span></li><li>    <span class="i">$t</span><span class="i">-&gt;mdy</span><span class="s">(</span><span class="q">&quot;/&quot;</span><span class="s">)</span>            <span class="c"># 02/29/2000</span></li><li>    <span class="i">$t</span><span class="i">-&gt;dmy</span>                 <span class="c"># 29-02-2000</span></li><li>    <span class="i">$t</span><span class="i">-&gt;dmy</span><span class="s">(</span><span class="q">&quot;.&quot;</span><span class="s">)</span>            <span class="c"># 29.02.2000</span></li><li>    <span class="i">$t</span><span class="i">-&gt;datetime</span>            <span class="c"># 2000-02-29T12:34:56 (ISO 8601)</span></li><li>    <span class="i">$t</span><span class="i">-&gt;cdate</span>               <span class="c"># Tue Feb 29 12:34:56 2000</span></li><li>    <span class="q">&quot;$t&quot;</span>                    <span class="c"># same as $t-&gt;cdate</span></li><li></li><li>    <span class="i">$t</span><span class="i">-&gt;epoch</span>               <span class="c"># seconds since the epoch</span></li><li>    <span class="i">$t</span><span class="i">-&gt;tzoffset</span>            <span class="c"># timezone offset in a Time::Seconds object</span></li><li></li><li>    <span class="i">$t</span><span class="i">-&gt;julian_day</span>          <span class="c"># number of days since Julian period began</span></li><li>    <span class="i">$t</span><span class="i">-&gt;mjd</span>                 <span class="c"># modified Julian date (JD-2400000.5 days)</span></li><li></li><li>    <span class="i">$t</span><span class="i">-&gt;week</span>                <span class="c"># week number (ISO 8601)</span></li><li></li><li>    <span class="i">$t</span><span class="i">-&gt;is_leap_year</span>        <span class="c"># true if it its</span></li><li>    <span class="i">$t</span><span class="i">-&gt;month_last_day</span>      <span class="c"># 28-31</span></li><li></li><li>    <span class="i">$t</span><span class="i">-&gt;time_separator</span><span class="s">(</span><span class="i">$s</span><span class="s">)</span>  <span class="c"># set the default separator (default &quot;:&quot;)</span></li><li>    <span class="i">$t</span><span class="i">-&gt;date_separator</span><span class="s">(</span><span class="i">$s</span><span class="s">)</span>  <span class="c"># set the default separator (default &quot;-&quot;)</span></li><li>    <span class="i">$t</span><span class="i">-&gt;day_list</span><span class="s">(</span><span class="i">@days</span><span class="s">)</span>     <span class="c"># set the default weekdays</span></li><li>    <span class="i">$t</span><span class="i">-&gt;mon_list</span><span class="s">(</span><span class="i">@days</span><span class="s">)</span>     <span class="c"># set the default months</span></li><li></li><li>    <span class="i">$t</span><span class="i">-&gt;strftime</span><span class="s">(</span><span class="w">FORMAT</span><span class="s">)</span>    <span class="c"># same as POSIX::strftime (without the overhead</span></li><li>                            <span class="c"># of the full POSIX extension)</span></li><li>    <span class="i">$t</span><span class="i">-&gt;strftime</span><span class="s">(</span><span class="s">)</span>          <span class="c"># &quot;Tue, 29 Feb 2000 12:34:56 GMT&quot;</span></li><li>    </li><li>    <span class="w">Time::Piece</span><span class="w">-&gt;strptime</span><span class="s">(</span><span class="w">STRING</span><span class="cm">,</span> <span class="w">FORMAT</span><span class="s">)</span></li><li>                            <span class="c"># see strptime man page. Creates a new</span></li><li>                            <span class="c"># Time::Piece object</span></li></ol></pre><p>Note that <code class="inline"><a class="l_k" href="../functions/localtime.html">localtime</a></code> and <code class="inline"><a class="l_k" href="../functions/gmtime.html">gmtime</a></code> are not listed above.  If called as
+methods on a Time::Piece object, they act as constructors, returning a new
+Time::Piece object for the current time.  In other words: they're not useful as
+methods.</p>
+<a class='view-head2' id="Local-Locales"></a><h3 class='h3' >Local Locales</h3>
+<p>Both wdayname (day) and monname (month) allow passing in a list to use
+to index the name of the days against. This can be useful if you need
+to implement some form of localisation without actually installing or
+using locales.</p>
+<pre class="verbatim"><ol><li>  <a class="l_k" href="../functions/my.html">my</a> <span class="i">@days</span> = <span class="q">qw( Dimanche Lundi Merdi Mercredi Jeudi Vendredi Samedi )</span><span class="sc">;</span></li><li></li><li>  <a class="l_k" href="../functions/my.html">my</a> <span class="i">$french_day</span> = <a class="l_k" href="../functions/localtime.html">localtime</a><span class="i">-&gt;day</span><span class="s">(</span><span class="i">@days</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>These settings can be overridden globally too:</p>
+<pre class="verbatim"><ol><li>  <span class="i">Time::Piece::day_list</span><span class="s">(</span><span class="i">@days</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>Or for months:</p>
+<pre class="verbatim"><ol><li>  <span class="i">Time::Piece::mon_list</span><span class="s">(</span><span class="i">@months</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>And locally for months:</p>
+<pre class="verbatim"><ol><li>  <a class="l_k" href="../functions/print.html">print</a> <a class="l_k" href="../functions/localtime.html">localtime</a><span class="i">-&gt;month</span><span class="s">(</span><span class="i">@months</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><a class='view-head2' id="Date-Calculations"></a><h3 class='h3' >Date Calculations</h3>
+<p>It's possible to use simple addition and subtraction of objects:</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">Time::Seconds</span><span class="sc">;</span></li><li>    </li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">$seconds</span> = <span class="i">$t1</span> - <span class="i">$t2</span><span class="sc">;</span></li><li>    <span class="i">$t1</span> += <span class="w">ONE_DAY</span><span class="sc">;</span> <span class="c"># add 1 day (constant from Time::Seconds)</span></li></ol></pre><p>The following are valid ($t1 and $t2 are Time::Piece objects):</p>
+<pre class="verbatim"><ol><li>    <span class="i">$t1</span> - <span class="i">$t2</span><span class="sc">;</span> <span class="c"># returns Time::Seconds object</span></li><li>    <span class="i">$t1</span> - <span class="n">42</span><span class="sc">;</span> <span class="c"># returns Time::Piece object</span></li><li>    <span class="i">$t1</span> + <span class="n">533</span><span class="sc">;</span> <span class="c"># returns Time::Piece object</span></li></ol></pre><p>However adding a Time::Piece object to another Time::Piece object
+will cause a runtime error.</p>
+<p>Note that the first of the above returns a Time::Seconds object, so
+while examining the object will print the number of seconds (because
+of the overloading), you can also get the number of minutes, hours,
+days, weeks and years in that delta, using the Time::Seconds API.</p>
+<p>In addition to adding seconds, there are two APIs for adding months and
+years:</p>
+<pre class="verbatim"><ol><li>    <span class="i">$t</span><span class="i">-&gt;add_months</span><span class="s">(</span><span class="n">6</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="i">$t</span><span class="i">-&gt;add_years</span><span class="s">(</span><span class="n">5</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>The months and years can be negative for subtractions. Note that there
+is some "strange" behaviour when adding and subtracting months at the
+ends of months. Generally when the resulting month is shorter than the
+starting month then the number of overlap days is added. For example
+subtracting a month from 2008-03-31 will not result in 2008-02-31 as this
+is an impossible date. Instead you will get 2008-03-02. This appears to
+be consistent with other date manipulation tools.</p>
+<a class='view-head2' id="Date-Comparisons"></a><h3 class='h3' >Date Comparisons</h3>
+<p>Date comparisons are also possible, using the full suite of "&lt;", "&gt;",
+"&lt;=", "&gt;=", "&lt;=&gt;", "==" and "!=".</p>
+<a class='view-head2' id="Date-Parsing"></a><h3 class='h3' >Date Parsing</h3>
+<p>Time::Piece has a built-in strptime() function (from FreeBSD), allowing
+you incredibly flexible date parsing routines. For example:</p>
+<pre class="verbatim"><ol><li>  <a class="l_k" href="../functions/my.html">my</a> <span class="i">$t</span> = <span class="w">Time::Piece</span><span class="w">-&gt;strptime</span><span class="s">(</span><span class="q">&quot;Sunday 3rd Nov, 1943&quot;</span><span class="cm">,</span></li><li>                                <span class="q">&quot;%A %drd %b, %Y&quot;</span><span class="s">)</span><span class="sc">;</span></li><li>  </li><li>  <a class="l_k" href="../functions/print.html">print</a> <span class="i">$t</span><span class="i">-&gt;strftime</span><span class="s">(</span><span class="q">&quot;%a, %d %b %Y&quot;</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>Outputs:</p>
+<pre class="verbatim"><ol><li>  <span class="w">Wed</span><span class="cm">,</span> <span class="n">03</span> <span class="w">Nov</span> <span class="n">1943</span></li></ol></pre><p>(see, it's even smart enough to fix my obvious date bug)</p>
+<p>For more information see "man strptime", which should be on all unix
+systems.</p>
+<p>Alternatively look here: <a href="http://www.unix.com/man-page/FreeBSD/3/strftime/">http://www.unix.com/man-page/FreeBSD/3/strftime/</a></p>
+<a class='view-head2' id="YYYY-MM-DDThh%3amm%3ass"></a><h3 class='h3' >YYYY-MM-DDThh:mm:ss</h3>
+<p>The ISO 8601 standard defines the date format to be YYYY-MM-DD, and
+the time format to be hh:mm:ss (24 hour clock), and if combined, they
+should be concatenated with date first and with a capital 'T' in front
+of the time.</p>
+<a class='view-head2' id="Week-Number"></a><h3 class='h3' >Week Number</h3>
+<p>The <i>week number</i> may be an unknown concept to some readers.  The ISO
+8601 standard defines that weeks begin on a Monday and week 1 of the
+year is the week that includes both January 4th and the first Thursday
+of the year.  In other words, if the first Monday of January is the
+2nd, 3rd, or 4th, the preceding days of the January are part of the
+last week of the preceding year.  Week numbers range from 1 to 53.</p>
+<a class='view-head2' id="Global-Overriding"></a><h3 class='h3' >Global Overriding</h3>
+<p>Finally, it's possible to override localtime and gmtime everywhere, by
+including the ':override' tag in the import list:</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">Time::Piece</span> <span class="q">&#39;:override&#39;</span><span class="sc">;</span></li></ol></pre><a class='view-head1' id="CAVEATS"></a><h2 class='h2' >CAVEATS</h2>
+<a class='view-head2' id="Setting-%24ENV%7bTZ%7d-in-Threads-on-Win32"></a><h3 class='h3' >Setting $ENV{TZ} in Threads on Win32</h3>
+<p>Note that when using perl in the default build configuration on Win32
+(specifically, when perl is built with PERL_IMPLICIT_SYS), each perl
+interpreter maintains its own copy of the environment and only the main
+interpreter will update the process environment seen by strftime.</p>
+<p>Therefore, if you make changes to $ENV{TZ} from inside a thread other than
+the main thread then those changes will not be seen by strftime if you
+subsequently call that with the %Z formatting code. You must change $ENV{TZ}
+in the main thread to have the desired effect in this case (and you must
+also call _tzset() in the main thread to register the environment change).</p>
+<p>Furthermore, remember that this caveat also applies to fork(), which is
+emulated by threads on Win32.</p>
+<a class='view-head2' id="Use-of-epoch-seconds"></a><h3 class='h3' >Use of epoch seconds</h3>
+<p>This module internally uses the epoch seconds system that is provided via
+the perl <code class="inline"><a class="l_k" href="../functions/time.html">time()</a></code> function and supported by <code class="inline"><a class="l_k" href="../functions/gmtime.html">gmtime()</a></code> and <code class="inline"><a class="l_k" href="../functions/localtime.html">localtime()</a></code>.</p>
+<p>If your perl does not support times larger than <code class="inline"><span class="n">2</span>^<span class="n">31</span></code>
+ seconds then this
+module is likely to fail at processing dates beyond the year 2038. There are
+moves afoot to fix that in perl. Alternatively use 64 bit perl. Or if none
+of those are options, use the <a href="https://search.cpan.org/perldoc/DateTime">DateTime</a> module which has support for years
+well into the future and past.</p>
+<a class='view-head1' id="AUTHOR"></a><h2 class='h2' >AUTHOR</h2>
+<p>Matt Sergeant, matt@sergeant.org
+Jarkko Hietaniemi, jhi@iki.fi (while creating Time::Piece for core perl)</p>
+<a class='view-head1' id="COPYRIGHT-AND-LICENSE"></a><h2 class='h2' >COPYRIGHT AND LICENSE</h2>
+<p>Copyright 2001, Larry Wall.</p>
+<p>This module is free software, you may distribute it under the same terms
+as Perl.</p>
+<a class='view-head1' id="SEE-ALSO"></a><h2 class='h2' >SEE ALSO</h2>
+<p>The excellent Calendar FAQ at <a href="http://www.tondering.dk/claus/calendar.html">http://www.tondering.dk/claus/calendar.html</a></p>
+<a class='view-head1' id="BUGS"></a><h2 class='h2' >BUGS</h2>
+<p>The test harness leaves much to be desired. Patches welcome.</p>
+
+
+
+
+      <ul><li><a href="#NAME">NAME</a></li><li><a href="#SYNOPSIS">SYNOPSIS</a></li><li><a href="#DESCRIPTION">DESCRIPTION</a></li><li><a href="#USAGE">USAGE</a></li><ul><li><a href="#Local-Locales">Local Locales</a></li><li><a href="#Date-Calculations">Date Calculations</a></li><li><a href="#Date-Comparisons">Date Comparisons</a></li><li><a href="#Date-Parsing">Date Parsing</a></li><li><a href="#YYYY-MM-DDThh%3amm%3ass">YYYY-MM-DDThh:mm:ss</a></li><li><a href="#Week-Number">Week Number</a></li><li><a href="#Global-Overriding">Global Overriding</a></li></ul><li><a href="#CAVEATS">CAVEATS</a></li><ul><li><a href="#Setting-%24ENV%7bTZ%7d-in-Threads-on-Win32">Setting $ENV{TZ} in Threads on Win32</a></li><li><a href="#Use-of-epoch-seconds">Use of epoch seconds</a></li></ul><li><a href="#AUTHOR">AUTHOR</a></li><li><a href="#COPYRIGHT-AND-LICENSE">COPYRIGHT AND LICENSE</a></li><li><a href="#SEE-ALSO">SEE ALSO</a></li><li><a href="#BUGS">BUGS</a></li></ul>
+
+
+                  </div>
+                </article>
+              </div>
+            </div>
+          </main>
+        </div>
+           <footer class="footer row bg-light pt-5 pb-5">
+       <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+           <div class="row">
+               <div class="col-md-4">
+                   <ul class="list-unstyled">
+                       <li>
+                           <h4>Site info</h4>
+                       </li>
+                       <li>Docs mantained by
+                           <a href="//lists.perl.org/list/perl5-porters.html"
+                               rel="noopener">Perl 5 Porters</a>
+                       </li>
+                       <li>Perldoc site development sponsored by
+                           <a href="//opusvl.com" rel="noopener">
+                           <img style="margin: 20px 20px 5px 10px" class="opus-logo" src="/public/img/opusvl_logo.svg" alt="OpusVL Logo">
+                        </a>
+                    <li><span class="about_perldoc"><a href="//about.html">About PerlDOC</a></span>
+                    </li>
+                       </li>
+                   </ul>
+               </div>
+               <div class="col-md-8">
+                   <div class="row">
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Manuals</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.22.1/index-overview.html">Overview</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.22.1/index-tutorials.html">Tutorials</a>
+                               </li>
+                               <li>
+                                   <a href="/5.22.1/index-faq.html">FAQs</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.22.1/index-history.html">Changes</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Reference</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.22.1/index-language.html">Language</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.22.1/index-functions.html">Functions</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.22.1/perlop.html">Operators</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.22.1/perlvar.html">Variables</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Modules</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.22.1/index-modules-A.html">Modules</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.22.1/index-pragmas.html">Pragmas</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.22.1/index-utilities.html">Utilities</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Misc</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.22.1/index-licence.html">License</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.22.1/index-internals.html">Internals</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.22.1/index-platforms.html">Platforms</a>
+                               </li>
+                            <li>
+                                <a
+                                    href="/5.22.1/index-about.html">About</a>
+                            </li>
+                           </ul>
+                       </div>
+                   </div>
+               </div>
+               <div class=" col-12 footer-inf text-center">
+                   <small>perldoc.perl.org - Official documentation for the Perl
+                       programming language</small>
+               </div>
+           </div>
+       </div>
+   </footer>
+
+        	<div class="beta-wrapper beta-bottom-right ">
+		<div class="beta beta-blue  ">
+			<a class="beta-link "
+				href="//github.com/OpusVL/perldoc.perl.org/issues/new" rel="noopener">
+				<span class="beta-text">
+					This website is a Beta release.
+				</span>
+				<span class="beta-text">
+					For any issues please raise a ticket on GitHub
+				</span>
+			</a>
+		</div>
+	</div>
+
+        <script src="/public/js/main.min.js"></script>
+      </body>
+
+      </html>

@@ -1,0 +1,906 @@
+      
+      
+      
+      
+
+      <!DOCTYPE html>
+      <html lang="en">
+
+      <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="attributes - perldoc.perl.org">
+        <link rel="icon" href="/public/img/favicon.ico">
+        <title>attributes - perldoc.perl.org</title>
+        <link href="/public/css/main.min.css" rel="stylesheet">
+        <link rel="canonical" href="/attributes.html">
+        <link
+          href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900'
+          rel='stylesheet' type='text/css'>
+        <script>
+          window.ga = window.ga || function () {
+            (ga.q = ga.q || []).push(arguments)
+          };
+          ga.l = +new Date;
+          ga('create', 'UA-1892152-2', 'auto'); // JJ's account
+          ga('create', 'UA-50555-3', 'auto', 'perlOrg'); // perl.org account
+          ga('require', 'outboundLinkTracker', {
+            events: ['click', 'auxclick', 'contextmenu'],
+          });
+          ga('require', 'maxScrollTracker');
+          ga('send', 'pageview');
+          ga('perlOrg.send', 'pageview');
+        </script>
+        <script async src="https://www.google-analytics.com/analytics.js">
+        </script>
+        <script async src="/public/js/tracking.min.js"></script>
+      </head>
+
+      <body class="body container-fluid ">
+        <div class="wrapper">
+
+          <nav
+    class="navbar navbar-dark bg-primary bg-perl fixed-top justify-content-between navbar-expand-lg">
+    <a href="#content" class="skippy sr-only sr-only-focusable">
+        <span class=' skippy-text'>Skip to main content</span>
+    </a>
+    <a class="navbar-brand" href="/">
+        <img class="logo" src="/public/img/logo_perl_doc.svg"
+            alt="Perl Documentation Logo" />
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse"
+        data-target="#navbar" aria-controls="navbar" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="navbar" class="collapse navbar-collapse ">
+        <ul class="navbar-nav ml-auto navbar-right">
+            <form class="nav-item dropdown search-wrapper">
+                <input type="text" id='searchinput' aria-describedby='navbarDropdown5'
+                    placeholder="Type query" class='search-input-field' value=''>
+
+                <button href="#" data-toggle='dropdown' type="button"
+                    aria-haspopup="true" aria-expanded='false' id="navbarDropdown5"
+                    class="nav-link dropdown-toggle search-link">
+                    <object tabindex='-1' focusable="false" class='search-icon'
+                        data="/public/img/search.svg" type="image/svg+xml"
+                        name='search icon'>search
+                        icon</object>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown5"
+                    id='search-results'>
+                    <p class='dropdown-item major-version'>
+                        No results
+                    </p>
+                </div>
+            </form>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown" href="#" class="nav-link dropdown-toggle"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Perl versions</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    
+                        <p class='dropdown-item major-version'>
+                            5.32
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.32.0/">5.32.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.30
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.3/">5.30.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.2/">5.30.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.1/">5.30.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.0/">5.30.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.28
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.3/">5.28.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.2/">5.28.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.1/">5.28.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.0/">5.28.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.26
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.3/">5.26.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.2/">5.26.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.1/">5.26.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.0/">5.26.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.24
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.4/">5.24.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.3/">5.24.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.2/">5.24.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.1/">5.24.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.0/">5.24.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.22
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.4/">5.22.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.3/">5.22.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.2/">5.22.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.1/">5.22.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.0/">5.22.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.20
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.3/">5.20.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.2/">5.20.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.1/">5.20.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.0/">5.20.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.18
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.4/">5.18.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.3/">5.18.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.2/">5.18.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.1/">5.18.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.0/">5.18.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.16
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.3/">5.16.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.2/">5.16.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.1/">5.16.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.0/">5.16.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.14
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.4/">5.14.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.3/">5.14.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.2/">5.14.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.1/">5.14.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.0/">5.14.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.12
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.5/">5.12.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.4/">5.12.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.3/">5.12.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.2/">5.12.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.1/">5.12.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.0/">5.12.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.10
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.1/">5.10.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.0/">5.10.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.8
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.9/">5.8.9</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.8/">5.8.8</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.7/">5.8.7</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.6/">5.8.6</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.5/">5.8.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.4/">5.8.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.3/">5.8.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.2/">5.8.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.1/">5.8.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.0/">5.8.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.6
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.2/">5.6.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.1/">5.6.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.0/">5.6.0</a>
+                        
+                        
+                    
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown1" href="#" class="dropdown-toggle nav-link"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Manuals</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                    <a class="dropdown-item"
+                        href="/5.16.0/index-overview.html">Overview</a>
+                    <a class="dropdown-item"
+                        href="/5.16.0/index-tutorials.html">Tutorials</a>
+                    <a class="dropdown-item"
+                        href="/5.16.0/index-faq.html">FAQs</a>
+                    <a class="dropdown-item"
+                        href="/5.16.0/index-history.html">Changes</a>
+                    <a class="dropdown-item"
+                        href="/5.16.0/index-licence.html">License</a>
+                    <a class="dropdown-item"
+                        href="/5.16.0/index-language.html">Language</a>
+                    <a class="dropdown-item"
+                        href="/5.16.0/index-functions.html">Functions</a>
+                    <a class="dropdown-item"
+                        href="/5.16.0/perlop.html">Operators</a>
+                    <a class="dropdown-item"
+                        href="/5.16.0/perlvar.html">Variables</a>
+                    <a class="dropdown-item"
+                        href="/5.16.0/index-pragmas.html">Pragmas</a>
+                    <a class="dropdown-item"
+                        href="/5.16.0/index-utilities.html">Utilities</a>
+                    <a class="dropdown-item"
+                        href="/5.16.0/index-internals.html">Internals</a>
+                    <a class="dropdown-item"
+                        href="/5.16.0/index-platforms.html">Platforms</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown3" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Modules</a>
+                <div aria-labelledby="navbarDropdown3"
+                    class="dropdown-menu letters-wrap">
+                    <!--<a class="dropdown-item"
+                        href="/5.16.0/index-modules.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.16.0/index-modules-by-cat.html">By
+                        Category</a>-->
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.16.0/index-modules-A.html">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.0/index-modules-B.html">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.0/index-modules-C.html">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.0/index-modules-D.html">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.0/index-modules-E.html">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.0/index-modules-F.html">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.0/index-modules-G.html">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.0/index-modules-H.html">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.0/index-modules-I.html">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.0/index-modules-J.html">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.0/index-modules-K.html">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.0/index-modules-L.html">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.0/index-modules-M.html">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.0/index-modules-N.html">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.0/index-modules-O.html">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.0/index-modules-P.html">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.0/index-modules-Q.html">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.0/index-modules-R.html">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.0/index-modules-S.html">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.0/index-modules-T.html">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.0/index-modules-U.html">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.0/index-modules-V.html">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.0/index-modules-W.html">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.0/index-modules-X.html">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.0/index-modules-Y.html">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.0/index-modules-Z.html">Z</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown4" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Functions</a>
+                <div aria-labelledby="navbarDropdown4"
+                    class="dropdown-menu letters-wrap">
+                    <a class="dropdown-item"
+                        href="/5.16.0/index-functions.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.16.0/index-functions-by-cat.html">By
+                        Category</a>
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.16.0/index-functions.html#A">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.0/index-functions.html#B">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.0/index-functions.html#C">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.0/index-functions.html#D">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.0/index-functions.html#E">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.0/index-functions.html#F">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.0/index-functions.html#G">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.0/index-functions.html#H">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.0/index-functions.html#I">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.0/index-functions.html#J">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.0/index-functions.html#K">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.0/index-functions.html#L">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.0/index-functions.html#M">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.0/index-functions.html#N">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.0/index-functions.html#O">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.0/index-functions.html#P">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.0/index-functions.html#Q">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.0/index-functions.html#R">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.0/index-functions.html#S">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.0/index-functions.html#T">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.0/index-functions.html#U">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.0/index-functions.html#V">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.0/index-functions.html#W">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.0/index-functions.html#X">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.0/index-functions.html#Y">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.0/index-functions.html#Z">Z</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!--/.nav-collapse -->
+</nav>
+
+
+          <main class="row main-content pb-5 pt-5" id='content'>
+            <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+              <div class="row">
+                <div class="col-sm-12">
+                  <div id="breadcrumbs">
+                      
+    <a href="index.html">Home</a>&nbsp; &gt;
+    
+      
+        <a href="index-pragmas.html">Pragmas</a> &gt;
+      
+    
+    attributes
+  
+
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <article class="col-sm-12 content">
+                  <div class="documentation-wrapper">
+                    <div id="perl_version">
+                      <h7 class='page-title'> Perl 5 version 16.0
+                        documentation</h7>
+                    </div>
+                    <h1>attributes</h1>
+
+
+  <!--    -->
+<ul><li><a href="#NAME">NAME</a></li><li><a href="#SYNOPSIS">SYNOPSIS</a></li><li><a href="#DESCRIPTION">DESCRIPTION</a></li><ul><li><a href="#What-import-does">What import does</a></li><li><a href="#Built-in-Attributes">Built-in Attributes</a></li><li><a href="#Available-Subroutines">Available Subroutines</a></li><li><a href="#Package-specific-Attribute-Handling">Package-specific Attribute Handling</a></li><li><a href="#Syntax-of-Attribute-Lists">Syntax of Attribute Lists</a></li></ul><li><a href="#EXPORTS">EXPORTS</a></li><ul><li><a href="#Default-exports">Default exports</a></li><li><a href="#Available-exports">Available exports</a></li><li><a href="#Export-tags-defined">Export tags defined</a></li></ul><li><a href="#EXAMPLES">EXAMPLES</a></li><li><a href="#MORE-EXAMPLES">MORE EXAMPLES</a></li><li><a href="#SEE-ALSO">SEE ALSO</a></li></ul><a class='view-head1' id="NAME"></a><h2 class='h2' >NAME</h2>
+<p>attributes - get/set subroutine or variable attributes</p>
+<a class='view-head1' id="SYNOPSIS"></a><h2 class='h2' >SYNOPSIS</h2>
+<pre class="verbatim"><ol><li><a name="foo"></a>  sub <span class="m">foo</span> <span class="co">:</span> <span class="w">method</span> <span class="sc">;</span></li><li>  <a class="l_k" href="functions/my.html">my</a> <span class="s">(</span><span class="i">$x</span><span class="cm">,</span><span class="i">@y</span><span class="cm">,</span><span class="i">%z</span><span class="s">)</span> <span class="co">:</span> <span class="w">Bent</span> = <span class="n">1</span><span class="sc">;</span></li><li>  <a class="l_k" href="functions/my.html">my</a> <span class="i">$s</span> = <span class="i">sub </span><span class="co">:</span> <span class="w">method</span> <span class="s">{</span> ... <span class="s">}</span><span class="sc">;</span></li><li></li><li>  <a class="l_k" href="functions/use.html">use</a> <span class="w">attributes</span> <span class="s">(</span><span class="s">)</span><span class="sc">;</span>	<span class="c"># optional, to get subroutine declarations</span></li><li>  <a class="l_k" href="functions/my.html">my</a> <span class="i">@attrlist</span> = <span class="i">attributes::get</span><span class="s">(</span>\<span class="i">&amp;foo</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>  <a class="l_k" href="functions/use.html">use</a> <span class="w">attributes</span> <span class="q">&#39;get&#39;</span><span class="sc">;</span> <span class="c"># import the attributes::get subroutine</span></li><li>  <a class="l_k" href="functions/my.html">my</a> <span class="i">@attrlist</span> = <span class="w">get</span> \<span class="i">&amp;foo</span><span class="sc">;</span></li></ol></pre><a class='view-head1' id="DESCRIPTION"></a><h2 class='h2' >DESCRIPTION</h2>
+<p>Subroutine declarations and definitions may optionally have attribute lists
+associated with them.  (Variable <code class="inline"><a class="l_k" href="functions/my.html">my</a></code> declarations also may, but see the
+warning below.)  Perl handles these declarations by passing some information
+about the call site and the thing being declared along with the attribute
+list to this module.  In particular, the first example above is equivalent to
+the following:</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="functions/use.html">use</a> <span class="w">attributes</span> <span class="w">__PACKAGE__</span><span class="cm">,</span> \<span class="i">&amp;foo</span><span class="cm">,</span> <span class="q">&#39;method&#39;</span><span class="sc">;</span></li></ol></pre><p>The second example in the synopsis does something equivalent to this:</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="functions/use.html">use</a> <span class="w">attributes</span> <span class="s">(</span><span class="s">)</span><span class="sc">;</span></li><li>    <a class="l_k" href="functions/my.html">my</a> <span class="s">(</span><span class="i">$x</span><span class="cm">,</span><span class="i">@y</span><span class="cm">,</span><span class="i">%z</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="i">attributes::-&gt;import</span><span class="s">(</span><span class="w">__PACKAGE__</span><span class="cm">,</span> \<span class="i">$x</span><span class="cm">,</span> <span class="q">&#39;Bent&#39;</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="i">attributes::-&gt;import</span><span class="s">(</span><span class="w">__PACKAGE__</span><span class="cm">,</span> \<span class="i">@y</span><span class="cm">,</span> <span class="q">&#39;Bent&#39;</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="i">attributes::-&gt;import</span><span class="s">(</span><span class="w">__PACKAGE__</span><span class="cm">,</span> \<span class="i">%z</span><span class="cm">,</span> <span class="q">&#39;Bent&#39;</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="s">(</span><span class="i">$x</span><span class="cm">,</span><span class="i">@y</span><span class="cm">,</span><span class="i">%z</span><span class="s">)</span> = <span class="n">1</span><span class="sc">;</span></li></ol></pre><p>Yes, that's a lot of expansion.</p>
+<p><strong>WARNING</strong>: attribute declarations for variables are still evolving.
+The semantics and interfaces of such declarations could change in
+future versions.  They are present for purposes of experimentation
+with what the semantics ought to be.  Do not rely on the current
+implementation of this feature.</p>
+<p>There are only a few attributes currently handled by Perl itself (or
+directly by this module, depending on how you look at it.)  However,
+package-specific attributes are allowed by an extension mechanism.
+(See <a href="#Package-specific-Attribute-Handling">Package-specific Attribute Handling</a> below.)</p>
+<p>The setting of subroutine attributes happens at compile time.
+Variable attributes in <code class="inline"><a class="l_k" href="functions/our.html">our</a></code> declarations are also applied at compile time.
+However, <code class="inline"><a class="l_k" href="functions/my.html">my</a></code> variables get their attributes applied at run-time.
+This means that you have to <i>reach</i> the run-time component of the <code class="inline"><a class="l_k" href="functions/my.html">my</a></code>
+before those attributes will get applied.  For example:</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="functions/my.html">my</a> <span class="i">$x</span> <span class="co">:</span> <span class="w">Bent</span> = <span class="n">42</span> <a class="l_k" href="functions/if.html">if</a> <span class="n">0</span><span class="sc">;</span></li></ol></pre><p>will neither assign 42 to $x <i>nor</i> will it apply the <code class="inline"><span class="w">Bent</span></code>
+ attribute
+to the variable.</p>
+<p>An attempt to set an unrecognized attribute is a fatal error.  (The
+error is trappable, but it still stops the compilation within that
+<code class="inline"><a class="l_k" href="functions/eval.html">eval</a></code>.)  Setting an attribute with a name that's all lowercase
+letters that's not a built-in attribute (such as "foo") will result in
+a warning with <strong>-w</strong> or <code class="inline"><a class="l_k" href="functions/use.html">use</a> <span class="w">warnings</span> <span class="q">&#39;reserved&#39;</span></code>
+.</p>
+<a class='view-head2' id="What-import-does"></a><h3 class='h3' >What <code class="inline"><a class="l_k" href="functions/import.html">import</a></code> does</h3>
+<p>In the description it is mentioned that</p>
+<pre class="verbatim"><ol><li><a name="foo"></a>  sub <span class="m">foo</span> <span class="co">:</span> <span class="w">method</span><span class="sc">;</span></li></ol></pre><p>is equivalent to</p>
+<pre class="verbatim"><ol><li>  <a class="l_k" href="functions/use.html">use</a> <span class="w">attributes</span> <span class="w">__PACKAGE__</span><span class="cm">,</span> \<span class="i">&amp;foo</span><span class="cm">,</span> <span class="q">&#39;method&#39;</span><span class="sc">;</span></li></ol></pre><p>As you might know this calls the <code class="inline"><a class="l_k" href="functions/import.html">import</a></code> function of <code class="inline"><span class="w">attributes</span></code>
+ at compile 
+time with these parameters: 'attributes', the caller's package name, the reference 
+to the code and 'method'.</p>
+<pre class="verbatim"><ol><li>  <span class="w">attributes</span><span class="w">-&gt;import</span><span class="s">(</span> <span class="w">__PACKAGE__</span><span class="cm">,</span> \<span class="i">&amp;foo</span><span class="cm">,</span> <span class="q">&#39;method&#39;</span> <span class="s">)</span><span class="sc">;</span></li></ol></pre><p>So you want to know what <code class="inline"><a class="l_k" href="functions/import.html">import</a></code> actually does?</p>
+<p>First of all <code class="inline"><a class="l_k" href="functions/import.html">import</a></code> gets the type of the third parameter ('CODE' in this case).
+<code class="inline"><span class="w">attributes</span>.<span class="w">pm</span></code>
+ checks if there is a subroutine called <code class="inline"><span class="w">MODIFY_</span><span class="q">&lt;reftype&gt;</span><span class="w">_ATTRIBUTES</span></code>
+
+in the caller's namespace (here: 'main').  In this case a
+subroutine <code class="inline"><span class="w">MODIFY_CODE_ATTRIBUTES</span></code>
+ is required.  Then this
+method is called to check if you have used a "bad attribute".
+The subroutine call in this example would look like</p>
+<pre class="verbatim"><ol><li>  <span class="i">MODIFY_CODE_ATTRIBUTES</span><span class="s">(</span> <span class="q">&#39;main&#39;</span><span class="cm">,</span> \<span class="i">&amp;foo</span><span class="cm">,</span> <span class="q">&#39;method&#39;</span> <span class="s">)</span><span class="sc">;</span></li></ol></pre><p><code class="inline"><span class="w">MODIFY_</span><span class="q">&lt;reftype&gt;</span><span class="w">_ATTRIBUTES</span></code>
+ has to return a list of all "bad attributes".
+If there are any bad attributes <code class="inline"><a class="l_k" href="functions/import.html">import</a></code> croaks.</p>
+<p>(See <a href="#Package-specific-Attribute-Handling">Package-specific Attribute Handling</a> below.)</p>
+<a class='view-head2' id="Built-in-Attributes"></a><h3 class='h3' >Built-in Attributes</h3>
+<p>The following are the built-in attributes for subroutines:</p>
+<ul>
+<li><a class='view-title' id="lvalue"></a><strong>lvalue</strong>
+<p>Indicates that the referenced subroutine is a valid lvalue and can
+be assigned to.  The subroutine must return a modifiable value such
+as a scalar variable, as described in <a href="perlsub.html">perlsub</a>.</p>
+<p>This module allows one to set this attribute on a subroutine that is
+already defined.  For Perl subroutines (XSUBs are fine), it may or may not
+do what you want, depending on the code inside the subroutine, with details
+subject to change in future Perl versions.  You may run into problems with
+lvalue context not being propagated properly into the subroutine, or maybe
+even assertion failures.  For this reason, a warning is emitted if warnings
+are enabled.  In other words, you should only do this if you really know
+what you are doing.  You have been warned.</p>
+</li>
+<li><a class='view-title' id="method"></a><strong>method</strong>
+<p>Indicates that the referenced subroutine
+is a method.  A subroutine so marked
+will not trigger the "Ambiguous call resolved as CORE::%s" warning.</p>
+</li>
+<li><a class='view-title' id="locked"></a><strong>locked</strong>
+<p>The "locked" attribute has no effect in
+5.10.0 and later.  It was used as part
+of the now-removed "Perl 5.005 threads".</p>
+</li>
+</ul>
+<a class='view-head2' id="Available-Subroutines"></a><h3 class='h3' >Available Subroutines</h3>
+<p>The following subroutines are available for general use once this module
+has been loaded:</p>
+<ul>
+<li><a class='view-title' id="get"></a><strong>get</strong>
+<p>This routine expects a single parameter--a reference to a
+subroutine or variable.  It returns a list of attributes, which may be
+empty.  If passed invalid arguments, it uses die() (via <a href="Carp.html">Carp::croak</a>)
+to raise a fatal exception.  If it can find an appropriate package name
+for a class method lookup, it will include the results from a
+<code class="inline">FETCH_<i>type</i>_ATTRIBUTES</code> call in its return list, as described in
+<a href="#Package-specific-Attribute-Handling">Package-specific Attribute Handling</a> below.
+Otherwise, only <a href="#Built-in-Attributes">built-in attributes</a> will be returned.</p>
+</li>
+<li><a class='view-title' id="reftype"></a><strong>reftype</strong>
+<p>This routine expects a single parameter--a reference to a subroutine or
+variable.  It returns the built-in type of the referenced variable,
+ignoring any package into which it might have been blessed.
+This can be useful for determining the <i>type</i> value which forms part of
+the method names described in <a href="#Package-specific-Attribute-Handling">Package-specific Attribute Handling</a> below.</p>
+</li>
+</ul>
+<p>Note that these routines are <i>not</i> exported by default.</p>
+<a class='view-head2' id="Package-specific-Attribute-Handling"></a><h3 class='h3' >Package-specific Attribute Handling</h3>
+<p><strong>WARNING</strong>: the mechanisms described here are still experimental.  Do not
+rely on the current implementation.  In particular, there is no provision
+for applying package attributes to 'cloned' copies of subroutines used as
+closures.  (See <a href="perlref.html#Making-References">Making References in perlref</a> for information on closures.)
+Package-specific attribute handling may change incompatibly in a future
+release.</p>
+<p>When an attribute list is present in a declaration, a check is made to see
+whether an attribute 'modify' handler is present in the appropriate package
+(or its @ISA inheritance tree).  Similarly, when <code class="inline"><span class="w">attributes::get</span></code>
+ is
+called on a valid reference, a check is made for an appropriate attribute
+'fetch' handler.  See <a href="#EXAMPLES">EXAMPLES</a> to see how the "appropriate package"
+determination works.</p>
+<p>The handler names are based on the underlying type of the variable being
+declared or of the reference passed.  Because these attributes are
+associated with subroutine or variable declarations, this deliberately
+ignores any possibility of being blessed into some package.  Thus, a
+subroutine declaration uses "CODE" as its <i>type</i>, and even a blessed
+hash reference uses "HASH" as its <i>type</i>.</p>
+<p>The class methods invoked for modifying and fetching are these:</p>
+<ul>
+<li><a class='view-title' id="FETCH__type__ATTRIBUTES"></a><strong>FETCH_<i>type</i>_ATTRIBUTES</strong>
+<p>This method is called with two arguments:  the relevant package name,
+and a reference to a variable or subroutine for which package-defined
+attributes are desired.  The expected return value is a list of
+associated attributes.  This list may be empty.</p>
+</li>
+<li><a class='view-title' id="MODIFY__type__ATTRIBUTES"></a><strong>MODIFY_<i>type</i>_ATTRIBUTES</strong>
+<p>This method is called with two fixed arguments, followed by the list of
+attributes from the relevant declaration.  The two fixed arguments are
+the relevant package name and a reference to the declared subroutine or
+variable.  The expected return value is a list of attributes which were
+not recognized by this handler.  Note that this allows for a derived class
+to delegate a call to its base class, and then only examine the attributes
+which the base class didn't already handle for it.</p>
+<p>The call to this method is currently made <i>during</i> the processing of the
+declaration.  In particular, this means that a subroutine reference will
+probably be for an undefined subroutine, even if this declaration is
+actually part of the definition.</p>
+</li>
+</ul>
+<p>Calling <code class="inline"><span class="i">attributes::get</span><span class="s">(</span><span class="s">)</span></code>
+ from within the scope of a null package
+declaration <code class="inline"><a class="l_k" href="functions/package.html">package</a> <span class="sc">;</span></code>
+ for an unblessed variable reference will
+not provide any starting package name for the 'fetch' method lookup.
+Thus, this circumstance will not result in a method call for package-defined
+attributes.  A named subroutine knows to which symbol table entry it belongs
+(or originally belonged), and it will use the corresponding package.
+An anonymous subroutine knows the package name into which it was compiled
+(unless it was also compiled with a null package declaration), and so it
+will use that package name.</p>
+<a class='view-head2' id="Syntax-of-Attribute-Lists"></a><h3 class='h3' >Syntax of Attribute Lists</h3>
+<p>An attribute list is a sequence of attribute specifications, separated by
+whitespace or a colon (with optional whitespace).
+Each attribute specification is a simple
+name, optionally followed by a parenthesised parameter list.
+If such a parameter list is present, it is scanned past as for the rules
+for the <code class="inline"><a class="l_k" href="functions/q.html">q()</a></code> operator.  (See <a href="perlop.html#Quote-and-Quote-like-Operators">Quote and Quote-like Operators in perlop</a>.)
+The parameter list is passed as it was found, however, and not as per <code class="inline"><a class="l_k" href="functions/q.html">q()</a></code>.</p>
+<p>Some examples of syntactically valid attribute lists:</p>
+<pre class="verbatim"><ol><li>    switch<span class="s">(</span><span class="n">10</span><span class="cm">,</span><span class="i">foo</span><span class="s">(</span><span class="n">7</span><span class="cm">,</span><span class="n">3</span><span class="s">)</span><span class="s">)</span>  <span class="co">:</span>  <span class="w">expensive</span></li><li>    <span class="i">Ugly</span><span class="s">(</span><span class="q">&#39;\(&quot;) :Bad</span></li><li>    <span class="q">    _5x5</span></li><li>    <span class="q">    lvalue method</span></li></ol></pre><p>Some examples of syntactically invalid attribute lists (with annotation):</p>
+<pre class="verbatim"><ol><li>    switch<span class="s">(</span><span class="n">10</span><span class="cm">,</span><span class="i">foo</span><span class="s">(</span><span class="s">)</span>		<span class="c"># ()-string not balanced</span></li><li>    <span class="i">Ugly</span><span class="s">(</span><span class="q">&#39;(&#39;</span><span class="s">)</span>			<span class="c"># ()-string not balanced</span></li><li>    <span class="n">5</span><span class="n">x5</span>				<span class="c"># &quot;5x5&quot; not a valid identifier</span></li><li>    <span class="w">Y2::north</span>			<span class="c"># &quot;Y2::north&quot; not a simple identifier</span></li><li>    <span class="w">foo</span> + <span class="w">bar</span>			<span class="c"># &quot;+&quot; neither a colon nor whitespace</span></li></ol></pre><a class='view-head1' id="EXPORTS"></a><h2 class='h2' >EXPORTS</h2>
+<a class='view-head2' id="Default-exports"></a><h3 class='h3' >Default exports</h3>
+<p>None.</p>
+<a class='view-head2' id="Available-exports"></a><h3 class='h3' >Available exports</h3>
+<p>The routines <code class="inline"><span class="w">get</span></code>
+ and <code class="inline"><span class="w">reftype</span></code>
+ are exportable.</p>
+<a class='view-head2' id="Export-tags-defined"></a><h3 class='h3' >Export tags defined</h3>
+<p>The <code class="inline"><span class="j">:</span><span class="w">ALL</span></code>
+ tag will get all of the above exports.</p>
+<a class='view-head1' id="EXAMPLES"></a><h2 class='h2' >EXAMPLES</h2>
+<p>Here are some samples of syntactically valid declarations, with annotation
+as to how they resolve internally into <code class="inline"><a class="l_k" href="functions/use.html">use</a> <span class="w">attributes</span></code>
+ invocations by
+perl.  These examples are primarily useful to see how the "appropriate
+package" is found for the possible method lookups for package-defined
+attributes.</p>
+<dl>
+<li>
+<p>Code:</p>
+<pre class="verbatim"><ol><li><a name="package-Canine"></a>    package <span class="i">Canine</span><span class="sc">;</span></li><li><a name="package-Dog"></a>    package <span class="i">Dog</span><span class="sc">;</span></li><li>    <a class="l_k" href="functions/my.html">my</a> <span class="w">Canine</span> <span class="i">$spot</span> <span class="co">:</span> <span class="w">Watchful</span> <span class="sc">;</span></li></ol></pre><p>Effect:</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="functions/use.html">use</a> <span class="w">attributes</span> <span class="s">(</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="i">attributes::-&gt;import</span><span class="s">(</span><span class="w">Canine</span> <span class="cm">=&gt;</span> \<span class="i">$spot</span><span class="cm">,</span> <span class="q">&quot;Watchful&quot;</span><span class="s">)</span><span class="sc">;</span></li></ol></pre></li>
+<li>
+<p>Code:</p>
+<pre class="verbatim"><ol><li><a name="package-Felis"></a>    package <span class="i">Felis</span><span class="sc">;</span></li><li>    <a class="l_k" href="functions/my.html">my</a> <span class="i">$cat</span> <span class="co">:</span> <span class="w">Nervous</span><span class="sc">;</span></li></ol></pre><p>Effect:</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="functions/use.html">use</a> <span class="w">attributes</span> <span class="s">(</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="i">attributes::-&gt;import</span><span class="s">(</span><span class="w">Felis</span> <span class="cm">=&gt;</span> \<span class="i">$cat</span><span class="cm">,</span> <span class="q">&quot;Nervous&quot;</span><span class="s">)</span><span class="sc">;</span></li></ol></pre></li>
+<li>
+<p>Code:</p>
+<pre class="verbatim"><ol><li><a name="package-X"></a>    package <span class="i">X</span><span class="sc">;</span></li><li><a name="foo"></a>    sub <span class="m">foo</span> <span class="co">:</span> <span class="w">lvalue</span> <span class="sc">;</span></li></ol></pre><p>Effect:</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="functions/use.html">use</a> <span class="w">attributes</span> <span class="w">X</span> <span class="cm">=&gt;</span> \<span class="i">&amp;foo</span><span class="cm">,</span> <span class="q">&quot;lvalue&quot;</span><span class="sc">;</span></li></ol></pre></li>
+<li>
+<p>Code:</p>
+<pre class="verbatim"><ol><li><a name="package-X"></a>    package <span class="i">X</span><span class="sc">;</span></li><li><a name="Y::x"></a>    sub <span class="m">Y::x</span> <span class="co">:</span> <span class="w">lvalue</span> <span class="s">{</span> <span class="n">1</span> <span class="s">}</span></li></ol></pre><p>Effect:</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="functions/use.html">use</a> <span class="w">attributes</span> <span class="w">Y</span> <span class="cm">=&gt;</span> \<span class="i">&amp;Y::x</span><span class="cm">,</span> <span class="q">&quot;lvalue&quot;</span><span class="sc">;</span></li></ol></pre></li>
+<li>
+<p>Code:</p>
+<pre class="verbatim"><ol><li><a name="package-X"></a>    package <span class="i">X</span><span class="sc">;</span></li><li><a name="foo"></a>    sub <span class="m">foo</span> <span class="s">{</span> <span class="n">1</span> <span class="s">}</span></li><li></li><li><a name="package-Y"></a>    package <span class="i">Y</span><span class="sc">;</span></li><li>    <a class="l_k" href="functions/BEGIN.html">BEGIN</a> <span class="s">{</span> <span class="i">*bar</span> = \<span class="i">&amp;X::foo</span><span class="sc">;</span> <span class="s">}</span></li><li></li><li><a name="package-Z"></a>    package <span class="i">Z</span><span class="sc">;</span></li><li><a name="Y::bar"></a>    sub <span class="m">Y::bar</span> <span class="co">:</span> <span class="w">lvalue</span> <span class="sc">;</span></li></ol></pre><p>Effect:</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="functions/use.html">use</a> <span class="w">attributes</span> <span class="w">X</span> <span class="cm">=&gt;</span> \<span class="i">&amp;X::foo</span><span class="cm">,</span> <span class="q">&quot;lvalue&quot;</span><span class="sc">;</span></li></ol></pre></li>
+</dl>
+<p>This last example is purely for purposes of completeness.  You should not
+be trying to mess with the attributes of something in a package that's
+not your own.</p>
+<a class='view-head1' id="MORE-EXAMPLES"></a><h2 class='h2' >MORE EXAMPLES</h2>
+<dl>
+<li>
+<pre class="verbatim"><ol><li><a name="MODIFY_CODE_ATTRIBUTES"></a>    sub <span class="m">MODIFY_CODE_ATTRIBUTES</span> <span class="s">{</span></li><li>       <a class="l_k" href="functions/my.html">my</a> <span class="s">(</span><span class="i">$class</span><span class="cm">,</span><span class="i">$code</span><span class="cm">,</span><span class="i">@attrs</span><span class="s">)</span> = <span class="i">@_</span><span class="sc">;</span></li><li></li><li>       <a class="l_k" href="functions/my.html">my</a> <span class="i">$allowed</span> = <span class="q">&#39;MyAttribute&#39;</span><span class="sc">;</span></li><li>       <a class="l_k" href="functions/my.html">my</a> <span class="i">@bad</span> = <a class="l_k" href="functions/grep.html">grep</a> <span class="s">{</span> <span class="i">$_</span> <a class="l_k" href="functions/ne.html">ne</a> <span class="i">$allowed</span> <span class="s">}</span> <span class="i">@attrs</span><span class="sc">;</span></li><li></li><li>       <a class="l_k" href="functions/return.html">return</a> <span class="i">@bad</span><span class="sc">;</span></li><li>    <span class="s">}</span></li><li></li><li><a name="foo"></a>    sub <span class="m">foo</span> <span class="co">:</span> <span class="w">MyAttribute</span> <span class="s">{</span></li><li>       <a class="l_k" href="functions/print.html">print</a> <span class="q">&quot;foo\n&quot;</span><span class="sc">;</span></li><li>    <span class="s">}</span></li></ol></pre><p>This example runs.  At compile time
+<code class="inline"><span class="w">MODIFY_CODE_ATTRIBUTES</span></code>
+ is called.  In that
+subroutine, we check if any attribute is disallowed and we return a list of
+these "bad attributes".</p>
+<p>As we return an empty list, everything is fine.</p>
+</li>
+<li>
+<pre class="verbatim"><ol><li><a name="MODIFY_CODE_ATTRIBUTES"></a>  sub <span class="m">MODIFY_CODE_ATTRIBUTES</span> <span class="s">{</span></li><li>     <a class="l_k" href="functions/my.html">my</a> <span class="s">(</span><span class="i">$class</span><span class="cm">,</span><span class="i">$code</span><span class="cm">,</span><span class="i">@attrs</span><span class="s">)</span> = <span class="i">@_</span><span class="sc">;</span></li><li></li><li>     <a class="l_k" href="functions/my.html">my</a> <span class="i">$allowed</span> = <span class="q">&#39;MyAttribute&#39;</span><span class="sc">;</span></li><li>     <a class="l_k" href="functions/my.html">my</a> <span class="i">@bad</span> = <a class="l_k" href="functions/grep.html">grep</a><span class="s">{</span> <span class="i">$_</span> <a class="l_k" href="functions/ne.html">ne</a> <span class="i">$allowed</span> <span class="s">}</span><span class="i">@attrs</span><span class="sc">;</span></li><li></li><li>     <a class="l_k" href="functions/return.html">return</a> <span class="i">@bad</span><span class="sc">;</span></li><li>  <span class="s">}</span></li><li></li><li><a name="foo"></a>  sub <span class="m">foo</span> <span class="co">:</span> <span class="w">MyAttribute</span> <span class="w">Test</span> <span class="s">{</span></li><li>     <a class="l_k" href="functions/print.html">print</a> <span class="q">&quot;foo\n&quot;</span><span class="sc">;</span></li><li>  <span class="s">}</span></li></ol></pre><p>This example is aborted at compile time as we use the attribute "Test" which
+isn't allowed.  <code class="inline"><span class="w">MODIFY_CODE_ATTRIBUTES</span></code>
+
+returns a list that contains a single
+element ('Test').</p>
+</li>
+</dl>
+<a class='view-head1' id="SEE-ALSO"></a><h2 class='h2' >SEE ALSO</h2>
+<p><a href="perlsub.html#Private-Variables-via-my()">Private Variables via my() in perlsub</a> and
+<a href="perlsub.html#Subroutine-Attributes">Subroutine Attributes in perlsub</a> for details on the basic declarations;
+<a class='function-name' href="functions/use.html">use</a> for details on the normal invocation mechanism.</p>
+
+
+
+
+      <ul><li><a href="#NAME">NAME</a></li><li><a href="#SYNOPSIS">SYNOPSIS</a></li><li><a href="#DESCRIPTION">DESCRIPTION</a></li><ul><li><a href="#What-import-does">What import does</a></li><li><a href="#Built-in-Attributes">Built-in Attributes</a></li><li><a href="#Available-Subroutines">Available Subroutines</a></li><li><a href="#Package-specific-Attribute-Handling">Package-specific Attribute Handling</a></li><li><a href="#Syntax-of-Attribute-Lists">Syntax of Attribute Lists</a></li></ul><li><a href="#EXPORTS">EXPORTS</a></li><ul><li><a href="#Default-exports">Default exports</a></li><li><a href="#Available-exports">Available exports</a></li><li><a href="#Export-tags-defined">Export tags defined</a></li></ul><li><a href="#EXAMPLES">EXAMPLES</a></li><li><a href="#MORE-EXAMPLES">MORE EXAMPLES</a></li><li><a href="#SEE-ALSO">SEE ALSO</a></li></ul>
+
+
+                  </div>
+                </article>
+              </div>
+            </div>
+          </main>
+        </div>
+           <footer class="footer row bg-light pt-5 pb-5">
+       <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+           <div class="row">
+               <div class="col-md-4">
+                   <ul class="list-unstyled">
+                       <li>
+                           <h4>Site info</h4>
+                       </li>
+                       <li>Docs mantained by
+                           <a href="//lists.perl.org/list/perl5-porters.html"
+                               rel="noopener">Perl 5 Porters</a>
+                       </li>
+                       <li>Perldoc site development sponsored by
+                           <a href="//opusvl.com" rel="noopener">
+                           <img style="margin: 20px 20px 5px 10px" class="opus-logo" src="/public/img/opusvl_logo.svg" alt="OpusVL Logo">
+                        </a>
+                    <li><span class="about_perldoc"><a href="//about.html">About PerlDOC</a></span>
+                    </li>
+                       </li>
+                   </ul>
+               </div>
+               <div class="col-md-8">
+                   <div class="row">
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Manuals</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.16.0/index-overview.html">Overview</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.16.0/index-tutorials.html">Tutorials</a>
+                               </li>
+                               <li>
+                                   <a href="/5.16.0/index-faq.html">FAQs</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.16.0/index-history.html">Changes</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Reference</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.16.0/index-language.html">Language</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.16.0/index-functions.html">Functions</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.16.0/perlop.html">Operators</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.16.0/perlvar.html">Variables</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Modules</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.16.0/index-modules-A.html">Modules</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.16.0/index-pragmas.html">Pragmas</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.16.0/index-utilities.html">Utilities</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Misc</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.16.0/index-licence.html">License</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.16.0/index-internals.html">Internals</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.16.0/index-platforms.html">Platforms</a>
+                               </li>
+                            <li>
+                                <a
+                                    href="/5.16.0/index-about.html">About</a>
+                            </li>
+                           </ul>
+                       </div>
+                   </div>
+               </div>
+               <div class=" col-12 footer-inf text-center">
+                   <small>perldoc.perl.org - Official documentation for the Perl
+                       programming language</small>
+               </div>
+           </div>
+       </div>
+   </footer>
+
+        	<div class="beta-wrapper beta-bottom-right ">
+		<div class="beta beta-blue  ">
+			<a class="beta-link "
+				href="//github.com/OpusVL/perldoc.perl.org/issues/new" rel="noopener">
+				<span class="beta-text">
+					This website is a Beta release.
+				</span>
+				<span class="beta-text">
+					For any issues please raise a ticket on GitHub
+				</span>
+			</a>
+		</div>
+	</div>
+
+        <script src="/public/js/main.min.js"></script>
+      </body>
+
+      </html>

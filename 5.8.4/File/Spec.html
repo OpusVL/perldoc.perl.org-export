@@ -1,0 +1,839 @@
+      
+      
+      
+      
+
+      <!DOCTYPE html>
+      <html lang="en">
+
+      <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="File::Spec - perldoc.perl.org">
+        <link rel="icon" href="/public/img/favicon.ico">
+        <title>File::Spec - perldoc.perl.org</title>
+        <link href="/public/css/main.min.css" rel="stylesheet">
+        <link rel="canonical" href="/File/Spec.html">
+        <link
+          href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900'
+          rel='stylesheet' type='text/css'>
+        <script>
+          window.ga = window.ga || function () {
+            (ga.q = ga.q || []).push(arguments)
+          };
+          ga.l = +new Date;
+          ga('create', 'UA-1892152-2', 'auto'); // JJ's account
+          ga('create', 'UA-50555-3', 'auto', 'perlOrg'); // perl.org account
+          ga('require', 'outboundLinkTracker', {
+            events: ['click', 'auxclick', 'contextmenu'],
+          });
+          ga('require', 'maxScrollTracker');
+          ga('send', 'pageview');
+          ga('perlOrg.send', 'pageview');
+        </script>
+        <script async src="https://www.google-analytics.com/analytics.js">
+        </script>
+        <script async src="/public/js/tracking.min.js"></script>
+      </head>
+
+      <body class="body container-fluid ">
+        <div class="wrapper">
+
+          <nav
+    class="navbar navbar-dark bg-primary bg-perl fixed-top justify-content-between navbar-expand-lg">
+    <a href="#content" class="skippy sr-only sr-only-focusable">
+        <span class=' skippy-text'>Skip to main content</span>
+    </a>
+    <a class="navbar-brand" href="/">
+        <img class="logo" src="/public/img/logo_perl_doc.svg"
+            alt="Perl Documentation Logo" />
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse"
+        data-target="#navbar" aria-controls="navbar" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="navbar" class="collapse navbar-collapse ">
+        <ul class="navbar-nav ml-auto navbar-right">
+            <form class="nav-item dropdown search-wrapper">
+                <input type="text" id='searchinput' aria-describedby='navbarDropdown5'
+                    placeholder="Type query" class='search-input-field' value=''>
+
+                <button href="#" data-toggle='dropdown' type="button"
+                    aria-haspopup="true" aria-expanded='false' id="navbarDropdown5"
+                    class="nav-link dropdown-toggle search-link">
+                    <object tabindex='-1' focusable="false" class='search-icon'
+                        data="/public/img/search.svg" type="image/svg+xml"
+                        name='search icon'>search
+                        icon</object>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown5"
+                    id='search-results'>
+                    <p class='dropdown-item major-version'>
+                        No results
+                    </p>
+                </div>
+            </form>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown" href="#" class="nav-link dropdown-toggle"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Perl versions</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    
+                        <p class='dropdown-item major-version'>
+                            5.32
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.32.0/">5.32.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.30
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.3/">5.30.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.2/">5.30.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.1/">5.30.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.0/">5.30.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.28
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.3/">5.28.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.2/">5.28.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.1/">5.28.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.0/">5.28.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.26
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.3/">5.26.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.2/">5.26.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.1/">5.26.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.0/">5.26.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.24
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.4/">5.24.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.3/">5.24.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.2/">5.24.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.1/">5.24.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.0/">5.24.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.22
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.4/">5.22.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.3/">5.22.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.2/">5.22.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.1/">5.22.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.0/">5.22.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.20
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.3/">5.20.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.2/">5.20.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.1/">5.20.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.0/">5.20.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.18
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.4/">5.18.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.3/">5.18.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.2/">5.18.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.1/">5.18.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.0/">5.18.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.16
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.3/">5.16.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.2/">5.16.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.1/">5.16.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.0/">5.16.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.14
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.4/">5.14.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.3/">5.14.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.2/">5.14.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.1/">5.14.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.0/">5.14.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.12
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.5/">5.12.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.4/">5.12.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.3/">5.12.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.2/">5.12.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.1/">5.12.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.0/">5.12.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.10
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.1/">5.10.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.0/">5.10.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.8
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.9/">5.8.9</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.8/">5.8.8</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.7/">5.8.7</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.6/">5.8.6</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.5/">5.8.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.4/">5.8.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.3/">5.8.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.2/">5.8.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.1/">5.8.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.0/">5.8.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.6
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.2/">5.6.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.1/">5.6.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.0/">5.6.0</a>
+                        
+                        
+                    
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown1" href="#" class="dropdown-toggle nav-link"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Manuals</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                    <a class="dropdown-item"
+                        href="/5.8.4/index-overview.html">Overview</a>
+                    <a class="dropdown-item"
+                        href="/5.8.4/index-tutorials.html">Tutorials</a>
+                    <a class="dropdown-item"
+                        href="/5.8.4/index-faq.html">FAQs</a>
+                    <a class="dropdown-item"
+                        href="/5.8.4/index-history.html">Changes</a>
+                    <a class="dropdown-item"
+                        href="/5.8.4/index-licence.html">License</a>
+                    <a class="dropdown-item"
+                        href="/5.8.4/index-language.html">Language</a>
+                    <a class="dropdown-item"
+                        href="/5.8.4/index-functions.html">Functions</a>
+                    <a class="dropdown-item"
+                        href="/5.8.4/perlop.html">Operators</a>
+                    <a class="dropdown-item"
+                        href="/5.8.4/perlvar.html">Variables</a>
+                    <a class="dropdown-item"
+                        href="/5.8.4/index-pragmas.html">Pragmas</a>
+                    <a class="dropdown-item"
+                        href="/5.8.4/index-utilities.html">Utilities</a>
+                    <a class="dropdown-item"
+                        href="/5.8.4/index-internals.html">Internals</a>
+                    <a class="dropdown-item"
+                        href="/5.8.4/index-platforms.html">Platforms</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown3" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Modules</a>
+                <div aria-labelledby="navbarDropdown3"
+                    class="dropdown-menu letters-wrap">
+                    <!--<a class="dropdown-item"
+                        href="/5.8.4/index-modules.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.8.4/index-modules-by-cat.html">By
+                        Category</a>-->
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.8.4/index-modules-A.html">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.4/index-modules-B.html">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.4/index-modules-C.html">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.4/index-modules-D.html">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.4/index-modules-E.html">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.4/index-modules-F.html">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.4/index-modules-G.html">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.4/index-modules-H.html">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.4/index-modules-I.html">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.4/index-modules-J.html">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.4/index-modules-K.html">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.4/index-modules-L.html">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.4/index-modules-M.html">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.4/index-modules-N.html">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.4/index-modules-O.html">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.4/index-modules-P.html">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.4/index-modules-Q.html">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.4/index-modules-R.html">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.4/index-modules-S.html">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.4/index-modules-T.html">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.4/index-modules-U.html">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.4/index-modules-V.html">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.4/index-modules-W.html">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.4/index-modules-X.html">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.4/index-modules-Y.html">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.4/index-modules-Z.html">Z</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown4" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Functions</a>
+                <div aria-labelledby="navbarDropdown4"
+                    class="dropdown-menu letters-wrap">
+                    <a class="dropdown-item"
+                        href="/5.8.4/index-functions.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.8.4/index-functions-by-cat.html">By
+                        Category</a>
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.8.4/index-functions.html#A">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.4/index-functions.html#B">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.4/index-functions.html#C">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.4/index-functions.html#D">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.4/index-functions.html#E">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.4/index-functions.html#F">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.4/index-functions.html#G">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.4/index-functions.html#H">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.4/index-functions.html#I">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.4/index-functions.html#J">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.4/index-functions.html#K">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.4/index-functions.html#L">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.4/index-functions.html#M">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.4/index-functions.html#N">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.4/index-functions.html#O">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.4/index-functions.html#P">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.4/index-functions.html#Q">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.4/index-functions.html#R">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.4/index-functions.html#S">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.4/index-functions.html#T">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.4/index-functions.html#U">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.4/index-functions.html#V">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.4/index-functions.html#W">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.4/index-functions.html#X">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.4/index-functions.html#Y">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.4/index-functions.html#Z">Z</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!--/.nav-collapse -->
+</nav>
+
+
+          <main class="row main-content pb-5 pt-5" id='content'>
+            <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+              <div class="row">
+                <div class="col-sm-12">
+                  <div id="breadcrumbs">
+                      
+    <a href="../index.html">Home</a>&nbsp; &gt;
+    
+      
+        <a href="../index-modules-F.html">Core modules (F)</a> &gt;
+      
+    
+    File::Spec
+  
+
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <article class="col-sm-12 content">
+                  <div class="documentation-wrapper">
+                    <div id="perl_version">
+                      <h7 class='page-title'> Perl 5 version 8.4
+                        documentation</h7>
+                    </div>
+                    <h1>File::Spec</h1>
+
+
+  <!--    -->
+<ul><li><a href="#NAME">NAME</a></li><li><a href="#SYNOPSIS">SYNOPSIS</a></li><li><a href="#DESCRIPTION">DESCRIPTION</a></li><li><a href="#METHODS">METHODS</a></li><li><a href="#SEE-ALSO">SEE ALSO</a></li><li><a href="#AUTHORS">AUTHORS</a></li></ul><a class='view-head1' id="NAME"></a><h2 class='h2' >NAME</h2>
+<p>File::Spec - portably perform operations on file names</p>
+<a class='view-head1' id="SYNOPSIS"></a><h2 class='h2' >SYNOPSIS</h2>
+<pre class="verbatim"><ol><li>	<a class="l_k" href="../functions/use.html">use</a> <span class="w">File::Spec</span><span class="sc">;</span></li><li></li><li>	<span class="i">$x</span>=<span class="w">File::Spec</span><span class="w">-&gt;catfile</span><span class="s">(</span><span class="q">&#39;a&#39;</span><span class="cm">,</span> <span class="q">&#39;b&#39;</span><span class="cm">,</span> <span class="q">&#39;c&#39;</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>which returns 'a/b/c' under Unix. Or:</p>
+<pre class="verbatim"><ol><li>	<a class="l_k" href="../functions/use.html">use</a> <span class="w">File::Spec::Functions</span><span class="sc">;</span></li><li></li><li>	<span class="i">$x</span> = <span class="i">catfile</span><span class="s">(</span><span class="q">&#39;a&#39;</span><span class="cm">,</span> <span class="q">&#39;b&#39;</span><span class="cm">,</span> <span class="q">&#39;c&#39;</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><a class='view-head1' id="DESCRIPTION"></a><h2 class='h2' >DESCRIPTION</h2>
+<p>This module is designed to support operations commonly performed on file
+specifications (usually called "file names", but not to be confused with the
+contents of a file, or Perl's file handles), such as concatenating several
+directory and file names into a single path, or determining whether a path
+is rooted. It is based on code directly taken from MakeMaker 5.17, code
+written by Andreas K&#xf6;nig, Andy Dougherty, Charles Bailey, Ilya
+Zakharevich, Paul Schinder, and others.</p>
+<p>Since these functions are different for most operating systems, each set of
+OS specific routines is available in a separate module, including:</p>
+<pre class="verbatim"><ol><li>	<span class="w">File::Spec::Unix</span></li><li>	<span class="w">File::Spec::Mac</span></li><li>	<span class="w">File::Spec::OS2</span></li><li>	<span class="w">File::Spec::Win32</span></li><li>	<span class="w">File::Spec::VMS</span></li></ol></pre><p>The module appropriate for the current OS is automatically loaded by
+File::Spec. Since some modules (like VMS) make use of facilities available
+only under that OS, it may not be possible to load all modules under all
+operating systems.</p>
+<p>Since File::Spec is object oriented, subroutines should not be called directly,
+as in:</p>
+<pre class="verbatim"><ol><li>	<span class="i">File::Spec::catfile</span><span class="s">(</span><span class="q">&#39;a&#39;</span><span class="cm">,</span><span class="q">&#39;b&#39;</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>but rather as class methods:</p>
+<pre class="verbatim"><ol><li>	<span class="w">File::Spec</span><span class="w">-&gt;catfile</span><span class="s">(</span><span class="q">&#39;a&#39;</span><span class="cm">,</span><span class="q">&#39;b&#39;</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>For simple uses, <a href="../File/Spec/Functions.html">File::Spec::Functions</a> provides convenient functional
+forms of these methods.</p>
+<a class='view-head1' id="METHODS"></a><h2 class='h2' >METHODS</h2>
+<ul>
+<li><a class='view-title' id="canonpath"></a><strong>canonpath</strong>
+<p>No physical check on the filesystem, but a logical cleanup of a
+path.</p>
+<pre class="verbatim"><ol><li>    <span class="i">$cpath</span> = <span class="w">File::Spec</span><span class="w">-&gt;canonpath</span><span class="s">(</span> <span class="i">$path</span> <span class="s">)</span> <span class="sc">;</span></li></ol></pre></li>
+<li><a class='view-title' id="catdir"></a><strong>catdir</strong>
+<p>Concatenate two or more directory names to form a complete path ending
+with a directory. But remove the trailing slash from the resulting
+string, because it doesn't look good, isn't necessary and confuses
+OS2. Of course, if this is the root directory, don't cut off the
+trailing slash :-)</p>
+<pre class="verbatim"><ol><li>    <span class="i">$path</span> = <span class="w">File::Spec</span><span class="w">-&gt;catdir</span><span class="s">(</span> <span class="i">@directories</span> <span class="s">)</span><span class="sc">;</span></li></ol></pre></li>
+<li><a class='view-title' id="catfile"></a><strong>catfile</strong>
+<p>Concatenate one or more directory names and a filename to form a
+complete path ending with a filename</p>
+<pre class="verbatim"><ol><li>    <span class="i">$path</span> = <span class="w">File::Spec</span><span class="w">-&gt;catfile</span><span class="s">(</span> <span class="i">@directories</span><span class="cm">,</span> <span class="i">$filename</span> <span class="s">)</span><span class="sc">;</span></li></ol></pre></li>
+<li><a class='view-title' id="curdir"></a><strong>curdir</strong>
+<p>Returns a string representation of the current directory.</p>
+<pre class="verbatim"><ol><li>    <span class="i">$curdir</span> = <span class="w">File::Spec</span><span class="w">-&gt;curdir</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li></ol></pre></li>
+<li><a class='view-title' id="devnull"></a><strong>devnull</strong>
+<p>Returns a string representation of the null device.</p>
+<pre class="verbatim"><ol><li>    <span class="i">$devnull</span> = <span class="w">File::Spec</span><span class="w">-&gt;devnull</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li></ol></pre></li>
+<li><a class='view-title' id="rootdir"></a><strong>rootdir</strong>
+<p>Returns a string representation of the root directory.</p>
+<pre class="verbatim"><ol><li>    <span class="i">$rootdir</span> = <span class="w">File::Spec</span><span class="w">-&gt;rootdir</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li></ol></pre></li>
+<li><a class='view-title' id="tmpdir"></a><strong>tmpdir</strong>
+<p>Returns a string representation of the first writable directory from a
+list of possible temporary directories.  Returns the current directory
+if no writable temporary directories are found.  The list of directories
+checked depends on the platform; e.g. File::Spec::Unix checks $ENV{TMPDIR}
+(unless taint is on) and /tmp.</p>
+<pre class="verbatim"><ol><li>    <span class="i">$tmpdir</span> = <span class="w">File::Spec</span><span class="w">-&gt;tmpdir</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li></ol></pre></li>
+<li><a class='view-title' id="updir"></a><strong>updir</strong>
+<p>Returns a string representation of the parent directory.</p>
+<pre class="verbatim"><ol><li>    <span class="i">$updir</span> = <span class="w">File::Spec</span><span class="w">-&gt;updir</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li></ol></pre></li>
+<li><a class='view-title' id="no_upwards"></a><strong>no_upwards</strong>
+<p>Given a list of file names, strip out those that refer to a parent
+directory. (Does not strip symlinks, only '.', '..', and equivalents.)</p>
+<pre class="verbatim"><ol><li>    <span class="i">@paths</span> = <span class="w">File::Spec</span><span class="w">-&gt;no_upwards</span><span class="s">(</span> <span class="i">@paths</span> <span class="s">)</span><span class="sc">;</span></li></ol></pre></li>
+<li><a class='view-title' id="case_tolerant"></a><strong>case_tolerant</strong>
+<p>Returns a true or false value indicating, respectively, that alphabetic
+is not or is significant when comparing file specifications.</p>
+<pre class="verbatim"><ol><li>    <span class="i">$is_case_tolerant</span> = <span class="w">File::Spec</span><span class="w">-&gt;case_tolerant</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li></ol></pre></li>
+<li><a class='view-title' id="file_name_is_absolute"></a><strong>file_name_is_absolute</strong>
+<p>Takes as argument a path and returns true if it is an absolute path.</p>
+<pre class="verbatim"><ol><li>    <span class="i">$is_absolute</span> = <span class="w">File::Spec</span><span class="w">-&gt;file_name_is_absolute</span><span class="s">(</span> <span class="i">$path</span> <span class="s">)</span><span class="sc">;</span></li></ol></pre><p>This does not consult the local filesystem on Unix, Win32, OS/2, or
+Mac OS (Classic).  It does consult the working environment for VMS
+(see <a href="../File/Spec/VMS.html#file_name_is_absolute">file_name_is_absolute in File::Spec::VMS</a>).</p>
+</li>
+<li><a class='view-title' id="path"></a><strong>path</strong>
+<p>Takes no argument, returns the environment variable PATH (or the local
+platform's equivalent) as a list.</p>
+<pre class="verbatim"><ol><li>    <span class="i">@PATH</span> = <span class="w">File::Spec</span><span class="w">-&gt;path</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li></ol></pre></li>
+<li><a class='view-title' id="join"></a><strong>join</strong>
+<p>join is the same as catfile.</p>
+</li>
+<li><a class='view-title' id="splitpath"></a><strong>splitpath</strong>
+<p>Splits a path in to volume, directory, and filename portions. On systems
+with no concept of volume, returns '' for volume.</p>
+<pre class="verbatim"><ol><li>    <span class="s">(</span><span class="i">$volume</span><span class="cm">,</span><span class="i">$directories</span><span class="cm">,</span><span class="i">$file</span><span class="s">)</span> = <span class="w">File::Spec</span><span class="w">-&gt;splitpath</span><span class="s">(</span> <span class="i">$path</span> <span class="s">)</span><span class="sc">;</span></li><li>    <span class="s">(</span><span class="i">$volume</span><span class="cm">,</span><span class="i">$directories</span><span class="cm">,</span><span class="i">$file</span><span class="s">)</span> = <span class="w">File::Spec</span><span class="w">-&gt;splitpath</span><span class="s">(</span> <span class="i">$path</span><span class="cm">,</span> <span class="i">$no_file</span> <span class="s">)</span><span class="sc">;</span></li></ol></pre><p>For systems with no syntax differentiating filenames from directories, 
+assumes that the last file is a path unless $no_file is true or a 
+trailing separator or /. or /.. is present. On Unix this means that $no_file
+true makes this return ( '', $path, '' ).</p>
+<p>The directory portion may or may not be returned with a trailing '/'.</p>
+<p>The results can be passed to <a href="#catpath()">catpath()</a> to get back a path equivalent to
+(usually identical to) the original path.</p>
+</li>
+<li><a class='view-title' id="splitdir"></a><strong>splitdir</strong>
+<p>The opposite of <a href="#catdir()">catdir()</a>.</p>
+<pre class="verbatim"><ol><li>    <span class="i">@dirs</span> = <span class="w">File::Spec</span><span class="w">-&gt;splitdir</span><span class="s">(</span> <span class="i">$directories</span> <span class="s">)</span><span class="sc">;</span></li></ol></pre><p>$directories must be only the directory portion of the path on systems 
+that have the concept of a volume or that have path syntax that differentiates
+files from directories.</p>
+<p>Unlike just splitting the directories on the separator, empty
+directory names (<code class="inline"><span class="q">&#39;&#39;</span></code>
+) can be returned, because these are significant
+on some OSs.</p>
+</li>
+<li><a class='view-title' id="catpath()"></a><strong>catpath()</strong>
+<p>Takes volume, directory and file portions and returns an entire path. Under
+Unix, $volume is ignored, and directory and file are concatenated.  A '/' is
+inserted if need be.  On other OSs, $volume is significant.</p>
+<pre class="verbatim"><ol><li>    <span class="i">$full_path</span> = <span class="w">File::Spec</span><span class="w">-&gt;catpath</span><span class="s">(</span> <span class="i">$volume</span><span class="cm">,</span> <span class="i">$directory</span><span class="cm">,</span> <span class="i">$file</span> <span class="s">)</span><span class="sc">;</span></li></ol></pre></li>
+<li><a class='view-title' id="abs2rel"></a><strong>abs2rel</strong>
+<p>Takes a destination path and an optional base path returns a relative path
+from the base path to the destination path:</p>
+<pre class="verbatim"><ol><li>    <span class="i">$rel_path</span> = <span class="w">File::Spec</span><span class="w">-&gt;abs2rel</span><span class="s">(</span> <span class="i">$path</span> <span class="s">)</span> <span class="sc">;</span></li><li>    <span class="i">$rel_path</span> = <span class="w">File::Spec</span><span class="w">-&gt;abs2rel</span><span class="s">(</span> <span class="i">$path</span><span class="cm">,</span> <span class="i">$base</span> <span class="s">)</span> <span class="sc">;</span></li></ol></pre><p>If $base is not present or '', then <a href="../Cwd.html">cwd()</a> is used. If $base is
+relative, then it is converted to absolute form using
+<a href="#rel2abs()">rel2abs()</a>. This means that it is taken to be relative to
+<a href="../Cwd.html">cwd()</a>.</p>
+<p>On systems with the concept of volume, if $path and $base appear to be
+on two different volumes, we will not attempt to resolve the two
+paths, and we will instead simply return $path.  Note that previous
+versions of this module ignored the volume of $base, which resulted in
+garbage results part of the time.</p>
+<p>On systems that have a grammar that indicates filenames, this ignores the 
+$base filename as well. Otherwise all path components are assumed to be
+directories.</p>
+<p>If $path is relative, it is converted to absolute form using <a href="#rel2abs()">rel2abs()</a>.
+This means that it is taken to be relative to <a href="../Cwd.html">cwd()</a>.</p>
+<p>No checks against the filesystem are made.  On VMS, there is
+interaction with the working environment, as logicals and
+macros are expanded.</p>
+<p>Based on code written by Shigio Yamaguchi.</p>
+</li>
+<li><a class='view-title' id="rel2abs()"></a><strong>rel2abs()</strong>
+<p>Converts a relative path to an absolute path.</p>
+<pre class="verbatim"><ol><li>    <span class="i">$abs_path</span> = <span class="w">File::Spec</span><span class="w">-&gt;rel2abs</span><span class="s">(</span> <span class="i">$path</span> <span class="s">)</span> <span class="sc">;</span></li><li>    <span class="i">$abs_path</span> = <span class="w">File::Spec</span><span class="w">-&gt;rel2abs</span><span class="s">(</span> <span class="i">$path</span><span class="cm">,</span> <span class="i">$base</span> <span class="s">)</span> <span class="sc">;</span></li></ol></pre><p>If $base is not present or '', then <a href="../Cwd.html">cwd()</a> is used. If $base is relative, 
+then it is converted to absolute form using <a href="#rel2abs()">rel2abs()</a>. This means that it
+is taken to be relative to <a href="../Cwd.html">cwd()</a>.</p>
+<p>On systems with the concept of volume, if $path and $base appear to be
+on two different volumes, we will not attempt to resolve the two
+paths, and we will instead simply return $path.  Note that previous
+versions of this module ignored the volume of $base, which resulted in
+garbage results part of the time.</p>
+<p>On systems that have a grammar that indicates filenames, this ignores the 
+$base filename as well. Otherwise all path components are assumed to be
+directories.</p>
+<p>If $path is absolute, it is cleaned up and returned using <a href="#canonpath()">canonpath()</a>.</p>
+<p>No checks against the filesystem are made.  On VMS, there is
+interaction with the working environment, as logicals and
+macros are expanded.</p>
+<p>Based on code written by Shigio Yamaguchi.</p>
+</li>
+</ul>
+<p>For further information, please see <a href="../File/Spec/Unix.html">File::Spec::Unix</a>,
+<a href="../File/Spec/Mac.html">File::Spec::Mac</a>, <a href="../File/Spec/OS2.html">File::Spec::OS2</a>, <a href="../File/Spec/Win32.html">File::Spec::Win32</a>, or
+<a href="../File/Spec/VMS.html">File::Spec::VMS</a>.</p>
+<a class='view-head1' id="SEE-ALSO"></a><h2 class='h2' >SEE ALSO</h2>
+<p><a href="../File/Spec/Unix.html">File::Spec::Unix</a>, <a href="../File/Spec/Mac.html">File::Spec::Mac</a>, <a href="../File/Spec/OS2.html">File::Spec::OS2</a>,
+<a href="../File/Spec/Win32.html">File::Spec::Win32</a>, <a href="../File/Spec/VMS.html">File::Spec::VMS</a>, <a href="../File/Spec/Functions.html">File::Spec::Functions</a>,
+<a href="../ExtUtils/MakeMaker.html">ExtUtils::MakeMaker</a></p>
+<a class='view-head1' id="AUTHORS"></a><h2 class='h2' >AUTHORS</h2>
+<p>Kenneth Albanowski &lt;kjahds@kjahds.com&gt;, Andy Dougherty
+&lt;doughera@lafayette.edu&gt;, Andreas K&#xf6;nig
+&lt;A.Koenig@franz.ww.TU-Berlin.DE&gt;, Tim Bunce &lt;Tim.Bunce@ig.co.uk.
+VMS support by Charles Bailey &lt;bailey@newman.upenn.edu&gt;.
+OS/2 support by Ilya Zakharevich &lt;ilya@math.ohio-state.edu&gt;.
+Mac support by Paul Schinder &lt;schinder@pobox.com&gt;, and Thomas Wegner
+&lt;wegner_thomas@yahoo.com&gt;.  abs2rel() and rel2abs() written by Shigio
+Yamaguchi &lt;shigio@tamacom.com&gt;, modified by Barrie Slaymaker
+&lt;barries@slaysys.com&gt;.  splitpath(), splitdir(), catpath() and
+catdir() by Barrie Slaymaker.</p>
+
+
+
+
+      <ul><li><a href="#NAME">NAME</a></li><li><a href="#SYNOPSIS">SYNOPSIS</a></li><li><a href="#DESCRIPTION">DESCRIPTION</a></li><li><a href="#METHODS">METHODS</a></li><li><a href="#SEE-ALSO">SEE ALSO</a></li><li><a href="#AUTHORS">AUTHORS</a></li></ul>
+
+
+                  </div>
+                </article>
+              </div>
+            </div>
+          </main>
+        </div>
+           <footer class="footer row bg-light pt-5 pb-5">
+       <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+           <div class="row">
+               <div class="col-md-4">
+                   <ul class="list-unstyled">
+                       <li>
+                           <h4>Site info</h4>
+                       </li>
+                       <li>Docs mantained by
+                           <a href="//lists.perl.org/list/perl5-porters.html"
+                               rel="noopener">Perl 5 Porters</a>
+                       </li>
+                       <li>Perldoc site development sponsored by
+                           <a href="//opusvl.com" rel="noopener">
+                           <img style="margin: 20px 20px 5px 10px" class="opus-logo" src="/public/img/opusvl_logo.svg" alt="OpusVL Logo">
+                        </a>
+                    <li><span class="about_perldoc"><a href="//about.html">About PerlDOC</a></span>
+                    </li>
+                       </li>
+                   </ul>
+               </div>
+               <div class="col-md-8">
+                   <div class="row">
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Manuals</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.4/index-overview.html">Overview</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.4/index-tutorials.html">Tutorials</a>
+                               </li>
+                               <li>
+                                   <a href="/5.8.4/index-faq.html">FAQs</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.4/index-history.html">Changes</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Reference</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.4/index-language.html">Language</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.4/index-functions.html">Functions</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.4/perlop.html">Operators</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.4/perlvar.html">Variables</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Modules</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.4/index-modules-A.html">Modules</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.4/index-pragmas.html">Pragmas</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.4/index-utilities.html">Utilities</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Misc</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.4/index-licence.html">License</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.4/index-internals.html">Internals</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.4/index-platforms.html">Platforms</a>
+                               </li>
+                            <li>
+                                <a
+                                    href="/5.8.4/index-about.html">About</a>
+                            </li>
+                           </ul>
+                       </div>
+                   </div>
+               </div>
+               <div class=" col-12 footer-inf text-center">
+                   <small>perldoc.perl.org - Official documentation for the Perl
+                       programming language</small>
+               </div>
+           </div>
+       </div>
+   </footer>
+
+        	<div class="beta-wrapper beta-bottom-right ">
+		<div class="beta beta-blue  ">
+			<a class="beta-link "
+				href="//github.com/OpusVL/perldoc.perl.org/issues/new" rel="noopener">
+				<span class="beta-text">
+					This website is a Beta release.
+				</span>
+				<span class="beta-text">
+					For any issues please raise a ticket on GitHub
+				</span>
+			</a>
+		</div>
+	</div>
+
+        <script src="/public/js/main.min.js"></script>
+      </body>
+
+      </html>

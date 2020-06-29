@@ -1,0 +1,970 @@
+      
+      
+      
+      
+
+      <!DOCTYPE html>
+      <html lang="en">
+
+      <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="perlfaq2 - perldoc.perl.org">
+        <link rel="icon" href="/public/img/favicon.ico">
+        <title>perlfaq2 - perldoc.perl.org</title>
+        <link href="/public/css/main.min.css" rel="stylesheet">
+        <link rel="canonical" href="/perlfaq2.html">
+        <link
+          href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900'
+          rel='stylesheet' type='text/css'>
+        <script>
+          window.ga = window.ga || function () {
+            (ga.q = ga.q || []).push(arguments)
+          };
+          ga.l = +new Date;
+          ga('create', 'UA-1892152-2', 'auto'); // JJ's account
+          ga('create', 'UA-50555-3', 'auto', 'perlOrg'); // perl.org account
+          ga('require', 'outboundLinkTracker', {
+            events: ['click', 'auxclick', 'contextmenu'],
+          });
+          ga('require', 'maxScrollTracker');
+          ga('send', 'pageview');
+          ga('perlOrg.send', 'pageview');
+        </script>
+        <script async src="https://www.google-analytics.com/analytics.js">
+        </script>
+        <script async src="/public/js/tracking.min.js"></script>
+      </head>
+
+      <body class="body container-fluid ">
+        <div class="wrapper">
+
+          <nav
+    class="navbar navbar-dark bg-primary bg-perl fixed-top justify-content-between navbar-expand-lg">
+    <a href="#content" class="skippy sr-only sr-only-focusable">
+        <span class=' skippy-text'>Skip to main content</span>
+    </a>
+    <a class="navbar-brand" href="/">
+        <img class="logo" src="/public/img/logo_perl_doc.svg"
+            alt="Perl Documentation Logo" />
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse"
+        data-target="#navbar" aria-controls="navbar" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="navbar" class="collapse navbar-collapse ">
+        <ul class="navbar-nav ml-auto navbar-right">
+            <form class="nav-item dropdown search-wrapper">
+                <input type="text" id='searchinput' aria-describedby='navbarDropdown5'
+                    placeholder="Type query" class='search-input-field' value=''>
+
+                <button href="#" data-toggle='dropdown' type="button"
+                    aria-haspopup="true" aria-expanded='false' id="navbarDropdown5"
+                    class="nav-link dropdown-toggle search-link">
+                    <object tabindex='-1' focusable="false" class='search-icon'
+                        data="/public/img/search.svg" type="image/svg+xml"
+                        name='search icon'>search
+                        icon</object>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown5"
+                    id='search-results'>
+                    <p class='dropdown-item major-version'>
+                        No results
+                    </p>
+                </div>
+            </form>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown" href="#" class="nav-link dropdown-toggle"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Perl versions</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    
+                        <p class='dropdown-item major-version'>
+                            5.32
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.32.0/">5.32.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.30
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.3/">5.30.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.2/">5.30.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.1/">5.30.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.0/">5.30.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.28
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.3/">5.28.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.2/">5.28.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.1/">5.28.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.0/">5.28.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.26
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.3/">5.26.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.2/">5.26.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.1/">5.26.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.0/">5.26.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.24
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.4/">5.24.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.3/">5.24.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.2/">5.24.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.1/">5.24.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.0/">5.24.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.22
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.4/">5.22.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.3/">5.22.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.2/">5.22.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.1/">5.22.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.0/">5.22.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.20
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.3/">5.20.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.2/">5.20.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.1/">5.20.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.0/">5.20.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.18
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.4/">5.18.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.3/">5.18.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.2/">5.18.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.1/">5.18.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.0/">5.18.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.16
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.3/">5.16.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.2/">5.16.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.1/">5.16.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.0/">5.16.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.14
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.4/">5.14.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.3/">5.14.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.2/">5.14.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.1/">5.14.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.0/">5.14.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.12
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.5/">5.12.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.4/">5.12.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.3/">5.12.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.2/">5.12.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.1/">5.12.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.0/">5.12.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.10
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.1/">5.10.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.0/">5.10.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.8
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.9/">5.8.9</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.8/">5.8.8</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.7/">5.8.7</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.6/">5.8.6</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.5/">5.8.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.4/">5.8.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.3/">5.8.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.2/">5.8.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.1/">5.8.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.0/">5.8.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.6
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.2/">5.6.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.1/">5.6.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.0/">5.6.0</a>
+                        
+                        
+                    
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown1" href="#" class="dropdown-toggle nav-link"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Manuals</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                    <a class="dropdown-item"
+                        href="/5.8.0/index-overview.html">Overview</a>
+                    <a class="dropdown-item"
+                        href="/5.8.0/index-tutorials.html">Tutorials</a>
+                    <a class="dropdown-item"
+                        href="/5.8.0/index-faq.html">FAQs</a>
+                    <a class="dropdown-item"
+                        href="/5.8.0/index-history.html">Changes</a>
+                    <a class="dropdown-item"
+                        href="/5.8.0/index-licence.html">License</a>
+                    <a class="dropdown-item"
+                        href="/5.8.0/index-language.html">Language</a>
+                    <a class="dropdown-item"
+                        href="/5.8.0/index-functions.html">Functions</a>
+                    <a class="dropdown-item"
+                        href="/5.8.0/perlop.html">Operators</a>
+                    <a class="dropdown-item"
+                        href="/5.8.0/perlvar.html">Variables</a>
+                    <a class="dropdown-item"
+                        href="/5.8.0/index-pragmas.html">Pragmas</a>
+                    <a class="dropdown-item"
+                        href="/5.8.0/index-utilities.html">Utilities</a>
+                    <a class="dropdown-item"
+                        href="/5.8.0/index-internals.html">Internals</a>
+                    <a class="dropdown-item"
+                        href="/5.8.0/index-platforms.html">Platforms</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown3" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Modules</a>
+                <div aria-labelledby="navbarDropdown3"
+                    class="dropdown-menu letters-wrap">
+                    <!--<a class="dropdown-item"
+                        href="/5.8.0/index-modules.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.8.0/index-modules-by-cat.html">By
+                        Category</a>-->
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-modules-A.html">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-modules-B.html">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-modules-C.html">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-modules-D.html">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-modules-E.html">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-modules-F.html">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-modules-G.html">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-modules-H.html">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-modules-I.html">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-modules-J.html">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-modules-K.html">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-modules-L.html">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-modules-M.html">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-modules-N.html">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-modules-O.html">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-modules-P.html">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-modules-Q.html">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-modules-R.html">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-modules-S.html">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-modules-T.html">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-modules-U.html">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-modules-V.html">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-modules-W.html">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-modules-X.html">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-modules-Y.html">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-modules-Z.html">Z</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown4" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Functions</a>
+                <div aria-labelledby="navbarDropdown4"
+                    class="dropdown-menu letters-wrap">
+                    <a class="dropdown-item"
+                        href="/5.8.0/index-functions.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.8.0/index-functions-by-cat.html">By
+                        Category</a>
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-functions.html#A">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-functions.html#B">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-functions.html#C">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-functions.html#D">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-functions.html#E">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-functions.html#F">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-functions.html#G">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-functions.html#H">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-functions.html#I">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-functions.html#J">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-functions.html#K">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-functions.html#L">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-functions.html#M">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-functions.html#N">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-functions.html#O">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-functions.html#P">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-functions.html#Q">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-functions.html#R">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-functions.html#S">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-functions.html#T">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-functions.html#U">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-functions.html#V">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-functions.html#W">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-functions.html#X">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-functions.html#Y">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-functions.html#Z">Z</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!--/.nav-collapse -->
+</nav>
+
+
+          <main class="row main-content pb-5 pt-5" id='content'>
+            <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+              <div class="row">
+                <div class="col-sm-12">
+                  <div id="breadcrumbs">
+                      
+    <a href="index.html">Home</a>&nbsp; &gt;
+    
+      
+        <a href="index-faq.html">FAQs</a> &gt;
+      
+    
+    perlfaq2
+  
+
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <article class="col-sm-12 content">
+                  <div class="documentation-wrapper">
+                    <div id="perl_version">
+                      <h7 class='page-title'> Perl 5 version 8.0
+                        documentation</h7>
+                    </div>
+                    <h1>perlfaq2</h1>
+
+
+  <!--    -->
+<ul><li><a href="#NAME">NAME</a></li><li><a href="#DESCRIPTION">DESCRIPTION</a></li><ul><li><a href="#What-machines-support-Perl%3f--Where-do-I-get-it%3f">What machines support Perl?  Where do I get it?</a></li><li><a href="#How-can-I-get-a-binary-version-of-Perl%3f">How can I get a binary version of Perl?</a></li><li><a href="#I-don't-have-a-C-compiler-on-my-system.--How-can-I-compile-perl%3f">I don't have a C compiler on my system.  How can I compile perl?</a></li><li><a href="#I-copied-the-Perl-binary-from-one-machine-to-another%2c-but-scripts-don't-work.">I copied the Perl binary from one machine to another, but scripts don't work.</a></li><li><a href="#I-grabbed-the-sources-and-tried-to-compile-but-gdbm%2fdynamic-loading%2fmalloc%2flinking%2f...-failed.--How-do-I-make-it-work%3f">I grabbed the sources and tried to compile but gdbm/dynamic loading/malloc/linking/... failed.  How do I make it work?</a></li><li><a href="#What-modules-and-extensions-are-available-for-Perl%3f--What-is-CPAN%3f--What-does-CPAN%2fsrc%2f...-mean%3f">What modules and extensions are available for Perl?  What is CPAN?  What does CPAN/src/... mean?</a></li><li><a href="#Is-there-an-ISO-or-ANSI-certified-version-of-Perl%3f">Is there an ISO or ANSI certified version of Perl?</a></li><li><a href="#Where-can-I-get-information-on-Perl%3f">Where can I get information on Perl?</a></li><li><a href="#What-are-the-Perl-newsgroups-on-Usenet%3f--Where-do-I-post-questions%3f">What are the Perl newsgroups on Usenet?  Where do I post questions?</a></li><li><a href="#Where-should-I-post-source-code%3f">Where should I post source code?</a></li><li><a href="#Perl-Books">Perl Books</a></li><li><a href="#Perl-in-Magazines">Perl in Magazines</a></li><li><a href="#Perl-on-the-Net%3a-FTP-and-WWW-Access">Perl on the Net: FTP and WWW Access</a></li><li><a href="#What-mailing-lists-are-there-for-Perl%3f">What mailing lists are there for Perl?</a></li><li><a href="#Archives-of-comp.lang.perl.misc">Archives of comp.lang.perl.misc</a></li><li><a href="#Where-can-I-buy-a-commercial-version-of-Perl%3f">Where can I buy a commercial version of Perl?</a></li><li><a href="#Where-do-I-send-bug-reports%3f">Where do I send bug reports?</a></li><li><a href="#What-is-perl.com%3f-Perl-Mongers%3f-pm.org%3f-perl.org%3f-cpan.org%3f">What is perl.com? Perl Mongers? pm.org? perl.org? cpan.org?</a></li></ul><li><a href="#AUTHOR-AND-COPYRIGHT">AUTHOR AND COPYRIGHT</a></li></ul><a class='view-head1' id="NAME"></a><h2 class='h2' >NAME</h2>
+<p>perlfaq2 - Obtaining and Learning about Perl ($Revision: 1.13 $, $Date: 2002/04/26 16:56:35 $)</p>
+<a class='view-head1' id="DESCRIPTION"></a><h2 class='h2' >DESCRIPTION</h2>
+<p>This section of the FAQ answers questions about where to find
+source and documentation for Perl, support, and
+related matters.</p>
+<a class='view-head2' id="What-machines-support-Perl%3f--Where-do-I-get-it%3f"></a><h3 class='h3' >What machines support Perl?  Where do I get it?</h3>
+<p>The standard release of Perl (the one maintained by the perl
+development team) is distributed only in source code form.  You
+can find this at <a href="http://www.cpan.org/src/latest.tar.gz">http://www.cpan.org/src/latest.tar.gz</a> , which
+is in a standard Internet format (a gzipped archive in POSIX tar format).</p>
+<p>Perl builds and runs on a bewildering number of platforms.  Virtually
+all known and current Unix derivatives are supported (Perl's native
+platform), as are other systems like VMS, DOS, OS/2, Windows,
+QNX, BeOS, OS X, MPE/iX and the Amiga.</p>
+<p>Binary distributions for some proprietary platforms, including
+Apple systems, can be found <a href="http://www.cpan.org/ports/">http://www.cpan.org/ports/</a> directory.
+Because these are not part of the standard distribution, they may
+and in fact do differ from the base Perl port in a variety of ways.
+You'll have to check their respective release notes to see just
+what the differences are.  These differences can be either positive
+(e.g. extensions for the features of the particular platform that
+are not supported in the source release of perl) or negative (e.g.
+might be based upon a less current source release of perl).</p>
+<a class='view-head2' id="How-can-I-get-a-binary-version-of-Perl%3f"></a><h3 class='h3' >How can I get a binary version of Perl?</h3>
+<p>If you don't have a C compiler because your vendor for whatever
+reasons did not include one with your system, the best thing to do is
+grab a binary version of gcc from the net and use that to compile perl
+with.  CPAN only has binaries for systems that are terribly hard to
+get free compilers for, not for Unix systems.</p>
+<p>Some URLs that might help you are:</p>
+<pre class="verbatim"><ol><li>    <span class="j">http:</span><span class="q">//</span><span class="w">www</span>.<span class="w">cpan</span>.<span class="w">org</span>/<span class="w">ports</span>/</li><li>    <span class="w">http</span><span class="co">:</span><span class="q">//</span><span class="w">www</span>.<span class="w">perl</span>.<span class="w">com</span>/<span class="w">pub</span>/<span class="w">language</span>/<span class="w">info</span>/<span class="w">software</span>.<span class="w">html</span></li></ol></pre><p>Someone looking for a Perl for Win16 might look to Laszlo Molnar's djgpp
+port in <a href="http://www.cpan.org/ports/#msdos">http://www.cpan.org/ports/#msdos</a> , which comes with clear
+installation instructions.  A simple installation guide for MS-DOS using
+Ilya Zakharevich's OS/2 port is available at
+<a href="http://www.cs.ruu.nl/%7Epiet/perl5dos.html">http://www.cs.ruu.nl/%7Epiet/perl5dos.html</a>
+and similarly for Windows 3.1 at <a href="http://www.cs.ruu.nl/%7Epiet/perlwin3.html">http://www.cs.ruu.nl/%7Epiet/perlwin3.html</a> .</p>
+<a class='view-head2' id="I-don't-have-a-C-compiler-on-my-system.--How-can-I-compile-perl%3f"></a><h3 class='h3' >I don't have a C compiler on my system.  How can I compile perl?</h3>
+<p>Since you don't have a C compiler, you're doomed and your vendor
+should be sacrificed to the Sun gods.  But that doesn't help you.</p>
+<p>What you need to do is get a binary version of gcc for your system
+first.  Consult the Usenet FAQs for your operating system for
+information on where to get such a binary version.</p>
+<a class='view-head2' id="I-copied-the-Perl-binary-from-one-machine-to-another%2c-but-scripts-don't-work."></a><h3 class='h3' >I copied the Perl binary from one machine to another, but scripts don't work.</h3>
+<p>That's probably because you forgot libraries, or library paths differ.
+You really should build the whole distribution on the machine it will
+eventually live on, and then type <code class="inline"><span class="w">make</span> <span class="w">install</span></code>
+.  Most other
+approaches are doomed to failure.</p>
+<p>One simple way to check that things are in the right place is to print out
+the hard-coded @INC that perl looks through for libraries:</p>
+<pre class="verbatim"><ol><li>    <span class="i">% perl</span> -<span class="w">e</span> <span class="q">&#39;print join(&quot;\n&quot;,@INC)&#39;</span></li></ol></pre><p>If this command lists any paths that don't exist on your system, then you
+may need to move the appropriate libraries to these locations, or create
+symbolic links, aliases, or shortcuts appropriately.  @INC is also printed as
+part of the output of</p>
+<pre class="verbatim"><ol><li>    <span class="i">% perl</span> -<span class="w">V</span></li></ol></pre><p>You might also want to check out
+<a href="perlfaq8.html#How-do-I-keep-my-own-module%2flibrary-directory%3f">How do I keep my own module/library directory? in perlfaq8</a>.</p>
+<a class='view-head2' id="I-grabbed-the-sources-and-tried-to-compile-but-gdbm%2fdynamic-loading%2fmalloc%2flinking%2f...-failed.--How-do-I-make-it-work%3f"></a><h3 class='h3' >I grabbed the sources and tried to compile but gdbm/dynamic loading/malloc/linking/... failed.  How do I make it work?</h3>
+<p>Read the <i>INSTALL</i> file, which is part of the source distribution.
+It describes in detail how to cope with most idiosyncrasies that the
+Configure script can't work around for any given system or
+architecture.</p>
+<a class='view-head2' id="What-modules-and-extensions-are-available-for-Perl%3f--What-is-CPAN%3f--What-does-CPAN%2fsrc%2f...-mean%3f"></a><h3 class='h3' >What modules and extensions are available for Perl?  What is CPAN?  What does CPAN/src/... mean?</h3>
+<p>CPAN stands for Comprehensive Perl Archive Network, a ~700mb archive
+replicated on nearly 200 machines all over the world.  CPAN contains
+source code, non-native ports, documentation, scripts, and many
+third-party modules and extensions, designed for everything from
+commercial database interfaces to keyboard/screen control to web
+walking and CGI scripts.  The master web site for CPAN is
+<a href="http://www.cpan.org/">http://www.cpan.org/</a> and there is the CPAN Multiplexer at
+<a href="http://www.cpan.org/CPAN.html">http://www.cpan.org/CPAN.html</a> which will choose a mirror near you
+via DNS.  See <a href="http://www.perl.com/CPAN">http://www.perl.com/CPAN</a> (without a slash at the
+end) for how this process works. Also, <a href="http://mirror.cpan.org/">http://mirror.cpan.org/</a>
+has a nice interface to the <a href="http://www.cpan.org/MIRRORED.BY">http://www.cpan.org/MIRRORED.BY</a>
+mirror directory.</p>
+<p>See the CPAN FAQ at <a href="http://www.cpan.org/misc/cpan-faq.html">http://www.cpan.org/misc/cpan-faq.html</a> for
+answers to the most frequently asked questions about CPAN
+including how to become a mirror.</p>
+<p>CPAN/path/... is a naming convention for files available on CPAN
+sites.  CPAN indicates the base directory of a CPAN mirror, and the
+rest of the path is the path from that directory to the file.  For
+instance, if you're using <a href="ftp://ftp.funet.fi/pub/languages/perl/CPAN">ftp://ftp.funet.fi/pub/languages/perl/CPAN</a>
+as your CPAN site, the file CPAN/misc/japh is downloadable as
+<a href="ftp://ftp.funet.fi/pub/languages/perl/CPAN/misc/japh">ftp://ftp.funet.fi/pub/languages/perl/CPAN/misc/japh</a> .</p>
+<p>Considering that there are close to two thousand existing modules in
+the archive, one probably exists to do nearly anything you can think of.
+Current categories under CPAN/modules/by-category/ include Perl core
+modules; development support; operating system interfaces; networking,
+devices, and interprocess communication; data type utilities; database
+interfaces; user interfaces; interfaces to other languages; filenames,
+file systems, and file locking; internationalization and locale; world
+wide web support; server and daemon utilities; archiving and
+compression; image manipulation; mail and news; control flow
+utilities; filehandle and I/O; Microsoft Windows modules; and
+miscellaneous modules.</p>
+<p>See <a href="http://www.cpan.org/modules/00modlist.long.html">http://www.cpan.org/modules/00modlist.long.html</a> or
+<a href="http://search.cpan.org/">http://search.cpan.org/</a> for a more complete list of modules by category.</p>
+<p>CPAN is not affiliated with O'Reilly and Associates.</p>
+<a class='view-head2' id="Is-there-an-ISO-or-ANSI-certified-version-of-Perl%3f"></a><h3 class='h3' >Is there an ISO or ANSI certified version of Perl?</h3>
+<p>Certainly not.  Larry expects that he'll be certified before Perl is.</p>
+<a class='view-head2' id="Where-can-I-get-information-on-Perl%3f"></a><h3 class='h3' >Where can I get information on Perl?</h3>
+<p>The complete Perl documentation is available with the Perl distribution.
+If you have Perl installed locally, you probably have the documentation
+installed as well: type <code class="inline"><span class="w">man</span> <span class="w">perl</span></code>
+ if you're on a system resembling Unix.
+This will lead you to other important man pages, including how to set your
+$MANPATH.  If you're not on a Unix system, access to the documentation
+will be different; for example, documentation might only be in HTML format.  All
+proper Perl installations have fully-accessible documentation.</p>
+<p>You might also try <code class="inline"><span class="w">perldoc</span> <span class="w">perl</span></code>
+ in case your system doesn't
+have a proper man command, or it's been misinstalled.  If that doesn't
+work, try looking in /usr/local/lib/perl5/pod for documentation.</p>
+<p>If all else fails, consult <a href="http://perldoc.cpan.org/">http://perldoc.cpan.org/</a> or
+<a href="http://www.perldoc.com/">http://www.perldoc.com/</a> both offer the complete documentation
+in html format.</p>
+<p>Many good books have been written about Perl--see the section below
+for more details.</p>
+<p>Tutorial documents are included in current or upcoming Perl releases
+include <a href="perltoot.html">perltoot</a> for objects or <a href="perlboot.html">perlboot</a> for a beginner's
+approach to objects, <a href="perlopentut.html">perlopentut</a> for file opening semantics,
+<a href="perlreftut.html">perlreftut</a> for managing references, <a href="perlretut.html">perlretut</a> for regular
+expressions, <a href="perlthrtut.html">perlthrtut</a> for threads, <a href="perldebtut.html">perldebtut</a> for debugging,
+and <a href="perlxstut.html">perlxstut</a> for linking C and Perl together.  There may be more
+by the time you read this.  The following URLs might also be of
+assistance:</p>
+<pre class="verbatim"><ol><li>    <span class="j">http:</span><span class="q">//perldoc</span>.<span class="w">cpan</span>.<span class="w">org</span>/</li><li>    <span class="w">http</span><span class="co">:</span><span class="q">//</span><span class="w">www</span>.<span class="w">perldoc</span>.<span class="w">com</span>/</li><li>    <span class="w">http</span><span class="co">:</span><span class="q">//</span><span class="w">reference</span>.<span class="w">perl</span>.<span class="w">com</span>/<span class="w">query</span>.<span class="w">cgi</span>?<span class="w">tutorials</span></li><li>    <span class="w">http</span><span class="co">:</span><span class="q">//</span><span class="w">bookmarks</span>.<span class="w">cpan</span>.<span class="w">org</span>/<span class="w">search</span>.<span class="w">cgi</span>?<span class="w">cat</span>=<span class="w">Training</span><span class="i">%2FTutorials</span></li></ol></pre><a class='view-head2' id="What-are-the-Perl-newsgroups-on-Usenet%3f--Where-do-I-post-questions%3f"></a><h3 class='h3' >What are the Perl newsgroups on Usenet?  Where do I post questions?</h3>
+<p>The now defunct comp.lang.perl newsgroup has been superseded by the
+following groups:</p>
+<pre class="verbatim"><ol><li>    <span class="w">comp</span>.<span class="w">lang</span>.<span class="w">perl</span>.<span class="w">announce</span> 		<span class="w">Moderated</span> <span class="w">announcement</span> <span class="w">group</span></li><li>    <span class="w">comp</span>.<span class="w">lang</span>.<span class="w">perl</span>.<span class="w">misc</span>     		<span class="w">Very</span> <span class="w">busy</span> <span class="w">group</span> <span class="w">about</span> <span class="w">Perl</span> <span class="w">in</span> <span class="w">general</span></li><li>    <span class="w">comp</span>.<span class="w">lang</span>.<span class="w">perl</span>.<span class="w">moderated</span>            <span class="w">Moderated</span> <span class="w">discussion</span> <span class="w">group</span></li><li>    <span class="w">comp</span>.<span class="w">lang</span>.<span class="w">perl</span>.<span class="w">modules</span>  		<span class="w">Use</span> and <span class="w">development</span> <span class="w">of</span> <span class="w">Perl</span> <span class="w">modules</span></li><li>    <span class="w">comp</span>.<span class="w">lang</span>.<span class="w">perl</span>.<span class="w">tk</span>           	<span class="w">Using</span> <span class="w">Tk</span> <span class="s">(</span>and <span class="w">X</span><span class="s">)</span> <span class="w">from</span> <span class="w">Perl</span></li><li></li><li>    <span class="w">comp</span>.<span class="w">infosystems</span>.<span class="w">www</span>.<span class="w">authoring</span>.<span class="w">cgi</span> 	<span class="w">Writing</span> <span class="w">CGI</span> <span class="w">scripts</span> for <span class="w">the</span> <span class="w">Web</span>.</li></ol></pre><p>There is also a Usenet gateway to Perl mailing lists sponsored by perl.org at
+nntp://nntp.perl.org , a web interface to the same lists at
+<a href="http://nntp.perl.org/group/">http://nntp.perl.org/group/</a> and these lists are also available under the
+<code class="inline"><span class="w">perl</span>.<span class="i">*</span></code>
+ hierarchy at <a href="http://groups.google.com">http://groups.google.com</a> . Other groups are listed at
+<a href="http://lists.perl.org/">http://lists.perl.org/</a> ( also known as <a href="http://lists.cpan.org/">http://lists.cpan.org/</a> ).</p>
+<p>A nice place to ask questions is the PerlMonks site, <a href="http://www.perlmonks.org/">http://www.perlmonks.org/</a></p>
+<p>Note that none of the above are supposed to write your code for you:
+asking questions about particular problems or general advice is fine,
+but asking someone to write your code for free is not very cool.</p>
+<a class='view-head2' id="Where-should-I-post-source-code%3f"></a><h3 class='h3' >Where should I post source code?</h3>
+<p>You should post source code to whichever group is most appropriate, but
+feel free to cross-post to comp.lang.perl.misc.  If you want to cross-post
+to alt.sources, please make sure it follows their posting standards,
+including setting the Followup-To header line to NOT include alt.sources;
+see their FAQ ( <a href="http://www.faqs.org/faqs/alt-sources-intro/">http://www.faqs.org/faqs/alt-sources-intro/</a> ) for details.</p>
+<p>If you're just looking for software, first use Google
+( <a href="http://www.google.com">http://www.google.com</a> ), Google's usenet search interface
+( <a href="http://groups.google.com">http://groups.google.com</a> ),  and CPAN Search ( <a href="http://search.cpan.org">http://search.cpan.org</a> ).  
+This is faster and more productive than just posting a request.</p>
+<a class='view-head2' id="Perl-Books"></a><h3 class='h3' >Perl Books</h3>
+<p>A number of books on Perl and/or CGI programming are available.  A few of
+these are good, some are OK, but many aren't worth your money.  Tom
+Christiansen maintains a list of these books, some with extensive
+reviews, at <a href="http://www.perl.com/perl/critiques/index.html">http://www.perl.com/perl/critiques/index.html</a> .</p>
+<p>The incontestably definitive reference book on Perl, written by
+the creator of Perl, is now (July 2000) in its third edition:</p>
+<pre class="verbatim"><ol><li>    <span class="w">Programming</span> <span class="w">Perl</span> <span class="s">(</span><span class="w">the</span> <span class="q">&quot;Camel Book&quot;</span><span class="s">)</span><span class="co">:</span></li><li>	<span class="w">by</span> <span class="w">Larry</span> <span class="w">Wall</span><span class="cm">,</span> <span class="w">Tom</span> <span class="w">Christiansen</span><span class="cm">,</span> and <span class="w">Jon</span> <span class="w">Orwant</span></li><li>        <span class="n">0</span>-<span class="n">596</span>-<span class="n">00027</span>-<span class="n">8</span>  <span class="s">[</span><span class="n">3</span><span class="w">rd</span> <span class="w">edition</span> <span class="w">July</span> <span class="n">2000</span><span class="s">]</span></li><li>	<span class="w">http</span><span class="co">:</span><span class="q">//</span><span class="w">www</span>.<span class="w">oreilly</span>.<span class="w">com</span>/<span class="w">catalog</span>/<span class="w">pperl3</span>/</li><li>    <span class="s">(</span><span class="w">English</span><span class="cm">,</span> <span class="w">translations</span> <span class="w">to</span> <span class="w">several</span> <span class="w">languages</span> <span class="w">are</span> <span class="w">also</span> <span class="w">available</span><span class="s">)</span></li></ol></pre><p>The companion volume to the Camel containing thousands
+of real-world examples, mini-tutorials, and complete programs is:</p>
+<pre class="verbatim"><ol><li>    <span class="w">The</span> <span class="w">Perl</span> <span class="w">Cookbook</span> <span class="s">(</span><span class="w">the</span> <span class="q">&quot;Ram Book&quot;</span><span class="s">)</span><span class="co">:</span></li><li>	<span class="w">by</span> <span class="w">Tom</span> <span class="w">Christiansen</span> and <span class="w">Nathan</span> <span class="w">Torkington</span><span class="cm">,</span></li><li>	    <span class="w">with</span> <span class="w">Foreword</span> <span class="w">by</span> <span class="w">Larry</span> <span class="w">Wall</span></li><li>	<span class="w">ISBN</span> <span class="n">1</span>-<span class="n">56592</span>-<span class="n">243</span>-<span class="n">3</span> <span class="s">[</span><span class="n">1</span><span class="w">st</span> <span class="w">Edition</span> <span class="w">August</span> <span class="n">1998</span><span class="s">]</span></li><li>	<span class="w">http</span><span class="co">:</span><span class="q">//perl</span>.<span class="w">oreilly</span>.<span class="w">com</span><span class="q">/cookbook/</span></li></ol></pre><p>If you're already a seasoned programmer, then the Camel Book might
+suffice for you to learn Perl from.  If you're not, check out the
+Llama book:</p>
+<pre class="verbatim"><ol><li>    <span class="w">Learning</span> <span class="w">Perl</span> <span class="s">(</span><span class="w">the</span> <span class="q">&quot;Llama Book&quot;</span><span class="s">)</span></li><li>	<span class="w">by</span> <span class="w">Randal</span> <span class="w">L</span>. <span class="w">Schwartz</span> and <span class="w">Tom</span> <span class="w">Phoenix</span></li><li>	<span class="w">ISBN</span> <span class="n">0</span>-<span class="n">596</span>-<span class="n">00132</span>-<span class="n">0</span> <span class="s">[</span><span class="n">3</span><span class="w">rd</span> <span class="w">edition</span> <span class="w">July</span> <span class="n">2001</span><span class="s">]</span></li><li>	<span class="w">http</span><span class="co">:</span><span class="q">//</span><span class="w">www</span>.<span class="w">oreilly</span>.<span class="w">com</span>/<span class="w">catalog</span><span class="q">/lperl3/</span></li></ol></pre><p>If you're not an accidental programmer, but a more serious and
+possibly even degreed computer scientist who doesn't need as much
+hand-holding as we try to provide in the Llama, please check out the
+delightful book</p>
+<pre class="verbatim"><ol><li>    <span class="j">Perl:</span> <span class="w">The</span> <span class="w">Programmer&#39;s</span> <span class="w">Companion</span></li><li>        <span class="w">by</span> <span class="w">Nigel</span> <span class="w">Chapman</span></li><li>        <span class="w">ISBN</span> <span class="n">0</span>-<span class="n">471</span>-<span class="n">97563</span>-<span class="w">X</span> <span class="s">[</span><span class="n">1997</span><span class="cm">,</span> <span class="n">3</span><span class="w">rd</span> <span class="w">printing</span> <span class="w">Spring</span> <span class="n">1998</span><span class="s">]</span></li><li>        <span class="w">http</span><span class="co">:</span><span class="q">//</span><span class="w">www</span>.<span class="w">wiley</span>.<span class="w">com</span>/<span class="w">compbooks</span>/<span class="w">catalog</span>/<span class="n">97563</span>-<span class="w">X</span>.<span class="w">htm</span></li><li>        <span class="w">http</span><span class="co">:</span><span class="q">//</span><span class="w">www</span>.<span class="w">wiley</span>.<span class="w">com</span>/<span class="w">compbooks</span>/<span class="w">chapman</span>/<span class="w">perl</span>/<span class="w">perltpc</span>.<span class="w">html</span> <span class="s">(</span><span class="w">errata</span> <span class="w">etc</span><span class="s">)</span></li></ol></pre><p>If you are more at home in Windows the following is available
+(though unfortunately rather dated).</p>
+<pre class="verbatim"><ol><li>    <span class="w">Learning</span> <span class="w">Perl</span> <span class="w">on</span> <span class="w">Win32</span> <span class="w">Systems</span> <span class="s">(</span><span class="w">the</span> <span class="q">&quot;Gecko Book&quot;</span><span class="s">)</span></li><li>	<span class="w">by</span> <span class="w">Randal</span> <span class="w">L</span>. <span class="w">Schwartz</span><span class="cm">,</span> <span class="w">Erik</span> <span class="w">Olson</span><span class="cm">,</span> and <span class="w">Tom</span> <span class="w">Christiansen</span><span class="cm">,</span></li><li>	    <span class="w">with</span> <span class="w">foreword</span> <span class="w">by</span> <span class="w">Larry</span> <span class="w">Wall</span></li><li>	<span class="w">ISBN</span> <span class="n">1</span>-<span class="n">56592</span>-<span class="n">324</span>-<span class="n">3</span> <span class="s">[</span><span class="n">1</span><span class="w">st</span> <span class="w">edition</span> <span class="w">August</span> <span class="n">1997</span><span class="s">]</span></li><li>	<span class="w">http</span><span class="co">:</span><span class="q">//</span><span class="w">www</span>.<span class="w">oreilly</span>.<span class="w">com</span>/<span class="w">catalog</span><span class="q">/lperlwin/</span></li></ol></pre><p>Addison-Wesley ( <a href="http://www.awlonline.com/">http://www.awlonline.com/</a> ) and Manning
+( <a href="http://www.manning.com/">http://www.manning.com/</a> ) are also publishers of some fine Perl books
+such as <i>Object Oriented Programming with Perl</i> by Damian Conway and
+<i>Network Programming with Perl</i> by Lincoln Stein.</p>
+<p>An excellent technical book discounter is Bookpool at
+<a href="http://www.bookpool.com/">http://www.bookpool.com/</a> where a 30% discount or more is not unusual.</p>
+<p>What follows is a list of the books that the FAQ authors found personally
+useful.  Your mileage may (but, we hope, probably won't) vary.</p>
+<p>Recommended books on (or mostly on) Perl follow.</p>
+<ul>
+<li><a class='view-title' id="References"></a><strong>References</strong>
+<pre class="verbatim"><ol><li>    <span class="w">Programming</span> <span class="w">Perl</span></li><li>	<span class="w">by</span> <span class="w">Larry</span> <span class="w">Wall</span><span class="cm">,</span> <span class="w">Tom</span> <span class="w">Christiansen</span><span class="cm">,</span> and <span class="w">Jon</span> <span class="w">Orwant</span></li><li>	<span class="w">ISBN</span> <span class="n">0</span>-<span class="n">596</span>-<span class="n">00027</span>-<span class="n">8</span> <span class="s">[</span><span class="n">3</span><span class="w">rd</span> <span class="w">edition</span> <span class="w">July</span> <span class="n">2000</span><span class="s">]</span></li><li>	<span class="w">http</span><span class="co">:</span><span class="q">//</span><span class="w">www</span>.<span class="w">oreilly</span>.<span class="w">com</span>/<span class="w">catalog</span>/<span class="w">pperl3</span>/</li><li></li><li>    <span class="w">Perl</span> <span class="n">5</span> <span class="w">Pocket</span> <span class="w">Reference</span></li><li>    <span class="w">by</span> <span class="w">Johan</span> <span class="w">Vromans</span></li><li>	<span class="w">ISBN</span> <span class="n">0</span>-<span class="n">596</span>-<span class="n">00032</span>-<span class="n">4</span> <span class="s">[</span><span class="n">3</span><span class="w">rd</span> <span class="w">edition</span> <span class="w">May</span> <span class="n">2000</span><span class="s">]</span></li><li>	<span class="w">http</span><span class="co">:</span><span class="q">//</span><span class="w">www</span>.<span class="w">oreilly</span>.<span class="w">com</span>/<span class="w">catalog</span>/<span class="w">perlpr3</span>/</li><li></li><li>    <span class="w">Perl</span> <span class="w">in</span> <span class="w">a</span> <span class="w">Nutshell</span></li><li>    <span class="w">by</span> <span class="w">Ellen</span> <span class="w">Siever</span><span class="cm">,</span> <span class="w">Stephan</span> <span class="w">Spainhour</span><span class="cm">,</span> and <span class="w">Nathan</span> <span class="w">Patwardhan</span></li><li>	<span class="w">ISBN</span> <span class="n">1</span>-<span class="n">56592</span>-<span class="n">286</span>-<span class="n">7</span> <span class="s">[</span><span class="n">1</span><span class="w">st</span> <span class="w">edition</span> <span class="w">December</span> <span class="n">1998</span><span class="s">]</span></li><li>	<span class="w">http</span><span class="co">:</span><span class="q">//</span><span class="w">www</span>.<span class="w">oreilly</span>.<span class="w">com</span>/<span class="w">catalog</span><span class="q">/perlnut/</span></li></ol></pre></li>
+<li><a class='view-title' id="Tutorials"></a><strong>Tutorials</strong>
+<pre class="verbatim"><ol><li>    <span class="w">Elements</span> <span class="w">of</span> <span class="w">Programming</span> <span class="w">with</span> <span class="w">Perl</span></li><li>	<span class="w">by</span> <span class="w">Andrew</span> <span class="w">L</span>. <span class="w">Johnson</span></li><li>	<span class="w">ISBN</span> <span class="n">1</span>-<span class="n">884777</span>-<span class="n">80</span>-<span class="n">5</span> <span class="s">[</span><span class="n">1</span><span class="w">st</span> <span class="w">edition</span> <span class="w">October</span> <span class="n">1999</span><span class="s">]</span></li><li>	<span class="w">http</span><span class="co">:</span><span class="q">//</span><span class="w">www</span>.<span class="w">manning</span>.<span class="w">com</span>/<span class="w">Johnson</span>/</li><li></li><li>    <span class="w">Learning</span> <span class="w">Perl</span></li><li>	<span class="w">by</span> <span class="w">Randal</span> <span class="w">L</span>. <span class="w">Schwartz</span> and <span class="w">Tom</span> <span class="w">Phoenix</span></li><li>	<span class="w">ISBN</span> <span class="n">0</span>-<span class="n">596</span>-<span class="n">00132</span>-<span class="n">0</span> <span class="s">[</span><span class="n">3</span><span class="w">rd</span> <span class="w">edition</span> <span class="w">July</span> <span class="n">2001</span><span class="s">]</span></li><li>	<span class="w">http</span><span class="co">:</span><span class="q">//</span><span class="w">www</span>.<span class="w">oreilly</span>.<span class="w">com</span>/<span class="w">catalog</span>/<span class="w">lperl3</span>/</li><li></li><li>    <span class="w">Learning</span> <span class="w">Perl</span> <span class="w">on</span> <span class="w">Win32</span> <span class="w">Systems</span></li><li>	<span class="w">by</span> <span class="w">Randal</span> <span class="w">L</span>. <span class="w">Schwartz</span><span class="cm">,</span> <span class="w">Erik</span> <span class="w">Olson</span><span class="cm">,</span> and <span class="w">Tom</span> <span class="w">Christiansen</span><span class="cm">,</span></li><li>	    <span class="w">with</span> <span class="w">foreword</span> <span class="w">by</span> <span class="w">Larry</span> <span class="w">Wall</span></li><li>	<span class="w">ISBN</span> <span class="n">1</span>-<span class="n">56592</span>-<span class="n">324</span>-<span class="n">3</span> <span class="s">[</span><span class="n">1</span><span class="w">st</span> <span class="w">edition</span> <span class="w">August</span> <span class="n">1997</span><span class="s">]</span></li><li>	<span class="w">http</span><span class="co">:</span><span class="q">//</span><span class="w">www</span>.<span class="w">oreilly</span>.<span class="w">com</span>/<span class="w">catalog</span>/<span class="w">lperlwin</span>/</li><li></li><li>    <span class="w">Perl</span><span class="co">:</span> <span class="w">The</span> <span class="w">Programmer&#39;s</span> <span class="w">Companion</span></li><li>	<span class="w">by</span> <span class="w">Nigel</span> <span class="w">Chapman</span></li><li>	<span class="w">ISBN</span> <span class="n">0</span>-<span class="n">471</span>-<span class="n">97563</span>-<span class="w">X</span> <span class="s">[</span><span class="n">1997</span><span class="cm">,</span> <span class="n">3</span><span class="w">rd</span> <span class="w">printing</span> <span class="w">Spring</span> <span class="n">1998</span><span class="s">]</span></li><li>    <span class="w">http</span><span class="co">:</span><span class="q">//</span><span class="w">www</span>.<span class="w">wiley</span>.<span class="w">com</span>/<span class="w">compbooks</span>/<span class="w">catalog</span>/<span class="n">97563</span>-<span class="w">X</span>.<span class="w">htm</span></li><li>    <span class="w">http</span><span class="co">:</span><span class="q">//</span><span class="w">www</span>.<span class="w">wiley</span>.<span class="w">com</span>/<span class="w">compbooks</span>/<span class="w">chapman</span>/<span class="w">perl</span>/<span class="w">perltpc</span>.<span class="w">html</span> <span class="s">(</span><span class="w">errata</span> <span class="w">etc</span><span class="s">)</span></li><li></li><li>    <span class="w">Cross</span>-<span class="w">Platform</span> <span class="w">Perl</span></li><li>	<span class="w">by</span> <span class="w">Eric</span> <span class="w">Foster</span>-<span class="w">Johnson</span></li><li>	<span class="w">ISBN</span> <span class="n">1</span>-<span class="n">55851</span>-<span class="n">483</span>-<span class="w">X</span> <span class="s">[</span><span class="n">2</span><span class="w">nd</span> <span class="w">edition</span> <span class="w">September</span> <span class="n">2000</span><span class="s">]</span></li><li>	<span class="w">http</span><span class="co">:</span><span class="q">//</span><span class="w">www</span>.<span class="w">pconline</span>.<span class="w">com</span><span class="q">/~erc/perlbook</span>.<span class="w">htm</span></li><li></li><li>    <span class="w">MacPerl</span><span class="co">:</span> <span class="w">Power</span> and <span class="w">Ease</span></li><li>	<span class="w">by</span> <span class="w">Vicki</span> <span class="w">Brown</span> and <span class="w">Chris</span> <span class="w">Nandor</span><span class="cm">,</span></li><li>	    <span class="w">with</span> <span class="w">foreword</span> <span class="w">by</span> <span class="w">Matthias</span> <span class="w">Neeracher</span></li><li>	<span class="w">ISBN</span> <span class="n">1</span>-<span class="n">881957</span>-<span class="n">32</span>-<span class="n">2</span> <span class="s">[</span><span class="n">1</span><span class="w">st</span> <span class="w">edition</span> <span class="w">May</span> <span class="n">1998</span><span class="s">]</span></li><li>	<span class="w">http</span><span class="co">:</span><span class="q">//</span><span class="w">www</span>.<span class="w">macperl</span>.<span class="w">com</span><span class="q">/ptf_book/</span></li></ol></pre></li>
+<li><a class='view-title' id="Task-Oriented"></a><strong>Task-Oriented</strong>
+<pre class="verbatim"><ol><li>    <span class="w">The</span> <span class="w">Perl</span> <span class="w">Cookbook</span></li><li>	<span class="w">by</span> <span class="w">Tom</span> <span class="w">Christiansen</span> and <span class="w">Nathan</span> <span class="w">Torkington</span></li><li>	    <span class="w">with</span> <span class="w">foreword</span> <span class="w">by</span> <span class="w">Larry</span> <span class="w">Wall</span></li><li>	<span class="w">ISBN</span> <span class="n">1</span>-<span class="n">56592</span>-<span class="n">243</span>-<span class="n">3</span> <span class="s">[</span><span class="n">1</span><span class="w">st</span> <span class="w">edition</span> <span class="w">August</span> <span class="n">1998</span><span class="s">]</span></li><li>	<span class="w">http</span><span class="co">:</span><span class="q">//</span><span class="w">www</span>.<span class="w">oreilly</span>.<span class="w">com</span>/<span class="w">catalog</span>/<span class="w">cookbook</span>/</li><li></li><li>    <span class="w">Effective</span> <span class="w">Perl</span> <span class="w">Programming</span></li><li>	<span class="w">by</span> <span class="w">Joseph</span> <span class="w">Hall</span></li><li>	<span class="w">ISBN</span> <span class="n">0</span>-<span class="n">201</span>-<span class="n">41975</span>-<span class="n">0</span> <span class="s">[</span><span class="n">1</span><span class="w">st</span> <span class="w">edition</span> <span class="n">1998</span><span class="s">]</span></li><li>	<span class="w">http</span><span class="co">:</span><span class="q">//</span><span class="w">www</span>.<span class="w">awl</span>.<span class="w">com</span>/</li></ol></pre></li>
+<li><a class='view-title' id="Special-Topics"></a><strong>Special Topics</strong>
+<pre class="verbatim"><ol><li>    <span class="w">Mastering</span> <span class="w">Regular</span> <span class="w">Expressions</span></li><li>	<span class="w">by</span> <span class="w">Jeffrey</span> <span class="w">E</span>. <span class="w">F</span>. <span class="w">Friedl</span></li><li>	<span class="w">ISBN</span> <span class="n">1</span>-<span class="n">56592</span>-<span class="n">257</span>-<span class="n">3</span> <span class="s">[</span><span class="n">1</span><span class="w">st</span> <span class="w">edition</span> <span class="w">January</span> <span class="n">1997</span><span class="s">]</span></li><li>	<span class="w">http</span><span class="co">:</span><span class="q">//</span><span class="w">www</span>.<span class="w">oreilly</span>.<span class="w">com</span>/<span class="w">catalog</span><span class="q">/regex/</span></li><li></li><li>    <span class="w">Network</span> <span class="w">Programming</span> <span class="w">with</span> <span class="w">Perl</span></li><li>	<span class="w">by</span> <span class="w">Lincoln</span> <span class="w">Stein</span></li><li>	<span class="w">ISBN</span> <span class="n">0</span>-<span class="n">201</span>-<span class="n">61571</span>-<span class="n">1</span> <span class="s">[</span><span class="n">1</span><span class="w">st</span> <span class="w">edition</span> <span class="n">2001</span><span class="s">]</span></li><li>	<span class="w">http</span><span class="co">:</span><span class="q">//</span><span class="w">www</span>.<span class="w">awlonline</span>.<span class="w">com</span>/</li><li></li><li>    <span class="w">Object</span> <span class="w">Oriented</span> <span class="w">Perl</span></li><li>	<span class="w">Damian</span> <span class="w">Conway</span></li><li>	    <span class="w">with</span> <span class="w">foreword</span> <span class="w">by</span> <span class="w">Randal</span> <span class="w">L</span>. <span class="w">Schwartz</span></li><li>	<span class="w">ISBN</span> <span class="n">1</span>-<span class="n">884777</span>-<span class="n">79</span>-<span class="n">1</span> <span class="s">[</span><span class="n">1</span><span class="w">st</span> <span class="w">edition</span> <span class="w">August</span> <span class="n">1999</span><span class="s">]</span></li><li>	<span class="w">http</span><span class="co">:</span><span class="q">//</span><span class="w">www</span>.<span class="w">manning</span>.<span class="w">com</span>/<span class="w">Conway</span>/</li><li></li><li>    <span class="w">Data</span> <span class="w">Munging</span> <span class="w">with</span> <span class="w">Perl</span></li><li>	<span class="w">Dave</span> <span class="w">Cross</span></li><li>	<span class="w">ISBN</span> <span class="n">1</span>-<span class="n">930110</span>-<span class="n">00</span>-<span class="n">6</span> <span class="s">[</span><span class="n">1</span><span class="w">st</span> <span class="w">edition</span> <span class="n">2001</span><span class="s">]</span></li><li>	<span class="w">http</span><span class="co">:</span><span class="q">//</span><span class="w">www</span>.<span class="w">manning</span>.<span class="w">com</span>/<span class="w">cross</span></li><li></li><li>	<span class="w">Mastering</span> <span class="w">Perl</span>/<span class="w">Tk</span></li><li>	<span class="w">by</span> <span class="w">Steve</span> <span class="w">Lidie</span> and <span class="w">Nancy</span> <span class="w">Walsh</span></li><li>	<span class="w">ISBN</span> <span class="n">1</span>-<span class="n">56592</span>-<span class="n">716</span>-<span class="n">8</span> <span class="s">[</span><span class="n">1</span><span class="w">st</span> <span class="w">edition</span> <span class="w">January</span> <span class="n">2002</span><span class="s">]</span></li><li>	<span class="w">http</span><span class="co">:</span><span class="q">//</span><span class="w">www</span>.<span class="w">oreilly</span>.<span class="w">com</span>/<span class="w">catalog</span><span class="q">/mastperltk/</span></li></ol></pre></li>
+</ul>
+<a class='view-head2' id="Perl-in-Magazines"></a><h3 class='h3' >Perl in Magazines</h3>
+<p>The first (and for a long time, only) periodical devoted to All Things Perl,
+<i>The Perl Journal</i> contains tutorials, demonstrations, case studies,
+announcements, contests, and much more.  <i>TPJ</i> has columns on web
+development, databases, Win32 Perl, graphical programming, regular
+expressions, and networking, and sponsors the Obfuscated Perl Contest
+and the Perl Poetry Contests.  As of mid-2001, the dead tree version
+of TPJ will be published as a quarterly supplement of SysAdmin
+magazine ( <a href="http://www.sysadminmag.com/">http://www.sysadminmag.com/</a> ) For more details on TPJ,
+see <a href="http://www.tpj.com/">http://www.tpj.com/</a></p>
+<p>Beyond this, magazines that frequently carry quality articles on
+Perl are <i>The Perl Review</i> ( <a href="http://www.theperlreview.com">http://www.theperlreview.com</a> ),
+<i>Unix Review</i> ( <a href="http://www.unixreview.com/">http://www.unixreview.com/</a> ),
+<i>Linux Magazine</i> ( <a href="http://www.linuxmagazine.com/">http://www.linuxmagazine.com/</a> ),
+and Usenix's newsletter/magazine to its members, <i>login:</i>
+( <a href="http://www.usenix.org/">http://www.usenix.org/</a> )</p>
+<p>The Perl columns of Randal L. Schwartz are available on the web at
+<a href="http://www.stonehenge.com/merlyn/WebTechniques/">http://www.stonehenge.com/merlyn/WebTechniques/</a> ,
+<a href="http://www.stonehenge.com/merlyn/UnixReview/">http://www.stonehenge.com/merlyn/UnixReview/</a> , and
+<a href="http://www.stonehenge.com/merlyn/LinuxMag/">http://www.stonehenge.com/merlyn/LinuxMag/</a> .</p>
+<a class='view-head2' id="Perl-on-the-Net%3a-FTP-and-WWW-Access"></a><h3 class='h3' >Perl on the Net: FTP and WWW Access</h3>
+<p>To get the best performance, pick a site from
+the list below and use it to grab the complete list of mirror sites
+which is at /CPAN/MIRRORED.BY or at <a href="http://mirror.cpan.org/">http://mirror.cpan.org/</a> .
+From there you can find the quickest site for you.  Remember, the
+following list is <i>not</i> the complete list of CPAN mirrors
+(the complete list contains 165 sites as of January 2001):</p>
+<pre class="verbatim"><ol><li>  <span class="j">http:</span><span class="q">//</span><span class="w">www</span>.<span class="w">cpan</span>.<span class="w">org</span>/</li><li>  <span class="w">http</span><span class="co">:</span><span class="q">//</span><span class="w">www</span>.<span class="w">perl</span>.<span class="w">com</span>/<span class="w">CPAN</span>/</li><li>  <span class="w">http</span><span class="co">:</span><span class="q">//</span><span class="w">download</span>.<span class="w">sourceforge</span>.<span class="w">net</span>/<span class="w">mirrors</span>/<span class="w">CPAN</span>/</li><li>  <span class="w">ftp</span><span class="co">:</span><span class="q">//</span><span class="w">ftp</span>.<span class="w">digital</span>.<span class="w">com</span>/<span class="w">pub</span>/<span class="w">plan</span>/<span class="w">perl</span>/<span class="w">CPAN</span>/</li><li>  <span class="w">ftp</span><span class="co">:</span><span class="q">//</span><span class="w">ftp</span>.<span class="w">flirble</span>.<span class="w">org</span>/<span class="w">pub</span>/<span class="w">languages</span>/<span class="w">perl</span>/<span class="w">CPAN</span>/</li><li>  <span class="w">ftp</span><span class="co">:</span><span class="q">//</span><span class="w">ftp</span>.<span class="w">uvsq</span>.<span class="w">fr</span>/<span class="w">pub</span>/<span class="w">perl</span>/<span class="w">CPAN</span>/</li><li>  <span class="w">ftp</span><span class="co">:</span><span class="q">//</span><span class="w">ftp</span>.<span class="w">funet</span>.<span class="w">fi</span>/<span class="w">pub</span>/<span class="w">languages</span>/<span class="w">perl</span>/<span class="w">CPAN</span>/</li><li>  <span class="w">ftp</span><span class="co">:</span><span class="q">//</span><span class="w">ftp</span>.<span class="w">dti</span>.<span class="w">ad</span>.<span class="w">jp</span>/<span class="w">pub</span>/<span class="w">lang</span>/<span class="w">CPAN</span>/</li><li>  <span class="w">ftp</span><span class="co">:</span><span class="q">//cpan</span>.if.<span class="w">usp</span>.<span class="w">br</span>/<span class="w">pub</span>/<span class="w">mirror</span><span class="q">/CPAN/</span></li></ol></pre><p>One may also use xx.cpan.org where "xx" is the 2-letter country code
+for your domain; e.g. Australia would use au.cpan.org.
+[Note: This only applies to countries that host at least one mirror.]</p>
+<a class='view-head2' id="What-mailing-lists-are-there-for-Perl%3f"></a><h3 class='h3' >What mailing lists are there for Perl?</h3>
+<p>Most of the major modules (Tk, CGI, libwww-perl) have their own
+mailing lists.  Consult the documentation that came with the module for
+subscription information.</p>
+<p>A comprehensive list of Perl related mailing lists can be found at:</p>
+<pre class="verbatim"><ol><li>	<span class="j">http:</span><span class="q">//</span><span class="w">lists</span>.<span class="w">cpan</span>.<span class="w">org</span>/</li></ol></pre><p>( also visible as <a href="http://lists.perl.org/">http://lists.perl.org/</a> )</p>
+<a class='view-head2' id="Archives-of-comp.lang.perl.misc"></a><h3 class='h3' >Archives of comp.lang.perl.misc</h3>
+<p>The Google search engine now carries archived and searchable newsgroup
+content.</p>
+<p><a href="http://groups.google.com/groups?group=comp.lang.perl.misc">http://groups.google.com/groups?group=comp.lang.perl.misc</a></p>
+<p>If you have a question, you can be sure someone has already asked the
+same question at some point on c.l.p.m. It requires some time and patience
+to sift through all the content but often you will find the answer you
+seek.</p>
+<a class='view-head2' id="Where-can-I-buy-a-commercial-version-of-Perl%3f"></a><h3 class='h3' >Where can I buy a commercial version of Perl?</h3>
+<p>In a real sense, Perl already <i>is</i> commercial software: it has a license
+that you can grab and carefully read to your manager. It is distributed
+in releases and comes in well-defined packages. There is a very large
+user community and an extensive literature.  The comp.lang.perl.*
+newsgroups and several of the mailing lists provide free answers to your
+questions in near real-time.  Perl has traditionally been supported by
+Larry, scores of software designers and developers, and myriad
+programmers, all working for free to create a useful thing to make life
+better for everyone.</p>
+<p>However, these answers may not suffice for managers who require a
+purchase order from a company whom they can sue should anything go awry.
+Or maybe they need very serious hand-holding and contractual obligations.
+Shrink-wrapped CDs with Perl on them are available from several sources if
+that will help.  For example, many Perl books include a distribution of Perl,
+as do the O'Reilly Perl Resource Kits (in both the Unix flavor
+and in the proprietary Microsoft flavor); the free Unix distributions
+also all come with Perl.</p>
+<p>Alternatively, you can purchase commercial incidence based support
+through the Perl Clinic.  The following is a commercial from them:</p>
+<p>"The Perl Clinic is a commercial Perl support service operated by
+ActiveState Tool Corp. and The Ingram Group.  The operators have many
+years of in-depth experience with Perl applications and Perl internals
+on a wide range of platforms.</p>
+<p>"Through our group of highly experienced and well-trained support engineers,
+we will put our best effort into understanding your problem, providing an
+explanation of the situation, and a recommendation on how to proceed."</p>
+<p>Contact The Perl Clinic at</p>
+<pre class="verbatim"><ol><li>    <span class="w">www</span>.<span class="w">PerlClinic</span>.<span class="w">com</span></li><li></li><li>    <span class="w">North</span> <span class="w">America</span> <span class="w">Pacific</span> <span class="w">Standard</span> <span class="w">Time</span> <span class="s">(</span><span class="w">GMT</span>-<span class="n">8</span><span class="s">)</span></li><li>    <span class="w">Tel</span><span class="co">:</span>    <span class="n">1</span> <span class="n">604</span> <span class="n">606</span>-<span class="n">4611</span> <span class="w">hours</span> <span class="n">8</span><span class="w">am</span>-<span class="n">6</span><span class="w">pm</span></li><li>    <span class="w">Fax</span><span class="co">:</span>    <span class="n">1</span> <span class="n">604</span> <span class="n">606</span>-<span class="n">4640</span></li><li></li><li>    <span class="w">Europe</span> <span class="s">(</span><span class="w">GMT</span><span class="s">)</span></li><li>    <span class="w">Tel</span><span class="co">:</span>    <span class="n">00</span> <span class="n">44</span> <span class="n">1483</span> <span class="n">862814</span></li><li>    <span class="w">Fax</span><span class="co">:</span>    <span class="n">00</span> <span class="n">44</span> <span class="n">1483</span> <span class="n">862801</span></li></ol></pre><p>See also www.perl.com for updates on tutorials, training, and support.</p>
+<a class='view-head2' id="Where-do-I-send-bug-reports%3f"></a><h3 class='h3' >Where do I send bug reports?</h3>
+<p>If you are reporting a bug in the perl interpreter or the modules
+shipped with Perl, use the <i>perlbug</i> program in the Perl distribution or
+mail your report to perlbug@perl.org .</p>
+<p>If you are posting a bug with a non-standard port (see the answer to
+"What platforms is Perl available for?"), a binary distribution, or a
+non-standard module (such as Tk, CGI, etc), then please see the
+documentation that came with it to determine the correct place to post
+bugs.</p>
+<p>Read the perlbug(1) man page (perl5.004 or later) for more information.</p>
+<a class='view-head2' id="What-is-perl.com%3f-Perl-Mongers%3f-pm.org%3f-perl.org%3f-cpan.org%3f"></a><h3 class='h3' >What is perl.com? Perl Mongers? pm.org? perl.org? cpan.org?</h3>
+<p>The Perl Home Page at <a href="http://www.perl.com/">http://www.perl.com/</a> is currently hosted by
+The O'Reilly Network, a subsidiary of O'Reilly and Associates.</p>
+<p>Perl Mongers is an advocacy organization for the Perl language which
+maintains the web site <a href="http://www.perl.org/">http://www.perl.org/</a> as a general advocacy
+site for the Perl language.</p>
+<p>Perl Mongers uses the pm.org domain for services related to Perl user
+groups, including the hosting of mailing lists and web sites.  See the
+Perl user group web site at <a href="http://www.pm.org/">http://www.pm.org/</a> for more information about
+joining, starting, or requesting services for a Perl user group.</p>
+<p>Perl Mongers also maintain the perl.org domain to provide general
+support services to the Perl community, including the hosting of mailing
+lists, web sites, and other services.  The web site
+<a href="http://www.perl.org/">http://www.perl.org/</a> is a general advocacy site for the Perl language,
+and there are many other sub-domains for special topics, such as</p>
+<pre class="verbatim"><ol><li>    <span class="j">http:</span><span class="q">//</span><span class="w">bugs</span>.<span class="w">perl</span>.<span class="w">org</span>/</li><li>    <span class="w">http</span><span class="co">:</span><span class="q">//</span><span class="w">history</span>.<span class="w">perl</span>.<span class="w">org</span>/</li><li>    <span class="w">http</span><span class="co">:</span><span class="q">//</span><span class="w">lists</span>.<span class="w">perl</span>.<span class="w">org</span>/</li><li>    <span class="w">http</span><span class="co">:</span><span class="q">//</span><a class="l_k" href="functions/use.html">use</a>.<span class="w">perl</span>.<span class="w">org</span>/</li></ol></pre><p><a href="http://www.cpan.org/">http://www.cpan.org/</a> is the Comprehensive Perl Archive Network,
+a replicated worlwide repository of Perl software, see
+the <i>What is CPAN?</i> question earlier in this document.</p>
+<a class='view-head1' id="AUTHOR-AND-COPYRIGHT"></a><h2 class='h2' >AUTHOR AND COPYRIGHT</h2>
+<p>Copyright (c) 1997-2001 Tom Christiansen and Nathan Torkington.
+All rights reserved.</p>
+<p>This documentation is free; you can redistribute it and/or modify it
+under the same terms as Perl itself.</p>
+<p>Irrespective of its distribution, all code examples here are in the public
+domain.  You are permitted and encouraged to use this code and any
+derivatives thereof in your own programs for fun or for profit as you
+see fit.  A simple comment in the code giving credit to the FAQ would
+be courteous but is not required.</p>
+
+
+
+
+      <ul><li><a href="#NAME">NAME</a></li><li><a href="#DESCRIPTION">DESCRIPTION</a></li><ul><li><a href="#What-machines-support-Perl%3f--Where-do-I-get-it%3f">What machines support Perl?  Where do I get it?</a></li><li><a href="#How-can-I-get-a-binary-version-of-Perl%3f">How can I get a binary version of Perl?</a></li><li><a href="#I-don't-have-a-C-compiler-on-my-system.--How-can-I-compile-perl%3f">I don't have a C compiler on my system.  How can I compile perl?</a></li><li><a href="#I-copied-the-Perl-binary-from-one-machine-to-another%2c-but-scripts-don't-work.">I copied the Perl binary from one machine to another, but scripts don't work.</a></li><li><a href="#I-grabbed-the-sources-and-tried-to-compile-but-gdbm%2fdynamic-loading%2fmalloc%2flinking%2f...-failed.--How-do-I-make-it-work%3f">I grabbed the sources and tried to compile but gdbm/dynamic loading/malloc/linking/... failed.  How do I make it work?</a></li><li><a href="#What-modules-and-extensions-are-available-for-Perl%3f--What-is-CPAN%3f--What-does-CPAN%2fsrc%2f...-mean%3f">What modules and extensions are available for Perl?  What is CPAN?  What does CPAN/src/... mean?</a></li><li><a href="#Is-there-an-ISO-or-ANSI-certified-version-of-Perl%3f">Is there an ISO or ANSI certified version of Perl?</a></li><li><a href="#Where-can-I-get-information-on-Perl%3f">Where can I get information on Perl?</a></li><li><a href="#What-are-the-Perl-newsgroups-on-Usenet%3f--Where-do-I-post-questions%3f">What are the Perl newsgroups on Usenet?  Where do I post questions?</a></li><li><a href="#Where-should-I-post-source-code%3f">Where should I post source code?</a></li><li><a href="#Perl-Books">Perl Books</a></li><li><a href="#Perl-in-Magazines">Perl in Magazines</a></li><li><a href="#Perl-on-the-Net%3a-FTP-and-WWW-Access">Perl on the Net: FTP and WWW Access</a></li><li><a href="#What-mailing-lists-are-there-for-Perl%3f">What mailing lists are there for Perl?</a></li><li><a href="#Archives-of-comp.lang.perl.misc">Archives of comp.lang.perl.misc</a></li><li><a href="#Where-can-I-buy-a-commercial-version-of-Perl%3f">Where can I buy a commercial version of Perl?</a></li><li><a href="#Where-do-I-send-bug-reports%3f">Where do I send bug reports?</a></li><li><a href="#What-is-perl.com%3f-Perl-Mongers%3f-pm.org%3f-perl.org%3f-cpan.org%3f">What is perl.com? Perl Mongers? pm.org? perl.org? cpan.org?</a></li></ul><li><a href="#AUTHOR-AND-COPYRIGHT">AUTHOR AND COPYRIGHT</a></li></ul>
+
+
+                  </div>
+                </article>
+              </div>
+            </div>
+          </main>
+        </div>
+           <footer class="footer row bg-light pt-5 pb-5">
+       <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+           <div class="row">
+               <div class="col-md-4">
+                   <ul class="list-unstyled">
+                       <li>
+                           <h4>Site info</h4>
+                       </li>
+                       <li>Docs mantained by
+                           <a href="//lists.perl.org/list/perl5-porters.html"
+                               rel="noopener">Perl 5 Porters</a>
+                       </li>
+                       <li>Perldoc site development sponsored by
+                           <a href="//opusvl.com" rel="noopener">
+                           <img style="margin: 20px 20px 5px 10px" class="opus-logo" src="/public/img/opusvl_logo.svg" alt="OpusVL Logo">
+                        </a>
+                    <li><span class="about_perldoc"><a href="//about.html">About PerlDOC</a></span>
+                    </li>
+                       </li>
+                   </ul>
+               </div>
+               <div class="col-md-8">
+                   <div class="row">
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Manuals</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.0/index-overview.html">Overview</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.0/index-tutorials.html">Tutorials</a>
+                               </li>
+                               <li>
+                                   <a href="/5.8.0/index-faq.html">FAQs</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.0/index-history.html">Changes</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Reference</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.0/index-language.html">Language</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.0/index-functions.html">Functions</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.0/perlop.html">Operators</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.0/perlvar.html">Variables</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Modules</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.0/index-modules-A.html">Modules</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.0/index-pragmas.html">Pragmas</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.0/index-utilities.html">Utilities</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Misc</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.0/index-licence.html">License</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.0/index-internals.html">Internals</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.0/index-platforms.html">Platforms</a>
+                               </li>
+                            <li>
+                                <a
+                                    href="/5.8.0/index-about.html">About</a>
+                            </li>
+                           </ul>
+                       </div>
+                   </div>
+               </div>
+               <div class=" col-12 footer-inf text-center">
+                   <small>perldoc.perl.org - Official documentation for the Perl
+                       programming language</small>
+               </div>
+           </div>
+       </div>
+   </footer>
+
+        	<div class="beta-wrapper beta-bottom-right ">
+		<div class="beta beta-blue  ">
+			<a class="beta-link "
+				href="//github.com/OpusVL/perldoc.perl.org/issues/new" rel="noopener">
+				<span class="beta-text">
+					This website is a Beta release.
+				</span>
+				<span class="beta-text">
+					For any issues please raise a ticket on GitHub
+				</span>
+			</a>
+		</div>
+	</div>
+
+        <script src="/public/js/main.min.js"></script>
+      </body>
+
+      </html>

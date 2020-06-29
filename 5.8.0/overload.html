@@ -1,0 +1,1512 @@
+      
+      
+      
+      
+
+      <!DOCTYPE html>
+      <html lang="en">
+
+      <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="overload - perldoc.perl.org">
+        <link rel="icon" href="/public/img/favicon.ico">
+        <title>overload - perldoc.perl.org</title>
+        <link href="/public/css/main.min.css" rel="stylesheet">
+        <link rel="canonical" href="/overload.html">
+        <link
+          href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900'
+          rel='stylesheet' type='text/css'>
+        <script>
+          window.ga = window.ga || function () {
+            (ga.q = ga.q || []).push(arguments)
+          };
+          ga.l = +new Date;
+          ga('create', 'UA-1892152-2', 'auto'); // JJ's account
+          ga('create', 'UA-50555-3', 'auto', 'perlOrg'); // perl.org account
+          ga('require', 'outboundLinkTracker', {
+            events: ['click', 'auxclick', 'contextmenu'],
+          });
+          ga('require', 'maxScrollTracker');
+          ga('send', 'pageview');
+          ga('perlOrg.send', 'pageview');
+        </script>
+        <script async src="https://www.google-analytics.com/analytics.js">
+        </script>
+        <script async src="/public/js/tracking.min.js"></script>
+      </head>
+
+      <body class="body container-fluid ">
+        <div class="wrapper">
+
+          <nav
+    class="navbar navbar-dark bg-primary bg-perl fixed-top justify-content-between navbar-expand-lg">
+    <a href="#content" class="skippy sr-only sr-only-focusable">
+        <span class=' skippy-text'>Skip to main content</span>
+    </a>
+    <a class="navbar-brand" href="/">
+        <img class="logo" src="/public/img/logo_perl_doc.svg"
+            alt="Perl Documentation Logo" />
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse"
+        data-target="#navbar" aria-controls="navbar" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="navbar" class="collapse navbar-collapse ">
+        <ul class="navbar-nav ml-auto navbar-right">
+            <form class="nav-item dropdown search-wrapper">
+                <input type="text" id='searchinput' aria-describedby='navbarDropdown5'
+                    placeholder="Type query" class='search-input-field' value=''>
+
+                <button href="#" data-toggle='dropdown' type="button"
+                    aria-haspopup="true" aria-expanded='false' id="navbarDropdown5"
+                    class="nav-link dropdown-toggle search-link">
+                    <object tabindex='-1' focusable="false" class='search-icon'
+                        data="/public/img/search.svg" type="image/svg+xml"
+                        name='search icon'>search
+                        icon</object>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown5"
+                    id='search-results'>
+                    <p class='dropdown-item major-version'>
+                        No results
+                    </p>
+                </div>
+            </form>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown" href="#" class="nav-link dropdown-toggle"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Perl versions</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    
+                        <p class='dropdown-item major-version'>
+                            5.32
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.32.0/">5.32.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.30
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.3/">5.30.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.2/">5.30.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.1/">5.30.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.0/">5.30.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.28
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.3/">5.28.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.2/">5.28.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.1/">5.28.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.0/">5.28.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.26
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.3/">5.26.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.2/">5.26.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.1/">5.26.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.0/">5.26.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.24
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.4/">5.24.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.3/">5.24.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.2/">5.24.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.1/">5.24.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.0/">5.24.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.22
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.4/">5.22.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.3/">5.22.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.2/">5.22.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.1/">5.22.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.0/">5.22.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.20
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.3/">5.20.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.2/">5.20.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.1/">5.20.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.0/">5.20.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.18
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.4/">5.18.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.3/">5.18.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.2/">5.18.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.1/">5.18.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.0/">5.18.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.16
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.3/">5.16.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.2/">5.16.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.1/">5.16.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.0/">5.16.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.14
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.4/">5.14.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.3/">5.14.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.2/">5.14.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.1/">5.14.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.0/">5.14.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.12
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.5/">5.12.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.4/">5.12.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.3/">5.12.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.2/">5.12.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.1/">5.12.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.0/">5.12.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.10
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.1/">5.10.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.0/">5.10.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.8
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.9/">5.8.9</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.8/">5.8.8</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.7/">5.8.7</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.6/">5.8.6</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.5/">5.8.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.4/">5.8.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.3/">5.8.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.2/">5.8.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.1/">5.8.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.0/">5.8.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.6
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.2/">5.6.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.1/">5.6.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.0/">5.6.0</a>
+                        
+                        
+                    
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown1" href="#" class="dropdown-toggle nav-link"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Manuals</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                    <a class="dropdown-item"
+                        href="/5.8.0/index-overview.html">Overview</a>
+                    <a class="dropdown-item"
+                        href="/5.8.0/index-tutorials.html">Tutorials</a>
+                    <a class="dropdown-item"
+                        href="/5.8.0/index-faq.html">FAQs</a>
+                    <a class="dropdown-item"
+                        href="/5.8.0/index-history.html">Changes</a>
+                    <a class="dropdown-item"
+                        href="/5.8.0/index-licence.html">License</a>
+                    <a class="dropdown-item"
+                        href="/5.8.0/index-language.html">Language</a>
+                    <a class="dropdown-item"
+                        href="/5.8.0/index-functions.html">Functions</a>
+                    <a class="dropdown-item"
+                        href="/5.8.0/perlop.html">Operators</a>
+                    <a class="dropdown-item"
+                        href="/5.8.0/perlvar.html">Variables</a>
+                    <a class="dropdown-item"
+                        href="/5.8.0/index-pragmas.html">Pragmas</a>
+                    <a class="dropdown-item"
+                        href="/5.8.0/index-utilities.html">Utilities</a>
+                    <a class="dropdown-item"
+                        href="/5.8.0/index-internals.html">Internals</a>
+                    <a class="dropdown-item"
+                        href="/5.8.0/index-platforms.html">Platforms</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown3" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Modules</a>
+                <div aria-labelledby="navbarDropdown3"
+                    class="dropdown-menu letters-wrap">
+                    <!--<a class="dropdown-item"
+                        href="/5.8.0/index-modules.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.8.0/index-modules-by-cat.html">By
+                        Category</a>-->
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-modules-A.html">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-modules-B.html">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-modules-C.html">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-modules-D.html">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-modules-E.html">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-modules-F.html">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-modules-G.html">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-modules-H.html">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-modules-I.html">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-modules-J.html">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-modules-K.html">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-modules-L.html">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-modules-M.html">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-modules-N.html">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-modules-O.html">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-modules-P.html">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-modules-Q.html">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-modules-R.html">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-modules-S.html">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-modules-T.html">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-modules-U.html">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-modules-V.html">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-modules-W.html">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-modules-X.html">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-modules-Y.html">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-modules-Z.html">Z</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown4" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Functions</a>
+                <div aria-labelledby="navbarDropdown4"
+                    class="dropdown-menu letters-wrap">
+                    <a class="dropdown-item"
+                        href="/5.8.0/index-functions.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.8.0/index-functions-by-cat.html">By
+                        Category</a>
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-functions.html#A">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-functions.html#B">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-functions.html#C">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-functions.html#D">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-functions.html#E">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-functions.html#F">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-functions.html#G">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-functions.html#H">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-functions.html#I">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-functions.html#J">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-functions.html#K">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-functions.html#L">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-functions.html#M">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-functions.html#N">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-functions.html#O">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-functions.html#P">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-functions.html#Q">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-functions.html#R">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-functions.html#S">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-functions.html#T">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-functions.html#U">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-functions.html#V">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-functions.html#W">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-functions.html#X">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-functions.html#Y">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-functions.html#Z">Z</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!--/.nav-collapse -->
+</nav>
+
+
+          <main class="row main-content pb-5 pt-5" id='content'>
+            <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+              <div class="row">
+                <div class="col-sm-12">
+                  <div id="breadcrumbs">
+                      
+    <a href="index.html">Home</a>&nbsp; &gt;
+    
+      
+        <a href="index-pragmas.html">Pragmas</a> &gt;
+      
+    
+    overload
+  
+
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <article class="col-sm-12 content">
+                  <div class="documentation-wrapper">
+                    <div id="perl_version">
+                      <h7 class='page-title'> Perl 5 version 8.0
+                        documentation</h7>
+                    </div>
+                    <h1>overload</h1>
+
+
+  <!--    -->
+<ul><li><a href="#NAME">NAME</a></li><li><a href="#SYNOPSIS">SYNOPSIS</a></li><li><a href="#DESCRIPTION">DESCRIPTION</a></li><ul><li><a href="#Declaration-of-overloaded-functions">Declaration of overloaded functions</a></li><li><a href="#Calling-Conventions-for-Binary-Operations">Calling Conventions for Binary Operations</a></li><li><a href="#Calling-Conventions-for-Unary-Operations">Calling Conventions for Unary Operations</a></li><li><a href="#Calling-Conventions-for-Mutators">Calling Conventions for Mutators</a></li><li><a href="#Overloadable-Operations">Overloadable Operations</a></li><li><a href="#Inheritance-and-overloading">Inheritance and overloading</a></li></ul><li><a href="#SPECIAL-SYMBOLS-FOR-use-overload">SPECIAL SYMBOLS FOR use overload</a></li><ul><li><a href="#Last-Resort">Last Resort</a></li><li><a href="#Fallback">Fallback</a></li><li><a href="#Copy-Constructor">Copy Constructor</a></li></ul><li><a href="#MAGIC-AUTOGENERATION">MAGIC AUTOGENERATION</a></li><li><a href="#Losing-overloading">Losing overloading</a></li><li><a href="#Run-time-Overloading">Run-time Overloading</a></li><li><a href="#Public-functions">Public functions</a></li><li><a href="#Overloading-constants">Overloading constants</a></li><li><a href="#IMPLEMENTATION">IMPLEMENTATION</a></li><li><a href="#Metaphor-clash">Metaphor clash</a></li><li><a href="#Cookbook">Cookbook</a></li><ul><li><a href="#Two-face-scalars">Two-face scalars</a></li><li><a href="#Two-face-references">Two-face references</a></li><li><a href="#Symbolic-calculator">Symbolic calculator</a></li><li><a href="#_Really_-symbolic-calculator">_Really_ symbolic calculator</a></li></ul><li><a href="#AUTHOR">AUTHOR</a></li><li><a href="#DIAGNOSTICS">DIAGNOSTICS</a></li><li><a href="#BUGS">BUGS</a></li></ul><a class='view-head1' id="NAME"></a><h2 class='h2' >NAME</h2>
+<p>overload - Package for overloading perl operations</p>
+<a class='view-head1' id="SYNOPSIS"></a><h2 class='h2' >SYNOPSIS</h2>
+<pre class="verbatim"><ol><li><a name="package-SomeThing"></a>    package <span class="i">SomeThing</span><span class="sc">;</span></li><li></li><li>    <a class="l_k" href="functions/use.html">use</a> <span class="w">overload</span></li><li>	<span class="q">&#39;+&#39;</span> <span class="cm">=&gt;</span> \<span class="i">&amp;myadd</span><span class="cm">,</span></li><li>	<span class="q">&#39;-&#39;</span> <span class="cm">=&gt;</span> \<span class="i">&amp;mysub</span><span class="sc">;</span></li><li>	<span class="c"># etc</span></li><li>    ...</li><li></li><li><a name="package-main"></a>    package <span class="i">main</span><span class="sc">;</span></li><li>    <span class="i">$a</span> = <span class="w">new</span> <span class="w">SomeThing</span> <span class="n">57</span><span class="sc">;</span></li><li>    <span class="i">$b</span>=<span class="n">5</span>+<span class="i">$a</span><span class="sc">;</span></li><li>    ...</li><li>    if <span class="s">(</span><span class="w">overload::Overloaded</span> <span class="i">$b</span><span class="s">)</span> <span class="s">{</span>...<span class="s">}</span></li><li>    ...</li><li>    <span class="i">$strval</span> = <span class="w">overload::StrVal</span> <span class="i">$b</span><span class="sc">;</span></li></ol></pre><a class='view-head1' id="DESCRIPTION"></a><h2 class='h2' >DESCRIPTION</h2>
+<a class='view-head2' id="Declaration-of-overloaded-functions"></a><h3 class='h3' >Declaration of overloaded functions</h3>
+<p>The compilation directive</p>
+<pre class="verbatim"><ol><li><a name="package-Number"></a>    package <span class="i">Number</span><span class="sc">;</span></li><li>    <a class="l_k" href="functions/use.html">use</a> <span class="w">overload</span></li><li>	<span class="q">&quot;+&quot;</span> <span class="cm">=&gt;</span> \<span class="i">&amp;add</span><span class="cm">,</span></li><li>	<span class="q">&quot;*=&quot;</span> <span class="cm">=&gt;</span> <span class="q">&quot;muas&quot;</span><span class="sc">;</span></li></ol></pre><p>declares function Number::add() for addition, and method muas() in
+the "class" <code class="inline"><span class="w">Number</span></code>
+ (or one of its base classes)
+for the assignment form <code class="inline"><span class="i">*=</span></code>
+ of multiplication.</p>
+<p>Arguments of this directive come in (key, value) pairs.  Legal values
+are values legal inside a <code class="inline"><span class="i">&amp;</span>{ ... }</code>
+ call, so the name of a
+subroutine, a reference to a subroutine, or an anonymous subroutine
+will all work.  Note that values specified as strings are
+interpreted as methods, not subroutines.  Legal keys are listed below.</p>
+<p>The subroutine <code class="inline"><span class="w">add</span></code>
+ will be called to execute <code class="inline"><span class="i">$a</span>+<span class="i">$b</span></code>
+ if $a
+is a reference to an object blessed into the package <code class="inline"><span class="w">Number</span></code>
+, or if $a is
+not an object from a package with defined mathemagic addition, but $b is a
+reference to a <code class="inline"><span class="w">Number</span></code>
+.  It can also be called in other situations, like
+<code class="inline"><span class="i">$a</span>+=<span class="n">7</span></code>
+, or <code class="inline"><span class="i">$a</span>++</code>
+.  See <a href="#MAGIC-AUTOGENERATION">MAGIC AUTOGENERATION</a>.  (Mathemagical
+methods refer to methods triggered by an overloaded mathematical
+operator.)</p>
+<p>Since overloading respects inheritance via the @ISA hierarchy, the
+above declaration would also trigger overloading of <code class="inline">+</code>
+ and <code class="inline"><span class="i">*=</span></code>
+ in
+all the packages which inherit from <code class="inline"><span class="w">Number</span></code>
+.</p>
+<a class='view-head2' id="Calling-Conventions-for-Binary-Operations"></a><h3 class='h3' >Calling Conventions for Binary Operations</h3>
+<p>The functions specified in the <code class="inline"><a class="l_k" href="functions/use.html">use</a> <span class="w">overload</span> ...</code>
+ directive are called
+with three (in one particular case with four, see <a href="#Last-Resort">Last Resort</a>)
+arguments.  If the corresponding operation is binary, then the first
+two arguments are the two arguments of the operation.  However, due to
+general object calling conventions, the first argument should always be
+an object in the package, so in the situation of <code class="inline"><span class="n">7</span>+<span class="i">$a</span></code>
+, the
+order of the arguments is interchanged.  It probably does not matter
+when implementing the addition method, but whether the arguments
+are reversed is vital to the subtraction method.  The method can
+query this information by examining the third argument, which can take
+three different values:</p>
+<ul>
+<li><a class='view-title' id="FALSE"></a><strong>FALSE</strong>
+<p>the order of arguments is as in the current operation.</p>
+</li>
+<li><a class='view-title' id="TRUE"></a><strong>TRUE</strong>
+<p>the arguments are reversed.</p>
+</li>
+<li><a class='view-title' id="undef"></a><strong><code class="inline"><a class="l_k" href="functions/undef.html">undef</a></code></strong>
+<p>the current operation is an assignment variant (as in
+<code class="inline"><span class="i">$a</span>+=<span class="n">7</span></code>
+), but the usual function is called instead.  This additional
+information can be used to generate some optimizations.  Compare
+<a href="#Calling-Conventions-for-Mutators">Calling Conventions for Mutators</a>.</p>
+</li>
+</ul>
+<a class='view-head2' id="Calling-Conventions-for-Unary-Operations"></a><h3 class='h3' >Calling Conventions for Unary Operations</h3>
+<p>Unary operation are considered binary operations with the second
+argument being <code class="inline"><a class="l_k" href="functions/undef.html">undef</a></code>.  Thus the functions that overloads <code class="inline"><span class="s">{</span><span class="q">&quot;++&quot;</span><span class="s">}</span></code>
+
+is called with arguments <code class="inline"><span class="s">(</span><span class="i">$a</span><span class="cm">,</span><a class="l_k" href="functions/undef.html">undef</a><span class="cm">,</span><span class="q">&#39;&#39;</span><span class="s">)</span></code>
+ when $a++ is executed.</p>
+<a class='view-head2' id="Calling-Conventions-for-Mutators"></a><h3 class='h3' >Calling Conventions for Mutators</h3>
+<p>Two types of mutators have different calling conventions:</p>
+<ul>
+<li><a class='view-title' id="%2b%2b-and---"></a><strong><code class="inline">++</code>
+ and <code class="inline">--</code>
+</strong>
+<p>The routines which implement these operators are expected to actually
+<i>mutate</i> their arguments.  So, assuming that $obj is a reference to a
+number,</p>
+<pre class="verbatim"><ol><li><a name="incr"></a>  sub <span class="m">incr</span> <span class="s">{</span> <a class="l_k" href="functions/my.html">my</a> <span class="i">$n</span> = <span class="i">$</span> {<span class="i">$_</span>[<span class="n">0</span>]}<span class="sc">;</span> ++<span class="i">$n</span><span class="sc">;</span> <span class="i">$_</span>[<span class="n">0</span>] = <a class="l_k" href="functions/bless.html">bless</a> \<span class="i">$n</span><span class="s">}</span></li></ol></pre><p>is an appropriate implementation of overloaded <code class="inline">++</code>
+.  Note that</p>
+<pre class="verbatim"><ol><li><a name="incr"></a>  sub <span class="m">incr</span> <span class="s">{</span> ++<span class="i">$</span> {<span class="i">$_</span>[<span class="n">0</span>]} <span class="sc">;</span> <a class="l_k" href="functions/shift.html">shift</a> <span class="s">}</span></li></ol></pre><p>is OK if used with preincrement and with postincrement. (In the case
+of postincrement a copying will be performed, see <a href="#Copy-Constructor">Copy Constructor</a>.)</p>
+</li>
+<li><a class='view-title' id="x%3d-and-other-assignment-versions"></a><strong><code class="inline"><span class="w">x</span>=</code>
+ and other assignment versions</strong>
+<p>There is nothing special about these methods.  They may change the
+value of their arguments, and may leave it as is.  The result is going
+to be assigned to the value in the left-hand-side if different from
+this value.</p>
+<p>This allows for the same method to be used as overloaded <code class="inline">+=</code>
+ and
+<code class="inline">+</code>
+.  Note that this is <i>allowed</i>, but not recommended, since by the
+semantic of <a href="#Fallback">Fallback</a> Perl will call the method for <code class="inline">+</code>
+ anyway,
+if <code class="inline">+=</code>
+ is not overloaded.</p>
+</li>
+</ul>
+<p><strong>Warning.</strong>  Due to the presence of assignment versions of operations,
+routines which may be called in assignment context may create
+self-referential structures.  Currently Perl will not free self-referential
+structures until cycles are <code class="inline"><span class="w">explicitly</span></code>
+ broken.  You may get problems
+when traversing your structures too.</p>
+<p>Say,</p>
+<pre class="verbatim"><ol><li>  <a class="l_k" href="functions/use.html">use</a> <span class="w">overload</span> <span class="q">&#39;+&#39;</span> <span class="cm">=&gt;</span> <a class="l_k" href="functions/sub.html">sub</a> <span class="s">{</span> <a class="l_k" href="functions/bless.html">bless</a> <span class="s">[</span> \<span class="i">$_</span>[<span class="n">0</span>]<span class="cm">,</span> \<span class="i">$_</span>[<span class="n">1</span>] <span class="s">]</span> <span class="s">}</span><span class="sc">;</span></li></ol></pre><p>is asking for trouble, since for code <code class="inline"><span class="i">$obj</span> += <span class="i">$foo</span></code>
+ the subroutine
+is called as <code class="inline"><span class="i">$obj</span> = <span class="i">add</span><span class="s">(</span><span class="i">$obj</span><span class="cm">,</span> <span class="i">$foo</span><span class="cm">,</span> <a class="l_k" href="functions/undef.html">undef</a><span class="s">)</span></code>
+, or <code class="inline"><span class="i">$obj</span> = <span class="s">[</span>\<span class="i">$obj</span><span class="cm">,</span>
+\<span class="i">$foo</span><span class="s">]</span></code>
+.  If using such a subroutine is an important optimization, one
+can overload <code class="inline">+=</code>
+ explicitly by a non-"optimized" version, or switch
+to non-optimized version if <code class="inline">not <a class="l_k" href="functions/defined.html">defined</a> <span class="i">$_</span>[<span class="n">2</span>]</code>
+ (see
+<a href="#Calling-Conventions-for-Binary-Operations">Calling Conventions for Binary Operations</a>).</p>
+<p>Even if no <i>explicit</i> assignment-variants of operators are present in
+the script, they may be generated by the optimizer.  Say, <code class="inline"><span class="q">&quot;,$obj,&quot;</span></code>
+ or
+<code class="inline"><span class="q">&#39;,&#39;</span> . <span class="i">$obj</span> . <span class="q">&#39;,&#39;</span></code>
+ may be both optimized to</p>
+<pre class="verbatim"><ol><li>  <a class="l_k" href="functions/my.html">my</a> <span class="i">$tmp</span> = <span class="q">&#39;,&#39;</span> . <span class="i">$obj</span><span class="sc">;</span>    <span class="i">$tmp</span> .= <span class="q">&#39;,&#39;</span><span class="sc">;</span></li></ol></pre><a class='view-head2' id="Overloadable-Operations"></a><h3 class='h3' >Overloadable Operations</h3>
+<p>The following symbols can be specified in <code class="inline"><a class="l_k" href="functions/use.html">use</a> <span class="w">overload</span></code>
+ directive:</p>
+<ul>
+<li><a class='view-title' id="*-_Arithmetic-operations_"></a><strong><i>Arithmetic operations</i></strong>
+<pre class="verbatim"><ol><li>    <span class="q">&quot;+&quot;</span><span class="cm">,</span> <span class="q">&quot;+=&quot;</span><span class="cm">,</span> <span class="q">&quot;-&quot;</span><span class="cm">,</span> <span class="q">&quot;-=&quot;</span><span class="cm">,</span> <span class="q">&quot;*&quot;</span><span class="cm">,</span> <span class="q">&quot;*=&quot;</span><span class="cm">,</span> <span class="q">&quot;/&quot;</span><span class="cm">,</span> <span class="q">&quot;/=&quot;</span><span class="cm">,</span> <span class="q">&quot;%&quot;</span><span class="cm">,</span> <span class="q">&quot;%=&quot;</span><span class="cm">,</span></li><li>    <span class="q">&quot;**&quot;</span><span class="cm">,</span> <span class="q">&quot;**=&quot;</span><span class="cm">,</span> <span class="q">&quot;&lt;&lt;&quot;</span><span class="cm">,</span> <span class="q">&quot;&lt;&lt;=&quot;</span><span class="cm">,</span> <span class="q">&quot;&gt;&gt;&quot;</span><span class="cm">,</span> <span class="q">&quot;&gt;&gt;=&quot;</span><span class="cm">,</span> <span class="q">&quot;x&quot;</span><span class="cm">,</span> <span class="q">&quot;x=&quot;</span><span class="cm">,</span> <span class="q">&quot;.&quot;</span><span class="cm">,</span> <span class="q">&quot;.=&quot;</span><span class="cm">,</span></li></ol></pre><p>For these operations a substituted non-assignment variant can be called if
+the assignment variant is not available.  Methods for operations <code class="inline">+</code>
+,
+<code class="inline">-</code>
+, <code class="inline">+=</code>
+, and <code class="inline">-=</code>
+ can be called to automatically generate
+increment and decrement methods.  The operation <code class="inline">-</code>
+ can be used to
+autogenerate missing methods for unary minus or <code class="inline"><a class="l_k" href="functions/abs.html">abs</a></code>.</p>
+<p>See <a href="#MAGIC-AUTOGENERATION">MAGIC AUTOGENERATION</a>, <a href="#Calling-Conventions-for-Mutators">Calling Conventions for Mutators</a> and
+<a href="#Calling-Conventions-for-Binary-Operations">Calling Conventions for Binary Operations</a>) for details of these
+substitutions.</p>
+</li>
+<li><a class='view-title' id="*-_Comparison-operations_"></a><strong><i>Comparison operations</i></strong>
+<pre class="verbatim"><ol><li>    <span class="q">&quot;&lt;&quot;</span><span class="cm">,</span>  <span class="q">&quot;&lt;=&quot;</span><span class="cm">,</span> <span class="q">&quot;&gt;&quot;</span><span class="cm">,</span>  <span class="q">&quot;&gt;=&quot;</span><span class="cm">,</span> <span class="q">&quot;==&quot;</span><span class="cm">,</span> <span class="q">&quot;!=&quot;</span><span class="cm">,</span> <span class="q">&quot;&lt;=&gt;&quot;</span><span class="cm">,</span></li><li>    <span class="q">&quot;lt&quot;</span><span class="cm">,</span> <span class="q">&quot;le&quot;</span><span class="cm">,</span> <span class="q">&quot;gt&quot;</span><span class="cm">,</span> <span class="q">&quot;ge&quot;</span><span class="cm">,</span> <span class="q">&quot;eq&quot;</span><span class="cm">,</span> <span class="q">&quot;ne&quot;</span><span class="cm">,</span> <span class="q">&quot;cmp&quot;</span><span class="cm">,</span></li></ol></pre><p>If the corresponding "spaceship" variant is available, it can be
+used to substitute for the missing operation.  During <code class="inline"><a class="l_k" href="functions/sort.html">sort</a></code>ing
+arrays, <code class="inline">cmp</code>
+ is used to compare values subject to <code class="inline"><a class="l_k" href="functions/use.html">use</a> <span class="w">overload</span></code>
+.</p>
+</li>
+<li><a class='view-title' id="*-_Bit-operations_"></a><strong><i>Bit operations</i></strong>
+<pre class="verbatim"><ol><li>    <span class="q">&quot;&amp;&quot;</span><span class="cm">,</span> <span class="q">&quot;^&quot;</span><span class="cm">,</span> <span class="q">&quot;|&quot;</span><span class="cm">,</span> <span class="q">&quot;neg&quot;</span><span class="cm">,</span> <span class="q">&quot;!&quot;</span><span class="cm">,</span> <span class="q">&quot;~&quot;</span><span class="cm">,</span></li></ol></pre><p><code class="inline"><span class="w">neg</span></code>
+ stands for unary minus.  If the method for <code class="inline"><span class="w">neg</span></code>
+ is not
+specified, it can be autogenerated using the method for
+subtraction. If the method for <code class="inline">!</code>
+ is not specified, it can be
+autogenerated using the methods for <code class="inline"><span class="w">bool</span></code>
+, or <code class="inline"><span class="q">&quot;&quot;</span></code>
+, or <code class="inline"><span class="n">0</span>+</code>
+.</p>
+</li>
+<li><a class='view-title' id="*-_Increment-and-decrement_"></a><strong><i>Increment and decrement</i></strong>
+<pre class="verbatim"><ol><li>    <span class="q">&quot;++&quot;</span><span class="cm">,</span> <span class="q">&quot;--&quot;</span><span class="cm">,</span></li></ol></pre><p>If undefined, addition and subtraction methods can be
+used instead.  These operations are called both in prefix and
+postfix form.</p>
+</li>
+<li><a class='view-title' id="*-_Transcendental-functions_"></a><strong><i>Transcendental functions</i></strong>
+<pre class="verbatim"><ol><li>    <span class="q">&quot;atan2&quot;</span><span class="cm">,</span> <span class="q">&quot;cos&quot;</span><span class="cm">,</span> <span class="q">&quot;sin&quot;</span><span class="cm">,</span> <span class="q">&quot;exp&quot;</span><span class="cm">,</span> <span class="q">&quot;abs&quot;</span><span class="cm">,</span> <span class="q">&quot;log&quot;</span><span class="cm">,</span> <span class="q">&quot;sqrt&quot;</span><span class="cm">,</span> <span class="q">&quot;int&quot;</span></li></ol></pre><p>If <code class="inline"><a class="l_k" href="functions/abs.html">abs</a></code> is unavailable, it can be autogenerated using methods
+for "&lt;" or "&lt;=&gt;" combined with either unary minus or subtraction.</p>
+<p>Note that traditionally the Perl function <a clas='function-exists' href="functions/int.html">int</a> rounds to 0, thus for
+floating-point-like types one should follow the same semantic.  If
+<code class="inline"><a class="l_k" href="functions/int.html">int</a></code> is unavailable, it can be autogenerated using the overloading of
+<code class="inline"><span class="n">0</span>+</code>
+.</p>
+</li>
+<li><a class='view-title' id="*-_Boolean%2c-string-and-numeric-conversion_"></a><strong><i>Boolean, string and numeric conversion</i></strong>
+<pre class="verbatim"><ol><li>    <span class="q">&#39;bool&#39;</span><span class="cm">,</span> <span class="q">&#39;&quot;&quot;&#39;</span><span class="cm">,</span> <span class="q">&#39;0+&#39;</span><span class="cm">,</span></li></ol></pre><p>If one or two of these operations are not overloaded, the remaining ones can
+be used instead.  <code class="inline"><span class="w">bool</span></code>
+ is used in the flow control operators
+(like <code class="inline">while</code>
+) and for the ternary <code class="inline"><span class="q">?:</span></code>
+ operation.  These functions can
+return any arbitrary Perl value.  If the corresponding operation for this value
+is overloaded too, that operation will be called again with this value.</p>
+<p>As a special case if the overload returns the object itself then it will
+be used directly. An overloaded conversion returning the object is
+probably a bug, because you're likely to get something that looks like
+<code class="inline"><span class="w">YourPackage</span>=<span class="i">HASH</span><span class="s">(</span><span class="n">0x8172b34</span><span class="s">)</span></code>
+.</p>
+</li>
+<li><a class='view-title' id="*-_Iteration_"></a><strong><i>Iteration</i></strong>
+<pre class="verbatim"><ol><li>    <span class="q">&quot;&lt;&gt;&quot;</span></li></ol></pre><p>If not overloaded, the argument will be converted to a filehandle or
+glob (which may require a stringification).  The same overloading
+happens both for the <i>read-filehandle</i> syntax <code class="inline"><span class="q">&lt;$var&gt;</span></code>
+ and
+<i>globbing</i> syntax <code class="inline"><span class="q">&lt;${var}&gt;</span></code>
+.</p>
+<p><strong>BUGS</strong> Even in list context, the iterator is currently called only
+once and with scalar context.</p>
+</li>
+<li><a class='view-title' id="*-_Dereferencing_"></a><strong><i>Dereferencing</i></strong>
+<pre class="verbatim"><ol><li>    <span class="q">&#39;${}&#39;</span><span class="cm">,</span> <span class="q">&#39;@{}&#39;</span><span class="cm">,</span> <span class="q">&#39;%{}&#39;</span><span class="cm">,</span> <span class="q">&#39;&amp;{}&#39;</span><span class="cm">,</span> <span class="q">&#39;*{}&#39;</span>.</li></ol></pre><p>If not overloaded, the argument will be dereferenced <i>as is</i>, thus
+should be of correct type.  These functions should return a reference
+of correct type, or another object with overloaded dereferencing.</p>
+<p>As a special case if the overload returns the object itself then it
+will be used directly (provided it is the correct type).</p>
+<p>The dereference operators must be specified explicitly they will not be passed to
+"nomethod".</p>
+</li>
+<li><a class='view-title' id="*-_Special_"></a><strong><i>Special</i></strong>
+<pre class="verbatim"><ol><li>    <span class="q">&quot;nomethod&quot;</span><span class="cm">,</span> <span class="q">&quot;fallback&quot;</span><span class="cm">,</span> <span class="q">&quot;=&quot;</span><span class="cm">,</span></li></ol></pre><p>see <a href="#SPECIAL-SYMBOLS-FOR-use-overload">SPECIAL SYMBOLS FOR use overload</a>.</p>
+</li>
+</ul>
+<p>See <a href="#Fallback">Fallback</a> for an explanation of when a missing method can be
+autogenerated.</p>
+<p>A computer-readable form of the above table is available in the hash
+%overload::ops, with values being space-separated lists of names:</p>
+<pre class="verbatim"><ol><li> <span class="w">with_assign</span>	  <span class="cm">=&gt;</span> <span class="q">&#39;+ - * / % ** &lt;&lt; &gt;&gt; x .&#39;</span><span class="cm">,</span></li><li> <span class="w">assign</span>		  <span class="cm">=&gt;</span> <span class="q">&#39;+= -= *= /= %= **= &lt;&lt;= &gt;&gt;= x= .=&#39;</span><span class="cm">,</span></li><li> <span class="w">num_comparison</span>	  <span class="cm">=&gt;</span> <span class="q">&#39;&lt; &lt;= &gt; &gt;= == !=&#39;</span><span class="cm">,</span></li><li> <span class="q">&#39;3way_comparison&#39;</span><span class="cm">=&gt;</span> <span class="q">&#39;&lt;=&gt; cmp&#39;</span><span class="cm">,</span></li><li> <span class="w">str_comparison</span>	  <span class="cm">=&gt;</span> <span class="q">&#39;lt le gt ge eq ne&#39;</span><span class="cm">,</span></li><li> <span class="w">binary</span>		  <span class="cm">=&gt;</span> <span class="q">&#39;&amp; | ^&#39;</span><span class="cm">,</span></li><li> <span class="w">unary</span>		  <span class="cm">=&gt;</span> <span class="q">&#39;neg ! ~&#39;</span><span class="cm">,</span></li><li> <span class="w">mutators</span>	  <span class="cm">=&gt;</span> <span class="q">&#39;++ --&#39;</span><span class="cm">,</span></li><li> <span class="w">func</span>		  <span class="cm">=&gt;</span> <span class="q">&#39;atan2 cos sin exp abs log sqrt&#39;</span><span class="cm">,</span></li><li> <span class="w">conversion</span>	  <span class="cm">=&gt;</span> <span class="q">&#39;bool &quot;&quot; 0+&#39;</span><span class="cm">,</span></li><li> <span class="w">iterators</span>	  <span class="cm">=&gt;</span> <span class="q">&#39;&lt;&gt;&#39;</span><span class="cm">,</span></li><li> <span class="w">dereferencing</span>	  <span class="cm">=&gt;</span> <span class="q">&#39;${} @{} %{} &amp;{} *{}&#39;</span><span class="cm">,</span></li><li> <span class="w">special</span>	  <span class="cm">=&gt;</span> <span class="q">&#39;nomethod fallback =&#39;</span></li></ol></pre><a class='view-head2' id="Inheritance-and-overloading"></a><h3 class='h3' >Inheritance and overloading</h3>
+<p>Inheritance interacts with overloading in two ways.</p>
+<ul>
+<li><a class='view-title' id="Strings-as-values-of-use-overload-directive"></a><strong>Strings as values of <code class="inline"><a class="l_k" href="functions/use.html">use</a> <span class="w">overload</span></code>
+ directive</strong>
+<p>If <code class="inline"><span class="w">value</span></code>
+ in</p>
+<pre class="verbatim"><ol><li>  <a class="l_k" href="functions/use.html">use</a> <span class="w">overload</span> <span class="w">key</span> <span class="cm">=&gt;</span> <span class="w">value</span><span class="sc">;</span></li></ol></pre><p>is a string, it is interpreted as a method name.</p>
+</li>
+<li><a class='view-title' id="Overloading-of-an-operation-is-inherited-by-derived-classes"></a><strong>Overloading of an operation is inherited by derived classes</strong>
+<p>Any class derived from an overloaded class is also overloaded.  The
+set of overloaded methods is the union of overloaded methods of all
+the ancestors. If some method is overloaded in several ancestor, then
+which description will be used is decided by the usual inheritance
+rules:</p>
+<p>If <code class="inline"><span class="w">A</span></code>
+ inherits from <code class="inline"><span class="w">B</span></code>
+ and <code class="inline"><span class="w">C</span></code>
+ (in this order), <code class="inline"><span class="w">B</span></code>
+ overloads
+<code class="inline">+</code>
+ with <code class="inline">\<span class="i">&amp;D::plus_sub</span></code>
+, and <code class="inline"><span class="w">C</span></code>
+ overloads <code class="inline">+</code>
+ by <code class="inline"><span class="q">&quot;plus_meth&quot;</span></code>
+,
+then the subroutine <code class="inline"><span class="w">D::plus_sub</span></code>
+ will be called to implement
+operation <code class="inline">+</code>
+ for an object in package <code class="inline"><span class="w">A</span></code>
+.</p>
+</li>
+</ul>
+<p>Note that since the value of the <code class="inline"><span class="w">fallback</span></code>
+ key is not a subroutine,
+its inheritance is not governed by the above rules.  In the current
+implementation, the value of <code class="inline"><span class="w">fallback</span></code>
+ in the first overloaded
+ancestor is used, but this is accidental and subject to change.</p>
+<a class='view-head1' id="SPECIAL-SYMBOLS-FOR-use-overload"></a><h2 class='h2' >SPECIAL SYMBOLS FOR <code class="inline"><a class="l_k" href="functions/use.html">use</a> <span class="w">overload</span></code>
+</h2>
+<p>Three keys are recognized by Perl that are not covered by the above
+description.</p>
+<a class='view-head2' id="Last-Resort"></a><h3 class='h3' >Last Resort</h3>
+<p><code class="inline"><span class="q">&quot;nomethod&quot;</span></code>
+ should be followed by a reference to a function of four
+parameters.  If defined, it is called when the overloading mechanism
+cannot find a method for some operation.  The first three arguments of
+this function coincide with the arguments for the corresponding method if
+it were found, the fourth argument is the symbol
+corresponding to the missing method.  If several methods are tried,
+the last one is used.  Say, <code class="inline"><span class="n">1</span>-<span class="i">$a</span></code>
+ can be equivalent to</p>
+<pre class="verbatim"><ol><li>	<span class="i">&amp;nomethodMethod</span><span class="s">(</span><span class="i">$a</span><span class="cm">,</span><span class="n">1</span><span class="cm">,</span><span class="n">1</span><span class="cm">,</span><span class="q">&quot;-&quot;</span><span class="s">)</span></li></ol></pre><p>if the pair <code class="inline"><span class="q">&quot;nomethod&quot;</span> <span class="cm">=&gt;</span> <span class="q">&quot;nomethodMethod&quot;</span></code>
+ was specified in the
+<code class="inline"><a class="l_k" href="functions/use.html">use</a> <span class="w">overload</span></code>
+ directive.</p>
+<p>The <code class="inline"><span class="q">&quot;nomethod&quot;</span></code>
+ mechanism is <i>not</i> used for the dereference operators
+( ${} @{} %{} &amp;{} *{} ).</p>
+<p>If some operation cannot be resolved, and there is no function
+assigned to <code class="inline"><span class="q">&quot;nomethod&quot;</span></code>
+, then an exception will be raised via die()--
+unless <code class="inline"><span class="q">&quot;fallback&quot;</span></code>
+ was specified as a key in <code class="inline"><a class="l_k" href="functions/use.html">use</a> <span class="w">overload</span></code>
+ directive.</p>
+<a class='view-head2' id="Fallback"></a><h3 class='h3' >Fallback</h3>
+<p>The key <code class="inline"><span class="q">&quot;fallback&quot;</span></code>
+ governs what to do if a method for a particular
+operation is not found.  Three different cases are possible depending on
+the value of <code class="inline"><span class="q">&quot;fallback&quot;</span></code>
+:</p>
+<ul>
+<li><a class='view-title' id="*-undef"></a><strong><code class="inline"><a class="l_k" href="functions/undef.html">undef</a></code></strong>
+<p>Perl tries to use a
+substituted method (see <a href="#MAGIC-AUTOGENERATION">MAGIC AUTOGENERATION</a>).  If this fails, it
+then tries to calls <code class="inline"><span class="q">&quot;nomethod&quot;</span></code>
+ value; if missing, an exception
+will be raised.</p>
+</li>
+<li><a class='view-title' id="*-TRUE"></a><strong>TRUE</strong>
+<p>The same as for the <code class="inline"><a class="l_k" href="functions/undef.html">undef</a></code> value, but no exception is raised.  Instead,
+it silently reverts to what it would have done were there no <code class="inline"><a class="l_k" href="functions/use.html">use</a> <span class="w">overload</span></code>
+
+present.</p>
+</li>
+<li><a class='view-title' id="*-defined%2c-but-FALSE"></a><strong>defined, but FALSE</strong>
+<p>No autogeneration is tried.  Perl tries to call
+<code class="inline"><span class="q">&quot;nomethod&quot;</span></code>
+ value, and if this is missing, raises an exception.</p>
+</li>
+</ul>
+<p><strong>Note.</strong> <code class="inline"><span class="q">&quot;fallback&quot;</span></code>
+ inheritance via @ISA is not carved in stone
+yet, see <a href="#Inheritance-and-overloading">Inheritance and overloading</a>.</p>
+<a class='view-head2' id="Copy-Constructor"></a><h3 class='h3' >Copy Constructor</h3>
+<p>The value for <code class="inline"><span class="q">&quot;=&quot;</span></code>
+ is a reference to a function with three
+arguments, i.e., it looks like the other values in <code class="inline"><a class="l_k" href="functions/use.html">use</a>
+<span class="w">overload</span></code>
+. However, it does not overload the Perl assignment
+operator. This would go against Camel hair.</p>
+<p>This operation is called in the situations when a mutator is applied
+to a reference that shares its object with some other reference, such
+as</p>
+<pre class="verbatim"><ol><li>	<span class="i">$a</span>=<span class="i">$b</span><span class="sc">;</span></li><li>	++<span class="i">$a</span><span class="sc">;</span></li></ol></pre><p>To make this change $a and not change $b, a copy of <code class="inline"><span class="i">$$a</span></code>
+ is made,
+and $a is assigned a reference to this new object.  This operation is
+done during execution of the <code class="inline">++<span class="i">$a</span></code>
+, and not during the assignment,
+(so before the increment <code class="inline"><span class="i">$$a</span></code>
+ coincides with <code class="inline"><span class="i">$$b</span></code>
+).  This is only
+done if <code class="inline">++</code>
+ is expressed via a method for <code class="inline"><span class="q">&#39;++&#39;</span></code>
+ or <code class="inline"><span class="q">&#39;+=&#39;</span></code>
+ (or
+<code class="inline"><span class="w">nomethod</span></code>
+).  Note that if this operation is expressed via <code class="inline"><span class="q">&#39;+&#39;</span></code>
+
+a nonmutator, i.e., as in</p>
+<pre class="verbatim"><ol><li>	<span class="i">$a</span>=<span class="i">$b</span><span class="sc">;</span></li><li>	<span class="i">$a</span>=<span class="i">$a</span>+<span class="n">1</span><span class="sc">;</span></li></ol></pre><p>then <code class="inline"><span class="i">$a</span></code>
+ does not reference a new copy of <code class="inline"><span class="i">$$a</span></code>
+, since $$a does not
+appear as lvalue when the above code is executed.</p>
+<p>If the copy constructor is required during the execution of some mutator,
+but a method for <code class="inline"><span class="q">&#39;=&#39;</span></code>
+ was not specified, it can be autogenerated as a
+string copy if the object is a plain scalar.</p>
+<ul>
+<li><a class='view-title' id="*Example*"></a><strong><strong>Example</strong></strong>
+<p>The actually executed code for</p>
+<pre class="verbatim"><ol><li>	<span class="i">$a</span>=<span class="i">$b</span><span class="sc">;</span></li><li>        <span class="w">Something</span> else <span class="w">which</span> <span class="w">does</span> not <span class="w">modify</span> <span class="i">$a</span> or <span class="i">$b</span>....</li><li>	++<span class="i">$a</span><span class="sc">;</span></li></ol></pre><p>may be</p>
+<pre class="verbatim"><ol><li>	<span class="i">$a</span>=<span class="i">$b</span><span class="sc">;</span></li><li>        <span class="w">Something</span> else <span class="w">which</span> <span class="w">does</span> not <span class="w">modify</span> <span class="i">$a</span> or <span class="i">$b</span>....</li><li>	<span class="i">$a</span> = <span class="i">$a</span><span class="i">-&gt;clone</span><span class="s">(</span><a class="l_k" href="functions/undef.html">undef</a><span class="cm">,</span><span class="q">&quot;&quot;</span><span class="s">)</span><span class="sc">;</span></li><li>        <span class="i">$a</span><span class="i">-&gt;incr</span><span class="s">(</span><a class="l_k" href="functions/undef.html">undef</a><span class="cm">,</span><span class="q">&quot;&quot;</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>if $b was mathemagical, and <code class="inline"><span class="q">&#39;++&#39;</span></code>
+ was overloaded with <code class="inline">\<span class="i">&amp;incr</span></code>
+,
+<code class="inline"><span class="q">&#39;=&#39;</span></code>
+ was overloaded with <code class="inline">\<span class="i">&amp;clone</span></code>
+.</p>
+</li>
+</ul>
+<p>Same behaviour is triggered by <code class="inline"><span class="i">$b</span> = <span class="i">$a</span>++</code>
+, which is consider a synonym for
+<code class="inline"><span class="i">$b</span> = <span class="i">$a</span><span class="sc">;</span> ++<span class="i">$a</span></code>
+.</p>
+<a class='view-head1' id="MAGIC-AUTOGENERATION"></a><h2 class='h2' >MAGIC AUTOGENERATION</h2>
+<p>If a method for an operation is not found, and the value for  <code class="inline"><span class="q">&quot;fallback&quot;</span></code>
+ is
+TRUE or undefined, Perl tries to autogenerate a substitute method for
+the missing operation based on the defined operations.  Autogenerated method
+substitutions are possible for the following operations:</p>
+<ul>
+<li><a class='view-title' id="_Assignment-forms-of-arithmetic-operations_"></a><strong><i>Assignment forms of arithmetic operations</i></strong>
+<p><code class="inline"><span class="i">$a</span>+=<span class="i">$b</span></code>
+ can use the method for <code class="inline"><span class="q">&quot;+&quot;</span></code>
+ if the method for <code class="inline"><span class="q">&quot;+=&quot;</span></code>
+
+is not defined.</p>
+</li>
+<li><a class='view-title' id="_Conversion-operations_"></a><strong><i>Conversion operations</i></strong>
+<p>String, numeric, and boolean conversion are calculated in terms of one
+another if not all of them are defined.</p>
+</li>
+<li><a class='view-title' id="_Increment-and-decrement_"></a><strong><i>Increment and decrement</i></strong>
+<p>The <code class="inline">++<span class="i">$a</span></code>
+ operation can be expressed in terms of <code class="inline"><span class="i">$a</span>+=<span class="n">1</span></code>
+ or <code class="inline"><span class="i">$a</span>+<span class="n">1</span></code>
+,
+and <code class="inline"><span class="i">$a</span>--</code>
+ in terms of <code class="inline"><span class="i">$a</span>-=<span class="n">1</span></code>
+ and <code class="inline"><span class="i">$a</span>-<span class="n">1</span></code>
+.</p>
+</li>
+<li><a class='view-title' id="abs(%24a)"></a><strong><code class="inline"><a class="l_k" href="functions/abs.html">abs($a)</a></code></strong>
+<p>can be expressed in terms of <code class="inline"><span class="i">$a</span>&lt;<span class="n">0</span></code>
+ and <code class="inline">-<span class="i">$a</span></code>
+ (or <code class="inline"><span class="n">0</span>-<span class="i">$a</span></code>
+).</p>
+</li>
+<li><a class='view-title' id="_Unary-minus_"></a><strong><i>Unary minus</i></strong>
+<p>can be expressed in terms of subtraction.</p>
+</li>
+<li><a class='view-title' id="_Negation_"></a><strong><i>Negation</i></strong>
+<p><code class="inline">!</code>
+ and <code class="inline">not</code>
+ can be expressed in terms of boolean conversion, or
+string or numerical conversion.</p>
+</li>
+<li><a class='view-title' id="_Concatenation_"></a><strong><i>Concatenation</i></strong>
+<p>can be expressed in terms of string conversion.</p>
+</li>
+<li><a class='view-title' id="_Comparison-operations_"></a><strong><i>Comparison operations</i></strong>
+<p>can be expressed in terms of its "spaceship" counterpart: either
+<code class="inline">&lt;=&gt;</code>
+ or <code class="inline">cmp</code>
+:</p>
+<pre class="verbatim"><ol><li>    <span class="q">&lt;, &gt;</span><span class="cm">,</span> &lt;=<span class="cm">,</span> &gt;=<span class="cm">,</span> ==<span class="cm">,</span> != 	<span class="w">in</span> <span class="w">terms</span> <span class="w">of</span> &lt;=&gt;</li><li>    lt<span class="cm">,</span> gt<span class="cm">,</span> le<span class="cm">,</span> ge<span class="cm">,</span> eq<span class="cm">,</span> ne 	<span class="w">in</span> <span class="w">terms</span> <span class="w">of</span> cmp</li></ol></pre></li>
+<li><a class='view-title' id="_Iterator_"></a><strong><i>Iterator</i></strong>
+<pre class="verbatim"><ol><li>    &lt;&gt;				<span class="w">in</span> <span class="w">terms</span> <span class="w">of</span> <span class="w">builtin</span> <span class="w">operations</span></li></ol></pre></li>
+<li><a class='view-title' id="_Dereferencing_"></a><strong><i>Dereferencing</i></strong>
+<pre class="verbatim"><ol><li>    <span class="i">$</span>{} <span class="i">@</span>{} %{} &amp;{} *{}		<span class="w">in</span> <span class="w">terms</span> <span class="w">of</span> <span class="w">builtin</span> <span class="w">operations</span></li></ol></pre></li>
+<li><a class='view-title' id="_Copy-operator_"></a><strong><i>Copy operator</i></strong>
+<p>can be expressed in terms of an assignment to the dereferenced value, if this
+value is a scalar and not a reference.</p>
+</li>
+</ul>
+<a class='view-head1' id="Losing-overloading"></a><h2 class='h2' >Losing overloading</h2>
+<p>The restriction for the comparison operation is that even if, for example,
+`<code class="inline">cmp</code>
+' should return a blessed reference, the autogenerated `<code class="inline">lt</code>
+'
+function will produce only a standard logical value based on the
+numerical value of the result of `<code class="inline">cmp</code>
+'.  In particular, a working
+numeric conversion is needed in this case (possibly expressed in terms of
+other conversions).</p>
+<p>Similarly, <code class="inline">.=</code>
+  and <code class="inline"><span class="w">x</span>=</code>
+ operators lose their mathemagical properties
+if the string conversion substitution is applied.</p>
+<p>When you chop() a mathemagical object it is promoted to a string and its
+mathemagical properties are lost.  The same can happen with other
+operations as well.</p>
+<a class='view-head1' id="Run-time-Overloading"></a><h2 class='h2' >Run-time Overloading</h2>
+<p>Since all <code class="inline"><a class="l_k" href="functions/use.html">use</a></code> directives are executed at compile-time, the only way to
+change overloading during run-time is to</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="functions/eval.html">eval</a> <span class="q">&#39;use overload &quot;+&quot; =&gt; \&amp;addmethod&#39;</span><span class="sc">;</span></li></ol></pre><p>You can also use</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="functions/eval.html">eval</a> <span class="q">&#39;no overload &quot;+&quot;, &quot;--&quot;, &quot;&lt;=&quot;&#39;</span><span class="sc">;</span></li></ol></pre><p>though the use of these constructs during run-time is questionable.</p>
+<a class='view-head1' id="Public-functions"></a><h2 class='h2' >Public functions</h2>
+<p>Package <code class="inline"><span class="w">overload</span>.<span class="w">pm</span></code>
+ provides the following public functions:</p>
+<ul>
+<li><a class='view-title' id="overload%3a%3aStrVal(arg)"></a><strong>overload::StrVal(arg)</strong>
+<p>Gives string value of <code class="inline"><span class="w">arg</span></code>
+ as in absence of stringify overloading.</p>
+</li>
+<li><a class='view-title' id="overload%3a%3aOverloaded(arg)"></a><strong>overload::Overloaded(arg)</strong>
+<p>Returns true if <code class="inline"><span class="w">arg</span></code>
+ is subject to overloading of some operations.</p>
+</li>
+<li><a class='view-title' id="overload%3a%3aMethod(obj%2cop)"></a><strong>overload::Method(obj,op)</strong>
+<p>Returns <code class="inline"><a class="l_k" href="functions/undef.html">undef</a></code> or a reference to the method that implements <code class="inline"><span class="w">op</span></code>
+.</p>
+</li>
+</ul>
+<a class='view-head1' id="Overloading-constants"></a><h2 class='h2' >Overloading constants</h2>
+<p>For some application Perl parser mangles constants too much.  It is possible
+to hook into this process via overload::constant() and overload::remove_constant()
+functions.</p>
+<p>These functions take a hash as an argument.  The recognized keys of this hash
+are</p>
+<ul>
+<li><a class='view-title' id="integer"></a><strong>integer</strong>
+<p>to overload integer constants,</p>
+</li>
+<li><a class='view-title' id="float"></a><strong>float</strong>
+<p>to overload floating point constants,</p>
+</li>
+<li><a class='view-title' id="binary"></a><strong>binary</strong>
+<p>to overload octal and hexadecimal constants,</p>
+</li>
+<li><a class='view-title' id="q"></a><strong>q</strong>
+<p>to overload <code class="inline"><a class="l_k" href="functions/q.html">q</a></code>-quoted strings, constant pieces of <code class="inline"><a class="l_k" href="functions/qq.html">qq</a></code>- and <code class="inline"><a class="l_k" href="functions/qx.html">qx</a></code>-quoted
+strings and here-documents,</p>
+</li>
+<li><a class='view-title' id="qr"></a><strong>qr</strong>
+<p>to overload constant pieces of regular expressions.</p>
+</li>
+</ul>
+<p>The corresponding values are references to functions which take three arguments:
+the first one is the <i>initial</i> string form of the constant, the second one
+is how Perl interprets this constant, the third one is how the constant is used.
+Note that the initial string form does not
+contain string delimiters, and has backslashes in backslash-delimiter
+combinations stripped (thus the value of delimiter is not relevant for
+processing of this string).  The return value of this function is how this
+constant is going to be interpreted by Perl.  The third argument is undefined
+unless for overloaded <code class="inline"><a class="l_k" href="functions/q.html">q</a></code>- and <code class="inline"><a class="l_k" href="functions/qr.html">qr</a></code>- constants, it is <code class="inline"><a class="l_k" href="functions/q.html">q</a></code> in single-quote
+context (comes from strings, regular expressions, and single-quote HERE
+documents), it is <code class="inline"><a class="l_k" href="functions/tr.html">tr</a></code> for arguments of <code class="inline"><a class="l_k" href="functions/tr.html">tr</a></code>/<code class="inline"><a class="l_k" href="functions/y.html">y</a></code> operators,
+it is <code class="inline"><a class="l_k" href="functions/s.html">s</a></code> for right-hand side of <code class="inline"><a class="l_k" href="functions/s.html">s</a></code>-operator, and it is <code class="inline"><a class="l_k" href="functions/qq.html">qq</a></code> otherwise.</p>
+<p>Since an expression <code class="inline"><span class="q">&quot;ab$cd,,&quot;</span></code>
+ is just a shortcut for <code class="inline"><span class="q">&#39;ab&#39;</span> . <span class="i">$cd</span> . <span class="q">&#39;,,&#39;</span></code>
+,
+it is expected that overloaded constant strings are equipped with reasonable
+overloaded catenation operator, otherwise absurd results will result.
+Similarly, negative numbers are considered as negations of positive constants.</p>
+<p>Note that it is probably meaningless to call the functions overload::constant()
+and overload::remove_constant() from anywhere but import() and unimport() methods.
+From these methods they may be called as</p>
+<pre class="verbatim"><ol><li><a name="import"></a>	sub <span class="m">import</span> <span class="s">{</span></li><li>	  <a class="l_k" href="functions/shift.html">shift</a><span class="sc">;</span></li><li>	  <a class="l_k" href="functions/return.html">return</a> unless <span class="i">@_</span><span class="sc">;</span></li><li>	  <a class="l_k" href="functions/die.html">die</a> <span class="q">&quot;unknown import: @_&quot;</span> unless <span class="i">@_</span> == <span class="n">1</span> and <span class="i">$_</span>[<span class="n">0</span>] eq <span class="q">&#39;:constant&#39;</span><span class="sc">;</span></li><li>	  <span class="w">overload::constant</span> <span class="w">integer</span> <span class="cm">=&gt;</span> <a class="l_k" href="functions/sub.html">sub</a> <span class="s">{</span><span class="w">Math::BigInt</span><span class="w">-&gt;new</span><span class="s">(</span><a class="l_k" href="functions/shift.html">shift</a><span class="s">)</span><span class="s">}</span><span class="sc">;</span></li><li>	<span class="s">}</span></li></ol></pre><p><strong>BUGS</strong> Currently overloaded-ness of constants does not propagate
+into <code class="inline"><a class="l_k" href="functions/eval.html">eval</a> <span class="q">&#39;...&#39;</span></code>
+.</p>
+<a class='view-head1' id="IMPLEMENTATION"></a><h2 class='h2' >IMPLEMENTATION</h2>
+<p>What follows is subject to change RSN.</p>
+<p>The table of methods for all operations is cached in magic for the
+symbol table hash for the package.  The cache is invalidated during
+processing of <code class="inline"><a class="l_k" href="functions/use.html">use</a> <span class="w">overload</span></code>
+, <code class="inline"><a class="l_k" href="functions/no.html">no</a> <span class="w">overload</span></code>
+, new function
+definitions, and changes in @ISA. However, this invalidation remains
+unprocessed until the next <code class="inline"><a class="l_k" href="functions/bless.html">bless</a></code>ing into the package. Hence if you
+want to change overloading structure dynamically, you'll need an
+additional (fake) <code class="inline"><a class="l_k" href="functions/bless.html">bless</a></code>ing to update the table.</p>
+<p>(Every SVish thing has a magic queue, and magic is an entry in that
+queue.  This is how a single variable may participate in multiple
+forms of magic simultaneously.  For instance, environment variables
+regularly have two forms at once: their %ENV magic and their taint
+magic. However, the magic which implements overloading is applied to
+the stashes, which are rarely used directly, thus should not slow down
+Perl.)</p>
+<p>If an object belongs to a package using overload, it carries a special
+flag.  Thus the only speed penalty during arithmetic operations without
+overloading is the checking of this flag.</p>
+<p>In fact, if <code class="inline"><a class="l_k" href="functions/use.html">use</a> <span class="w">overload</span></code>
+ is not present, there is almost no overhead
+for overloadable operations, so most programs should not suffer
+measurable performance penalties.  A considerable effort was made to
+minimize the overhead when overload is used in some package, but the
+arguments in question do not belong to packages using overload.  When
+in doubt, test your speed with <code class="inline"><a class="l_k" href="functions/use.html">use</a> <span class="w">overload</span></code>
+ and without it.  So far
+there have been no reports of substantial speed degradation if Perl is
+compiled with optimization turned on.</p>
+<p>There is no size penalty for data if overload is not used. The only
+size penalty if overload is used in some package is that <i>all</i> the
+packages acquire a magic during the next <code class="inline"><a class="l_k" href="functions/bless.html">bless</a></code>ing into the
+package. This magic is three-words-long for packages without
+overloading, and carries the cache table if the package is overloaded.</p>
+<p>Copying (<code class="inline"><span class="i">$a</span>=<span class="i">$b</span></code>
+) is shallow; however, a one-level-deep copying is
+carried out before any operation that can imply an assignment to the
+object $a (or $b) refers to, like <code class="inline"><span class="i">$a</span>++</code>
+.  You can override this
+behavior by defining your own copy constructor (see <a href="#Copy-Constructor">Copy Constructor</a>).</p>
+<p>It is expected that arguments to methods that are not explicitly supposed
+to be changed are constant (but this is not enforced).</p>
+<a class='view-head1' id="Metaphor-clash"></a><h2 class='h2' >Metaphor clash</h2>
+<p>One may wonder why the semantic of overloaded <code class="inline">=</code>
+ is so counter intuitive.
+If it <i>looks</i> counter intuitive to you, you are subject to a metaphor
+clash.</p>
+<p>Here is a Perl object metaphor:</p>
+<p><i>  object is a reference to blessed data</i></p>
+<p>and an arithmetic metaphor:</p>
+<p><i>  object is a thing by itself</i>.</p>
+<p>The <i>main</i> problem of overloading <code class="inline">=</code>
+ is the fact that these metaphors
+imply different actions on the assignment <code class="inline"><span class="i">$a</span> = <span class="i">$b</span></code>
+ if $a and $b are
+objects.  Perl-think implies that $a becomes a reference to whatever
+$b was referencing.  Arithmetic-think implies that the value of "object"
+$a is changed to become the value of the object $b, preserving the fact
+that $a and $b are separate entities.</p>
+<p>The difference is not relevant in the absence of mutators.  After
+a Perl-way assignment an operation which mutates the data referenced by $a
+would change the data referenced by $b too.  Effectively, after
+<code class="inline"><span class="i">$a</span> = <span class="i">$b</span></code>
+ values of $a and $b become <i>indistinguishable</i>.</p>
+<p>On the other hand, anyone who has used algebraic notation knows the
+expressive power of the arithmetic metaphor.  Overloading works hard
+to enable this metaphor while preserving the Perlian way as far as
+possible.  Since it is not possible to freely mix two contradicting
+metaphors, overloading allows the arithmetic way to write things <i>as
+far as all the mutators are called via overloaded access only</i>.  The
+way it is done is described in <a href="#Copy-Constructor">Copy Constructor</a>.</p>
+<p>If some mutator methods are directly applied to the overloaded values,
+one may need to <i>explicitly unlink</i> other values which references the
+same value:</p>
+<pre class="verbatim"><ol><li>    <span class="i">$a</span> = <span class="w">new</span> <span class="w">Data</span> <span class="n">23</span><span class="sc">;</span></li><li>    ...</li><li>    <span class="i">$b</span> = <span class="i">$a</span><span class="sc">;</span>		<span class="c"># $b is &quot;linked&quot; to $a</span></li><li>    ...</li><li>    <span class="i">$a</span> = <span class="i">$a</span><span class="i">-&gt;clone</span><span class="sc">;</span>	<span class="c"># Unlink $b from $a</span></li><li>    <span class="i">$a</span><span class="i">-&gt;increment_by</span><span class="s">(</span><span class="n">4</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>Note that overloaded access makes this transparent:</p>
+<pre class="verbatim"><ol><li>    <span class="i">$a</span> = <span class="w">new</span> <span class="w">Data</span> <span class="n">23</span><span class="sc">;</span></li><li>    <span class="i">$b</span> = <span class="i">$a</span><span class="sc">;</span>		<span class="c"># $b is &quot;linked&quot; to $a</span></li><li>    <span class="i">$a</span> += <span class="n">4</span><span class="sc">;</span>		<span class="c"># would unlink $b automagically</span></li></ol></pre><p>However, it would not make</p>
+<pre class="verbatim"><ol><li>    <span class="i">$a</span> = <span class="w">new</span> <span class="w">Data</span> <span class="n">23</span><span class="sc">;</span></li><li>    <span class="i">$a</span> = <span class="n">4</span><span class="sc">;</span>		<span class="c"># Now $a is a plain 4, not &#39;Data&#39;</span></li></ol></pre><p>preserve "objectness" of $a.  But Perl <i>has</i> a way to make assignments
+to an object do whatever you want.  It is just not the overload, but
+tie()ing interface (see <a class='function-name' href="functions/tie.html">tie</a>).  Adding a FETCH() method
+which returns the object itself, and STORE() method which changes the
+value of the object, one can reproduce the arithmetic metaphor in its
+completeness, at least for variables which were tie()d from the start.</p>
+<p>(Note that a workaround for a bug may be needed, see <a href="#BUGS">BUGS</a>.)</p>
+<a class='view-head1' id="Cookbook"></a><h2 class='h2' >Cookbook</h2>
+<p>Please add examples to what follows!</p>
+<a class='view-head2' id="Two-face-scalars"></a><h3 class='h3' >Two-face scalars</h3>
+<p>Put this in <i>two_face.pm</i> in your Perl library directory:</p>
+<pre class="verbatim"><ol><li><a name="package-two_face"></a>  package <span class="i">two_face</span><span class="sc">;</span>		<span class="c"># Scalars with separate string and</span></li><li>                                <span class="c"># numeric values.</span></li><li><a name="new"></a>  sub <span class="m">new</span> <span class="s">{</span> <a class="l_k" href="functions/my.html">my</a> <span class="i">$p</span> = <a class="l_k" href="functions/shift.html">shift</a><span class="sc">;</span> <a class="l_k" href="functions/bless.html">bless</a> <span class="s">[</span><span class="i">@_</span><span class="s">]</span><span class="cm">,</span> <span class="i">$p</span> <span class="s">}</span></li><li>  <a class="l_k" href="functions/use.html">use</a> <span class="w">overload</span> <span class="q">&#39;&quot;&quot;&#39;</span> <span class="cm">=&gt;</span> \<span class="i">&amp;str</span><span class="cm">,</span> <span class="q">&#39;0+&#39;</span> <span class="cm">=&gt;</span> \<span class="i">&amp;num</span><span class="cm">,</span> <span class="w">fallback</span> <span class="cm">=&gt;</span> <span class="n">1</span><span class="sc">;</span></li><li><a name="num"></a>  sub <span class="m">num</span> <span class="s">{</span><a class="l_k" href="functions/shift.html">shift</a>-&gt;[<span class="n">1</span>]<span class="s">}</span></li><li><a name="str"></a>  sub <span class="m">str</span> <span class="s">{</span><a class="l_k" href="functions/shift.html">shift</a>-&gt;[<span class="n">0</span>]<span class="s">}</span></li></ol></pre><p>Use it as follows:</p>
+<pre class="verbatim"><ol><li>  <a class="l_k" href="functions/require.html">require</a> <span class="w">two_face</span><span class="sc">;</span></li><li>  <a class="l_k" href="functions/my.html">my</a> <span class="i">$seven</span> = <span class="w">new</span> <span class="w">two_face</span> <span class="s">(</span><span class="q">&quot;vii&quot;</span><span class="cm">,</span> <span class="n">7</span><span class="s">)</span><span class="sc">;</span></li><li>  <a class="l_k" href="functions/printf.html">printf</a> <span class="q">&quot;seven=$seven, seven=%d, eight=%d\n&quot;</span><span class="cm">,</span> <span class="i">$seven</span><span class="cm">,</span> <span class="i">$seven</span>+<span class="n">1</span><span class="sc">;</span></li><li>  <a class="l_k" href="functions/print.html">print</a> <span class="q">&quot;seven contains `i&#39;\n&quot;</span> if <span class="i">$seven</span> =~ <span class="q">/i/</span><span class="sc">;</span></li></ol></pre><p>(The second line creates a scalar which has both a string value, and a
+numeric value.)  This prints:</p>
+<pre class="verbatim"><ol><li>  <span class="w">seven</span>=<span class="w">vii</span><span class="cm">,</span> <span class="w">seven</span>=<span class="n">7</span><span class="cm">,</span> <span class="w">eight</span>=<span class="n">8</span></li><li>  <span class="w">seven</span> <span class="w">contains</span> <span class="q">`i&#39;</span></li></ol></pre><a class='view-head2' id="Two-face-references"></a><h3 class='h3' >Two-face references</h3>
+<p>Suppose you want to create an object which is accessible as both an
+array reference and a hash reference, similar to the
+<a href="perlref.html#Pseudo-hashes%3a-Using-an-array-as-a-hash">pseudo-hash</a>
+builtin Perl type.  Let's make it better than a pseudo-hash by
+allowing index 0 to be treated as a normal element.</p>
+<pre class="verbatim"><ol><li><a name="package-two_refs"></a>  package <span class="i">two_refs</span><span class="sc">;</span></li><li>  <a class="l_k" href="functions/use.html">use</a> <span class="w">overload</span> <span class="q">&#39;%{}&#39;</span> <span class="cm">=&gt;</span> \<span class="i">&amp;gethash</span><span class="cm">,</span> <span class="q">&#39;@{}&#39;</span> <span class="cm">=&gt;</span> <a class="l_k" href="functions/sub.html">sub</a> <span class="s">{</span> <span class="i">$</span> {<a class="l_k" href="functions/shift.html">shift</a><span class="s">(</span><span class="s">)</span>} <span class="s">}</span><span class="sc">;</span></li><li><a name="new"></a>  sub <span class="m">new</span> <span class="s">{</span></li><li>    <a class="l_k" href="functions/my.html">my</a> <span class="i">$p</span> = <a class="l_k" href="functions/shift.html">shift</a><span class="sc">;</span></li><li>    <a class="l_k" href="functions/bless.html">bless</a> \ <span class="s">[</span><span class="i">@_</span><span class="s">]</span><span class="cm">,</span> <span class="i">$p</span><span class="sc">;</span></li><li>  <span class="s">}</span></li><li><a name="gethash"></a>  sub <span class="m">gethash</span> <span class="s">{</span></li><li>    <a class="l_k" href="functions/my.html">my</a> <span class="i">%h</span><span class="sc">;</span></li><li>    <a class="l_k" href="functions/my.html">my</a> <span class="i">$self</span> = <a class="l_k" href="functions/shift.html">shift</a><span class="sc">;</span></li><li>    <a class="l_k" href="functions/tie.html">tie</a> <span class="i">%h</span><span class="cm">,</span> <a class="l_k" href="functions/ref.html">ref</a> <span class="i">$self</span><span class="cm">,</span> <span class="i">$self</span><span class="sc">;</span></li><li>    \<span class="i">%h</span><span class="sc">;</span></li><li>  <span class="s">}</span></li><li></li><li><a name="TIEHASH"></a>  sub <span class="m">TIEHASH</span> <span class="s">{</span> <a class="l_k" href="functions/my.html">my</a> <span class="i">$p</span> = <a class="l_k" href="functions/shift.html">shift</a><span class="sc">;</span> <a class="l_k" href="functions/bless.html">bless</a> \ <a class="l_k" href="functions/shift.html">shift</a><span class="cm">,</span> <span class="i">$p</span> <span class="s">}</span></li><li>  <a class="l_k" href="functions/my.html">my</a> <span class="i">%fields</span><span class="sc">;</span></li><li>  <a class="l_k" href="functions/my.html">my</a> <span class="i">$i</span> = <span class="n">0</span><span class="sc">;</span></li><li>  <span class="i">$fields</span>{<span class="i">$_</span>} = <span class="i">$i</span>++ foreach <span class="q">qw{zero one two three}</span><span class="sc">;</span></li><li><a name="STORE"></a>  sub <span class="m">STORE</span> <span class="s">{</span></li><li>    <a class="l_k" href="functions/my.html">my</a> <span class="i">$self</span> = <span class="i">$</span>{<a class="l_k" href="functions/shift.html">shift</a><span class="s">(</span><span class="s">)</span>}<span class="sc">;</span></li><li>    <a class="l_k" href="functions/my.html">my</a> <span class="i">$key</span> = <span class="i">$fields</span>{<a class="l_k" href="functions/shift.html">shift</a><span class="s">(</span><span class="s">)</span>}<span class="sc">;</span></li><li>    <a class="l_k" href="functions/defined.html">defined</a> <span class="i">$key</span> or <a class="l_k" href="functions/die.html">die</a> <span class="q">&quot;Out of band access&quot;</span><span class="sc">;</span></li><li>    <span class="i">$$self</span>-&gt;[<span class="i">$key</span>] = <a class="l_k" href="functions/shift.html">shift</a><span class="sc">;</span></li><li>  <span class="s">}</span></li><li><a name="FETCH"></a>  sub <span class="m">FETCH</span> <span class="s">{</span></li><li>    <a class="l_k" href="functions/my.html">my</a> <span class="i">$self</span> = <span class="i">$</span>{<a class="l_k" href="functions/shift.html">shift</a><span class="s">(</span><span class="s">)</span>}<span class="sc">;</span></li><li>    <a class="l_k" href="functions/my.html">my</a> <span class="i">$key</span> = <span class="i">$fields</span>{<a class="l_k" href="functions/shift.html">shift</a><span class="s">(</span><span class="s">)</span>}<span class="sc">;</span></li><li>    <a class="l_k" href="functions/defined.html">defined</a> <span class="i">$key</span> or <a class="l_k" href="functions/die.html">die</a> <span class="q">&quot;Out of band access&quot;</span><span class="sc">;</span></li><li>    <span class="i">$$self</span>-&gt;[<span class="i">$key</span>]<span class="sc">;</span></li><li>  <span class="s">}</span></li></ol></pre><p>Now one can access an object using both the array and hash syntax:</p>
+<pre class="verbatim"><ol><li>  <a class="l_k" href="functions/my.html">my</a> <span class="i">$bar</span> = <span class="w">new</span> <span class="w">two_refs</span> <span class="n">3</span><span class="cm">,</span><span class="n">4</span><span class="cm">,</span><span class="n">5</span><span class="cm">,</span><span class="n">6</span><span class="sc">;</span></li><li>  <span class="i">$bar</span>-&gt;[<span class="n">2</span>] = <span class="n">11</span><span class="sc">;</span></li><li>  <span class="i">$bar</span>-&gt;{<span class="w">two</span>} == <span class="n">11</span> or <a class="l_k" href="functions/die.html">die</a> <span class="q">&#39;bad hash fetch&#39;</span><span class="sc">;</span></li></ol></pre><p>Note several important features of this example.  First of all, the
+<i>actual</i> type of $bar is a scalar reference, and we do not overload
+the scalar dereference.  Thus we can get the <i>actual</i> non-overloaded
+contents of $bar by just using <code class="inline"><span class="i">$$bar</span></code>
+ (what we do in functions which
+overload dereference).  Similarly, the object returned by the
+TIEHASH() method is a scalar reference.</p>
+<p>Second, we create a new tied hash each time the hash syntax is used.
+This allows us not to worry about a possibility of a reference loop,
+which would lead to a memory leak.</p>
+<p>Both these problems can be cured.  Say, if we want to overload hash
+dereference on a reference to an object which is <i>implemented</i> as a
+hash itself, the only problem one has to circumvent is how to access
+this <i>actual</i> hash (as opposed to the <i>virtual</i> hash exhibited by the
+overloaded dereference operator).  Here is one possible fetching routine:</p>
+<pre class="verbatim"><ol><li><a name="access_hash"></a>  sub <span class="m">access_hash</span> <span class="s">{</span></li><li>    <a class="l_k" href="functions/my.html">my</a> <span class="s">(</span><span class="i">$self</span><span class="cm">,</span> <span class="i">$key</span><span class="s">)</span> = <span class="s">(</span><a class="l_k" href="functions/shift.html">shift</a><span class="cm">,</span> <a class="l_k" href="functions/shift.html">shift</a><span class="s">)</span><span class="sc">;</span></li><li>    <a class="l_k" href="functions/my.html">my</a> <span class="i">$class</span> = <a class="l_k" href="functions/ref.html">ref</a> <span class="i">$self</span><span class="sc">;</span></li><li>    <a class="l_k" href="functions/bless.html">bless</a> <span class="i">$self</span><span class="cm">,</span> <span class="q">&#39;overload::dummy&#39;</span><span class="sc">;</span> <span class="c"># Disable overloading of %{}</span></li><li>    <a class="l_k" href="functions/my.html">my</a> <span class="i">$out</span> = <span class="i">$self</span>-&gt;{<span class="i">$key</span>}<span class="sc">;</span></li><li>    <a class="l_k" href="functions/bless.html">bless</a> <span class="i">$self</span><span class="cm">,</span> <span class="i">$class</span><span class="sc">;</span>	<span class="c"># Restore overloading</span></li><li>    <span class="i">$out</span><span class="sc">;</span></li><li>  <span class="s">}</span></li></ol></pre><p>To remove creation of the tied hash on each access, one may an extra
+level of indirection which allows a non-circular structure of references:</p>
+<pre class="verbatim"><ol><li><a name="package-two_refs1"></a>  package <span class="i">two_refs1</span><span class="sc">;</span></li><li>  <a class="l_k" href="functions/use.html">use</a> <span class="w">overload</span> <span class="q">&#39;%{}&#39;</span> <span class="cm">=&gt;</span> <a class="l_k" href="functions/sub.html">sub</a> <span class="s">{</span> <span class="i">$</span>{<a class="l_k" href="functions/shift.html">shift</a><span class="s">(</span><span class="s">)</span>}-&gt;[<span class="n">1</span>] <span class="s">}</span><span class="cm">,</span></li><li>               <span class="q">&#39;@{}&#39;</span> <span class="cm">=&gt;</span> <a class="l_k" href="functions/sub.html">sub</a> <span class="s">{</span> <span class="i">$</span>{<a class="l_k" href="functions/shift.html">shift</a><span class="s">(</span><span class="s">)</span>}-&gt;[<span class="n">0</span>] <span class="s">}</span><span class="sc">;</span></li><li><a name="new"></a>  sub <span class="m">new</span> <span class="s">{</span></li><li>    <a class="l_k" href="functions/my.html">my</a> <span class="i">$p</span> = <a class="l_k" href="functions/shift.html">shift</a><span class="sc">;</span></li><li>    <a class="l_k" href="functions/my.html">my</a> <span class="i">$a</span> = <span class="s">[</span><span class="i">@_</span><span class="s">]</span><span class="sc">;</span></li><li>    <a class="l_k" href="functions/my.html">my</a> <span class="i">%h</span><span class="sc">;</span></li><li>    <a class="l_k" href="functions/tie.html">tie</a> <span class="i">%h</span><span class="cm">,</span> <span class="i">$p</span><span class="cm">,</span> <span class="i">$a</span><span class="sc">;</span></li><li>    <a class="l_k" href="functions/bless.html">bless</a> \ <span class="s">[</span><span class="i">$a</span><span class="cm">,</span> \<span class="i">%h</span><span class="s">]</span><span class="cm">,</span> <span class="i">$p</span><span class="sc">;</span></li><li>  <span class="s">}</span></li><li><a name="gethash"></a>  sub <span class="m">gethash</span> <span class="s">{</span></li><li>    <a class="l_k" href="functions/my.html">my</a> <span class="i">%h</span><span class="sc">;</span></li><li>    <a class="l_k" href="functions/my.html">my</a> <span class="i">$self</span> = <a class="l_k" href="functions/shift.html">shift</a><span class="sc">;</span></li><li>    <a class="l_k" href="functions/tie.html">tie</a> <span class="i">%h</span><span class="cm">,</span> <a class="l_k" href="functions/ref.html">ref</a> <span class="i">$self</span><span class="cm">,</span> <span class="i">$self</span><span class="sc">;</span></li><li>    \<span class="i">%h</span><span class="sc">;</span></li><li>  <span class="s">}</span></li><li></li><li><a name="TIEHASH"></a>  sub <span class="m">TIEHASH</span> <span class="s">{</span> <a class="l_k" href="functions/my.html">my</a> <span class="i">$p</span> = <a class="l_k" href="functions/shift.html">shift</a><span class="sc">;</span> <a class="l_k" href="functions/bless.html">bless</a> \ <a class="l_k" href="functions/shift.html">shift</a><span class="cm">,</span> <span class="i">$p</span> <span class="s">}</span></li><li>  <a class="l_k" href="functions/my.html">my</a> <span class="i">%fields</span><span class="sc">;</span></li><li>  <a class="l_k" href="functions/my.html">my</a> <span class="i">$i</span> = <span class="n">0</span><span class="sc">;</span></li><li>  <span class="i">$fields</span>{<span class="i">$_</span>} = <span class="i">$i</span>++ foreach <span class="q">qw{zero one two three}</span><span class="sc">;</span></li><li><a name="STORE"></a>  sub <span class="m">STORE</span> <span class="s">{</span></li><li>    <a class="l_k" href="functions/my.html">my</a> <span class="i">$a</span> = <span class="i">$</span>{<a class="l_k" href="functions/shift.html">shift</a><span class="s">(</span><span class="s">)</span>}<span class="sc">;</span></li><li>    <a class="l_k" href="functions/my.html">my</a> <span class="i">$key</span> = <span class="i">$fields</span>{<a class="l_k" href="functions/shift.html">shift</a><span class="s">(</span><span class="s">)</span>}<span class="sc">;</span></li><li>    <a class="l_k" href="functions/defined.html">defined</a> <span class="i">$key</span> or <a class="l_k" href="functions/die.html">die</a> <span class="q">&quot;Out of band access&quot;</span><span class="sc">;</span></li><li>    <span class="i">$a</span>-&gt;[<span class="i">$key</span>] = <a class="l_k" href="functions/shift.html">shift</a><span class="sc">;</span></li><li>  <span class="s">}</span></li><li><a name="FETCH"></a>  sub <span class="m">FETCH</span> <span class="s">{</span></li><li>    <a class="l_k" href="functions/my.html">my</a> <span class="i">$a</span> = <span class="i">$</span>{<a class="l_k" href="functions/shift.html">shift</a><span class="s">(</span><span class="s">)</span>}<span class="sc">;</span></li><li>    <a class="l_k" href="functions/my.html">my</a> <span class="i">$key</span> = <span class="i">$fields</span>{<a class="l_k" href="functions/shift.html">shift</a><span class="s">(</span><span class="s">)</span>}<span class="sc">;</span></li><li>    <a class="l_k" href="functions/defined.html">defined</a> <span class="i">$key</span> or <a class="l_k" href="functions/die.html">die</a> <span class="q">&quot;Out of band access&quot;</span><span class="sc">;</span></li><li>    <span class="i">$a</span>-&gt;[<span class="i">$key</span>]<span class="sc">;</span></li><li>  <span class="s">}</span></li></ol></pre><p>Now if $baz is overloaded like this, then <code class="inline"><span class="i">$baz</span></code>
+ is a reference to a
+reference to the intermediate array, which keeps a reference to an
+actual array, and the access hash.  The tie()ing object for the access
+hash is a reference to a reference to the actual array, so</p>
+<ul>
+<li>
+<p>There are no loops of references.</p>
+</li>
+<li>
+<p>Both "objects" which are blessed into the class <code class="inline"><span class="w">two_refs1</span></code>
+ are
+references to a reference to an array, thus references to a <i>scalar</i>.
+Thus the accessor expression <code class="inline"><span class="i">$$foo</span>-&gt;[<span class="i">$ind</span>]</code>
+ involves no
+overloaded operations.</p>
+</li>
+</ul>
+<a class='view-head2' id="Symbolic-calculator"></a><h3 class='h3' >Symbolic calculator</h3>
+<p>Put this in <i>symbolic.pm</i> in your Perl library directory:</p>
+<pre class="verbatim"><ol><li><a name="package-symbolic"></a>  package <span class="i">symbolic</span><span class="sc">;</span>		<span class="c"># Primitive symbolic calculator</span></li><li>  <a class="l_k" href="functions/use.html">use</a> <span class="w">overload</span> <span class="w">nomethod</span> <span class="cm">=&gt;</span> \<span class="i">&amp;wrap</span><span class="sc">;</span></li><li></li><li><a name="new"></a>  sub <span class="m">new</span> <span class="s">{</span> <a class="l_k" href="functions/shift.html">shift</a><span class="sc">;</span> <a class="l_k" href="functions/bless.html">bless</a> <span class="s">[</span><span class="q">&#39;n&#39;</span><span class="cm">,</span> <span class="i">@_</span><span class="s">]</span> <span class="s">}</span></li><li><a name="wrap"></a>  sub <span class="m">wrap</span> <span class="s">{</span></li><li>    <a class="l_k" href="functions/my.html">my</a> <span class="s">(</span><span class="i">$obj</span><span class="cm">,</span> <span class="i">$other</span><span class="cm">,</span> <span class="i">$inv</span><span class="cm">,</span> <span class="i">$meth</span><span class="s">)</span> = <span class="i">@_</span><span class="sc">;</span></li><li>    <span class="s">(</span><span class="i">$obj</span><span class="cm">,</span> <span class="i">$other</span><span class="s">)</span> = <span class="s">(</span><span class="i">$other</span><span class="cm">,</span> <span class="i">$obj</span><span class="s">)</span> if <span class="i">$inv</span><span class="sc">;</span></li><li>    <a class="l_k" href="functions/bless.html">bless</a> <span class="s">[</span><span class="i">$meth</span><span class="cm">,</span> <span class="i">$obj</span><span class="cm">,</span> <span class="i">$other</span><span class="s">]</span><span class="sc">;</span></li><li>  <span class="s">}</span></li></ol></pre><p>This module is very unusual as overloaded modules go: it does not
+provide any usual overloaded operators, instead it provides the <a href="#Last-Resort">Last Resort</a> operator <code class="inline"><span class="w">nomethod</span></code>
+.  In this example the corresponding
+subroutine returns an object which encapsulates operations done over
+the objects: <code class="inline"><span class="w">new</span> <span class="w">symbolic</span> <span class="n">3</span></code>
+ contains <code class="inline"><span class="s">[</span><span class="q">&#39;n&#39;</span><span class="cm">,</span> <span class="n">3</span><span class="s">]</span></code>
+, <code class="inline"><span class="n">2</span> + <span class="w">new</span>
+<span class="w">symbolic</span> <span class="n">3</span></code>
+ contains <code class="inline"><span class="s">[</span><span class="q">&#39;+&#39;</span><span class="cm">,</span> <span class="n">2</span><span class="cm">,</span> <span class="s">[</span><span class="q">&#39;n&#39;</span><span class="cm">,</span> <span class="n">3</span><span class="s">]</span><span class="s">]</span></code>
+.</p>
+<p>Here is an example of the script which "calculates" the side of
+circumscribed octagon using the above package:</p>
+<pre class="verbatim"><ol><li>  <a class="l_k" href="functions/require.html">require</a> <span class="w">symbolic</span><span class="sc">;</span></li><li>  <a class="l_k" href="functions/my.html">my</a> <span class="i">$iter</span> = <span class="n">1</span><span class="sc">;</span>			<span class="c"># 2**($iter+2) = 8</span></li><li>  <a class="l_k" href="functions/my.html">my</a> <span class="i">$side</span> = <span class="w">new</span> <span class="w">symbolic</span> <span class="n">1</span><span class="sc">;</span></li><li>  <a class="l_k" href="functions/my.html">my</a> <span class="i">$cnt</span> = <span class="i">$iter</span><span class="sc">;</span></li><li></li><li>  while <span class="s">(</span><span class="i">$cnt</span>--<span class="s">)</span> <span class="s">{</span></li><li>    <span class="i">$side</span> = <span class="s">(</span><a class="l_k" href="functions/sqrt.html">sqrt</a><span class="s">(</span><span class="n">1</span> + <span class="i">$side</span>**<span class="n">2</span><span class="s">)</span> - <span class="n">1</span><span class="s">)</span>/<span class="i">$side</span><span class="sc">;</span></li><li>  <span class="s">}</span></li><li>  <a class="l_k" href="functions/print.html">print</a> <span class="q">&quot;OK\n&quot;</span><span class="sc">;</span></li></ol></pre><p>The value of $side is</p>
+<pre class="verbatim"><ol><li>  <span class="s">[</span><span class="q">&#39;/&#39;</span><span class="cm">,</span> <span class="s">[</span><span class="q">&#39;-&#39;</span><span class="cm">,</span> <span class="s">[</span><span class="q">&#39;sqrt&#39;</span><span class="cm">,</span> <span class="s">[</span><span class="q">&#39;+&#39;</span><span class="cm">,</span> <span class="n">1</span><span class="cm">,</span> <span class="s">[</span><span class="q">&#39;**&#39;</span><span class="cm">,</span> <span class="s">[</span><span class="q">&#39;n&#39;</span><span class="cm">,</span> <span class="n">1</span><span class="s">]</span><span class="cm">,</span> <span class="n">2</span><span class="s">]</span><span class="s">]</span><span class="cm">,</span></li><li>	               <a class="l_k" href="functions/undef.html">undef</a><span class="s">]</span><span class="cm">,</span> <span class="n">1</span><span class="s">]</span><span class="cm">,</span> <span class="s">[</span><span class="q">&#39;n&#39;</span><span class="cm">,</span> <span class="n">1</span><span class="s">]</span><span class="s">]</span></li></ol></pre><p>Note that while we obtained this value using a nice little script,
+there is no simple way to <i>use</i> this value.  In fact this value may
+be inspected in debugger (see <a href="perldebug.html">perldebug</a>), but ony if
+<code class="inline"><span class="w">bareStringify</span></code>
+ <strong>O</strong>ption is set, and not via <code class="inline"><span class="w">p</span></code>
+ command.</p>
+<p>If one attempts to print this value, then the overloaded operator
+<code class="inline"><span class="q">&quot;&quot;</span></code>
+ will be called, which will call <code class="inline"><span class="w">nomethod</span></code>
+ operator.  The
+result of this operator will be stringified again, but this result is
+again of type <code class="inline"><span class="w">symbolic</span></code>
+, which will lead to an infinite loop.</p>
+<p>Add a pretty-printer method to the module <i>symbolic.pm</i>:</p>
+<pre class="verbatim"><ol><li><a name="pretty"></a>  sub <span class="m">pretty</span> <span class="s">{</span></li><li>    <a class="l_k" href="functions/my.html">my</a> <span class="s">(</span><span class="i">$meth</span><span class="cm">,</span> <span class="i">$a</span><span class="cm">,</span> <span class="i">$b</span><span class="s">)</span> = <span class="i">@</span>{+<a class="l_k" href="functions/shift.html">shift</a>}<span class="sc">;</span></li><li>    <span class="i">$a</span> = <span class="q">&#39;u&#39;</span> unless <a class="l_k" href="functions/defined.html">defined</a> <span class="i">$a</span><span class="sc">;</span></li><li>    <span class="i">$b</span> = <span class="q">&#39;u&#39;</span> unless <a class="l_k" href="functions/defined.html">defined</a> <span class="i">$b</span><span class="sc">;</span></li><li>    <span class="i">$a</span> = <span class="i">$a</span><span class="i">-&gt;pretty</span> if <a class="l_k" href="functions/ref.html">ref</a> <span class="i">$a</span><span class="sc">;</span></li><li>    <span class="i">$b</span> = <span class="i">$b</span><span class="i">-&gt;pretty</span> if <a class="l_k" href="functions/ref.html">ref</a> <span class="i">$b</span><span class="sc">;</span></li><li>    <span class="q">&quot;[$meth $a $b]&quot;</span><span class="sc">;</span></li><li>  <span class="s">}</span></li></ol></pre><p>Now one can finish the script by</p>
+<pre class="verbatim"><ol><li>  <a class="l_k" href="functions/print.html">print</a> <span class="q">&quot;side = &quot;</span><span class="cm">,</span> <span class="i">$side</span><span class="i">-&gt;pretty</span><span class="cm">,</span> <span class="q">&quot;\n&quot;</span><span class="sc">;</span></li></ol></pre><p>The method <code class="inline"><span class="w">pretty</span></code>
+ is doing object-to-string conversion, so it
+is natural to overload the operator <code class="inline"><span class="q">&quot;&quot;</span></code>
+ using this method.  However,
+inside such a method it is not necessary to pretty-print the
+<i>components</i> $a and $b of an object.  In the above subroutine
+<code class="inline"><span class="q">&quot;[$meth $a $b]&quot;</span></code>
+ is a catenation of some strings and components $a
+and $b.  If these components use overloading, the catenation operator
+will look for an overloaded operator <code class="inline">.</code>
+; if not present, it will
+look for an overloaded operator <code class="inline"><span class="q">&quot;&quot;</span></code>
+.  Thus it is enough to use</p>
+<pre class="verbatim"><ol><li>  <a class="l_k" href="functions/use.html">use</a> <span class="w">overload</span> <span class="w">nomethod</span> <span class="cm">=&gt;</span> \<span class="i">&amp;wrap</span><span class="cm">,</span> <span class="q">&#39;&quot;&quot;&#39;</span> <span class="cm">=&gt;</span> \<span class="i">&amp;str</span><span class="sc">;</span></li><li><a name="str"></a>  sub <span class="m">str</span> <span class="s">{</span></li><li>    <a class="l_k" href="functions/my.html">my</a> <span class="s">(</span><span class="i">$meth</span><span class="cm">,</span> <span class="i">$a</span><span class="cm">,</span> <span class="i">$b</span><span class="s">)</span> = <span class="i">@</span>{+<a class="l_k" href="functions/shift.html">shift</a>}<span class="sc">;</span></li><li>    <span class="i">$a</span> = <span class="q">&#39;u&#39;</span> unless <a class="l_k" href="functions/defined.html">defined</a> <span class="i">$a</span><span class="sc">;</span></li><li>    <span class="i">$b</span> = <span class="q">&#39;u&#39;</span> unless <a class="l_k" href="functions/defined.html">defined</a> <span class="i">$b</span><span class="sc">;</span></li><li>    <span class="q">&quot;[$meth $a $b]&quot;</span><span class="sc">;</span></li><li>  <span class="s">}</span></li></ol></pre><p>Now one can change the last line of the script to</p>
+<pre class="verbatim"><ol><li>  <a class="l_k" href="functions/print.html">print</a> <span class="q">&quot;side = $side\n&quot;</span><span class="sc">;</span></li></ol></pre><p>which outputs</p>
+<pre class="verbatim"><ol><li>  <span class="w">side</span> = <span class="s">[</span><span class="q">/ [- [sqrt [+ 1 [** [n 1 u] 2]] u] 1] [n 1 u]]</span></li></ol></pre><p>and one can inspect the value in debugger using all the possible
+methods.</p>
+<p>Something is still amiss: consider the loop variable $cnt of the
+script.  It was a number, not an object.  We cannot make this value of
+type <code class="inline"><span class="w">symbolic</span></code>
+, since then the loop will not terminate.</p>
+<p>Indeed, to terminate the cycle, the $cnt should become false.
+However, the operator <code class="inline"><span class="w">bool</span></code>
+ for checking falsity is overloaded (this
+time via overloaded <code class="inline"><span class="q">&quot;&quot;</span></code>
+), and returns a long string, thus any object
+of type <code class="inline"><span class="w">symbolic</span></code>
+ is true.  To overcome this, we need a way to
+compare an object to 0.  In fact, it is easier to write a numeric
+conversion routine.</p>
+<p>Here is the text of <i>symbolic.pm</i> with such a routine added (and
+slightly modified str()):</p>
+<pre class="verbatim"><ol><li><a name="package-symbolic"></a>  package <span class="i">symbolic</span><span class="sc">;</span>		<span class="c"># Primitive symbolic calculator</span></li><li>  <a class="l_k" href="functions/use.html">use</a> <span class="w">overload</span></li><li>    <span class="w">nomethod</span> <span class="cm">=&gt;</span> \<span class="i">&amp;wrap</span><span class="cm">,</span> <span class="q">&#39;&quot;&quot;&#39;</span> <span class="cm">=&gt;</span> \<span class="i">&amp;str</span><span class="cm">,</span> <span class="q">&#39;0+&#39;</span> <span class="cm">=&gt;</span> \<span class="i">&amp;num</span><span class="sc">;</span></li><li></li><li><a name="new"></a>  sub <span class="m">new</span> <span class="s">{</span> <a class="l_k" href="functions/shift.html">shift</a><span class="sc">;</span> <a class="l_k" href="functions/bless.html">bless</a> <span class="s">[</span><span class="q">&#39;n&#39;</span><span class="cm">,</span> <span class="i">@_</span><span class="s">]</span> <span class="s">}</span></li><li><a name="wrap"></a>  sub <span class="m">wrap</span> <span class="s">{</span></li><li>    <a class="l_k" href="functions/my.html">my</a> <span class="s">(</span><span class="i">$obj</span><span class="cm">,</span> <span class="i">$other</span><span class="cm">,</span> <span class="i">$inv</span><span class="cm">,</span> <span class="i">$meth</span><span class="s">)</span> = <span class="i">@_</span><span class="sc">;</span></li><li>    <span class="s">(</span><span class="i">$obj</span><span class="cm">,</span> <span class="i">$other</span><span class="s">)</span> = <span class="s">(</span><span class="i">$other</span><span class="cm">,</span> <span class="i">$obj</span><span class="s">)</span> if <span class="i">$inv</span><span class="sc">;</span></li><li>    <a class="l_k" href="functions/bless.html">bless</a> <span class="s">[</span><span class="i">$meth</span><span class="cm">,</span> <span class="i">$obj</span><span class="cm">,</span> <span class="i">$other</span><span class="s">]</span><span class="sc">;</span></li><li>  <span class="s">}</span></li><li><a name="str"></a>  sub <span class="m">str</span> <span class="s">{</span></li><li>    <a class="l_k" href="functions/my.html">my</a> <span class="s">(</span><span class="i">$meth</span><span class="cm">,</span> <span class="i">$a</span><span class="cm">,</span> <span class="i">$b</span><span class="s">)</span> = <span class="i">@</span>{+<a class="l_k" href="functions/shift.html">shift</a>}<span class="sc">;</span></li><li>    <span class="i">$a</span> = <span class="q">&#39;u&#39;</span> unless <a class="l_k" href="functions/defined.html">defined</a> <span class="i">$a</span><span class="sc">;</span></li><li>    if <span class="s">(</span><a class="l_k" href="functions/defined.html">defined</a> <span class="i">$b</span><span class="s">)</span> <span class="s">{</span></li><li>      <span class="q">&quot;[$meth $a $b]&quot;</span><span class="sc">;</span></li><li>    <span class="s">}</span> else <span class="s">{</span></li><li>      <span class="q">&quot;[$meth $a]&quot;</span><span class="sc">;</span></li><li>    <span class="s">}</span></li><li>  <span class="s">}</span></li><li>  <a class="l_k" href="functions/my.html">my</a> <span class="i">%subr</span> = <span class="s">(</span> <span class="w">n</span> <span class="cm">=&gt;</span> <a class="l_k" href="functions/sub.html">sub</a> <span class="s">{</span><span class="i">$_</span>[<span class="n">0</span>]<span class="s">}</span><span class="cm">,</span></li><li>	       <span class="w">sqrt</span> <span class="cm">=&gt;</span> <a class="l_k" href="functions/sub.html">sub</a> <span class="s">{</span><a class="l_k" href="functions/sqrt.html">sqrt</a> <span class="i">$_</span>[<span class="n">0</span>]<span class="s">}</span><span class="cm">,</span></li><li>	       <span class="q">&#39;-&#39;</span> <span class="cm">=&gt;</span> <a class="l_k" href="functions/sub.html">sub</a> <span class="s">{</span><a class="l_k" href="functions/shift.html">shift</a><span class="s">(</span><span class="s">)</span> - <a class="l_k" href="functions/shift.html">shift</a><span class="s">(</span><span class="s">)</span><span class="s">}</span><span class="cm">,</span></li><li>	       <span class="q">&#39;+&#39;</span> <span class="cm">=&gt;</span> <a class="l_k" href="functions/sub.html">sub</a> <span class="s">{</span><a class="l_k" href="functions/shift.html">shift</a><span class="s">(</span><span class="s">)</span> + <a class="l_k" href="functions/shift.html">shift</a><span class="s">(</span><span class="s">)</span><span class="s">}</span><span class="cm">,</span></li><li>	       <span class="q">&#39;/&#39;</span> <span class="cm">=&gt;</span> <a class="l_k" href="functions/sub.html">sub</a> <span class="s">{</span><a class="l_k" href="functions/shift.html">shift</a><span class="s">(</span><span class="s">)</span> / <a class="l_k" href="functions/shift.html">shift</a><span class="s">(</span><span class="s">)</span><span class="s">}</span><span class="cm">,</span></li><li>	       <span class="q">&#39;*&#39;</span> <span class="cm">=&gt;</span> <a class="l_k" href="functions/sub.html">sub</a> <span class="s">{</span><a class="l_k" href="functions/shift.html">shift</a><span class="s">(</span><span class="s">)</span> * <a class="l_k" href="functions/shift.html">shift</a><span class="s">(</span><span class="s">)</span><span class="s">}</span><span class="cm">,</span></li><li>	       <span class="q">&#39;**&#39;</span> <span class="cm">=&gt;</span> <a class="l_k" href="functions/sub.html">sub</a> <span class="s">{</span><a class="l_k" href="functions/shift.html">shift</a><span class="s">(</span><span class="s">)</span> ** <a class="l_k" href="functions/shift.html">shift</a><span class="s">(</span><span class="s">)</span><span class="s">}</span><span class="cm">,</span></li><li>	     <span class="s">)</span><span class="sc">;</span></li><li><a name="num"></a>  sub <span class="m">num</span> <span class="s">{</span></li><li>    <a class="l_k" href="functions/my.html">my</a> <span class="s">(</span><span class="i">$meth</span><span class="cm">,</span> <span class="i">$a</span><span class="cm">,</span> <span class="i">$b</span><span class="s">)</span> = <span class="i">@</span>{+<a class="l_k" href="functions/shift.html">shift</a>}<span class="sc">;</span></li><li>    <a class="l_k" href="functions/my.html">my</a> <span class="i">$subr</span> = <span class="i">$subr</span>{<span class="i">$meth</span>}</li><li>      or <a class="l_k" href="functions/die.html">die</a> <span class="q">&quot;Do not know how to ($meth) in symbolic&quot;</span><span class="sc">;</span></li><li>    <span class="i">$a</span> = <span class="i">$a</span><span class="i">-&gt;num</span> if <a class="l_k" href="functions/ref.html">ref</a> <span class="i">$a</span> eq <span class="w">__PACKAGE__</span><span class="sc">;</span></li><li>    <span class="i">$b</span> = <span class="i">$b</span><span class="i">-&gt;num</span> if <a class="l_k" href="functions/ref.html">ref</a> <span class="i">$b</span> eq <span class="w">__PACKAGE__</span><span class="sc">;</span></li><li>    <span class="i">$subr</span>-&gt;<span class="s">(</span><span class="i">$a</span><span class="cm">,</span><span class="i">$b</span><span class="s">)</span><span class="sc">;</span></li><li>  <span class="s">}</span></li></ol></pre><p>All the work of numeric conversion is done in %subr and num().  Of
+course, %subr is not complete, it contains only operators used in the
+example below.  Here is the extra-credit question: why do we need an
+explicit recursion in num()?  (Answer is at the end of this section.)</p>
+<p>Use this module like this:</p>
+<pre class="verbatim"><ol><li>  <a class="l_k" href="functions/require.html">require</a> <span class="w">symbolic</span><span class="sc">;</span></li><li>  <a class="l_k" href="functions/my.html">my</a> <span class="i">$iter</span> = <span class="w">new</span> <span class="w">symbolic</span> <span class="n">2</span><span class="sc">;</span>	<span class="c"># 16-gon</span></li><li>  <a class="l_k" href="functions/my.html">my</a> <span class="i">$side</span> = <span class="w">new</span> <span class="w">symbolic</span> <span class="n">1</span><span class="sc">;</span></li><li>  <a class="l_k" href="functions/my.html">my</a> <span class="i">$cnt</span> = <span class="i">$iter</span><span class="sc">;</span></li><li></li><li>  while <span class="s">(</span><span class="i">$cnt</span><span class="s">)</span> <span class="s">{</span></li><li>    <span class="i">$cnt</span> = <span class="i">$cnt</span> - <span class="n">1</span><span class="sc">;</span>		<span class="c"># Mutator `--&#39; not implemented</span></li><li>    <span class="i">$side</span> = <span class="s">(</span><a class="l_k" href="functions/sqrt.html">sqrt</a><span class="s">(</span><span class="n">1</span> + <span class="i">$side</span>**<span class="n">2</span><span class="s">)</span> - <span class="n">1</span><span class="s">)</span>/<span class="i">$side</span><span class="sc">;</span></li><li>  <span class="s">}</span></li><li>  <a class="l_k" href="functions/printf.html">printf</a> <span class="q">&quot;%s=%f\n&quot;</span><span class="cm">,</span> <span class="i">$side</span><span class="cm">,</span> <span class="i">$side</span><span class="sc">;</span></li><li>  <a class="l_k" href="functions/printf.html">printf</a> <span class="q">&quot;pi=%f\n&quot;</span><span class="cm">,</span> <span class="i">$side</span>*<span class="s">(</span><span class="n">2</span>**<span class="s">(</span><span class="i">$iter</span>+<span class="n">2</span><span class="s">)</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>It prints (without so many line breaks)</p>
+<pre class="verbatim"><ol><li>  <span class="s">[</span><span class="q">/ [- [sqrt [+ 1 [** [/</span> <span class="s">[</span>- <span class="s">[</span><a class="l_k" href="functions/sqrt.html">sqrt</a> <span class="s">[</span>+ <span class="n">1</span> <span class="s">[</span><span class="i">**</span> [<span class="w">n</span> <span class="n">1</span>] <span class="n">2</span><span class="s">]</span><span class="s">]</span><span class="s">]</span> <span class="n">1</span><span class="s">]</span></li><li>			  <span class="s">[</span><span class="w">n</span> <span class="n">1</span><span class="s">]</span><span class="s">]</span> <span class="n">2</span>]]] <span class="n">1</span>]</li><li>     [<span class="q">/ [- [sqrt [+ 1 [** [n 1] 2]]] 1] [n 1]]]=0.198912</span></li><li>  <span class="q">  pi=3.182598</span></li></ol></pre><p>The above module is very primitive.  It does not implement
+mutator methods (<code class="inline">++</code>
+, <code class="inline">-=</code>
+ and so on), does not do deep copying
+(not required without mutators!), and implements only those arithmetic
+operations which are used in the example.</p>
+<p>To implement most arithmetic operations is easy; one should just use
+the tables of operations, and change the code which fills %subr to</p>
+<pre class="verbatim"><ol><li>  <a class="l_k" href="functions/my.html">my</a> <span class="i">%subr</span> = <span class="s">(</span> <span class="q">&#39;n&#39;</span> <span class="cm">=&gt;</span> <a class="l_k" href="functions/sub.html">sub</a> <span class="s">{</span><span class="i">$_</span>[<span class="n">0</span>]<span class="s">}</span> <span class="s">)</span><span class="sc">;</span></li><li>  foreach <a class="l_k" href="functions/my.html">my</a> <span class="i">$op</span> <span class="s">(</span><a class="l_k" href="functions/split.html">split</a> <span class="q">&quot; &quot;</span><span class="cm">,</span> <span class="i">$overload::ops</span>{<span class="w">with_assign</span>}<span class="s">)</span> <span class="s">{</span></li><li>    <span class="i">$subr</span>{<span class="i">$op</span>} = <span class="i">$subr</span>{<span class="q">&quot;$op=&quot;</span>} = <a class="l_k" href="functions/eval.html">eval</a> <span class="q">&quot;sub {shift() $op shift()}&quot;</span><span class="sc">;</span></li><li>  <span class="s">}</span></li><li>  <a class="l_k" href="functions/my.html">my</a> <span class="i">@bins</span> = <span class="q">qw(binary 3way_comparison num_comparison str_comparison)</span><span class="sc">;</span></li><li>  foreach <a class="l_k" href="functions/my.html">my</a> <span class="i">$op</span> <span class="s">(</span><a class="l_k" href="functions/split.html">split</a> <span class="q">&quot; &quot;</span><span class="cm">,</span> <span class="q">&quot;@overload::ops{ @bins }&quot;</span><span class="s">)</span> <span class="s">{</span></li><li>    <span class="i">$subr</span>{<span class="i">$op</span>} = <a class="l_k" href="functions/eval.html">eval</a> <span class="q">&quot;sub {shift() $op shift()}&quot;</span><span class="sc">;</span></li><li>  <span class="s">}</span></li><li>  foreach <a class="l_k" href="functions/my.html">my</a> <span class="i">$op</span> <span class="s">(</span><a class="l_k" href="functions/split.html">split</a> <span class="q">&quot; &quot;</span><span class="cm">,</span> <span class="q">&quot;@overload::ops{qw(unary func)}&quot;</span><span class="s">)</span> <span class="s">{</span></li><li>    <a class="l_k" href="functions/print.html">print</a> <span class="q">&quot;defining `$op&#39;\n&quot;</span><span class="sc">;</span></li><li>    <span class="i">$subr</span>{<span class="i">$op</span>} = <a class="l_k" href="functions/eval.html">eval</a> <span class="q">&quot;sub {$op shift()}&quot;</span><span class="sc">;</span></li><li>  <span class="s">}</span></li></ol></pre><p>Due to <a href="#Calling-Conventions-for-Mutators">Calling Conventions for Mutators</a>, we do not need anything
+special to make <code class="inline">+=</code>
+ and friends work, except filling <code class="inline">+=</code>
+ entry of
+%subr, and defining a copy constructor (needed since Perl has no
+way to know that the implementation of <code class="inline"><span class="q">&#39;+=&#39;</span></code>
+ does not mutate
+the argument, compare <a href="#Copy-Constructor">Copy Constructor</a>).</p>
+<p>To implement a copy constructor, add <code class="inline"><span class="q">&#39;=&#39;</span> <span class="cm">=&gt;</span> \<span class="i">&amp;cpy</span></code>
+ to <code class="inline"><a class="l_k" href="functions/use.html">use</a> <span class="w">overload</span></code>
+
+line, and code (this code assumes that mutators change things one level
+deep only, so recursive copying is not needed):</p>
+<pre class="verbatim"><ol><li><a name="cpy"></a>  sub <span class="m">cpy</span> <span class="s">{</span></li><li>    <a class="l_k" href="functions/my.html">my</a> <span class="i">$self</span> = <a class="l_k" href="functions/shift.html">shift</a><span class="sc">;</span></li><li>    <a class="l_k" href="functions/bless.html">bless</a> <span class="s">[</span><span class="i">@$self</span><span class="s">]</span><span class="cm">,</span> <a class="l_k" href="functions/ref.html">ref</a> <span class="i">$self</span><span class="sc">;</span></li><li>  <span class="s">}</span></li></ol></pre><p>To make <code class="inline">++</code>
+ and <code class="inline">--</code>
+ work, we need to implement actual mutators,
+either directly, or in <code class="inline"><span class="w">nomethod</span></code>
+.  We continue to do things inside
+<code class="inline"><span class="w">nomethod</span></code>
+, thus add</p>
+<pre class="verbatim"><ol><li>    if <span class="s">(</span><span class="i">$meth</span> eq <span class="q">&#39;++&#39;</span> or <span class="i">$meth</span> eq <span class="q">&#39;--&#39;</span><span class="s">)</span> <span class="s">{</span></li><li>      <span class="i">@$obj</span> = <span class="s">(</span><span class="i">$meth</span><span class="cm">,</span> <span class="s">(</span><a class="l_k" href="functions/bless.html">bless</a> <span class="s">[</span><span class="i">@$obj</span><span class="s">]</span><span class="s">)</span><span class="cm">,</span> <span class="n">1</span><span class="s">)</span><span class="sc">;</span> <span class="c"># Avoid circular reference</span></li><li>      <a class="l_k" href="functions/return.html">return</a> <span class="i">$obj</span><span class="sc">;</span></li><li>    <span class="s">}</span></li></ol></pre><p>after the first line of wrap().  This is not a most effective
+implementation, one may consider</p>
+<pre class="verbatim"><ol><li><a name="inc"></a>  sub <span class="m">inc</span> <span class="s">{</span> <span class="i">$_</span>[<span class="n">0</span>] = <a class="l_k" href="functions/bless.html">bless</a> <span class="s">[</span><span class="q">&#39;++&#39;</span><span class="cm">,</span> <a class="l_k" href="functions/shift.html">shift</a><span class="cm">,</span> <span class="n">1</span><span class="s">]</span><span class="sc">;</span> <span class="s">}</span></li></ol></pre><p>instead.</p>
+<p>As a final remark, note that one can fill %subr by</p>
+<pre class="verbatim"><ol><li>  <a class="l_k" href="functions/my.html">my</a> <span class="i">%subr</span> = <span class="s">(</span> <span class="q">&#39;n&#39;</span> <span class="cm">=&gt;</span> <a class="l_k" href="functions/sub.html">sub</a> <span class="s">{</span><span class="i">$_</span>[<span class="n">0</span>]<span class="s">}</span> <span class="s">)</span><span class="sc">;</span></li><li>  foreach <a class="l_k" href="functions/my.html">my</a> <span class="i">$op</span> <span class="s">(</span><a class="l_k" href="functions/split.html">split</a> <span class="q">&quot; &quot;</span><span class="cm">,</span> <span class="i">$overload::ops</span>{<span class="w">with_assign</span>}<span class="s">)</span> <span class="s">{</span></li><li>    <span class="i">$subr</span>{<span class="i">$op</span>} = <span class="i">$subr</span>{<span class="q">&quot;$op=&quot;</span>} = <a class="l_k" href="functions/eval.html">eval</a> <span class="q">&quot;sub {shift() $op shift()}&quot;</span><span class="sc">;</span></li><li>  <span class="s">}</span></li><li>  <a class="l_k" href="functions/my.html">my</a> <span class="i">@bins</span> = <span class="q">qw(binary 3way_comparison num_comparison str_comparison)</span><span class="sc">;</span></li><li>  foreach <a class="l_k" href="functions/my.html">my</a> <span class="i">$op</span> <span class="s">(</span><a class="l_k" href="functions/split.html">split</a> <span class="q">&quot; &quot;</span><span class="cm">,</span> <span class="q">&quot;@overload::ops{ @bins }&quot;</span><span class="s">)</span> <span class="s">{</span></li><li>    <span class="i">$subr</span>{<span class="i">$op</span>} = <a class="l_k" href="functions/eval.html">eval</a> <span class="q">&quot;sub {shift() $op shift()}&quot;</span><span class="sc">;</span></li><li>  <span class="s">}</span></li><li>  foreach <a class="l_k" href="functions/my.html">my</a> <span class="i">$op</span> <span class="s">(</span><a class="l_k" href="functions/split.html">split</a> <span class="q">&quot; &quot;</span><span class="cm">,</span> <span class="q">&quot;@overload::ops{qw(unary func)}&quot;</span><span class="s">)</span> <span class="s">{</span></li><li>    <span class="i">$subr</span>{<span class="i">$op</span>} = <a class="l_k" href="functions/eval.html">eval</a> <span class="q">&quot;sub {$op shift()}&quot;</span><span class="sc">;</span></li><li>  <span class="s">}</span></li><li>  <span class="i">$subr</span>{<span class="q">&#39;++&#39;</span>} = <span class="i">$subr</span>{<span class="q">&#39;+&#39;</span>}<span class="sc">;</span></li><li>  <span class="i">$subr</span>{<span class="q">&#39;--&#39;</span>} = <span class="i">$subr</span>{<span class="q">&#39;-&#39;</span>}<span class="sc">;</span></li></ol></pre><p>This finishes implementation of a primitive symbolic calculator in
+50 lines of Perl code.  Since the numeric values of subexpressions
+are not cached, the calculator is very slow.</p>
+<p>Here is the answer for the exercise: In the case of str(), we need no
+explicit recursion since the overloaded <code class="inline">.</code>
+-operator will fall back
+to an existing overloaded operator <code class="inline"><span class="q">&quot;&quot;</span></code>
+.  Overloaded arithmetic
+operators <i>do not</i> fall back to numeric conversion if <code class="inline"><span class="w">fallback</span></code>
+ is
+not explicitly requested.  Thus without an explicit recursion num()
+would convert <code class="inline"><span class="s">[</span><span class="q">&#39;+&#39;</span><span class="cm">,</span> <span class="i">$a</span><span class="cm">,</span> <span class="i">$b</span><span class="s">]</span></code>
+ to <code class="inline"><span class="i">$a</span> + <span class="i">$b</span></code>
+, which would just rebuild
+the argument of num().</p>
+<p>If you wonder why defaults for conversion are different for str() and
+num(), note how easy it was to write the symbolic calculator.  This
+simplicity is due to an appropriate choice of defaults.  One extra
+note: due to the explicit recursion num() is more fragile than sym():
+we need to explicitly check for the type of $a and $b.  If components
+$a and $b happen to be of some related type, this may lead to problems.</p>
+<a class='view-head2' id="_Really_-symbolic-calculator"></a><h3 class='h3' ><i>Really</i> symbolic calculator</h3>
+<p>One may wonder why we call the above calculator symbolic.  The reason
+is that the actual calculation of the value of expression is postponed
+until the value is <i>used</i>.</p>
+<p>To see it in action, add a method</p>
+<pre class="verbatim"><ol><li><a name="STORE"></a>  sub <span class="m">STORE</span> <span class="s">{</span></li><li>    <a class="l_k" href="functions/my.html">my</a> <span class="i">$obj</span> = <a class="l_k" href="functions/shift.html">shift</a><span class="sc">;</span></li><li>    <span class="i">$#$obj</span> = <span class="n">1</span><span class="sc">;</span></li><li>    <span class="i">@$obj</span>-&gt;[<span class="n">0</span><span class="cm">,</span><span class="n">1</span>] = <span class="s">(</span><span class="q">&#39;=&#39;</span><span class="cm">,</span> <a class="l_k" href="functions/shift.html">shift</a><span class="s">)</span><span class="sc">;</span></li><li>  <span class="s">}</span></li></ol></pre><p>to the package <code class="inline"><span class="w">symbolic</span></code>
+.  After this change one can do</p>
+<pre class="verbatim"><ol><li>  <a class="l_k" href="functions/my.html">my</a> <span class="i">$a</span> = <span class="w">new</span> <span class="w">symbolic</span> <span class="n">3</span><span class="sc">;</span></li><li>  <a class="l_k" href="functions/my.html">my</a> <span class="i">$b</span> = <span class="w">new</span> <span class="w">symbolic</span> <span class="n">4</span><span class="sc">;</span></li><li>  <a class="l_k" href="functions/my.html">my</a> <span class="i">$c</span> = <a class="l_k" href="functions/sqrt.html">sqrt</a><span class="s">(</span><span class="i">$a</span>**<span class="n">2</span> + <span class="i">$b</span>**<span class="n">2</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>and the numeric value of $c becomes 5.  However, after calling</p>
+<pre class="verbatim"><ol><li>  <span class="i">$a</span><span class="i">-&gt;STORE</span><span class="s">(</span><span class="n">12</span><span class="s">)</span><span class="sc">;</span>  <span class="i">$b</span><span class="i">-&gt;STORE</span><span class="s">(</span><span class="n">5</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>the numeric value of $c becomes 13.  There is no doubt now that the module
+symbolic provides a <i>symbolic</i> calculator indeed.</p>
+<p>To hide the rough edges under the hood, provide a tie()d interface to the
+package <code class="inline"><span class="w">symbolic</span></code>
+ (compare with <a href="#Metaphor-clash">Metaphor clash</a>).  Add methods</p>
+<pre class="verbatim"><ol><li><a name="TIESCALAR"></a>  sub <span class="m">TIESCALAR</span> <span class="s">{</span> <a class="l_k" href="functions/my.html">my</a> <span class="i">$pack</span> = <a class="l_k" href="functions/shift.html">shift</a><span class="sc">;</span> <span class="i">$pack</span><span class="i">-&gt;new</span><span class="s">(</span><span class="i">@_</span><span class="s">)</span> <span class="s">}</span></li><li><a name="FETCH"></a>  sub <span class="m">FETCH</span> <span class="s">{</span> <a class="l_k" href="functions/shift.html">shift</a> <span class="s">}</span></li><li><a name="nop"></a>  sub <span class="m">nop</span> <span class="s">{</span>  <span class="s">}</span>		<span class="c"># Around a bug</span></li></ol></pre><p>(the bug is described in <a href="#BUGS">BUGS</a>).  One can use this new interface as</p>
+<pre class="verbatim"><ol><li>  <a class="l_k" href="functions/tie.html">tie</a> <span class="i">$a</span><span class="cm">,</span> <span class="q">&#39;symbolic&#39;</span><span class="cm">,</span> <span class="n">3</span><span class="sc">;</span></li><li>  <a class="l_k" href="functions/tie.html">tie</a> <span class="i">$b</span><span class="cm">,</span> <span class="q">&#39;symbolic&#39;</span><span class="cm">,</span> <span class="n">4</span><span class="sc">;</span></li><li>  <span class="i">$a</span><span class="i">-&gt;nop</span><span class="sc">;</span>  <span class="i">$b</span><span class="i">-&gt;nop</span><span class="sc">;</span>	<span class="c"># Around a bug</span></li><li></li><li>  <a class="l_k" href="functions/my.html">my</a> <span class="i">$c</span> = <a class="l_k" href="functions/sqrt.html">sqrt</a><span class="s">(</span><span class="i">$a</span>**<span class="n">2</span> + <span class="i">$b</span>**<span class="n">2</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>Now numeric value of $c is 5.  After <code class="inline"><span class="i">$a</span> = <span class="n">12</span><span class="sc">;</span> <span class="i">$b</span> = <span class="n">5</span></code>
+ the numeric value
+of $c becomes 13.  To insulate the user of the module add a method</p>
+<pre class="verbatim"><ol><li><a name="vars"></a>  sub <span class="m">vars</span> <span class="s">{</span> <a class="l_k" href="functions/my.html">my</a> <span class="i">$p</span> = <a class="l_k" href="functions/shift.html">shift</a><span class="sc">;</span> <a class="l_k" href="functions/tie.html">tie</a><span class="s">(</span><span class="i">$_</span><span class="cm">,</span> <span class="i">$p</span><span class="s">)</span><span class="cm">,</span> <span class="i">$_</span><span class="i">-&gt;nop</span> foreach <span class="i">@_</span><span class="sc">;</span> <span class="s">}</span></li></ol></pre><p>Now</p>
+<pre class="verbatim"><ol><li>  <a class="l_k" href="functions/my.html">my</a> <span class="s">(</span><span class="i">$a</span><span class="cm">,</span> <span class="i">$b</span><span class="s">)</span><span class="sc">;</span></li><li>  <span class="w">symbolic</span><span class="w">-&gt;vars</span><span class="s">(</span><span class="i">$a</span><span class="cm">,</span> <span class="i">$b</span><span class="s">)</span><span class="sc">;</span></li><li>  <a class="l_k" href="functions/my.html">my</a> <span class="i">$c</span> = <a class="l_k" href="functions/sqrt.html">sqrt</a><span class="s">(</span><span class="i">$a</span>**<span class="n">2</span> + <span class="i">$b</span>**<span class="n">2</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>  <span class="i">$a</span> = <span class="n">3</span><span class="sc">;</span> <span class="i">$b</span> = <span class="n">4</span><span class="sc">;</span></li><li>  <a class="l_k" href="functions/printf.html">printf</a> <span class="q">&quot;c5  %s=%f\n&quot;</span><span class="cm">,</span> <span class="i">$c</span><span class="cm">,</span> <span class="i">$c</span><span class="sc">;</span></li><li></li><li>  <span class="i">$a</span> = <span class="n">12</span><span class="sc">;</span> <span class="i">$b</span> = <span class="n">5</span><span class="sc">;</span></li><li>  <a class="l_k" href="functions/printf.html">printf</a> <span class="q">&quot;c13  %s=%f\n&quot;</span><span class="cm">,</span> <span class="i">$c</span><span class="cm">,</span> <span class="i">$c</span><span class="sc">;</span></li></ol></pre><p>shows that the numeric value of $c follows changes to the values of $a
+and $b.</p>
+<a class='view-head1' id="AUTHOR"></a><h2 class='h2' >AUTHOR</h2>
+<p>Ilya Zakharevich &lt;<i>ilya@math.mps.ohio-state.edu</i>&gt;.</p>
+<a class='view-head1' id="DIAGNOSTICS"></a><h2 class='h2' >DIAGNOSTICS</h2>
+<p>When Perl is run with the <strong>-Do</strong> switch or its equivalent, overloading
+induces diagnostic messages.</p>
+<p>Using the <code class="inline"><a class="l_k" href="functions/m.html">m</a></code> command of Perl debugger (see <a href="perldebug.html">perldebug</a>) one can
+deduce which operations are overloaded (and which ancestor triggers
+this overloading). Say, if <code class="inline">eq</code>
+ is overloaded, then the method <code class="inline"><span class="s">(</span>eq</code>
+
+is shown by debugger. The method <code class="inline"><span class="s">(</span><span class="s">)</span></code>
+ corresponds to the <code class="inline"><span class="w">fallback</span></code>
+
+key (in fact a presence of this method shows that this package has
+overloading enabled, and it is what is used by the <code class="inline"><span class="w">Overloaded</span></code>
+
+function of module <code class="inline"><span class="w">overload</span></code>
+).</p>
+<p>The module might issue the following warnings:</p>
+<ul>
+<li><a class='view-title' id="Odd-number-of-arguments-for-overload%3a%3aconstant"></a><strong>Odd number of arguments for overload::constant</strong>
+<p>(W) The call to overload::constant contained an odd number of arguments.
+The arguments should come in pairs.</p>
+</li>
+<li><a class='view-title' id="%60%25s'-is-not-an-overloadable-type"></a><strong>`%s' is not an overloadable type</strong>
+<p>(W) You tried to overload a constant type the overload package is unaware of.</p>
+</li>
+<li><a class='view-title' id="%60%25s'-is-not-a-code-reference"></a><strong>`%s' is not a code reference</strong>
+<p>(W) The second (fourth, sixth, ...) argument of overload::constant needs
+to be a code reference. Either an anonymous subroutine, or a reference
+to a subroutine.</p>
+</li>
+</ul>
+<a class='view-head1' id="BUGS"></a><h2 class='h2' >BUGS</h2>
+<p>Because it is used for overloading, the per-package hash %OVERLOAD now
+has a special meaning in Perl. The symbol table is filled with names
+looking like line-noise.</p>
+<p>For the purpose of inheritance every overloaded package behaves as if
+<code class="inline"><span class="w">fallback</span></code>
+ is present (possibly undefined). This may create
+interesting effects if some package is not overloaded, but inherits
+from two overloaded packages.</p>
+<p>Relation between overloading and tie()ing is broken.  Overloading is
+triggered or not basing on the <i>previous</i> class of tie()d value.</p>
+<p>This happens because the presence of overloading is checked too early,
+before any tie()d access is attempted.  If the FETCH()ed class of the
+tie()d value does not change, a simple workaround is to access the value
+immediately after tie()ing, so that after this call the <i>previous</i> class
+coincides with the current one.</p>
+<p><strong>Needed:</strong> a way to fix this without a speed penalty.</p>
+<p>Barewords are not covered by overloaded string constants.</p>
+<p>This document is confusing.  There are grammos and misleading language
+used in places.  It would seem a total rewrite is needed.</p>
+
+
+
+
+      <ul><li><a href="#NAME">NAME</a></li><li><a href="#SYNOPSIS">SYNOPSIS</a></li><li><a href="#DESCRIPTION">DESCRIPTION</a></li><ul><li><a href="#Declaration-of-overloaded-functions">Declaration of overloaded functions</a></li><li><a href="#Calling-Conventions-for-Binary-Operations">Calling Conventions for Binary Operations</a></li><li><a href="#Calling-Conventions-for-Unary-Operations">Calling Conventions for Unary Operations</a></li><li><a href="#Calling-Conventions-for-Mutators">Calling Conventions for Mutators</a></li><li><a href="#Overloadable-Operations">Overloadable Operations</a></li><li><a href="#Inheritance-and-overloading">Inheritance and overloading</a></li></ul><li><a href="#SPECIAL-SYMBOLS-FOR-use-overload">SPECIAL SYMBOLS FOR use overload</a></li><ul><li><a href="#Last-Resort">Last Resort</a></li><li><a href="#Fallback">Fallback</a></li><li><a href="#Copy-Constructor">Copy Constructor</a></li></ul><li><a href="#MAGIC-AUTOGENERATION">MAGIC AUTOGENERATION</a></li><li><a href="#Losing-overloading">Losing overloading</a></li><li><a href="#Run-time-Overloading">Run-time Overloading</a></li><li><a href="#Public-functions">Public functions</a></li><li><a href="#Overloading-constants">Overloading constants</a></li><li><a href="#IMPLEMENTATION">IMPLEMENTATION</a></li><li><a href="#Metaphor-clash">Metaphor clash</a></li><li><a href="#Cookbook">Cookbook</a></li><ul><li><a href="#Two-face-scalars">Two-face scalars</a></li><li><a href="#Two-face-references">Two-face references</a></li><li><a href="#Symbolic-calculator">Symbolic calculator</a></li><li><a href="#_Really_-symbolic-calculator">_Really_ symbolic calculator</a></li></ul><li><a href="#AUTHOR">AUTHOR</a></li><li><a href="#DIAGNOSTICS">DIAGNOSTICS</a></li><li><a href="#BUGS">BUGS</a></li></ul>
+
+
+                  </div>
+                </article>
+              </div>
+            </div>
+          </main>
+        </div>
+           <footer class="footer row bg-light pt-5 pb-5">
+       <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+           <div class="row">
+               <div class="col-md-4">
+                   <ul class="list-unstyled">
+                       <li>
+                           <h4>Site info</h4>
+                       </li>
+                       <li>Docs mantained by
+                           <a href="//lists.perl.org/list/perl5-porters.html"
+                               rel="noopener">Perl 5 Porters</a>
+                       </li>
+                       <li>Perldoc site development sponsored by
+                           <a href="//opusvl.com" rel="noopener">
+                           <img style="margin: 20px 20px 5px 10px" class="opus-logo" src="/public/img/opusvl_logo.svg" alt="OpusVL Logo">
+                        </a>
+                    <li><span class="about_perldoc"><a href="//about.html">About PerlDOC</a></span>
+                    </li>
+                       </li>
+                   </ul>
+               </div>
+               <div class="col-md-8">
+                   <div class="row">
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Manuals</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.0/index-overview.html">Overview</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.0/index-tutorials.html">Tutorials</a>
+                               </li>
+                               <li>
+                                   <a href="/5.8.0/index-faq.html">FAQs</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.0/index-history.html">Changes</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Reference</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.0/index-language.html">Language</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.0/index-functions.html">Functions</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.0/perlop.html">Operators</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.0/perlvar.html">Variables</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Modules</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.0/index-modules-A.html">Modules</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.0/index-pragmas.html">Pragmas</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.0/index-utilities.html">Utilities</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Misc</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.0/index-licence.html">License</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.0/index-internals.html">Internals</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.0/index-platforms.html">Platforms</a>
+                               </li>
+                            <li>
+                                <a
+                                    href="/5.8.0/index-about.html">About</a>
+                            </li>
+                           </ul>
+                       </div>
+                   </div>
+               </div>
+               <div class=" col-12 footer-inf text-center">
+                   <small>perldoc.perl.org - Official documentation for the Perl
+                       programming language</small>
+               </div>
+           </div>
+       </div>
+   </footer>
+
+        	<div class="beta-wrapper beta-bottom-right ">
+		<div class="beta beta-blue  ">
+			<a class="beta-link "
+				href="//github.com/OpusVL/perldoc.perl.org/issues/new" rel="noopener">
+				<span class="beta-text">
+					This website is a Beta release.
+				</span>
+				<span class="beta-text">
+					For any issues please raise a ticket on GitHub
+				</span>
+			</a>
+		</div>
+	</div>
+
+        <script src="/public/js/main.min.js"></script>
+      </body>
+
+      </html>

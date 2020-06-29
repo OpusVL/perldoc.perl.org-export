@@ -1,0 +1,1582 @@
+      
+      
+      
+      
+
+      <!DOCTYPE html>
+      <html lang="en">
+
+      <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Locale::Maketext - perldoc.perl.org">
+        <link rel="icon" href="/public/img/favicon.ico">
+        <title>Locale::Maketext - perldoc.perl.org</title>
+        <link href="/public/css/main.min.css" rel="stylesheet">
+        <link rel="canonical" href="/Locale/Maketext.html">
+        <link
+          href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900'
+          rel='stylesheet' type='text/css'>
+        <script>
+          window.ga = window.ga || function () {
+            (ga.q = ga.q || []).push(arguments)
+          };
+          ga.l = +new Date;
+          ga('create', 'UA-1892152-2', 'auto'); // JJ's account
+          ga('create', 'UA-50555-3', 'auto', 'perlOrg'); // perl.org account
+          ga('require', 'outboundLinkTracker', {
+            events: ['click', 'auxclick', 'contextmenu'],
+          });
+          ga('require', 'maxScrollTracker');
+          ga('send', 'pageview');
+          ga('perlOrg.send', 'pageview');
+        </script>
+        <script async src="https://www.google-analytics.com/analytics.js">
+        </script>
+        <script async src="/public/js/tracking.min.js"></script>
+      </head>
+
+      <body class="body container-fluid ">
+        <div class="wrapper">
+
+          <nav
+    class="navbar navbar-dark bg-primary bg-perl fixed-top justify-content-between navbar-expand-lg">
+    <a href="#content" class="skippy sr-only sr-only-focusable">
+        <span class=' skippy-text'>Skip to main content</span>
+    </a>
+    <a class="navbar-brand" href="/">
+        <img class="logo" src="/public/img/logo_perl_doc.svg"
+            alt="Perl Documentation Logo" />
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse"
+        data-target="#navbar" aria-controls="navbar" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="navbar" class="collapse navbar-collapse ">
+        <ul class="navbar-nav ml-auto navbar-right">
+            <form class="nav-item dropdown search-wrapper">
+                <input type="text" id='searchinput' aria-describedby='navbarDropdown5'
+                    placeholder="Type query" class='search-input-field' value=''>
+
+                <button href="#" data-toggle='dropdown' type="button"
+                    aria-haspopup="true" aria-expanded='false' id="navbarDropdown5"
+                    class="nav-link dropdown-toggle search-link">
+                    <object tabindex='-1' focusable="false" class='search-icon'
+                        data="/public/img/search.svg" type="image/svg+xml"
+                        name='search icon'>search
+                        icon</object>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown5"
+                    id='search-results'>
+                    <p class='dropdown-item major-version'>
+                        No results
+                    </p>
+                </div>
+            </form>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown" href="#" class="nav-link dropdown-toggle"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Perl versions</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    
+                        <p class='dropdown-item major-version'>
+                            5.32
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.32.0/">5.32.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.30
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.3/">5.30.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.2/">5.30.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.1/">5.30.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.0/">5.30.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.28
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.3/">5.28.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.2/">5.28.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.1/">5.28.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.0/">5.28.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.26
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.3/">5.26.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.2/">5.26.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.1/">5.26.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.0/">5.26.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.24
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.4/">5.24.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.3/">5.24.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.2/">5.24.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.1/">5.24.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.0/">5.24.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.22
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.4/">5.22.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.3/">5.22.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.2/">5.22.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.1/">5.22.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.0/">5.22.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.20
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.3/">5.20.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.2/">5.20.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.1/">5.20.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.0/">5.20.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.18
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.4/">5.18.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.3/">5.18.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.2/">5.18.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.1/">5.18.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.0/">5.18.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.16
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.3/">5.16.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.2/">5.16.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.1/">5.16.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.0/">5.16.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.14
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.4/">5.14.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.3/">5.14.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.2/">5.14.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.1/">5.14.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.0/">5.14.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.12
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.5/">5.12.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.4/">5.12.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.3/">5.12.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.2/">5.12.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.1/">5.12.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.0/">5.12.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.10
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.1/">5.10.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.0/">5.10.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.8
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.9/">5.8.9</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.8/">5.8.8</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.7/">5.8.7</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.6/">5.8.6</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.5/">5.8.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.4/">5.8.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.3/">5.8.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.2/">5.8.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.1/">5.8.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.0/">5.8.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.6
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.2/">5.6.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.1/">5.6.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.0/">5.6.0</a>
+                        
+                        
+                    
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown1" href="#" class="dropdown-toggle nav-link"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Manuals</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                    <a class="dropdown-item"
+                        href="/5.26.1/index-overview.html">Overview</a>
+                    <a class="dropdown-item"
+                        href="/5.26.1/index-tutorials.html">Tutorials</a>
+                    <a class="dropdown-item"
+                        href="/5.26.1/index-faq.html">FAQs</a>
+                    <a class="dropdown-item"
+                        href="/5.26.1/index-history.html">Changes</a>
+                    <a class="dropdown-item"
+                        href="/5.26.1/index-licence.html">License</a>
+                    <a class="dropdown-item"
+                        href="/5.26.1/index-language.html">Language</a>
+                    <a class="dropdown-item"
+                        href="/5.26.1/index-functions.html">Functions</a>
+                    <a class="dropdown-item"
+                        href="/5.26.1/perlop.html">Operators</a>
+                    <a class="dropdown-item"
+                        href="/5.26.1/perlvar.html">Variables</a>
+                    <a class="dropdown-item"
+                        href="/5.26.1/index-pragmas.html">Pragmas</a>
+                    <a class="dropdown-item"
+                        href="/5.26.1/index-utilities.html">Utilities</a>
+                    <a class="dropdown-item"
+                        href="/5.26.1/index-internals.html">Internals</a>
+                    <a class="dropdown-item"
+                        href="/5.26.1/index-platforms.html">Platforms</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown3" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Modules</a>
+                <div aria-labelledby="navbarDropdown3"
+                    class="dropdown-menu letters-wrap">
+                    <!--<a class="dropdown-item"
+                        href="/5.26.1/index-modules.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.26.1/index-modules-by-cat.html">By
+                        Category</a>-->
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.26.1/index-modules-A.html">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.1/index-modules-B.html">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.1/index-modules-C.html">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.1/index-modules-D.html">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.1/index-modules-E.html">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.1/index-modules-F.html">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.1/index-modules-G.html">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.1/index-modules-H.html">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.1/index-modules-I.html">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.1/index-modules-J.html">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.1/index-modules-K.html">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.1/index-modules-L.html">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.1/index-modules-M.html">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.1/index-modules-N.html">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.1/index-modules-O.html">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.1/index-modules-P.html">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.1/index-modules-Q.html">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.1/index-modules-R.html">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.1/index-modules-S.html">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.1/index-modules-T.html">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.1/index-modules-U.html">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.1/index-modules-V.html">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.1/index-modules-W.html">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.1/index-modules-X.html">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.1/index-modules-Y.html">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.1/index-modules-Z.html">Z</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown4" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Functions</a>
+                <div aria-labelledby="navbarDropdown4"
+                    class="dropdown-menu letters-wrap">
+                    <a class="dropdown-item"
+                        href="/5.26.1/index-functions.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.26.1/index-functions-by-cat.html">By
+                        Category</a>
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.26.1/index-functions.html#A">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.1/index-functions.html#B">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.1/index-functions.html#C">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.1/index-functions.html#D">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.1/index-functions.html#E">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.1/index-functions.html#F">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.1/index-functions.html#G">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.1/index-functions.html#H">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.1/index-functions.html#I">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.1/index-functions.html#J">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.1/index-functions.html#K">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.1/index-functions.html#L">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.1/index-functions.html#M">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.1/index-functions.html#N">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.1/index-functions.html#O">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.1/index-functions.html#P">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.1/index-functions.html#Q">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.1/index-functions.html#R">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.1/index-functions.html#S">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.1/index-functions.html#T">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.1/index-functions.html#U">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.1/index-functions.html#V">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.1/index-functions.html#W">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.1/index-functions.html#X">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.1/index-functions.html#Y">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.1/index-functions.html#Z">Z</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!--/.nav-collapse -->
+</nav>
+
+
+          <main class="row main-content pb-5 pt-5" id='content'>
+            <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+              <div class="row">
+                <div class="col-sm-12">
+                  <div id="breadcrumbs">
+                      
+    <a href="../index.html">Home</a>&nbsp; &gt;
+    
+      
+        <a href="../index-modules-L.html">Core modules (L)</a> &gt;
+      
+    
+    Locale::Maketext
+  
+
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <article class="col-sm-12 content">
+                  <div class="documentation-wrapper">
+                    <div id="perl_version">
+                      <h7 class='page-title'> Perl 5 version 26.1
+                        documentation</h7>
+                    </div>
+                    <h1>Locale::Maketext</h1>
+
+
+  <!--    -->
+<ul><li><a href="#NAME">NAME</a></li><li><a href="#SYNOPSIS">SYNOPSIS</a></li><li><a href="#DESCRIPTION">DESCRIPTION</a></li><li><a href="#QUICK-OVERVIEW">QUICK OVERVIEW</a></li><li><a href="#METHODS">METHODS</a></li><ul><li><a href="#Construction-Methods">Construction Methods</a></li><li><a href="#The-%22maketext%22-Method">The "maketext" Method</a></li><li><a href="#Utility-Methods">Utility Methods</a></li><li><a href="#Language-Handle-Attributes-and-Internals">Language Handle Attributes and Internals</a></li></ul><li><a href="#LANGUAGE-CLASS-HIERARCHIES">LANGUAGE CLASS HIERARCHIES</a></li><li><a href="#ENTRIES-IN-EACH-LEXICON">ENTRIES IN EACH LEXICON</a></li><li><a href="#BRACKET-NOTATION">BRACKET NOTATION</a></li><li><a href="#BRACKET-NOTATION-SECURITY">BRACKET NOTATION SECURITY</a></li><li><a href="#AUTO-LEXICONS">AUTO LEXICONS</a></li><li><a href="#READONLY-LEXICONS">READONLY LEXICONS</a></li><li><a href="#CONTROLLING-LOOKUP-FAILURE">CONTROLLING LOOKUP FAILURE</a></li><li><a href="#HOW-TO-USE-MAKETEXT">HOW TO USE MAKETEXT</a></li><li><a href="#SEE-ALSO">SEE ALSO</a></li><li><a href="#COPYRIGHT-AND-DISCLAIMER">COPYRIGHT AND DISCLAIMER</a></li><li><a href="#AUTHOR">AUTHOR</a></li></ul><a class='view-head1' id="NAME"></a><h2 class='h2' >NAME</h2>
+<p>Locale::Maketext - framework for localization</p>
+<a class='view-head1' id="SYNOPSIS"></a><h2 class='h2' >SYNOPSIS</h2>
+<pre class="verbatim"><ol><li><a name="package-MyProgram"></a>  package <span class="i">MyProgram</span><span class="sc">;</span></li><li>  <a class="l_k" href="../functions/use.html">use</a> <span class="w">strict</span><span class="sc">;</span></li><li>  <a class="l_k" href="../functions/use.html">use</a> <span class="w">MyProgram::L10N</span><span class="sc">;</span></li><li>   <span class="c"># ...which inherits from Locale::Maketext</span></li><li>  <a class="l_k" href="../functions/my.html">my</a> <span class="i">$lh</span> = <span class="w">MyProgram::L10N</span><span class="w">-&gt;get_handle</span><span class="s">(</span><span class="s">)</span> || <a class="l_k" href="../functions/die.html">die</a> <span class="q">&quot;What language?&quot;</span><span class="sc">;</span></li><li>  ...</li><li>  <span class="c"># And then any messages your program emits, like:</span></li><li>  <a class="l_k" href="../functions/warn.html">warn</a> <span class="i">$lh</span><span class="i">-&gt;maketext</span><span class="s">(</span> <span class="q">&quot;Can&#39;t open file [_1]: [_2]\n&quot;</span><span class="cm">,</span> <span class="i">$f</span><span class="cm">,</span> <span class="i">$!</span> <span class="s">)</span><span class="sc">;</span></li><li>  ...</li></ol></pre><a class='view-head1' id="DESCRIPTION"></a><h2 class='h2' >DESCRIPTION</h2>
+<p>It is a common feature of applications (whether run directly,
+or via the Web) for them to be "localized" -- i.e., for them
+to a present an English interface to an English-speaker, a German
+interface to a German-speaker, and so on for all languages it's
+programmed with.  Locale::Maketext
+is a framework for software localization; it provides you with the
+tools for organizing and accessing the bits of text and text-processing
+code that you need for producing localized applications.</p>
+<p>In order to make sense of Maketext and how all its
+components fit together, you should probably
+go read <a href="../Locale/Maketext/TPJ13.html">Locale::Maketext::TPJ13</a>, and
+<i>then</i> read the following documentation.</p>
+<p>You may also want to read over the source for <code class="inline"><span class="w">File::Findgrep</span></code>
+
+and its constituent modules -- they are a complete (if small)
+example application that uses Maketext.</p>
+<a class='view-head1' id="QUICK-OVERVIEW"></a><h2 class='h2' >QUICK OVERVIEW</h2>
+<p>The basic design of Locale::Maketext is object-oriented, and
+Locale::Maketext is an abstract base class, from which you
+derive a "project class".
+The project class (with a name like "TkBocciBall::Localize",
+which you then use in your module) is in turn the base class
+for all the "language classes" for your project
+(with names "TkBocciBall::Localize::it", 
+"TkBocciBall::Localize::en",
+"TkBocciBall::Localize::fr", etc.).</p>
+<p>A language class is
+a class containing a lexicon of phrases as class data,
+and possibly also some methods that are of use in interpreting
+phrases in the lexicon, or otherwise dealing with text in that
+language.</p>
+<p>An object belonging to a language class is called a "language
+handle"; it's typically a flyweight object.</p>
+<p>The normal course of action is to call:</p>
+<pre class="verbatim"><ol><li>  <a class="l_k" href="../functions/use.html">use</a> <span class="w">TkBocciBall::Localize</span><span class="sc">;</span>  <span class="c"># the localization project class</span></li><li>  <span class="i">$lh</span> = <span class="w">TkBocciBall::Localize</span><span class="w">-&gt;get_handle</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li><li>   <span class="c"># Depending on the user&#39;s locale, etc., this will</span></li><li>   <span class="c"># make a language handle from among the classes available,</span></li><li>   <span class="c"># and any defaults that you declare.</span></li><li>  <a class="l_k" href="../functions/die.html">die</a> <span class="q">&quot;Couldn&#39;t make a language handle??&quot;</span> <a class="l_k" href="../functions/unless.html">unless</a> <span class="i">$lh</span><span class="sc">;</span></li></ol></pre><p>From then on, you use the <code class="inline"><span class="w">maketext</span></code>
+ function to access
+entries in whatever lexicon(s) belong to the language handle
+you got.  So, this:</p>
+<pre class="verbatim"><ol><li>  <a class="l_k" href="../functions/print.html">print</a> <span class="i">$lh</span><span class="i">-&gt;maketext</span><span class="s">(</span><span class="q">&quot;You won!&quot;</span><span class="s">)</span><span class="cm">,</span> <span class="q">&quot;\n&quot;</span><span class="sc">;</span></li></ol></pre><p>...emits the right text for this language.  If the object
+in <code class="inline"><span class="i">$lh</span></code>
+ belongs to class "TkBocciBall::Localize::fr" and
+%TkBocciBall::Localize::fr::Lexicon contains <code class="inline"><span class="s">(</span><span class="q">&quot;You won!&quot;</span>
+<span class="cm">=&gt;</span> <span class="q">&quot;Tu as gagn&eacute;!&quot;</span><span class="s">)</span></code>
+, then the above
+code happily tells the user "Tu as gagn&#xe9;!".</p>
+<a class='view-head1' id="METHODS"></a><h2 class='h2' >METHODS</h2>
+<p>Locale::Maketext offers a variety of methods, which fall
+into three categories:</p>
+<ul>
+<li>
+<p>Methods to do with constructing language handles.</p>
+</li>
+<li>
+<p><code class="inline"><span class="w">maketext</span></code>
+ and other methods to do with accessing %Lexicon data
+for a given language handle.</p>
+</li>
+<li>
+<p>Methods that you may find it handy to use, from routines of
+yours that you put in %Lexicon entries.</p>
+</li>
+</ul>
+<p>These are covered in the following section.</p>
+<a class='view-head2' id="Construction-Methods"></a><h3 class='h3' >Construction Methods</h3>
+<p>These are to do with constructing a language handle:</p>
+<ul>
+<li>
+<p>$lh = YourProjClass-&gt;get_handle( ...langtags... ) || die "lg-handle?";</p>
+<p>This tries loading classes based on the language-tags you give (like
+<code class="inline"><span class="s">(</span><span class="q">&quot;en-US&quot;</span><span class="cm">,</span> <span class="q">&quot;sk&quot;</span><span class="cm">,</span> <span class="q">&quot;kon&quot;</span><span class="cm">,</span> <span class="q">&quot;es-MX&quot;</span><span class="cm">,</span> <span class="q">&quot;ja&quot;</span><span class="cm">,</span> <span class="q">&quot;i-klingon&quot;</span><span class="s">)</span></code>
+, and for the first class
+that succeeds, returns YourProjClass::<i>language</i>-&gt;new().</p>
+<p>If it runs thru the entire given list of language-tags, and finds no classes
+for those exact terms, it then tries "superordinate" language classes.
+So if no "en-US" class (i.e., YourProjClass::en_us)
+was found, nor classes for anything else in that list, we then try
+its superordinate, "en" (i.e., YourProjClass::en), and so on thru 
+the other language-tags in the given list: "es".
+(The other language-tags in our example list: 
+happen to have no superordinates.)</p>
+<p>If none of those language-tags leads to loadable classes, we then
+try classes derived from YourProjClass-&gt;fallback_languages() and
+then if nothing comes of that, we use classes named by
+YourProjClass-&gt;fallback_language_classes().  Then in the (probably
+quite unlikely) event that that fails, we just return undef.</p>
+</li>
+<li>
+<p>$lh = YourProjClass-&gt;get_handle<strong>()</strong> || die "lg-handle?";</p>
+<p>When <code class="inline"><span class="w">get_handle</span></code>
+ is called with an empty parameter list, magic happens:</p>
+<p>If <code class="inline"><span class="w">get_handle</span></code>
+ senses that it's running in program that was
+invoked as a CGI, then it tries to get language-tags out of the
+environment variable "HTTP_ACCEPT_LANGUAGE", and it pretends that
+those were the languages passed as parameters to <code class="inline"><span class="w">get_handle</span></code>
+.</p>
+<p>Otherwise (i.e., if not a CGI), this tries various OS-specific ways
+to get the language-tags for the current locale/language, and then
+pretends that those were the value(s) passed to <code class="inline"><span class="w">get_handle</span></code>
+.</p>
+<p>Currently this OS-specific stuff consists of looking in the environment
+variables "LANG" and "LANGUAGE"; and on MSWin machines (where those
+variables are typically unused), this also tries using
+the module Win32::Locale to get a language-tag for whatever language/locale
+is currently selected in the "Regional Settings" (or "International"?)
+Control Panel.  I welcome further
+suggestions for making this do the Right Thing under other operating
+systems that support localization.</p>
+<p>If you're using localization in an application that keeps a configuration
+file, you might consider something like this in your project class:</p>
+<pre class="verbatim"><ol><li><a name="get_handle_via_config"></a>  sub <span class="m">get_handle_via_config</span> <span class="s">{</span></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">$class</span> = <span class="i">$_</span>[<span class="n">0</span>]<span class="sc">;</span></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">$chosen_language</span> = <span class="i">$Config_settings</span>{<span class="q">&#39;language&#39;</span>}<span class="sc">;</span></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">$lh</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/if.html">if</a><span class="s">(</span><span class="i">$chosen_language</span><span class="s">)</span> <span class="s">{</span></li><li>      <span class="i">$lh</span> = <span class="i">$class</span><span class="i">-&gt;get_handle</span><span class="s">(</span><span class="i">$chosen_language</span><span class="s">)</span></li><li>       || <a class="l_k" href="../functions/die.html">die</a> <span class="q">&quot;No language handle for \&quot;$chosen_language\&quot;&quot;</span></li><li>            . <span class="q">&quot; or the like&quot;</span><span class="sc">;</span></li><li>    <span class="s">}</span> <a class="l_k" href="../functions/else.html">else</a> <span class="s">{</span></li><li>      <span class="c"># Config file missing, maybe?</span></li><li>      <span class="i">$lh</span> = <span class="i">$class</span><span class="i">-&gt;get_handle</span><span class="s">(</span><span class="s">)</span></li><li>       || <a class="l_k" href="../functions/die.html">die</a> <span class="q">&quot;Can&#39;t get a language handle&quot;</span><span class="sc">;</span></li><li>    <span class="s">}</span></li><li>    <a class="l_k" href="../functions/return.html">return</a> <span class="i">$lh</span><span class="sc">;</span></li><li>  <span class="s">}</span></li></ol></pre></li>
+<li>
+<p>$lh = YourProjClass::langname-&gt;new();</p>
+<p>This constructs a language handle.  You usually <strong>don't</strong> call this
+directly, but instead let <code class="inline"><span class="w">get_handle</span></code>
+ find a language class to <code class="inline"><a class="l_k" href="../functions/use.html">use</a></code>
+and to then call -&gt;new on.</p>
+</li>
+<li>
+<p>$lh-&gt;init();</p>
+<p>This is called by -&gt;new to initialize newly-constructed language handles.
+If you define an init method in your class, remember that it's usually
+considered a good idea to call $lh-&gt;SUPER::init in it (presumably at the
+beginning), so that all classes get a chance to initialize a new object
+however they see fit.</p>
+</li>
+<li>
+<p>YourProjClass-&gt;fallback_languages()</p>
+<p><code class="inline"><span class="w">get_handle</span></code>
+ appends the return value of this to the end of
+whatever list of languages you pass <code class="inline"><span class="w">get_handle</span></code>
+.  Unless
+you override this method, your project class
+will inherit Locale::Maketext's <code class="inline"><span class="w">fallback_languages</span></code>
+, which
+currently returns <code class="inline"><span class="s">(</span><span class="q">&#39;i-default&#39;</span><span class="cm">,</span> <span class="q">&#39;en&#39;</span><span class="cm">,</span> <span class="q">&#39;en-US&#39;</span><span class="s">)</span></code>
+.
+("i-default" is defined in RFC 2277).</p>
+<p>This method (by having it return the name
+of a language-tag that has an existing language class)
+can be used for making sure that
+<code class="inline"><span class="w">get_handle</span></code>
+ will always manage to construct a language
+handle (assuming your language classes are in an appropriate
+@INC directory).  Or you can use the next method:</p>
+</li>
+<li>
+<p>YourProjClass-&gt;fallback_language_classes()</p>
+<p><code class="inline"><span class="w">get_handle</span></code>
+ appends the return value of this to the end
+of the list of classes it will try using.  Unless
+you override this method, your project class
+will inherit Locale::Maketext's <code class="inline"><span class="w">fallback_language_classes</span></code>
+,
+which currently returns an empty list, <code class="inline"><span class="s">(</span><span class="s">)</span></code>
+.
+By setting this to some value (namely, the name of a loadable
+language class), you can be sure that
+<code class="inline"><span class="w">get_handle</span></code>
+ will always manage to construct a language
+handle.</p>
+</li>
+</ul>
+<a class='view-head2' id="The-%22maketext%22-Method"></a><h3 class='h3' >The "maketext" Method</h3>
+<p>This is the most important method in Locale::Maketext:</p>
+<pre class="verbatim"><ol><li>    <span class="i">$text</span> = <span class="i">$lh</span><span class="i">-&gt;maketext</span><span class="s">(</span><span class="w">I</span><span class="q">&lt;key&gt;</span><span class="cm">,</span> ...<span class="w">parameters</span> <a class="l_k" href="../functions/for.html">for</a> <span class="w">this</span> <span class="w">phrase</span>...<span class="s">)</span><span class="sc">;</span></li></ol></pre><p>This looks in the %Lexicon of the language handle
+$lh and all its superclasses, looking
+for an entry whose key is the string <i>key</i>.  Assuming such
+an entry is found, various things then happen, depending on the
+value found:</p>
+<p>If the value is a scalarref, the scalar is dereferenced and returned
+(and any parameters are ignored).</p>
+<p>If the value is a coderef, we return &amp;$value($lh, ...parameters...).</p>
+<p>If the value is a string that <i>doesn't</i> look like it's in Bracket Notation,
+we return it (after replacing it with a scalarref, in its %Lexicon).</p>
+<p>If the value <i>does</i> look like it's in Bracket Notation, then we compile
+it into a sub, replace the string in the %Lexicon with the new coderef,
+and then we return &amp;$new_sub($lh, ...parameters...).</p>
+<p>Bracket Notation is discussed in a later section.  Note
+that trying to compile a string into Bracket Notation can throw
+an exception if the string is not syntactically valid (say, by not
+balancing brackets right.)</p>
+<p>Also, calling &amp;$coderef($lh, ...parameters...) can throw any sort of
+exception (if, say, code in that sub tries to divide by zero).  But
+a very common exception occurs when you have Bracket
+Notation text that says to call a method "foo", but there is no such
+method.  (E.g., "You have [qua<strong>tn</strong>,_1,ball]." will throw an exception
+on trying to call $lh-&gt;qua<strong>tn</strong>($_[1],'ball') -- you presumably meant
+"quant".)  <code class="inline"><span class="w">maketext</span></code>
+ catches these exceptions, but only to make the
+error message more readable, at which point it rethrows the exception.</p>
+<p>An exception <i>may</i> be thrown if <i>key</i> is not found in any
+of $lh's %Lexicon hashes.  What happens if a key is not found,
+is discussed in a later section, "Controlling Lookup Failure".</p>
+<p>Note that you might find it useful in some cases to override
+the <code class="inline"><span class="w">maketext</span></code>
+ method with an "after method", if you want to
+translate encodings, or even scripts:</p>
+<pre class="verbatim"><ol><li><a name="package-YrProj::zh_cn"></a>    package <span class="i">YrProj::zh_cn</span><span class="sc">;</span> <span class="c"># Chinese with PRC-style glyphs</span></li><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">base</span> <span class="s">(</span><span class="q">&#39;YrProj::zh_tw&#39;</span><span class="s">)</span><span class="sc">;</span>  <span class="c"># Taiwan-style</span></li><li><a name="maketext"></a>    sub <span class="m">maketext</span> <span class="s">{</span></li><li>      <a class="l_k" href="../functions/my.html">my</a> <span class="i">$self</span> = <a class="l_k" href="../functions/shift.html">shift</a><span class="s">(</span><span class="i">@_</span><span class="s">)</span><span class="sc">;</span></li><li>      <a class="l_k" href="../functions/my.html">my</a> <span class="i">$value</span> = <span class="i">$self</span><span class="i">-&gt;maketext</span><span class="s">(</span><span class="i">@_</span><span class="s">)</span><span class="sc">;</span></li><li>      <a class="l_k" href="../functions/return.html">return</a> <span class="i">Chineeze::taiwan2mainland</span><span class="s">(</span><span class="i">$value</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="s">}</span></li></ol></pre><p>Or you may want to override it with something that traps
+any exceptions, if that's critical to your program:</p>
+<pre class="verbatim"><ol><li><a name="maketext"></a>  sub <span class="m">maketext</span> <span class="s">{</span></li><li>    <a class="l_k" href="../functions/my.html">my</a><span class="s">(</span><span class="i">$lh</span><span class="cm">,</span> <span class="i">@stuff</span><span class="s">)</span> = <span class="i">@_</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">$out</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/eval.html">eval</a> <span class="s">{</span> <span class="i">$out</span> = <span class="i">$lh</span><span class="i">-&gt;SUPER::maketext</span><span class="s">(</span><span class="i">@stuff</span><span class="s">)</span> <span class="s">}</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/return.html">return</a> <span class="i">$out</span> <a class="l_k" href="../functions/unless.html">unless</a> <span class="i">$@</span><span class="sc">;</span></li><li>    ...<span class="w">otherwise</span> <span class="w">deal</span> <span class="w">with</span> <span class="w">the</span> <span class="w">exception</span>...</li><li>  <span class="s">}</span></li></ol></pre><p>Other than those two situations, I don't imagine that
+it's useful to override the <code class="inline"><span class="w">maketext</span></code>
+ method.  (If
+you run into a situation where it is useful, I'd be
+interested in hearing about it.)</p>
+<ul>
+<li><a class='view-title' id="%24lh-%3efail_with-_or_-%24lh-%3efail_with(_PARAM_)"></a><strong>$lh-&gt;fail_with <i>or</i> $lh-&gt;fail_with(<i>PARAM</i>)</strong>
+</li>
+<li><a class='view-title' id="%24lh-%3efailure_handler_auto"></a><strong>$lh-&gt;failure_handler_auto</strong>
+<p>These two methods are discussed in the section "Controlling
+Lookup Failure".</p>
+</li>
+<li><a class='view-title' id="%24lh-%3eblacklist(%40list)"></a><strong>$lh-&gt;blacklist(@list)</strong>
+</li>
+<li><a class='view-title' id="%24lh-%3ewhitelist(%40list)"></a><strong>$lh-&gt;whitelist(@list)</strong>
+<p>These methods are discussed in the section "Bracket Notation
+Security".</p>
+</li>
+</ul>
+<a class='view-head2' id="Utility-Methods"></a><h3 class='h3' >Utility Methods</h3>
+<p>These are methods that you may find it handy to use, generally
+from %Lexicon routines of yours (whether expressed as
+Bracket Notation or not).</p>
+<ul>
+<li><a class='view-title' id="%24language-%3equant(%24number%2c-%24singular)"></a><strong>$language-&gt;quant($number, $singular)</strong>
+</li>
+<li><a class='view-title' id="%24language-%3equant(%24number%2c-%24singular%2c-%24plural)"></a><strong>$language-&gt;quant($number, $singular, $plural)</strong>
+</li>
+<li><a class='view-title' id="%24language-%3equant(%24number%2c-%24singular%2c-%24plural%2c-%24negative)"></a><strong>$language-&gt;quant($number, $singular, $plural, $negative)</strong>
+<p>This is generally meant to be called from inside Bracket Notation
+(which is discussed later), as in</p>
+<pre class="verbatim"><ol><li>     <span class="q">&quot;Your search matched [quant,_1,document]!&quot;</span></li></ol></pre><p>It's for <i>quantifying</i> a noun (i.e., saying how much of it there is,
+while giving the correct form of it).  The behavior of this method is
+handy for English and a few other Western European languages, and you
+should override it for languages where it's not suitable.  You can feel
+free to read the source, but the current implementation is basically
+as this pseudocode describes:</p>
+<pre class="verbatim"><ol><li>     <a class="l_k" href="../functions/if.html">if</a> <span class="i">$number</span> <span class="w">is</span> <span class="n">0</span> <a class="l_k" href="../functions/and.html">and</a> <span class="w">there&#39;s</span> <span class="w">a</span> <span class="i">$negative</span><span class="cm">,</span></li><li>        <a class="l_k" href="../functions/return.html">return</a> <span class="i">$negative</span><span class="sc">;</span></li><li>     <a class="l_k" href="../functions/elsif.html">elsif</a> <span class="i">$number</span> <span class="w">is</span> <span class="n">1</span><span class="cm">,</span></li><li>        <a class="l_k" href="../functions/return.html">return</a> <span class="q">&quot;1 $singular&quot;</span><span class="sc">;</span></li><li>     <a class="l_k" href="../functions/elsif.html">elsif</a> <span class="w">there&#39;s</span> <span class="w">a</span> <span class="i">$plural</span><span class="cm">,</span></li><li>        <a class="l_k" href="../functions/return.html">return</a> <span class="q">&quot;$number $plural&quot;</span><span class="sc">;</span></li><li>     <a class="l_k" href="../functions/else.html">else</a></li><li>        <a class="l_k" href="../functions/return.html">return</a> <span class="q">&quot;$number &quot;</span> . <span class="i">$singular</span> . <span class="q">&quot;s&quot;</span><span class="sc">;</span></li><li>     <span class="c">#</span></li><li>     <span class="c"># ...except that we actually call numf to</span></li><li>     <span class="c">#  stringify $number before returning it.</span></li></ol></pre><p>So for English (with Bracket Notation)
+<code class="inline"><span class="q">&quot;...[quant,_1,file]...&quot;</span></code>
+ is fine (for 0 it returns "0 files",
+for 1 it returns "1 file", and for more it returns "2 files", etc.)</p>
+<p>But for "directory", you'd want <code class="inline"><span class="q">&quot;[quant,_1,directory,directories]&quot;</span></code>
+
+so that our elementary <code class="inline"><span class="w">quant</span></code>
+ method doesn't think that the
+plural of "directory" is "directorys".  And you might find that the
+output may sound better if you specify a negative form, as in:</p>
+<pre class="verbatim"><ol><li>     <span class="q">&quot;[quant,_1,file,files,No files] matched your query.\n&quot;</span></li></ol></pre><p>Remember to keep in mind verb agreement (or adjectives too, in
+other languages), as in:</p>
+<pre class="verbatim"><ol><li>     <span class="q">&quot;[quant,_1,document] were matched.\n&quot;</span></li></ol></pre><p>Because if _1 is one, you get "1 document <strong>were</strong> matched".
+An acceptable hack here is to do something like this:</p>
+<pre class="verbatim"><ol><li>     <span class="q">&quot;[quant,_1,document was, documents were] matched.\n&quot;</span></li></ol></pre></li>
+<li><a class='view-title' id="%24language-%3enumf(%24number)"></a><strong>$language-&gt;numf($number)</strong>
+<p>This returns the given number formatted nicely according to
+this language's conventions.  Maketext's default method is
+mostly to just take the normal string form of the number
+(applying sprintf "%G" for only very large numbers), and then
+to add commas as necessary.  (Except that
+we apply <code class="inline"><a class="l_k" href="../functions/tr.html">tr/,./.,/</a></code> if $language-&gt;{'numf_comma'} is true;
+that's a bit of a hack that's useful for languages that express
+two million as "2.000.000" and not as "2,000,000").</p>
+<p>If you want anything fancier, consider overriding this with something
+that uses <a href="https://search.cpan.org/perldoc/Number::Format">Number::Format</a>, or does something else
+entirely.</p>
+<p>Note that numf is called by quant for stringifying all quantifying
+numbers.</p>
+</li>
+<li><a class='view-title' id="%24language-%3enumerate(%24number%2c-%24singular%2c-%24plural%2c-%24negative)"></a><strong>$language-&gt;numerate($number, $singular, $plural, $negative)</strong>
+<p>This returns the given noun form which is appropriate for the quantity
+<code class="inline"><span class="i">$number</span></code>
+ according to this language's conventions.  <code class="inline"><span class="w">numerate</span></code>
+ is
+used internally by <code class="inline"><span class="w">quant</span></code>
+ to quantify nouns.  Use it directly --
+usually from bracket notation -- to avoid <code class="inline"><span class="w">quant</span></code>
+'s implicit call to
+<code class="inline"><span class="w">numf</span></code>
+ and output of a numeric quantity.</p>
+</li>
+<li><a class='view-title' id="%24language-%3esprintf(%24format%2c-%40items)"></a><strong>$language-&gt;sprintf($format, @items)</strong>
+<p>This is just a wrapper around Perl's normal <code class="inline"><a class="l_k" href="../functions/sprintf.html">sprintf</a></code> function.
+It's provided so that you can use "sprintf" in Bracket Notation:</p>
+<pre class="verbatim"><ol><li>     <span class="q">&quot;Couldn&#39;t access datanode [sprintf,%10x=~[%s~],_1,_2]!\n&quot;</span></li></ol></pre><p>returning...</p>
+<pre class="verbatim"><ol><li>     <span class="w">Couldn&#39;t</span> <span class="w">access</span> <span class="w">datanode</span>      <span class="w">Stuff</span>=<span class="s">[</span><span class="w">thangamabob</span><span class="s">]</span>!</li></ol></pre></li>
+<li><a class='view-title' id="%24language-%3elanguage_tag()"></a><strong>$language-&gt;language_tag()</strong>
+<p>Currently this just takes the last bit of <code class="inline"><a class="l_k" href="../functions/ref.html">ref($language)</a></code>, turns
+underscores to dashes, and returns it.  So if $language is
+an object of class Hee::HOO::Haw::en_us, $language-&gt;language_tag()
+returns "en-us".  (Yes, the usual representation for that language
+tag is "en-US", but case is <i>never</i> considered meaningful in
+language-tag comparison.)</p>
+<p>You may override this as you like; Maketext doesn't use it for
+anything.</p>
+</li>
+<li><a class='view-title' id="%24language-%3eencoding()"></a><strong>$language-&gt;encoding()</strong>
+<p>Currently this isn't used for anything, but it's provided
+(with default value of
+<code class="inline"><span class="s">(</span><a class="l_k" href="../functions/ref.html">ref</a><span class="s">(</span><span class="i">$language</span><span class="s">)</span> &amp;&amp; <span class="i">$language</span>-&gt;{<span class="q">&#39;encoding&#39;</span>}<span class="s">)</span><span class="p">)</span> <a class="l_k" href="../functions/or.html">or</a> <span class="q">&quot;iso-8859-1&quot;</span></code>
+
+) as a sort of suggestion that it may be useful/necessary to
+associate encodings with your language handles (whether on a
+per-class or even per-handle basis.)</p>
+</li>
+</ul>
+<a class='view-head2' id="Language-Handle-Attributes-and-Internals"></a><h3 class='h3' >Language Handle Attributes and Internals</h3>
+<p>A language handle is a flyweight object -- i.e., it doesn't (necessarily)
+carry any data of interest, other than just being a member of
+whatever class it belongs to.</p>
+<p>A language handle is implemented as a blessed hash.  Subclasses of yours
+can store whatever data you want in the hash.  Currently the only hash
+entry used by any crucial Maketext method is "fail", so feel free to
+use anything else as you like.</p>
+<p><strong>Remember: Don't be afraid to read the Maketext source if there's
+any point on which this documentation is unclear.</strong>  This documentation
+is vastly longer than the module source itself.</p>
+<a class='view-head1' id="LANGUAGE-CLASS-HIERARCHIES"></a><h2 class='h2' >LANGUAGE CLASS HIERARCHIES</h2>
+<p>These are Locale::Maketext's assumptions about the class
+hierarchy formed by all your language classes:</p>
+<ul>
+<li>
+<p>You must have a project base class, which you load, and
+which you then use as the first argument in
+the call to YourProjClass-&gt;get_handle(...).  It should derive
+(whether directly or indirectly) from Locale::Maketext.
+It <strong>doesn't matter</strong> how you name this class, although assuming this
+is the localization component of your Super Mega Program,
+good names for your project class might be
+SuperMegaProgram::Localization, SuperMegaProgram::L10N,
+SuperMegaProgram::I18N, SuperMegaProgram::International,
+or even SuperMegaProgram::Languages or SuperMegaProgram::Messages.</p>
+</li>
+<li>
+<p>Language classes are what YourProjClass-&gt;get_handle will try to load.
+It will look for them by taking each language-tag (<strong>skipping</strong> it
+if it doesn't look like a language-tag or locale-tag!), turning it to
+all lowercase, turning dashes to underscores, and appending it
+to YourProjClass . "::".  So this:</p>
+<pre class="verbatim"><ol><li>  <span class="i">$lh</span> = <span class="w">YourProjClass</span><span class="w">-&gt;get_handle</span><span class="s">(</span></li><li>    <span class="q">&#39;en-US&#39;</span><span class="cm">,</span> <span class="q">&#39;fr&#39;</span><span class="cm">,</span> <span class="q">&#39;kon&#39;</span><span class="cm">,</span> <span class="q">&#39;i-klingon&#39;</span><span class="cm">,</span> <span class="q">&#39;i-klingon-romanized&#39;</span></li><li>  <span class="s">)</span><span class="sc">;</span></li></ol></pre><p>will try loading the classes 
+YourProjClass::en_us (note lowercase!), YourProjClass::fr, 
+YourProjClass::kon,
+YourProjClass::i_klingon
+and YourProjClass::i_klingon_romanized.  (And it'll stop at the
+first one that actually loads.)</p>
+</li>
+<li>
+<p>I assume that each language class derives (directly or indirectly)
+from your project class, and also defines its @ISA, its %Lexicon,
+or both.  But I anticipate no dire consequences if these assumptions
+do not hold.</p>
+</li>
+<li>
+<p>Language classes may derive from other language classes (although they
+should have "use <i>Thatclassname</i>" or "use base qw(<i>...classes...</i>)").
+They may derive from the project
+class.  They may derive from some other class altogether.  Or via
+multiple inheritance, it may derive from any mixture of these.</p>
+</li>
+<li>
+<p>I foresee no problems with having multiple inheritance in
+your hierarchy of language classes.  (As usual, however, Perl will
+complain bitterly if you have a cycle in the hierarchy: i.e., if
+any class is its own ancestor.)</p>
+</li>
+</ul>
+<a class='view-head1' id="ENTRIES-IN-EACH-LEXICON"></a><h2 class='h2' >ENTRIES IN EACH LEXICON</h2>
+<p>A typical %Lexicon entry is meant to signify a phrase,
+taking some number (0 or more) of parameters.  An entry
+is meant to be accessed by via
+a string <i>key</i> in $lh-&gt;maketext(<i>key</i>, ...parameters...),
+which should return a string that is generally meant for
+be used for "output" to the user -- regardless of whether
+this actually means printing to STDOUT, writing to a file,
+or putting into a GUI widget.</p>
+<p>While the key must be a string value (since that's a basic
+restriction that Perl places on hash keys), the value in
+the lexicon can currently be of several types:
+a defined scalar, scalarref, or coderef.  The use of these is
+explained above, in the section 'The "maketext" Method', and
+Bracket Notation for strings is discussed in the next section.</p>
+<p>While you can use arbitrary unique IDs for lexicon keys
+(like "_min_larger_max_error"), it is often
+useful for if an entry's key is itself a valid value, like
+this example error message:</p>
+<pre class="verbatim"><ol><li>  <span class="q">&quot;Minimum ([_1]) is larger than maximum ([_2])!\n&quot;</span><span class="cm">,</span></li></ol></pre><p>Compare this code that uses an arbitrary ID...</p>
+<pre class="verbatim"><ol><li>  <a class="l_k" href="../functions/die.html">die</a> <span class="i">$lh</span><span class="i">-&gt;maketext</span><span class="s">(</span> <span class="q">&quot;_min_larger_max_error&quot;</span><span class="cm">,</span> <span class="i">$min</span><span class="cm">,</span> <span class="i">$max</span> <span class="s">)</span></li><li>   <a class="l_k" href="../functions/if.html">if</a> <span class="i">$min</span> &gt; <span class="i">$max</span><span class="sc">;</span></li></ol></pre><p>...to this code that uses a key-as-value:</p>
+<pre class="verbatim"><ol><li>  <a class="l_k" href="../functions/die.html">die</a> <span class="i">$lh</span><span class="i">-&gt;maketext</span><span class="s">(</span></li><li>   <span class="q">&quot;Minimum ([_1]) is larger than maximum ([_2])!\n&quot;</span><span class="cm">,</span></li><li>   <span class="i">$min</span><span class="cm">,</span> <span class="i">$max</span></li><li>  <span class="s">)</span> <a class="l_k" href="../functions/if.html">if</a> <span class="i">$min</span> &gt; <span class="i">$max</span><span class="sc">;</span></li></ol></pre><p>The second is, in short, more readable.  In particular, it's obvious
+that the number of parameters you're feeding to that phrase (two) is
+the number of parameters that it <i>wants</i> to be fed.  (Since you see
+_1 and a _2 being used in the key there.)</p>
+<p>Also, once a project is otherwise
+complete and you start to localize it, you can scrape together
+all the various keys you use, and pass it to a translator; and then
+the translator's work will go faster if what he's presented is this:</p>
+<pre class="verbatim"><ol><li> <span class="q">&quot;Minimum ([_1]) is larger than maximum ([_2])!\n&quot;</span><span class="cm">,</span></li><li>  <span class="cm">=&gt;</span> <span class="q">&quot;&quot;</span><span class="cm">,</span>   <span class="c"># fill in something here, Jacques!</span></li></ol></pre><p>rather than this more cryptic mess:</p>
+<pre class="verbatim"><ol><li> <span class="q">&quot;_min_larger_max_error&quot;</span></li><li>  <span class="cm">=&gt;</span> <span class="q">&quot;&quot;</span><span class="cm">,</span>   <span class="c"># fill in something here, Jacques</span></li></ol></pre><p>I think that keys as lexicon values makes the completed lexicon
+entries more readable:</p>
+<pre class="verbatim"><ol><li> <span class="q">&quot;Minimum ([_1]) is larger than maximum ([_2])!\n&quot;</span><span class="cm">,</span></li><li>  <span class="cm">=&gt;</span> <span class="q">&quot;Le minimum ([_1]) est plus grand que le maximum ([_2])!\n&quot;</span><span class="cm">,</span></li></ol></pre><p>Also, having valid values as keys becomes very useful if you set
+up an _AUTO lexicon.  _AUTO lexicons are discussed in a later
+section.</p>
+<p>I almost always use keys that are themselves
+valid lexicon values.  One notable exception is when the value is
+quite long.  For example, to get the screenful of data that
+a command-line program might return when given an unknown switch,
+I often just use a brief, self-explanatory key such as "_USAGE_MESSAGE".  At that point I then go
+and immediately to define that lexicon entry in the
+ProjectClass::L10N::en lexicon (since English is always my "project
+language"):</p>
+<pre class="verbatim"><ol><li>  <span class="q">&#39;_USAGE_MESSAGE&#39;</span> <span class="cm">=&gt;</span> <span class="h">&lt;&lt;&#39;EOSTUFF&#39;</span><span class="cm">,</span></li><li><span class="hh">  ...long long message...</span></li><li><span class="hh">  EOSTUFF</span></li></ol></pre><p>and then I can use it as:</p>
+<pre class="verbatim"><ol><li>  <span class="i">getopt</span><span class="s">(</span><span class="q">&#39;oDI&#39;</span><span class="cm">,</span> \<span class="i">%opts</span><span class="s">)</span> <a class="l_k" href="../functions/or.html">or</a> <a class="l_k" href="../functions/die.html">die</a> <span class="i">$lh</span><span class="i">-&gt;maketext</span><span class="s">(</span><span class="q">&#39;_USAGE_MESSAGE&#39;</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>Incidentally,
+note that each class's <code class="inline"><span class="i">%Lexicon</span></code>
+ inherits-and-extends
+the lexicons in its superclasses.  This is not because these are
+special hashes <i>per se</i>, but because you access them via the
+<code class="inline"><span class="w">maketext</span></code>
+ method, which looks for entries across all the
+<code class="inline"><span class="i">%Lexicon</span></code>
+ hashes in a language class <i>and</i> all its ancestor classes.
+(This is because the idea of "class data" isn't directly implemented
+in Perl, but is instead left to individual class-systems to implement
+as they see fit..)</p>
+<p>Note that you may have things stored in a lexicon
+besides just phrases for output:  for example, if your program
+takes input from the keyboard, asking a "(Y/N)" question,
+you probably need to know what the equivalent of "Y[es]/N[o]" is
+in whatever language.  You probably also need to know what
+the equivalents of the answers "y" and "n" are.  You can
+store that information in the lexicon (say, under the keys
+"~answer_y" and "~answer_n", and the long forms as
+"~answer_yes" and "~answer_no", where "~" is just an ad-hoc
+character meant to indicate to programmers/translators that
+these are not phrases for output).</p>
+<p>Or instead of storing this in the language class's lexicon,
+you can (and, in some cases, really should) represent the same bit
+of knowledge as code in a method in the language class.  (That
+leaves a tidy distinction between the lexicon as the things we
+know how to <i>say</i>, and the rest of the things in the lexicon class
+as things that we know how to <i>do</i>.)  Consider
+this example of a processor for responses to French "oui/non"
+questions:</p>
+<pre class="verbatim"><ol><li><a name="y_or_n"></a>  sub <span class="m">y_or_n</span> <span class="s">{</span></li><li>    <a class="l_k" href="../functions/return.html">return</a> <a class="l_k" href="../functions/undef.html">undef</a> <a class="l_k" href="../functions/unless.html">unless</a> <a class="l_k" href="../functions/defined.html">defined</a> <span class="i">$_</span>[<span class="n">1</span>] <a class="l_k" href="../functions/and.html">and</a> <a class="l_k" href="../functions/length.html">length</a> <span class="i">$_</span>[<span class="n">1</span>]<span class="sc">;</span></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">$answer</span> = <a class="l_k" href="../functions/lc.html">lc</a> <span class="i">$_</span>[<span class="n">1</span>]<span class="sc">;</span>  <span class="c"># smash case</span></li><li>    <a class="l_k" href="../functions/return.html">return</a> <span class="n">1</span> <a class="l_k" href="../functions/if.html">if</a> <span class="i">$answer</span> <a class="l_k" href="../functions/eq.html">eq</a> <span class="q">&#39;o&#39;</span> <a class="l_k" href="../functions/or.html">or</a> <span class="i">$answer</span> <a class="l_k" href="../functions/eq.html">eq</a> <span class="q">&#39;oui&#39;</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/return.html">return</a> <span class="n">0</span> <a class="l_k" href="../functions/if.html">if</a> <span class="i">$answer</span> <a class="l_k" href="../functions/eq.html">eq</a> <span class="q">&#39;n&#39;</span> <a class="l_k" href="../functions/or.html">or</a> <span class="i">$answer</span> <a class="l_k" href="../functions/eq.html">eq</a> <span class="q">&#39;non&#39;</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/return.html">return</a> <a class="l_k" href="../functions/undef.html">undef</a><span class="sc">;</span></li><li>  <span class="s">}</span></li></ol></pre><p>...which you'd then call in a construct like this:</p>
+<pre class="verbatim"><ol><li>  <a class="l_k" href="../functions/my.html">my</a> <span class="i">$response</span><span class="sc">;</span></li><li>  <a class="l_k" href="../functions/until.html">until</a><span class="s">(</span><a class="l_k" href="../functions/defined.html">defined</a> <span class="i">$response</span><span class="s">)</span> <span class="s">{</span></li><li>    <a class="l_k" href="../functions/print.html">print</a> <span class="i">$lh</span><span class="i">-&gt;maketext</span><span class="s">(</span><span class="q">&quot;Open the pod bay door (y/n)? &quot;</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="i">$response</span> = <span class="i">$lh</span><span class="i">-&gt;y_or_n</span><span class="s">(</span> <span class="i">get_input_from_keyboard_somehow</span><span class="s">(</span><span class="s">)</span> <span class="s">)</span><span class="sc">;</span></li><li>  <span class="s">}</span></li><li>  <a class="l_k" href="../functions/if.html">if</a><span class="s">(</span><span class="i">$response</span><span class="s">)</span> <span class="s">{</span> <span class="i">$pod_bay_door</span><span class="i">-&gt;open</span><span class="s">(</span><span class="s">)</span>         <span class="s">}</span></li><li>  <a class="l_k" href="../functions/else.html">else</a>          <span class="s">{</span> <span class="i">$pod_bay_door</span><span class="i">-&gt;leave_closed</span><span class="s">(</span><span class="s">)</span> <span class="s">}</span></li></ol></pre><p>Other data worth storing in a lexicon might be things like
+filenames for language-targetted resources:</p>
+<pre class="verbatim"><ol><li>  ...</li><li>  <span class="q">&quot;_main_splash_png&quot;</span></li><li>    <span class="cm">=&gt;</span> <span class="q">&quot;/styles/en_us/main_splash.png&quot;</span><span class="cm">,</span></li><li>  <span class="q">&quot;_main_splash_imagemap&quot;</span></li><li>    <span class="cm">=&gt;</span> <span class="q">&quot;/styles/en_us/main_splash.incl&quot;</span><span class="cm">,</span></li><li>  <span class="q">&quot;_general_graphics_path&quot;</span></li><li>    <span class="cm">=&gt;</span> <span class="q">&quot;/styles/en_us/&quot;</span><span class="cm">,</span></li><li>  <span class="q">&quot;_alert_sound&quot;</span></li><li>    <span class="cm">=&gt;</span> <span class="q">&quot;/styles/en_us/hey_there.wav&quot;</span><span class="cm">,</span></li><li>  <span class="q">&quot;_forward_icon&quot;</span></li><li>   <span class="cm">=&gt;</span> <span class="q">&quot;left_arrow.png&quot;</span><span class="cm">,</span></li><li>  <span class="q">&quot;_backward_icon&quot;</span></li><li>   <span class="cm">=&gt;</span> <span class="q">&quot;right_arrow.png&quot;</span><span class="cm">,</span></li><li>  <span class="c"># In some other languages, left equals</span></li><li>  <span class="c">#  BACKwards, and right is FOREwards.</span></li><li>  ...</li></ol></pre><p>You might want to do the same thing for expressing key bindings
+or the like (since hardwiring "q" as the binding for the function
+that quits a screen/menu/program is useful only if your language
+happens to associate "q" with "quit"!)</p>
+<a class='view-head1' id="BRACKET-NOTATION"></a><h2 class='h2' >BRACKET NOTATION</h2>
+<p>Bracket Notation is a crucial feature of Locale::Maketext.  I mean
+Bracket Notation to provide a replacement for the use of sprintf formatting.
+Everything you do with Bracket Notation could be done with a sub block,
+but bracket notation is meant to be much more concise.</p>
+<p>Bracket Notation is a like a miniature "template" system (in the sense
+of <a href="https://search.cpan.org/perldoc/Text::Template">Text::Template</a>, not in the sense of C++ templates),
+where normal text is passed thru basically as is, but text in special
+regions is specially interpreted.  In Bracket Notation, you use square brackets ("[...]"),
+not curly braces ("{...}") to note sections that are specially interpreted.</p>
+<p>For example, here all the areas that are taken literally are underlined with
+a "^", and all the in-bracket special regions are underlined with an X:</p>
+<pre class="verbatim"><ol><li>  <span class="q">&quot;Minimum ([_1]) is larger than maximum ([_2])!\n&quot;</span><span class="cm">,</span></li><li>   ^^^^^^^^^ <span class="w">XX</span> ^^^^^^^^^^^^^^^^^^^^^^^^^^ <span class="w">XX</span> ^^^^</li></ol></pre><p>When that string is compiled from bracket notation into a real Perl sub,
+it's basically turned into:</p>
+<pre class="verbatim"><ol><li>  <a class="l_k" href="../functions/sub.html">sub</a> <span class="s">{</span></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">$lh</span> = <span class="i">$_</span>[<span class="n">0</span>]<span class="sc">;</span></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">@params</span> = <span class="i">@_</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/return.html">return</a> <a class="l_k" href="../functions/join.html">join</a> <span class="q">&#39;&#39;</span><span class="cm">,</span></li><li>      <span class="q">&quot;Minimum (&quot;</span><span class="cm">,</span></li><li>      ...<span class="w">some</span> <span class="w">code</span> <span class="w">here</span>...</li><li>      <span class="q">&quot;) is larger than maximum (&quot;</span><span class="cm">,</span></li><li>      ...<span class="w">some</span> <span class="w">code</span> <span class="w">here</span>...</li><li>      <span class="q">&quot;)!\n&quot;</span><span class="cm">,</span></li><li>  <span class="s">}</span></li><li>  <span class="c"># to be called by $lh-&gt;maketext(KEY, params...)</span></li></ol></pre><p>In other words, text outside bracket groups is turned into string
+literals.  Text in brackets is rather more complex, and currently follows
+these rules:</p>
+<ul>
+<li>
+<p>Bracket groups that are empty, or which consist only of whitespace,
+are ignored.  (Examples: "[]", "[    ]", or a [ and a ] with returns
+and/or tabs and/or spaces between them.</p>
+<p>Otherwise, each group is taken to be a comma-separated group of items,
+and each item is interpreted as follows:</p>
+</li>
+<li>
+<p>An item that is "_<i>digits</i>" or "_-<i>digits</i>" is interpreted as
+$_[<i>value</i>].  I.e., "_1" becomes with $_[1], and "_-3" is interpreted
+as $_[-3] (in which case @_ should have at least three elements in it).
+Note that $_[0] is the language handle, and is typically not named
+directly.</p>
+</li>
+<li>
+<p>An item "_*" is interpreted to mean "all of @_ except $_[0]".
+I.e., <code class="inline"><span class="i">@_</span>[<span class="n">1</span>..<span class="i">$#_</span>]</code>
+.  Note that this is an empty list in the case
+of calls like $lh-&gt;maketext(<i>key</i>) where there are no
+parameters (except $_[0], the language handle).</p>
+</li>
+<li>
+<p>Otherwise, each item is interpreted as a string literal.</p>
+</li>
+</ul>
+<p>The group as a whole is interpreted as follows:</p>
+<ul>
+<li>
+<p>If the first item in a bracket group looks like a method name,
+then that group is interpreted like this:</p>
+<pre class="verbatim"><ol><li>  <span class="i">$lh</span><span class="i">-&gt;that_method_name</span><span class="s">(</span></li><li>    ...<span class="w">rest</span> <span class="w">of</span> <span class="w">items</span> <span class="w">in</span> <span class="w">this</span> <span class="w">group</span>...</li><li>  <span class="s">)</span><span class="cm">,</span></li></ol></pre></li>
+<li>
+<p>If the first item in a bracket group is "*", it's taken as shorthand
+for the so commonly called "quant" method.  Similarly, if the first
+item in a bracket group is "#", it's taken to be shorthand for
+"numf".</p>
+</li>
+<li>
+<p>If the first item in a bracket group is the empty-string, or "_*"
+or "_<i>digits</i>" or "_-<i>digits</i>", then that group is interpreted
+as just the interpolation of all its items:</p>
+<pre class="verbatim"><ol><li>  <a class="l_k" href="../functions/join.html">join</a><span class="s">(</span><span class="q">&#39;&#39;</span><span class="cm">,</span></li><li>    ...<span class="w">rest</span> <span class="w">of</span> <span class="w">items</span> <span class="w">in</span> <span class="w">this</span> <span class="w">group</span>...</li><li>  <span class="s">)</span><span class="cm">,</span></li></ol></pre><p>Examples:  "[_1]" and "[,_1]", which are synonymous; and
+"<code class="inline"><span class="s">[</span><span class="cm">,</span><span class="w">ID</span>-<span class="s">(</span><span class="cm">,</span><span class="w">_4</span><span class="cm">,</span>-<span class="cm">,</span><span class="w">_2</span><span class="cm">,</span><span class="s">)</span><span class="s">]</span></code>
+", which compiles as
+<code class="inline"><a class="l_k" href="../functions/join.html">join</a> <span class="q">&quot;&quot;</span><span class="cm">,</span> <span class="q">&quot;ID-(&quot;</span><span class="cm">,</span> <span class="i">$_</span>[<span class="n">4</span>]<span class="cm">,</span> <span class="q">&quot;-&quot;</span><span class="cm">,</span> <span class="i">$_</span>[<span class="n">2</span>]<span class="cm">,</span> <span class="q">&quot;)&quot;</span></code>
+.</p>
+</li>
+<li>
+<p>Otherwise this bracket group is invalid.  For example, in the group
+"[!@#,whatever]", the first item <code class="inline"><span class="q">&quot;!@#&quot;</span></code>
+ is neither the empty-string,
+"_<i>number</i>", "_-<i>number</i>", "_*", nor a valid method name; and so
+Locale::Maketext will throw an exception of you try compiling an
+expression containing this bracket group.</p>
+</li>
+</ul>
+<p>Note, incidentally, that items in each group are comma-separated,
+not <code class="inline"><span class="q">/\s*,\s*/</span></code>
+-separated.  That is, you might expect that this
+bracket group:</p>
+<pre class="verbatim"><ol><li>  <span class="q">&quot;Hoohah [foo, _1 , bar ,baz]!&quot;</span></li></ol></pre><p>would compile to this:</p>
+<pre class="verbatim"><ol><li>  <a class="l_k" href="../functions/sub.html">sub</a> <span class="s">{</span></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">$lh</span> = <span class="i">$_</span>[<span class="n">0</span>]<span class="sc">;</span></li><li>    <a class="l_k" href="../functions/return.html">return</a> <a class="l_k" href="../functions/join.html">join</a> <span class="q">&#39;&#39;</span><span class="cm">,</span></li><li>      <span class="q">&quot;Hoohah &quot;</span><span class="cm">,</span></li><li>      <span class="i">$lh</span><span class="i">-&gt;foo</span><span class="s">(</span> <span class="i">$_</span>[<span class="n">1</span>]<span class="cm">,</span> <span class="q">&quot;bar&quot;</span><span class="cm">,</span> <span class="q">&quot;baz&quot;</span><span class="s">)</span><span class="cm">,</span></li><li>      <span class="q">&quot;!&quot;</span><span class="cm">,</span></li><li>  <span class="s">}</span></li></ol></pre><p>But it actually compiles as this:</p>
+<pre class="verbatim"><ol><li>  <a class="l_k" href="../functions/sub.html">sub</a> <span class="s">{</span></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">$lh</span> = <span class="i">$_</span>[<span class="n">0</span>]<span class="sc">;</span></li><li>    <a class="l_k" href="../functions/return.html">return</a> <a class="l_k" href="../functions/join.html">join</a> <span class="q">&#39;&#39;</span><span class="cm">,</span></li><li>      <span class="q">&quot;Hoohah &quot;</span><span class="cm">,</span></li><li>      <span class="i">$lh</span><span class="i">-&gt;foo</span><span class="s">(</span><span class="q">&quot; _1 &quot;</span><span class="cm">,</span> <span class="q">&quot; bar &quot;</span><span class="cm">,</span> <span class="q">&quot;baz&quot;</span><span class="s">)</span><span class="cm">,</span>  <span class="c"># note the &lt;space&gt; in &quot; bar &quot;</span></li><li>      <span class="q">&quot;!&quot;</span><span class="cm">,</span></li><li>  <span class="s">}</span></li></ol></pre><p>In the notation discussed so far, the characters "[" and "]" are given
+special meaning, for opening and closing bracket groups, and "," has
+a special meaning inside bracket groups, where it separates items in the
+group.  This begs the question of how you'd express a literal "[" or
+"]" in a Bracket Notation string, and how you'd express a literal
+comma inside a bracket group.  For this purpose I've adopted "~" (tilde)
+as an escape character:  "~[" means a literal '[' character anywhere
+in Bracket Notation (i.e., regardless of whether you're in a bracket
+group or not), and ditto for "~]" meaning a literal ']', and "~," meaning
+a literal comma.  (Altho "," means a literal comma outside of
+bracket groups -- it's only inside bracket groups that commas are special.)</p>
+<p>And on the off chance you need a literal tilde in a bracket expression,
+you get it with "~~".</p>
+<p>Currently, an unescaped "~" before a character
+other than a bracket or a comma is taken to mean just a "~" and that
+character.  I.e., "~X" means the same as "~~X" -- i.e., one literal tilde,
+and then one literal "X".  However, by using "~X", you are assuming that
+no future version of Maketext will use "~X" as a magic escape sequence.
+In practice this is not a great problem, since first off you can just
+write "~~X" and not worry about it; second off, I doubt I'll add lots
+of new magic characters to bracket notation; and third off, you
+aren't likely to want literal "~" characters in your messages anyway,
+since it's not a character with wide use in natural language text.</p>
+<p>Brackets must be balanced -- every openbracket must have
+one matching closebracket, and vice versa.  So these are all <strong>invalid</strong>:</p>
+<pre class="verbatim"><ol><li>  <span class="q">&quot;I ate [quant,_1,rhubarb pie.&quot;</span></li><li>  <span class="q">&quot;I ate [quant,_1,rhubarb pie[.&quot;</span></li><li>  <span class="q">&quot;I ate quant,_1,rhubarb pie].&quot;</span></li><li>  <span class="q">&quot;I ate quant,_1,rhubarb pie[.&quot;</span></li></ol></pre><p>Currently, bracket groups do not nest.  That is, you <strong>cannot</strong> say:</p>
+<pre class="verbatim"><ol><li>  <span class="q">&quot;Foo [bar,baz,[quux,quuux]]\n&quot;</span><span class="sc">;</span></li></ol></pre><p>If you need a notation that's that powerful, use normal Perl:</p>
+<pre class="verbatim"><ol><li>  <span class="i">%Lexicon</span> = <span class="s">(</span></li><li>    ...</li><li>    <span class="q">&quot;some_key&quot;</span> <span class="cm">=&gt;</span> <a class="l_k" href="../functions/sub.html">sub</a> <span class="s">{</span></li><li>      <a class="l_k" href="../functions/my.html">my</a> <span class="i">$lh</span> = <span class="i">$_</span>[<span class="n">0</span>]<span class="sc">;</span></li><li>      <a class="l_k" href="../functions/join.html">join</a> <span class="q">&#39;&#39;</span><span class="cm">,</span></li><li>        <span class="q">&quot;Foo &quot;</span><span class="cm">,</span></li><li>        <span class="i">$lh</span><span class="i">-&gt;bar</span><span class="s">(</span><span class="q">&#39;baz&#39;</span><span class="cm">,</span> <span class="i">$lh</span><span class="i">-&gt;quux</span><span class="s">(</span><span class="q">&#39;quuux&#39;</span><span class="s">)</span><span class="s">)</span><span class="cm">,</span></li><li>        <span class="q">&quot;\n&quot;</span><span class="cm">,</span></li><li>    <span class="s">}</span><span class="cm">,</span></li><li>    ...</li><li>  <span class="s">)</span><span class="sc">;</span></li></ol></pre><p>Or write the "bar" method so you don't need to pass it the
+output from calling quux.</p>
+<p>I do not anticipate that you will need (or particularly want)
+to nest bracket groups, but you are welcome to email me with
+convincing (real-life) arguments to the contrary.</p>
+<a class='view-head1' id="BRACKET-NOTATION-SECURITY"></a><h2 class='h2' >BRACKET NOTATION SECURITY</h2>
+<p>Locale::Maketext does not use any special syntax to differentiate
+bracket notation methods from normal class or object methods. This
+design makes it vulnerable to format string attacks whenever it is
+used to process strings provided by untrusted users.</p>
+<p>Locale::Maketext does support blacklist and whitelist functionality
+to limit which methods may be called as bracket notation methods.</p>
+<p>By default, Locale::Maketext blacklists all methods in the
+Locale::Maketext namespace that begin with the '_' character,
+and all methods which include Perl's namespace separator characters.</p>
+<p>The default blacklist for Locale::Maketext also prevents use of the
+following methods in bracket notation:</p>
+<pre class="verbatim"><ol><li>  <span class="w">blacklist</span></li><li>  <span class="w">encoding</span></li><li>  <span class="w">fail_with</span></li><li>  <span class="w">failure_handler_auto</span></li><li>  <span class="w">fallback_language_classes</span></li><li>  <span class="w">fallback_languages</span></li><li>  <span class="w">get_handle</span></li><li>  <span class="w">init</span></li><li>  <span class="w">language_tag</span></li><li>  <span class="w">maketext</span></li><li>  <span class="w">new</span></li><li>  <span class="w">whitelist</span></li></ol></pre><p>This list can be extended by either blacklisting additional "known bad"
+methods, or whitelisting only "known good" methods.</p>
+<p>To prevent specific methods from being called in bracket notation, use
+the blacklist() method:</p>
+<pre class="verbatim"><ol><li>  <a class="l_k" href="../functions/my.html">my</a> <span class="i">$lh</span> = <span class="w">MyProgram::L10N</span><span class="w">-&gt;get_handle</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li><li>  <span class="i">$lh</span><span class="i">-&gt;blacklist</span><span class="s">(</span><span class="q">qw{my_internal_method my_other_method}</span><span class="s">)</span><span class="sc">;</span></li><li>  <span class="i">$lh</span><span class="i">-&gt;maketext</span><span class="s">(</span><span class="q">&#39;[my_internal_method]&#39;</span><span class="s">)</span><span class="sc">;</span> <span class="c"># dies</span></li></ol></pre><p>To limit the allowed bracked notation methods to a specific list, use the
+whitelist() method:</p>
+<pre class="verbatim"><ol><li>  <a class="l_k" href="../functions/my.html">my</a> <span class="i">$lh</span> = <span class="w">MyProgram::L10N</span><span class="w">-&gt;get_handle</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li><li>  <span class="i">$lh</span><span class="i">-&gt;whitelist</span><span class="s">(</span><span class="q">&#39;numerate&#39;</span><span class="cm">,</span> <span class="q">&#39;numf&#39;</span><span class="s">)</span><span class="sc">;</span></li><li>  <span class="i">$lh</span><span class="i">-&gt;maketext</span><span class="s">(</span><span class="q">&#39;[_1] [numerate, _1,shoe,shoes]&#39;</span><span class="cm">,</span> <span class="n">12</span><span class="s">)</span><span class="sc">;</span> <span class="c"># works</span></li><li>  <span class="i">$lh</span><span class="i">-&gt;maketext</span><span class="s">(</span><span class="q">&#39;[my_internal_method]&#39;</span><span class="s">)</span><span class="sc">;</span> <span class="c"># dies</span></li></ol></pre><p>The blacklist() and whitelist() methods extend their internal lists
+whenever they are called. To reset the blacklist or whitelist, create
+a new maketext object.</p>
+<pre class="verbatim"><ol><li>  <a class="l_k" href="../functions/my.html">my</a> <span class="i">$lh</span> = <span class="w">MyProgram::L10N</span><span class="w">-&gt;get_handle</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li><li>  <span class="i">$lh</span><span class="i">-&gt;blacklist</span><span class="s">(</span><span class="q">&#39;numerate&#39;</span><span class="s">)</span><span class="sc">;</span></li><li>  <span class="i">$lh</span><span class="i">-&gt;blacklist</span><span class="s">(</span><span class="q">&#39;numf&#39;</span><span class="s">)</span><span class="sc">;</span></li><li>  <span class="i">$lh</span><span class="i">-&gt;maketext</span><span class="s">(</span><span class="q">&#39;[_1] [numerate,_1,shoe,shoes]&#39;</span><span class="cm">,</span> <span class="n">12</span><span class="s">)</span><span class="sc">;</span> <span class="c"># dies</span></li></ol></pre><p>For lexicons that use an internal cache, translations which have already
+been cached in their compiled form are not affected by subsequent changes
+to the whitelist or blacklist settings. Lexicons that use an external
+cache will have their cache cleared whenever the whitelist of blacklist
+setings change.  The difference between the two types of caching is explained
+in the "Readonly Lexicons" section.</p>
+<p>Methods disallowed by the blacklist cannot be permitted by the
+whitelist.</p>
+<a class='view-head1' id="AUTO-LEXICONS"></a><h2 class='h2' >AUTO LEXICONS</h2>
+<p>If maketext goes to look in an individual %Lexicon for an entry
+for <i>key</i> (where <i>key</i> does not start with an underscore), and
+sees none, <strong>but does see</strong> an entry of "_AUTO" =&gt; <i>some_true_value</i>,
+then we actually define $Lexicon{<i>key</i>} = <i>key</i> right then and there,
+and then use that value as if it had been there all
+along.  This happens before we even look in any superclass %Lexicons!</p>
+<p>(This is meant to be somewhat like the AUTOLOAD mechanism in
+Perl's function call system -- or, looked at another way,
+like the <a href="../AutoLoader.html">AutoLoader</a> module.)</p>
+<p>I can picture all sorts of circumstances where you just
+do not want lookup to be able to fail (since failing
+normally means that maketext throws a <code class="inline"><a class="l_k" href="../functions/die.html">die</a></code>, although
+see the next section for greater control over that).  But
+here's one circumstance where _AUTO lexicons are meant to
+be <i>especially</i> useful:</p>
+<p>As you're writing an application, you decide as you go what messages
+you need to emit.  Normally you'd go to write this:</p>
+<pre class="verbatim"><ol><li>  <a class="l_k" href="../functions/if.html">if</a><span class="s">(</span>-e <span class="i">$filename</span><span class="s">)</span> <span class="s">{</span></li><li>    <span class="i">go_process_file</span><span class="s">(</span><span class="i">$filename</span><span class="s">)</span></li><li>  <span class="s">}</span> <a class="l_k" href="../functions/else.html">else</a> <span class="s">{</span></li><li>    <a class="l_k" href="../functions/print.html">print</a> <span class="q">qq{Couldn&#39;t find file &quot;$filename&quot;!\n}</span><span class="sc">;</span></li><li>  <span class="s">}</span></li></ol></pre><p>but since you anticipate localizing this, you write:</p>
+<pre class="verbatim"><ol><li>  <a class="l_k" href="../functions/use.html">use</a> <span class="w">ThisProject::I18N</span><span class="sc">;</span></li><li>  <a class="l_k" href="../functions/my.html">my</a> <span class="i">$lh</span> = <span class="w">ThisProject::I18N</span><span class="w">-&gt;get_handle</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li><li>   <span class="c"># For the moment, assume that things are set up so</span></li><li>   <span class="c"># that we load class ThisProject::I18N::en</span></li><li>   <span class="c"># and that that&#39;s the class that $lh belongs to.</span></li><li>  ...</li><li>  <a class="l_k" href="../functions/if.html">if</a><span class="s">(</span>-e <span class="i">$filename</span><span class="s">)</span> <span class="s">{</span></li><li>    <span class="i">go_process_file</span><span class="s">(</span><span class="i">$filename</span><span class="s">)</span></li><li>  <span class="s">}</span> <a class="l_k" href="../functions/else.html">else</a> <span class="s">{</span></li><li>    <a class="l_k" href="../functions/print.html">print</a> <span class="i">$lh</span><span class="i">-&gt;maketext</span><span class="s">(</span></li><li>      <span class="q">qq{Couldn&#39;t find file &quot;[_1]&quot;!\n}</span><span class="cm">,</span> <span class="i">$filename</span></li><li>    <span class="s">)</span><span class="sc">;</span></li><li>  <span class="s">}</span></li></ol></pre><p>Now, right after you've just written the above lines, you'd
+normally have to go open the file 
+ThisProject/I18N/en.pm, and immediately add an entry:</p>
+<pre class="verbatim"><ol><li>  <span class="q">&quot;Couldn&#39;t find file \&quot;[_1]\&quot;!\n&quot;</span></li><li>  <span class="cm">=&gt;</span> <span class="q">&quot;Couldn&#39;t find file \&quot;[_1]\&quot;!\n&quot;</span><span class="cm">,</span></li></ol></pre><p>But I consider that somewhat of a distraction from the work
+of getting the main code working -- to say nothing of the fact
+that I often have to play with the program a few times before
+I can decide exactly what wording I want in the messages (which
+in this case would require me to go changing three lines of code:
+the call to maketext with that key, and then the two lines in
+ThisProject/I18N/en.pm).</p>
+<p>However, if you set "_AUTO =&gt; 1" in the %Lexicon in,
+ThisProject/I18N/en.pm (assuming that English (en) is
+the language that all your programmers will be using for this
+project's internal message keys), then you don't ever have to
+go adding lines like this</p>
+<pre class="verbatim"><ol><li>  <span class="q">&quot;Couldn&#39;t find file \&quot;[_1]\&quot;!\n&quot;</span></li><li>  <span class="cm">=&gt;</span> <span class="q">&quot;Couldn&#39;t find file \&quot;[_1]\&quot;!\n&quot;</span><span class="cm">,</span></li></ol></pre><p>to ThisProject/I18N/en.pm, because if _AUTO is true there,
+then just looking for an entry with the key "Couldn't find
+file \"[_1]\"!\n" in that lexicon will cause it to be added,
+with that value!</p>
+<p>Note that the reason that keys that start with "_"
+are immune to _AUTO isn't anything generally magical about
+the underscore character -- I just wanted a way to have most
+lexicon keys be autoable, except for possibly a few, and I
+arbitrarily decided to use a leading underscore as a signal
+to distinguish those few.</p>
+<a class='view-head1' id="READONLY-LEXICONS"></a><h2 class='h2' >READONLY LEXICONS</h2>
+<p>If your lexicon is a tied hash the simple act of caching the compiled value can be fatal.</p>
+<p>For example a <a href="https://search.cpan.org/perldoc/GDBM_File">GDBM_File</a> GDBM_READER tied hash will die with something like:</p>
+<pre class="verbatim"><ol><li>   <span class="w">gdbm</span> <span class="w">store</span> <span class="w">returned</span> -<span class="n">1</span><span class="cm">,</span> <span class="w">errno</span> <span class="n">2</span><span class="cm">,</span> <span class="w">key</span> <span class="q">&quot;...&quot;</span> <span class="w">at</span> ...</li></ol></pre><p>All you need to do is turn on caching outside of the lexicon hash itself like so:</p>
+<pre class="verbatim"><ol><li><a name="init"></a>   sub <span class="m">init</span> <span class="s">{</span></li><li>       <a class="l_k" href="../functions/my.html">my</a> <span class="s">(</span><span class="i">$lh</span><span class="s">)</span> = <span class="i">@_</span><span class="sc">;</span></li><li>       ...</li><li>       <span class="i">$lh</span>-&gt;{<span class="q">&#39;use_external_lex_cache&#39;</span>} = <span class="n">1</span><span class="sc">;</span></li><li>       ...</li><li>   <span class="s">}</span></li></ol></pre><p>And then instead of storing the compiled value in the lexicon hash it will store it in $lh-&gt;{'_external_lex_cache'}</p>
+<a class='view-head1' id="CONTROLLING-LOOKUP-FAILURE"></a><h2 class='h2' >CONTROLLING LOOKUP FAILURE</h2>
+<p>If you call $lh-&gt;maketext(<i>key</i>, ...parameters...),
+and there's no entry <i>key</i> in $lh's class's %Lexicon, nor
+in the superclass %Lexicon hash, <i>and</i> if we can't auto-make
+<i>key</i> (because either it starts with a "_", or because none
+of its lexicons have <code class="inline"><span class="w">_AUTO</span> <span class="cm">=&gt;</span> <span class="n">1</span><span class="cm">,</span></code>
+), then we have
+failed to find a normal way to maketext <i>key</i>.  What then
+happens in these failure conditions, depends on the $lh object's
+"fail" attribute.</p>
+<p>If the language handle has no "fail" attribute, maketext
+will simply throw an exception (i.e., it calls <code class="inline"><a class="l_k" href="../functions/die.html">die</a></code>, mentioning
+the <i>key</i> whose lookup failed, and naming the line number where
+the calling $lh-&gt;maketext(<i>key</i>,...) was.</p>
+<p>If the language handle has a "fail" attribute whose value is a
+coderef, then $lh-&gt;maketext(<i>key</i>,...params...) gives up and calls:</p>
+<pre class="verbatim"><ol><li>  <a class="l_k" href="../functions/return.html">return</a> <span class="i">$that_subref</span>-&gt;<span class="s">(</span><span class="i">$lh</span><span class="cm">,</span> <span class="i">$key</span><span class="cm">,</span> <span class="i">@params</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>Otherwise, the "fail" attribute's value should be a string denoting
+a method name, so that $lh-&gt;maketext(<i>key</i>,...params...) can
+give up with:</p>
+<pre class="verbatim"><ol><li>  <a class="l_k" href="../functions/return.html">return</a> <span class="i">$lh</span><span class="i">-&gt;$that_method_name</span><span class="s">(</span><span class="i">$phrase</span><span class="cm">,</span> <span class="i">@params</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>The "fail" attribute can be accessed with the <code class="inline"><span class="w">fail_with</span></code>
+ method:</p>
+<pre class="verbatim"><ol><li>  <span class="c"># Set to a coderef:</span></li><li>  <span class="i">$lh</span><span class="i">-&gt;fail_with</span><span class="s">(</span> \<span class="i">&amp;failure_handler</span> <span class="s">)</span><span class="sc">;</span></li><li></li><li>  <span class="c"># Set to a method name:</span></li><li>  <span class="i">$lh</span><span class="i">-&gt;fail_with</span><span class="s">(</span> <span class="q">&#39;failure_method&#39;</span> <span class="s">)</span><span class="sc">;</span></li><li></li><li>  <span class="c"># Set to nothing (i.e., so failure throws a plain exception)</span></li><li>  <span class="i">$lh</span><span class="i">-&gt;fail_with</span><span class="s">(</span> <a class="l_k" href="../functions/undef.html">undef</a> <span class="s">)</span><span class="sc">;</span></li><li></li><li>  <span class="c"># Get the current value</span></li><li>  <span class="i">$handler</span> = <span class="i">$lh</span><span class="i">-&gt;fail_with</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>Now, as to what you may want to do with these handlers:  Maybe you'd
+want to log what key failed for what class, and then die.  Maybe
+you don't like <code class="inline"><a class="l_k" href="../functions/die.html">die</a></code> and instead you want to send the error message
+to STDOUT (or wherever) and then merely <code class="inline"><a class="l_k" href="../functions/exit.html">exit()</a></code>.</p>
+<p>Or maybe you don't want to <code class="inline"><a class="l_k" href="../functions/die.html">die</a></code> at all!  Maybe you could use a
+handler like this:</p>
+<pre class="verbatim"><ol><li>  <span class="c"># Make all lookups fall back onto an English value,</span></li><li>  <span class="c">#  but only after we log it for later fingerpointing.</span></li><li>  <a class="l_k" href="../functions/my.html">my</a> <span class="i">$lh_backup</span> = <span class="w">ThisProject</span><span class="w">-&gt;get_handle</span><span class="s">(</span><span class="q">&#39;en&#39;</span><span class="s">)</span><span class="sc">;</span></li><li>  <a class="l_k" href="../functions/open.html">open</a><span class="s">(</span><span class="w">LEX_FAIL_LOG</span><span class="cm">,</span> <span class="q">&quot;&gt;&gt;wherever/lex.log&quot;</span><span class="s">)</span> || <a class="l_k" href="../functions/die.html">die</a> <span class="q">&quot;GNAARGH $!&quot;</span><span class="sc">;</span></li><li><a name="lex_fail"></a>  sub <span class="m">lex_fail</span> <span class="s">{</span></li><li>    <a class="l_k" href="../functions/my.html">my</a><span class="s">(</span><span class="i">$failing_lh</span><span class="cm">,</span> <span class="i">$key</span><span class="cm">,</span> <span class="i">$params</span><span class="s">)</span> = <span class="i">@_</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/print.html">print</a> <span class="i">LEX_FAIL_LOG</span> <a class="l_k" href="../functions/scalar.html">scalar</a><span class="s">(</span><a class="l_k" href="../functions/localtime.html">localtime</a><span class="s">)</span><span class="cm">,</span> <span class="q">&quot;\t&quot;</span><span class="cm">,</span></li><li>       <a class="l_k" href="../functions/ref.html">ref</a><span class="s">(</span><span class="i">$failing_lh</span><span class="s">)</span><span class="cm">,</span> <span class="q">&quot;\t&quot;</span><span class="cm">,</span> <span class="i">$key</span><span class="cm">,</span> <span class="q">&quot;\n&quot;</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/return.html">return</a> <span class="i">$lh_backup</span><span class="i">-&gt;maketext</span><span class="s">(</span><span class="i">$key</span><span class="cm">,</span><span class="i">@params</span><span class="s">)</span><span class="sc">;</span></li><li>  <span class="s">}</span></li></ol></pre><p>Some users have expressed that they think this whole mechanism of
+having a "fail" attribute at all, seems a rather pointless complication.
+But I want Locale::Maketext to be usable for software projects of <i>any</i>
+scale and type; and different software projects have different ideas
+of what the right thing is to do in failure conditions.  I could simply
+say that failure always throws an exception, and that if you want to be
+careful, you'll just have to wrap every call to $lh-&gt;maketext in an
+eval { }.  However, I want programmers to reserve the right (via
+the "fail" attribute) to treat lookup failure as something other than
+an exception of the same level of severity as a config file being
+unreadable, or some essential resource being inaccessible.</p>
+<p>One possibly useful value for the "fail" attribute is the method name
+"failure_handler_auto".  This is a method defined in the class
+Locale::Maketext itself.  You set it with:</p>
+<pre class="verbatim"><ol><li>  <span class="i">$lh</span><span class="i">-&gt;fail_with</span><span class="s">(</span><span class="q">&#39;failure_handler_auto&#39;</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>Then when you call $lh-&gt;maketext(<i>key</i>, ...parameters...) and
+there's no <i>key</i> in any of those lexicons, maketext gives up with</p>
+<pre class="verbatim"><ol><li>  <a class="l_k" href="../functions/return.html">return</a> <span class="i">$lh</span><span class="i">-&gt;failure_handler_auto</span><span class="s">(</span><span class="i">$key</span><span class="cm">,</span> <span class="i">@params</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>But failure_handler_auto, instead of dying or anything, compiles
+$key, caching it in</p>
+<pre class="verbatim"><ol><li>    <span class="i">$lh</span>-&gt;{<span class="q">&#39;failure_lex&#39;</span>}{<span class="i">$key</span>} = <span class="i">$compiled</span></li></ol></pre><p>and then calls the compiled value, and returns that.  (I.e., if
+$key looks like bracket notation, $compiled is a sub, and we return
+&amp;{$compiled}(@params); but if $key is just a plain string, we just
+return that.)</p>
+<p>The effect of using "failure_auto_handler"
+is like an AUTO lexicon, except that it 1) compiles $key even if
+it starts with "_", and 2) you have a record in the new hashref
+$lh-&gt;{'failure_lex'} of all the keys that have failed for
+this object.  This should avoid your program dying -- as long
+as your keys aren't actually invalid as bracket code, and as
+long as they don't try calling methods that don't exist.</p>
+<p>"failure_auto_handler" may not be exactly what you want, but I
+hope it at least shows you that maketext failure can be mitigated
+in any number of very flexible ways.  If you can formalize exactly
+what you want, you should be able to express that as a failure
+handler.  You can even make it default for every object of a given
+class, by setting it in that class's init:</p>
+<pre class="verbatim"><ol><li><a name="init"></a>  sub <span class="m">init</span> <span class="s">{</span></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">$lh</span> = <span class="i">$_</span>[<span class="n">0</span>]<span class="sc">;</span>  <span class="c"># a newborn handle</span></li><li>    <span class="i">$lh</span><span class="i">-&gt;SUPER::init</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="i">$lh</span><span class="i">-&gt;fail_with</span><span class="s">(</span><span class="q">&#39;my_clever_failure_handler&#39;</span><span class="s">)</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/return.html">return</a><span class="sc">;</span></li><li>  <span class="s">}</span></li><li><a name="my_clever_failure_handler"></a>  sub <span class="m">my_clever_failure_handler</span> <span class="s">{</span></li><li>    ...<span class="w">you</span> <span class="w">clever</span> <span class="w">things</span> <span class="w">here</span>...</li><li>  <span class="s">}</span></li></ol></pre><a class='view-head1' id="HOW-TO-USE-MAKETEXT"></a><h2 class='h2' >HOW TO USE MAKETEXT</h2>
+<p>Here is a brief checklist on how to use Maketext to localize
+applications:</p>
+<ul>
+<li>
+<p>Decide what system you'll use for lexicon keys.  If you insist,
+you can use opaque IDs (if you're nostalgic for <code class="inline"><span class="w">catgets</span></code>
+),
+but I have better suggestions in the
+section "Entries in Each Lexicon", above.  Assuming you opt for
+meaningful keys that double as values (like "Minimum ([_1]) is
+larger than maximum ([_2])!\n"), you'll have to settle on what
+language those should be in.  For the sake of argument, I'll
+call this English, specifically American English, "en-US".</p>
+</li>
+<li>
+<p>Create a class for your localization project.  This is
+the name of the class that you'll use in the idiom:</p>
+<pre class="verbatim"><ol><li>  <a class="l_k" href="../functions/use.html">use</a> <span class="w">Projname::L10N</span><span class="sc">;</span></li><li>  <a class="l_k" href="../functions/my.html">my</a> <span class="i">$lh</span> = <span class="w">Projname::L10N</span><span class="w">-&gt;get_handle</span><span class="s">(</span>...<span class="s">)</span> || <a class="l_k" href="../functions/die.html">die</a> <span class="q">&quot;Language?&quot;</span><span class="sc">;</span></li></ol></pre><p>Assuming you call your class Projname::L10N, create a class
+consisting minimally of:</p>
+<pre class="verbatim"><ol><li><a name="package-Projname::L10N"></a>  package <span class="i">Projname::L10N</span><span class="sc">;</span></li><li>  <a class="l_k" href="../functions/use.html">use</a> <span class="w">base</span> <span class="q">qw(Locale::Maketext)</span><span class="sc">;</span></li><li>  ...<span class="w">any</span> <span class="w">methods</span> <span class="w">you</span> <span class="w">might</span> <span class="w">want</span> <span class="w">all</span> <span class="w">your</span> <span class="w">languages</span> <span class="w">to</span> <span class="w">share</span>...</li><li></li><li>  <span class="c"># And, assuming you want the base class to be an _AUTO lexicon,</span></li><li>  <span class="c"># as is discussed a few sections up:</span></li><li></li><li>  <span class="n">1</span><span class="sc">;</span></li></ol></pre></li>
+<li>
+<p>Create a class for the language your internal keys are in.  Name
+the class after the language-tag for that language, in lowercase,
+with dashes changed to underscores.  Assuming your project's first
+language is US English, you should call this Projname::L10N::en_us.
+It should consist minimally of:</p>
+<pre class="verbatim"><ol><li><a name="package-Projname::L10N::en_us"></a>  package <span class="i">Projname::L10N::en_us</span><span class="sc">;</span></li><li>  <a class="l_k" href="../functions/use.html">use</a> <span class="w">base</span> <span class="q">qw(Projname::L10N)</span><span class="sc">;</span></li><li>  <span class="i">%Lexicon</span> = <span class="s">(</span></li><li>    <span class="q">&#39;_AUTO&#39;</span> <span class="cm">=&gt;</span> <span class="n">1</span><span class="cm">,</span></li><li>  <span class="s">)</span><span class="sc">;</span></li><li>  <span class="n">1</span><span class="sc">;</span></li></ol></pre><p>(For the rest of this section, I'll assume that this "first
+language class" of Projname::L10N::en_us has
+_AUTO lexicon.)</p>
+</li>
+<li>
+<p>Go and write your program.  Everywhere in your program where 
+you would say:</p>
+<pre class="verbatim"><ol><li>  <a class="l_k" href="../functions/print.html">print</a> <span class="q">&quot;Foobar $thing stuff\n&quot;</span><span class="sc">;</span></li></ol></pre><p>instead do it thru maketext, using no variable interpolation in
+the key:</p>
+<pre class="verbatim"><ol><li>  <a class="l_k" href="../functions/print.html">print</a> <span class="i">$lh</span><span class="i">-&gt;maketext</span><span class="s">(</span><span class="q">&quot;Foobar [_1] stuff\n&quot;</span><span class="cm">,</span> <span class="i">$thing</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>If you get tired of constantly saying <code class="inline"><a class="l_k" href="../functions/print.html">print</a> <span class="i">$lh</span><span class="i">-&gt;maketext</span></code>
+,
+consider making a functional wrapper for it, like so:</p>
+<pre class="verbatim"><ol><li>  <a class="l_k" href="../functions/use.html">use</a> <span class="w">Projname::L10N</span><span class="sc">;</span></li><li>  <a class="l_k" href="../functions/use.html">use</a> <span class="w">vars</span> <span class="q">qw($lh)</span><span class="sc">;</span></li><li>  <span class="i">$lh</span> = <span class="w">Projname::L10N</span><span class="w">-&gt;get_handle</span><span class="s">(</span>...<span class="s">)</span> || <a class="l_k" href="../functions/die.html">die</a> <span class="q">&quot;Language?&quot;</span><span class="sc">;</span></li><li><a name="pmt"></a>  sub <span class="m">pmt (@)</span> <span class="s">{</span> <a class="l_k" href="../functions/print.html">print</a><span class="s">(</span> <span class="i">$lh</span><span class="i">-&gt;maketext</span><span class="s">(</span><span class="i">@_</span><span class="s">)</span><span class="s">)</span> <span class="s">}</span></li><li>   <span class="c"># &quot;pmt&quot; is short for &quot;Print MakeText&quot;</span></li><li>  <span class="i">$Carp::Verbose</span> = <span class="n">1</span><span class="sc">;</span></li><li>   <span class="c"># so if maketext fails, we see made the call to pmt</span></li></ol></pre><p>Besides whole phrases meant for output, anything language-dependent
+should be put into the class Projname::L10N::en_us,
+whether as methods, or as lexicon entries -- this is discussed
+in the section "Entries in Each Lexicon", above.</p>
+</li>
+<li>
+<p>Once the program is otherwise done, and once its localization for
+the first language works right (via the data and methods in
+Projname::L10N::en_us), you can get together the data for translation.
+If your first language lexicon isn't an _AUTO lexicon, then you already
+have all the messages explicitly in the lexicon (or else you'd be
+getting exceptions thrown when you call $lh-&gt;maketext to get
+messages that aren't in there).  But if you were (advisedly) lazy and are
+using an _AUTO lexicon, then you've got to make a list of all the phrases
+that you've so far been letting _AUTO generate for you.  There are very
+many ways to assemble such a list.  The most straightforward is to simply
+grep the source for every occurrence of "maketext" (or calls
+to wrappers around it, like the above <code class="inline"><span class="w">pmt</span></code>
+ function), and to log the
+following phrase.</p>
+</li>
+<li>
+<p>You may at this point want to consider whether your base class 
+(Projname::L10N), from which all lexicons inherit from (Projname::L10N::en,
+Projname::L10N::es, etc.), should be an _AUTO lexicon.  It may be true
+that in theory, all needed messages will be in each language class;
+but in the presumably unlikely or "impossible" case of lookup failure,
+you should consider whether your program should throw an exception,
+emit text in English (or whatever your project's first language is),
+or some more complex solution as described in the section
+"Controlling Lookup Failure", above.</p>
+</li>
+<li>
+<p>Submit all messages/phrases/etc. to translators.</p>
+<p>(You may, in fact, want to start with localizing to <i>one</i> other language
+at first, if you're not sure that you've properly abstracted the
+language-dependent parts of your code.)</p>
+<p>Translators may request clarification of the situation in which a
+particular phrase is found.  For example, in English we are entirely happy
+saying "<i>n</i> files found", regardless of whether we mean "I looked for files,
+and found <i>n</i> of them" or the rather distinct situation of "I looked for
+something else (like lines in files), and along the way I saw <i>n</i>
+files."  This may involve rethinking things that you thought quite clear:
+should "Edit" on a toolbar be a noun ("editing") or a verb ("to edit")?  Is
+there already a conventionalized way to express that menu option, separate
+from the target language's normal word for "to edit"?</p>
+<p>In all cases where the very common phenomenon of quantification
+(saying "<i>N</i> files", for <strong>any</strong> value of N)
+is involved, each translator should make clear what dependencies the
+number causes in the sentence.  In many cases, dependency is
+limited to words adjacent to the number, in places where you might
+expect them ("I found the-?PLURAL <i>N</i>
+empty-?PLURAL directory-?PLURAL"), but in some cases there are
+unexpected dependencies ("I found-?PLURAL ..."!) as well as long-distance
+dependencies "The <i>N</i> directory-?PLURAL could not be deleted-?PLURAL"!).</p>
+<p>Remind the translators to consider the case where N is 0:
+"0 files found" isn't exactly natural-sounding in any language, but it
+may be unacceptable in many -- or it may condition special
+kinds of agreement (similar to English "I didN'T find ANY files").</p>
+<p>Remember to ask your translators about numeral formatting in their
+language, so that you can override the <code class="inline"><span class="w">numf</span></code>
+ method as
+appropriate.  Typical variables in number formatting are:  what to
+use as a decimal point (comma? period?); what to use as a thousands
+separator (space? nonbreaking space? comma? period? small
+middot? prime? apostrophe?); and even whether the so-called "thousands
+separator" is actually for every third digit -- I've heard reports of
+two hundred thousand being expressible as "2,00,000" for some Indian
+(Subcontinental) languages, besides the less surprising "200 000",
+"200.000", "200,000", and "200'000".  Also, using a set of numeral
+glyphs other than the usual ASCII "0"-"9" might be appreciated, as via
+<code class="inline"><a class="l_k" href="../functions/tr.html">tr/0-9/\x{0966}-\x{096F}/</a></code> for getting digits in Devanagari script
+(for Hindi, Konkani, others).</p>
+<p>The basic <code class="inline"><span class="w">quant</span></code>
+ method that Locale::Maketext provides should be
+good for many languages.  For some languages, it might be useful
+to modify it (or its constituent <code class="inline"><span class="w">numerate</span></code>
+ method)
+to take a plural form in the two-argument call to <code class="inline"><span class="w">quant</span></code>
+
+(as in "[quant,_1,files]") if
+it's all-around easier to infer the singular form from the plural, than
+to infer the plural form from the singular.</p>
+<p>But for other languages (as is discussed at length
+in <a href="../Locale/Maketext/TPJ13.html">Locale::Maketext::TPJ13</a>), simple
+<code class="inline"><span class="w">quant</span></code>
+/<code class="inline"><span class="w">numf</span></code>
+ is not enough.  For the particularly problematic
+Slavic languages, what you may need is a method which you provide
+with the number, the citation form of the noun to quantify, and
+the case and gender that the sentence's syntax projects onto that
+noun slot.  The method would then be responsible for determining
+what grammatical number that numeral projects onto its noun phrase,
+and what case and gender it may override the normal case and gender
+with; and then it would look up the noun in a lexicon providing
+all needed inflected forms.</p>
+</li>
+<li>
+<p>You may also wish to discuss with the translators the question of
+how to relate different subforms of the same language tag,
+considering how this reacts with <code class="inline"><span class="w">get_handle</span></code>
+'s treatment of
+these.  For example, if a user accepts interfaces in "en, fr", and
+you have interfaces available in "en-US" and "fr", what should
+they get?  You may wish to resolve this by establishing that "en"
+and "en-US" are effectively synonymous, by having one class
+zero-derive from the other.</p>
+<p>For some languages this issue may never come up (Danish is rarely
+expressed as "da-DK", but instead is just "da").  And for other
+languages, the whole concept of a "generic" form may verge on
+being uselessly vague, particularly for interfaces involving voice
+media in forms of Arabic or Chinese.</p>
+</li>
+<li>
+<p>Once you've localized your program/site/etc. for all desired
+languages, be sure to show the result (whether live, or via
+screenshots) to the translators.  Once they approve, make every
+effort to have it then checked by at least one other speaker of
+that language.  This holds true even when (or especially when) the
+translation is done by one of your own programmers.  Some
+kinds of systems may be harder to find testers for than others,
+depending on the amount of domain-specific jargon and concepts
+involved -- it's easier to find people who can tell you whether
+they approve of your translation for "delete this message" in an
+email-via-Web interface, than to find people who can give you
+an informed opinion on your translation for "attribute value"
+in an XML query tool's interface.</p>
+</li>
+</ul>
+<a class='view-head1' id="SEE-ALSO"></a><h2 class='h2' >SEE ALSO</h2>
+<p>I recommend reading all of these:</p>
+<p><a href="../Locale/Maketext/TPJ13.html">Locale::Maketext::TPJ13</a> -- my <i>The Perl
+Journal</i> article about Maketext.  It explains many important concepts
+underlying Locale::Maketext's design, and some insight into why
+Maketext is better than the plain old approach of having 
+message catalogs that are just databases of sprintf formats.</p>
+<p><a href="https://search.cpan.org/perldoc/File::Findgrep">File::Findgrep</a> is a sample application/module
+that uses Locale::Maketext to localize its messages.  For a larger
+internationalized system, see also <a href="https://search.cpan.org/perldoc/Apache::MP3">Apache::MP3</a>.</p>
+<p><a href="../I18N/LangTags.html">I18N::LangTags</a>.</p>
+<p><a href="https://search.cpan.org/perldoc/Win32::Locale">Win32::Locale</a>.</p>
+<p>RFC 3066, <i>Tags for the Identification of Languages</i>,
+as at <a href="http://sunsite.dk/RFC/rfc/rfc3066.html">http://sunsite.dk/RFC/rfc/rfc3066.html</a></p>
+<p>RFC 2277, <i>IETF Policy on Character Sets and Languages</i>
+is at <a href="http://sunsite.dk/RFC/rfc/rfc2277.html">http://sunsite.dk/RFC/rfc/rfc2277.html</a> -- much of it is
+just things of interest to protocol designers, but it explains
+some basic concepts, like the distinction between locales and
+language-tags.</p>
+<p>The manual for GNU <code class="inline"><span class="w">gettext</span></code>
+.  The gettext dist is available in
+<code class="inline"><a href="ftp://prep.ai.mit.edu/pub/gnu/">ftp://prep.ai.mit.edu/pub/gnu/</a></code> -- get
+a recent gettext tarball and look in its "doc/" directory, there's
+an easily browsable HTML version in there.  The
+gettext documentation asks lots of questions worth thinking
+about, even if some of their answers are sometimes wonky,
+particularly where they start talking about pluralization.</p>
+<p>The Locale/Maketext.pm source.  Observe that the module is much
+shorter than its documentation!</p>
+<a class='view-head1' id="COPYRIGHT-AND-DISCLAIMER"></a><h2 class='h2' >COPYRIGHT AND DISCLAIMER</h2>
+<p>Copyright (c) 1999-2004 Sean M. Burke.  All rights reserved.</p>
+<p>This library is free software; you can redistribute it and/or modify
+it under the same terms as Perl itself.</p>
+<p>This program is distributed in the hope that it will be useful, but
+without any warranty; without even the implied warranty of
+merchantability or fitness for a particular purpose.</p>
+<a class='view-head1' id="AUTHOR"></a><h2 class='h2' >AUTHOR</h2>
+<p>Sean M. Burke <code class="inline"><span class="w">sburke</span><span class="i">@cpan</span>.<span class="w">org</span></code>
+</p>
+
+
+
+
+      <ul><li><a href="#NAME">NAME</a></li><li><a href="#SYNOPSIS">SYNOPSIS</a></li><li><a href="#DESCRIPTION">DESCRIPTION</a></li><li><a href="#QUICK-OVERVIEW">QUICK OVERVIEW</a></li><li><a href="#METHODS">METHODS</a></li><ul><li><a href="#Construction-Methods">Construction Methods</a></li><li><a href="#The-%22maketext%22-Method">The "maketext" Method</a></li><li><a href="#Utility-Methods">Utility Methods</a></li><li><a href="#Language-Handle-Attributes-and-Internals">Language Handle Attributes and Internals</a></li></ul><li><a href="#LANGUAGE-CLASS-HIERARCHIES">LANGUAGE CLASS HIERARCHIES</a></li><li><a href="#ENTRIES-IN-EACH-LEXICON">ENTRIES IN EACH LEXICON</a></li><li><a href="#BRACKET-NOTATION">BRACKET NOTATION</a></li><li><a href="#BRACKET-NOTATION-SECURITY">BRACKET NOTATION SECURITY</a></li><li><a href="#AUTO-LEXICONS">AUTO LEXICONS</a></li><li><a href="#READONLY-LEXICONS">READONLY LEXICONS</a></li><li><a href="#CONTROLLING-LOOKUP-FAILURE">CONTROLLING LOOKUP FAILURE</a></li><li><a href="#HOW-TO-USE-MAKETEXT">HOW TO USE MAKETEXT</a></li><li><a href="#SEE-ALSO">SEE ALSO</a></li><li><a href="#COPYRIGHT-AND-DISCLAIMER">COPYRIGHT AND DISCLAIMER</a></li><li><a href="#AUTHOR">AUTHOR</a></li></ul>
+
+
+                  </div>
+                </article>
+              </div>
+            </div>
+          </main>
+        </div>
+           <footer class="footer row bg-light pt-5 pb-5">
+       <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+           <div class="row">
+               <div class="col-md-4">
+                   <ul class="list-unstyled">
+                       <li>
+                           <h4>Site info</h4>
+                       </li>
+                       <li>Docs mantained by
+                           <a href="//lists.perl.org/list/perl5-porters.html"
+                               rel="noopener">Perl 5 Porters</a>
+                       </li>
+                       <li>Perldoc site development sponsored by
+                           <a href="//opusvl.com" rel="noopener">
+                           <img style="margin: 20px 20px 5px 10px" class="opus-logo" src="/public/img/opusvl_logo.svg" alt="OpusVL Logo">
+                        </a>
+                    <li><span class="about_perldoc"><a href="//about.html">About PerlDOC</a></span>
+                    </li>
+                       </li>
+                   </ul>
+               </div>
+               <div class="col-md-8">
+                   <div class="row">
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Manuals</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.26.1/index-overview.html">Overview</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.26.1/index-tutorials.html">Tutorials</a>
+                               </li>
+                               <li>
+                                   <a href="/5.26.1/index-faq.html">FAQs</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.26.1/index-history.html">Changes</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Reference</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.26.1/index-language.html">Language</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.26.1/index-functions.html">Functions</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.26.1/perlop.html">Operators</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.26.1/perlvar.html">Variables</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Modules</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.26.1/index-modules-A.html">Modules</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.26.1/index-pragmas.html">Pragmas</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.26.1/index-utilities.html">Utilities</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Misc</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.26.1/index-licence.html">License</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.26.1/index-internals.html">Internals</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.26.1/index-platforms.html">Platforms</a>
+                               </li>
+                            <li>
+                                <a
+                                    href="/5.26.1/index-about.html">About</a>
+                            </li>
+                           </ul>
+                       </div>
+                   </div>
+               </div>
+               <div class=" col-12 footer-inf text-center">
+                   <small>perldoc.perl.org - Official documentation for the Perl
+                       programming language</small>
+               </div>
+           </div>
+       </div>
+   </footer>
+
+        	<div class="beta-wrapper beta-bottom-right ">
+		<div class="beta beta-blue  ">
+			<a class="beta-link "
+				href="//github.com/OpusVL/perldoc.perl.org/issues/new" rel="noopener">
+				<span class="beta-text">
+					This website is a Beta release.
+				</span>
+				<span class="beta-text">
+					For any issues please raise a ticket on GitHub
+				</span>
+			</a>
+		</div>
+	</div>
+
+        <script src="/public/js/main.min.js"></script>
+      </body>
+
+      </html>

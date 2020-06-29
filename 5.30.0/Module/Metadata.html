@@ -1,0 +1,949 @@
+      
+      
+      
+      
+
+      <!DOCTYPE html>
+      <html lang="en">
+
+      <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Module::Metadata - perldoc.perl.org">
+        <link rel="icon" href="/public/img/favicon.ico">
+        <title>Module::Metadata - perldoc.perl.org</title>
+        <link href="/public/css/main.min.css" rel="stylesheet">
+        <link rel="canonical" href="/Module/Metadata.html">
+        <link
+          href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900'
+          rel='stylesheet' type='text/css'>
+        <script>
+          window.ga = window.ga || function () {
+            (ga.q = ga.q || []).push(arguments)
+          };
+          ga.l = +new Date;
+          ga('create', 'UA-1892152-2', 'auto'); // JJ's account
+          ga('create', 'UA-50555-3', 'auto', 'perlOrg'); // perl.org account
+          ga('require', 'outboundLinkTracker', {
+            events: ['click', 'auxclick', 'contextmenu'],
+          });
+          ga('require', 'maxScrollTracker');
+          ga('send', 'pageview');
+          ga('perlOrg.send', 'pageview');
+        </script>
+        <script async src="https://www.google-analytics.com/analytics.js">
+        </script>
+        <script async src="/public/js/tracking.min.js"></script>
+      </head>
+
+      <body class="body container-fluid ">
+        <div class="wrapper">
+
+          <nav
+    class="navbar navbar-dark bg-primary bg-perl fixed-top justify-content-between navbar-expand-lg">
+    <a href="#content" class="skippy sr-only sr-only-focusable">
+        <span class=' skippy-text'>Skip to main content</span>
+    </a>
+    <a class="navbar-brand" href="/">
+        <img class="logo" src="/public/img/logo_perl_doc.svg"
+            alt="Perl Documentation Logo" />
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse"
+        data-target="#navbar" aria-controls="navbar" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="navbar" class="collapse navbar-collapse ">
+        <ul class="navbar-nav ml-auto navbar-right">
+            <form class="nav-item dropdown search-wrapper">
+                <input type="text" id='searchinput' aria-describedby='navbarDropdown5'
+                    placeholder="Type query" class='search-input-field' value=''>
+
+                <button href="#" data-toggle='dropdown' type="button"
+                    aria-haspopup="true" aria-expanded='false' id="navbarDropdown5"
+                    class="nav-link dropdown-toggle search-link">
+                    <object tabindex='-1' focusable="false" class='search-icon'
+                        data="/public/img/search.svg" type="image/svg+xml"
+                        name='search icon'>search
+                        icon</object>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown5"
+                    id='search-results'>
+                    <p class='dropdown-item major-version'>
+                        No results
+                    </p>
+                </div>
+            </form>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown" href="#" class="nav-link dropdown-toggle"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Perl versions</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    
+                        <p class='dropdown-item major-version'>
+                            5.32
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.32.0/">5.32.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.30
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.3/">5.30.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.2/">5.30.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.1/">5.30.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.0/">5.30.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.28
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.3/">5.28.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.2/">5.28.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.1/">5.28.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.0/">5.28.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.26
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.3/">5.26.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.2/">5.26.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.1/">5.26.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.0/">5.26.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.24
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.4/">5.24.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.3/">5.24.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.2/">5.24.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.1/">5.24.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.0/">5.24.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.22
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.4/">5.22.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.3/">5.22.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.2/">5.22.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.1/">5.22.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.0/">5.22.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.20
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.3/">5.20.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.2/">5.20.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.1/">5.20.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.0/">5.20.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.18
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.4/">5.18.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.3/">5.18.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.2/">5.18.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.1/">5.18.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.0/">5.18.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.16
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.3/">5.16.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.2/">5.16.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.1/">5.16.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.0/">5.16.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.14
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.4/">5.14.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.3/">5.14.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.2/">5.14.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.1/">5.14.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.0/">5.14.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.12
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.5/">5.12.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.4/">5.12.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.3/">5.12.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.2/">5.12.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.1/">5.12.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.0/">5.12.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.10
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.1/">5.10.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.0/">5.10.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.8
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.9/">5.8.9</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.8/">5.8.8</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.7/">5.8.7</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.6/">5.8.6</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.5/">5.8.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.4/">5.8.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.3/">5.8.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.2/">5.8.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.1/">5.8.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.0/">5.8.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.6
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.2/">5.6.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.1/">5.6.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.0/">5.6.0</a>
+                        
+                        
+                    
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown1" href="#" class="dropdown-toggle nav-link"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Manuals</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                    <a class="dropdown-item"
+                        href="/5.30.0/index-overview.html">Overview</a>
+                    <a class="dropdown-item"
+                        href="/5.30.0/index-tutorials.html">Tutorials</a>
+                    <a class="dropdown-item"
+                        href="/5.30.0/index-faq.html">FAQs</a>
+                    <a class="dropdown-item"
+                        href="/5.30.0/index-history.html">Changes</a>
+                    <a class="dropdown-item"
+                        href="/5.30.0/index-licence.html">License</a>
+                    <a class="dropdown-item"
+                        href="/5.30.0/index-language.html">Language</a>
+                    <a class="dropdown-item"
+                        href="/5.30.0/index-functions.html">Functions</a>
+                    <a class="dropdown-item"
+                        href="/5.30.0/perlop.html">Operators</a>
+                    <a class="dropdown-item"
+                        href="/5.30.0/perlvar.html">Variables</a>
+                    <a class="dropdown-item"
+                        href="/5.30.0/index-pragmas.html">Pragmas</a>
+                    <a class="dropdown-item"
+                        href="/5.30.0/index-utilities.html">Utilities</a>
+                    <a class="dropdown-item"
+                        href="/5.30.0/index-internals.html">Internals</a>
+                    <a class="dropdown-item"
+                        href="/5.30.0/index-platforms.html">Platforms</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown3" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Modules</a>
+                <div aria-labelledby="navbarDropdown3"
+                    class="dropdown-menu letters-wrap">
+                    <!--<a class="dropdown-item"
+                        href="/5.30.0/index-modules.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.30.0/index-modules-by-cat.html">By
+                        Category</a>-->
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-modules-A.html">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-modules-B.html">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-modules-C.html">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-modules-D.html">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-modules-E.html">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-modules-F.html">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-modules-G.html">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-modules-H.html">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-modules-I.html">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-modules-J.html">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-modules-K.html">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-modules-L.html">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-modules-M.html">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-modules-N.html">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-modules-O.html">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-modules-P.html">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-modules-Q.html">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-modules-R.html">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-modules-S.html">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-modules-T.html">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-modules-U.html">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-modules-V.html">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-modules-W.html">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-modules-X.html">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-modules-Y.html">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-modules-Z.html">Z</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown4" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Functions</a>
+                <div aria-labelledby="navbarDropdown4"
+                    class="dropdown-menu letters-wrap">
+                    <a class="dropdown-item"
+                        href="/5.30.0/index-functions.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.30.0/index-functions-by-cat.html">By
+                        Category</a>
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-functions.html#A">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-functions.html#B">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-functions.html#C">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-functions.html#D">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-functions.html#E">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-functions.html#F">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-functions.html#G">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-functions.html#H">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-functions.html#I">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-functions.html#J">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-functions.html#K">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-functions.html#L">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-functions.html#M">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-functions.html#N">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-functions.html#O">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-functions.html#P">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-functions.html#Q">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-functions.html#R">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-functions.html#S">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-functions.html#T">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-functions.html#U">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-functions.html#V">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-functions.html#W">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-functions.html#X">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-functions.html#Y">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-functions.html#Z">Z</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!--/.nav-collapse -->
+</nav>
+
+
+          <main class="row main-content pb-5 pt-5" id='content'>
+            <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+              <div class="row">
+                <div class="col-sm-12">
+                  <div id="breadcrumbs">
+                      
+    <a href="../index.html">Home</a>&nbsp; &gt;
+    
+      
+        <a href="../index-modules-M.html">Core modules (M)</a> &gt;
+      
+    
+    Module::Metadata
+  
+
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <article class="col-sm-12 content">
+                  <div class="documentation-wrapper">
+                    <div id="perl_version">
+                      <h7 class='page-title'> Perl 5 version 30.0
+                        documentation</h7>
+                    </div>
+                    <h1>Module::Metadata</h1>
+
+
+  <!--    -->
+<ul><li><a href="#NAME">NAME</a></li><li><a href="#VERSION">VERSION</a></li><li><a href="#SYNOPSIS">SYNOPSIS</a></li><li><a href="#DESCRIPTION">DESCRIPTION</a></li><li><a href="#CLASS-METHODS">CLASS METHODS</a></li><ul><li><a href="#new_from_file(%24filename%2c-collect_pod-%3d%3e-1)">new_from_file($filename, collect_pod => 1)</a></li><li><a href="#new_from_handle(%24handle%2c-%24filename%2c-collect_pod-%3d%3e-1)">new_from_handle($handle, $filename, collect_pod => 1)</a></li><li><a href="#new_from_module(%24module%2c-collect_pod-%3d%3e-1%2c-inc-%3d%3e-%5c%40dirs)">new_from_module($module, collect_pod => 1, inc => \@dirs)</a></li><li><a href="#find_module_by_name(%24module%2c-%5c%40dirs)">find_module_by_name($module, \@dirs)</a></li><li><a href="#find_module_dir_by_name(%24module%2c-%5c%40dirs)">find_module_dir_by_name($module, \@dirs)</a></li><li><a href="#provides(-%25options-)">provides( %options )</a></li><li><a href="#package_versions_from_directory(%24dir%2c-%5c%40files%3f)">package_versions_from_directory($dir, \@files?)</a></li><li><a href="#log_info-(internal)">log_info (internal)</a></li></ul><li><a href="#OBJECT-METHODS">OBJECT METHODS</a></li><ul><li><a href="#name()">name()</a></li><li><a href="#version(%24package)">version($package)</a></li><li><a href="#filename()">filename()</a></li><li><a href="#packages_inside()">packages_inside()</a></li><li><a href="#pod_inside()">pod_inside()</a></li><li><a href="#contains_pod()">contains_pod()</a></li><li><a href="#pod(%24section)">pod($section)</a></li><li><a href="#is_indexable(%24package)-or-is_indexable()">is_indexable($package) or is_indexable()</a></li></ul><li><a href="#SUPPORT">SUPPORT</a></li><li><a href="#AUTHOR">AUTHOR</a></li><li><a href="#CONTRIBUTORS">CONTRIBUTORS</a></li><li><a href="#COPYRIGHT-%26-LICENSE">COPYRIGHT & LICENSE</a></li></ul><a class='view-head1' id="NAME"></a><h2 class='h2' >NAME</h2>
+<p>Module::Metadata - Gather package and POD information from perl module files</p>
+<a class='view-head1' id="VERSION"></a><h2 class='h2' >VERSION</h2>
+<p>version 1.000036</p>
+<a class='view-head1' id="SYNOPSIS"></a><h2 class='h2' >SYNOPSIS</h2>
+<pre class="verbatim"><ol><li>  <a class="l_k" href="../functions/use.html">use</a> <span class="w">Module::Metadata</span><span class="sc">;</span></li><li></li><li>  <span class="c"># information about a .pm file</span></li><li>  <a class="l_k" href="../functions/my.html">my</a> <span class="i">$info</span> = <span class="w">Module::Metadata</span><span class="w">-&gt;new_from_file</span><span class="s">(</span> <span class="i">$file</span> <span class="s">)</span><span class="sc">;</span></li><li>  <a class="l_k" href="../functions/my.html">my</a> <span class="i">$version</span> = <span class="i">$info</span><span class="i">-&gt;version</span><span class="sc">;</span></li><li></li><li>  <span class="c"># CPAN META &#39;provides&#39; field for .pm files in a directory</span></li><li>  <a class="l_k" href="../functions/my.html">my</a> <span class="i">$provides</span> = <span class="w">Module::Metadata</span><span class="w">-&gt;provides</span><span class="s">(</span></li><li>    <span class="w">dir</span> <span class="cm">=&gt;</span> <span class="q">&#39;lib&#39;</span><span class="cm">,</span> <span class="w">version</span> <span class="cm">=&gt;</span> <span class="n">2</span></li><li>  <span class="s">)</span><span class="sc">;</span></li></ol></pre><a class='view-head1' id="DESCRIPTION"></a><h2 class='h2' >DESCRIPTION</h2>
+<p>This module provides a standard way to gather metadata about a .pm file through
+(mostly) static analysis and (some) code execution.  When determining the
+version of a module, the <code class="inline"><span class="i">$VERSION</span></code>
+ assignment is <code class="inline"><a class="l_k" href="../functions/eval.html">eval</a></code>ed, as is traditional
+in the CPAN toolchain.</p>
+<a class='view-head1' id="CLASS-METHODS"></a><h2 class='h2' >CLASS METHODS</h2>
+<a class='view-head2' id="new_from_file(%24filename%2c-collect_pod-%3d%3e-1)"></a><h3 class='h3' ><code class="inline"><span class="i">new_from_file</span><span class="s">(</span><span class="i">$filename</span><span class="cm">,</span> <span class="w">collect_pod</span> <span class="cm">=&gt;</span> <span class="n">1</span><span class="s">)</span></code>
+</h3>
+<p>Constructs a <code class="inline"><span class="w">Module::Metadata</span></code>
+ object given the path to a file.  Returns
+undef if the filename does not exist.</p>
+<p><code class="inline"><span class="w">collect_pod</span></code>
+ is a optional boolean argument that determines whether POD
+data is collected and stored for reference.  POD data is not collected by
+default.  POD headings are always collected.</p>
+<p>If the file begins by an UTF-8, UTF-16BE or UTF-16LE byte-order mark, then
+it is skipped before processing, and the content of the file is also decoded
+appropriately starting from perl 5.8.</p>
+<a class='view-head2' id="new_from_handle(%24handle%2c-%24filename%2c-collect_pod-%3d%3e-1)"></a><h3 class='h3' ><code class="inline"><span class="i">new_from_handle</span><span class="s">(</span><span class="i">$handle</span><span class="cm">,</span> <span class="i">$filename</span><span class="cm">,</span> <span class="w">collect_pod</span> <span class="cm">=&gt;</span> <span class="n">1</span><span class="s">)</span></code>
+</h3>
+<p>This works just like <code class="inline"><span class="w">new_from_file</span></code>
+, except that a handle can be provided
+as the first argument.</p>
+<p>Note that there is no validation to confirm that the handle is a handle or
+something that can act like one.  Passing something that isn't a handle will
+cause a exception when trying to read from it.  The <code class="inline"><span class="w">filename</span></code>
+ argument is
+mandatory or undef will be returned.</p>
+<p>You are responsible for setting the decoding layers on <code class="inline"><span class="i">$handle</span></code>
+ if
+required.</p>
+<a class='view-head2' id="new_from_module(%24module%2c-collect_pod-%3d%3e-1%2c-inc-%3d%3e-%5c%40dirs)"></a><h3 class='h3' ><code class="inline"><span class="i">new_from_module</span><span class="s">(</span><span class="i">$module</span><span class="cm">,</span> <span class="w">collect_pod</span> <span class="cm">=&gt;</span> <span class="n">1</span><span class="cm">,</span> <span class="w">inc</span> <span class="cm">=&gt;</span> \<span class="i">@dirs</span><span class="s">)</span></code>
+</h3>
+<p>Constructs a <code class="inline"><span class="w">Module::Metadata</span></code>
+ object given a module or package name.
+Returns undef if the module cannot be found.</p>
+<p>In addition to accepting the <code class="inline"><span class="w">collect_pod</span></code>
+ argument as described above,
+this method accepts a <code class="inline"><span class="w">inc</span></code>
+ argument which is a reference to an array of
+directories to search for the module.  If none are given, the default is
+@INC.</p>
+<p>If the file that contains the module begins by an UTF-8, UTF-16BE or
+UTF-16LE byte-order mark, then it is skipped before processing, and the
+content of the file is also decoded appropriately starting from perl 5.8.</p>
+<a class='view-head2' id="find_module_by_name(%24module%2c-%5c%40dirs)"></a><h3 class='h3' ><code class="inline"><span class="i">find_module_by_name</span><span class="s">(</span><span class="i">$module</span><span class="cm">,</span> \<span class="i">@dirs</span><span class="s">)</span></code>
+</h3>
+<p>Returns the path to a module given the module or package name. A list
+of directories can be passed in as an optional parameter, otherwise
+@INC is searched.</p>
+<p>Can be called as either an object or a class method.</p>
+<a class='view-head2' id="find_module_dir_by_name(%24module%2c-%5c%40dirs)"></a><h3 class='h3' ><code class="inline"><span class="i">find_module_dir_by_name</span><span class="s">(</span><span class="i">$module</span><span class="cm">,</span> \<span class="i">@dirs</span><span class="s">)</span></code>
+</h3>
+<p>Returns the entry in <code class="inline"><span class="i">@dirs</span></code>
+ (or <code class="inline"><span class="i">@INC</span></code>
+ by default) that contains
+the module <code class="inline"><span class="i">$module</span></code>
+. A list of directories can be passed in as an
+optional parameter, otherwise @INC is searched.</p>
+<p>Can be called as either an object or a class method.</p>
+<a class='view-head2' id="provides(-%25options-)"></a><h3 class='h3' ><code class="inline"><span class="i">provides</span><span class="s">(</span> <span class="i">%options</span> <span class="s">)</span></code>
+</h3>
+<p>This is a convenience wrapper around <code class="inline"><span class="w">package_versions_from_directory</span></code>
+
+to generate a CPAN META <code class="inline"><span class="w">provides</span></code>
+ data structure.  It takes key/value
+pairs.  Valid option keys include:</p>
+<ul>
+<li><a class='view-title' id="version-*(required)*"></a><strong>version <strong>(required)</strong></strong>
+<p>Specifies which version of the <a href="../CPAN/Meta/Spec.html">CPAN::Meta::Spec</a> should be used as
+the format of the <code class="inline"><span class="w">provides</span></code>
+ output.  Currently only '1.4' and '2'
+are supported (and their format is identical).  This may change in
+the future as the definition of <code class="inline"><span class="w">provides</span></code>
+ changes.</p>
+<p>The <code class="inline"><span class="w">version</span></code>
+ option is required.  If it is omitted or if
+an unsupported version is given, then <code class="inline"><span class="w">provides</span></code>
+ will throw an error.</p>
+</li>
+<li><a class='view-title' id="dir"></a><strong>dir</strong>
+<p>Directory to search recursively for <i>.pm</i> files.  May not be specified with
+<code class="inline"><span class="w">files</span></code>
+.</p>
+</li>
+<li><a class='view-title' id="files"></a><strong>files</strong>
+<p>Array reference of files to examine.  May not be specified with <code class="inline"><span class="w">dir</span></code>
+.</p>
+</li>
+<li><a class='view-title' id="prefix"></a><strong>prefix</strong>
+<p>String to prepend to the <code class="inline"><span class="w">file</span></code>
+ field of the resulting output. This defaults
+to <i>lib</i>, which is the common case for most CPAN distributions with their
+<i>.pm</i> files in <i>lib</i>.  This option ensures the META information has the
+correct relative path even when the <code class="inline"><span class="w">dir</span></code>
+ or <code class="inline"><span class="w">files</span></code>
+ arguments are
+absolute or have relative paths from a location other than the distribution
+root.</p>
+</li>
+</ul>
+<p>For example, given <code class="inline"><span class="w">dir</span></code>
+ of 'lib' and <code class="inline"><span class="w">prefix</span></code>
+ of 'lib', the return value
+is a hashref of the form:</p>
+<pre class="verbatim"><ol><li>  <span class="s">{</span></li><li>    <span class="q">&#39;Package::Name&#39;</span> <span class="cm">=&gt;</span> <span class="s">{</span></li><li>      <span class="w">version</span> <span class="cm">=&gt;</span> <span class="q">&#39;0.123&#39;</span><span class="cm">,</span></li><li>      <span class="w">file</span> <span class="cm">=&gt;</span> <span class="q">&#39;lib/Package/Name.pm&#39;</span></li><li>    <span class="s">}</span><span class="cm">,</span></li><li>    <span class="q">&#39;OtherPackage::Name&#39;</span> <span class="cm">=&gt;</span> ...</li><li>  <span class="s">}</span></li></ol></pre><a class='view-head2' id="package_versions_from_directory(%24dir%2c-%5c%40files%3f)"></a><h3 class='h3' ><code class="inline"><span class="i">package_versions_from_directory</span><span class="s">(</span><span class="i">$dir</span><span class="cm">,</span> \<span class="i">@files</span>?<span class="s">)</span></code>
+</h3>
+<p>Scans <code class="inline"><span class="i">$dir</span></code>
+ for .pm files (unless <code class="inline"><span class="i">@files</span></code>
+ is given, in which case looks
+for those files in <code class="inline"><span class="i">$dir</span></code>
+ - and reads each file for packages and versions,
+returning a hashref of the form:</p>
+<pre class="verbatim"><ol><li>  <span class="s">{</span></li><li>    <span class="q">&#39;Package::Name&#39;</span> <span class="cm">=&gt;</span> <span class="s">{</span></li><li>      <span class="w">version</span> <span class="cm">=&gt;</span> <span class="q">&#39;0.123&#39;</span><span class="cm">,</span></li><li>      <span class="w">file</span> <span class="cm">=&gt;</span> <span class="q">&#39;Package/Name.pm&#39;</span></li><li>    <span class="s">}</span><span class="cm">,</span></li><li>    <span class="q">&#39;OtherPackage::Name&#39;</span> <span class="cm">=&gt;</span> ...</li><li>  <span class="s">}</span></li></ol></pre><p>The <code class="inline"><span class="w">DB</span></code>
+ and <code class="inline"><span class="w">main</span></code>
+ packages are always omitted, as are any "private"
+packages that have leading underscores in the namespace (e.g.
+<code class="inline"><span class="w">Foo::_private</span></code>
+)</p>
+<p>Note that the file path is relative to <code class="inline"><span class="i">$dir</span></code>
+ if that is specified.
+This <strong>must not</strong> be used directly for CPAN META <code class="inline"><span class="w">provides</span></code>
+.  See
+the <code class="inline"><span class="w">provides</span></code>
+ method instead.</p>
+<a class='view-head2' id="log_info-(internal)"></a><h3 class='h3' ><code class="inline"><span class="w">log_info</span> <span class="s">(</span><span class="w">internal</span><span class="s">)</span></code>
+</h3>
+<p>Used internally to perform logging; imported from Log::Contextual if
+Log::Contextual has already been loaded, otherwise simply calls warn.</p>
+<a class='view-head1' id="OBJECT-METHODS"></a><h2 class='h2' >OBJECT METHODS</h2>
+<a class='view-head2' id="name()"></a><h3 class='h3' ><code class="inline"><span class="i">name</span><span class="s">(</span><span class="s">)</span></code>
+</h3>
+<p>Returns the name of the package represented by this module. If there
+is more than one package, it makes a best guess based on the
+filename. If it's a script (i.e. not a *.pm) the package name is
+'main'.</p>
+<a class='view-head2' id="version(%24package)"></a><h3 class='h3' ><code class="inline"><span class="i">version</span><span class="s">(</span><span class="i">$package</span><span class="s">)</span></code>
+</h3>
+<p>Returns the version as defined by the $VERSION variable for the
+package as returned by the <code class="inline"><span class="w">name</span></code>
+ method if no arguments are
+given. If given the name of a package it will attempt to return the
+version of that package if it is specified in the file.</p>
+<a class='view-head2' id="filename()"></a><h3 class='h3' ><code class="inline"><span class="i">filename</span><span class="s">(</span><span class="s">)</span></code>
+</h3>
+<p>Returns the absolute path to the file.
+Note that this file may not actually exist on disk yet, e.g. if the module was read from an in-memory filehandle.</p>
+<a class='view-head2' id="packages_inside()"></a><h3 class='h3' ><code class="inline"><span class="i">packages_inside</span><span class="s">(</span><span class="s">)</span></code>
+</h3>
+<p>Returns a list of packages. Note: this is a raw list of packages
+discovered (or assumed, in the case of <code class="inline"><span class="w">main</span></code>
+).  It is not
+filtered for <code class="inline"><span class="w">DB</span></code>
+, <code class="inline"><span class="w">main</span></code>
+ or private packages the way the
+<code class="inline"><span class="w">provides</span></code>
+ method does.  Invalid package names are not returned,
+for example "Foo:Bar".  Strange but valid package names are
+returned, for example "Foo::Bar::", and are left up to the caller
+on how to handle.</p>
+<a class='view-head2' id="pod_inside()"></a><h3 class='h3' ><code class="inline"><span class="i">pod_inside</span><span class="s">(</span><span class="s">)</span></code>
+</h3>
+<p>Returns a list of POD sections.</p>
+<a class='view-head2' id="contains_pod()"></a><h3 class='h3' ><code class="inline"><span class="i">contains_pod</span><span class="s">(</span><span class="s">)</span></code>
+</h3>
+<p>Returns true if there is any POD in the file.</p>
+<a class='view-head2' id="pod(%24section)"></a><h3 class='h3' ><code class="inline"><span class="i">pod</span><span class="s">(</span><span class="i">$section</span><span class="s">)</span></code>
+</h3>
+<p>Returns the POD data in the given section.</p>
+<a class='view-head2' id="is_indexable(%24package)-or-is_indexable()"></a><h3 class='h3' ><code class="inline"><span class="i">is_indexable</span><span class="s">(</span><span class="i">$package</span><span class="s">)</span></code>
+ or <code class="inline"><span class="i">is_indexable</span><span class="s">(</span><span class="s">)</span></code>
+</h3>
+<p>Available since version 1.000020.</p>
+<p>Returns a boolean indicating whether the package (if provided) or any package
+(otherwise) is eligible for indexing by PAUSE, the Perl Authors Upload Server.
+Note This only checks for valid <code class="inline"><a class="l_k" href="../functions/package.html">package</a></code> declarations, and does not take any
+ownership information into account.</p>
+<a class='view-head1' id="SUPPORT"></a><h2 class='h2' >SUPPORT</h2>
+<p>Bugs may be submitted through <a class='link-to-page' href="https://rt.cpan.org/Public/Dist/Display.html?Name=Module-Metadata">the RT bug tracker</a>
+(or <a class='link-to-page' href="mailto:bug-Module-Metadata@rt.cpan.org">bug-Module-Metadata@rt.cpan.org</a>).</p>
+<p>There is also a mailing list available for users of this distribution, at
+<a href="http://lists.perl.org/list/cpan-workers.html">http://lists.perl.org/list/cpan-workers.html</a>.</p>
+<p>There is also an irc channel available for users of this distribution, at
+<a class='link-to-page' href="irc://irc.perl.org/#toolchain">#toolchain on irc.perl.org </a>.</p>
+<a class='view-head1' id="AUTHOR"></a><h2 class='h2' >AUTHOR</h2>
+<p>Original code from Module::Build::ModuleInfo by Ken Williams
+&lt;kwilliams@cpan.org&gt;, Randy W. Sims &lt;RandyS@ThePierianSpring.org&gt;</p>
+<p>Released as Module::Metadata by Matt S Trout (mst) &lt;mst@shadowcat.co.uk&gt; with
+assistance from David Golden (xdg) &lt;dagolden@cpan.org&gt;.</p>
+<a class='view-head1' id="CONTRIBUTORS"></a><h2 class='h2' >CONTRIBUTORS</h2>
+<ul>
+<li>
+<p>Karen Etheridge &lt;ether@cpan.org&gt;</p>
+</li>
+<li>
+<p>David Golden &lt;dagolden@cpan.org&gt;</p>
+</li>
+<li>
+<p>Vincent Pit &lt;perl@profvince.com&gt;</p>
+</li>
+<li>
+<p>Matt S Trout &lt;mst@shadowcat.co.uk&gt;</p>
+</li>
+<li>
+<p>Chris Nehren &lt;apeiron@cpan.org&gt;</p>
+</li>
+<li>
+<p>Graham Knop &lt;haarg@haarg.org&gt;</p>
+</li>
+<li>
+<p>Olivier Mengu&#xe9; &lt;dolmen@cpan.org&gt;</p>
+</li>
+<li>
+<p>Tomas Doran &lt;bobtfish@bobtfish.net&gt;</p>
+</li>
+<li>
+<p>tokuhirom &lt;tokuhirom@gmail.com&gt;</p>
+</li>
+<li>
+<p>Christian Walde &lt;walde.christian@googlemail.com&gt;</p>
+</li>
+<li>
+<p>Tatsuhiko Miyagawa &lt;miyagawa@bulknews.net&gt;</p>
+</li>
+<li>
+<p>Peter Rabbitson &lt;ribasushi@cpan.org&gt;</p>
+</li>
+<li>
+<p>Steve Hay &lt;steve.m.hay@googlemail.com&gt;</p>
+</li>
+<li>
+<p>Jerry D. Hedden &lt;jdhedden@cpan.org&gt;</p>
+</li>
+<li>
+<p>Craig A. Berry &lt;cberry@cpan.org&gt;</p>
+</li>
+<li>
+<p>Craig A. Berry &lt;craigberry@mac.com&gt;</p>
+</li>
+<li>
+<p>David Mitchell &lt;davem@iabyn.com&gt;</p>
+</li>
+<li>
+<p>David Steinbrunner &lt;dsteinbrunner@pobox.com&gt;</p>
+</li>
+<li>
+<p>Edward Zborowski &lt;ed@rubensteintech.com&gt;</p>
+</li>
+<li>
+<p>Gareth Harper &lt;gareth@broadbean.com&gt;</p>
+</li>
+<li>
+<p>James Raspass &lt;jraspass@gmail.com&gt;</p>
+</li>
+<li>
+<p>Chris 'BinGOs' Williams &lt;chris@bingosnet.co.uk&gt;</p>
+</li>
+<li>
+<p>Josh Jore &lt;jjore@cpan.org&gt;</p>
+</li>
+<li>
+<p>Kent Fredric &lt;kentnl@cpan.org&gt;</p>
+</li>
+</ul>
+<a class='view-head1' id="COPYRIGHT-%26-LICENSE"></a><h2 class='h2' >COPYRIGHT &amp; LICENSE</h2>
+<p>Original code Copyright (c) 2001-2011 Ken Williams.
+Additional code Copyright (c) 2010-2011 Matt Trout and David Golden.
+All rights reserved.</p>
+<p>This library is free software; you can redistribute it and/or
+modify it under the same terms as Perl itself.</p>
+
+
+
+
+      <ul><li><a href="#NAME">NAME</a></li><li><a href="#VERSION">VERSION</a></li><li><a href="#SYNOPSIS">SYNOPSIS</a></li><li><a href="#DESCRIPTION">DESCRIPTION</a></li><li><a href="#CLASS-METHODS">CLASS METHODS</a></li><ul><li><a href="#new_from_file(%24filename%2c-collect_pod-%3d%3e-1)">new_from_file($filename, collect_pod => 1)</a></li><li><a href="#new_from_handle(%24handle%2c-%24filename%2c-collect_pod-%3d%3e-1)">new_from_handle($handle, $filename, collect_pod => 1)</a></li><li><a href="#new_from_module(%24module%2c-collect_pod-%3d%3e-1%2c-inc-%3d%3e-%5c%40dirs)">new_from_module($module, collect_pod => 1, inc => \@dirs)</a></li><li><a href="#find_module_by_name(%24module%2c-%5c%40dirs)">find_module_by_name($module, \@dirs)</a></li><li><a href="#find_module_dir_by_name(%24module%2c-%5c%40dirs)">find_module_dir_by_name($module, \@dirs)</a></li><li><a href="#provides(-%25options-)">provides( %options )</a></li><li><a href="#package_versions_from_directory(%24dir%2c-%5c%40files%3f)">package_versions_from_directory($dir, \@files?)</a></li><li><a href="#log_info-(internal)">log_info (internal)</a></li></ul><li><a href="#OBJECT-METHODS">OBJECT METHODS</a></li><ul><li><a href="#name()">name()</a></li><li><a href="#version(%24package)">version($package)</a></li><li><a href="#filename()">filename()</a></li><li><a href="#packages_inside()">packages_inside()</a></li><li><a href="#pod_inside()">pod_inside()</a></li><li><a href="#contains_pod()">contains_pod()</a></li><li><a href="#pod(%24section)">pod($section)</a></li><li><a href="#is_indexable(%24package)-or-is_indexable()">is_indexable($package) or is_indexable()</a></li></ul><li><a href="#SUPPORT">SUPPORT</a></li><li><a href="#AUTHOR">AUTHOR</a></li><li><a href="#CONTRIBUTORS">CONTRIBUTORS</a></li><li><a href="#COPYRIGHT-%26-LICENSE">COPYRIGHT & LICENSE</a></li></ul>
+
+
+                  </div>
+                </article>
+              </div>
+            </div>
+          </main>
+        </div>
+           <footer class="footer row bg-light pt-5 pb-5">
+       <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+           <div class="row">
+               <div class="col-md-4">
+                   <ul class="list-unstyled">
+                       <li>
+                           <h4>Site info</h4>
+                       </li>
+                       <li>Docs mantained by
+                           <a href="//lists.perl.org/list/perl5-porters.html"
+                               rel="noopener">Perl 5 Porters</a>
+                       </li>
+                       <li>Perldoc site development sponsored by
+                           <a href="//opusvl.com" rel="noopener">
+                           <img style="margin: 20px 20px 5px 10px" class="opus-logo" src="/public/img/opusvl_logo.svg" alt="OpusVL Logo">
+                        </a>
+                    <li><span class="about_perldoc"><a href="//about.html">About PerlDOC</a></span>
+                    </li>
+                       </li>
+                   </ul>
+               </div>
+               <div class="col-md-8">
+                   <div class="row">
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Manuals</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.30.0/index-overview.html">Overview</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.30.0/index-tutorials.html">Tutorials</a>
+                               </li>
+                               <li>
+                                   <a href="/5.30.0/index-faq.html">FAQs</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.30.0/index-history.html">Changes</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Reference</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.30.0/index-language.html">Language</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.30.0/index-functions.html">Functions</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.30.0/perlop.html">Operators</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.30.0/perlvar.html">Variables</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Modules</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.30.0/index-modules-A.html">Modules</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.30.0/index-pragmas.html">Pragmas</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.30.0/index-utilities.html">Utilities</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Misc</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.30.0/index-licence.html">License</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.30.0/index-internals.html">Internals</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.30.0/index-platforms.html">Platforms</a>
+                               </li>
+                            <li>
+                                <a
+                                    href="/5.30.0/index-about.html">About</a>
+                            </li>
+                           </ul>
+                       </div>
+                   </div>
+               </div>
+               <div class=" col-12 footer-inf text-center">
+                   <small>perldoc.perl.org - Official documentation for the Perl
+                       programming language</small>
+               </div>
+           </div>
+       </div>
+   </footer>
+
+        	<div class="beta-wrapper beta-bottom-right ">
+		<div class="beta beta-blue  ">
+			<a class="beta-link "
+				href="//github.com/OpusVL/perldoc.perl.org/issues/new" rel="noopener">
+				<span class="beta-text">
+					This website is a Beta release.
+				</span>
+				<span class="beta-text">
+					For any issues please raise a ticket on GitHub
+				</span>
+			</a>
+		</div>
+	</div>
+
+        <script src="/public/js/main.min.js"></script>
+      </body>
+
+      </html>

@@ -1,0 +1,1415 @@
+      
+      
+      
+      
+
+      <!DOCTYPE html>
+      <html lang="en">
+
+      <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Archive::Tar - perldoc.perl.org">
+        <link rel="icon" href="/public/img/favicon.ico">
+        <title>Archive::Tar - perldoc.perl.org</title>
+        <link href="/public/css/main.min.css" rel="stylesheet">
+        <link rel="canonical" href="/Archive/Tar.html">
+        <link
+          href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900'
+          rel='stylesheet' type='text/css'>
+        <script>
+          window.ga = window.ga || function () {
+            (ga.q = ga.q || []).push(arguments)
+          };
+          ga.l = +new Date;
+          ga('create', 'UA-1892152-2', 'auto'); // JJ's account
+          ga('create', 'UA-50555-3', 'auto', 'perlOrg'); // perl.org account
+          ga('require', 'outboundLinkTracker', {
+            events: ['click', 'auxclick', 'contextmenu'],
+          });
+          ga('require', 'maxScrollTracker');
+          ga('send', 'pageview');
+          ga('perlOrg.send', 'pageview');
+        </script>
+        <script async src="https://www.google-analytics.com/analytics.js">
+        </script>
+        <script async src="/public/js/tracking.min.js"></script>
+      </head>
+
+      <body class="body container-fluid ">
+        <div class="wrapper">
+
+          <nav
+    class="navbar navbar-dark bg-primary bg-perl fixed-top justify-content-between navbar-expand-lg">
+    <a href="#content" class="skippy sr-only sr-only-focusable">
+        <span class=' skippy-text'>Skip to main content</span>
+    </a>
+    <a class="navbar-brand" href="/">
+        <img class="logo" src="/public/img/logo_perl_doc.svg"
+            alt="Perl Documentation Logo" />
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse"
+        data-target="#navbar" aria-controls="navbar" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="navbar" class="collapse navbar-collapse ">
+        <ul class="navbar-nav ml-auto navbar-right">
+            <form class="nav-item dropdown search-wrapper">
+                <input type="text" id='searchinput' aria-describedby='navbarDropdown5'
+                    placeholder="Type query" class='search-input-field' value=''>
+
+                <button href="#" data-toggle='dropdown' type="button"
+                    aria-haspopup="true" aria-expanded='false' id="navbarDropdown5"
+                    class="nav-link dropdown-toggle search-link">
+                    <object tabindex='-1' focusable="false" class='search-icon'
+                        data="/public/img/search.svg" type="image/svg+xml"
+                        name='search icon'>search
+                        icon</object>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown5"
+                    id='search-results'>
+                    <p class='dropdown-item major-version'>
+                        No results
+                    </p>
+                </div>
+            </form>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown" href="#" class="nav-link dropdown-toggle"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Perl versions</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    
+                        <p class='dropdown-item major-version'>
+                            5.32
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.32.0/">5.32.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.30
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.3/">5.30.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.2/">5.30.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.1/">5.30.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.0/">5.30.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.28
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.3/">5.28.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.2/">5.28.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.1/">5.28.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.0/">5.28.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.26
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.3/">5.26.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.2/">5.26.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.1/">5.26.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.0/">5.26.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.24
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.4/">5.24.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.3/">5.24.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.2/">5.24.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.1/">5.24.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.0/">5.24.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.22
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.4/">5.22.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.3/">5.22.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.2/">5.22.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.1/">5.22.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.0/">5.22.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.20
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.3/">5.20.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.2/">5.20.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.1/">5.20.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.0/">5.20.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.18
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.4/">5.18.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.3/">5.18.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.2/">5.18.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.1/">5.18.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.0/">5.18.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.16
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.3/">5.16.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.2/">5.16.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.1/">5.16.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.0/">5.16.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.14
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.4/">5.14.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.3/">5.14.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.2/">5.14.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.1/">5.14.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.0/">5.14.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.12
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.5/">5.12.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.4/">5.12.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.3/">5.12.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.2/">5.12.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.1/">5.12.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.0/">5.12.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.10
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.1/">5.10.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.0/">5.10.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.8
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.9/">5.8.9</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.8/">5.8.8</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.7/">5.8.7</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.6/">5.8.6</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.5/">5.8.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.4/">5.8.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.3/">5.8.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.2/">5.8.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.1/">5.8.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.0/">5.8.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.6
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.2/">5.6.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.1/">5.6.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.0/">5.6.0</a>
+                        
+                        
+                    
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown1" href="#" class="dropdown-toggle nav-link"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Manuals</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                    <a class="dropdown-item"
+                        href="/5.18.4/index-overview.html">Overview</a>
+                    <a class="dropdown-item"
+                        href="/5.18.4/index-tutorials.html">Tutorials</a>
+                    <a class="dropdown-item"
+                        href="/5.18.4/index-faq.html">FAQs</a>
+                    <a class="dropdown-item"
+                        href="/5.18.4/index-history.html">Changes</a>
+                    <a class="dropdown-item"
+                        href="/5.18.4/index-licence.html">License</a>
+                    <a class="dropdown-item"
+                        href="/5.18.4/index-language.html">Language</a>
+                    <a class="dropdown-item"
+                        href="/5.18.4/index-functions.html">Functions</a>
+                    <a class="dropdown-item"
+                        href="/5.18.4/perlop.html">Operators</a>
+                    <a class="dropdown-item"
+                        href="/5.18.4/perlvar.html">Variables</a>
+                    <a class="dropdown-item"
+                        href="/5.18.4/index-pragmas.html">Pragmas</a>
+                    <a class="dropdown-item"
+                        href="/5.18.4/index-utilities.html">Utilities</a>
+                    <a class="dropdown-item"
+                        href="/5.18.4/index-internals.html">Internals</a>
+                    <a class="dropdown-item"
+                        href="/5.18.4/index-platforms.html">Platforms</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown3" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Modules</a>
+                <div aria-labelledby="navbarDropdown3"
+                    class="dropdown-menu letters-wrap">
+                    <!--<a class="dropdown-item"
+                        href="/5.18.4/index-modules.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.18.4/index-modules-by-cat.html">By
+                        Category</a>-->
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-modules-A.html">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-modules-B.html">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-modules-C.html">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-modules-D.html">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-modules-E.html">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-modules-F.html">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-modules-G.html">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-modules-H.html">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-modules-I.html">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-modules-J.html">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-modules-K.html">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-modules-L.html">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-modules-M.html">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-modules-N.html">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-modules-O.html">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-modules-P.html">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-modules-Q.html">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-modules-R.html">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-modules-S.html">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-modules-T.html">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-modules-U.html">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-modules-V.html">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-modules-W.html">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-modules-X.html">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-modules-Y.html">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-modules-Z.html">Z</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown4" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Functions</a>
+                <div aria-labelledby="navbarDropdown4"
+                    class="dropdown-menu letters-wrap">
+                    <a class="dropdown-item"
+                        href="/5.18.4/index-functions.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.18.4/index-functions-by-cat.html">By
+                        Category</a>
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-functions.html#A">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-functions.html#B">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-functions.html#C">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-functions.html#D">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-functions.html#E">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-functions.html#F">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-functions.html#G">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-functions.html#H">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-functions.html#I">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-functions.html#J">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-functions.html#K">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-functions.html#L">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-functions.html#M">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-functions.html#N">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-functions.html#O">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-functions.html#P">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-functions.html#Q">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-functions.html#R">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-functions.html#S">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-functions.html#T">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-functions.html#U">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-functions.html#V">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-functions.html#W">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-functions.html#X">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-functions.html#Y">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.18.4/index-functions.html#Z">Z</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!--/.nav-collapse -->
+</nav>
+
+
+          <main class="row main-content pb-5 pt-5" id='content'>
+            <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+              <div class="row">
+                <div class="col-sm-12">
+                  <div id="breadcrumbs">
+                      
+    <a href="../index.html">Home</a>&nbsp; &gt;
+    
+      
+        <a href="../index-modules-A.html">Core modules (A)</a> &gt;
+      
+    
+    Archive::Tar
+  
+
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <article class="col-sm-12 content">
+                  <div class="documentation-wrapper">
+                    <div id="perl_version">
+                      <h7 class='page-title'> Perl 5 version 18.4
+                        documentation</h7>
+                    </div>
+                    <h1>Archive::Tar</h1>
+
+
+  <!--    -->
+<ul><li><a href="#NAME">NAME</a></li><li><a href="#SYNOPSIS">SYNOPSIS</a></li><li><a href="#DESCRIPTION">DESCRIPTION</a></li><li><a href="#Object-Methods">Object Methods</a></li><ul><li><a href="#Archive%3a%3aTar-%3enew(-%5b%24file%2c-%24compressed%5d-)">Archive::Tar->new( [$file, $compressed] )</a></li><li><a href="#%24tar-%3eread-(-%24filename%7c%24handle%2c-%5b%24compressed%2c-%7bopt-%3d%3e-'val'%7d%5d-)">$tar->read ( $filename|$handle, [$compressed, {opt => 'val'}] )</a></li><li><a href="#%24tar-%3econtains_file(-%24filename-)">$tar->contains_file( $filename )</a></li><li><a href="#%24tar-%3eextract(-%5b%40filenames%5d-)">$tar->extract( [@filenames] )</a></li><li><a href="#%24tar-%3eextract_file(-%24file%2c-%5b%24extract_path%5d-)">$tar->extract_file( $file, [$extract_path] )</a></li><li><a href="#%24tar-%3elist_files(-%5b%5c%40properties%5d-)">$tar->list_files( [\@properties] )</a></li><li><a href="#%24tar-%3eget_files(-%5b%40filenames%5d-)">$tar->get_files( [@filenames] )</a></li><li><a href="#%24tar-%3eget_content(-%24file-)">$tar->get_content( $file )</a></li><li><a href="#%24tar-%3ereplace_content(-%24file%2c-%24content-)">$tar->replace_content( $file, $content )</a></li><li><a href="#%24tar-%3erename(-%24file%2c-%24new_name-)">$tar->rename( $file, $new_name )</a></li><li><a href="#%24tar-%3echmod(-%24file%2c-%24mode-)">$tar->chmod( $file, $mode )</a></li><li><a href="#%24tar-%3echown(-%24file%2c-%24uname-%5b%2c-%24gname%5d-)">$tar->chown( $file, $uname [, $gname] )</a></li><li><a href="#%24tar-%3eremove-(%40filenamelist)">$tar->remove (@filenamelist)</a></li><li><a href="#%24tar-%3eclear">$tar->clear</a></li><li><a href="#%24tar-%3ewrite-(-%5b%24file%2c-%24compressed%2c-%24prefix%5d-)">$tar->write ( [$file, $compressed, $prefix] )</a></li><li><a href="#%24tar-%3eadd_files(-%40filenamelist-)">$tar->add_files( @filenamelist )</a></li><li><a href="#%24tar-%3eadd_data-(-%24filename%2c-%24data%2c-%5b%24opthashref%5d-)">$tar->add_data ( $filename, $data, [$opthashref] )</a></li><li><a href="#%24tar-%3eerror(-%5b%24BOOL%5d-)">$tar->error( [$BOOL] )</a></li><li><a href="#%24tar-%3esetcwd(-%24cwd-)%3b">$tar->setcwd( $cwd );</a></li></ul><li><a href="#Class-Methods">Class Methods</a></li><ul><li><a href="#Archive%3a%3aTar-%3ecreate_archive(%24file%2c-%24compressed%2c-%40filelist)">Archive::Tar->create_archive($file, $compressed, @filelist)</a></li><li><a href="#Archive%3a%3aTar-%3eiter(-%24filename%2c-%5b-%24compressed%2c-%7bopt-%3d%3e-%24val%7d-%5d-)">Archive::Tar->iter( $filename, [ $compressed, {opt => $val} ] )</a></li><li><a href="#Archive%3a%3aTar-%3elist_archive(%24file%2c-%24compressed%2c-%5b%5c%40properties%5d)">Archive::Tar->list_archive($file, $compressed, [\@properties])</a></li><li><a href="#Archive%3a%3aTar-%3eextract_archive(%24file%2c-%24compressed)">Archive::Tar->extract_archive($file, $compressed)</a></li><li><a href="#%24bool-%3d-Archive%3a%3aTar-%3ehas_io_string">$bool = Archive::Tar->has_io_string</a></li><li><a href="#%24bool-%3d-Archive%3a%3aTar-%3ehas_perlio">$bool = Archive::Tar->has_perlio</a></li><li><a href="#%24bool-%3d-Archive%3a%3aTar-%3ehas_zlib_support">$bool = Archive::Tar->has_zlib_support</a></li><li><a href="#%24bool-%3d-Archive%3a%3aTar-%3ehas_bzip2_support">$bool = Archive::Tar->has_bzip2_support</a></li><li><a href="#Archive%3a%3aTar-%3ecan_handle_compressed_files">Archive::Tar->can_handle_compressed_files</a></li></ul><li><a href="#GLOBAL-VARIABLES">GLOBAL VARIABLES</a></li><ul><li><a href="#%24Archive%3a%3aTar%3a%3aFOLLOW_SYMLINK">$Archive::Tar::FOLLOW_SYMLINK</a></li><li><a href="#%24Archive%3a%3aTar%3a%3aCHOWN">$Archive::Tar::CHOWN</a></li><li><a href="#%24Archive%3a%3aTar%3a%3aCHMOD">$Archive::Tar::CHMOD</a></li><li><a href="#%24Archive%3a%3aTar%3a%3aSAME_PERMISSIONS">$Archive::Tar::SAME_PERMISSIONS</a></li><li><a href="#%24Archive%3a%3aTar%3a%3aDO_NOT_USE_PREFIX">$Archive::Tar::DO_NOT_USE_PREFIX</a></li><li><a href="#%24Archive%3a%3aTar%3a%3aDEBUG">$Archive::Tar::DEBUG</a></li><li><a href="#%24Archive%3a%3aTar%3a%3aWARN">$Archive::Tar::WARN</a></li><li><a href="#%24Archive%3a%3aTar%3a%3aerror">$Archive::Tar::error</a></li><li><a href="#%24Archive%3a%3aTar%3a%3aINSECURE_EXTRACT_MODE">$Archive::Tar::INSECURE_EXTRACT_MODE</a></li><li><a href="#%24Archive%3a%3aTar%3a%3aHAS_PERLIO">$Archive::Tar::HAS_PERLIO</a></li><li><a href="#%24Archive%3a%3aTar%3a%3aHAS_IO_STRING">$Archive::Tar::HAS_IO_STRING</a></li><li><a href="#%24Archive%3a%3aTar%3a%3aZERO_PAD_NUMBERS">$Archive::Tar::ZERO_PAD_NUMBERS</a></li></ul><li><a href="#FAQ">FAQ</a></li><li><a href="#CAVEATS">CAVEATS</a></li><li><a href="#TODO">TODO</a></li><li><a href="#SEE-ALSO">SEE ALSO</a></li><li><a href="#AUTHOR">AUTHOR</a></li><li><a href="#ACKNOWLEDGEMENTS">ACKNOWLEDGEMENTS</a></li><li><a href="#COPYRIGHT">COPYRIGHT</a></li></ul><a class='view-head1' id="NAME"></a><h2 class='h2' >NAME</h2>
+<p>Archive::Tar - module for manipulations of tar archives</p>
+<a class='view-head1' id="SYNOPSIS"></a><h2 class='h2' >SYNOPSIS</h2>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">Archive::Tar</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">$tar</span> = <span class="w">Archive::Tar</span><span class="w">-&gt;new</span><span class="sc">;</span></li><li></li><li>    <span class="i">$tar</span><span class="i">-&gt;read</span><span class="s">(</span><span class="q">&#39;origin.tgz&#39;</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="i">$tar</span><span class="i">-&gt;extract</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>    <span class="i">$tar</span><span class="i">-&gt;add_files</span><span class="s">(</span><span class="q">&#39;file/foo.pl&#39;</span><span class="cm">,</span> <span class="q">&#39;docs/README&#39;</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="i">$tar</span><span class="i">-&gt;add_data</span><span class="s">(</span><span class="q">&#39;file/baz.txt&#39;</span><span class="cm">,</span> <span class="q">&#39;This is the contents now&#39;</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>    <span class="i">$tar</span><span class="i">-&gt;rename</span><span class="s">(</span><span class="q">&#39;oldname&#39;</span><span class="cm">,</span> <span class="q">&#39;new/file/name&#39;</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="i">$tar</span><span class="i">-&gt;chown</span><span class="s">(</span><span class="q">&#39;/&#39;</span><span class="cm">,</span> <span class="q">&#39;root&#39;</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="i">$tar</span><span class="i">-&gt;chown</span><span class="s">(</span><span class="q">&#39;/&#39;</span><span class="cm">,</span> <span class="q">&#39;root:root&#39;</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="i">$tar</span><span class="i">-&gt;chmod</span><span class="s">(</span><span class="q">&#39;/tmp&#39;</span><span class="cm">,</span> <span class="q">&#39;1777&#39;</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>    <span class="i">$tar</span><span class="i">-&gt;write</span><span class="s">(</span><span class="q">&#39;files.tar&#39;</span><span class="s">)</span><span class="sc">;</span>                   <span class="c"># plain tar</span></li><li>    <span class="i">$tar</span><span class="i">-&gt;write</span><span class="s">(</span><span class="q">&#39;files.tgz&#39;</span><span class="cm">,</span> <span class="w">COMPRESS_GZIP</span><span class="s">)</span><span class="sc">;</span>    <span class="c"># gzip compressed</span></li><li>    <span class="i">$tar</span><span class="i">-&gt;write</span><span class="s">(</span><span class="q">&#39;files.tbz&#39;</span><span class="cm">,</span> <span class="w">COMPRESS_BZIP</span><span class="s">)</span><span class="sc">;</span>    <span class="c"># bzip2 compressed</span></li></ol></pre><a class='view-head1' id="DESCRIPTION"></a><h2 class='h2' >DESCRIPTION</h2>
+<p>Archive::Tar provides an object oriented mechanism for handling tar
+files.  It provides class methods for quick and easy files handling
+while also allowing for the creation of tar file objects for custom
+manipulation.  If you have the IO::Zlib module installed,
+Archive::Tar will also support compressed or gzipped tar files.</p>
+<p>An object of class Archive::Tar represents a .tar(.gz) archive full
+of files and things.</p>
+<a class='view-head1' id="Object-Methods"></a><h2 class='h2' >Object Methods</h2>
+<a class='view-head2' id="Archive%3a%3aTar-%3enew(-%5b%24file%2c-%24compressed%5d-)"></a><h3 class='h3' >Archive::Tar-&gt;new( [$file, $compressed] )</h3>
+<p>Returns a new Tar object. If given any arguments, <code class="inline"><span class="i">new</span><span class="s">(</span><span class="s">)</span></code>
+ calls the
+<code class="inline"><a class="l_k" href="../functions/read.html">read()</a></code> method automatically, passing on the arguments provided to
+the <code class="inline"><a class="l_k" href="../functions/read.html">read()</a></code> method.</p>
+<p>If <code class="inline"><span class="i">new</span><span class="s">(</span><span class="s">)</span></code>
+ is invoked with arguments and the <code class="inline"><a class="l_k" href="../functions/read.html">read()</a></code> method fails
+for any reason, <code class="inline"><span class="i">new</span><span class="s">(</span><span class="s">)</span></code>
+ returns undef.</p>
+<a class='view-head2' id="%24tar-%3eread-(-%24filename%7c%24handle%2c-%5b%24compressed%2c-%7bopt-%3d%3e-'val'%7d%5d-)"></a><h3 class='h3' >$tar-&gt;read ( $filename|$handle, [$compressed, {opt =&gt; 'val'}] )</h3>
+<p>Read the given tar file into memory.
+The first argument can either be the name of a file or a reference to
+an already open filehandle (or an IO::Zlib object if it's compressed)</p>
+<p>The <code class="inline"><a class="l_k" href="../functions/read.html">read</a></code> will <i>replace</i> any previous content in <code class="inline"><span class="i">$tar</span></code>
+!</p>
+<p>The second argument may be considered optional, but remains for
+backwards compatibility. Archive::Tar now looks at the file
+magic to determine what class should be used to open the file
+and will transparently Do The Right Thing.</p>
+<p>Archive::Tar will warn if you try to pass a bzip2 compressed file and the
+IO::Zlib / IO::Uncompress::Bunzip2 modules are not available and simply return.</p>
+<p>Note that you can currently <strong>not</strong> pass a <code class="inline"><span class="w">gzip</span></code>
+ compressed
+filehandle, which is not opened with <code class="inline"><span class="w">IO::Zlib</span></code>
+, a <code class="inline"><span class="w">bzip2</span></code>
+ compressed
+filehandle, which is not opened with <code class="inline"><span class="w">IO::Uncompress::Bunzip2</span></code>
+, nor a string
+containing the full archive information (either compressed or
+uncompressed). These are worth while features, but not currently
+implemented. See the <code class="inline"><span class="w">TODO</span></code>
+ section.</p>
+<p>The third argument can be a hash reference with options. Note that
+all options are case-sensitive.</p>
+<ul>
+<li><a class='view-title' id="limit"></a><strong>limit</strong>
+<p>Do not read more than <code class="inline"><span class="w">limit</span></code>
+ files. This is useful if you have
+very big archives, and are only interested in the first few files.</p>
+</li>
+<li><a class='view-title' id="filter"></a><strong>filter</strong>
+<p>Can be set to a regular expression.  Only files with names that match
+the expression will be read.</p>
+</li>
+<li><a class='view-title' id="md5"></a><strong>md5</strong>
+<p>Set to 1 and the md5sum of files will be returned (instead of file data)
+    my $iter = Archive::Tar-&gt;iter( $file,  1, {md5 =&gt; 1} );
+    while( my $f = $iter-&gt;() ) {
+        print $f-&gt;data . "\t" . $f-&gt;full_path . $/;
+    }</p>
+</li>
+<li><a class='view-title' id="extract"></a><strong>extract</strong>
+<p>If set to true, immediately extract entries when reading them. This
+gives you the same memory break as the <code class="inline"><span class="w">extract_archive</span></code>
+ function.
+Note however that entries will not be read into memory, but written
+straight to disk. This means no <code class="inline"><span class="w">Archive::Tar::File</span></code>
+ objects are
+created for you to inspect.</p>
+</li>
+</ul>
+<p>All files are stored internally as <code class="inline"><span class="w">Archive::Tar::File</span></code>
+ objects.
+Please consult the <a href="../Archive/Tar/File.html">Archive::Tar::File</a> documentation for details.</p>
+<p>Returns the number of files read in scalar context, and a list of
+<code class="inline"><span class="w">Archive::Tar::File</span></code>
+ objects in list context.</p>
+<a class='view-head2' id="%24tar-%3econtains_file(-%24filename-)"></a><h3 class='h3' >$tar-&gt;contains_file( $filename )</h3>
+<p>Check if the archive contains a certain file.
+It will return true if the file is in the archive, false otherwise.</p>
+<p>Note however, that this function does an exact match using <code class="inline"><a class="l_k" href="../functions/eq.html">eq</a></code>
+on the full path. So it cannot compensate for case-insensitive file-
+systems or compare 2 paths to see if they would point to the same
+underlying file.</p>
+<a class='view-head2' id="%24tar-%3eextract(-%5b%40filenames%5d-)"></a><h3 class='h3' >$tar-&gt;extract( [@filenames] )</h3>
+<p>Write files whose names are equivalent to any of the names in
+<code class="inline"><span class="i">@filenames</span></code>
+ to disk, creating subdirectories as necessary. This
+might not work too well under VMS.
+Under MacPerl, the file's modification time will be converted to the
+MacOS zero of time, and appropriate conversions will be done to the
+path.  However, the length of each element of the path is not
+inspected to see whether it's longer than MacOS currently allows (32
+characters).</p>
+<p>If <code class="inline"><span class="w">extract</span></code>
+ is called without a list of file names, the entire
+contents of the archive are extracted.</p>
+<p>Returns a list of filenames extracted.</p>
+<a class='view-head2' id="%24tar-%3eextract_file(-%24file%2c-%5b%24extract_path%5d-)"></a><h3 class='h3' >$tar-&gt;extract_file( $file, [$extract_path] )</h3>
+<p>Write an entry, whose name is equivalent to the file name provided to
+disk. Optionally takes a second parameter, which is the full native
+path (including filename) the entry will be written to.</p>
+<p>For example:</p>
+<pre class="verbatim"><ol><li>    <span class="i">$tar</span><span class="i">-&gt;extract_file</span><span class="s">(</span> <span class="q">&#39;name/in/archive&#39;</span><span class="cm">,</span> <span class="q">&#39;name/i/want/to/give/it&#39;</span> <span class="s">)</span><span class="sc">;</span></li><li></li><li>    <span class="i">$tar</span><span class="i">-&gt;extract_file</span><span class="s">(</span> <span class="i">$at_file_object</span><span class="cm">,</span>   <span class="q">&#39;name/i/want/to/give/it&#39;</span> <span class="s">)</span><span class="sc">;</span></li></ol></pre><p>Returns true on success, false on failure.</p>
+<a class='view-head2' id="%24tar-%3elist_files(-%5b%5c%40properties%5d-)"></a><h3 class='h3' >$tar-&gt;list_files( [\@properties] )</h3>
+<p>Returns a list of the names of all the files in the archive.</p>
+<p>If <code class="inline"><span class="i">list_files</span><span class="s">(</span><span class="s">)</span></code>
+ is passed an array reference as its first argument
+it returns a list of hash references containing the requested
+properties of each file.  The following list of properties is
+supported: name, size, mtime (last modified date), mode, uid, gid,
+linkname, uname, gname, devmajor, devminor, prefix.</p>
+<p>Passing an array reference containing only one element, 'name', is
+special cased to return a list of names rather than a list of hash
+references, making it equivalent to calling <code class="inline"><span class="w">list_files</span></code>
+ without
+arguments.</p>
+<a class='view-head2' id="%24tar-%3eget_files(-%5b%40filenames%5d-)"></a><h3 class='h3' >$tar-&gt;get_files( [@filenames] )</h3>
+<p>Returns the <code class="inline"><span class="w">Archive::Tar::File</span></code>
+ objects matching the filenames
+provided. If no filename list was passed, all <code class="inline"><span class="w">Archive::Tar::File</span></code>
+
+objects in the current Tar object are returned.</p>
+<p>Please refer to the <code class="inline"><span class="w">Archive::Tar::File</span></code>
+ documentation on how to
+handle these objects.</p>
+<a class='view-head2' id="%24tar-%3eget_content(-%24file-)"></a><h3 class='h3' >$tar-&gt;get_content( $file )</h3>
+<p>Return the content of the named file.</p>
+<a class='view-head2' id="%24tar-%3ereplace_content(-%24file%2c-%24content-)"></a><h3 class='h3' >$tar-&gt;replace_content( $file, $content )</h3>
+<p>Make the string $content be the content for the file named $file.</p>
+<a class='view-head2' id="%24tar-%3erename(-%24file%2c-%24new_name-)"></a><h3 class='h3' >$tar-&gt;rename( $file, $new_name )</h3>
+<p>Rename the file of the in-memory archive to $new_name.</p>
+<p>Note that you must specify a Unix path for $new_name, since per tar
+standard, all files in the archive must be Unix paths.</p>
+<p>Returns true on success and false on failure.</p>
+<a class='view-head2' id="%24tar-%3echmod(-%24file%2c-%24mode-)"></a><h3 class='h3' >$tar-&gt;chmod( $file, $mode )</h3>
+<p>Change mode of $file to $mode.</p>
+<p>Returns true on success and false on failure.</p>
+<a class='view-head2' id="%24tar-%3echown(-%24file%2c-%24uname-%5b%2c-%24gname%5d-)"></a><h3 class='h3' >$tar-&gt;chown( $file, $uname [, $gname] )</h3>
+<p>Change owner $file to $uname and $gname.</p>
+<p>Returns true on success and false on failure.</p>
+<a class='view-head2' id="%24tar-%3eremove-(%40filenamelist)"></a><h3 class='h3' >$tar-&gt;remove (@filenamelist)</h3>
+<p>Removes any entries with names matching any of the given filenames
+from the in-memory archive. Returns a list of <code class="inline"><span class="w">Archive::Tar::File</span></code>
+
+objects that remain.</p>
+<a class='view-head2' id="%24tar-%3eclear"></a><h3 class='h3' >$tar-&gt;clear</h3>
+<p><code class="inline"><span class="w">clear</span></code>
+ clears the current in-memory archive. This effectively gives
+you a 'blank' object, ready to be filled again. Note that <code class="inline"><span class="w">clear</span></code>
+
+only has effect on the object, not the underlying tarfile.</p>
+<a class='view-head2' id="%24tar-%3ewrite-(-%5b%24file%2c-%24compressed%2c-%24prefix%5d-)"></a><h3 class='h3' >$tar-&gt;write ( [$file, $compressed, $prefix] )</h3>
+<p>Write the in-memory archive to disk.  The first argument can either
+be the name of a file or a reference to an already open filehandle (a
+GLOB reference).</p>
+<p>The second argument is used to indicate compression. You can either
+compress using <code class="inline"><span class="w">gzip</span></code>
+ or <code class="inline"><span class="w">bzip2</span></code>
+. If you pass a digit, it's assumed
+to be the <code class="inline"><span class="w">gzip</span></code>
+ compression level (between 1 and 9), but the use of
+constants is preferred:</p>
+<pre class="verbatim"><ol><li>  <span class="c"># write a gzip compressed file</span></li><li>  <span class="i">$tar</span><span class="i">-&gt;write</span><span class="s">(</span> <span class="q">&#39;out.tgz&#39;</span><span class="cm">,</span> <span class="w">COMPRESS_GZIP</span> <span class="s">)</span><span class="sc">;</span></li><li></li><li>  <span class="c"># write a bzip compressed file</span></li><li>  <span class="i">$tar</span><span class="i">-&gt;write</span><span class="s">(</span> <span class="q">&#39;out.tbz&#39;</span><span class="cm">,</span> <span class="w">COMPRESS_BZIP</span> <span class="s">)</span><span class="sc">;</span></li></ol></pre><p>Note that when you pass in a filehandle, the compression argument
+is ignored, as all files are printed verbatim to your filehandle.
+If you wish to enable compression with filehandles, use an
+<code class="inline"><span class="w">IO::Zlib</span></code>
+ or <code class="inline"><span class="w">IO::Compress::Bzip2</span></code>
+ filehandle instead.</p>
+<p>The third argument is an optional prefix. All files will be tucked
+away in the directory you specify as prefix. So if you have files
+'a' and 'b' in your archive, and you specify 'foo' as prefix, they
+will be written to the archive as 'foo/a' and 'foo/b'.</p>
+<p>If no arguments are given, <code class="inline"><a class="l_k" href="../functions/write.html">write</a></code> returns the entire formatted
+archive as a string, which could be useful if you'd like to stuff the
+archive into a socket or a pipe to gzip or something.</p>
+<a class='view-head2' id="%24tar-%3eadd_files(-%40filenamelist-)"></a><h3 class='h3' >$tar-&gt;add_files( @filenamelist )</h3>
+<p>Takes a list of filenames and adds them to the in-memory archive.</p>
+<p>The path to the file is automatically converted to a Unix like
+equivalent for use in the archive, and, if on MacOS, the file's
+modification time is converted from the MacOS epoch to the Unix epoch.
+So tar archives created on MacOS with <strong>Archive::Tar</strong> can be read
+both with <i>tar</i> on Unix and applications like <i>suntar</i> or
+<i>Stuffit Expander</i> on MacOS.</p>
+<p>Be aware that the file's type/creator and resource fork will be lost,
+which is usually what you want in cross-platform archives.</p>
+<p>Instead of a filename, you can also pass it an existing <code class="inline"><span class="w">Archive::Tar::File</span></code>
+
+object from, for example, another archive. The object will be clone, and
+effectively be a copy of the original, not an alias.</p>
+<p>Returns a list of <code class="inline"><span class="w">Archive::Tar::File</span></code>
+ objects that were just added.</p>
+<a class='view-head2' id="%24tar-%3eadd_data-(-%24filename%2c-%24data%2c-%5b%24opthashref%5d-)"></a><h3 class='h3' >$tar-&gt;add_data ( $filename, $data, [$opthashref] )</h3>
+<p>Takes a filename, a scalar full of data and optionally a reference to
+a hash with specific options.</p>
+<p>Will add a file to the in-memory archive, with name <code class="inline"><span class="i">$filename</span></code>
+ and
+content <code class="inline"><span class="i">$data</span></code>
+. Specific properties can be set using <code class="inline"><span class="i">$opthashref</span></code>
+.
+The following list of properties is supported: name, size, mtime
+(last modified date), mode, uid, gid, linkname, uname, gname,
+devmajor, devminor, prefix, type.  (On MacOS, the file's path and
+modification times are converted to Unix equivalents.)</p>
+<p>Valid values for the file type are the following constants defined by
+Archive::Tar::Constant:</p>
+<ul>
+<li><a class='view-title' id="FILE"></a><strong>FILE</strong>
+<p>Regular file.</p>
+</li>
+<li><a class='view-title' id="HARDLINK"></a><strong>HARDLINK</strong>
+</li>
+<li><a class='view-title' id="SYMLINK"></a><strong>SYMLINK</strong>
+<p>Hard and symbolic ("soft") links; linkname should specify target.</p>
+</li>
+<li><a class='view-title' id="CHARDEV"></a><strong>CHARDEV</strong>
+</li>
+<li><a class='view-title' id="BLOCKDEV"></a><strong>BLOCKDEV</strong>
+<p>Character and block devices. devmajor and devminor should specify the major
+and minor device numbers.</p>
+</li>
+<li><a class='view-title' id="DIR"></a><strong>DIR</strong>
+<p>Directory.</p>
+</li>
+<li><a class='view-title' id="FIFO"></a><strong>FIFO</strong>
+<p>FIFO (named pipe).</p>
+</li>
+<li><a class='view-title' id="SOCKET"></a><strong>SOCKET</strong>
+<p>Socket.</p>
+</li>
+</ul>
+<p>Returns the <code class="inline"><span class="w">Archive::Tar::File</span></code>
+ object that was just added, or
+<code class="inline"><a class="l_k" href="../functions/undef.html">undef</a></code> on failure.</p>
+<a class='view-head2' id="%24tar-%3eerror(-%5b%24BOOL%5d-)"></a><h3 class='h3' >$tar-&gt;error( [$BOOL] )</h3>
+<p>Returns the current errorstring (usually, the last error reported).
+If a true value was specified, it will give the <code class="inline"><span class="w">Carp::longmess</span></code>
+
+equivalent of the error, in effect giving you a stacktrace.</p>
+<p>For backwards compatibility, this error is also available as
+<code class="inline"><span class="i">$Archive::Tar::error</span></code>
+ although it is much recommended you use the
+method call instead.</p>
+<a class='view-head2' id="%24tar-%3esetcwd(-%24cwd-)%3b"></a><h3 class='h3' >$tar-&gt;setcwd( $cwd );</h3>
+<p><code class="inline"><span class="w">Archive::Tar</span></code>
+ needs to know the current directory, and it will run
+<code class="inline"><span class="i">Cwd::cwd</span><span class="s">(</span><span class="s">)</span></code>
+ <i>every</i> time it extracts a <i>relative</i> entry from the
+tarfile and saves it in the file system. (As of version 1.30, however,
+<code class="inline"><span class="w">Archive::Tar</span></code>
+ will use the speed optimization described below
+automatically, so it's only relevant if you're using <code class="inline"><span class="i">extract_file</span><span class="s">(</span><span class="s">)</span></code>
+).</p>
+<p>Since <code class="inline"><span class="w">Archive::Tar</span></code>
+ doesn't change the current directory internally
+while it is extracting the items in a tarball, all calls to <code class="inline"><span class="i">Cwd::cwd</span><span class="s">(</span><span class="s">)</span></code>
+
+can be avoided if we can guarantee that the current directory doesn't
+get changed externally.</p>
+<p>To use this performance boost, set the current directory via</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">Cwd</span><span class="sc">;</span></li><li>    <span class="i">$tar</span><span class="i">-&gt;setcwd</span><span class="s">(</span> <span class="i">cwd</span><span class="s">(</span><span class="s">)</span> <span class="s">)</span><span class="sc">;</span></li></ol></pre><p>once before calling a function like <code class="inline"><span class="w">extract_file</span></code>
+ and
+<code class="inline"><span class="w">Archive::Tar</span></code>
+ will use the current directory setting from then on
+and won't call <code class="inline"><span class="i">Cwd::cwd</span><span class="s">(</span><span class="s">)</span></code>
+ internally.</p>
+<p>To switch back to the default behaviour, use</p>
+<pre class="verbatim"><ol><li>    <span class="i">$tar</span><span class="i">-&gt;setcwd</span><span class="s">(</span> <a class="l_k" href="../functions/undef.html">undef</a> <span class="s">)</span><span class="sc">;</span></li></ol></pre><p>and <code class="inline"><span class="w">Archive::Tar</span></code>
+ will call <code class="inline"><span class="i">Cwd::cwd</span><span class="s">(</span><span class="s">)</span></code>
+ internally again.</p>
+<p>If you're using <code class="inline"><span class="w">Archive::Tar</span></code>
+'s <code class="inline"><span class="i">extract</span><span class="s">(</span><span class="s">)</span></code>
+ method, <code class="inline"><span class="i">setcwd</span><span class="s">(</span><span class="s">)</span></code>
+ will
+be called for you.</p>
+<a class='view-head1' id="Class-Methods"></a><h2 class='h2' >Class Methods</h2>
+<a class='view-head2' id="Archive%3a%3aTar-%3ecreate_archive(%24file%2c-%24compressed%2c-%40filelist)"></a><h3 class='h3' >Archive::Tar-&gt;create_archive($file, $compressed, @filelist)</h3>
+<p>Creates a tar file from the list of files provided.  The first
+argument can either be the name of the tar file to create or a
+reference to an open file handle (e.g. a GLOB reference).</p>
+<p>The second argument is used to indicate compression. You can either
+compress using <code class="inline"><span class="w">gzip</span></code>
+ or <code class="inline"><span class="w">bzip2</span></code>
+. If you pass a digit, it's assumed
+to be the <code class="inline"><span class="w">gzip</span></code>
+ compression level (between 1 and 9), but the use of
+constants is preferred:</p>
+<pre class="verbatim"><ol><li>  <span class="c"># write a gzip compressed file</span></li><li>  <span class="w">Archive::Tar</span><span class="w">-&gt;create_archive</span><span class="s">(</span> <span class="q">&#39;out.tgz&#39;</span><span class="cm">,</span> <span class="w">COMPRESS_GZIP</span><span class="cm">,</span> <span class="i">@filelist</span> <span class="s">)</span><span class="sc">;</span></li><li></li><li>  <span class="c"># write a bzip compressed file</span></li><li>  <span class="w">Archive::Tar</span><span class="w">-&gt;create_archive</span><span class="s">(</span> <span class="q">&#39;out.tbz&#39;</span><span class="cm">,</span> <span class="w">COMPRESS_BZIP</span><span class="cm">,</span> <span class="i">@filelist</span> <span class="s">)</span><span class="sc">;</span></li></ol></pre><p>Note that when you pass in a filehandle, the compression argument
+is ignored, as all files are printed verbatim to your filehandle.
+If you wish to enable compression with filehandles, use an
+<code class="inline"><span class="w">IO::Zlib</span></code>
+ or <code class="inline"><span class="w">IO::Compress::Bzip2</span></code>
+ filehandle instead.</p>
+<p>The remaining arguments list the files to be included in the tar file.
+These files must all exist. Any files which don't exist or can't be
+read are silently ignored.</p>
+<p>If the archive creation fails for any reason, <code class="inline"><span class="w">create_archive</span></code>
+ will
+return false. Please use the <code class="inline"><span class="w">error</span></code>
+ method to find the cause of the
+failure.</p>
+<p>Note that this method does not write <code class="inline"><span class="w">on</span> <span class="w">the</span> <span class="w">fly</span></code>
+ as it were; it
+still reads all the files into memory before writing out the archive.
+Consult the FAQ below if this is a problem.</p>
+<a class='view-head2' id="Archive%3a%3aTar-%3eiter(-%24filename%2c-%5b-%24compressed%2c-%7bopt-%3d%3e-%24val%7d-%5d-)"></a><h3 class='h3' >Archive::Tar-&gt;iter( $filename, [ $compressed, {opt =&gt; $val} ] )</h3>
+<p>Returns an iterator function that reads the tar file without loading
+it all in memory.  Each time the function is called it will return the
+next file in the tarball. The files are returned as
+<code class="inline"><span class="w">Archive::Tar::File</span></code>
+ objects. The iterator function returns the
+empty list once it has exhausted the files contained.</p>
+<p>The second argument can be a hash reference with options, which are
+identical to the arguments passed to <code class="inline"><a class="l_k" href="../functions/read.html">read()</a></code>.</p>
+<p>Example usage:</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">$next</span> = <span class="w">Archive::Tar</span><span class="w">-&gt;iter</span><span class="s">(</span> <span class="q">&quot;example.tar.gz&quot;</span><span class="cm">,</span> <span class="n">1</span><span class="cm">,</span> <span class="s">{</span><span class="w">filter</span> <span class="cm">=&gt;</span> <span class="q">qr/\.pm$/</span><span class="s">}</span> <span class="s">)</span><span class="sc">;</span></li><li></li><li>    <a class="l_k" href="../functions/while.html">while</a><span class="s">(</span> <a class="l_k" href="../functions/my.html">my</a> <span class="i">$f</span> = <span class="i">$next</span>-&gt;<span class="s">(</span><span class="s">)</span> <span class="s">)</span> <span class="s">{</span></li><li>        <a class="l_k" href="../functions/print.html">print</a> <span class="i">$f</span><span class="i">-&gt;name</span><span class="cm">,</span> <span class="q">&quot;\n&quot;</span><span class="sc">;</span></li><li></li><li>        <span class="i">$f</span><span class="i">-&gt;extract</span> <a class="l_k" href="../functions/or.html">or</a> <a class="l_k" href="../functions/warn.html">warn</a> <span class="q">&quot;Extraction failed&quot;</span><span class="sc">;</span></li><li></li><li>        <span class="c"># ....</span></li><li>    <span class="s">}</span></li></ol></pre><a class='view-head2' id="Archive%3a%3aTar-%3elist_archive(%24file%2c-%24compressed%2c-%5b%5c%40properties%5d)"></a><h3 class='h3' >Archive::Tar-&gt;list_archive($file, $compressed, [\@properties])</h3>
+<p>Returns a list of the names of all the files in the archive.  The
+first argument can either be the name of the tar file to list or a
+reference to an open file handle (e.g. a GLOB reference).</p>
+<p>If <code class="inline"><span class="i">list_archive</span><span class="s">(</span><span class="s">)</span></code>
+ is passed an array reference as its third
+argument it returns a list of hash references containing the requested
+properties of each file.  The following list of properties is
+supported: full_path, name, size, mtime (last modified date), mode,
+uid, gid, linkname, uname, gname, devmajor, devminor, prefix, type.</p>
+<p>See <code class="inline"><span class="w">Archive::Tar::File</span></code>
+ for details about supported properties.</p>
+<p>Passing an array reference containing only one element, 'name', is
+special cased to return a list of names rather than a list of hash
+references.</p>
+<a class='view-head2' id="Archive%3a%3aTar-%3eextract_archive(%24file%2c-%24compressed)"></a><h3 class='h3' >Archive::Tar-&gt;extract_archive($file, $compressed)</h3>
+<p>Extracts the contents of the tar file.  The first argument can either
+be the name of the tar file to create or a reference to an open file
+handle (e.g. a GLOB reference).  All relative paths in the tar file will
+be created underneath the current working directory.</p>
+<p><code class="inline"><span class="w">extract_archive</span></code>
+ will return a list of files it extracted.
+If the archive extraction fails for any reason, <code class="inline"><span class="w">extract_archive</span></code>
+
+will return false.  Please use the <code class="inline"><span class="w">error</span></code>
+ method to find the cause
+of the failure.</p>
+<a class='view-head2' id="%24bool-%3d-Archive%3a%3aTar-%3ehas_io_string"></a><h3 class='h3' >$bool = Archive::Tar-&gt;has_io_string</h3>
+<p>Returns true if we currently have <code class="inline"><span class="w">IO::String</span></code>
+ support loaded.</p>
+<p>Either <code class="inline"><span class="w">IO::String</span></code>
+ or <code class="inline"><span class="w">perlio</span></code>
+ support is needed to support writing
+stringified archives. Currently, <code class="inline"><span class="w">perlio</span></code>
+ is the preferred method, if
+available.</p>
+<p>See the <code class="inline"><span class="w">GLOBAL</span> <span class="w">VARIABLES</span></code>
+ section to see how to change this preference.</p>
+<a class='view-head2' id="%24bool-%3d-Archive%3a%3aTar-%3ehas_perlio"></a><h3 class='h3' >$bool = Archive::Tar-&gt;has_perlio</h3>
+<p>Returns true if we currently have <code class="inline"><span class="w">perlio</span></code>
+ support loaded.</p>
+<p>This requires <code class="inline"><span class="w">perl</span>-<span class="n">5.8</span></code>
+ or higher, compiled with <code class="inline"><span class="w">perlio</span></code>
+</p>
+<p>Either <code class="inline"><span class="w">IO::String</span></code>
+ or <code class="inline"><span class="w">perlio</span></code>
+ support is needed to support writing
+stringified archives. Currently, <code class="inline"><span class="w">perlio</span></code>
+ is the preferred method, if
+available.</p>
+<p>See the <code class="inline"><span class="w">GLOBAL</span> <span class="w">VARIABLES</span></code>
+ section to see how to change this preference.</p>
+<a class='view-head2' id="%24bool-%3d-Archive%3a%3aTar-%3ehas_zlib_support"></a><h3 class='h3' >$bool = Archive::Tar-&gt;has_zlib_support</h3>
+<p>Returns true if <code class="inline"><span class="w">Archive::Tar</span></code>
+ can extract <code class="inline"><span class="w">zlib</span></code>
+ compressed archives</p>
+<a class='view-head2' id="%24bool-%3d-Archive%3a%3aTar-%3ehas_bzip2_support"></a><h3 class='h3' >$bool = Archive::Tar-&gt;has_bzip2_support</h3>
+<p>Returns true if <code class="inline"><span class="w">Archive::Tar</span></code>
+ can extract <code class="inline"><span class="w">bzip2</span></code>
+ compressed archives</p>
+<a class='view-head2' id="Archive%3a%3aTar-%3ecan_handle_compressed_files"></a><h3 class='h3' >Archive::Tar-&gt;can_handle_compressed_files</h3>
+<p>A simple checking routine, which will return true if <code class="inline"><span class="w">Archive::Tar</span></code>
+
+is able to uncompress compressed archives on the fly with <code class="inline"><span class="w">IO::Zlib</span></code>
+
+and <code class="inline"><span class="w">IO::Compress::Bzip2</span></code>
+ or false if not both are installed.</p>
+<p>You can use this as a shortcut to determine whether <code class="inline"><span class="w">Archive::Tar</span></code>
+
+will do what you think before passing compressed archives to its
+<code class="inline"><a class="l_k" href="../functions/read.html">read</a></code> method.</p>
+<a class='view-head1' id="GLOBAL-VARIABLES"></a><h2 class='h2' >GLOBAL VARIABLES</h2>
+<a class='view-head2' id="%24Archive%3a%3aTar%3a%3aFOLLOW_SYMLINK"></a><h3 class='h3' >$Archive::Tar::FOLLOW_SYMLINK</h3>
+<p>Set this variable to <code class="inline"><span class="n">1</span></code>
+ to make <code class="inline"><span class="w">Archive::Tar</span></code>
+ effectively make a
+copy of the file when extracting. Default is <code class="inline"><span class="n">0</span></code>
+, which
+means the symlink stays intact. Of course, you will have to pack the
+file linked to as well.</p>
+<p>This option is checked when you write out the tarfile using <code class="inline"><a class="l_k" href="../functions/write.html">write</a></code>
+or <code class="inline"><span class="w">create_archive</span></code>
+.</p>
+<p>This works just like <code class="inline"><span class="q">/bin/</span><span class="w">tar</span></code>
+'s <code class="inline">-<span class="w">h</span></code>
+ option.</p>
+<a class='view-head2' id="%24Archive%3a%3aTar%3a%3aCHOWN"></a><h3 class='h3' >$Archive::Tar::CHOWN</h3>
+<p>By default, <code class="inline"><span class="w">Archive::Tar</span></code>
+ will try to <code class="inline"><a class="l_k" href="../functions/chown.html">chown</a></code> your files if it is
+able to. In some cases, this may not be desired. In that case, set
+this variable to <code class="inline"><span class="n">0</span></code>
+ to disable <code class="inline"><a class="l_k" href="../functions/chown.html">chown</a></code>-ing, even if it were
+possible.</p>
+<p>The default is <code class="inline"><span class="n">1</span></code>
+.</p>
+<a class='view-head2' id="%24Archive%3a%3aTar%3a%3aCHMOD"></a><h3 class='h3' >$Archive::Tar::CHMOD</h3>
+<p>By default, <code class="inline"><span class="w">Archive::Tar</span></code>
+ will try to <code class="inline"><a class="l_k" href="../functions/chmod.html">chmod</a></code> your files to
+whatever mode was specified for the particular file in the archive.
+In some cases, this may not be desired. In that case, set this
+variable to <code class="inline"><span class="n">0</span></code>
+ to disable <code class="inline"><a class="l_k" href="../functions/chmod.html">chmod</a></code>-ing.</p>
+<p>The default is <code class="inline"><span class="n">1</span></code>
+.</p>
+<a class='view-head2' id="%24Archive%3a%3aTar%3a%3aSAME_PERMISSIONS"></a><h3 class='h3' >$Archive::Tar::SAME_PERMISSIONS</h3>
+<p>When, <code class="inline"><span class="i">$Archive::Tar::CHMOD</span></code>
+ is enabled, this setting controls whether
+the permissions on files from the archive are used without modification
+of if they are filtered by removing any setid bits and applying the
+current umask.</p>
+<p>The default is <code class="inline"><span class="n">1</span></code>
+ for the root user and <code class="inline"><span class="n">0</span></code>
+ for normal users.</p>
+<a class='view-head2' id="%24Archive%3a%3aTar%3a%3aDO_NOT_USE_PREFIX"></a><h3 class='h3' >$Archive::Tar::DO_NOT_USE_PREFIX</h3>
+<p>By default, <code class="inline"><span class="w">Archive::Tar</span></code>
+ will try to put paths that are over
+100 characters in the <code class="inline"><span class="w">prefix</span></code>
+ field of your tar header, as
+defined per POSIX-standard. However, some (older) tar programs
+do not implement this spec. To retain compatibility with these older
+or non-POSIX compliant versions, you can set the <code class="inline"><span class="i">$DO_NOT_USE_PREFIX</span></code>
+
+variable to a true value, and <code class="inline"><span class="w">Archive::Tar</span></code>
+ will use an alternate
+way of dealing with paths over 100 characters by using the
+<code class="inline"><span class="w">GNU</span> <span class="w">Extended</span> <span class="w">Header</span></code>
+ feature.</p>
+<p>Note that clients who do not support the <code class="inline"><span class="w">GNU</span> <span class="w">Extended</span> <span class="w">Header</span></code>
+
+feature will not be able to read these archives. Such clients include
+tars on <code class="inline"><span class="w">Solaris</span></code>
+, <code class="inline"><span class="w">Irix</span></code>
+ and <code class="inline"><span class="w">AIX</span></code>
+.</p>
+<p>The default is <code class="inline"><span class="n">0</span></code>
+.</p>
+<a class='view-head2' id="%24Archive%3a%3aTar%3a%3aDEBUG"></a><h3 class='h3' >$Archive::Tar::DEBUG</h3>
+<p>Set this variable to <code class="inline"><span class="n">1</span></code>
+ to always get the <code class="inline"><span class="w">Carp::longmess</span></code>
+ output
+of the warnings, instead of the regular <code class="inline"><span class="w">carp</span></code>
+. This is the same
+message you would get by doing:</p>
+<pre class="verbatim"><ol><li>    <span class="i">$tar</span><span class="i">-&gt;error</span><span class="s">(</span><span class="n">1</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>Defaults to <code class="inline"><span class="n">0</span></code>
+.</p>
+<a class='view-head2' id="%24Archive%3a%3aTar%3a%3aWARN"></a><h3 class='h3' >$Archive::Tar::WARN</h3>
+<p>Set this variable to <code class="inline"><span class="n">0</span></code>
+ if you do not want any warnings printed.
+Personally I recommend against doing this, but people asked for the
+option. Also, be advised that this is of course not threadsafe.</p>
+<p>Defaults to <code class="inline"><span class="n">1</span></code>
+.</p>
+<a class='view-head2' id="%24Archive%3a%3aTar%3a%3aerror"></a><h3 class='h3' >$Archive::Tar::error</h3>
+<p>Holds the last reported error. Kept for historical reasons, but its
+use is very much discouraged. Use the <code class="inline"><span class="i">error</span><span class="s">(</span><span class="s">)</span></code>
+ method instead:</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/warn.html">warn</a> <span class="i">$tar</span><span class="i">-&gt;error</span> <a class="l_k" href="../functions/unless.html">unless</a> <span class="i">$tar</span><span class="i">-&gt;extract</span><span class="sc">;</span></li></ol></pre><p>Note that in older versions of this module, the <code class="inline"><span class="i">error</span><span class="s">(</span><span class="s">)</span></code>
+ method
+would return an effectively global value even when called an instance
+method as above. This has since been fixed, and multiple instances of
+<code class="inline"><span class="w">Archive::Tar</span></code>
+ now have separate error strings.</p>
+<a class='view-head2' id="%24Archive%3a%3aTar%3a%3aINSECURE_EXTRACT_MODE"></a><h3 class='h3' >$Archive::Tar::INSECURE_EXTRACT_MODE</h3>
+<p>This variable indicates whether <code class="inline"><span class="w">Archive::Tar</span></code>
+ should allow
+files to be extracted outside their current working directory.</p>
+<p>Allowing this could have security implications, as a malicious
+tar archive could alter or replace any file the extracting user
+has permissions to. Therefor, the default is to not allow
+insecure extractions.</p>
+<p>If you trust the archive, or have other reasons to allow the
+archive to write files outside your current working directory,
+set this variable to <code class="inline"><span class="w">true</span></code>
+.</p>
+<p>Note that this is a backwards incompatible change from version
+<code class="inline"><span class="n">1.36</span></code>
+ and before.</p>
+<a class='view-head2' id="%24Archive%3a%3aTar%3a%3aHAS_PERLIO"></a><h3 class='h3' >$Archive::Tar::HAS_PERLIO</h3>
+<p>This variable holds a boolean indicating if we currently have
+<code class="inline"><span class="w">perlio</span></code>
+ support loaded. This will be enabled for any perl
+greater than <code class="inline"><span class="n">5.8</span></code>
+ compiled with <code class="inline"><span class="w">perlio</span></code>
+.</p>
+<p>If you feel strongly about disabling it, set this variable to
+<code class="inline"><span class="w">false</span></code>
+. Note that you will then need <code class="inline"><span class="w">IO::String</span></code>
+ installed
+to support writing stringified archives.</p>
+<p>Don't change this variable unless you <strong>really</strong> know what you're
+doing.</p>
+<a class='view-head2' id="%24Archive%3a%3aTar%3a%3aHAS_IO_STRING"></a><h3 class='h3' >$Archive::Tar::HAS_IO_STRING</h3>
+<p>This variable holds a boolean indicating if we currently have
+<code class="inline"><span class="w">IO::String</span></code>
+ support loaded. This will be enabled for any perl
+that has a loadable <code class="inline"><span class="w">IO::String</span></code>
+ module.</p>
+<p>If you feel strongly about disabling it, set this variable to
+<code class="inline"><span class="w">false</span></code>
+. Note that you will then need <code class="inline"><span class="w">perlio</span></code>
+ support from
+your perl to be able to  write stringified archives.</p>
+<p>Don't change this variable unless you <strong>really</strong> know what you're
+doing.</p>
+<a class='view-head2' id="%24Archive%3a%3aTar%3a%3aZERO_PAD_NUMBERS"></a><h3 class='h3' >$Archive::Tar::ZERO_PAD_NUMBERS</h3>
+<p>This variable holds a boolean indicating if we will create
+zero padded numbers for <code class="inline"><span class="w">size</span></code>
+, <code class="inline"><span class="w">mtime</span></code>
+ and <code class="inline"><span class="w">checksum</span></code>
+.
+The default is <code class="inline"><span class="n">0</span></code>
+, indicating that we will create space padded
+numbers. Added for compatibility with <code class="inline"><span class="w">busybox</span></code>
+ implementations.</p>
+<a class='view-head1' id="FAQ"></a><h2 class='h2' >FAQ</h2>
+<ul>
+<li><a class='view-title' id="What's-the-minimum-perl-version-required-to-run-Archive%3a%3aTar%3f"></a><strong>What's the minimum perl version required to run Archive::Tar?</strong>
+<p>You will need perl version 5.005_03 or newer.</p>
+</li>
+<li><a class='view-title' id="Isn't-Archive%3a%3aTar-slow%3f"></a><strong>Isn't Archive::Tar slow?</strong>
+<p>Yes it is. It's pure perl, so it's a lot slower then your <code class="inline"><span class="q">/bin/</span><span class="w">tar</span></code>
+
+However, it's very portable. If speed is an issue, consider using
+<code class="inline"><span class="q">/bin/</span><span class="w">tar</span></code>
+ instead.</p>
+</li>
+<li><a class='view-title' id="Isn't-Archive%3a%3aTar-heavier-on-memory-than-%2fbin%2ftar%3f"></a><strong>Isn't Archive::Tar heavier on memory than /bin/tar?</strong>
+<p>Yes it is, see previous answer. Since <code class="inline"><span class="w">Compress::Zlib</span></code>
+ and therefore
+<code class="inline"><span class="w">IO::Zlib</span></code>
+ doesn't support <code class="inline"><a class="l_k" href="../functions/seek.html">seek</a></code> on their filehandles, there is little
+choice but to read the archive into memory.
+This is ok if you want to do in-memory manipulation of the archive.</p>
+<p>If you just want to extract, use the <code class="inline"><span class="w">extract_archive</span></code>
+ class method
+instead. It will optimize and write to disk immediately.</p>
+<p>Another option is to use the <code class="inline"><span class="w">iter</span></code>
+ class method to iterate over
+the files in the tarball without reading them all in memory at once.</p>
+</li>
+<li><a class='view-title' id="Can-you-lazy-load-data-instead%3f"></a><strong>Can you lazy-load data instead?</strong>
+<p>In some cases, yes. You can use the <code class="inline"><span class="w">iter</span></code>
+ class method to iterate
+over the files in the tarball without reading them all in memory at once.</p>
+</li>
+<li><a class='view-title' id="How-much-memory-will-an-X-kb-tar-file-need%3f"></a><strong>How much memory will an X kb tar file need?</strong>
+<p>Probably more than X kb, since it will all be read into memory. If
+this is a problem, and you don't need to do in memory manipulation
+of the archive, consider using the <code class="inline"><span class="w">iter</span></code>
+ class method, or <code class="inline"><span class="q">/bin/</span><span class="w">tar</span></code>
+
+instead.</p>
+</li>
+<li><a class='view-title' id="What-do-you-do-with-unsupported-filetypes-in-an-archive%3f"></a><strong>What do you do with unsupported filetypes in an archive?</strong>
+<p><code class="inline"><span class="w">Unix</span></code>
+ has a few filetypes that aren't supported on other platforms,
+like <code class="inline"><span class="w">Win32</span></code>
+. If we encounter a <code class="inline"><span class="w">hardlink</span></code>
+ or <code class="inline"><a class="l_k" href="../functions/symlink.html">symlink</a></code> we'll just
+try to make a copy of the original file, rather than throwing an error.</p>
+<p>This does require you to read the entire archive in to memory first,
+since otherwise we wouldn't know what data to fill the copy with.
+(This means that you cannot use the class methods, including <code class="inline"><span class="w">iter</span></code>
+
+on archives that have incompatible filetypes and still expect things
+to work).</p>
+<p>For other filetypes, like <code class="inline"><span class="w">chardevs</span></code>
+ and <code class="inline"><span class="w">blockdevs</span></code>
+ we'll warn that
+the extraction of this particular item didn't work.</p>
+</li>
+<li><a class='view-title' id="I'm-using-WinZip%2c-or-some-other-non-POSIX-client%2c-and-files-are-not-being-extracted-properly!"></a><strong>I'm using WinZip, or some other non-POSIX client, and files are not being extracted properly!</strong>
+<p>By default, <code class="inline"><span class="w">Archive::Tar</span></code>
+ is in a completely POSIX-compatible
+mode, which uses the POSIX-specification of <code class="inline"><span class="w">tar</span></code>
+ to store files.
+For paths greater than 100 characters, this is done using the
+<code class="inline"><span class="w">POSIX</span> <span class="w">header</span> <span class="w">prefix</span></code>
+. Non-POSIX-compatible clients may not support
+this part of the specification, and may only support the <code class="inline"><span class="w">GNU</span> <span class="w">Extended</span>
+<span class="w">Header</span></code>
+ functionality. To facilitate those clients, you can set the
+<code class="inline"><span class="i">$Archive::Tar::DO_NOT_USE_PREFIX</span></code>
+ variable to <code class="inline"><span class="w">true</span></code>
+. See the
+<code class="inline"><span class="w">GLOBAL</span> <span class="w">VARIABLES</span></code>
+ section for details on this variable.</p>
+<p>Note that GNU tar earlier than version 1.14 does not cope well with
+the <code class="inline"><span class="w">POSIX</span> <span class="w">header</span> <span class="w">prefix</span></code>
+. If you use such a version, consider setting
+the <code class="inline"><span class="i">$Archive::Tar::DO_NOT_USE_PREFIX</span></code>
+ variable to <code class="inline"><span class="w">true</span></code>
+.</p>
+</li>
+<li><a class='view-title' id="How-do-I-extract-only-files-that-have-property-X-from-an-archive%3f"></a><strong>How do I extract only files that have property X from an archive?</strong>
+<p>Sometimes, you might not wish to extract a complete archive, just
+the files that are relevant to you, based on some criteria.</p>
+<p>You can do this by filtering a list of <code class="inline"><span class="w">Archive::Tar::File</span></code>
+ objects
+based on your criteria. For example, to extract only files that have
+the string <code class="inline"><span class="w">foo</span></code>
+ in their title, you would use:</p>
+<pre class="verbatim"><ol><li>    <span class="i">$tar</span><span class="i">-&gt;extract</span><span class="s">(</span></li><li>        <a class="l_k" href="../functions/grep.html">grep</a> <span class="s">{</span> <span class="i">$_</span><span class="i">-&gt;full_path</span> =~ <span class="q">/foo/</span> <span class="s">}</span> <span class="i">$tar</span><span class="i">-&gt;get_files</span></li><li>    <span class="s">)</span><span class="sc">;</span></li></ol></pre><p>This way, you can filter on any attribute of the files in the archive.
+Consult the <code class="inline"><span class="w">Archive::Tar::File</span></code>
+ documentation on how to use these
+objects.</p>
+</li>
+<li><a class='view-title' id="How-do-I-access-.tar.Z-files%3f"></a><strong>How do I access .tar.Z files?</strong>
+<p>The <code class="inline"><span class="w">Archive::Tar</span></code>
+ module can optionally use <code class="inline"><span class="w">Compress::Zlib</span></code>
+ (via
+the <code class="inline"><span class="w">IO::Zlib</span></code>
+ module) to access tar files that have been compressed
+with <code class="inline"><span class="w">gzip</span></code>
+. Unfortunately tar files compressed with the Unix <code class="inline"><span class="w">compress</span></code>
+
+utility cannot be read by <code class="inline"><span class="w">Compress::Zlib</span></code>
+ and so cannot be directly
+accesses by <code class="inline"><span class="w">Archive::Tar</span></code>
+.</p>
+<p>If the <code class="inline"><span class="w">uncompress</span></code>
+ or <code class="inline"><span class="w">gunzip</span></code>
+ programs are available, you can use
+one of these workarounds to read <code class="inline">.<span class="w">tar</span>.<span class="w">Z</span></code>
+ files from <code class="inline"><span class="w">Archive::Tar</span></code>
+</p>
+<p>Firstly with <code class="inline"><span class="w">uncompress</span></code>
+</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">Archive::Tar</span><span class="sc">;</span></li><li></li><li>    <a class="l_k" href="../functions/open.html">open</a> <span class="w">F</span><span class="cm">,</span> <span class="q">&quot;uncompress -c $filename |&quot;</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">$tar</span> = <span class="w">Archive::Tar</span><span class="w">-&gt;new</span><span class="s">(</span><span class="i">*F</span><span class="s">)</span><span class="sc">;</span></li><li>    ...</li></ol></pre><p>and this with <code class="inline"><span class="w">gunzip</span></code>
+</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">Archive::Tar</span><span class="sc">;</span></li><li></li><li>    <a class="l_k" href="../functions/open.html">open</a> <span class="w">F</span><span class="cm">,</span> <span class="q">&quot;gunzip -c $filename |&quot;</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">$tar</span> = <span class="w">Archive::Tar</span><span class="w">-&gt;new</span><span class="s">(</span><span class="i">*F</span><span class="s">)</span><span class="sc">;</span></li><li>    ...</li></ol></pre><p>Similarly, if the <code class="inline"><span class="w">compress</span></code>
+ program is available, you can use this to
+write a <code class="inline">.<span class="w">tar</span>.<span class="w">Z</span></code>
+ file</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">Archive::Tar</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">IO::File</span><span class="sc">;</span></li><li></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">$fh</span> = <span class="w">new</span> <span class="w">IO::File</span> <span class="q">&quot;| compress -c &gt;$filename&quot;</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">$tar</span> = <span class="w">Archive::Tar</span><span class="w">-&gt;new</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li><li>    ...</li><li>    <span class="i">$tar</span><span class="i">-&gt;write</span><span class="s">(</span><span class="i">$fh</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="i">$fh</span><span class="i">-&gt;close</span> <span class="sc">;</span></li></ol></pre></li>
+<li><a class='view-title' id="How-do-I-handle-Unicode-strings%3f"></a><strong>How do I handle Unicode strings?</strong>
+<p><code class="inline"><span class="w">Archive::Tar</span></code>
+ uses byte semantics for any files it reads from or writes
+to disk. This is not a problem if you only deal with files and never
+look at their content or work solely with byte strings. But if you use
+Unicode strings with character semantics, some additional steps need
+to be taken.</p>
+<p>For example, if you add a Unicode string like</p>
+<pre class="verbatim"><ol><li>    <span class="c"># Problem</span></li><li>    <span class="i">$tar</span><span class="i">-&gt;add_data</span><span class="s">(</span><span class="q">&#39;file.txt&#39;</span><span class="cm">,</span> <span class="q">&quot;Euro: \x{20AC}&quot;</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>then there will be a problem later when the tarfile gets written out
+to disk via <code class="inline"><span class="i">$tar</span>-</code>
+write()&gt;:</p>
+<pre class="verbatim"><ol><li>    <span class="w">Wide</span> <span class="w">character</span> <span class="w">in</span> <a class="l_k" href="../functions/print.html">print</a> <span class="i">at</span> ...<span class="q">/Archive/</span><span class="w">Tar</span>.<span class="w">pm</span> <span class="w">line</span> <span class="n">1014.</span></li></ol></pre><p>The data was added as a Unicode string and when writing it out to disk,
+the <code class="inline"><span class="j">:</span><span class="w">utf8</span></code>
+ line discipline wasn't set by <code class="inline"><span class="w">Archive::Tar</span></code>
+, so Perl
+tried to convert the string to ISO-8859 and failed. The written file
+now contains garbage.</p>
+<p>For this reason, Unicode strings need to be converted to UTF-8-encoded
+bytestrings before they are handed off to <code class="inline"><span class="i">add_data</span><span class="s">(</span><span class="s">)</span></code>
+:</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">Encode</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">$data</span> = <span class="q">&quot;Accented character: \x{20AC}&quot;</span><span class="sc">;</span></li><li>    <span class="i">$data</span> = <span class="i">encode</span><span class="s">(</span><span class="q">&#39;utf8&#39;</span><span class="cm">,</span> <span class="i">$data</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>    <span class="i">$tar</span><span class="i">-&gt;add_data</span><span class="s">(</span><span class="q">&#39;file.txt&#39;</span><span class="cm">,</span> <span class="i">$data</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>A opposite problem occurs if you extract a UTF8-encoded file from a
+tarball. Using <code class="inline"><span class="i">get_content</span><span class="s">(</span><span class="s">)</span></code>
+ on the <code class="inline"><span class="w">Archive::Tar::File</span></code>
+ object
+will return its content as a bytestring, not as a Unicode string.</p>
+<p>If you want it to be a Unicode string (because you want character
+semantics with operations like regular expression matching), you need
+to decode the UTF8-encoded content and have Perl convert it into
+a Unicode string:</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">Encode</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">$data</span> = <span class="i">$tar</span><span class="i">-&gt;get_content</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>    <span class="c"># Make it a Unicode string</span></li><li>    <span class="i">$data</span> = <span class="i">decode</span><span class="s">(</span><span class="q">&#39;utf8&#39;</span><span class="cm">,</span> <span class="i">$data</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>There is no easy way to provide this functionality in <code class="inline"><span class="w">Archive::Tar</span></code>
+,
+because a tarball can contain many files, and each of which could be
+encoded in a different way.</p>
+</li>
+</ul>
+<a class='view-head1' id="CAVEATS"></a><h2 class='h2' >CAVEATS</h2>
+<p>The AIX tar does not fill all unused space in the tar archive with 0x00.
+This sometimes leads to warning messages from <code class="inline"><span class="w">Archive::Tar</span></code>
+.</p>
+<pre class="verbatim"><ol><li>  <span class="w">Invalid</span> <span class="w">header</span> <span class="w">block</span> <span class="w">at</span> <span class="w">offset</span> <span class="w">nnn</span></li></ol></pre><p>A fix for that problem is scheduled to be released in the following levels
+of AIX, all of which should be coming out in the 4th quarter of 2009:</p>
+<pre class="verbatim"><ol><li> <span class="w">AIX</span> <span class="n">5.3</span> <span class="w">TL7</span> <span class="w">SP10</span></li><li> <span class="w">AIX</span> <span class="n">5.3</span> <span class="w">TL8</span> <span class="w">SP8</span></li><li> <span class="w">AIX</span> <span class="n">5.3</span> <span class="w">TL9</span> <span class="w">SP5</span></li><li> <span class="w">AIX</span> <span class="n">5.3</span> <span class="w">TL10</span> <span class="w">SP2</span></li><li></li><li> <span class="w">AIX</span> <span class="n">6.1</span> <span class="w">TL0</span> <span class="w">SP11</span></li><li> <span class="w">AIX</span> <span class="n">6.1</span> <span class="w">TL1</span> <span class="w">SP7</span></li><li> <span class="w">AIX</span> <span class="n">6.1</span> <span class="w">TL2</span> <span class="w">SP6</span></li><li> <span class="w">AIX</span> <span class="n">6.1</span> <span class="w">TL3</span> <span class="w">SP3</span></li></ol></pre><p>The IBM APAR number for this problem is IZ50240 (Reported component ID:
+5765G0300 / AIX 5.3). It is possible to get an ifix for that problem.
+If you need an ifix please contact your local IBM AIX support.</p>
+<a class='view-head1' id="TODO"></a><h2 class='h2' >TODO</h2>
+<ul>
+<li><a class='view-title' id="Check-if-passed-in-handles-are-open-for-read%2fwrite"></a><strong>Check if passed in handles are open for read/write</strong>
+<p>Currently I don't know of any portable pure perl way to do this.
+Suggestions welcome.</p>
+</li>
+<li><a class='view-title' id="Allow-archives-to-be-passed-in-as-string"></a><strong>Allow archives to be passed in as string</strong>
+<p>Currently, we only allow opened filehandles or filenames, but
+not strings. The internals would need some reworking to facilitate
+stringified archives.</p>
+</li>
+<li><a class='view-title' id="Facilitate-processing-an-opened-filehandle-of-a-compressed-archive"></a><strong>Facilitate processing an opened filehandle of a compressed archive</strong>
+<p>Currently, we only support this if the filehandle is an IO::Zlib object.
+Environments, like apache, will present you with an opened filehandle
+to an uploaded file, which might be a compressed archive.</p>
+</li>
+</ul>
+<a class='view-head1' id="SEE-ALSO"></a><h2 class='h2' >SEE ALSO</h2>
+<ul>
+<li><a class='view-title' id="The-GNU-tar-specification"></a><strong>The GNU tar specification</strong>
+<p><code class="inline"><a href="http://www.gnu.org/software/tar/manual/tar.html">http://www.gnu.org/software/tar/manual/tar.html</a></code></p>
+</li>
+<li><a class='view-title' id="The-PAX-format-specification"></a><strong>The PAX format specification</strong>
+<p>The specification which tar derives from; <code class="inline"> <a href="http://www.opengroup.org/onlinepubs/007904975/utilities/pax.html">http://www.opengroup.org/onlinepubs/007904975/utilities/pax.html</a></code></p>
+</li>
+<li><a class='view-title' id="A-comparison-of-GNU-and-POSIX-tar-standards%3b-http%3a%2f%2fwww.delorie.com%2fgnu%2fdocs%2ftar%2ftar_114.html"></a><strong>A comparison of GNU and POSIX tar standards; <code class="inline"><a href="http://www.delorie.com/gnu/docs/tar/tar_114.html">http://www.delorie.com/gnu/docs/tar/tar_114.html</a></code></strong>
+</li>
+<li><a class='view-title' id="GNU-tar-intends-to-switch-to-POSIX-compatibility"></a><strong>GNU tar intends to switch to POSIX compatibility</strong>
+<p>GNU Tar authors have expressed their intention to become completely
+POSIX-compatible; <code class="inline"><a href="http://www.gnu.org/software/tar/manual/html_node/Formats.html">http://www.gnu.org/software/tar/manual/html_node/Formats.html</a></code></p>
+</li>
+<li><a class='view-title' id="A-Comparison-between-various-tar-implementations"></a><strong>A Comparison between various tar implementations</strong>
+<p>Lists known issues and incompatibilities; <code class="inline"><a href="http://gd.tuwien.ac.at/utils/archivers/star/README.otherbugs">http://gd.tuwien.ac.at/utils/archivers/star/README.otherbugs</a></code></p>
+</li>
+</ul>
+<a class='view-head1' id="AUTHOR"></a><h2 class='h2' >AUTHOR</h2>
+<p>This module by Jos Boumans &lt;kane@cpan.org&gt;.</p>
+<p>Please reports bugs to &lt;bug-archive-tar@rt.cpan.org&gt;.</p>
+<a class='view-head1' id="ACKNOWLEDGEMENTS"></a><h2 class='h2' >ACKNOWLEDGEMENTS</h2>
+<p>Thanks to Sean Burke, Chris Nandor, Chip Salzenberg, Tim Heaney, Gisle Aas,
+Rainer Tammer and especially Andrew Savige for their help and suggestions.</p>
+<a class='view-head1' id="COPYRIGHT"></a><h2 class='h2' >COPYRIGHT</h2>
+<p>This module is copyright (c) 2002 - 2009 Jos Boumans
+&lt;kane@cpan.org&gt;. All rights reserved.</p>
+<p>This library is free software; you may redistribute and/or modify
+it under the same terms as Perl itself.</p>
+
+
+
+
+      <ul><li><a href="#NAME">NAME</a></li><li><a href="#SYNOPSIS">SYNOPSIS</a></li><li><a href="#DESCRIPTION">DESCRIPTION</a></li><li><a href="#Object-Methods">Object Methods</a></li><ul><li><a href="#Archive%3a%3aTar-%3enew(-%5b%24file%2c-%24compressed%5d-)">Archive::Tar->new( [$file, $compressed] )</a></li><li><a href="#%24tar-%3eread-(-%24filename%7c%24handle%2c-%5b%24compressed%2c-%7bopt-%3d%3e-'val'%7d%5d-)">$tar->read ( $filename|$handle, [$compressed, {opt => 'val'}] )</a></li><li><a href="#%24tar-%3econtains_file(-%24filename-)">$tar->contains_file( $filename )</a></li><li><a href="#%24tar-%3eextract(-%5b%40filenames%5d-)">$tar->extract( [@filenames] )</a></li><li><a href="#%24tar-%3eextract_file(-%24file%2c-%5b%24extract_path%5d-)">$tar->extract_file( $file, [$extract_path] )</a></li><li><a href="#%24tar-%3elist_files(-%5b%5c%40properties%5d-)">$tar->list_files( [\@properties] )</a></li><li><a href="#%24tar-%3eget_files(-%5b%40filenames%5d-)">$tar->get_files( [@filenames] )</a></li><li><a href="#%24tar-%3eget_content(-%24file-)">$tar->get_content( $file )</a></li><li><a href="#%24tar-%3ereplace_content(-%24file%2c-%24content-)">$tar->replace_content( $file, $content )</a></li><li><a href="#%24tar-%3erename(-%24file%2c-%24new_name-)">$tar->rename( $file, $new_name )</a></li><li><a href="#%24tar-%3echmod(-%24file%2c-%24mode-)">$tar->chmod( $file, $mode )</a></li><li><a href="#%24tar-%3echown(-%24file%2c-%24uname-%5b%2c-%24gname%5d-)">$tar->chown( $file, $uname [, $gname] )</a></li><li><a href="#%24tar-%3eremove-(%40filenamelist)">$tar->remove (@filenamelist)</a></li><li><a href="#%24tar-%3eclear">$tar->clear</a></li><li><a href="#%24tar-%3ewrite-(-%5b%24file%2c-%24compressed%2c-%24prefix%5d-)">$tar->write ( [$file, $compressed, $prefix] )</a></li><li><a href="#%24tar-%3eadd_files(-%40filenamelist-)">$tar->add_files( @filenamelist )</a></li><li><a href="#%24tar-%3eadd_data-(-%24filename%2c-%24data%2c-%5b%24opthashref%5d-)">$tar->add_data ( $filename, $data, [$opthashref] )</a></li><li><a href="#%24tar-%3eerror(-%5b%24BOOL%5d-)">$tar->error( [$BOOL] )</a></li><li><a href="#%24tar-%3esetcwd(-%24cwd-)%3b">$tar->setcwd( $cwd );</a></li></ul><li><a href="#Class-Methods">Class Methods</a></li><ul><li><a href="#Archive%3a%3aTar-%3ecreate_archive(%24file%2c-%24compressed%2c-%40filelist)">Archive::Tar->create_archive($file, $compressed, @filelist)</a></li><li><a href="#Archive%3a%3aTar-%3eiter(-%24filename%2c-%5b-%24compressed%2c-%7bopt-%3d%3e-%24val%7d-%5d-)">Archive::Tar->iter( $filename, [ $compressed, {opt => $val} ] )</a></li><li><a href="#Archive%3a%3aTar-%3elist_archive(%24file%2c-%24compressed%2c-%5b%5c%40properties%5d)">Archive::Tar->list_archive($file, $compressed, [\@properties])</a></li><li><a href="#Archive%3a%3aTar-%3eextract_archive(%24file%2c-%24compressed)">Archive::Tar->extract_archive($file, $compressed)</a></li><li><a href="#%24bool-%3d-Archive%3a%3aTar-%3ehas_io_string">$bool = Archive::Tar->has_io_string</a></li><li><a href="#%24bool-%3d-Archive%3a%3aTar-%3ehas_perlio">$bool = Archive::Tar->has_perlio</a></li><li><a href="#%24bool-%3d-Archive%3a%3aTar-%3ehas_zlib_support">$bool = Archive::Tar->has_zlib_support</a></li><li><a href="#%24bool-%3d-Archive%3a%3aTar-%3ehas_bzip2_support">$bool = Archive::Tar->has_bzip2_support</a></li><li><a href="#Archive%3a%3aTar-%3ecan_handle_compressed_files">Archive::Tar->can_handle_compressed_files</a></li></ul><li><a href="#GLOBAL-VARIABLES">GLOBAL VARIABLES</a></li><ul><li><a href="#%24Archive%3a%3aTar%3a%3aFOLLOW_SYMLINK">$Archive::Tar::FOLLOW_SYMLINK</a></li><li><a href="#%24Archive%3a%3aTar%3a%3aCHOWN">$Archive::Tar::CHOWN</a></li><li><a href="#%24Archive%3a%3aTar%3a%3aCHMOD">$Archive::Tar::CHMOD</a></li><li><a href="#%24Archive%3a%3aTar%3a%3aSAME_PERMISSIONS">$Archive::Tar::SAME_PERMISSIONS</a></li><li><a href="#%24Archive%3a%3aTar%3a%3aDO_NOT_USE_PREFIX">$Archive::Tar::DO_NOT_USE_PREFIX</a></li><li><a href="#%24Archive%3a%3aTar%3a%3aDEBUG">$Archive::Tar::DEBUG</a></li><li><a href="#%24Archive%3a%3aTar%3a%3aWARN">$Archive::Tar::WARN</a></li><li><a href="#%24Archive%3a%3aTar%3a%3aerror">$Archive::Tar::error</a></li><li><a href="#%24Archive%3a%3aTar%3a%3aINSECURE_EXTRACT_MODE">$Archive::Tar::INSECURE_EXTRACT_MODE</a></li><li><a href="#%24Archive%3a%3aTar%3a%3aHAS_PERLIO">$Archive::Tar::HAS_PERLIO</a></li><li><a href="#%24Archive%3a%3aTar%3a%3aHAS_IO_STRING">$Archive::Tar::HAS_IO_STRING</a></li><li><a href="#%24Archive%3a%3aTar%3a%3aZERO_PAD_NUMBERS">$Archive::Tar::ZERO_PAD_NUMBERS</a></li></ul><li><a href="#FAQ">FAQ</a></li><li><a href="#CAVEATS">CAVEATS</a></li><li><a href="#TODO">TODO</a></li><li><a href="#SEE-ALSO">SEE ALSO</a></li><li><a href="#AUTHOR">AUTHOR</a></li><li><a href="#ACKNOWLEDGEMENTS">ACKNOWLEDGEMENTS</a></li><li><a href="#COPYRIGHT">COPYRIGHT</a></li></ul>
+
+
+                  </div>
+                </article>
+              </div>
+            </div>
+          </main>
+        </div>
+           <footer class="footer row bg-light pt-5 pb-5">
+       <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+           <div class="row">
+               <div class="col-md-4">
+                   <ul class="list-unstyled">
+                       <li>
+                           <h4>Site info</h4>
+                       </li>
+                       <li>Docs mantained by
+                           <a href="//lists.perl.org/list/perl5-porters.html"
+                               rel="noopener">Perl 5 Porters</a>
+                       </li>
+                       <li>Perldoc site development sponsored by
+                           <a href="//opusvl.com" rel="noopener">
+                           <img style="margin: 20px 20px 5px 10px" class="opus-logo" src="/public/img/opusvl_logo.svg" alt="OpusVL Logo">
+                        </a>
+                    <li><span class="about_perldoc"><a href="//about.html">About PerlDOC</a></span>
+                    </li>
+                       </li>
+                   </ul>
+               </div>
+               <div class="col-md-8">
+                   <div class="row">
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Manuals</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.18.4/index-overview.html">Overview</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.18.4/index-tutorials.html">Tutorials</a>
+                               </li>
+                               <li>
+                                   <a href="/5.18.4/index-faq.html">FAQs</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.18.4/index-history.html">Changes</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Reference</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.18.4/index-language.html">Language</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.18.4/index-functions.html">Functions</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.18.4/perlop.html">Operators</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.18.4/perlvar.html">Variables</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Modules</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.18.4/index-modules-A.html">Modules</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.18.4/index-pragmas.html">Pragmas</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.18.4/index-utilities.html">Utilities</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Misc</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.18.4/index-licence.html">License</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.18.4/index-internals.html">Internals</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.18.4/index-platforms.html">Platforms</a>
+                               </li>
+                            <li>
+                                <a
+                                    href="/5.18.4/index-about.html">About</a>
+                            </li>
+                           </ul>
+                       </div>
+                   </div>
+               </div>
+               <div class=" col-12 footer-inf text-center">
+                   <small>perldoc.perl.org - Official documentation for the Perl
+                       programming language</small>
+               </div>
+           </div>
+       </div>
+   </footer>
+
+        	<div class="beta-wrapper beta-bottom-right ">
+		<div class="beta beta-blue  ">
+			<a class="beta-link "
+				href="//github.com/OpusVL/perldoc.perl.org/issues/new" rel="noopener">
+				<span class="beta-text">
+					This website is a Beta release.
+				</span>
+				<span class="beta-text">
+					For any issues please raise a ticket on GitHub
+				</span>
+			</a>
+		</div>
+	</div>
+
+        <script src="/public/js/main.min.js"></script>
+      </body>
+
+      </html>

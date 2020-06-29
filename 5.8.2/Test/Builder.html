@@ -1,0 +1,897 @@
+      
+      
+      
+      
+
+      <!DOCTYPE html>
+      <html lang="en">
+
+      <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Test::Builder - perldoc.perl.org">
+        <link rel="icon" href="/public/img/favicon.ico">
+        <title>Test::Builder - perldoc.perl.org</title>
+        <link href="/public/css/main.min.css" rel="stylesheet">
+        <link rel="canonical" href="/Test/Builder.html">
+        <link
+          href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900'
+          rel='stylesheet' type='text/css'>
+        <script>
+          window.ga = window.ga || function () {
+            (ga.q = ga.q || []).push(arguments)
+          };
+          ga.l = +new Date;
+          ga('create', 'UA-1892152-2', 'auto'); // JJ's account
+          ga('create', 'UA-50555-3', 'auto', 'perlOrg'); // perl.org account
+          ga('require', 'outboundLinkTracker', {
+            events: ['click', 'auxclick', 'contextmenu'],
+          });
+          ga('require', 'maxScrollTracker');
+          ga('send', 'pageview');
+          ga('perlOrg.send', 'pageview');
+        </script>
+        <script async src="https://www.google-analytics.com/analytics.js">
+        </script>
+        <script async src="/public/js/tracking.min.js"></script>
+      </head>
+
+      <body class="body container-fluid ">
+        <div class="wrapper">
+
+          <nav
+    class="navbar navbar-dark bg-primary bg-perl fixed-top justify-content-between navbar-expand-lg">
+    <a href="#content" class="skippy sr-only sr-only-focusable">
+        <span class=' skippy-text'>Skip to main content</span>
+    </a>
+    <a class="navbar-brand" href="/">
+        <img class="logo" src="/public/img/logo_perl_doc.svg"
+            alt="Perl Documentation Logo" />
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse"
+        data-target="#navbar" aria-controls="navbar" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="navbar" class="collapse navbar-collapse ">
+        <ul class="navbar-nav ml-auto navbar-right">
+            <form class="nav-item dropdown search-wrapper">
+                <input type="text" id='searchinput' aria-describedby='navbarDropdown5'
+                    placeholder="Type query" class='search-input-field' value=''>
+
+                <button href="#" data-toggle='dropdown' type="button"
+                    aria-haspopup="true" aria-expanded='false' id="navbarDropdown5"
+                    class="nav-link dropdown-toggle search-link">
+                    <object tabindex='-1' focusable="false" class='search-icon'
+                        data="/public/img/search.svg" type="image/svg+xml"
+                        name='search icon'>search
+                        icon</object>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown5"
+                    id='search-results'>
+                    <p class='dropdown-item major-version'>
+                        No results
+                    </p>
+                </div>
+            </form>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown" href="#" class="nav-link dropdown-toggle"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Perl versions</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    
+                        <p class='dropdown-item major-version'>
+                            5.32
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.32.0/">5.32.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.30
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.3/">5.30.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.2/">5.30.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.1/">5.30.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.0/">5.30.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.28
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.3/">5.28.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.2/">5.28.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.1/">5.28.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.0/">5.28.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.26
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.3/">5.26.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.2/">5.26.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.1/">5.26.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.0/">5.26.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.24
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.4/">5.24.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.3/">5.24.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.2/">5.24.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.1/">5.24.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.0/">5.24.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.22
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.4/">5.22.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.3/">5.22.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.2/">5.22.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.1/">5.22.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.0/">5.22.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.20
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.3/">5.20.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.2/">5.20.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.1/">5.20.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.0/">5.20.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.18
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.4/">5.18.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.3/">5.18.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.2/">5.18.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.1/">5.18.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.0/">5.18.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.16
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.3/">5.16.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.2/">5.16.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.1/">5.16.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.0/">5.16.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.14
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.4/">5.14.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.3/">5.14.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.2/">5.14.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.1/">5.14.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.0/">5.14.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.12
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.5/">5.12.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.4/">5.12.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.3/">5.12.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.2/">5.12.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.1/">5.12.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.0/">5.12.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.10
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.1/">5.10.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.0/">5.10.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.8
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.9/">5.8.9</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.8/">5.8.8</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.7/">5.8.7</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.6/">5.8.6</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.5/">5.8.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.4/">5.8.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.3/">5.8.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.2/">5.8.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.1/">5.8.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.0/">5.8.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.6
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.2/">5.6.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.1/">5.6.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.0/">5.6.0</a>
+                        
+                        
+                    
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown1" href="#" class="dropdown-toggle nav-link"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Manuals</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                    <a class="dropdown-item"
+                        href="/5.8.2/index-overview.html">Overview</a>
+                    <a class="dropdown-item"
+                        href="/5.8.2/index-tutorials.html">Tutorials</a>
+                    <a class="dropdown-item"
+                        href="/5.8.2/index-faq.html">FAQs</a>
+                    <a class="dropdown-item"
+                        href="/5.8.2/index-history.html">Changes</a>
+                    <a class="dropdown-item"
+                        href="/5.8.2/index-licence.html">License</a>
+                    <a class="dropdown-item"
+                        href="/5.8.2/index-language.html">Language</a>
+                    <a class="dropdown-item"
+                        href="/5.8.2/index-functions.html">Functions</a>
+                    <a class="dropdown-item"
+                        href="/5.8.2/perlop.html">Operators</a>
+                    <a class="dropdown-item"
+                        href="/5.8.2/perlvar.html">Variables</a>
+                    <a class="dropdown-item"
+                        href="/5.8.2/index-pragmas.html">Pragmas</a>
+                    <a class="dropdown-item"
+                        href="/5.8.2/index-utilities.html">Utilities</a>
+                    <a class="dropdown-item"
+                        href="/5.8.2/index-internals.html">Internals</a>
+                    <a class="dropdown-item"
+                        href="/5.8.2/index-platforms.html">Platforms</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown3" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Modules</a>
+                <div aria-labelledby="navbarDropdown3"
+                    class="dropdown-menu letters-wrap">
+                    <!--<a class="dropdown-item"
+                        href="/5.8.2/index-modules.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.8.2/index-modules-by-cat.html">By
+                        Category</a>-->
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.8.2/index-modules-A.html">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.2/index-modules-B.html">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.2/index-modules-C.html">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.2/index-modules-D.html">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.2/index-modules-E.html">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.2/index-modules-F.html">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.2/index-modules-G.html">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.2/index-modules-H.html">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.2/index-modules-I.html">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.2/index-modules-J.html">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.2/index-modules-K.html">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.2/index-modules-L.html">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.2/index-modules-M.html">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.2/index-modules-N.html">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.2/index-modules-O.html">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.2/index-modules-P.html">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.2/index-modules-Q.html">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.2/index-modules-R.html">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.2/index-modules-S.html">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.2/index-modules-T.html">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.2/index-modules-U.html">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.2/index-modules-V.html">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.2/index-modules-W.html">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.2/index-modules-X.html">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.2/index-modules-Y.html">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.2/index-modules-Z.html">Z</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown4" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Functions</a>
+                <div aria-labelledby="navbarDropdown4"
+                    class="dropdown-menu letters-wrap">
+                    <a class="dropdown-item"
+                        href="/5.8.2/index-functions.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.8.2/index-functions-by-cat.html">By
+                        Category</a>
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.8.2/index-functions.html#A">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.2/index-functions.html#B">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.2/index-functions.html#C">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.2/index-functions.html#D">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.2/index-functions.html#E">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.2/index-functions.html#F">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.2/index-functions.html#G">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.2/index-functions.html#H">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.2/index-functions.html#I">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.2/index-functions.html#J">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.2/index-functions.html#K">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.2/index-functions.html#L">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.2/index-functions.html#M">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.2/index-functions.html#N">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.2/index-functions.html#O">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.2/index-functions.html#P">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.2/index-functions.html#Q">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.2/index-functions.html#R">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.2/index-functions.html#S">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.2/index-functions.html#T">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.2/index-functions.html#U">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.2/index-functions.html#V">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.2/index-functions.html#W">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.2/index-functions.html#X">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.2/index-functions.html#Y">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.2/index-functions.html#Z">Z</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!--/.nav-collapse -->
+</nav>
+
+
+          <main class="row main-content pb-5 pt-5" id='content'>
+            <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+              <div class="row">
+                <div class="col-sm-12">
+                  <div id="breadcrumbs">
+                      
+    <a href="../index.html">Home</a>&nbsp; &gt;
+    
+      
+        <a href="../index-modules-T.html">Core modules (T)</a> &gt;
+      
+    
+    Test::Builder
+  
+
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <article class="col-sm-12 content">
+                  <div class="documentation-wrapper">
+                    <div id="perl_version">
+                      <h7 class='page-title'> Perl 5 version 8.2
+                        documentation</h7>
+                    </div>
+                    <h1>Test::Builder</h1>
+
+
+  <!--    -->
+<ul><li><a href="#NAME">NAME</a></li><li><a href="#SYNOPSIS">SYNOPSIS</a></li><li><a href="#DESCRIPTION">DESCRIPTION</a></li><ul><li><a href="#Construction">Construction</a></li><li><a href="#Setting-up-tests">Setting up tests</a></li><li><a href="#Running-tests">Running tests</a></li><li><a href="#Test-style">Test style</a></li><li><a href="#Output">Output</a></li><li><a href="#Test-Status-and-Info">Test Status and Info</a></li></ul><li><a href="#THREADS">THREADS</a></li><li><a href="#EXAMPLES">EXAMPLES</a></li><li><a href="#SEE-ALSO">SEE ALSO</a></li><li><a href="#AUTHORS">AUTHORS</a></li><li><a href="#COPYRIGHT">COPYRIGHT</a></li></ul><a class='view-head1' id="NAME"></a><h2 class='h2' >NAME</h2>
+<p>Test::Builder - Backend for building test libraries</p>
+<a class='view-head1' id="SYNOPSIS"></a><h2 class='h2' >SYNOPSIS</h2>
+<pre class="verbatim"><ol><li><a name="package-My::Test::Module"></a>  package <span class="i">My::Test::Module</span><span class="sc">;</span></li><li>  <a class="l_k" href="../functions/use.html">use</a> <span class="w">Test::Builder</span><span class="sc">;</span></li><li>  <a class="l_k" href="../functions/require.html">require</a> <span class="w">Exporter</span><span class="sc">;</span></li><li>  <span class="i">@ISA</span> = <span class="q">qw(Exporter)</span><span class="sc">;</span></li><li>  <span class="i">@EXPORT</span> = <span class="q">qw(ok)</span><span class="sc">;</span></li><li></li><li>  <a class="l_k" href="../functions/my.html">my</a> <span class="i">$Test</span> = <span class="w">Test::Builder</span><span class="w">-&gt;new</span><span class="sc">;</span></li><li>  <span class="i">$Test</span><span class="i">-&gt;output</span><span class="s">(</span><span class="q">&#39;my_logfile&#39;</span><span class="s">)</span><span class="sc">;</span></li><li></li><li><a name="import"></a>  sub <span class="m">import</span> <span class="s">{</span></li><li>      <a class="l_k" href="../functions/my.html">my</a><span class="s">(</span><span class="i">$self</span><span class="s">)</span> = <a class="l_k" href="../functions/shift.html">shift</a><span class="sc">;</span></li><li>      <a class="l_k" href="../functions/my.html">my</a> <span class="i">$pack</span> = <a class="l_k" href="../functions/caller.html">caller</a><span class="sc">;</span></li><li></li><li>      <span class="i">$Test</span><span class="i">-&gt;exported_to</span><span class="s">(</span><span class="i">$pack</span><span class="s">)</span><span class="sc">;</span></li><li>      <span class="i">$Test</span><span class="i">-&gt;plan</span><span class="s">(</span><span class="i">@_</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>      <span class="i">$self</span><span class="i">-&gt;export_to_level</span><span class="s">(</span><span class="n">1</span><span class="cm">,</span> <span class="i">$self</span><span class="cm">,</span> <span class="q">&#39;ok&#39;</span><span class="s">)</span><span class="sc">;</span></li><li>  <span class="s">}</span></li><li></li><li><a name="ok"></a>  sub <span class="m">ok</span> <span class="s">{</span></li><li>      <a class="l_k" href="../functions/my.html">my</a><span class="s">(</span><span class="i">$test</span><span class="cm">,</span> <span class="i">$name</span><span class="s">)</span> = <span class="i">@_</span><span class="sc">;</span></li><li></li><li>      <span class="i">$Test</span><span class="i">-&gt;ok</span><span class="s">(</span><span class="i">$test</span><span class="cm">,</span> <span class="i">$name</span><span class="s">)</span><span class="sc">;</span></li><li>  <span class="s">}</span></li></ol></pre><a class='view-head1' id="DESCRIPTION"></a><h2 class='h2' >DESCRIPTION</h2>
+<p>Test::Simple and Test::More have proven to be popular testing modules,
+but they're not always flexible enough.  Test::Builder provides the a
+building block upon which to write your own test libraries <i>which can
+work together</i>.</p>
+<a class='view-head2' id="Construction"></a><h3 class='h3' >Construction</h3>
+<ul>
+<li><a class='view-title' id="*new*"></a><strong><strong>new</strong></strong>
+<pre class="verbatim"><ol><li>  <a class="l_k" href="../functions/my.html">my</a> <span class="i">$Test</span> = <span class="w">Test::Builder</span><span class="w">-&gt;new</span><span class="sc">;</span></li></ol></pre><p>Returns a Test::Builder object representing the current state of the
+test.</p>
+<p>Since you only run one test per program, there is <strong>one and only one</strong>
+Test::Builder object.  No matter how many times you call new(), you're
+getting the same object.  (This is called a singleton).</p>
+</li>
+</ul>
+<a class='view-head2' id="Setting-up-tests"></a><h3 class='h3' >Setting up tests</h3>
+<p>These methods are for setting up tests and declaring how many there
+are.  You usually only want to call one of these methods.</p>
+<ul>
+<li><a class='view-title' id="*exported_to*"></a><strong><strong>exported_to</strong></strong>
+<pre class="verbatim"><ol><li>  <a class="l_k" href="../functions/my.html">my</a> <span class="i">$pack</span> = <span class="i">$Test</span><span class="i">-&gt;exported_to</span><span class="sc">;</span></li><li>  <span class="i">$Test</span><span class="i">-&gt;exported_to</span><span class="s">(</span><span class="i">$pack</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>Tells Test::Builder what package you exported your functions to.
+This is important for getting TODO tests right.</p>
+</li>
+<li><a class='view-title' id="*plan*"></a><strong><strong>plan</strong></strong>
+<pre class="verbatim"><ol><li>  <span class="i">$Test</span><span class="i">-&gt;plan</span><span class="s">(</span><span class="q">&#39;no_plan&#39;</span><span class="s">)</span><span class="sc">;</span></li><li>  <span class="i">$Test</span><span class="i">-&gt;plan</span><span class="s">(</span> <span class="w">skip_all</span> <span class="cm">=&gt;</span> <span class="i">$reason</span> <span class="s">)</span><span class="sc">;</span></li><li>  <span class="i">$Test</span><span class="i">-&gt;plan</span><span class="s">(</span> <span class="w">tests</span> <span class="cm">=&gt;</span> <span class="i">$num_tests</span> <span class="s">)</span><span class="sc">;</span></li></ol></pre><p>A convenient way to set up your tests.  Call this and Test::Builder
+will print the appropriate headers and take the appropriate actions.</p>
+<p>If you call plan(), don't call any of the other methods below.</p>
+</li>
+<li><a class='view-title' id="*expected_tests*"></a><strong><strong>expected_tests</strong></strong>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">$max</span> = <span class="i">$Test</span><span class="i">-&gt;expected_tests</span><span class="sc">;</span></li><li>    <span class="i">$Test</span><span class="i">-&gt;expected_tests</span><span class="s">(</span><span class="i">$max</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>Gets/sets the # of tests we expect this test to run and prints out
+the appropriate headers.</p>
+</li>
+<li><a class='view-title' id="*no_plan*"></a><strong><strong>no_plan</strong></strong>
+<pre class="verbatim"><ol><li>  <span class="i">$Test</span><span class="i">-&gt;no_plan</span><span class="sc">;</span></li></ol></pre><p>Declares that this test will run an indeterminate # of tests.</p>
+</li>
+<li><a class='view-title' id="*has_plan*"></a><strong><strong>has_plan</strong></strong>
+<pre class="verbatim"><ol><li>  <span class="i">$plan</span> = <span class="i">$Test</span><span class="i">-&gt;has_plan</span></li></ol></pre><p>Find out whether a plan has been defined. $plan is either <code class="inline"><a class="l_k" href="../functions/undef.html">undef</a></code> (no plan has been set), <code class="inline"><span class="w">no_plan</span></code>
+ (indeterminate # of tests) or an integer (the number of expected tests).</p>
+</li>
+<li><a class='view-title' id="*skip_all*"></a><strong><strong>skip_all</strong></strong>
+<pre class="verbatim"><ol><li>  <span class="i">$Test</span><span class="i">-&gt;skip_all</span><span class="sc">;</span></li><li>  <span class="i">$Test</span><span class="i">-&gt;skip_all</span><span class="s">(</span><span class="i">$reason</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>Skips all the tests, using the given $reason.  Exits immediately with 0.</p>
+</li>
+</ul>
+<a class='view-head2' id="Running-tests"></a><h3 class='h3' >Running tests</h3>
+<p>These actually run the tests, analogous to the functions in
+Test::More.</p>
+<p>$name is always optional.</p>
+<ul>
+<li><a class='view-title' id="*ok*"></a><strong><strong>ok</strong></strong>
+<pre class="verbatim"><ol><li>  <span class="i">$Test</span><span class="i">-&gt;ok</span><span class="s">(</span><span class="i">$test</span><span class="cm">,</span> <span class="i">$name</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>Your basic test.  Pass if $test is true, fail if $test is false.  Just
+like Test::Simple's ok().</p>
+</li>
+<li><a class='view-title' id="*is_eq*"></a><strong><strong>is_eq</strong></strong>
+<pre class="verbatim"><ol><li>  <span class="i">$Test</span><span class="i">-&gt;is_eq</span><span class="s">(</span><span class="i">$got</span><span class="cm">,</span> <span class="i">$expected</span><span class="cm">,</span> <span class="i">$name</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>Like Test::More's is().  Checks if $got eq $expected.  This is the
+string version.</p>
+</li>
+<li><a class='view-title' id="*is_num*"></a><strong><strong>is_num</strong></strong>
+<pre class="verbatim"><ol><li>  <span class="i">$Test</span><span class="i">-&gt;is_num</span><span class="s">(</span><span class="i">$got</span><span class="cm">,</span> <span class="i">$expected</span><span class="cm">,</span> <span class="i">$name</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>Like Test::More's is().  Checks if $got == $expected.  This is the
+numeric version.</p>
+</li>
+<li><a class='view-title' id="*isnt_eq*"></a><strong><strong>isnt_eq</strong></strong>
+<pre class="verbatim"><ol><li>  <span class="i">$Test</span><span class="i">-&gt;isnt_eq</span><span class="s">(</span><span class="i">$got</span><span class="cm">,</span> <span class="i">$dont_expect</span><span class="cm">,</span> <span class="i">$name</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>Like Test::More's isnt().  Checks if $got ne $dont_expect.  This is
+the string version.</p>
+</li>
+<li><a class='view-title' id="*isnt_num*"></a><strong><strong>isnt_num</strong></strong>
+<pre class="verbatim"><ol><li>  <span class="i">$Test</span><span class="i">-&gt;is_num</span><span class="s">(</span><span class="i">$got</span><span class="cm">,</span> <span class="i">$dont_expect</span><span class="cm">,</span> <span class="i">$name</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>Like Test::More's isnt().  Checks if $got ne $dont_expect.  This is
+the numeric version.</p>
+</li>
+<li><a class='view-title' id="*like*"></a><strong><strong>like</strong></strong>
+<pre class="verbatim"><ol><li>  <span class="i">$Test</span><span class="i">-&gt;like</span><span class="s">(</span><span class="i">$this</span><span class="cm">,</span> <span class="q">qr/$regex/</span><span class="cm">,</span> <span class="i">$name</span><span class="s">)</span><span class="sc">;</span></li><li>  <span class="i">$Test</span><span class="i">-&gt;like</span><span class="s">(</span><span class="i">$this</span><span class="cm">,</span> <span class="q">&#39;/$regex/&#39;</span><span class="cm">,</span> <span class="i">$name</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>Like Test::More's like().  Checks if $this matches the given $regex.</p>
+<p>You'll want to avoid qr// if you want your tests to work before 5.005.</p>
+</li>
+<li><a class='view-title' id="*unlike*"></a><strong><strong>unlike</strong></strong>
+<pre class="verbatim"><ol><li>  <span class="i">$Test</span><span class="i">-&gt;unlike</span><span class="s">(</span><span class="i">$this</span><span class="cm">,</span> <span class="q">qr/$regex/</span><span class="cm">,</span> <span class="i">$name</span><span class="s">)</span><span class="sc">;</span></li><li>  <span class="i">$Test</span><span class="i">-&gt;unlike</span><span class="s">(</span><span class="i">$this</span><span class="cm">,</span> <span class="q">&#39;/$regex/&#39;</span><span class="cm">,</span> <span class="i">$name</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>Like Test::More's unlike().  Checks if $this <strong>does not match</strong> the
+given $regex.</p>
+</li>
+<li><a class='view-title' id="*maybe_regex*"></a><strong><strong>maybe_regex</strong></strong>
+<pre class="verbatim"><ol><li>  <span class="i">$Test</span><span class="i">-&gt;maybe_regex</span><span class="s">(</span><span class="q">qr/$regex/</span><span class="s">)</span><span class="sc">;</span></li><li>  <span class="i">$Test</span><span class="i">-&gt;maybe_regex</span><span class="s">(</span><span class="q">&#39;/$regex/&#39;</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>Convenience method for building testing functions that take regular
+expressions as arguments, but need to work before perl 5.005.</p>
+<p>Takes a quoted regular expression produced by qr//, or a string
+representing a regular expression.</p>
+<p>Returns a Perl value which may be used instead of the corresponding
+regular expression, or undef if it's argument is not recognised.</p>
+<p>For example, a version of like(), sans the useful diagnostic messages,
+could be written as:</p>
+<pre class="verbatim"><ol><li><a name="laconic_like"></a>  sub <span class="m">laconic_like</span> <span class="s">{</span></li><li>      <a class="l_k" href="../functions/my.html">my</a> <span class="s">(</span><span class="i">$self</span><span class="cm">,</span> <span class="i">$this</span><span class="cm">,</span> <span class="i">$regex</span><span class="cm">,</span> <span class="i">$name</span><span class="s">)</span> = <span class="i">@_</span><span class="sc">;</span></li><li>      <a class="l_k" href="../functions/my.html">my</a> <span class="i">$usable_regex</span> = <span class="i">$self</span><span class="i">-&gt;maybe_regex</span><span class="s">(</span><span class="i">$regex</span><span class="s">)</span><span class="sc">;</span></li><li>      <a class="l_k" href="../functions/die.html">die</a> <span class="q">&quot;expecting regex, found &#39;$regex&#39;\n&quot;</span></li><li>          unless <span class="i">$usable_regex</span><span class="sc">;</span></li><li>      <span class="i">$self</span><span class="i">-&gt;ok</span><span class="s">(</span><span class="i">$this</span> =~ <span class="q">m/$usable_regex/</span><span class="cm">,</span> <span class="i">$name</span><span class="s">)</span><span class="sc">;</span></li><li>  <span class="s">}</span></li></ol></pre></li>
+<li><a class='view-title' id="*cmp_ok*"></a><strong><strong>cmp_ok</strong></strong>
+<pre class="verbatim"><ol><li>  <span class="i">$Test</span><span class="i">-&gt;cmp_ok</span><span class="s">(</span><span class="i">$this</span><span class="cm">,</span> <span class="i">$type</span><span class="cm">,</span> <span class="i">$that</span><span class="cm">,</span> <span class="i">$name</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>Works just like Test::More's cmp_ok().</p>
+<pre class="verbatim"><ol><li>    <span class="i">$Test</span><span class="i">-&gt;cmp_ok</span><span class="s">(</span><span class="i">$big_num</span><span class="cm">,</span> <span class="q">&#39;!=&#39;</span><span class="cm">,</span> <span class="i">$other_big_num</span><span class="s">)</span><span class="sc">;</span></li></ol></pre></li>
+<li><a class='view-title' id="*BAILOUT*"></a><strong><strong>BAILOUT</strong></strong>
+<pre class="verbatim"><ol><li>    <span class="i">$Test</span><span class="i">-&gt;BAILOUT</span><span class="s">(</span><span class="i">$reason</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>Indicates to the Test::Harness that things are going so badly all
+testing should terminate.  This includes running any additional test
+scripts.</p>
+<p>It will exit with 255.</p>
+</li>
+<li><a class='view-title' id="*skip*"></a><strong><strong>skip</strong></strong>
+<pre class="verbatim"><ol><li>    <span class="i">$Test</span><span class="i">-&gt;skip</span><span class="sc">;</span></li><li>    <span class="i">$Test</span><span class="i">-&gt;skip</span><span class="s">(</span><span class="i">$why</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>Skips the current test, reporting $why.</p>
+</li>
+<li><a class='view-title' id="*todo_skip*"></a><strong><strong>todo_skip</strong></strong>
+<pre class="verbatim"><ol><li>  <span class="i">$Test</span><span class="i">-&gt;todo_skip</span><span class="sc">;</span></li><li>  <span class="i">$Test</span><span class="i">-&gt;todo_skip</span><span class="s">(</span><span class="i">$why</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>Like skip(), only it will declare the test as failing and TODO.  Similar
+to</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/print.html">print</a> <span class="q">&quot;not ok $tnum # TODO $why\n&quot;</span><span class="sc">;</span></li></ol></pre></li>
+</ul>
+<a class='view-head2' id="Test-style"></a><h3 class='h3' >Test style</h3>
+<ul>
+<li><a class='view-title' id="*level*"></a><strong><strong>level</strong></strong>
+<pre class="verbatim"><ol><li>    <span class="i">$Test</span><span class="i">-&gt;level</span><span class="s">(</span><span class="i">$how_high</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>How far up the call stack should $Test look when reporting where the
+test failed.</p>
+<p>Defaults to 1.</p>
+<p>Setting $Test::Builder::Level overrides.  This is typically useful
+localized:</p>
+<pre class="verbatim"><ol><li>    <span class="s">{</span></li><li>        <a class="l_k" href="../functions/local.html">local</a> <span class="i">$Test::Builder::Level</span> = <span class="n">2</span><span class="sc">;</span></li><li>        <span class="i">$Test</span><span class="i">-&gt;ok</span><span class="s">(</span><span class="i">$test</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="s">}</span></li></ol></pre></li>
+<li><a class='view-title' id="*use_numbers*"></a><strong><strong>use_numbers</strong></strong>
+<pre class="verbatim"><ol><li>    <span class="i">$Test</span><span class="i">-&gt;use_numbers</span><span class="s">(</span><span class="i">$on_or_off</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>Whether or not the test should output numbers.  That is, this if true:</p>
+<pre class="verbatim"><ol><li>  <span class="w">ok</span> <span class="n">1</span></li><li>  <span class="w">ok</span> <span class="n">2</span></li><li>  <span class="w">ok</span> <span class="n">3</span></li></ol></pre><p>or this if false</p>
+<pre class="verbatim"><ol><li>  <span class="w">ok</span></li><li>  <span class="w">ok</span></li><li>  <span class="w">ok</span></li></ol></pre><p>Most useful when you can't depend on the test output order, such as
+when threads or forking is involved.</p>
+<p>Test::Harness will accept either, but avoid mixing the two styles.</p>
+<p>Defaults to on.</p>
+</li>
+<li><a class='view-title' id="*no_header*"></a><strong><strong>no_header</strong></strong>
+<pre class="verbatim"><ol><li>    <span class="i">$Test</span><span class="i">-&gt;no_header</span><span class="s">(</span><span class="i">$no_header</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>If set to true, no "1..N" header will be printed.</p>
+</li>
+<li><a class='view-title' id="*no_ending*"></a><strong><strong>no_ending</strong></strong>
+<pre class="verbatim"><ol><li>    <span class="i">$Test</span><span class="i">-&gt;no_ending</span><span class="s">(</span><span class="i">$no_ending</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>Normally, Test::Builder does some extra diagnostics when the test
+ends.  It also changes the exit code as described in Test::Simple.</p>
+<p>If this is true, none of that will be done.</p>
+</li>
+</ul>
+<a class='view-head2' id="Output"></a><h3 class='h3' >Output</h3>
+<p>Controlling where the test output goes.</p>
+<p>It's ok for your test to change where STDOUT and STDERR point to,
+Test::Builder's default output settings will not be affected.</p>
+<ul>
+<li><a class='view-title' id="*diag*"></a><strong><strong>diag</strong></strong>
+<pre class="verbatim"><ol><li>    <span class="i">$Test</span><span class="i">-&gt;diag</span><span class="s">(</span><span class="i">@msgs</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>Prints out the given $message.  Normally, it uses the failure_output()
+handle, but if this is for a TODO test, the todo_output() handle is
+used.</p>
+<p>Output will be indented and marked with a # so as not to interfere
+with test output.  A newline will be put on the end if there isn't one
+already.</p>
+<p>We encourage using this rather than calling print directly.</p>
+<p>Returns false.  Why?  Because diag() is often used in conjunction with
+a failing test (<code class="inline"><span class="i">ok</span><span class="s">(</span><span class="s">)</span> || <span class="i">diag</span><span class="s">(</span><span class="s">)</span></code>
+) it "passes through" the failure.</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/return.html">return</a> <span class="i">ok</span><span class="s">(</span>...<span class="s">)</span> || <span class="i">diag</span><span class="s">(</span>...<span class="s">)</span><span class="sc">;</span></li></ol></pre></li>
+<li><a class='view-title' id="*output*"></a><strong><strong>output</strong></strong>
+<pre class="verbatim"><ol><li>    <span class="i">$Test</span><span class="i">-&gt;output</span><span class="s">(</span><span class="i">$fh</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="i">$Test</span><span class="i">-&gt;output</span><span class="s">(</span><span class="i">$file</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>Where normal "ok/not ok" test output should go.</p>
+<p>Defaults to STDOUT.</p>
+</li>
+<li><a class='view-title' id="*failure_output*"></a><strong><strong>failure_output</strong></strong>
+<pre class="verbatim"><ol><li>    <span class="i">$Test</span><span class="i">-&gt;failure_output</span><span class="s">(</span><span class="i">$fh</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="i">$Test</span><span class="i">-&gt;failure_output</span><span class="s">(</span><span class="i">$file</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>Where diagnostic output on test failures and diag() should go.</p>
+<p>Defaults to STDERR.</p>
+</li>
+<li><a class='view-title' id="*todo_output*"></a><strong><strong>todo_output</strong></strong>
+<pre class="verbatim"><ol><li>    <span class="i">$Test</span><span class="i">-&gt;todo_output</span><span class="s">(</span><span class="i">$fh</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="i">$Test</span><span class="i">-&gt;todo_output</span><span class="s">(</span><span class="i">$file</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>Where diagnostics about todo test failures and diag() should go.</p>
+<p>Defaults to STDOUT.</p>
+</li>
+</ul>
+<a class='view-head2' id="Test-Status-and-Info"></a><h3 class='h3' >Test Status and Info</h3>
+<ul>
+<li><a class='view-title' id="*current_test*"></a><strong><strong>current_test</strong></strong>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">$curr_test</span> = <span class="i">$Test</span><span class="i">-&gt;current_test</span><span class="sc">;</span></li><li>    <span class="i">$Test</span><span class="i">-&gt;current_test</span><span class="s">(</span><span class="i">$num</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>Gets/sets the current test # we're on.</p>
+<p>You usually shouldn't have to set this.</p>
+</li>
+<li><a class='view-title' id="*summary*"></a><strong><strong>summary</strong></strong>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">@tests</span> = <span class="i">$Test</span><span class="i">-&gt;summary</span><span class="sc">;</span></li></ol></pre><p>A simple summary of the tests so far.  True for pass, false for fail.
+This is a logical pass/fail, so todos are passes.</p>
+<p>Of course, test #1 is $tests[0], etc...</p>
+</li>
+<li><a class='view-title' id="*details*"></a><strong><strong>details</strong></strong>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">@tests</span> = <span class="i">$Test</span><span class="i">-&gt;details</span><span class="sc">;</span></li></ol></pre><p>Like summary(), but with a lot more detail.</p>
+<pre class="verbatim"><ol><li>    <span class="i">$tests</span>[<span class="i">$test_num</span> - <span class="n">1</span>] = </li><li>            <span class="s">{</span> <span class="q">&#39;ok&#39;</span>       <span class="cm">=&gt;</span> <span class="w">is</span> <span class="w">the</span> <span class="w">test</span> <span class="w">considered</span> <span class="w">a</span> <span class="w">pass</span>?</li><li>              <span class="w">actual_ok</span>  <span class="cm">=&gt;</span> <span class="w">did</span> <span class="w">it</span> <span class="w">literally</span> say <span class="q">&#39;ok&#39;</span>?</li><li>              <span class="w">name</span>       <span class="cm">=&gt;</span> <span class="w">name</span> <span class="w">of</span> <span class="w">the</span> <span class="w">test</span> <span class="s">(</span>if <span class="w">any</span><span class="s">)</span></li><li>              <span class="w">type</span>       <span class="cm">=&gt;</span> <span class="w">type</span> <span class="w">of</span> <span class="w">test</span> <span class="s">(</span>if <span class="w">any</span><span class="cm">,</span> <span class="w">see</span> <span class="w">below</span><span class="s">)</span>.</li><li>              <span class="w">reason</span>     <span class="cm">=&gt;</span> <span class="w">reason</span> for <span class="w">the</span> <span class="w">above</span> <span class="s">(</span>if <span class="w">any</span><span class="s">)</span></li><li>            <span class="s">}</span><span class="sc">;</span></li></ol></pre><p>'ok' is true if Test::Harness will consider the test to be a pass.</p>
+<p>'actual_ok' is a reflection of whether or not the test literally
+printed 'ok' or 'not ok'.  This is for examining the result of 'todo'
+tests.</p>
+<p>'name' is the name of the test.</p>
+<p>'type' indicates if it was a special test.  Normal tests have a type
+of ''.  Type can be one of the following:</p>
+<pre class="verbatim"><ol><li>    <span class="w">skip</span>        <span class="w">see</span> <span class="i">skip</span><span class="s">(</span><span class="s">)</span></li><li>    <span class="w">todo</span>        <span class="w">see</span> <span class="i">todo</span><span class="s">(</span><span class="s">)</span></li><li>    <span class="w">todo_skip</span>   <span class="w">see</span> <span class="i">todo_skip</span><span class="s">(</span><span class="s">)</span></li><li>    <span class="w">unknown</span>     <span class="w">see</span> <span class="w">below</span></li></ol></pre><p>Sometimes the Test::Builder test counter is incremented without it
+printing any test output, for example, when current_test() is changed.
+In these cases, Test::Builder doesn't know the result of the test, so
+it's type is 'unkown'.  These details for these tests are filled in.
+They are considered ok, but the name and actual_ok is left undef.</p>
+<p>For example "not ok 23 - hole count # TODO insufficient donuts" would
+result in this structure:</p>
+<pre class="verbatim"><ol><li>    <span class="i">$tests</span>[<span class="n">22</span>] =    <span class="c"># 23 - 1, since arrays start from 0.</span></li><li>      <span class="s">{</span> <span class="w">ok</span>        <span class="cm">=&gt;</span> <span class="n">1</span><span class="cm">,</span>   <span class="c"># logically, the test passed since it&#39;s todo</span></li><li>        <span class="w">actual_ok</span> <span class="cm">=&gt;</span> <span class="n">0</span><span class="cm">,</span>   <span class="c"># in absolute terms, it failed</span></li><li>        <span class="w">name</span>      <span class="cm">=&gt;</span> <span class="q">&#39;hole count&#39;</span><span class="cm">,</span></li><li>        <span class="w">type</span>      <span class="cm">=&gt;</span> <span class="q">&#39;todo&#39;</span><span class="cm">,</span></li><li>        <span class="w">reason</span>    <span class="cm">=&gt;</span> <span class="q">&#39;insufficient donuts&#39;</span></li><li>      <span class="s">}</span><span class="sc">;</span></li></ol></pre></li>
+<li><a class='view-title' id="*todo*"></a><strong><strong>todo</strong></strong>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">$todo_reason</span> = <span class="i">$Test</span><span class="i">-&gt;todo</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">$todo_reason</span> = <span class="i">$Test</span><span class="i">-&gt;todo</span><span class="s">(</span><span class="i">$pack</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>todo() looks for a $TODO variable in your tests.  If set, all tests
+will be considered 'todo' (see Test::More and Test::Harness for
+details).  Returns the reason (ie. the value of $TODO) if running as
+todo tests, false otherwise.</p>
+<p>todo() is pretty part about finding the right package to look for
+$TODO in.  It uses the exported_to() package to find it.  If that's
+not set, it's pretty good at guessing the right package to look at.</p>
+<p>Sometimes there is some confusion about where todo() should be looking
+for the $TODO variable.  If you want to be sure, tell it explicitly
+what $pack to use.</p>
+</li>
+<li><a class='view-title' id="*caller*"></a><strong><strong>caller</strong></strong>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">$package</span> = <span class="i">$Test</span><span class="i">-&gt;caller</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/my.html">my</a><span class="s">(</span><span class="i">$pack</span><span class="cm">,</span> <span class="i">$file</span><span class="cm">,</span> <span class="i">$line</span><span class="s">)</span> = <span class="i">$Test</span><span class="i">-&gt;caller</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/my.html">my</a><span class="s">(</span><span class="i">$pack</span><span class="cm">,</span> <span class="i">$file</span><span class="cm">,</span> <span class="i">$line</span><span class="s">)</span> = <span class="i">$Test</span><span class="i">-&gt;caller</span><span class="s">(</span><span class="i">$height</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>Like the normal caller(), except it reports according to your level().</p>
+</li>
+</ul>
+<a class='view-head1' id="THREADS"></a><h2 class='h2' >THREADS</h2>
+<p>In perl 5.8.0 and later, Test::Builder is thread-safe.  The test
+number is shared amongst all threads.  This means if one thread sets
+the test number using current_test() they will all be effected.</p>
+<a class='view-head1' id="EXAMPLES"></a><h2 class='h2' >EXAMPLES</h2>
+<p>CPAN can provide the best examples.  Test::Simple, Test::More,
+Test::Exception and Test::Differences all use Test::Builder.</p>
+<a class='view-head1' id="SEE-ALSO"></a><h2 class='h2' >SEE ALSO</h2>
+<p>Test::Simple, Test::More, Test::Harness</p>
+<a class='view-head1' id="AUTHORS"></a><h2 class='h2' >AUTHORS</h2>
+<p>Original code by chromatic, maintained by Michael G Schwern
+&lt;schwern@pobox.com&gt;</p>
+<a class='view-head1' id="COPYRIGHT"></a><h2 class='h2' >COPYRIGHT</h2>
+<p>Copyright 2002 by chromatic &lt;chromatic@wgz.org&gt;,
+                  Michael G Schwern &lt;schwern@pobox.com&gt;.</p>
+<p>This program is free software; you can redistribute it and/or 
+modify it under the same terms as Perl itself.</p>
+<p>See <i><a href="http://www.perl.com/perl/misc/Artistic.html">http://www.perl.com/perl/misc/Artistic.html</a></i></p>
+
+
+
+
+      <ul><li><a href="#NAME">NAME</a></li><li><a href="#SYNOPSIS">SYNOPSIS</a></li><li><a href="#DESCRIPTION">DESCRIPTION</a></li><ul><li><a href="#Construction">Construction</a></li><li><a href="#Setting-up-tests">Setting up tests</a></li><li><a href="#Running-tests">Running tests</a></li><li><a href="#Test-style">Test style</a></li><li><a href="#Output">Output</a></li><li><a href="#Test-Status-and-Info">Test Status and Info</a></li></ul><li><a href="#THREADS">THREADS</a></li><li><a href="#EXAMPLES">EXAMPLES</a></li><li><a href="#SEE-ALSO">SEE ALSO</a></li><li><a href="#AUTHORS">AUTHORS</a></li><li><a href="#COPYRIGHT">COPYRIGHT</a></li></ul>
+
+
+                  </div>
+                </article>
+              </div>
+            </div>
+          </main>
+        </div>
+           <footer class="footer row bg-light pt-5 pb-5">
+       <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+           <div class="row">
+               <div class="col-md-4">
+                   <ul class="list-unstyled">
+                       <li>
+                           <h4>Site info</h4>
+                       </li>
+                       <li>Docs mantained by
+                           <a href="//lists.perl.org/list/perl5-porters.html"
+                               rel="noopener">Perl 5 Porters</a>
+                       </li>
+                       <li>Perldoc site development sponsored by
+                           <a href="//opusvl.com" rel="noopener">
+                           <img style="margin: 20px 20px 5px 10px" class="opus-logo" src="/public/img/opusvl_logo.svg" alt="OpusVL Logo">
+                        </a>
+                    <li><span class="about_perldoc"><a href="//about.html">About PerlDOC</a></span>
+                    </li>
+                       </li>
+                   </ul>
+               </div>
+               <div class="col-md-8">
+                   <div class="row">
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Manuals</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.2/index-overview.html">Overview</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.2/index-tutorials.html">Tutorials</a>
+                               </li>
+                               <li>
+                                   <a href="/5.8.2/index-faq.html">FAQs</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.2/index-history.html">Changes</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Reference</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.2/index-language.html">Language</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.2/index-functions.html">Functions</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.2/perlop.html">Operators</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.2/perlvar.html">Variables</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Modules</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.2/index-modules-A.html">Modules</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.2/index-pragmas.html">Pragmas</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.2/index-utilities.html">Utilities</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Misc</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.2/index-licence.html">License</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.2/index-internals.html">Internals</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.2/index-platforms.html">Platforms</a>
+                               </li>
+                            <li>
+                                <a
+                                    href="/5.8.2/index-about.html">About</a>
+                            </li>
+                           </ul>
+                       </div>
+                   </div>
+               </div>
+               <div class=" col-12 footer-inf text-center">
+                   <small>perldoc.perl.org - Official documentation for the Perl
+                       programming language</small>
+               </div>
+           </div>
+       </div>
+   </footer>
+
+        	<div class="beta-wrapper beta-bottom-right ">
+		<div class="beta beta-blue  ">
+			<a class="beta-link "
+				href="//github.com/OpusVL/perldoc.perl.org/issues/new" rel="noopener">
+				<span class="beta-text">
+					This website is a Beta release.
+				</span>
+				<span class="beta-text">
+					For any issues please raise a ticket on GitHub
+				</span>
+			</a>
+		</div>
+	</div>
+
+        <script src="/public/js/main.min.js"></script>
+      </body>
+
+      </html>

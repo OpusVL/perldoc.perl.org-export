@@ -1,0 +1,795 @@
+      
+      
+      
+      
+
+      <!DOCTYPE html>
+      <html lang="en">
+
+      <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="sort - perldoc.perl.org">
+        <link rel="icon" href="/public/img/favicon.ico">
+        <title>sort - perldoc.perl.org</title>
+        <link href="/public/css/main.min.css" rel="stylesheet">
+        <link rel="canonical" href="/functions/sort.html">
+        <link
+          href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900'
+          rel='stylesheet' type='text/css'>
+        <script>
+          window.ga = window.ga || function () {
+            (ga.q = ga.q || []).push(arguments)
+          };
+          ga.l = +new Date;
+          ga('create', 'UA-1892152-2', 'auto'); // JJ's account
+          ga('create', 'UA-50555-3', 'auto', 'perlOrg'); // perl.org account
+          ga('require', 'outboundLinkTracker', {
+            events: ['click', 'auxclick', 'contextmenu'],
+          });
+          ga('require', 'maxScrollTracker');
+          ga('send', 'pageview');
+          ga('perlOrg.send', 'pageview');
+        </script>
+        <script async src="https://www.google-analytics.com/analytics.js">
+        </script>
+        <script async src="/public/js/tracking.min.js"></script>
+      </head>
+
+      <body class="body container-fluid ">
+        <div class="wrapper">
+
+          <nav
+    class="navbar navbar-dark bg-primary bg-perl fixed-top justify-content-between navbar-expand-lg">
+    <a href="#content" class="skippy sr-only sr-only-focusable">
+        <span class=' skippy-text'>Skip to main content</span>
+    </a>
+    <a class="navbar-brand" href="/">
+        <img class="logo" src="/public/img/logo_perl_doc.svg"
+            alt="Perl Documentation Logo" />
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse"
+        data-target="#navbar" aria-controls="navbar" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="navbar" class="collapse navbar-collapse ">
+        <ul class="navbar-nav ml-auto navbar-right">
+            <form class="nav-item dropdown search-wrapper">
+                <input type="text" id='searchinput' aria-describedby='navbarDropdown5'
+                    placeholder="Type query" class='search-input-field' value=''>
+
+                <button href="#" data-toggle='dropdown' type="button"
+                    aria-haspopup="true" aria-expanded='false' id="navbarDropdown5"
+                    class="nav-link dropdown-toggle search-link">
+                    <object tabindex='-1' focusable="false" class='search-icon'
+                        data="/public/img/search.svg" type="image/svg+xml"
+                        name='search icon'>search
+                        icon</object>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown5"
+                    id='search-results'>
+                    <p class='dropdown-item major-version'>
+                        No results
+                    </p>
+                </div>
+            </form>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown" href="#" class="nav-link dropdown-toggle"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Perl versions</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    
+                        <p class='dropdown-item major-version'>
+                            5.32
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.32.0/">5.32.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.30
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.3/">5.30.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.2/">5.30.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.1/">5.30.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.0/">5.30.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.28
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.3/">5.28.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.2/">5.28.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.1/">5.28.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.0/">5.28.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.26
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.3/">5.26.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.2/">5.26.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.1/">5.26.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.0/">5.26.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.24
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.4/">5.24.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.3/">5.24.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.2/">5.24.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.1/">5.24.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.0/">5.24.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.22
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.4/">5.22.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.3/">5.22.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.2/">5.22.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.1/">5.22.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.0/">5.22.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.20
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.3/">5.20.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.2/">5.20.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.1/">5.20.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.0/">5.20.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.18
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.4/">5.18.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.3/">5.18.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.2/">5.18.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.1/">5.18.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.0/">5.18.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.16
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.3/">5.16.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.2/">5.16.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.1/">5.16.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.0/">5.16.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.14
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.4/">5.14.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.3/">5.14.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.2/">5.14.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.1/">5.14.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.0/">5.14.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.12
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.5/">5.12.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.4/">5.12.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.3/">5.12.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.2/">5.12.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.1/">5.12.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.0/">5.12.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.10
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.1/">5.10.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.0/">5.10.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.8
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.9/">5.8.9</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.8/">5.8.8</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.7/">5.8.7</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.6/">5.8.6</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.5/">5.8.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.4/">5.8.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.3/">5.8.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.2/">5.8.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.1/">5.8.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.0/">5.8.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.6
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.2/">5.6.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.1/">5.6.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.0/">5.6.0</a>
+                        
+                        
+                    
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown1" href="#" class="dropdown-toggle nav-link"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Manuals</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                    <a class="dropdown-item"
+                        href="/5.30.0/index-overview.html">Overview</a>
+                    <a class="dropdown-item"
+                        href="/5.30.0/index-tutorials.html">Tutorials</a>
+                    <a class="dropdown-item"
+                        href="/5.30.0/index-faq.html">FAQs</a>
+                    <a class="dropdown-item"
+                        href="/5.30.0/index-history.html">Changes</a>
+                    <a class="dropdown-item"
+                        href="/5.30.0/index-licence.html">License</a>
+                    <a class="dropdown-item"
+                        href="/5.30.0/index-language.html">Language</a>
+                    <a class="dropdown-item"
+                        href="/5.30.0/index-functions.html">Functions</a>
+                    <a class="dropdown-item"
+                        href="/5.30.0/perlop.html">Operators</a>
+                    <a class="dropdown-item"
+                        href="/5.30.0/perlvar.html">Variables</a>
+                    <a class="dropdown-item"
+                        href="/5.30.0/index-pragmas.html">Pragmas</a>
+                    <a class="dropdown-item"
+                        href="/5.30.0/index-utilities.html">Utilities</a>
+                    <a class="dropdown-item"
+                        href="/5.30.0/index-internals.html">Internals</a>
+                    <a class="dropdown-item"
+                        href="/5.30.0/index-platforms.html">Platforms</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown3" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Modules</a>
+                <div aria-labelledby="navbarDropdown3"
+                    class="dropdown-menu letters-wrap">
+                    <!--<a class="dropdown-item"
+                        href="/5.30.0/index-modules.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.30.0/index-modules-by-cat.html">By
+                        Category</a>-->
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-modules-A.html">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-modules-B.html">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-modules-C.html">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-modules-D.html">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-modules-E.html">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-modules-F.html">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-modules-G.html">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-modules-H.html">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-modules-I.html">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-modules-J.html">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-modules-K.html">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-modules-L.html">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-modules-M.html">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-modules-N.html">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-modules-O.html">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-modules-P.html">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-modules-Q.html">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-modules-R.html">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-modules-S.html">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-modules-T.html">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-modules-U.html">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-modules-V.html">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-modules-W.html">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-modules-X.html">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-modules-Y.html">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-modules-Z.html">Z</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown4" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Functions</a>
+                <div aria-labelledby="navbarDropdown4"
+                    class="dropdown-menu letters-wrap">
+                    <a class="dropdown-item"
+                        href="/5.30.0/index-functions.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.30.0/index-functions-by-cat.html">By
+                        Category</a>
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-functions.html#A">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-functions.html#B">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-functions.html#C">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-functions.html#D">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-functions.html#E">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-functions.html#F">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-functions.html#G">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-functions.html#H">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-functions.html#I">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-functions.html#J">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-functions.html#K">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-functions.html#L">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-functions.html#M">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-functions.html#N">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-functions.html#O">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-functions.html#P">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-functions.html#Q">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-functions.html#R">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-functions.html#S">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-functions.html#T">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-functions.html#U">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-functions.html#V">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-functions.html#W">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-functions.html#X">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-functions.html#Y">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.0/index-functions.html#Z">Z</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!--/.nav-collapse -->
+</nav>
+
+
+          <main class="row main-content pb-5 pt-5" id='content'>
+            <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+              <div class="row">
+                <div class="col-sm-12">
+                  <div id="breadcrumbs">
+                      
+    <a href="../index.html">Home</a>&nbsp; &gt;
+    
+      
+        <a href="../index-language.html">Language reference</a> &gt;
+      
+        <a href="../index-functions.html">Functions</a> &gt;
+      
+    
+    sort
+  
+
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <article class="col-sm-12 content">
+                  <div class="documentation-wrapper">
+                    <div id="perl_version">
+                      <h7 class='page-title'> Perl 5 version 30.0
+                        documentation</h7>
+                    </div>
+                    <h1>sort</h1>
+<div class="mod_az_list">
+  <a href="/5.30.0/index-functions.html">Perl functions A-Z</a> |
+  <a href="/5.30.0/index-functions-by-cat.html">Perl functions by category</a> |
+  <a href="/5.30.0/perlfunc.html">The 'perlfunc' manpage</a>
+</div>
+
+
+  <!--    -->
+<ul>
+<li><a class='view-title' id="sort-SUBNAME-LIST"></a><strong>sort SUBNAME LIST</strong>
+<p></p>
+</li>
+</ul>
+<ul>
+<li><a class='view-title' id="sort-BLOCK-LIST"></a><strong>sort BLOCK LIST</strong>
+</li>
+<li><a class='view-title' id="sort-LIST"></a><strong>sort LIST</strong>
+<p>In list context, this sorts the LIST and returns the sorted list value.
+In scalar context, the behaviour of <a href="#sort-SUBNAME-LIST">sort</a> is
+undefined.</p>
+<p>If SUBNAME or BLOCK is omitted, <a href="#sort-SUBNAME-LIST">sort</a>s in
+standard string comparison
+order.  If SUBNAME is specified, it gives the name of a subroutine
+that returns an integer less than, equal to, or greater than <code class="inline"><span class="n">0</span></code>
+,
+depending on how the elements of the list are to be ordered.  (The
+<code class="inline">&lt;=&gt;</code>
+ and <code class="inline"><a class="l_k" href="../functions/cmp.html">cmp</a></code> operators are extremely useful in such routines.)
+SUBNAME may be a scalar variable name (unsubscripted), in which case
+the value provides the name of (or a reference to) the actual
+subroutine to use.  In place of a SUBNAME, you can provide a BLOCK as
+an anonymous, in-line sort subroutine.</p>
+<p>If the subroutine's prototype is <code class="inline"><span class="s">(</span><span class="i">$$</span><span class="s">)</span></code>
+, the elements to be compared are
+passed by reference in <a href="../perlvar.html#%40_">@_ </a>, as for a normal subroutine.
+This is slower than unprototyped subroutines, where the elements to be
+compared are passed into the subroutine as the package global variables
+<code class="inline"><span class="i">$a</span></code>
+ and <code class="inline"><span class="i">$b</span></code>
+ (see example below).</p>
+<p>If the subroutine is an XSUB, the elements to be compared are pushed on
+to the stack, the way arguments are usually passed to XSUBs.  <code class="inline"><span class="i">$a</span></code>
+ and
+<code class="inline"><span class="i">$b</span></code>
+ are not set.</p>
+<p>The values to be compared are always passed by reference and should not
+be modified.</p>
+<p>You also cannot exit out of the sort block or subroutine using any of the
+loop control operators described in <a href="../perlsyn.html">perlsyn</a> or with
+<a href="#goto-LABEL">goto</a>.</p>
+<p>When <a href="../locale.html">use locale </a> (but not <code class="inline"><a class="l_k" href="../functions/use.html">use</a> <span class="w">locale</span> <span class="q">&#39;:not_characters&#39;</span></code>
+)
+is in effect, <code class="inline"><a class="l_k" href="../functions/sort.html">sort</a> <span class="i">LIST</span></code>
+ sorts LIST according to the
+current collation locale.  See <a href="../perllocale.html">perllocale</a>.</p>
+<p><a href="#sort-SUBNAME-LIST">sort</a> returns aliases into the original list,
+much as a for loop's index variable aliases the list elements.  That is,
+modifying an element of a list returned by <a href="#sort-SUBNAME-LIST">sort</a>
+(for example, in a <code class="inline"><a class="l_k" href="../functions/foreach.html">foreach</a></code>, <a href="#map-BLOCK-LIST">map</a> or
+<a href="#grep-BLOCK-LIST">grep</a>)
+actually modifies the element in the original list.  This is usually
+something to be avoided when writing clear code.</p>
+<p>Historically Perl has varied in whether sorting is stable by default.
+If stability matters, it can be controlled explicitly by using the
+<a href="../sort.html">sort</a> pragma.</p>
+<p>Examples:</p>
+<pre class="verbatim"><ol><li>    <span class="c"># sort lexically</span></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">@articles</span> = <a class="l_k" href="../functions/sort.html">sort</a> <span class="i">@files</span><span class="sc">;</span></li><li></li><li>    <span class="c"># same thing, but with explicit sort routine</span></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">@articles</span> = <a class="l_k" href="../functions/sort.html">sort</a> <span class="s">{</span><span class="i">$a</span> <a class="l_k" href="../functions/cmp.html">cmp</a> <span class="i">$b</span><span class="s">}</span> <span class="i">@files</span><span class="sc">;</span></li><li></li><li>    <span class="c"># now case-insensitively</span></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">@articles</span> = <a class="l_k" href="../functions/sort.html">sort</a> <span class="s">{</span><span class="i">fc</span><span class="s">(</span><span class="i">$a</span><span class="s">)</span> <a class="l_k" href="../functions/cmp.html">cmp</a> <span class="i">fc</span><span class="s">(</span><span class="i">$b</span><span class="s">)</span><span class="s">}</span> <span class="i">@files</span><span class="sc">;</span></li><li></li><li>    <span class="c"># same thing in reversed order</span></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">@articles</span> = <a class="l_k" href="../functions/sort.html">sort</a> <span class="s">{</span><span class="i">$b</span> <a class="l_k" href="../functions/cmp.html">cmp</a> <span class="i">$a</span><span class="s">}</span> <span class="i">@files</span><span class="sc">;</span></li><li></li><li>    <span class="c"># sort numerically ascending</span></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">@articles</span> = <a class="l_k" href="../functions/sort.html">sort</a> <span class="s">{</span><span class="i">$a</span> &lt;=&gt; <span class="i">$b</span><span class="s">}</span> <span class="i">@files</span><span class="sc">;</span></li><li></li><li>    <span class="c"># sort numerically descending</span></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">@articles</span> = <a class="l_k" href="../functions/sort.html">sort</a> <span class="s">{</span><span class="i">$b</span> &lt;=&gt; <span class="i">$a</span><span class="s">}</span> <span class="i">@files</span><span class="sc">;</span></li><li></li><li>    <span class="c"># this sorts the %age hash by value instead of key</span></li><li>    <span class="c"># using an in-line function</span></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">@eldest</span> = <a class="l_k" href="../functions/sort.html">sort</a> <span class="s">{</span> <span class="i">$age</span>{<span class="i">$b</span>} &lt;=&gt; <span class="i">$age</span>{<span class="i">$a</span>} <span class="s">}</span> <a class="l_k" href="../functions/keys.html">keys</a> <span class="i">%age</span><span class="sc">;</span></li><li></li><li>    <span class="c"># sort using explicit subroutine name</span></li><li><a name="byage"></a>    sub <span class="m">byage</span> <span class="s">{</span></li><li>        <span class="i">$age</span>{<span class="i">$a</span>} &lt;=&gt; <span class="i">$age</span>{<span class="i">$b</span>}<span class="sc">;</span>  <span class="c"># presuming numeric</span></li><li>    <span class="s">}</span></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">@sortedclass</span> = <a class="l_k" href="../functions/sort.html">sort</a> <span class="i">byage</span> <span class="i">@class</span><span class="sc">;</span></li><li></li><li><a name="backwards"></a>    sub <span class="m">backwards</span> <span class="s">{</span> <span class="i">$b</span> <a class="l_k" href="../functions/cmp.html">cmp</a> <span class="i">$a</span> <span class="s">}</span></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">@harry</span>  = <span class="q">qw(dog cat x Cain Abel)</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">@george</span> = <span class="q">qw(gone chased yz Punished Axed)</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/print.html">print</a> <a class="l_k" href="../functions/sort.html">sort</a> <span class="i">@harry</span><span class="sc">;</span></li><li>        <span class="c"># prints AbelCaincatdogx</span></li><li>    <a class="l_k" href="../functions/print.html">print</a> <a class="l_k" href="../functions/sort.html">sort</a> <span class="i">backwards</span> <span class="i">@harry</span><span class="sc">;</span></li><li>        <span class="c"># prints xdogcatCainAbel</span></li><li>    <a class="l_k" href="../functions/print.html">print</a> <a class="l_k" href="../functions/sort.html">sort</a> <span class="i">@george</span><span class="cm">,</span> <span class="q">&#39;to&#39;</span><span class="cm">,</span> <span class="i">@harry</span><span class="sc">;</span></li><li>        <span class="c"># prints AbelAxedCainPunishedcatchaseddoggonetoxyz</span></li><li></li><li>    <span class="c"># inefficiently sort by descending numeric compare using</span></li><li>    <span class="c"># the first integer after the first = sign, or the</span></li><li>    <span class="c"># whole record case-insensitively otherwise</span></li><li></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">@new</span> = <a class="l_k" href="../functions/sort.html">sort</a> <span class="s">{</span></li><li>        <span class="s">(</span><span class="i">$b</span> =~ <span class="q">/=(\d+)/</span><span class="s">)</span>[<span class="n">0</span>] &lt;=&gt; <span class="s">(</span><span class="i">$a</span> =~ <span class="q">/=(\d+)/</span><span class="s">)</span>[<span class="n">0</span>]</li><li>                            ||</li><li>                    <span class="i">fc</span><span class="s">(</span><span class="i">$a</span><span class="s">)</span>  <a class="l_k" href="../functions/cmp.html">cmp</a>  <span class="i">fc</span><span class="s">(</span><span class="i">$b</span><span class="s">)</span></li><li>    <span class="s">}</span> <span class="i">@old</span><span class="sc">;</span></li><li></li><li>    <span class="c"># same thing, but much more efficiently;</span></li><li>    <span class="c"># we&#39;ll build auxiliary indices instead</span></li><li>    <span class="c"># for speed</span></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="s">(</span><span class="i">@nums</span><span class="cm">,</span> <span class="i">@caps</span><span class="s">)</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/for.html">for</a> <span class="s">(</span><span class="i">@old</span><span class="s">)</span> <span class="s">{</span></li><li>        <a class="l_k" href="../functions/push.html">push</a> <span class="i">@nums</span><span class="cm">,</span> <span class="s">(</span> <span class="q">/=(\d+)/</span> ? <span class="i">$1</span> <span class="co">:</span> <a class="l_k" href="../functions/undef.html">undef</a> <span class="s">)</span><span class="sc">;</span></li><li>        <a class="l_k" href="../functions/push.html">push</a> <span class="i">@caps</span><span class="cm">,</span> <span class="i">fc</span><span class="s">(</span><span class="i">$_</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="s">}</span></li><li></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">@new</span> = <span class="i">@old</span>[ <a class="l_k" href="../functions/sort.html">sort</a> <span class="s">{</span></li><li>                           <span class="i">$nums</span>[<span class="i">$b</span>] &lt;=&gt; <span class="i">$nums</span>[<span class="i">$a</span>]</li><li>                                    ||</li><li>                           <span class="i">$caps</span>[<span class="i">$a</span>] <a class="l_k" href="../functions/cmp.html">cmp</a> <span class="i">$caps</span>[<span class="i">$b</span>]</li><li>                         <span class="s">}</span> <span class="n">0</span>..<span class="i">$#old</span></li><li>                  ]<span class="sc">;</span></li><li></li><li>    <span class="c"># same thing, but without any temps</span></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">@new</span> = <a class="l_k" href="../functions/map.html">map</a> <span class="s">{</span> <span class="i">$_</span>-&gt;[<span class="n">0</span>] <span class="s">}</span></li><li>           <a class="l_k" href="../functions/sort.html">sort</a> <span class="s">{</span> <span class="i">$b</span>-&gt;[<span class="n">1</span>] &lt;=&gt; <span class="i">$a</span>-&gt;[<span class="n">1</span>]</li><li>                           ||</li><li>                  <span class="i">$a</span>-&gt;[<span class="n">2</span>] <a class="l_k" href="../functions/cmp.html">cmp</a> <span class="i">$b</span>-&gt;[<span class="n">2</span>]</li><li>           <span class="s">}</span> <a class="l_k" href="../functions/map.html">map</a> <span class="s">{</span> <span class="s">[</span><span class="i">$_</span><span class="cm">,</span> <span class="q">/=(\d+)/</span><span class="cm">,</span> <span class="i">fc</span><span class="s">(</span><span class="i">$_</span><span class="s">)</span><span class="s">]</span> <span class="s">}</span> <span class="i">@old</span><span class="sc">;</span></li><li></li><li>    <span class="c"># using a prototype allows you to use any comparison subroutine</span></li><li>    <span class="c"># as a sort subroutine (including other package&#39;s subroutines)</span></li><li><a name="package-Other"></a>    package <span class="i">Other</span><span class="sc">;</span></li><li><a name="backwards-1"></a>    sub <span class="m">backwards ($$)</span> <span class="s">{</span> <span class="i">$_</span>[<span class="n">1</span>] <a class="l_k" href="../functions/cmp.html">cmp</a> <span class="i">$_</span>[<span class="n">0</span>]<span class="sc">;</span> <span class="s">}</span>  <span class="c"># $a and $b are</span></li><li>                                             <span class="c"># not set here</span></li><li><a name="package-main"></a>    package <span class="i">main</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">@new</span> = <a class="l_k" href="../functions/sort.html">sort</a> <span class="i">Other::backwards</span> <span class="i">@old</span><span class="sc">;</span></li><li></li><li>    <span class="c"># guarantee stability</span></li><li>    <a class="l_k" href="../functions/use.html">use</a> <a class="l_k" href="../functions/sort.html">sort</a> <span class="q">&#39;stable&#39;</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">@new</span> = <a class="l_k" href="../functions/sort.html">sort</a> <span class="s">{</span> <a class="l_k" href="../functions/substr.html">substr</a><span class="s">(</span><span class="i">$a</span><span class="cm">,</span> <span class="n">3</span><span class="cm">,</span> <span class="n">5</span><span class="s">)</span> <a class="l_k" href="../functions/cmp.html">cmp</a> <a class="l_k" href="../functions/substr.html">substr</a><span class="s">(</span><span class="i">$b</span><span class="cm">,</span> <span class="n">3</span><span class="cm">,</span> <span class="n">5</span><span class="s">)</span> <span class="s">}</span> <span class="i">@old</span><span class="sc">;</span></li></ol></pre><p>Warning: syntactical care is required when sorting the list returned from
+a function.  If you want to sort the list returned by the function call
+<code class="inline"><span class="i">find_records</span><span class="s">(</span><span class="i">@key</span><span class="s">)</span></code>
+, you can use:</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">@contact</span> = <a class="l_k" href="../functions/sort.html">sort</a> <span class="s">{</span> <span class="i">$a</span> <a class="l_k" href="../functions/cmp.html">cmp</a> <span class="i">$b</span> <span class="s">}</span> <span class="w">find_records</span> <span class="i">@key</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">@contact</span> = <a class="l_k" href="../functions/sort.html">sort</a> +<span class="i">find_records</span><span class="s">(</span><span class="i">@key</span><span class="s">)</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">@contact</span> = <a class="l_k" href="../functions/sort.html">sort</a> <span class="i">&amp;find_records</span><span class="s">(</span><span class="i">@key</span><span class="s">)</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">@contact</span> = <a class="l_k" href="../functions/sort.html">sort</a><span class="s">(</span><span class="i">find_records</span><span class="s">(</span><span class="i">@key</span><span class="s">)</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>If instead you want to sort the array <code class="inline"><span class="i">@key</span></code>
+ with the comparison routine
+<code class="inline"><span class="i">find_records</span><span class="s">(</span><span class="s">)</span></code>
+ then you can use:</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">@contact</span> = <a class="l_k" href="../functions/sort.html">sort</a> <span class="s">{</span> <span class="i">find_records</span><span class="s">(</span><span class="s">)</span> <span class="s">}</span> <span class="i">@key</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">@contact</span> = <a class="l_k" href="../functions/sort.html">sort</a> <span class="i">find_records</span><span class="s">(</span><span class="i">@key</span><span class="s">)</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">@contact</span> = <a class="l_k" href="../functions/sort.html">sort</a><span class="s">(</span><span class="i">find_records</span> <span class="i">@key</span><span class="s">)</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">@contact</span> = <a class="l_k" href="../functions/sort.html">sort</a><span class="s">(</span><span class="i">find_records</span> <span class="s">(</span><span class="i">@key</span><span class="s">)</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p><code class="inline"><span class="i">$a</span></code>
+ and <code class="inline"><span class="i">$b</span></code>
+ are set as package globals in the package the sort() is
+called from.  That means <code class="inline"><span class="i">$main::a</span></code>
+ and <code class="inline"><span class="i">$main::b</span></code>
+ (or <code class="inline"><span class="i">$::a</span></code>
+ and
+<code class="inline"><span class="i">$::b</span></code>
+) in the <code class="inline"><span class="w">main</span></code>
+ package, <code class="inline"><span class="i">$FooPack::a</span></code>
+ and <code class="inline"><span class="i">$FooPack::b</span></code>
+ in the
+<code class="inline"><span class="w">FooPack</span></code>
+ package, etc.  If the sort block is in scope of a <code class="inline"><a class="l_k" href="../functions/my.html">my</a></code> or
+<code class="inline"><a class="l_k" href="../functions/state.html">state</a></code> declaration of <code class="inline"><span class="i">$a</span></code>
+ and/or <code class="inline"><span class="i">$b</span></code>
+, you <i>must</i> spell out the full
+name of the variables in the sort block :</p>
+<pre class="verbatim"><ol><li><a name="package-main"></a>   package <span class="i">main</span><span class="sc">;</span></li><li>   <a class="l_k" href="../functions/my.html">my</a> <span class="i">$a</span> = <span class="q">&quot;C&quot;</span><span class="sc">;</span> <span class="c"># DANGER, Will Robinson, DANGER !!!</span></li><li></li><li>   <a class="l_k" href="../functions/print.html">print</a> <a class="l_k" href="../functions/sort.html">sort</a> <span class="s">{</span> <span class="i">$a</span> <a class="l_k" href="../functions/cmp.html">cmp</a> <span class="i">$b</span> <span class="s">}</span>               <span class="q">qw(A C E G B D F H)</span><span class="sc">;</span></li><li>                                          <span class="c"># WRONG</span></li><li><a name="badlexi"></a>   sub <span class="m">badlexi</span> <span class="s">{</span> <span class="i">$a</span> <a class="l_k" href="../functions/cmp.html">cmp</a> <span class="i">$b</span> <span class="s">}</span></li><li>   <a class="l_k" href="../functions/print.html">print</a> <a class="l_k" href="../functions/sort.html">sort</a> <span class="i">badlexi</span>                     <span class="q">qw(A C E G B D F H)</span><span class="sc">;</span></li><li>                                          <span class="c"># WRONG</span></li><li>   <span class="c"># the above prints BACFEDGH or some other incorrect ordering</span></li><li></li><li>   <a class="l_k" href="../functions/print.html">print</a> <a class="l_k" href="../functions/sort.html">sort</a> <span class="s">{</span> <span class="i">$::a</span> <a class="l_k" href="../functions/cmp.html">cmp</a> <span class="i">$::b</span> <span class="s">}</span>           <span class="q">qw(A C E G B D F H)</span><span class="sc">;</span></li><li>                                          <span class="c"># OK</span></li><li>   <a class="l_k" href="../functions/print.html">print</a> <a class="l_k" href="../functions/sort.html">sort</a> <span class="s">{</span> <a class="l_k" href="../functions/our.html">our</a> <span class="i">$a</span> <a class="l_k" href="../functions/cmp.html">cmp</a> <a class="l_k" href="../functions/our.html">our</a> <span class="i">$b</span> <span class="s">}</span>       <span class="q">qw(A C E G B D F H)</span><span class="sc">;</span></li><li>                                          <span class="c"># also OK</span></li><li>   <a class="l_k" href="../functions/print.html">print</a> <a class="l_k" href="../functions/sort.html">sort</a> <span class="s">{</span> <a class="l_k" href="../functions/our.html">our</a> <span class="s">(</span><span class="i">$a</span><span class="cm">,</span> <span class="i">$b</span><span class="s">)</span><span class="sc">;</span> <span class="i">$a</span> <a class="l_k" href="../functions/cmp.html">cmp</a> <span class="i">$b</span> <span class="s">}</span> <span class="q">qw(A C E G B D F H)</span><span class="sc">;</span></li><li>                                          <span class="c"># also OK</span></li><li><a name="lexi"></a>   sub <span class="m">lexi</span> <span class="s">{</span> <a class="l_k" href="../functions/our.html">our</a> <span class="i">$a</span> <a class="l_k" href="../functions/cmp.html">cmp</a> <a class="l_k" href="../functions/our.html">our</a> <span class="i">$b</span> <span class="s">}</span></li><li>   <a class="l_k" href="../functions/print.html">print</a> <a class="l_k" href="../functions/sort.html">sort</a> <span class="i">lexi</span>                        <span class="q">qw(A C E G B D F H)</span><span class="sc">;</span></li><li>                                          <span class="c"># also OK</span></li><li>   <span class="c"># the above print ABCDEFGH</span></li></ol></pre><p>With proper care you may mix package and my (or state) <code class="inline"><span class="i">$a</span></code>
+ and/or <code class="inline"><span class="i">$b</span></code>
+:</p>
+<pre class="verbatim"><ol><li>   <a class="l_k" href="../functions/my.html">my</a> <span class="i">$a</span> = <span class="s">{</span></li><li>      <span class="w">tiny</span>   <span class="cm">=&gt;</span> <span class="n">-2</span><span class="cm">,</span></li><li>      <span class="w">small</span>  <span class="cm">=&gt;</span> <span class="n">-1</span><span class="cm">,</span></li><li>      <span class="w">normal</span> <span class="cm">=&gt;</span> <span class="n">0</span><span class="cm">,</span></li><li>      <span class="w">big</span>    <span class="cm">=&gt;</span> <span class="n">1</span><span class="cm">,</span></li><li>      <span class="w">huge</span>   <span class="cm">=&gt;</span> <span class="n">2</span></li><li>   <span class="s">}</span><span class="sc">;</span></li><li></li><li>   <a class="l_k" href="../functions/say.html">say</a> <a class="l_k" href="../functions/sort.html">sort</a> <span class="s">{</span> <span class="i">$a</span>-&gt;{<a class="l_k" href="../functions/our.html">our</a> <span class="i">$a</span>} &lt;=&gt; <span class="i">$a</span>-&gt;{<a class="l_k" href="../functions/our.html">our</a> <span class="i">$b</span>} <span class="s">}</span></li><li>       <span class="q">qw{ huge normal tiny small big}</span><span class="sc">;</span></li><li></li><li>   <span class="c"># prints tinysmallnormalbighuge</span></li></ol></pre><p><code class="inline"><span class="i">$a</span></code>
+ and <code class="inline"><span class="i">$b</span></code>
+ are implicitly local to the sort() execution and regain their
+former values upon completing the sort.</p>
+<p>Sort subroutines written using <code class="inline"><span class="i">$a</span></code>
+ and <code class="inline"><span class="i">$b</span></code>
+ are bound to their calling
+package. It is possible, but of limited interest, to define them in a
+different package, since the subroutine must still refer to the calling
+package's <code class="inline"><span class="i">$a</span></code>
+ and <code class="inline"><span class="i">$b</span></code>
+ :</p>
+<pre class="verbatim"><ol><li><a name="package-Foo"></a>   package <span class="i">Foo</span><span class="sc">;</span></li><li><a name="lexi"></a>   sub <span class="m">lexi</span> <span class="s">{</span> <span class="i">$Bar::a</span> <a class="l_k" href="../functions/cmp.html">cmp</a> <span class="i">$Bar::b</span> <span class="s">}</span></li><li><a name="package-Bar"></a>   package <span class="i">Bar</span><span class="sc">;</span></li><li>   ... <a class="l_k" href="../functions/sort.html">sort</a> <span class="i">Foo::lexi</span> ...</li></ol></pre><p>Use the prototyped versions (see above) for a more generic alternative.</p>
+<p>The comparison function is required to behave.  If it returns
+inconsistent results (sometimes saying <code class="inline"><span class="i">$x</span>[<span class="n">1</span>]</code>
+ is less than <code class="inline"><span class="i">$x</span>[<span class="n">2</span>]</code>
+ and
+sometimes saying the opposite, for example) the results are not
+well-defined.</p>
+<p>Because <code class="inline">&lt;=&gt;</code>
+ returns <a href="#undef-EXPR">undef</a> when either operand
+is <code class="inline"><span class="w">NaN</span></code>
+ (not-a-number), be careful when sorting with a
+comparison function like <code class="inline"><span class="i">$a</span> &lt;=&gt; <span class="i">$b</span></code>
+ any lists that might contain a
+<code class="inline"><span class="w">NaN</span></code>
+.  The following example takes advantage that <code class="inline"><span class="w">NaN</span> != <span class="w">NaN</span></code>
+ to
+eliminate any <code class="inline"><span class="w">NaN</span></code>
+s from the input list.</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">@result</span> = <a class="l_k" href="../functions/sort.html">sort</a> <span class="s">{</span> <span class="i">$a</span> &lt;=&gt; <span class="i">$b</span> <span class="s">}</span> <a class="l_k" href="../functions/grep.html">grep</a> <span class="s">{</span> <span class="i">$_</span> == <span class="i">$_</span> <span class="s">}</span> <span class="i">@input</span><span class="sc">;</span></li></ol></pre></li>
+</ul>
+
+
+
+                  </div>
+                </article>
+              </div>
+            </div>
+          </main>
+        </div>
+           <footer class="footer row bg-light pt-5 pb-5">
+       <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+           <div class="row">
+               <div class="col-md-4">
+                   <ul class="list-unstyled">
+                       <li>
+                           <h4>Site info</h4>
+                       </li>
+                       <li>Docs mantained by
+                           <a href="//lists.perl.org/list/perl5-porters.html"
+                               rel="noopener">Perl 5 Porters</a>
+                       </li>
+                       <li>Perldoc site development sponsored by
+                           <a href="//opusvl.com" rel="noopener">
+                           <img style="margin: 20px 20px 5px 10px" class="opus-logo" src="/public/img/opusvl_logo.svg" alt="OpusVL Logo">
+                        </a>
+                    <li><span class="about_perldoc"><a href="//about.html">About PerlDOC</a></span>
+                    </li>
+                       </li>
+                   </ul>
+               </div>
+               <div class="col-md-8">
+                   <div class="row">
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Manuals</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.30.0/index-overview.html">Overview</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.30.0/index-tutorials.html">Tutorials</a>
+                               </li>
+                               <li>
+                                   <a href="/5.30.0/index-faq.html">FAQs</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.30.0/index-history.html">Changes</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Reference</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.30.0/index-language.html">Language</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.30.0/index-functions.html">Functions</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.30.0/perlop.html">Operators</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.30.0/perlvar.html">Variables</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Modules</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.30.0/index-modules-A.html">Modules</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.30.0/index-pragmas.html">Pragmas</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.30.0/index-utilities.html">Utilities</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Misc</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.30.0/index-licence.html">License</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.30.0/index-internals.html">Internals</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.30.0/index-platforms.html">Platforms</a>
+                               </li>
+                            <li>
+                                <a
+                                    href="/5.30.0/index-about.html">About</a>
+                            </li>
+                           </ul>
+                       </div>
+                   </div>
+               </div>
+               <div class=" col-12 footer-inf text-center">
+                   <small>perldoc.perl.org - Official documentation for the Perl
+                       programming language</small>
+               </div>
+           </div>
+       </div>
+   </footer>
+
+        	<div class="beta-wrapper beta-bottom-right ">
+		<div class="beta beta-blue  ">
+			<a class="beta-link "
+				href="//github.com/OpusVL/perldoc.perl.org/issues/new" rel="noopener">
+				<span class="beta-text">
+					This website is a Beta release.
+				</span>
+				<span class="beta-text">
+					For any issues please raise a ticket on GitHub
+				</span>
+			</a>
+		</div>
+	</div>
+
+        <script src="/public/js/main.min.js"></script>
+      </body>
+
+      </html>

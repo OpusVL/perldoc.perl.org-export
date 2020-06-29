@@ -1,0 +1,879 @@
+      
+      
+      
+      
+
+      <!DOCTYPE html>
+      <html lang="en">
+
+      <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Benchmark - perldoc.perl.org">
+        <link rel="icon" href="/public/img/favicon.ico">
+        <title>Benchmark - perldoc.perl.org</title>
+        <link href="/public/css/main.min.css" rel="stylesheet">
+        <link rel="canonical" href="/Benchmark.html">
+        <link
+          href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900'
+          rel='stylesheet' type='text/css'>
+        <script>
+          window.ga = window.ga || function () {
+            (ga.q = ga.q || []).push(arguments)
+          };
+          ga.l = +new Date;
+          ga('create', 'UA-1892152-2', 'auto'); // JJ's account
+          ga('create', 'UA-50555-3', 'auto', 'perlOrg'); // perl.org account
+          ga('require', 'outboundLinkTracker', {
+            events: ['click', 'auxclick', 'contextmenu'],
+          });
+          ga('require', 'maxScrollTracker');
+          ga('send', 'pageview');
+          ga('perlOrg.send', 'pageview');
+        </script>
+        <script async src="https://www.google-analytics.com/analytics.js">
+        </script>
+        <script async src="/public/js/tracking.min.js"></script>
+      </head>
+
+      <body class="body container-fluid ">
+        <div class="wrapper">
+
+          <nav
+    class="navbar navbar-dark bg-primary bg-perl fixed-top justify-content-between navbar-expand-lg">
+    <a href="#content" class="skippy sr-only sr-only-focusable">
+        <span class=' skippy-text'>Skip to main content</span>
+    </a>
+    <a class="navbar-brand" href="/">
+        <img class="logo" src="/public/img/logo_perl_doc.svg"
+            alt="Perl Documentation Logo" />
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse"
+        data-target="#navbar" aria-controls="navbar" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="navbar" class="collapse navbar-collapse ">
+        <ul class="navbar-nav ml-auto navbar-right">
+            <form class="nav-item dropdown search-wrapper">
+                <input type="text" id='searchinput' aria-describedby='navbarDropdown5'
+                    placeholder="Type query" class='search-input-field' value=''>
+
+                <button href="#" data-toggle='dropdown' type="button"
+                    aria-haspopup="true" aria-expanded='false' id="navbarDropdown5"
+                    class="nav-link dropdown-toggle search-link">
+                    <object tabindex='-1' focusable="false" class='search-icon'
+                        data="/public/img/search.svg" type="image/svg+xml"
+                        name='search icon'>search
+                        icon</object>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown5"
+                    id='search-results'>
+                    <p class='dropdown-item major-version'>
+                        No results
+                    </p>
+                </div>
+            </form>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown" href="#" class="nav-link dropdown-toggle"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Perl versions</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    
+                        <p class='dropdown-item major-version'>
+                            5.32
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.32.0/">5.32.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.30
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.3/">5.30.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.2/">5.30.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.1/">5.30.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.0/">5.30.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.28
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.3/">5.28.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.2/">5.28.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.1/">5.28.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.0/">5.28.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.26
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.3/">5.26.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.2/">5.26.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.1/">5.26.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.0/">5.26.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.24
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.4/">5.24.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.3/">5.24.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.2/">5.24.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.1/">5.24.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.0/">5.24.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.22
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.4/">5.22.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.3/">5.22.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.2/">5.22.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.1/">5.22.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.0/">5.22.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.20
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.3/">5.20.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.2/">5.20.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.1/">5.20.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.0/">5.20.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.18
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.4/">5.18.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.3/">5.18.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.2/">5.18.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.1/">5.18.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.0/">5.18.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.16
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.3/">5.16.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.2/">5.16.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.1/">5.16.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.0/">5.16.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.14
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.4/">5.14.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.3/">5.14.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.2/">5.14.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.1/">5.14.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.0/">5.14.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.12
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.5/">5.12.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.4/">5.12.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.3/">5.12.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.2/">5.12.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.1/">5.12.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.0/">5.12.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.10
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.1/">5.10.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.0/">5.10.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.8
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.9/">5.8.9</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.8/">5.8.8</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.7/">5.8.7</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.6/">5.8.6</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.5/">5.8.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.4/">5.8.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.3/">5.8.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.2/">5.8.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.1/">5.8.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.0/">5.8.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.6
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.2/">5.6.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.1/">5.6.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.0/">5.6.0</a>
+                        
+                        
+                    
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown1" href="#" class="dropdown-toggle nav-link"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Manuals</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                    <a class="dropdown-item"
+                        href="/5.8.8/index-overview.html">Overview</a>
+                    <a class="dropdown-item"
+                        href="/5.8.8/index-tutorials.html">Tutorials</a>
+                    <a class="dropdown-item"
+                        href="/5.8.8/index-faq.html">FAQs</a>
+                    <a class="dropdown-item"
+                        href="/5.8.8/index-history.html">Changes</a>
+                    <a class="dropdown-item"
+                        href="/5.8.8/index-licence.html">License</a>
+                    <a class="dropdown-item"
+                        href="/5.8.8/index-language.html">Language</a>
+                    <a class="dropdown-item"
+                        href="/5.8.8/index-functions.html">Functions</a>
+                    <a class="dropdown-item"
+                        href="/5.8.8/perlop.html">Operators</a>
+                    <a class="dropdown-item"
+                        href="/5.8.8/perlvar.html">Variables</a>
+                    <a class="dropdown-item"
+                        href="/5.8.8/index-pragmas.html">Pragmas</a>
+                    <a class="dropdown-item"
+                        href="/5.8.8/index-utilities.html">Utilities</a>
+                    <a class="dropdown-item"
+                        href="/5.8.8/index-internals.html">Internals</a>
+                    <a class="dropdown-item"
+                        href="/5.8.8/index-platforms.html">Platforms</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown3" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Modules</a>
+                <div aria-labelledby="navbarDropdown3"
+                    class="dropdown-menu letters-wrap">
+                    <!--<a class="dropdown-item"
+                        href="/5.8.8/index-modules.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.8.8/index-modules-by-cat.html">By
+                        Category</a>-->
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.8.8/index-modules-A.html">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.8/index-modules-B.html">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.8/index-modules-C.html">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.8/index-modules-D.html">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.8/index-modules-E.html">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.8/index-modules-F.html">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.8/index-modules-G.html">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.8/index-modules-H.html">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.8/index-modules-I.html">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.8/index-modules-J.html">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.8/index-modules-K.html">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.8/index-modules-L.html">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.8/index-modules-M.html">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.8/index-modules-N.html">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.8/index-modules-O.html">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.8/index-modules-P.html">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.8/index-modules-Q.html">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.8/index-modules-R.html">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.8/index-modules-S.html">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.8/index-modules-T.html">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.8/index-modules-U.html">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.8/index-modules-V.html">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.8/index-modules-W.html">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.8/index-modules-X.html">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.8/index-modules-Y.html">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.8/index-modules-Z.html">Z</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown4" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Functions</a>
+                <div aria-labelledby="navbarDropdown4"
+                    class="dropdown-menu letters-wrap">
+                    <a class="dropdown-item"
+                        href="/5.8.8/index-functions.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.8.8/index-functions-by-cat.html">By
+                        Category</a>
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.8.8/index-functions.html#A">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.8/index-functions.html#B">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.8/index-functions.html#C">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.8/index-functions.html#D">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.8/index-functions.html#E">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.8/index-functions.html#F">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.8/index-functions.html#G">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.8/index-functions.html#H">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.8/index-functions.html#I">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.8/index-functions.html#J">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.8/index-functions.html#K">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.8/index-functions.html#L">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.8/index-functions.html#M">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.8/index-functions.html#N">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.8/index-functions.html#O">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.8/index-functions.html#P">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.8/index-functions.html#Q">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.8/index-functions.html#R">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.8/index-functions.html#S">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.8/index-functions.html#T">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.8/index-functions.html#U">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.8/index-functions.html#V">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.8/index-functions.html#W">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.8/index-functions.html#X">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.8/index-functions.html#Y">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.8/index-functions.html#Z">Z</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!--/.nav-collapse -->
+</nav>
+
+
+          <main class="row main-content pb-5 pt-5" id='content'>
+            <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+              <div class="row">
+                <div class="col-sm-12">
+                  <div id="breadcrumbs">
+                      
+    <a href="index.html">Home</a>&nbsp; &gt;
+    
+      
+        <a href="index-modules-B.html">Core modules (B)</a> &gt;
+      
+    
+    Benchmark
+  
+
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <article class="col-sm-12 content">
+                  <div class="documentation-wrapper">
+                    <div id="perl_version">
+                      <h7 class='page-title'> Perl 5 version 8.8
+                        documentation</h7>
+                    </div>
+                    <h1>Benchmark</h1>
+
+
+  <!--    -->
+<ul><li><a href="#NAME">NAME</a></li><li><a href="#SYNOPSIS">SYNOPSIS</a></li><li><a href="#DESCRIPTION">DESCRIPTION</a></li><ul><li><a href="#Methods">Methods</a></li><li><a href="#Standard-Exports">Standard Exports</a></li><li><a href="#Optional-Exports">Optional Exports</a></li><li><a href="#%3ahireswallclock">:hireswallclock</a></li></ul><li><a href="#NOTES">NOTES</a></li><li><a href="#EXAMPLES">EXAMPLES</a></li><li><a href="#INHERITANCE">INHERITANCE</a></li><li><a href="#CAVEATS">CAVEATS</a></li><li><a href="#SEE-ALSO">SEE ALSO</a></li><li><a href="#AUTHORS">AUTHORS</a></li><li><a href="#MODIFICATION-HISTORY">MODIFICATION HISTORY</a></li></ul><a class='view-head1' id="NAME"></a><h2 class='h2' >NAME</h2>
+<p>Benchmark - benchmark running times of Perl code</p>
+<a class='view-head1' id="SYNOPSIS"></a><h2 class='h2' >SYNOPSIS</h2>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="functions/use.html">use</a> <span class="w">Benchmark</span> <span class="q">qw(:all)</span> <span class="sc">;</span></li><li></li><li>    <span class="w">timethis</span> <span class="s">(</span><span class="i">$count</span><span class="cm">,</span> <span class="q">&quot;code&quot;</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>    <span class="c"># Use Perl code in strings...</span></li><li>    <span class="i">timethese</span><span class="s">(</span><span class="i">$count</span><span class="cm">,</span> <span class="s">{</span></li><li>	<span class="q">&#39;Name1&#39;</span> <span class="cm">=&gt;</span> <span class="q">&#39;...code1...&#39;</span><span class="cm">,</span></li><li>	<span class="q">&#39;Name2&#39;</span> <span class="cm">=&gt;</span> <span class="q">&#39;...code2...&#39;</span><span class="cm">,</span></li><li>    <span class="s">}</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>    <span class="c"># ... or use subroutine references.</span></li><li>    <span class="i">timethese</span><span class="s">(</span><span class="i">$count</span><span class="cm">,</span> <span class="s">{</span></li><li>	<span class="q">&#39;Name1&#39;</span> <span class="cm">=&gt;</span> <a class="l_k" href="functions/sub.html">sub</a> <span class="s">{</span> ...<span class="w">code1</span>... <span class="s">}</span><span class="cm">,</span></li><li>	<span class="q">&#39;Name2&#39;</span> <span class="cm">=&gt;</span> <a class="l_k" href="functions/sub.html">sub</a> <span class="s">{</span> ...<span class="w">code2</span>... <span class="s">}</span><span class="cm">,</span></li><li>    <span class="s">}</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>    <span class="c"># cmpthese can be used both ways as well</span></li><li>    <span class="i">cmpthese</span><span class="s">(</span><span class="i">$count</span><span class="cm">,</span> <span class="s">{</span></li><li>	<span class="q">&#39;Name1&#39;</span> <span class="cm">=&gt;</span> <span class="q">&#39;...code1...&#39;</span><span class="cm">,</span></li><li>	<span class="q">&#39;Name2&#39;</span> <span class="cm">=&gt;</span> <span class="q">&#39;...code2...&#39;</span><span class="cm">,</span></li><li>    <span class="s">}</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>    <span class="i">cmpthese</span><span class="s">(</span><span class="i">$count</span><span class="cm">,</span> <span class="s">{</span></li><li>	<span class="q">&#39;Name1&#39;</span> <span class="cm">=&gt;</span> <a class="l_k" href="functions/sub.html">sub</a> <span class="s">{</span> ...<span class="w">code1</span>... <span class="s">}</span><span class="cm">,</span></li><li>	<span class="q">&#39;Name2&#39;</span> <span class="cm">=&gt;</span> <a class="l_k" href="functions/sub.html">sub</a> <span class="s">{</span> ...<span class="w">code2</span>... <span class="s">}</span><span class="cm">,</span></li><li>    <span class="s">}</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>    <span class="c"># ...or in two stages</span></li><li>    <span class="i">$results</span> = <span class="i">timethese</span><span class="s">(</span><span class="i">$count</span><span class="cm">,</span> </li><li>        <span class="s">{</span></li><li>	    <span class="q">&#39;Name1&#39;</span> <span class="cm">=&gt;</span> <a class="l_k" href="functions/sub.html">sub</a> <span class="s">{</span> ...<span class="w">code1</span>... <span class="s">}</span><span class="cm">,</span></li><li>	    <span class="q">&#39;Name2&#39;</span> <span class="cm">=&gt;</span> <a class="l_k" href="functions/sub.html">sub</a> <span class="s">{</span> ...<span class="w">code2</span>... <span class="s">}</span><span class="cm">,</span></li><li>        <span class="s">}</span><span class="cm">,</span></li><li>	<span class="q">&#39;none&#39;</span></li><li>    <span class="s">)</span><span class="sc">;</span></li><li>    <span class="i">cmpthese</span><span class="s">(</span> <span class="i">$results</span> <span class="s">)</span> <span class="sc">;</span></li><li></li><li>    <span class="i">$t</span> = <span class="i">timeit</span><span class="s">(</span><span class="i">$count</span><span class="cm">,</span> <span class="q">&#39;...other code...&#39;</span><span class="s">)</span></li><li>    <a class="l_k" href="functions/print.html">print</a> <span class="q">&quot;$count loops of other code took:&quot;</span><span class="cm">,</span><span class="i">timestr</span><span class="s">(</span><span class="i">$t</span><span class="s">)</span><span class="cm">,</span><span class="q">&quot;\n&quot;</span><span class="sc">;</span></li><li></li><li>    <span class="i">$t</span> = <span class="i">countit</span><span class="s">(</span><span class="i">$time</span><span class="cm">,</span> <span class="q">&#39;...other code...&#39;</span><span class="s">)</span></li><li>    <span class="i">$count</span> = <span class="i">$t</span><span class="i">-&gt;iters</span> <span class="sc">;</span></li><li>    <a class="l_k" href="functions/print.html">print</a> <span class="q">&quot;$count loops of other code took:&quot;</span><span class="cm">,</span><span class="i">timestr</span><span class="s">(</span><span class="i">$t</span><span class="s">)</span><span class="cm">,</span><span class="q">&quot;\n&quot;</span><span class="sc">;</span></li><li></li><li>    <span class="c"># enable hires wallclock timing if possible</span></li><li>    <a class="l_k" href="functions/use.html">use</a> <span class="w">Benchmark</span> <span class="q">&#39;:hireswallclock&#39;</span><span class="sc">;</span></li></ol></pre><a class='view-head1' id="DESCRIPTION"></a><h2 class='h2' >DESCRIPTION</h2>
+<p>The Benchmark module encapsulates a number of routines to help you
+figure out how long it takes to execute some code.</p>
+<p>timethis - run a chunk of code several times</p>
+<p>timethese - run several chunks of code several times</p>
+<p>cmpthese - print results of timethese as a comparison chart</p>
+<p>timeit - run a chunk of code and see how long it goes</p>
+<p>countit - see how many times a chunk of code runs in a given time</p>
+<a class='view-head2' id="Methods"></a><h3 class='h3' >Methods</h3>
+<ul>
+<li><a class='view-title' id="new"></a><strong>new</strong>
+<p>Returns the current time.   Example:</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="functions/use.html">use</a> <span class="w">Benchmark</span><span class="sc">;</span></li><li>    <span class="i">$t0</span> = <span class="w">new</span> <span class="w">Benchmark</span><span class="sc">;</span></li><li>    <span class="c"># ... your code here ...</span></li><li>    <span class="i">$t1</span> = <span class="w">new</span> <span class="w">Benchmark</span><span class="sc">;</span></li><li>    <span class="i">$td</span> = <span class="i">timediff</span><span class="s">(</span><span class="i">$t1</span><span class="cm">,</span> <span class="i">$t0</span><span class="s">)</span><span class="sc">;</span></li><li>    <a class="l_k" href="functions/print.html">print</a> <span class="q">&quot;the code took:&quot;</span><span class="cm">,</span><span class="i">timestr</span><span class="s">(</span><span class="i">$td</span><span class="s">)</span><span class="cm">,</span><span class="q">&quot;\n&quot;</span><span class="sc">;</span></li></ol></pre></li>
+<li><a class='view-title' id="debug"></a><strong>debug</strong>
+<p>Enables or disable debugging by setting the <code class="inline"><span class="i">$Benchmark::Debug</span></code>
+ flag:</p>
+<pre class="verbatim"><ol><li>    <span class="w">debug</span> <span class="w">Benchmark</span> <span class="n">1</span><span class="sc">;</span></li><li>    <span class="i">$t</span> = <span class="i">timeit</span><span class="s">(</span><span class="n">10</span><span class="cm">,</span> <span class="q">&#39; 5 ** $Global &#39;</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="w">debug</span> <span class="w">Benchmark</span> <span class="n">0</span><span class="sc">;</span></li></ol></pre></li>
+<li><a class='view-title' id="iters"></a><strong>iters</strong>
+<p>Returns the number of iterations.</p>
+</li>
+</ul>
+<a class='view-head2' id="Standard-Exports"></a><h3 class='h3' >Standard Exports</h3>
+<p>The following routines will be exported into your namespace
+if you use the Benchmark module:</p>
+<ul>
+<li><a class='view-title' id="timeit(COUNT%2c-CODE)"></a><strong>timeit(COUNT, CODE)</strong>
+<p>Arguments: COUNT is the number of times to run the loop, and CODE is
+the code to run.  CODE may be either a code reference or a string to
+be eval'd; either way it will be run in the caller's package.</p>
+<p>Returns: a Benchmark object.</p>
+</li>
+<li><a class='view-title' id="timethis-(-COUNT%2c-CODE%2c-%5b-TITLE%2c-%5b-STYLE-%5d%5d-)"></a><strong>timethis ( COUNT, CODE, [ TITLE, [ STYLE ]] )</strong>
+<p>Time COUNT iterations of CODE. CODE may be a string to eval or a
+code reference; either way the CODE will run in the caller's package.
+Results will be printed to STDOUT as TITLE followed by the times.
+TITLE defaults to "timethis COUNT" if none is provided. STYLE
+determines the format of the output, as described for timestr() below.</p>
+<p>The COUNT can be zero or negative: this means the <i>minimum number of
+CPU seconds</i> to run.  A zero signifies the default of 3 seconds.  For
+example to run at least for 10 seconds:</p>
+<pre class="verbatim"><ol><li>	<span class="i">timethis</span><span class="s">(</span><span class="n">-10</span><span class="cm">,</span> <span class="i">$code</span><span class="s">)</span></li></ol></pre><p>or to run two pieces of code tests for at least 3 seconds:</p>
+<pre class="verbatim"><ol><li>	<span class="i">timethese</span><span class="s">(</span><span class="n">0</span><span class="cm">,</span> <span class="s">{</span> <span class="w">test1</span> <span class="cm">=&gt;</span> <span class="q">&#39;...&#39;</span><span class="cm">,</span> <span class="w">test2</span> <span class="cm">=&gt;</span> <span class="q">&#39;...&#39;</span><span class="s">}</span><span class="s">)</span></li></ol></pre><p>CPU seconds is, in UNIX terms, the user time plus the system time of
+the process itself, as opposed to the real (wallclock) time and the
+time spent by the child processes.  Less than 0.1 seconds is not
+accepted (-0.01 as the count, for example, will cause a fatal runtime
+exception).</p>
+<p>Note that the CPU seconds is the <strong>minimum</strong> time: CPU scheduling and
+other operating system factors may complicate the attempt so that a
+little bit more time is spent.  The benchmark output will, however,
+also tell the number of <code class="inline"><span class="i">$code</span></code>
+ runs/second, which should be a more
+interesting number than the actually spent seconds.</p>
+<p>Returns a Benchmark object.</p>
+</li>
+<li><a class='view-title' id="timethese-(-COUNT%2c-CODEHASHREF%2c-%5b-STYLE-%5d-)"></a><strong>timethese ( COUNT, CODEHASHREF, [ STYLE ] )</strong>
+<p>The CODEHASHREF is a reference to a hash containing names as keys
+and either a string to eval or a code reference for each value.
+For each (KEY, VALUE) pair in the CODEHASHREF, this routine will
+call</p>
+<pre class="verbatim"><ol><li>	<span class="i">timethis</span><span class="s">(</span><span class="w">COUNT</span><span class="cm">,</span> <span class="w">VALUE</span><span class="cm">,</span> <span class="w">KEY</span><span class="cm">,</span> <span class="w">STYLE</span><span class="s">)</span></li></ol></pre><p>The routines are called in string comparison order of KEY.</p>
+<p>The COUNT can be zero or negative, see timethis().</p>
+<p>Returns a hash of Benchmark objects, keyed by name.</p>
+</li>
+<li><a class='view-title' id="timediff-(-T1%2c-T2-)"></a><strong>timediff ( T1, T2 )</strong>
+<p>Returns the difference between two Benchmark times as a Benchmark
+object suitable for passing to timestr().</p>
+</li>
+<li><a class='view-title' id="timestr-(-TIMEDIFF%2c-%5b-STYLE%2c-%5b-FORMAT-%5d-%5d-)"></a><strong>timestr ( TIMEDIFF, [ STYLE, [ FORMAT ] ] )</strong>
+<p>Returns a string that formats the times in the TIMEDIFF object in
+the requested STYLE. TIMEDIFF is expected to be a Benchmark object
+similar to that returned by timediff().</p>
+<p>STYLE can be any of 'all', 'none', 'noc', 'nop' or 'auto'. 'all' shows
+each of the 5 times available ('wallclock' time, user time, system time,
+user time of children, and system time of children). 'noc' shows all
+except the two children times. 'nop' shows only wallclock and the
+two children times. 'auto' (the default) will act as 'all' unless
+the children times are both zero, in which case it acts as 'noc'.
+'none' prevents output.</p>
+<p>FORMAT is the <i>printf(3)</i>-style format specifier (without the
+leading '%') to use to print the times. It defaults to '5.2f'.</p>
+</li>
+</ul>
+<a class='view-head2' id="Optional-Exports"></a><h3 class='h3' >Optional Exports</h3>
+<p>The following routines will be exported into your namespace
+if you specifically ask that they be imported:</p>
+<ul>
+<li><a class='view-title' id="clearcache-(-COUNT-)"></a><strong>clearcache ( COUNT )</strong>
+<p>Clear the cached time for COUNT rounds of the null loop.</p>
+</li>
+<li><a class='view-title' id="clearallcache-(-)"></a><strong>clearallcache ( )</strong>
+<p>Clear all cached times.</p>
+</li>
+<li><a class='view-title' id="cmpthese-(-COUNT%2c-CODEHASHREF%2c-%5b-STYLE-%5d-)"></a><strong>cmpthese ( COUNT, CODEHASHREF, [ STYLE ] )</strong>
+</li>
+<li><a class='view-title' id="cmpthese-(-RESULTSHASHREF%2c-%5b-STYLE-%5d-)"></a><strong>cmpthese ( RESULTSHASHREF, [ STYLE ] )</strong>
+<p>Optionally calls timethese(), then outputs comparison chart.  This:</p>
+<pre class="verbatim"><ol><li>    <span class="i">cmpthese</span><span class="s">(</span> <span class="n">-1</span><span class="cm">,</span> <span class="s">{</span> <span class="w">a</span> <span class="cm">=&gt;</span> <span class="q">&quot;++\$i&quot;</span><span class="cm">,</span> <span class="w">b</span> <span class="cm">=&gt;</span> <span class="q">&quot;\$i *= 2&quot;</span> <span class="s">}</span> <span class="s">)</span> <span class="sc">;</span></li></ol></pre><p>outputs a chart like:</p>
+<pre class="verbatim"><ol><li>           <span class="w">Rate</span>    <span class="w">b</span>    <span class="w">a</span></li><li>    <span class="w">b</span> <span class="n">2831802</span>/<span class="q">s   -- -</span><span class="n">61</span>%</li><li>    <span class="w">a</span> <span class="n">7208959</span>/<span class="q">s 155%   --</span></li></ol></pre><p>This chart is sorted from slowest to fastest, and shows the percent speed
+difference between each pair of tests.</p>
+<p>c&lt;cmpthese&gt; can also be passed the data structure that timethese() returns:</p>
+<pre class="verbatim"><ol><li>    <span class="i">$results</span> = <span class="i">timethese</span><span class="s">(</span> <span class="n">-1</span><span class="cm">,</span> <span class="s">{</span> <span class="w">a</span> <span class="cm">=&gt;</span> <span class="q">&quot;++\$i&quot;</span><span class="cm">,</span> <span class="w">b</span> <span class="cm">=&gt;</span> <span class="q">&quot;\$i *= 2&quot;</span> <span class="s">}</span> <span class="s">)</span> <span class="sc">;</span></li><li>    <span class="i">cmpthese</span><span class="s">(</span> <span class="i">$results</span> <span class="s">)</span><span class="sc">;</span></li></ol></pre><p>in case you want to see both sets of results.</p>
+<p>Returns a reference to an ARRAY of rows, each row is an ARRAY of cells from the
+above chart, including labels. This:</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="functions/my.html">my</a> <span class="i">$rows</span> = <span class="i">cmpthese</span><span class="s">(</span> <span class="n">-1</span><span class="cm">,</span> <span class="s">{</span> <span class="w">a</span> <span class="cm">=&gt;</span> <span class="q">&#39;++$i&#39;</span><span class="cm">,</span> <span class="w">b</span> <span class="cm">=&gt;</span> <span class="q">&#39;$i *= 2&#39;</span> <span class="s">}</span><span class="cm">,</span> <span class="q">&quot;none&quot;</span> <span class="s">)</span><span class="sc">;</span></li></ol></pre><p>returns a data structure like:</p>
+<pre class="verbatim"><ol><li>    <span class="s">[</span></li><li>        <span class="s">[</span> <span class="q">&#39;&#39;</span><span class="cm">,</span>       <span class="q">&#39;Rate&#39;</span><span class="cm">,</span>   <span class="q">&#39;b&#39;</span><span class="cm">,</span>    <span class="q">&#39;a&#39;</span> <span class="s">]</span><span class="cm">,</span></li><li>        <span class="s">[</span> <span class="q">&#39;b&#39;</span><span class="cm">,</span> <span class="q">&#39;2885232/s&#39;</span><span class="cm">,</span>  <span class="q">&#39;--&#39;</span><span class="cm">,</span> <span class="q">&#39;-59%&#39;</span> <span class="s">]</span><span class="cm">,</span></li><li>        <span class="s">[</span> <span class="q">&#39;a&#39;</span><span class="cm">,</span> <span class="q">&#39;7099126/s&#39;</span><span class="cm">,</span> <span class="q">&#39;146%&#39;</span><span class="cm">,</span>  <span class="q">&#39;--&#39;</span> <span class="s">]</span><span class="cm">,</span></li><li>    <span class="s">]</span></li></ol></pre><p><strong>NOTE</strong>: This result value differs from previous versions, which returned
+the <code class="inline"><span class="i">timethese</span><span class="s">(</span><span class="s">)</span></code>
+ result structure.  If you want that, just use the two
+statement <code class="inline"><span class="w">timethese</span></code>
+...<code class="inline"><span class="w">cmpthese</span></code>
+ idiom shown above.</p>
+<p>Incidently, note the variance in the result values between the two examples;
+this is typical of benchmarking.  If this were a real benchmark, you would
+probably want to run a lot more iterations.</p>
+</li>
+<li><a class='view-title' id="countit(TIME%2c-CODE)"></a><strong>countit(TIME, CODE)</strong>
+<p>Arguments: TIME is the minimum length of time to run CODE for, and CODE is
+the code to run.  CODE may be either a code reference or a string to
+be eval'd; either way it will be run in the caller's package.</p>
+<p>TIME is <i>not</i> negative.  countit() will run the loop many times to
+calculate the speed of CODE before running it for TIME.  The actual
+time run for will usually be greater than TIME due to system clock
+resolution, so it's best to look at the number of iterations divided
+by the times that you are concerned with, not just the iterations.</p>
+<p>Returns: a Benchmark object.</p>
+</li>
+<li><a class='view-title' id="disablecache-(-)"></a><strong>disablecache ( )</strong>
+<p>Disable caching of timings for the null loop. This will force Benchmark
+to recalculate these timings for each new piece of code timed.</p>
+</li>
+<li><a class='view-title' id="enablecache-(-)"></a><strong>enablecache ( )</strong>
+<p>Enable caching of timings for the null loop. The time taken for COUNT
+rounds of the null loop will be calculated only once for each
+different COUNT used.</p>
+</li>
+<li><a class='view-title' id="timesum-(-T1%2c-T2-)"></a><strong>timesum ( T1, T2 )</strong>
+<p>Returns the sum of two Benchmark times as a Benchmark object suitable
+for passing to timestr().</p>
+</li>
+</ul>
+<a class='view-head2' id="%3ahireswallclock"></a><h3 class='h3' >:hireswallclock</h3>
+<p>If the Time::HiRes module has been installed, you can specify the
+special tag <code class="inline"><span class="j">:</span><span class="w">hireswallclock</span></code>
+ for Benchmark (if Time::HiRes is not
+available, the tag will be silently ignored).  This tag will cause the
+wallclock time to be measured in microseconds, instead of integer
+seconds.  Note though that the speed computations are still conducted
+in CPU time, not wallclock time.</p>
+<a class='view-head1' id="NOTES"></a><h2 class='h2' >NOTES</h2>
+<p>The data is stored as a list of values from the time and times
+functions:</p>
+<pre class="verbatim"><ol><li>      <span class="s">(</span><span class="i">$real</span><span class="cm">,</span> <span class="i">$user</span><span class="cm">,</span> <span class="i">$system</span><span class="cm">,</span> <span class="i">$children_user</span><span class="cm">,</span> <span class="i">$children_system</span><span class="cm">,</span> <span class="i">$iters</span><span class="s">)</span></li></ol></pre><p>in seconds for the whole loop (not divided by the number of rounds).</p>
+<p>The timing is done using time(3) and times(3).</p>
+<p>Code is executed in the caller's package.</p>
+<p>The time of the null loop (a loop with the same
+number of rounds but empty loop body) is subtracted
+from the time of the real loop.</p>
+<p>The null loop times can be cached, the key being the
+number of rounds. The caching can be controlled using
+calls like these:</p>
+<pre class="verbatim"><ol><li>    <span class="i">clearcache</span><span class="s">(</span><span class="i">$key</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="i">clearallcache</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>    <span class="i">disablecache</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="i">enablecache</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>Caching is off by default, as it can (usually slightly) decrease
+accuracy and does not usually noticably affect runtimes.</p>
+<a class='view-head1' id="EXAMPLES"></a><h2 class='h2' >EXAMPLES</h2>
+<p>For example,</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="functions/use.html">use</a> <span class="w">Benchmark</span> <span class="q">qw( cmpthese )</span> <span class="sc">;</span></li><li>    <span class="i">$x</span> = <span class="n">3</span><span class="sc">;</span></li><li>    <span class="i">cmpthese</span><span class="s">(</span> <span class="n">-5</span><span class="cm">,</span> <span class="s">{</span></li><li>        <span class="w">a</span> <span class="cm">=&gt;</span> <a class="l_k" href="functions/sub.html">sub</a><span class="s">{</span><span class="i">$x</span>*<span class="i">$x</span><span class="s">}</span><span class="cm">,</span></li><li>        <span class="w">b</span> <span class="cm">=&gt;</span> <a class="l_k" href="functions/sub.html">sub</a><span class="s">{</span><span class="i">$x</span>**<span class="n">2</span><span class="s">}</span><span class="cm">,</span></li><li>    <span class="s">}</span> <span class="s">)</span><span class="sc">;</span></li></ol></pre><p>outputs something like this:</p>
+<pre class="verbatim"><ol><li>   <span class="j">Benchmark:</span> <span class="w">running</span> <span class="w">a</span><span class="cm">,</span> <span class="w">b</span><span class="cm">,</span> <a class="l_k" href="functions/each.html">each</a> for <span class="w">at</span> <span class="w">least</span> <span class="n">5</span> <span class="w">CPU</span> <span class="w">seconds</span>...</li><li>          <span class="w">Rate</span>    <span class="w">b</span>    <span class="w">a</span></li><li>   <span class="w">b</span> <span class="n">1559428</span>/<span class="q">s   -- -</span><span class="n">62</span>%</li><li>   <span class="w">a</span> <span class="n">4152037</span>/<span class="q">s 166%   --</span></li></ol></pre><p>while</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="functions/use.html">use</a> <span class="w">Benchmark</span> <span class="q">qw( timethese cmpthese )</span> <span class="sc">;</span></li><li>    <span class="i">$x</span> = <span class="n">3</span><span class="sc">;</span></li><li>    <span class="i">$r</span> = <span class="i">timethese</span><span class="s">(</span> <span class="n">-5</span><span class="cm">,</span> <span class="s">{</span></li><li>        <span class="w">a</span> <span class="cm">=&gt;</span> <a class="l_k" href="functions/sub.html">sub</a><span class="s">{</span><span class="i">$x</span>*<span class="i">$x</span><span class="s">}</span><span class="cm">,</span></li><li>        <span class="w">b</span> <span class="cm">=&gt;</span> <a class="l_k" href="functions/sub.html">sub</a><span class="s">{</span><span class="i">$x</span>**<span class="n">2</span><span class="s">}</span><span class="cm">,</span></li><li>    <span class="s">}</span> <span class="s">)</span><span class="sc">;</span></li><li>    <span class="w">cmpthese</span> <span class="i">$r</span><span class="sc">;</span></li></ol></pre><p>outputs something like this:</p>
+<pre class="verbatim"><ol><li>    <span class="j">Benchmark:</span> <span class="w">running</span> <span class="w">a</span><span class="cm">,</span> <span class="w">b</span><span class="cm">,</span> <a class="l_k" href="functions/each.html">each</a> for <span class="w">at</span> <span class="w">least</span> <span class="n">5</span> <span class="w">CPU</span> <span class="w">seconds</span>...</li><li>             <span class="w">a</span><span class="co">:</span> <span class="n">10</span> <span class="w">wallclock</span> <span class="w">secs</span> <span class="s">(</span> <span class="n">5.14</span> <span class="w">usr</span> +  <span class="n">0.13</span> <span class="w">sys</span> =  <span class="n">5.27</span> <span class="w">CPU</span><span class="s">)</span> <span class="i">@ 3835055</span>.<span class="n">60</span>/<span class="q">s (n=20210743)</span></li><li>             <span class="q">             b:  5 wallclock secs ( 5.41 usr +  0.00 sys =  5.41 CPU) @ 1574944.92/s (n=8520452)</span></li><li>           <span class="q">           Rate    b</span>    <span class="w">a</span></li><li>    <span class="w">b</span> <span class="n">1574945</span>/<span class="q">s   -- -</span><span class="n">59</span>%</li><li>    <span class="w">a</span> <span class="n">3835056</span>/<span class="q">s 144%   --</span></li></ol></pre><a class='view-head1' id="INHERITANCE"></a><h2 class='h2' >INHERITANCE</h2>
+<p>Benchmark inherits from no other class, except of course
+for Exporter.</p>
+<a class='view-head1' id="CAVEATS"></a><h2 class='h2' >CAVEATS</h2>
+<p>Comparing eval'd strings with code references will give you
+inaccurate results: a code reference will show a slightly slower
+execution time than the equivalent eval'd string.</p>
+<p>The real time timing is done using time(2) and
+the granularity is therefore only one second.</p>
+<p>Short tests may produce negative figures because perl
+can appear to take longer to execute the empty loop
+than a short test; try:</p>
+<pre class="verbatim"><ol><li>    <span class="i">timethis</span><span class="s">(</span><span class="n">100</span><span class="cm">,</span><span class="q">&#39;1&#39;</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>The system time of the null loop might be slightly
+more than the system time of the loop with the actual
+code and therefore the difference might end up being &lt; 0.</p>
+<a class='view-head1' id="SEE-ALSO"></a><h2 class='h2' >SEE ALSO</h2>
+<p><a href="Devel/DProf.html">Devel::DProf</a> - a Perl code profiler</p>
+<a class='view-head1' id="AUTHORS"></a><h2 class='h2' >AUTHORS</h2>
+<p>Jarkko Hietaniemi &lt;<i>jhi@iki.fi</i>&gt;, Tim Bunce &lt;<i>Tim.Bunce@ig.co.uk</i>&gt;</p>
+<a class='view-head1' id="MODIFICATION-HISTORY"></a><h2 class='h2' >MODIFICATION HISTORY</h2>
+<p>September 8th, 1994; by Tim Bunce.</p>
+<p>March 28th, 1997; by Hugo van der Sanden: added support for code
+references and the already documented 'debug' method; revamped
+documentation.</p>
+<p>April 04-07th, 1997: by Jarkko Hietaniemi, added the run-for-some-time
+functionality.</p>
+<p>September, 1999; by Barrie Slaymaker: math fixes and accuracy and 
+efficiency tweaks.  Added cmpthese().  A result is now returned from 
+timethese().  Exposed countit() (was runfor()).</p>
+<p>December, 2001; by Nicholas Clark: make timestr() recognise the style 'none'
+and return an empty string. If cmpthese is calling timethese, make it pass the
+style in. (so that 'none' will suppress output). Make sub new dump its
+debugging output to STDERR, to be consistent with everything else.
+All bugs found while writing a regression test.</p>
+<p>September, 2002; by Jarkko Hietaniemi: add ':hireswallclock' special tag.</p>
+<p>February, 2004; by Chia-liang Kao: make cmpthese and timestr use time
+statistics for children instead of parent when the style is 'nop'.</p>
+
+
+
+
+      <ul><li><a href="#NAME">NAME</a></li><li><a href="#SYNOPSIS">SYNOPSIS</a></li><li><a href="#DESCRIPTION">DESCRIPTION</a></li><ul><li><a href="#Methods">Methods</a></li><li><a href="#Standard-Exports">Standard Exports</a></li><li><a href="#Optional-Exports">Optional Exports</a></li><li><a href="#%3ahireswallclock">:hireswallclock</a></li></ul><li><a href="#NOTES">NOTES</a></li><li><a href="#EXAMPLES">EXAMPLES</a></li><li><a href="#INHERITANCE">INHERITANCE</a></li><li><a href="#CAVEATS">CAVEATS</a></li><li><a href="#SEE-ALSO">SEE ALSO</a></li><li><a href="#AUTHORS">AUTHORS</a></li><li><a href="#MODIFICATION-HISTORY">MODIFICATION HISTORY</a></li></ul>
+
+
+                  </div>
+                </article>
+              </div>
+            </div>
+          </main>
+        </div>
+           <footer class="footer row bg-light pt-5 pb-5">
+       <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+           <div class="row">
+               <div class="col-md-4">
+                   <ul class="list-unstyled">
+                       <li>
+                           <h4>Site info</h4>
+                       </li>
+                       <li>Docs mantained by
+                           <a href="//lists.perl.org/list/perl5-porters.html"
+                               rel="noopener">Perl 5 Porters</a>
+                       </li>
+                       <li>Perldoc site development sponsored by
+                           <a href="//opusvl.com" rel="noopener">
+                           <img style="margin: 20px 20px 5px 10px" class="opus-logo" src="/public/img/opusvl_logo.svg" alt="OpusVL Logo">
+                        </a>
+                    <li><span class="about_perldoc"><a href="//about.html">About PerlDOC</a></span>
+                    </li>
+                       </li>
+                   </ul>
+               </div>
+               <div class="col-md-8">
+                   <div class="row">
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Manuals</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.8/index-overview.html">Overview</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.8/index-tutorials.html">Tutorials</a>
+                               </li>
+                               <li>
+                                   <a href="/5.8.8/index-faq.html">FAQs</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.8/index-history.html">Changes</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Reference</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.8/index-language.html">Language</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.8/index-functions.html">Functions</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.8/perlop.html">Operators</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.8/perlvar.html">Variables</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Modules</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.8/index-modules-A.html">Modules</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.8/index-pragmas.html">Pragmas</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.8/index-utilities.html">Utilities</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Misc</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.8/index-licence.html">License</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.8/index-internals.html">Internals</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.8/index-platforms.html">Platforms</a>
+                               </li>
+                            <li>
+                                <a
+                                    href="/5.8.8/index-about.html">About</a>
+                            </li>
+                           </ul>
+                       </div>
+                   </div>
+               </div>
+               <div class=" col-12 footer-inf text-center">
+                   <small>perldoc.perl.org - Official documentation for the Perl
+                       programming language</small>
+               </div>
+           </div>
+       </div>
+   </footer>
+
+        	<div class="beta-wrapper beta-bottom-right ">
+		<div class="beta beta-blue  ">
+			<a class="beta-link "
+				href="//github.com/OpusVL/perldoc.perl.org/issues/new" rel="noopener">
+				<span class="beta-text">
+					This website is a Beta release.
+				</span>
+				<span class="beta-text">
+					For any issues please raise a ticket on GitHub
+				</span>
+			</a>
+		</div>
+	</div>
+
+        <script src="/public/js/main.min.js"></script>
+      </body>
+
+      </html>

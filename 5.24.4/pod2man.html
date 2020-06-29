@@ -1,0 +1,920 @@
+      
+      
+      
+      
+
+      <!DOCTYPE html>
+      <html lang="en">
+
+      <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="pod2man - perldoc.perl.org">
+        <link rel="icon" href="/public/img/favicon.ico">
+        <title>pod2man - perldoc.perl.org</title>
+        <link href="/public/css/main.min.css" rel="stylesheet">
+        <link rel="canonical" href="/pod2man.html">
+        <link
+          href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900'
+          rel='stylesheet' type='text/css'>
+        <script>
+          window.ga = window.ga || function () {
+            (ga.q = ga.q || []).push(arguments)
+          };
+          ga.l = +new Date;
+          ga('create', 'UA-1892152-2', 'auto'); // JJ's account
+          ga('create', 'UA-50555-3', 'auto', 'perlOrg'); // perl.org account
+          ga('require', 'outboundLinkTracker', {
+            events: ['click', 'auxclick', 'contextmenu'],
+          });
+          ga('require', 'maxScrollTracker');
+          ga('send', 'pageview');
+          ga('perlOrg.send', 'pageview');
+        </script>
+        <script async src="https://www.google-analytics.com/analytics.js">
+        </script>
+        <script async src="/public/js/tracking.min.js"></script>
+      </head>
+
+      <body class="body container-fluid ">
+        <div class="wrapper">
+
+          <nav
+    class="navbar navbar-dark bg-primary bg-perl fixed-top justify-content-between navbar-expand-lg">
+    <a href="#content" class="skippy sr-only sr-only-focusable">
+        <span class=' skippy-text'>Skip to main content</span>
+    </a>
+    <a class="navbar-brand" href="/">
+        <img class="logo" src="/public/img/logo_perl_doc.svg"
+            alt="Perl Documentation Logo" />
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse"
+        data-target="#navbar" aria-controls="navbar" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="navbar" class="collapse navbar-collapse ">
+        <ul class="navbar-nav ml-auto navbar-right">
+            <form class="nav-item dropdown search-wrapper">
+                <input type="text" id='searchinput' aria-describedby='navbarDropdown5'
+                    placeholder="Type query" class='search-input-field' value=''>
+
+                <button href="#" data-toggle='dropdown' type="button"
+                    aria-haspopup="true" aria-expanded='false' id="navbarDropdown5"
+                    class="nav-link dropdown-toggle search-link">
+                    <object tabindex='-1' focusable="false" class='search-icon'
+                        data="/public/img/search.svg" type="image/svg+xml"
+                        name='search icon'>search
+                        icon</object>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown5"
+                    id='search-results'>
+                    <p class='dropdown-item major-version'>
+                        No results
+                    </p>
+                </div>
+            </form>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown" href="#" class="nav-link dropdown-toggle"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Perl versions</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    
+                        <p class='dropdown-item major-version'>
+                            5.32
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.32.0/">5.32.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.30
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.3/">5.30.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.2/">5.30.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.1/">5.30.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.0/">5.30.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.28
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.3/">5.28.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.2/">5.28.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.1/">5.28.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.0/">5.28.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.26
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.3/">5.26.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.2/">5.26.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.1/">5.26.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.0/">5.26.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.24
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.4/">5.24.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.3/">5.24.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.2/">5.24.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.1/">5.24.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.0/">5.24.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.22
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.4/">5.22.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.3/">5.22.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.2/">5.22.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.1/">5.22.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.0/">5.22.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.20
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.3/">5.20.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.2/">5.20.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.1/">5.20.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.0/">5.20.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.18
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.4/">5.18.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.3/">5.18.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.2/">5.18.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.1/">5.18.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.0/">5.18.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.16
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.3/">5.16.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.2/">5.16.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.1/">5.16.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.0/">5.16.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.14
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.4/">5.14.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.3/">5.14.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.2/">5.14.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.1/">5.14.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.0/">5.14.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.12
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.5/">5.12.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.4/">5.12.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.3/">5.12.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.2/">5.12.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.1/">5.12.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.0/">5.12.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.10
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.1/">5.10.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.0/">5.10.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.8
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.9/">5.8.9</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.8/">5.8.8</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.7/">5.8.7</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.6/">5.8.6</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.5/">5.8.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.4/">5.8.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.3/">5.8.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.2/">5.8.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.1/">5.8.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.0/">5.8.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.6
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.2/">5.6.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.1/">5.6.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.0/">5.6.0</a>
+                        
+                        
+                    
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown1" href="#" class="dropdown-toggle nav-link"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Manuals</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                    <a class="dropdown-item"
+                        href="/5.24.4/index-overview.html">Overview</a>
+                    <a class="dropdown-item"
+                        href="/5.24.4/index-tutorials.html">Tutorials</a>
+                    <a class="dropdown-item"
+                        href="/5.24.4/index-faq.html">FAQs</a>
+                    <a class="dropdown-item"
+                        href="/5.24.4/index-history.html">Changes</a>
+                    <a class="dropdown-item"
+                        href="/5.24.4/index-licence.html">License</a>
+                    <a class="dropdown-item"
+                        href="/5.24.4/index-language.html">Language</a>
+                    <a class="dropdown-item"
+                        href="/5.24.4/index-functions.html">Functions</a>
+                    <a class="dropdown-item"
+                        href="/5.24.4/perlop.html">Operators</a>
+                    <a class="dropdown-item"
+                        href="/5.24.4/perlvar.html">Variables</a>
+                    <a class="dropdown-item"
+                        href="/5.24.4/index-pragmas.html">Pragmas</a>
+                    <a class="dropdown-item"
+                        href="/5.24.4/index-utilities.html">Utilities</a>
+                    <a class="dropdown-item"
+                        href="/5.24.4/index-internals.html">Internals</a>
+                    <a class="dropdown-item"
+                        href="/5.24.4/index-platforms.html">Platforms</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown3" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Modules</a>
+                <div aria-labelledby="navbarDropdown3"
+                    class="dropdown-menu letters-wrap">
+                    <!--<a class="dropdown-item"
+                        href="/5.24.4/index-modules.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.24.4/index-modules-by-cat.html">By
+                        Category</a>-->
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.24.4/index-modules-A.html">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.4/index-modules-B.html">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.4/index-modules-C.html">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.4/index-modules-D.html">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.4/index-modules-E.html">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.4/index-modules-F.html">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.4/index-modules-G.html">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.4/index-modules-H.html">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.4/index-modules-I.html">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.4/index-modules-J.html">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.4/index-modules-K.html">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.4/index-modules-L.html">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.4/index-modules-M.html">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.4/index-modules-N.html">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.4/index-modules-O.html">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.4/index-modules-P.html">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.4/index-modules-Q.html">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.4/index-modules-R.html">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.4/index-modules-S.html">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.4/index-modules-T.html">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.4/index-modules-U.html">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.4/index-modules-V.html">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.4/index-modules-W.html">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.4/index-modules-X.html">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.4/index-modules-Y.html">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.4/index-modules-Z.html">Z</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown4" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Functions</a>
+                <div aria-labelledby="navbarDropdown4"
+                    class="dropdown-menu letters-wrap">
+                    <a class="dropdown-item"
+                        href="/5.24.4/index-functions.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.24.4/index-functions-by-cat.html">By
+                        Category</a>
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.24.4/index-functions.html#A">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.4/index-functions.html#B">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.4/index-functions.html#C">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.4/index-functions.html#D">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.4/index-functions.html#E">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.4/index-functions.html#F">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.4/index-functions.html#G">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.4/index-functions.html#H">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.4/index-functions.html#I">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.4/index-functions.html#J">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.4/index-functions.html#K">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.4/index-functions.html#L">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.4/index-functions.html#M">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.4/index-functions.html#N">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.4/index-functions.html#O">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.4/index-functions.html#P">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.4/index-functions.html#Q">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.4/index-functions.html#R">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.4/index-functions.html#S">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.4/index-functions.html#T">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.4/index-functions.html#U">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.4/index-functions.html#V">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.4/index-functions.html#W">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.4/index-functions.html#X">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.4/index-functions.html#Y">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.4/index-functions.html#Z">Z</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!--/.nav-collapse -->
+</nav>
+
+
+          <main class="row main-content pb-5 pt-5" id='content'>
+            <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+              <div class="row">
+                <div class="col-sm-12">
+                  <div id="breadcrumbs">
+                      
+    <a href="index.html">Home</a>&nbsp; &gt;
+    
+      
+        <a href="index-utilities.html">Utilities</a> &gt;
+      
+    
+    pod2man
+  
+
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <article class="col-sm-12 content">
+                  <div class="documentation-wrapper">
+                    <div id="perl_version">
+                      <h7 class='page-title'> Perl 5 version 24.4
+                        documentation</h7>
+                    </div>
+                    <h1>pod2man</h1>
+
+
+  <!--    -->
+<ul><li><a href="#NAME">NAME</a></li><li><a href="#SYNOPSIS">SYNOPSIS</a></li><li><a href="#DESCRIPTION">DESCRIPTION</a></li><li><a href="#OPTIONS">OPTIONS</a></li><li><a href="#EXIT-STATUS">EXIT STATUS</a></li><li><a href="#DIAGNOSTICS">DIAGNOSTICS</a></li><li><a href="#EXAMPLES">EXAMPLES</a></li><li><a href="#BUGS">BUGS</a></li><li><a href="#SEE-ALSO">SEE ALSO</a></li><li><a href="#AUTHOR">AUTHOR</a></li><li><a href="#COPYRIGHT-AND-LICENSE">COPYRIGHT AND LICENSE</a></li></ul><a class='view-head1' id="NAME"></a><h2 class='h2' >NAME</h2>
+<p>pod2man - Convert POD data to formatted *roff input</p>
+<a class='view-head1' id="SYNOPSIS"></a><h2 class='h2' >SYNOPSIS</h2>
+<p>pod2man [<strong>--center</strong>=<i>string</i>] [<strong>--date</strong>=<i>string</i>] [<strong>--errors</strong>=<i>style</i>]
+    [<strong>--fixed</strong>=<i>font</i>] [<strong>--fixedbold</strong>=<i>font</i>] [<strong>--fixeditalic</strong>=<i>font</i>]
+    [<strong>--fixedbolditalic</strong>=<i>font</i>] [<strong>--name</strong>=<i>name</i>] [<strong>--nourls</strong>]
+    [<strong>--official</strong>] [<strong>--quotes</strong>=<i>quotes</i>] [<strong>--release</strong>=<i>version</i>]
+    [<strong>--section</strong>=<i>manext</i>] [<strong>--stderr</strong>] [<strong>--utf8</strong>] [<strong>--verbose</strong>]
+    [<i>input</i> [<i>output</i>] ...]</p>
+<p>pod2man <strong>--help</strong></p>
+<a class='view-head1' id="DESCRIPTION"></a><h2 class='h2' >DESCRIPTION</h2>
+<p><strong>pod2man</strong> is a front-end for Pod::Man, using it to generate *roff input
+from POD source.  The resulting *roff code is suitable for display on a
+terminal using nroff(1), normally via man(1), or printing using troff(1).</p>
+<p><i>input</i> is the file to read for POD source (the POD can be embedded in
+code).  If <i>input</i> isn't given, it defaults to <code class="inline"><span class="w">STDIN</span></code>
+.  <i>output</i>, if
+given, is the file to which to write the formatted output.  If <i>output</i>
+isn't given, the formatted output is written to <code class="inline"><span class="w">STDOUT</span></code>
+.  Several POD
+files can be processed in the same <strong>pod2man</strong> invocation (saving module
+load and compile times) by providing multiple pairs of <i>input</i> and
+<i>output</i> files on the command line.</p>
+<p><strong>--section</strong>, <strong>--release</strong>, <strong>--center</strong>, <strong>--date</strong>, and <strong>--official</strong> can
+be used to set the headers and footers to use; if not given, Pod::Man will
+assume various defaults.  See below or <a href="Pod/Man.html">Pod::Man</a> for details.</p>
+<p><strong>pod2man</strong> assumes that your *roff formatters have a fixed-width font
+named <code class="inline"><span class="w">CW</span></code>
+.  If yours is called something else (like <code class="inline"><span class="w">CR</span></code>
+), use
+<strong>--fixed</strong> to specify it.  This generally only matters for troff output
+for printing.  Similarly, you can set the fonts used for bold, italic, and
+bold italic fixed-width output.</p>
+<p>Besides the obvious pod conversions, Pod::Man, and therefore pod2man also
+takes care of formatting func(), func(n), and simple variable references
+like $foo or @bar so you don't have to use code escapes for them; complex
+expressions like <code class="inline"><span class="i">$fred</span>{<span class="q">&#39;stuff&#39;</span>}</code>
+ will still need to be escaped, though.
+It also translates dashes that aren't used as hyphens into en dashes, makes
+long dashes--like this--into proper em dashes, fixes "paired quotes," and
+takes care of several other troff-specific tweaks.  See <a href="Pod/Man.html">Pod::Man</a> for
+complete information.</p>
+<a class='view-head1' id="OPTIONS"></a><h2 class='h2' >OPTIONS</h2>
+<ul>
+<li><a class='view-title' id="*-c*-_string_%2c-*--center*%3d_string_"></a><strong><strong>-c</strong> <i>string</i>, <strong>--center</strong>=<i>string</i></strong>
+<p>Sets the centered page header for the <code class="inline">.<span class="w">TH</span></code>
+ macro to <i>string</i>.  The
+default is "User Contributed Perl Documentation", but also see
+<strong>--official</strong> below.</p>
+</li>
+<li><a class='view-title' id="*-d*-_string_%2c-*--date*%3d_string_"></a><strong><strong>-d</strong> <i>string</i>, <strong>--date</strong>=<i>string</i></strong>
+<p>Set the left-hand footer string for the <code class="inline">.<span class="w">TH</span></code>
+ macro to <i>string</i>.  By
+default, the modification date of the input file will be used, or the
+current date if input comes from <code class="inline"><span class="w">STDIN</span></code>
+, and will be based on UTC (so
+that the output will be reproducible regardless of local time zone).</p>
+</li>
+<li><a class='view-title' id="*--errors*%3d_style_"></a><strong><strong>--errors</strong>=<i>style</i></strong>
+<p>Set the error handling style.  <code class="inline"><a class="l_k" href="functions/die.html">die</a></code> says to throw an exception on any
+POD formatting error.  <code class="inline"><span class="w">stderr</span></code>
+ says to report errors on standard error,
+but not to throw an exception.  <code class="inline"><span class="w">pod</span></code>
+ says to include a POD ERRORS
+section in the resulting documentation summarizing the errors.  <code class="inline"><span class="w">none</span></code>
+
+ignores POD errors entirely, as much as possible.</p>
+<p>The default is <code class="inline"><a class="l_k" href="functions/die.html">die</a></code>.</p>
+</li>
+<li><a class='view-title' id="*--fixed*%3d_font_"></a><strong><strong>--fixed</strong>=<i>font</i></strong>
+<p>The fixed-width font to use for verbatim text and code.  Defaults to
+<code class="inline"><span class="w">CW</span></code>
+.  Some systems may want <code class="inline"><span class="w">CR</span></code>
+ instead.  Only matters for troff(1)
+output.</p>
+</li>
+<li><a class='view-title' id="*--fixedbold*%3d_font_"></a><strong><strong>--fixedbold</strong>=<i>font</i></strong>
+<p>Bold version of the fixed-width font.  Defaults to <code class="inline"><span class="w">CB</span></code>
+.  Only matters
+for troff(1) output.</p>
+</li>
+<li><a class='view-title' id="*--fixeditalic*%3d_font_"></a><strong><strong>--fixeditalic</strong>=<i>font</i></strong>
+<p>Italic version of the fixed-width font (actually, something of a misnomer,
+since most fixed-width fonts only have an oblique version, not an italic
+version).  Defaults to <code class="inline"><span class="w">CI</span></code>
+.  Only matters for troff(1) output.</p>
+</li>
+<li><a class='view-title' id="*--fixedbolditalic*%3d_font_"></a><strong><strong>--fixedbolditalic</strong>=<i>font</i></strong>
+<p>Bold italic (probably actually oblique) version of the fixed-width font.
+Pod::Man doesn't assume you have this, and defaults to <code class="inline"><span class="w">CB</span></code>
+.  Some
+systems (such as Solaris) have this font available as <code class="inline"><span class="w">CX</span></code>
+.  Only matters
+for troff(1) output.</p>
+</li>
+<li><a class='view-title' id="*-h*%2c-*--help*"></a><strong><strong>-h</strong>, <strong>--help</strong></strong>
+<p>Print out usage information.</p>
+</li>
+<li><a class='view-title' id="*-l*%2c-*--lax*"></a><strong><strong>-l</strong>, <strong>--lax</strong></strong>
+<p>No longer used.  <strong>pod2man</strong> used to check its input for validity as a
+manual page, but this should now be done by <i>podchecker(1)</i> instead.
+Accepted for backward compatibility; this option no longer does anything.</p>
+</li>
+<li><a class='view-title' id="*-n*-_name_%2c-*--name*%3d_name_"></a><strong><strong>-n</strong> <i>name</i>, <strong>--name</strong>=<i>name</i></strong>
+<p>Set the name of the manual page for the <code class="inline">.<span class="w">TH</span></code>
+ macro to <i>name</i>.  Without
+this option, the manual name is set to the uppercased base name of the
+file being converted unless the manual section is 3, in which case the
+path is parsed to see if it is a Perl module path.  If it is, a path like
+<code class="inline">...<span class="q">/lib/</span><span class="w">Pod</span>/<span class="w">Man</span>.<span class="w">pm</span></code>
+ is converted into a name like <code class="inline"><span class="w">Pod::Man</span></code>
+.  This
+option, if given, overrides any automatic determination of the name.</p>
+<p>Although one does not have to follow this convention, be aware that the
+convention for UNIX man pages for commands is for the man page title to be
+in all-uppercase, even if the command isn't.</p>
+<p>This option is probably not useful when converting multiple POD files at
+once.</p>
+<p>When converting POD source from standard input, this option is required,
+since there's otherwise no way to know what to use as the name of the
+manual page.</p>
+</li>
+<li><a class='view-title' id="*--nourls*"></a><strong><strong>--nourls</strong></strong>
+<p>Normally, L&lt;&gt; formatting codes with a URL but anchor text are formatted
+to show both the anchor text and the URL.  In other words:</p>
+<pre class="verbatim"><ol><li>    <span class="w">L</span>&lt;<span class="w">foo</span>|<span class="w">http</span><span class="co">:</span><span class="q">//</span><span class="w">example</span>.<span class="w">com</span><span class="q">/&gt;</span></li></ol></pre><p>is formatted as:</p>
+<pre class="verbatim"><ol><li>    <span class="w">foo</span> <span class="q">&lt;<a href="http://example.com/">http://example.com/</a>&gt;</span></li></ol></pre><p>This flag, if given, suppresses the URL when anchor text is given, so this
+example would be formatted as just <code class="inline"><span class="w">foo</span></code>
+.  This can produce less
+cluttered output in cases where the URLs are not particularly important.</p>
+</li>
+<li><a class='view-title' id="*-o*%2c-*--official*"></a><strong><strong>-o</strong>, <strong>--official</strong></strong>
+<p>Set the default header to indicate that this page is part of the standard
+Perl release, if <strong>--center</strong> is not also given.</p>
+</li>
+<li><a class='view-title' id="*-q*-_quotes_%2c-*--quotes*%3d_quotes_"></a><strong><strong>-q</strong> <i>quotes</i>, <strong>--quotes</strong>=<i>quotes</i></strong>
+<p>Sets the quote marks used to surround C&lt;&gt; text to <i>quotes</i>.  If
+<i>quotes</i> is a single character, it is used as both the left and right
+quote.  Otherwise, it is split in half, and the first half of the string
+is used as the left quote and the second is used as the right quote.</p>
+<p><i>quotes</i> may also be set to the special value <code class="inline"><span class="w">none</span></code>
+, in which case no
+quote marks are added around C&lt;&gt; text (but the font is still changed for
+troff output).</p>
+</li>
+<li><a class='view-title' id="*-r*-_version_%2c-*--release*%3d_version_"></a><strong><strong>-r</strong> <i>version</i>, <strong>--release</strong>=<i>version</i></strong>
+<p>Set the centered footer for the <code class="inline">.<span class="w">TH</span></code>
+ macro to <i>version</i>.  By default,
+this is set to the version of Perl you run <strong>pod2man</strong> under.  Setting this
+to the empty string will cause some *roff implementations to use the
+system default value.</p>
+<p>Note that some system <code class="inline"><span class="w">an</span></code>
+ macro sets assume that the centered footer
+will be a modification date and will prepend something like "Last
+modified: ".  If this is the case for your target system, you may want to
+set <strong>--release</strong> to the last modified date and <strong>--date</strong> to the version
+number.</p>
+</li>
+<li><a class='view-title' id="*-s*-_string_%2c-*--section*%3d_string_"></a><strong><strong>-s</strong> <i>string</i>, <strong>--section</strong>=<i>string</i></strong>
+<p>Set the section for the <code class="inline">.<span class="w">TH</span></code>
+ macro.  The standard section numbering
+convention is to use 1 for user commands, 2 for system calls, 3 for
+functions, 4 for devices, 5 for file formats, 6 for games, 7 for
+miscellaneous information, and 8 for administrator commands.  There is a lot
+of variation here, however; some systems (like Solaris) use 4 for file
+formats, 5 for miscellaneous information, and 7 for devices.  Still others
+use 1m instead of 8, or some mix of both.  About the only section numbers
+that are reliably consistent are 1, 2, and 3.</p>
+<p>By default, section 1 will be used unless the file ends in <code class="inline">.<span class="w">pm</span></code>
+, in
+which case section 3 will be selected.</p>
+</li>
+<li><a class='view-title' id="*--stderr*"></a><strong><strong>--stderr</strong></strong>
+<p>By default, <strong>pod2man</strong> dies if any errors are detected in the POD input.
+If <strong>--stderr</strong> is given and no <strong>--errors</strong> flag is present, errors are
+sent to standard error, but <strong>pod2man</strong> does not abort.  This is equivalent
+to <code class="inline">--<span class="w">errors</span>=<span class="w">stderr</span></code>
+ and is supported for backward compatibility.</p>
+</li>
+<li><a class='view-title' id="*-u*%2c-*--utf8*"></a><strong><strong>-u</strong>, <strong>--utf8</strong></strong>
+<p>By default, <strong>pod2man</strong> produces the most conservative possible *roff
+output to try to ensure that it will work with as many different *roff
+implementations as possible.  Many *roff implementations cannot handle
+non-ASCII characters, so this means all non-ASCII characters are converted
+either to a *roff escape sequence that tries to create a properly accented
+character (at least for troff output) or to <code class="inline"><span class="w">X</span></code>
+.</p>
+<p>This option says to instead output literal UTF-8 characters.  If your
+*roff implementation can handle it, this is the best output format to use
+and avoids corruption of documents containing non-ASCII characters.
+However, be warned that *roff source with literal UTF-8 characters is not
+supported by many implementations and may even result in segfaults and
+other bad behavior.</p>
+<p>Be aware that, when using this option, the input encoding of your POD
+source should be properly declared unless it's US-ASCII.  Pod::Simple will
+attempt to guess the encoding and may be successful if it's Latin-1 or
+UTF-8, but it will warn, which by default results in a <strong>pod2man</strong> failure.
+Use the <code class="inline"><span class="pd">=encoding</span></code>
+ command to declare the encoding.  See <i>perlpod(1)</i>
+for more information.</p>
+</li>
+<li><a class='view-title' id="*-v*%2c-*--verbose*"></a><strong><strong>-v</strong>, <strong>--verbose</strong></strong>
+<p>Print out the name of each output file as it is being generated.</p>
+</li>
+</ul>
+<a class='view-head1' id="EXIT-STATUS"></a><h2 class='h2' >EXIT STATUS</h2>
+<p>As long as all documents processed result in some output, even if that
+output includes errata (a <code class="inline"><span class="w">POD</span> <span class="w">ERRORS</span></code>
+ section generated with
+<code class="inline">--<span class="w">errors</span>=<span class="w">pod</span></code>
+), <strong>pod2man</strong> will exit with status 0.  If any of the
+documents being processed do not result in an output document, <strong>pod2man</strong>
+will exit with status 1.  If there are syntax errors in a POD document
+being processed and the error handling style is set to the default of
+<code class="inline"><a class="l_k" href="functions/die.html">die</a></code>, <strong>pod2man</strong> will abort immediately with exit status 255.</p>
+<a class='view-head1' id="DIAGNOSTICS"></a><h2 class='h2' >DIAGNOSTICS</h2>
+<p>If <strong>pod2man</strong> fails with errors, see <a href="Pod/Man.html">Pod::Man</a> and <a href="Pod/Simple.html">Pod::Simple</a> for
+information about what those errors might mean.</p>
+<a class='view-head1' id="EXAMPLES"></a><h2 class='h2' >EXAMPLES</h2>
+<pre class="verbatim"><ol><li>    <span class="w">pod2man</span> <span class="w">program</span> &gt; <span class="w">program</span><span class="n">.1</span></li><li>    <span class="w">pod2man</span> <span class="w">SomeModule</span>.<span class="w">pm</span> /<span class="w">usr</span>/<span class="w">perl</span>/<span class="w">man</span>/<span class="w">man3</span>/<span class="w">SomeModule</span><span class="n">.3</span></li><li>    <span class="w">pod2man</span> --<span class="w">section</span>=<span class="n">7</span> <span class="w">note</span>.<span class="w">pod</span> &gt; <span class="w">note</span><span class="n">.7</span></li></ol></pre><p>If you would like to print out a lot of man page continuously, you probably
+want to set the C and D registers to set contiguous page numbering and
+even/odd paging, at least on some versions of man(7).</p>
+<pre class="verbatim"><ol><li>    <span class="w">troff</span> -<span class="w">man</span> -<span class="w">rC1</span> -<span class="w">rD1</span> <span class="w">perl</span><span class="n">.1</span> <span class="w">perldata</span><span class="n">.1</span> <span class="w">perlsyn</span><span class="n">.1</span> ...</li></ol></pre><p>To get index entries on <code class="inline"><span class="w">STDERR</span></code>
+, turn on the F register, as in:</p>
+<pre class="verbatim"><ol><li>    <span class="w">troff</span> -<span class="w">man</span> -<span class="w">rF1</span> <span class="w">perl</span><span class="n">.1</span></li></ol></pre><p>The indexing merely outputs messages via <code class="inline">.<span class="w">tm</span></code>
+ for each major page,
+section, subsection, item, and any <code class="inline"><span class="w">X</span>&lt;&gt;</code>
+ directives.  See
+<a href="Pod/Man.html">Pod::Man</a> for more details.</p>
+<a class='view-head1' id="BUGS"></a><h2 class='h2' >BUGS</h2>
+<p>Lots of this documentation is duplicated from <a href="Pod/Man.html">Pod::Man</a>.</p>
+<a class='view-head1' id="SEE-ALSO"></a><h2 class='h2' >SEE ALSO</h2>
+<p><a href="Pod/Man.html">Pod::Man</a>, <a href="Pod/Simple.html">Pod::Simple</a>, <i>man(1)</i>, <i>nroff(1)</i>, <i>perlpod(1)</i>,
+<i>podchecker(1)</i>, <i>perlpodstyle(1)</i>, <i>troff(1)</i>, <i>man(7)</i></p>
+<p>The man page documenting the an macro set may be <i>man(5)</i> instead of
+<i>man(7)</i> on your system.</p>
+<p>The current version of this script is always available from its web site at
+<a href="http://www.eyrie.org/~eagle/software/podlators/">http://www.eyrie.org/~eagle/software/podlators/</a>.  It is also part of the
+Perl core distribution as of 5.6.0.</p>
+<a class='view-head1' id="AUTHOR"></a><h2 class='h2' >AUTHOR</h2>
+<p>Russ Allbery &lt;rra@cpan.org&gt;, based <i>very</i> heavily on the original
+<strong>pod2man</strong> by Larry Wall and Tom Christiansen.</p>
+<a class='view-head1' id="COPYRIGHT-AND-LICENSE"></a><h2 class='h2' >COPYRIGHT AND LICENSE</h2>
+<p>Copyright 1999, 2000, 2001, 2004, 2006, 2008, 2010, 2012, 2013, 2014,
+2015, 2016 Russ Allbery &lt;rra@cpan.org&gt;</p>
+<p>This program is free software; you may redistribute it and/or modify it
+under the same terms as Perl itself.</p>
+
+
+
+
+      <ul><li><a href="#NAME">NAME</a></li><li><a href="#SYNOPSIS">SYNOPSIS</a></li><li><a href="#DESCRIPTION">DESCRIPTION</a></li><li><a href="#OPTIONS">OPTIONS</a></li><li><a href="#EXIT-STATUS">EXIT STATUS</a></li><li><a href="#DIAGNOSTICS">DIAGNOSTICS</a></li><li><a href="#EXAMPLES">EXAMPLES</a></li><li><a href="#BUGS">BUGS</a></li><li><a href="#SEE-ALSO">SEE ALSO</a></li><li><a href="#AUTHOR">AUTHOR</a></li><li><a href="#COPYRIGHT-AND-LICENSE">COPYRIGHT AND LICENSE</a></li></ul>
+
+
+                  </div>
+                </article>
+              </div>
+            </div>
+          </main>
+        </div>
+           <footer class="footer row bg-light pt-5 pb-5">
+       <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+           <div class="row">
+               <div class="col-md-4">
+                   <ul class="list-unstyled">
+                       <li>
+                           <h4>Site info</h4>
+                       </li>
+                       <li>Docs mantained by
+                           <a href="//lists.perl.org/list/perl5-porters.html"
+                               rel="noopener">Perl 5 Porters</a>
+                       </li>
+                       <li>Perldoc site development sponsored by
+                           <a href="//opusvl.com" rel="noopener">
+                           <img style="margin: 20px 20px 5px 10px" class="opus-logo" src="/public/img/opusvl_logo.svg" alt="OpusVL Logo">
+                        </a>
+                    <li><span class="about_perldoc"><a href="//about.html">About PerlDOC</a></span>
+                    </li>
+                       </li>
+                   </ul>
+               </div>
+               <div class="col-md-8">
+                   <div class="row">
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Manuals</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.24.4/index-overview.html">Overview</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.24.4/index-tutorials.html">Tutorials</a>
+                               </li>
+                               <li>
+                                   <a href="/5.24.4/index-faq.html">FAQs</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.24.4/index-history.html">Changes</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Reference</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.24.4/index-language.html">Language</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.24.4/index-functions.html">Functions</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.24.4/perlop.html">Operators</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.24.4/perlvar.html">Variables</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Modules</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.24.4/index-modules-A.html">Modules</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.24.4/index-pragmas.html">Pragmas</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.24.4/index-utilities.html">Utilities</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Misc</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.24.4/index-licence.html">License</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.24.4/index-internals.html">Internals</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.24.4/index-platforms.html">Platforms</a>
+                               </li>
+                            <li>
+                                <a
+                                    href="/5.24.4/index-about.html">About</a>
+                            </li>
+                           </ul>
+                       </div>
+                   </div>
+               </div>
+               <div class=" col-12 footer-inf text-center">
+                   <small>perldoc.perl.org - Official documentation for the Perl
+                       programming language</small>
+               </div>
+           </div>
+       </div>
+   </footer>
+
+        	<div class="beta-wrapper beta-bottom-right ">
+		<div class="beta beta-blue  ">
+			<a class="beta-link "
+				href="//github.com/OpusVL/perldoc.perl.org/issues/new" rel="noopener">
+				<span class="beta-text">
+					This website is a Beta release.
+				</span>
+				<span class="beta-text">
+					For any issues please raise a ticket on GitHub
+				</span>
+			</a>
+		</div>
+	</div>
+
+        <script src="/public/js/main.min.js"></script>
+      </body>
+
+      </html>

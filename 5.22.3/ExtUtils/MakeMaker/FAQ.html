@@ -1,0 +1,902 @@
+      
+      
+      
+      
+
+      <!DOCTYPE html>
+      <html lang="en">
+
+      <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="ExtUtils::MakeMaker::FAQ - perldoc.perl.org">
+        <link rel="icon" href="/public/img/favicon.ico">
+        <title>ExtUtils::MakeMaker::FAQ - perldoc.perl.org</title>
+        <link href="/public/css/main.min.css" rel="stylesheet">
+        <link rel="canonical" href="/ExtUtils/MakeMaker/FAQ.html">
+        <link
+          href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900'
+          rel='stylesheet' type='text/css'>
+        <script>
+          window.ga = window.ga || function () {
+            (ga.q = ga.q || []).push(arguments)
+          };
+          ga.l = +new Date;
+          ga('create', 'UA-1892152-2', 'auto'); // JJ's account
+          ga('create', 'UA-50555-3', 'auto', 'perlOrg'); // perl.org account
+          ga('require', 'outboundLinkTracker', {
+            events: ['click', 'auxclick', 'contextmenu'],
+          });
+          ga('require', 'maxScrollTracker');
+          ga('send', 'pageview');
+          ga('perlOrg.send', 'pageview');
+        </script>
+        <script async src="https://www.google-analytics.com/analytics.js">
+        </script>
+        <script async src="/public/js/tracking.min.js"></script>
+      </head>
+
+      <body class="body container-fluid ">
+        <div class="wrapper">
+
+          <nav
+    class="navbar navbar-dark bg-primary bg-perl fixed-top justify-content-between navbar-expand-lg">
+    <a href="#content" class="skippy sr-only sr-only-focusable">
+        <span class=' skippy-text'>Skip to main content</span>
+    </a>
+    <a class="navbar-brand" href="/">
+        <img class="logo" src="/public/img/logo_perl_doc.svg"
+            alt="Perl Documentation Logo" />
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse"
+        data-target="#navbar" aria-controls="navbar" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="navbar" class="collapse navbar-collapse ">
+        <ul class="navbar-nav ml-auto navbar-right">
+            <form class="nav-item dropdown search-wrapper">
+                <input type="text" id='searchinput' aria-describedby='navbarDropdown5'
+                    placeholder="Type query" class='search-input-field' value=''>
+
+                <button href="#" data-toggle='dropdown' type="button"
+                    aria-haspopup="true" aria-expanded='false' id="navbarDropdown5"
+                    class="nav-link dropdown-toggle search-link">
+                    <object tabindex='-1' focusable="false" class='search-icon'
+                        data="/public/img/search.svg" type="image/svg+xml"
+                        name='search icon'>search
+                        icon</object>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown5"
+                    id='search-results'>
+                    <p class='dropdown-item major-version'>
+                        No results
+                    </p>
+                </div>
+            </form>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown" href="#" class="nav-link dropdown-toggle"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Perl versions</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    
+                        <p class='dropdown-item major-version'>
+                            5.32
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.32.0/">5.32.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.30
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.3/">5.30.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.2/">5.30.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.1/">5.30.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.0/">5.30.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.28
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.3/">5.28.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.2/">5.28.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.1/">5.28.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.0/">5.28.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.26
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.3/">5.26.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.2/">5.26.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.1/">5.26.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.0/">5.26.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.24
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.4/">5.24.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.3/">5.24.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.2/">5.24.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.1/">5.24.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.0/">5.24.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.22
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.4/">5.22.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.3/">5.22.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.2/">5.22.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.1/">5.22.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.0/">5.22.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.20
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.3/">5.20.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.2/">5.20.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.1/">5.20.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.0/">5.20.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.18
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.4/">5.18.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.3/">5.18.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.2/">5.18.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.1/">5.18.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.0/">5.18.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.16
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.3/">5.16.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.2/">5.16.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.1/">5.16.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.0/">5.16.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.14
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.4/">5.14.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.3/">5.14.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.2/">5.14.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.1/">5.14.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.0/">5.14.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.12
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.5/">5.12.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.4/">5.12.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.3/">5.12.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.2/">5.12.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.1/">5.12.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.0/">5.12.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.10
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.1/">5.10.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.0/">5.10.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.8
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.9/">5.8.9</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.8/">5.8.8</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.7/">5.8.7</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.6/">5.8.6</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.5/">5.8.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.4/">5.8.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.3/">5.8.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.2/">5.8.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.1/">5.8.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.0/">5.8.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.6
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.2/">5.6.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.1/">5.6.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.0/">5.6.0</a>
+                        
+                        
+                    
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown1" href="#" class="dropdown-toggle nav-link"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Manuals</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                    <a class="dropdown-item"
+                        href="/5.22.3/index-overview.html">Overview</a>
+                    <a class="dropdown-item"
+                        href="/5.22.3/index-tutorials.html">Tutorials</a>
+                    <a class="dropdown-item"
+                        href="/5.22.3/index-faq.html">FAQs</a>
+                    <a class="dropdown-item"
+                        href="/5.22.3/index-history.html">Changes</a>
+                    <a class="dropdown-item"
+                        href="/5.22.3/index-licence.html">License</a>
+                    <a class="dropdown-item"
+                        href="/5.22.3/index-language.html">Language</a>
+                    <a class="dropdown-item"
+                        href="/5.22.3/index-functions.html">Functions</a>
+                    <a class="dropdown-item"
+                        href="/5.22.3/perlop.html">Operators</a>
+                    <a class="dropdown-item"
+                        href="/5.22.3/perlvar.html">Variables</a>
+                    <a class="dropdown-item"
+                        href="/5.22.3/index-pragmas.html">Pragmas</a>
+                    <a class="dropdown-item"
+                        href="/5.22.3/index-utilities.html">Utilities</a>
+                    <a class="dropdown-item"
+                        href="/5.22.3/index-internals.html">Internals</a>
+                    <a class="dropdown-item"
+                        href="/5.22.3/index-platforms.html">Platforms</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown3" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Modules</a>
+                <div aria-labelledby="navbarDropdown3"
+                    class="dropdown-menu letters-wrap">
+                    <!--<a class="dropdown-item"
+                        href="/5.22.3/index-modules.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.22.3/index-modules-by-cat.html">By
+                        Category</a>-->
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.22.3/index-modules-A.html">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.3/index-modules-B.html">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.3/index-modules-C.html">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.3/index-modules-D.html">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.3/index-modules-E.html">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.3/index-modules-F.html">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.3/index-modules-G.html">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.3/index-modules-H.html">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.3/index-modules-I.html">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.3/index-modules-J.html">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.3/index-modules-K.html">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.3/index-modules-L.html">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.3/index-modules-M.html">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.3/index-modules-N.html">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.3/index-modules-O.html">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.3/index-modules-P.html">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.3/index-modules-Q.html">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.3/index-modules-R.html">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.3/index-modules-S.html">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.3/index-modules-T.html">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.3/index-modules-U.html">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.3/index-modules-V.html">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.3/index-modules-W.html">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.3/index-modules-X.html">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.3/index-modules-Y.html">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.3/index-modules-Z.html">Z</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown4" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Functions</a>
+                <div aria-labelledby="navbarDropdown4"
+                    class="dropdown-menu letters-wrap">
+                    <a class="dropdown-item"
+                        href="/5.22.3/index-functions.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.22.3/index-functions-by-cat.html">By
+                        Category</a>
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.22.3/index-functions.html#A">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.3/index-functions.html#B">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.3/index-functions.html#C">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.3/index-functions.html#D">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.3/index-functions.html#E">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.3/index-functions.html#F">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.3/index-functions.html#G">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.3/index-functions.html#H">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.3/index-functions.html#I">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.3/index-functions.html#J">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.3/index-functions.html#K">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.3/index-functions.html#L">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.3/index-functions.html#M">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.3/index-functions.html#N">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.3/index-functions.html#O">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.3/index-functions.html#P">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.3/index-functions.html#Q">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.3/index-functions.html#R">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.3/index-functions.html#S">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.3/index-functions.html#T">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.3/index-functions.html#U">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.3/index-functions.html#V">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.3/index-functions.html#W">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.3/index-functions.html#X">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.3/index-functions.html#Y">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.3/index-functions.html#Z">Z</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!--/.nav-collapse -->
+</nav>
+
+
+          <main class="row main-content pb-5 pt-5" id='content'>
+            <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+              <div class="row">
+                <div class="col-sm-12">
+                  <div id="breadcrumbs">
+                      
+    <a href="../../index.html">Home</a>&nbsp; &gt;
+    
+      
+        <a href="../../index-modules-E.html">Core modules (E)</a> &gt;
+      
+    
+    ExtUtils::MakeMaker::FAQ
+  
+
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <article class="col-sm-12 content">
+                  <div class="documentation-wrapper">
+                    <div id="perl_version">
+                      <h7 class='page-title'> Perl 5 version 22.3
+                        documentation</h7>
+                    </div>
+                    <h1>ExtUtils::MakeMaker::FAQ</h1>
+
+
+  <!--    -->
+<ul><li><a href="#NAME">NAME</a></li><li><a href="#DESCRIPTION">DESCRIPTION</a></li><ul><li><a href="#Module-Installation">Module Installation</a></li><li><a href="#Common-errors-and-problems">Common errors and problems</a></li><li><a href="#Philosophy-and-History">Philosophy and History</a></li><li><a href="#Module-Writing">Module Writing</a></li><li><a href="#XS">XS</a></li></ul><li><a href="#PATCHING">PATCHING</a></li><li><a href="#AUTHOR">AUTHOR</a></li><li><a href="#SEE-ALSO">SEE ALSO</a></li></ul><a class='view-head1' id="NAME"></a><h2 class='h2' >NAME</h2>
+<p>ExtUtils::MakeMaker::FAQ - Frequently Asked Questions About MakeMaker</p>
+<a class='view-head1' id="DESCRIPTION"></a><h2 class='h2' >DESCRIPTION</h2>
+<p>FAQs, tricks and tips for <code class="inline"><span class="w">ExtUtils::MakeMaker</span></code>
+.</p>
+<a class='view-head2' id="Module-Installation"></a><h3 class='h3' >Module Installation</h3>
+<ul>
+<li><a class='view-title' id="How-do-I-install-a-module-into-my-home-directory%3f"></a><strong>How do I install a module into my home directory?</strong>
+<p>If you're not the Perl administrator you probably don't have
+permission to install a module to its default location.  Then you
+should install it for your own use into your home directory like so:</p>
+<pre class="verbatim"><ol><li>    <span class="c"># Non-unix folks, replace ~ with /path/to/your/home/dir</span></li><li>    <span class="w">perl</span> <span class="w">Makefile</span>.<span class="w">PL</span> <span class="w">INSTALL_BASE</span>=~</li></ol></pre><p>This will put modules into <i>~/lib/perl5</i>, man pages into <i>~/man</i> and
+programs into <i>~/bin</i>.</p>
+<p>To ensure your Perl programs can see these newly installed modules,
+set your <code class="inline"><span class="w">PERL5LIB</span></code>
+ environment variable to <i>~/lib/perl5</i> or tell
+each of your programs to look in that directory with the following:</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../../functions/use.html">use</a> <span class="w">lib</span> <span class="q">&quot;$ENV{HOME}/lib/perl5&quot;</span><span class="sc">;</span></li></ol></pre><p>or if $ENV{HOME} isn't set and you don't want to set it for some
+reason, do it the long way.</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../../functions/use.html">use</a> <span class="w">lib</span> <span class="q">&quot;/path/to/your/home/dir/lib/perl5&quot;</span><span class="sc">;</span></li></ol></pre></li>
+<li><a class='view-title' id="How-do-I-get-MakeMaker-and-Module%3a%3aBuild-to-install-to-the-same-place%3f"></a><strong>How do I get MakeMaker and Module::Build to install to the same place?</strong>
+<p>Module::Build, as of 0.28, supports two ways to install to the same
+location as MakeMaker.</p>
+<p>We highly recommend the install_base method, its the simplest and most
+closely approximates the expected behavior of an installation prefix.</p>
+<p>1) Use INSTALL_BASE / <code class="inline">--<span class="w">install_base</span></code>
+</p>
+<p>MakeMaker (as of 6.31) and Module::Build (as of 0.28) both can install
+to the same locations using the "install_base" concept.  See
+<a href="../../ExtUtils/MakeMaker.html#INSTALL_BASE">INSTALL_BASE in ExtUtils::MakeMaker</a> for details.  To get MM and MB to
+install to the same location simply set INSTALL_BASE in MM and
+<code class="inline">--<span class="w">install_base</span></code>
+ in MB to the same location.</p>
+<pre class="verbatim"><ol><li>    <span class="w">perl</span> <span class="w">Makefile</span>.<span class="w">PL</span> <span class="w">INSTALL_BASE</span>=<span class="q">/whatever</span></li><li>    <span class="q">    perl Build.PL    --install_base /</span><span class="w">whatever</span></li></ol></pre><p>This works most like other language's behavior when you specify a
+prefix.  We recommend this method.</p>
+<p>2) Use PREFIX / <code class="inline">--<span class="w">prefix</span></code>
+</p>
+<p>Module::Build 0.28 added support for <code class="inline">--<span class="w">prefix</span></code>
+ which works like
+MakeMaker's PREFIX.</p>
+<pre class="verbatim"><ol><li>    <span class="w">perl</span> <span class="w">Makefile</span>.<span class="w">PL</span> <span class="w">PREFIX</span>=<span class="q">/whatever</span></li><li>    <span class="q">    perl Build.PL    --prefix /</span><span class="w">whatever</span></li></ol></pre><p>We highly discourage this method.  It should only be used if you know
+what you're doing and specifically need the PREFIX behavior.  The
+PREFIX algorithm is complicated and focused on matching the system
+installation.</p>
+</li>
+<li><a class='view-title' id="How-do-I-keep-from-installing-man-pages%3f"></a><strong>How do I keep from installing man pages?</strong>
+<p>Recent versions of MakeMaker will only install man pages on Unix-like
+operating systems.</p>
+<p>For an individual module:</p>
+<pre class="verbatim"><ol><li>        <span class="w">perl</span> <span class="w">Makefile</span>.<span class="w">PL</span> <span class="w">INSTALLMAN1DIR</span>=<span class="w">none</span> <span class="w">INSTALLMAN3DIR</span>=<span class="w">none</span></li></ol></pre><p>If you want to suppress man page installation for all modules you have
+to reconfigure Perl and tell it 'none' when it asks where to install
+man pages.</p>
+</li>
+<li><a class='view-title' id="How-do-I-use-a-module-without-installing-it%3f"></a><strong>How do I use a module without installing it?</strong>
+<p>Two ways.  One is to build the module normally...</p>
+<pre class="verbatim"><ol><li>        <span class="w">perl</span> <span class="w">Makefile</span>.<span class="w">PL</span></li><li>        <span class="w">make</span></li><li>        <span class="w">make</span> <span class="w">test</span></li></ol></pre><p>...and then set the PERL5LIB environment variable to point at the
+blib/lib and blib/arch directories.</p>
+<p>The other is to install the module in a temporary location.</p>
+<pre class="verbatim"><ol><li>        <span class="w">perl</span> <span class="w">Makefile</span>.<span class="w">PL</span> <span class="w">INSTALL_BASE</span>=~<span class="q">/tmp</span></li><li>        <span class="q">        make</span></li><li>        <span class="q">        make test</span></li><li>        <span class="q">        make install</span></li></ol></pre><p>And then set PERL5LIB to <i>~/tmp/lib/perl5</i>.  This works well when you
+have multiple modules to work with.  It also ensures that the module
+goes through its full installation process which may modify it.</p>
+</li>
+<li><a class='view-title' id="PREFIX-vs-INSTALL_BASE-from-Module%3a%3aBuild%3a%3aCookbook"></a><strong>PREFIX vs INSTALL_BASE from Module::Build::Cookbook</strong>
+<p>The behavior of PREFIX is complicated and depends closely on how your
+Perl is configured. The resulting installation locations will vary from
+machine to machine and even different installations of Perl on the same machine.
+Because of this, its difficult to document where prefix will place your modules.</p>
+<p>In contrast, INSTALL_BASE has predictable, easy to explain installation locations.
+Now that Module::Build and MakeMaker both have INSTALL_BASE there is little reason
+to use PREFIX other than to preserve your existing installation locations. If you
+are starting a fresh Perl installation we encourage you to use INSTALL_BASE. If
+you have an existing installation installed via PREFIX, consider moving it to an
+installation structure matching INSTALL_BASE and using that instead.</p>
+</li>
+</ul>
+<a class='view-head2' id="Common-errors-and-problems"></a><h3 class='h3' >Common errors and problems</h3>
+<ul>
+<li><a class='view-title' id="%22No-rule-to-make-target-%60%2fusr%2flib%2fperl5%2fCORE%2fconfig.h'%2c-needed-by-%60Makefile'%22"></a><strong>"No rule to make target `/usr/lib/perl5/CORE/config.h', needed by `Makefile'"</strong>
+<p>Just what it says, you're missing that file.  MakeMaker uses it to
+determine if perl has been rebuilt since the Makefile was made.  It's
+a bit of a bug that it halts installation.</p>
+<p>Some operating systems don't ship the CORE directory with their base
+perl install.  To solve the problem, you likely need to install a perl
+development package such as perl-devel (CentOS, Fedora and other
+Redhat systems) or perl (Ubuntu and other Debian systems).</p>
+</li>
+</ul>
+<a class='view-head2' id="Philosophy-and-History"></a><h3 class='h3' >Philosophy and History</h3>
+<ul>
+<li><a class='view-title' id="Why-not-just-use-%3cinsert-other-build-config-tool-here%3e%3f"></a><strong>Why not just use &lt;insert other build config tool here&gt;?</strong>
+<p>Why did MakeMaker reinvent the build configuration wheel?  Why not
+just use autoconf or automake or ppm or Ant or ...</p>
+<p>There are many reasons, but the major one is cross-platform
+compatibility.</p>
+<p>Perl is one of the most ported pieces of software ever.  It works on
+operating systems I've never even heard of (see perlport for details).
+It needs a build tool that can work on all those platforms and with
+any wacky C compilers and linkers they might have.</p>
+<p>No such build tool exists.  Even make itself has wildly different
+dialects.  So we have to build our own.</p>
+</li>
+<li><a class='view-title' id="What-is-Module%3a%3aBuild-and-how-does-it-relate-to-MakeMaker%3f"></a><strong>What is Module::Build and how does it relate to MakeMaker?</strong>
+<p>Module::Build is a project by Ken Williams to supplant MakeMaker.
+Its primary advantages are:</p>
+<ul>
+<li><a class='view-title' id="*-pure-perl.--no-make%2c-no-shell-commands"></a><strong>pure perl.  no make, no shell commands</strong>
+</li>
+<li><a class='view-title' id="*-easier-to-customize"></a><strong>easier to customize</strong>
+</li>
+<li><a class='view-title' id="*-cleaner-internals"></a><strong>cleaner internals</strong>
+</li>
+<li><a class='view-title' id="*-less-cruft"></a><strong>less cruft</strong>
+</li>
+</ul>
+<p>Module::Build was long the official heir apparent to MakeMaker.  The rate of
+both its development and adoption has slowed in recent years, though, and it is
+unclear what the future holds for it.  That said, Module::Build set the stage
+for <i>something</i> to become the heir to MakeMaker.  MakeMaker's maintainers have
+long said that it is a dead end and should be kept functioning, but not
+extended with new features.  It's complicated enough as it is!</p>
+</li>
+</ul>
+<a class='view-head2' id="Module-Writing"></a><h3 class='h3' >Module Writing</h3>
+<ul>
+<li><a class='view-title' id="How-do-I-keep-my-%24VERSION-up-to-date-without-resetting-it-manually%3f"></a><strong>How do I keep my $VERSION up to date without resetting it manually?</strong>
+<p>Often you want to manually set the $VERSION in the main module
+distribution because this is the version that everybody sees on CPAN
+and maybe you want to customize it a bit.  But for all the other
+modules in your dist, $VERSION is really just bookkeeping and all that's
+important is it goes up every time the module is changed.  Doing this
+by hand is a pain and you often forget.</p>
+<p>Simplest way to do it automatically is to use your version control
+system's revision number (you are using version control, right?).</p>
+<p>In CVS, RCS and SVN you use $Revision$ (see the documentation of your
+version control system for details).  Every time the file is checked
+in the $Revision$ will be updated, updating your $VERSION.</p>
+<p>SVN uses a simple integer for $Revision$ so you can adapt it for your
+$VERSION like so:</p>
+<pre class="verbatim"><ol><li>    <span class="s">(</span><span class="i">$VERSION</span><span class="s">)</span> = <span class="q">q$Revision$</span> =~ <span class="q">/(\d+)/</span><span class="sc">;</span></li></ol></pre><p>In CVS and RCS version 1.9 is followed by 1.10.  Since CPAN compares
+version numbers numerically we use a sprintf() to convert 1.9 to 1.009
+and 1.10 to 1.010 which compare properly.</p>
+<pre class="verbatim"><ol><li>    <span class="i">$VERSION</span> = <a class="l_k" href="../../functions/sprintf.html">sprintf</a> <span class="q">&quot;%d.%03d&quot;</span><span class="cm">,</span> <span class="q">q$Revision$</span> =~ <span class="q">/(\d+)\.(\d+)/g</span><span class="sc">;</span></li></ol></pre><p>If branches are involved (ie. $Revision: 1.5.3.4$) it's a little more
+complicated.</p>
+<pre class="verbatim"><ol><li>    <span class="c"># must be all on one line or MakeMaker will get confused.</span></li><li>    <span class="i">$VERSION</span> = <a class="l_k" href="../../functions/do.html">do</a> <span class="s">{</span> <a class="l_k" href="../../functions/my.html">my</a> <span class="i">@r</span> = <span class="s">(</span><span class="q">q$Revision$</span> =~ <span class="q">/\d+/g</span><span class="s">)</span><span class="sc">;</span> <a class="l_k" href="../../functions/sprintf.html">sprintf</a> <span class="q">&quot;%d.&quot;</span>.<span class="q">&quot;%03d&quot;</span> x <span class="i">$#r</span><span class="cm">,</span> <span class="i">@r</span> <span class="s">}</span><span class="sc">;</span></li></ol></pre><p>In SVN, $Revision$ should be the same for every file in the project so
+they would all have the same $VERSION.  CVS and RCS have a different
+$Revision$ per file so each file will have a different $VERSION.
+Distributed version control systems, such as SVK, may have a different
+$Revision$ based on who checks out the file, leading to a different $VERSION
+on each machine!  Finally, some distributed version control systems, such
+as darcs, have no concept of revision number at all.</p>
+</li>
+<li><a class='view-title' id="What's-this-_META.yml_-thing-and-how-did-it-get-in-my-_MANIFEST_%3f!"></a><strong>What's this <i>META.yml</i> thing and how did it get in my <i>MANIFEST</i>?!</strong>
+<p><i>META.yml</i> is a module meta-data file pioneered by Module::Build and
+automatically generated as part of the 'distdir' target (and thus
+'dist').  See <a href="../../ExtUtils/MakeMaker.html#Module-Meta-Data">Module Meta-Data in ExtUtils::MakeMaker</a>.</p>
+<p>To shut off its generation, pass the <code class="inline"><span class="w">NO_META</span></code>
+ flag to <code class="inline"><span class="i">WriteMakefile</span><span class="s">(</span><span class="s">)</span></code>
+.</p>
+</li>
+<li><a class='view-title' id="How-do-I-delete-everything-not-in-my-_MANIFEST_%3f"></a><strong>How do I delete everything not in my <i>MANIFEST</i>?</strong>
+<p>Some folks are surprised that <code class="inline"><span class="w">make</span> <span class="w">distclean</span></code>
+ does not delete
+everything not listed in their MANIFEST (thus making a clean
+distribution) but only tells them what they need to delete.  This is
+done because it is considered too dangerous.  While developing your
+module you might write a new file, not add it to the MANIFEST, then
+run a <code class="inline"><span class="w">distclean</span></code>
+ and be sad because your new work was deleted.</p>
+<p>If you really want to do this, you can use
+<code class="inline"><span class="i">ExtUtils::Manifest::manifind</span><span class="s">(</span><span class="s">)</span></code>
+ to read the MANIFEST and File::Find
+to delete the files.  But you have to be careful.  Here's a script to
+do that.  Use at your own risk.  Have fun blowing holes in your foot.</p>
+<pre class="verbatim"><ol><li>    <span class="c">#!/usr/bin/perl -w</span></li><li></li><li>    <a class="l_k" href="../../functions/use.html">use</a> <span class="w">strict</span><span class="sc">;</span></li><li></li><li>    <a class="l_k" href="../../functions/use.html">use</a> <span class="w">File::Spec</span><span class="sc">;</span></li><li>    <a class="l_k" href="../../functions/use.html">use</a> <span class="w">File::Find</span><span class="sc">;</span></li><li>    <a class="l_k" href="../../functions/use.html">use</a> <span class="w">ExtUtils::Manifest</span> <span class="q">qw(maniread)</span><span class="sc">;</span></li><li></li><li>    <a class="l_k" href="../../functions/my.html">my</a> <span class="i">%manifest</span> = <a class="l_k" href="../../functions/map.html">map</a>  <span class="s">{</span><span class="s">(</span> <span class="i">$_</span> <span class="cm">=&gt;</span> <span class="n">1</span> <span class="s">)</span><span class="s">}</span></li><li>                   <a class="l_k" href="../../functions/grep.html">grep</a> <span class="s">{</span> <span class="w">File::Spec</span><span class="w">-&gt;canonpath</span><span class="s">(</span><span class="i">$_</span><span class="s">)</span> <span class="s">}</span></li><li>                        <a class="l_k" href="../../functions/keys.html">keys</a> <span class="i">%</span>{ <span class="i">maniread</span><span class="s">(</span><span class="s">)</span> }<span class="sc">;</span></li><li></li><li>    <a class="l_k" href="../../functions/if.html">if</a><span class="s">(</span> !<a class="l_k" href="../../functions/keys.html">keys</a> <span class="i">%manifest</span> <span class="s">)</span> <span class="s">{</span></li><li>        <a class="l_k" href="../../functions/print.html">print</a> <span class="q">&quot;No files found in MANIFEST.  Stopping.\n&quot;</span><span class="sc">;</span></li><li>        <a class="l_k" href="../../functions/exit.html">exit</a><span class="sc">;</span></li><li>    <span class="s">}</span></li><li></li><li>    <span class="i">find</span><span class="s">(</span><span class="s">{</span></li><li>          <span class="w">wanted</span>   <span class="cm">=&gt;</span> <a class="l_k" href="../../functions/sub.html">sub</a> <span class="s">{</span></li><li>              <a class="l_k" href="../../functions/my.html">my</a> <span class="i">$path</span> = <span class="w">File::Spec</span><span class="w">-&gt;canonpath</span><span class="s">(</span><span class="i">$_</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>              <a class="l_k" href="../../functions/return.html">return</a> <a class="l_k" href="../../functions/unless.html">unless</a> -f <span class="i">$path</span><span class="sc">;</span></li><li>              <a class="l_k" href="../../functions/return.html">return</a> <a class="l_k" href="../../functions/if.html">if</a> <a class="l_k" href="../../functions/exists.html">exists</a> <span class="i">$manifest</span>{ <span class="i">$path</span> }<span class="sc">;</span></li><li></li><li>              <a class="l_k" href="../../functions/print.html">print</a> <span class="q">&quot;unlink $path\n&quot;</span><span class="sc">;</span></li><li>              <a class="l_k" href="../../functions/unlink.html">unlink</a> <span class="i">$path</span><span class="sc">;</span></li><li>          <span class="s">}</span><span class="cm">,</span></li><li>          <span class="w">no_chdir</span> <span class="cm">=&gt;</span> <span class="n">1</span></li><li>         <span class="s">}</span><span class="cm">,</span></li><li>         <span class="q">&quot;.&quot;</span></li><li>    <span class="s">)</span><span class="sc">;</span></li></ol></pre></li>
+<li><a class='view-title' id="Which-tar-should-I-use-on-Windows%3f"></a><strong>Which tar should I use on Windows?</strong>
+<p>We recommend ptar from Archive::Tar not older than 1.66 with '-C' option.</p>
+</li>
+<li><a class='view-title' id="Which-zip-should-I-use-on-Windows-for-'%5bnd%5dmake-zipdist'%3f"></a><strong>Which zip should I use on Windows for '[nd]make zipdist'?</strong>
+<p>We recommend InfoZIP: <a href="http://www.info-zip.org/Zip.html">http://www.info-zip.org/Zip.html</a></p>
+</li>
+</ul>
+<a class='view-head2' id="XS"></a><h3 class='h3' >XS</h3>
+<ul>
+<li><a class='view-title' id="How-do-I-prevent-%22object-version-X.XX-does-not-match-bootstrap-parameter-Y.YY%22-errors%3f"></a><strong>How do I prevent "object version X.XX does not match bootstrap parameter Y.YY" errors?</strong>
+<p>XS code is very sensitive to the module version number and will
+complain if the version number in your Perl module doesn't match.  If
+you change your module's version # without rerunning Makefile.PL the old
+version number will remain in the Makefile, causing the XS code to be built
+with the wrong number.</p>
+<p>To avoid this, you can force the Makefile to be rebuilt whenever you
+change the module containing the version number by adding this to your
+WriteMakefile() arguments.</p>
+<pre class="verbatim"><ol><li>    <span class="w">depend</span> <span class="cm">=&gt;</span> <span class="s">{</span> <span class="q">&#39;$(FIRST_MAKEFILE)&#39;</span> <span class="cm">=&gt;</span> <span class="q">&#39;$(VERSION_FROM)&#39;</span> <span class="s">}</span></li></ol></pre></li>
+<li><a class='view-title' id="How-do-I-make-two-or-more-XS-files-coexist-in-the-same-directory%3f"></a><strong>How do I make two or more XS files coexist in the same directory?</strong>
+<p>Sometimes you need to have two and more XS files in the same package.
+One way to go is to put them into separate directories, but sometimes
+this is not the most suitable solution. The following technique allows
+you to put two (and more) XS files in the same directory.</p>
+<p>Let's assume that we have a package <code class="inline"><span class="w">Cool::Foo</span></code>
+, which includes
+<code class="inline"><span class="w">Cool::Foo</span></code>
+ and <code class="inline"><span class="w">Cool::Bar</span></code>
+ modules each having a separate XS
+file. First we use the following <i>Makefile.PL</i>:</p>
+<pre class="verbatim"><ol><li>  <a class="l_k" href="../../functions/use.html">use</a> <span class="w">ExtUtils::MakeMaker</span><span class="sc">;</span></li><li></li><li>  <span class="i">WriteMakefile</span><span class="s">(</span></li><li>      <span class="w">NAME</span>		<span class="cm">=&gt;</span> <span class="q">&#39;Cool::Foo&#39;</span><span class="cm">,</span></li><li>      <span class="w">VERSION_FROM</span>	<span class="cm">=&gt;</span> <span class="q">&#39;Foo.pm&#39;</span><span class="cm">,</span></li><li>      <span class="w">OBJECT</span>              <span class="cm">=&gt;</span> <span class="q">q/$(O_FILES)/</span><span class="cm">,</span></li><li>      <span class="c"># ... other attrs ...</span></li><li>  <span class="s">)</span><span class="sc">;</span></li></ol></pre><p>Notice the <code class="inline"><span class="w">OBJECT</span></code>
+ attribute. MakeMaker generates the following
+variables in <i>Makefile</i>:</p>
+<pre class="verbatim"><ol><li>  <span class="c"># Handy lists of source code files:</span></li><li>  <span class="w">XS_FILES</span>= <span class="w">Bar</span>.<span class="w">xs</span> \</li><li>  	<span class="w">Foo</span>.<span class="w">xs</span></li><li>  <span class="w">C_FILES</span> = <span class="w">Bar</span>.<span class="w">c</span> \</li><li>  	<span class="w">Foo</span>.<span class="w">c</span></li><li>  <span class="w">O_FILES</span> = <span class="w">Bar</span>.<span class="w">o</span> \</li><li>  	<span class="w">Foo</span>.<span class="w">o</span></li></ol></pre><p>Therefore we can use the <code class="inline"><span class="w">O_FILES</span></code>
+ variable to tell MakeMaker to use
+these objects into the shared library.</p>
+<p>That's pretty much it. Now write <i>Foo.pm</i> and <i>Foo.xs</i>, <i>Bar.pm</i>
+and <i>Bar.xs</i>, where <i>Foo.pm</i> bootstraps the shared library and
+<i>Bar.pm</i> simply loading <i>Foo.pm</i>.</p>
+<p>The only issue left is to how to bootstrap <i>Bar.xs</i>. This is done
+from <i>Foo.xs</i>:</p>
+<pre class="verbatim"><ol><li>  <span class="w">MODULE</span> = <span class="w">Cool::Foo</span> <span class="w">PACKAGE</span> = <span class="w">Cool::Foo</span></li><li></li><li>  <span class="w">BOOT</span><span class="co">:</span></li><li>  <span class="c"># boot the second XS file</span></li><li>  <span class="i">boot_Cool__Bar</span><span class="s">(</span><span class="w">aTHX_</span> <span class="w">cv</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>If you have more than two files, this is the place where you should
+boot extra XS files from.</p>
+<p>The following four files sum up all the details discussed so far.</p>
+<pre class="verbatim"><ol><li>  <span class="w">Foo</span>.<span class="w">pm</span><span class="co">:</span></li><li>  -------</li><li><a name="package-Cool::Foo"></a>  package <span class="i">Cool::Foo</span><span class="sc">;</span></li><li></li><li>  <a class="l_k" href="../../functions/require.html">require</a> <span class="w">DynaLoader</span><span class="sc">;</span></li><li></li><li>  <a class="l_k" href="../../functions/our.html">our</a> <span class="i">@ISA</span> = <span class="q">qw(DynaLoader)</span><span class="sc">;</span></li><li>  <a class="l_k" href="../../functions/our.html">our</a> <span class="i">$VERSION</span> = <span class="q">&#39;0.01&#39;</span><span class="sc">;</span></li><li>  <span class="w">bootstrap</span> <span class="w">Cool::Foo</span> <span class="i">$VERSION</span><span class="sc">;</span></li><li></li><li>  <span class="n">1</span><span class="sc">;</span></li><li></li><li>  <span class="w">Bar</span>.<span class="w">pm</span><span class="co">:</span></li><li>  -------</li><li><a name="package-Cool::Bar"></a>  package <span class="i">Cool::Bar</span><span class="sc">;</span></li><li></li><li>  <a class="l_k" href="../../functions/use.html">use</a> <span class="w">Cool::Foo</span><span class="sc">;</span> <span class="c"># bootstraps Bar.xs</span></li><li></li><li>  <span class="n">1</span><span class="sc">;</span></li><li></li><li>  <span class="w">Foo</span>.<span class="w">xs</span><span class="co">:</span></li><li>  -------</li><li>  <span class="c">#include &quot;EXTERN.h&quot;</span></li><li>  <span class="c">#include &quot;perl.h&quot;</span></li><li>  <span class="c">#include &quot;XSUB.h&quot;</span></li><li></li><li>  <span class="w">MODULE</span> = <span class="w">Cool::Foo</span>  <span class="w">PACKAGE</span> = <span class="w">Cool::Foo</span></li><li></li><li>  <span class="w">BOOT</span><span class="co">:</span></li><li>  <span class="c"># boot the second XS file</span></li><li>  <span class="i">boot_Cool__Bar</span><span class="s">(</span><span class="w">aTHX_</span> <span class="w">cv</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>  <span class="w">MODULE</span> = <span class="w">Cool::Foo</span>  <span class="w">PACKAGE</span> = <span class="w">Cool::Foo</span>  <span class="w">PREFIX</span> = <span class="w">cool_foo_</span></li><li></li><li>  <span class="w">void</span></li><li>  <span class="i">cool_foo_perl_rules</span><span class="s">(</span><span class="s">)</span></li><li></li><li>      <span class="w">CODE</span><span class="co">:</span></li><li>      <span class="i">fprintf</span><span class="s">(</span><span class="w">stderr</span><span class="cm">,</span> <span class="q">&quot;Cool::Foo says: Perl Rules\n&quot;</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>  <span class="w">Bar</span>.<span class="w">xs</span><span class="co">:</span></li><li>  -------</li><li>  <span class="c">#include &quot;EXTERN.h&quot;</span></li><li>  <span class="c">#include &quot;perl.h&quot;</span></li><li>  <span class="c">#include &quot;XSUB.h&quot;</span></li><li></li><li>  <span class="w">MODULE</span> = <span class="w">Cool::Bar</span>  <span class="w">PACKAGE</span> = <span class="w">Cool::Bar</span> <span class="w">PREFIX</span> = <span class="w">cool_bar_</span></li><li></li><li>  <span class="w">void</span></li><li>  <span class="i">cool_bar_perl_rules</span><span class="s">(</span><span class="s">)</span></li><li></li><li>      <span class="w">CODE</span><span class="co">:</span></li><li>      <span class="i">fprintf</span><span class="s">(</span><span class="w">stderr</span><span class="cm">,</span> <span class="q">&quot;Cool::Bar says: Perl Rules\n&quot;</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>And of course a very basic test:</p>
+<pre class="verbatim"><ol><li>  <span class="w">t</span>/<span class="w">cool</span>.<span class="w">t</span><span class="co">:</span></li><li>  --------</li><li>  <a class="l_k" href="../../functions/use.html">use</a> <span class="w">Test</span><span class="sc">;</span></li><li>  <a class="l_k" href="../../functions/BEGIN.html">BEGIN</a> <span class="s">{</span> <span class="w">plan</span> <span class="w">tests</span> <span class="cm">=&gt;</span> <span class="n">1</span> <span class="s">}</span><span class="sc">;</span></li><li>  <a class="l_k" href="../../functions/use.html">use</a> <span class="w">Cool::Foo</span><span class="sc">;</span></li><li>  <a class="l_k" href="../../functions/use.html">use</a> <span class="w">Cool::Bar</span><span class="sc">;</span></li><li>  <span class="i">Cool::Foo::perl_rules</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li><li>  <span class="i">Cool::Bar::perl_rules</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li><li>  <span class="w">ok</span> <span class="n">1</span><span class="sc">;</span></li></ol></pre><p>This tip has been brought to you by Nick Ing-Simmons and Stas Bekman.</p>
+</li>
+</ul>
+<a class='view-head1' id="PATCHING"></a><h2 class='h2' >PATCHING</h2>
+<p>If you have a question you'd like to see added to the FAQ (whether or
+not you have the answer) please send it to makemaker@perl.org.</p>
+<a class='view-head1' id="AUTHOR"></a><h2 class='h2' >AUTHOR</h2>
+<p>The denizens of makemaker@perl.org.</p>
+<a class='view-head1' id="SEE-ALSO"></a><h2 class='h2' >SEE ALSO</h2>
+<p><a href="../../ExtUtils/MakeMaker.html">ExtUtils::MakeMaker</a></p>
+
+
+
+
+      <ul><li><a href="#NAME">NAME</a></li><li><a href="#DESCRIPTION">DESCRIPTION</a></li><ul><li><a href="#Module-Installation">Module Installation</a></li><li><a href="#Common-errors-and-problems">Common errors and problems</a></li><li><a href="#Philosophy-and-History">Philosophy and History</a></li><li><a href="#Module-Writing">Module Writing</a></li><li><a href="#XS">XS</a></li></ul><li><a href="#PATCHING">PATCHING</a></li><li><a href="#AUTHOR">AUTHOR</a></li><li><a href="#SEE-ALSO">SEE ALSO</a></li></ul>
+
+
+                  </div>
+                </article>
+              </div>
+            </div>
+          </main>
+        </div>
+           <footer class="footer row bg-light pt-5 pb-5">
+       <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+           <div class="row">
+               <div class="col-md-4">
+                   <ul class="list-unstyled">
+                       <li>
+                           <h4>Site info</h4>
+                       </li>
+                       <li>Docs mantained by
+                           <a href="//lists.perl.org/list/perl5-porters.html"
+                               rel="noopener">Perl 5 Porters</a>
+                       </li>
+                       <li>Perldoc site development sponsored by
+                           <a href="//opusvl.com" rel="noopener">
+                           <img style="margin: 20px 20px 5px 10px" class="opus-logo" src="/public/img/opusvl_logo.svg" alt="OpusVL Logo">
+                        </a>
+                    <li><span class="about_perldoc"><a href="//about.html">About PerlDOC</a></span>
+                    </li>
+                       </li>
+                   </ul>
+               </div>
+               <div class="col-md-8">
+                   <div class="row">
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Manuals</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.22.3/index-overview.html">Overview</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.22.3/index-tutorials.html">Tutorials</a>
+                               </li>
+                               <li>
+                                   <a href="/5.22.3/index-faq.html">FAQs</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.22.3/index-history.html">Changes</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Reference</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.22.3/index-language.html">Language</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.22.3/index-functions.html">Functions</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.22.3/perlop.html">Operators</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.22.3/perlvar.html">Variables</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Modules</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.22.3/index-modules-A.html">Modules</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.22.3/index-pragmas.html">Pragmas</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.22.3/index-utilities.html">Utilities</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Misc</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.22.3/index-licence.html">License</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.22.3/index-internals.html">Internals</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.22.3/index-platforms.html">Platforms</a>
+                               </li>
+                            <li>
+                                <a
+                                    href="/5.22.3/index-about.html">About</a>
+                            </li>
+                           </ul>
+                       </div>
+                   </div>
+               </div>
+               <div class=" col-12 footer-inf text-center">
+                   <small>perldoc.perl.org - Official documentation for the Perl
+                       programming language</small>
+               </div>
+           </div>
+       </div>
+   </footer>
+
+        	<div class="beta-wrapper beta-bottom-right ">
+		<div class="beta beta-blue  ">
+			<a class="beta-link "
+				href="//github.com/OpusVL/perldoc.perl.org/issues/new" rel="noopener">
+				<span class="beta-text">
+					This website is a Beta release.
+				</span>
+				<span class="beta-text">
+					For any issues please raise a ticket on GitHub
+				</span>
+			</a>
+		</div>
+	</div>
+
+        <script src="/public/js/main.min.js"></script>
+      </body>
+
+      </html>

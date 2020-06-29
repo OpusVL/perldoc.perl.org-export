@@ -1,0 +1,872 @@
+      
+      
+      
+      
+
+      <!DOCTYPE html>
+      <html lang="en">
+
+      <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="perldos - perldoc.perl.org">
+        <link rel="icon" href="/public/img/favicon.ico">
+        <title>perldos - perldoc.perl.org</title>
+        <link href="/public/css/main.min.css" rel="stylesheet">
+        <link rel="canonical" href="/perldos.html">
+        <link
+          href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900'
+          rel='stylesheet' type='text/css'>
+        <script>
+          window.ga = window.ga || function () {
+            (ga.q = ga.q || []).push(arguments)
+          };
+          ga.l = +new Date;
+          ga('create', 'UA-1892152-2', 'auto'); // JJ's account
+          ga('create', 'UA-50555-3', 'auto', 'perlOrg'); // perl.org account
+          ga('require', 'outboundLinkTracker', {
+            events: ['click', 'auxclick', 'contextmenu'],
+          });
+          ga('require', 'maxScrollTracker');
+          ga('send', 'pageview');
+          ga('perlOrg.send', 'pageview');
+        </script>
+        <script async src="https://www.google-analytics.com/analytics.js">
+        </script>
+        <script async src="/public/js/tracking.min.js"></script>
+      </head>
+
+      <body class="body container-fluid ">
+        <div class="wrapper">
+
+          <nav
+    class="navbar navbar-dark bg-primary bg-perl fixed-top justify-content-between navbar-expand-lg">
+    <a href="#content" class="skippy sr-only sr-only-focusable">
+        <span class=' skippy-text'>Skip to main content</span>
+    </a>
+    <a class="navbar-brand" href="/">
+        <img class="logo" src="/public/img/logo_perl_doc.svg"
+            alt="Perl Documentation Logo" />
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse"
+        data-target="#navbar" aria-controls="navbar" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="navbar" class="collapse navbar-collapse ">
+        <ul class="navbar-nav ml-auto navbar-right">
+            <form class="nav-item dropdown search-wrapper">
+                <input type="text" id='searchinput' aria-describedby='navbarDropdown5'
+                    placeholder="Type query" class='search-input-field' value=''>
+
+                <button href="#" data-toggle='dropdown' type="button"
+                    aria-haspopup="true" aria-expanded='false' id="navbarDropdown5"
+                    class="nav-link dropdown-toggle search-link">
+                    <object tabindex='-1' focusable="false" class='search-icon'
+                        data="/public/img/search.svg" type="image/svg+xml"
+                        name='search icon'>search
+                        icon</object>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown5"
+                    id='search-results'>
+                    <p class='dropdown-item major-version'>
+                        No results
+                    </p>
+                </div>
+            </form>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown" href="#" class="nav-link dropdown-toggle"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Perl versions</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    
+                        <p class='dropdown-item major-version'>
+                            5.32
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.32.0/">5.32.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.30
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.3/">5.30.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.2/">5.30.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.1/">5.30.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.0/">5.30.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.28
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.3/">5.28.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.2/">5.28.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.1/">5.28.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.0/">5.28.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.26
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.3/">5.26.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.2/">5.26.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.1/">5.26.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.0/">5.26.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.24
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.4/">5.24.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.3/">5.24.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.2/">5.24.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.1/">5.24.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.0/">5.24.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.22
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.4/">5.22.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.3/">5.22.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.2/">5.22.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.1/">5.22.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.0/">5.22.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.20
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.3/">5.20.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.2/">5.20.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.1/">5.20.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.0/">5.20.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.18
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.4/">5.18.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.3/">5.18.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.2/">5.18.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.1/">5.18.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.0/">5.18.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.16
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.3/">5.16.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.2/">5.16.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.1/">5.16.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.0/">5.16.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.14
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.4/">5.14.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.3/">5.14.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.2/">5.14.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.1/">5.14.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.0/">5.14.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.12
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.5/">5.12.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.4/">5.12.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.3/">5.12.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.2/">5.12.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.1/">5.12.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.0/">5.12.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.10
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.1/">5.10.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.0/">5.10.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.8
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.9/">5.8.9</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.8/">5.8.8</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.7/">5.8.7</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.6/">5.8.6</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.5/">5.8.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.4/">5.8.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.3/">5.8.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.2/">5.8.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.1/">5.8.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.0/">5.8.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.6
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.2/">5.6.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.1/">5.6.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.0/">5.6.0</a>
+                        
+                        
+                    
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown1" href="#" class="dropdown-toggle nav-link"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Manuals</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                    <a class="dropdown-item"
+                        href="/5.12.3/index-overview.html">Overview</a>
+                    <a class="dropdown-item"
+                        href="/5.12.3/index-tutorials.html">Tutorials</a>
+                    <a class="dropdown-item"
+                        href="/5.12.3/index-faq.html">FAQs</a>
+                    <a class="dropdown-item"
+                        href="/5.12.3/index-history.html">Changes</a>
+                    <a class="dropdown-item"
+                        href="/5.12.3/index-licence.html">License</a>
+                    <a class="dropdown-item"
+                        href="/5.12.3/index-language.html">Language</a>
+                    <a class="dropdown-item"
+                        href="/5.12.3/index-functions.html">Functions</a>
+                    <a class="dropdown-item"
+                        href="/5.12.3/perlop.html">Operators</a>
+                    <a class="dropdown-item"
+                        href="/5.12.3/perlvar.html">Variables</a>
+                    <a class="dropdown-item"
+                        href="/5.12.3/index-pragmas.html">Pragmas</a>
+                    <a class="dropdown-item"
+                        href="/5.12.3/index-utilities.html">Utilities</a>
+                    <a class="dropdown-item"
+                        href="/5.12.3/index-internals.html">Internals</a>
+                    <a class="dropdown-item"
+                        href="/5.12.3/index-platforms.html">Platforms</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown3" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Modules</a>
+                <div aria-labelledby="navbarDropdown3"
+                    class="dropdown-menu letters-wrap">
+                    <!--<a class="dropdown-item"
+                        href="/5.12.3/index-modules.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.12.3/index-modules-by-cat.html">By
+                        Category</a>-->
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.12.3/index-modules-A.html">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.3/index-modules-B.html">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.3/index-modules-C.html">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.3/index-modules-D.html">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.3/index-modules-E.html">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.3/index-modules-F.html">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.3/index-modules-G.html">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.3/index-modules-H.html">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.3/index-modules-I.html">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.3/index-modules-J.html">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.3/index-modules-K.html">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.3/index-modules-L.html">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.3/index-modules-M.html">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.3/index-modules-N.html">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.3/index-modules-O.html">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.3/index-modules-P.html">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.3/index-modules-Q.html">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.3/index-modules-R.html">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.3/index-modules-S.html">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.3/index-modules-T.html">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.3/index-modules-U.html">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.3/index-modules-V.html">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.3/index-modules-W.html">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.3/index-modules-X.html">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.3/index-modules-Y.html">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.3/index-modules-Z.html">Z</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown4" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Functions</a>
+                <div aria-labelledby="navbarDropdown4"
+                    class="dropdown-menu letters-wrap">
+                    <a class="dropdown-item"
+                        href="/5.12.3/index-functions.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.12.3/index-functions-by-cat.html">By
+                        Category</a>
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.12.3/index-functions.html#A">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.3/index-functions.html#B">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.3/index-functions.html#C">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.3/index-functions.html#D">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.3/index-functions.html#E">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.3/index-functions.html#F">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.3/index-functions.html#G">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.3/index-functions.html#H">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.3/index-functions.html#I">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.3/index-functions.html#J">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.3/index-functions.html#K">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.3/index-functions.html#L">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.3/index-functions.html#M">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.3/index-functions.html#N">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.3/index-functions.html#O">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.3/index-functions.html#P">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.3/index-functions.html#Q">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.3/index-functions.html#R">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.3/index-functions.html#S">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.3/index-functions.html#T">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.3/index-functions.html#U">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.3/index-functions.html#V">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.3/index-functions.html#W">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.3/index-functions.html#X">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.3/index-functions.html#Y">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.3/index-functions.html#Z">Z</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!--/.nav-collapse -->
+</nav>
+
+
+          <main class="row main-content pb-5 pt-5" id='content'>
+            <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+              <div class="row">
+                <div class="col-sm-12">
+                  <div id="breadcrumbs">
+                      
+    <a href="index.html">Home</a>&nbsp; &gt;
+    
+      
+        <a href="index-platforms.html">Platform specific</a> &gt;
+      
+    
+    perldos
+  
+
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <article class="col-sm-12 content">
+                  <div class="documentation-wrapper">
+                    <div id="perl_version">
+                      <h7 class='page-title'> Perl 5 version 12.3
+                        documentation</h7>
+                    </div>
+                    <h1>perldos</h1>
+
+
+  <!--    -->
+<ul><li><a href="#NAME">NAME</a></li><li><a href="#SYNOPSIS">SYNOPSIS</a></li><li><a href="#DESCRIPTION">DESCRIPTION</a></li><ul><li><a href="#Prerequisites-for-Compiling-Perl-on-DOS">Prerequisites for Compiling Perl on DOS</a></li><li><a href="#Shortcomings-of-Perl-under-DOS">Shortcomings of Perl under DOS</a></li><li><a href="#Building-Perl-on-DOS">Building Perl on DOS</a></li><li><a href="#Testing-Perl-on-DOS">Testing Perl on DOS</a></li><li><a href="#Installation-of-Perl-on-DOS">Installation of Perl on DOS</a></li></ul><li><a href="#BUILDING-AND-INSTALLING-MODULES-ON-DOS">BUILDING AND INSTALLING MODULES ON DOS</a></li><ul><li><a href="#Building-Prerequisites-for-Perl-on-DOS">Building Prerequisites for Perl on DOS</a></li><li><a href="#Unpacking-CPAN-Modules-on-DOS">Unpacking CPAN Modules on DOS</a></li><li><a href="#Building-Non-XS-Modules-on-DOS">Building Non-XS Modules on DOS</a></li><li><a href="#Building-XS-Modules-on-DOS">Building XS Modules on DOS</a></li></ul><li><a href="#AUTHOR">AUTHOR</a></li><li><a href="#SEE-ALSO">SEE ALSO</a></li></ul><a class='view-head1' id="NAME"></a><h2 class='h2' >NAME</h2>
+<p>perldos - Perl under DOS, W31, W95.</p>
+<a class='view-head1' id="SYNOPSIS"></a><h2 class='h2' >SYNOPSIS</h2>
+<p>These are instructions for building Perl under DOS (or w??), using
+DJGPP v2.03 or later.  Under w95 long filenames are supported.</p>
+<a class='view-head1' id="DESCRIPTION"></a><h2 class='h2' >DESCRIPTION</h2>
+<p>Before you start, you should glance through the README file
+found in the top-level directory where the Perl distribution
+was extracted.  Make sure you read and understand the terms under
+which this software is being distributed.</p>
+<p>This port currently supports MakeMaker (the set of modules that
+is used to build extensions to perl).  Therefore, you should be
+able to build and install most extensions found in the CPAN sites.</p>
+<p>Detailed instructions on how to build and install perl extension
+modules, including XS-type modules, is included.  See 'BUILDING AND
+INSTALLING MODULES'.</p>
+<a class='view-head2' id="Prerequisites-for-Compiling-Perl-on-DOS"></a><h3 class='h3' >Prerequisites for Compiling Perl on DOS</h3>
+<ul>
+<li><a class='view-title' id="DJGPP"></a><strong>DJGPP</strong>
+<p>DJGPP is a port of GNU C/C++ compiler and development tools to 32-bit,
+protected-mode environment on Intel 32-bit CPUs running MS-DOS and compatible
+operating systems, by DJ Delorie &lt;dj@delorie.com&gt; and friends.</p>
+<p>For more details (FAQ), check out the home of DJGPP at:</p>
+<pre class="verbatim"><ol><li>        <span class="j">http:</span><span class="q">//</span><span class="w">www</span>.<span class="w">delorie</span>.<span class="w">com</span><span class="q">/djgpp/</span></li></ol></pre><p>If you have questions about DJGPP, try posting to the DJGPP newsgroup:
+comp.os.msdos.djgpp, or use the email gateway djgpp@delorie.com.</p>
+<p>You can find the full DJGPP distribution on any of the mirrors listed here:</p>
+<pre class="verbatim"><ol><li>        <span class="j">http:</span><span class="q">//</span><span class="w">www</span>.<span class="w">delorie</span>.<span class="w">com</span>/<span class="w">djgpp</span>/<span class="w">getting</span>.<span class="w">html</span></li></ol></pre><p>You need the following files to build perl (or add new modules):</p>
+<pre class="verbatim"><ol><li>        <span class="v">v2</span>/<span class="w">djdev203</span>.<span class="w">zip</span></li><li>        <span class="w">v2gnu</span>/<span class="w">bnu2112b</span>.<span class="w">zip</span></li><li>        <span class="w">v2gnu</span>/<span class="w">gcc2953b</span>.<span class="w">zip</span></li><li>        <span class="w">v2gnu</span>/<span class="w">bsh204b</span>.<span class="w">zip</span></li><li>        <span class="w">v2gnu</span>/<span class="w">mak3791b</span>.<span class="w">zip</span></li><li>        <span class="w">v2gnu</span>/<span class="w">fil40b</span>.<span class="w">zip</span></li><li>        <span class="w">v2gnu</span>/<span class="w">sed3028b</span>.<span class="w">zip</span></li><li>        <span class="w">v2gnu</span>/<span class="w">txt20b</span>.<span class="w">zip</span></li><li>        <span class="w">v2gnu</span>/<span class="w">dif272b</span>.<span class="w">zip</span></li><li>        <span class="w">v2gnu</span>/<span class="w">grep24b</span>.<span class="w">zip</span></li><li>        <span class="w">v2gnu</span>/<span class="w">shl20jb</span>.<span class="w">zip</span></li><li>        <span class="w">v2gnu</span>/<span class="w">gwk306b</span>.<span class="w">zip</span></li><li>        <span class="w">v2misc</span>/<span class="w">csdpmi5b</span>.<span class="w">zip</span></li></ol></pre><p>or possibly any newer version.</p>
+</li>
+<li><a class='view-title' id="Pthreads"></a><strong>Pthreads</strong>
+<p>Thread support is not tested in this version of the djgpp perl.</p>
+</li>
+</ul>
+<a class='view-head2' id="Shortcomings-of-Perl-under-DOS"></a><h3 class='h3' >Shortcomings of Perl under DOS</h3>
+<p>Perl under DOS lacks some features of perl under UNIX because of
+deficiencies in the UNIX-emulation, most notably:</p>
+<ul>
+<li>
+<p>fork() and pipe()</p>
+</li>
+<li>
+<p>some features of the UNIX filesystem regarding link count and file dates</p>
+</li>
+<li>
+<p>in-place operation is a little bit broken with short filenames</p>
+</li>
+<li>
+<p>sockets</p>
+</li>
+</ul>
+<a class='view-head2' id="Building-Perl-on-DOS"></a><h3 class='h3' >Building Perl on DOS</h3>
+<ul>
+<li>
+<p>Unpack the source package <i>perl5.8*.tar.gz</i> with djtarx. If you want
+to use long file names under w95 and also to get Perl to pass all its
+tests, don't forget to use</p>
+<pre class="verbatim"><ol><li>        <span class="w">set</span> <span class="w">LFN</span>=<span class="q">y</span></li><li>        <span class="q">        set FNCASE=y</span></li></ol></pre><p>before unpacking the archive.</p>
+</li>
+<li>
+<p>Create a "symlink" or copy your bash.exe to sh.exe in your <code class="inline"><span class="s">(</span><span class="i">$DJDIR</span><span class="s">)</span>/<span class="w">bin</span></code>
+
+directory.</p>
+<pre class="verbatim"><ol><li>        <span class="w">ln</span> -s <span class="w">bash</span>.<span class="w">exe</span> <span class="w">sh</span>.<span class="w">exe</span></li></ol></pre><p>[If you have the recommended version of bash for DJGPP, this is already
+done for you.]</p>
+<p>And make the <code class="inline"><span class="w">SHELL</span></code>
+ environment variable point to this <i>sh.exe</i>:</p>
+<pre class="verbatim"><ol><li>        <span class="w">set</span> <span class="w">SHELL</span>=<span class="w">c</span><span class="co">:</span><span class="q">/djgpp/</span><span class="w">bin</span>/<span class="w">sh</span>.<span class="w">exe</span> <span class="s">(</span><a class="l_k" href="functions/use.html">use</a> <span class="w">full</span> <span class="w">path</span> <span class="w">name</span>!<span class="s">)</span></li></ol></pre><p>You can do this in <i>djgpp.env</i> too. Add this line BEFORE any section
+definition:</p>
+<pre class="verbatim"><ol><li>        +<span class="w">SHELL</span>=<span class="i">%DJDIR</span>%<span class="q">/bin/sh</span>.<span class="w">exe</span></li></ol></pre></li>
+<li>
+<p>If you have <i>split.exe</i> and <i>gsplit.exe</i> in your path, then rename 
+<i>split.exe</i> to <i>djsplit.exe</i>, and <i>gsplit.exe</i> to <i>split.exe</i>.
+Copy or link <i>gecho.exe</i> to <i>echo.exe</i> if you don't have <i>echo.exe</i>.
+Copy or link <i>gawk.exe</i> to <i>awk.exe</i> if you don't have <i>awk.exe</i>.</p>
+<p>[If you have the recommended versions of djdev, shell utilities and
+gawk, all these are already done for you, and you will not need to do
+anything.]</p>
+</li>
+<li>
+<p>Chdir to the djgpp subdirectory of perl toplevel and type the following
+commands:</p>
+<pre class="verbatim"><ol><li>        <span class="w">set</span> <span class="w">FNCASE</span>=<span class="q">y</span></li><li>        <span class="q">        configure.bat</span></li></ol></pre><p>This will do some preprocessing then run the Configure script for you.
+The Configure script is interactive, but in most cases you just need to
+press ENTER.  The "set" command ensures that DJGPP preserves the letter
+case of file names when reading directories.  If you already issued this
+set command when unpacking the archive, and you are in the same DOS
+session as when you unpacked the archive, you don't have to issue the
+set command again.  This command is necessary *before* you start to 
+(re)configure or (re)build perl in order to ensure both that perl builds 
+correctly and that building XS-type modules can succeed.  See the DJGPP 
+info entry for "_preserve_fncase" for more information:</p>
+<pre class="verbatim"><ol><li>        <span class="w">info</span> <span class="w">libc</span> <span class="w">alphabetical</span> <span class="w">_preserve_fncase</span></li></ol></pre><p>If the script says that your package is incomplete, and asks whether
+to continue, just answer with Y (this can only happen if you don't use
+long filenames or forget to issue "set FNCASE=y" first).</p>
+<p>When Configure asks about the extensions, I suggest IO and Fcntl,
+and if you want database handling then SDBM_File or GDBM_File
+(you need to install gdbm for this one). If you want to use the
+POSIX extension (this is the default), make sure that the stack
+size of your <i>cc1.exe</i> is at least 512kbyte (you can check this
+with: <code class="inline"><span class="w">stubedit</span> <span class="w">cc1</span>.<span class="w">exe</span></code>
+).</p>
+<p>You can use the Configure script in non-interactive mode too.
+When I built my <i>perl.exe</i>, I used something like this:</p>
+<pre class="verbatim"><ol><li>        <span class="w">configure</span>.<span class="w">bat</span> -<span class="w">des</span></li></ol></pre><p>You can find more info about Configure's command line switches in
+the <i>INSTALL</i> file.</p>
+<p>When the script ends, and you want to change some values in the
+generated <i>config.sh</i> file, then run</p>
+<pre class="verbatim"><ol><li>        <span class="w">sh</span> <span class="w">Configure</span> -S</li></ol></pre><p>after you made your modifications.</p>
+<p>IMPORTANT: if you use this <code class="inline">-S</code>
+ switch, be sure to delete the CONFIG
+environment variable before running the script:</p>
+<pre class="verbatim"><ol><li>        <span class="w">set</span> <span class="w">CONFIG</span>=</li></ol></pre></li>
+<li>
+<p>Now you can compile Perl. Type:</p>
+<pre class="verbatim"><ol><li>        <span class="w">make</span></li></ol></pre></li>
+</ul>
+<a class='view-head2' id="Testing-Perl-on-DOS"></a><h3 class='h3' >Testing Perl on DOS</h3>
+<p>Type:</p>
+<pre class="verbatim"><ol><li>        <span class="w">make</span> <span class="w">test</span></li></ol></pre><p>If you're lucky you should see "All tests successful". But there can be
+a few failed subtests (less than 5 hopefully) depending on some external
+conditions (e.g. some subtests fail under linux/dosemu or plain dos
+with short filenames only).</p>
+<a class='view-head2' id="Installation-of-Perl-on-DOS"></a><h3 class='h3' >Installation of Perl on DOS</h3>
+<p>Type:</p>
+<pre class="verbatim"><ol><li>        <span class="w">make</span> <span class="w">install</span></li></ol></pre><p>This will copy the newly compiled perl and libraries into your DJGPP
+directory structure. Perl.exe and the utilities go into <code class="inline"><span class="s">(</span><span class="i">$DJDIR</span><span class="s">)</span>/<span class="w">bin</span></code>
+,
+and the library goes under <code class="inline"><span class="s">(</span><span class="i">$DJDIR</span><span class="s">)</span>/<span class="w">lib</span>/<span class="w">perl5</span></code>
+. The pod documentation
+goes under <code class="inline"><span class="s">(</span><span class="i">$DJDIR</span><span class="s">)</span>/<span class="w">lib</span><span class="q">/perl5/pod</span></code>
+.</p>
+<a class='view-head1' id="BUILDING-AND-INSTALLING-MODULES-ON-DOS"></a><h2 class='h2' >BUILDING AND INSTALLING MODULES ON DOS</h2>
+<a class='view-head2' id="Building-Prerequisites-for-Perl-on-DOS"></a><h3 class='h3' >Building Prerequisites for Perl on DOS</h3>
+<p>For building and installing non-XS modules, all you need is a working
+perl under DJGPP.  Non-XS modules do not require re-linking the perl
+binary, and so are simpler to build and install.</p>
+<p>XS-type modules do require re-linking the perl binary, because part of
+an XS module is written in "C", and has to be linked together with the
+perl binary to be executed.  This is required because perl under DJGPP
+is built with the "static link" option, due to the lack of "dynamic
+linking" in the DJGPP environment.</p>
+<p>Because XS modules require re-linking of the perl binary, you need both
+the perl binary distribution and the perl source distribution to build
+an XS extension module.  In addition, you will have to have built your
+perl binary from the source distribution so that all of the components
+of the perl binary are available for the required link step.</p>
+<a class='view-head2' id="Unpacking-CPAN-Modules-on-DOS"></a><h3 class='h3' >Unpacking CPAN Modules on DOS</h3>
+<p>First, download the module package from CPAN (e.g., the "Comma Separated
+Value" text package, Text-CSV-0.01.tar.gz).  Then expand the contents of
+the package into some location on your disk.  Most CPAN modules are
+built with an internal directory structure, so it is usually safe to
+expand it in the root of your DJGPP installation.  Some people prefer to
+locate source trees under /usr/src (i.e., <code class="inline"><span class="s">(</span><span class="i">$DJDIR</span><span class="s">)</span>/<span class="w">usr</span>/<span class="w">src</span></code>
+), but you may
+put it wherever seems most logical to you, *EXCEPT* under the same
+directory as your perl source code.  There are special rules that apply
+to modules which live in the perl source tree that do not apply to most
+of the modules in CPAN.</p>
+<p>Unlike other DJGPP packages, which are normal "zip" files, most CPAN
+module packages are "gzipped tarballs".  Recent versions of WinZip will
+safely unpack and expand them, *UNLESS* they have zero-length files.  It
+is a known WinZip bug (as of v7.0) that it will not extract zero-length
+files.</p>
+<p>From the command line, you can use the djtar utility provided with DJGPP
+to unpack and expand these files.  For example:</p>
+<pre class="verbatim"><ol><li>        <span class="j">C:</span>\<span class="w">djgpp</span>&gt;<span class="w">djtarx</span> -<span class="w">v</span> <span class="w">Text</span>-<span class="w">CSV</span>-<span class="n">0.01</span>.<span class="w">tar</span>.<span class="w">gz</span></li></ol></pre><p>This will create the new directory <code class="inline"><span class="s">(</span><span class="i">$DJDIR</span><span class="s">)</span>/<span class="w">Text</span>-<span class="w">CSV</span>-<span class="n">0.01</span></code>
+, filling
+it with the source for this module.</p>
+<a class='view-head2' id="Building-Non-XS-Modules-on-DOS"></a><h3 class='h3' >Building Non-XS Modules on DOS</h3>
+<p>To build a non-XS module, you can use the standard module-building
+instructions distributed with perl modules.</p>
+<pre class="verbatim"><ol><li>    <span class="w">perl</span> <span class="w">Makefile</span>.<span class="w">PL</span></li><li>    <span class="w">make</span></li><li>    <span class="w">make</span> <span class="w">test</span></li><li>    <span class="w">make</span> <span class="w">install</span></li></ol></pre><p>This is sufficient because non-XS modules install only ".pm" files and
+(sometimes) pod and/or man documentation.  No re-linking of the perl
+binary is needed to build, install or use non-XS modules.</p>
+<a class='view-head2' id="Building-XS-Modules-on-DOS"></a><h3 class='h3' >Building XS Modules on DOS</h3>
+<p>To build an XS module, you must use the standard module-building
+instructions distributed with perl modules *PLUS* three extra
+instructions specific to the DJGPP "static link" build environment.</p>
+<pre class="verbatim"><ol><li>    <span class="w">set</span> <span class="w">FNCASE</span>=<span class="q">y</span></li><li>    <span class="q">    perl Makefile.PL</span></li><li>    <span class="q">    make</span></li><li>    <span class="q">    make perl</span></li><li>    <span class="q">    make test</span></li><li>    <span class="q">    make -f Makefile.aperl</span> <span class="w">inst_perl</span> <span class="w">MAP_TARGET</span>=<span class="w">perl</span>.<span class="w">exe</span></li><li>    <span class="w">make</span> <span class="w">install</span></li></ol></pre><p>The first extra instruction sets DJGPP's FNCASE environment variable so
+that the new perl binary which you must build for an XS-type module will
+build correctly.  The second extra instruction re-builds the perl binary
+in your module directory before you run "make test", so that you are
+testing with the new module code you built with "make".  The third extra
+instruction installs the perl binary from your module directory into the
+standard DJGPP binary directory, <code class="inline"><span class="s">(</span><span class="i">$DJDIR</span><span class="s">)</span>/<span class="w">bin</span></code>
+, replacing your
+previous perl binary.</p>
+<p>Note that the MAP_TARGET value *must* have the ".exe" extension or you
+will not create a "perl.exe" to replace the one in <code class="inline"><span class="s">(</span><span class="i">$DJDIR</span><span class="s">)</span>/<span class="w">bin</span></code>
+.</p>
+<p>When you are done, the XS-module install process will have added information
+to your "perllocal" information telling that the perl binary has been replaced,
+and what module was installed.  You can view this information at any time
+by using the command:</p>
+<pre class="verbatim"><ol><li>        <span class="w">perl</span> -S <span class="w">perldoc</span> <span class="w">perllocal</span></li></ol></pre><a class='view-head1' id="AUTHOR"></a><h2 class='h2' >AUTHOR</h2>
+<p>Laszlo Molnar, <i>laszlo.molnar@eth.ericsson.se</i> [Installing/building perl]</p>
+<p>Peter J. Farley III <i>pjfarley@banet.net</i> [Building/installing modules]</p>
+<a class='view-head1' id="SEE-ALSO"></a><h2 class='h2' >SEE ALSO</h2>
+<p>perl(1).</p>
+
+
+
+
+      <ul><li><a href="#NAME">NAME</a></li><li><a href="#SYNOPSIS">SYNOPSIS</a></li><li><a href="#DESCRIPTION">DESCRIPTION</a></li><ul><li><a href="#Prerequisites-for-Compiling-Perl-on-DOS">Prerequisites for Compiling Perl on DOS</a></li><li><a href="#Shortcomings-of-Perl-under-DOS">Shortcomings of Perl under DOS</a></li><li><a href="#Building-Perl-on-DOS">Building Perl on DOS</a></li><li><a href="#Testing-Perl-on-DOS">Testing Perl on DOS</a></li><li><a href="#Installation-of-Perl-on-DOS">Installation of Perl on DOS</a></li></ul><li><a href="#BUILDING-AND-INSTALLING-MODULES-ON-DOS">BUILDING AND INSTALLING MODULES ON DOS</a></li><ul><li><a href="#Building-Prerequisites-for-Perl-on-DOS">Building Prerequisites for Perl on DOS</a></li><li><a href="#Unpacking-CPAN-Modules-on-DOS">Unpacking CPAN Modules on DOS</a></li><li><a href="#Building-Non-XS-Modules-on-DOS">Building Non-XS Modules on DOS</a></li><li><a href="#Building-XS-Modules-on-DOS">Building XS Modules on DOS</a></li></ul><li><a href="#AUTHOR">AUTHOR</a></li><li><a href="#SEE-ALSO">SEE ALSO</a></li></ul>
+
+
+                  </div>
+                </article>
+              </div>
+            </div>
+          </main>
+        </div>
+           <footer class="footer row bg-light pt-5 pb-5">
+       <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+           <div class="row">
+               <div class="col-md-4">
+                   <ul class="list-unstyled">
+                       <li>
+                           <h4>Site info</h4>
+                       </li>
+                       <li>Docs mantained by
+                           <a href="//lists.perl.org/list/perl5-porters.html"
+                               rel="noopener">Perl 5 Porters</a>
+                       </li>
+                       <li>Perldoc site development sponsored by
+                           <a href="//opusvl.com" rel="noopener">
+                           <img style="margin: 20px 20px 5px 10px" class="opus-logo" src="/public/img/opusvl_logo.svg" alt="OpusVL Logo">
+                        </a>
+                    <li><span class="about_perldoc"><a href="//about.html">About PerlDOC</a></span>
+                    </li>
+                       </li>
+                   </ul>
+               </div>
+               <div class="col-md-8">
+                   <div class="row">
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Manuals</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.12.3/index-overview.html">Overview</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.12.3/index-tutorials.html">Tutorials</a>
+                               </li>
+                               <li>
+                                   <a href="/5.12.3/index-faq.html">FAQs</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.12.3/index-history.html">Changes</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Reference</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.12.3/index-language.html">Language</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.12.3/index-functions.html">Functions</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.12.3/perlop.html">Operators</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.12.3/perlvar.html">Variables</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Modules</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.12.3/index-modules-A.html">Modules</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.12.3/index-pragmas.html">Pragmas</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.12.3/index-utilities.html">Utilities</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Misc</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.12.3/index-licence.html">License</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.12.3/index-internals.html">Internals</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.12.3/index-platforms.html">Platforms</a>
+                               </li>
+                            <li>
+                                <a
+                                    href="/5.12.3/index-about.html">About</a>
+                            </li>
+                           </ul>
+                       </div>
+                   </div>
+               </div>
+               <div class=" col-12 footer-inf text-center">
+                   <small>perldoc.perl.org - Official documentation for the Perl
+                       programming language</small>
+               </div>
+           </div>
+       </div>
+   </footer>
+
+        	<div class="beta-wrapper beta-bottom-right ">
+		<div class="beta beta-blue  ">
+			<a class="beta-link "
+				href="//github.com/OpusVL/perldoc.perl.org/issues/new" rel="noopener">
+				<span class="beta-text">
+					This website is a Beta release.
+				</span>
+				<span class="beta-text">
+					For any issues please raise a ticket on GitHub
+				</span>
+			</a>
+		</div>
+	</div>
+
+        <script src="/public/js/main.min.js"></script>
+      </body>
+
+      </html>

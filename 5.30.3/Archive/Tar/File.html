@@ -1,0 +1,852 @@
+      
+      
+      
+      
+
+      <!DOCTYPE html>
+      <html lang="en">
+
+      <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Archive::Tar::File - perldoc.perl.org">
+        <link rel="icon" href="/public/img/favicon.ico">
+        <title>Archive::Tar::File - perldoc.perl.org</title>
+        <link href="/public/css/main.min.css" rel="stylesheet">
+        <link rel="canonical" href="/Archive/Tar/File.html">
+        <link
+          href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900'
+          rel='stylesheet' type='text/css'>
+        <script>
+          window.ga = window.ga || function () {
+            (ga.q = ga.q || []).push(arguments)
+          };
+          ga.l = +new Date;
+          ga('create', 'UA-1892152-2', 'auto'); // JJ's account
+          ga('create', 'UA-50555-3', 'auto', 'perlOrg'); // perl.org account
+          ga('require', 'outboundLinkTracker', {
+            events: ['click', 'auxclick', 'contextmenu'],
+          });
+          ga('require', 'maxScrollTracker');
+          ga('send', 'pageview');
+          ga('perlOrg.send', 'pageview');
+        </script>
+        <script async src="https://www.google-analytics.com/analytics.js">
+        </script>
+        <script async src="/public/js/tracking.min.js"></script>
+      </head>
+
+      <body class="body container-fluid ">
+        <div class="wrapper">
+
+          <nav
+    class="navbar navbar-dark bg-primary bg-perl fixed-top justify-content-between navbar-expand-lg">
+    <a href="#content" class="skippy sr-only sr-only-focusable">
+        <span class=' skippy-text'>Skip to main content</span>
+    </a>
+    <a class="navbar-brand" href="/">
+        <img class="logo" src="/public/img/logo_perl_doc.svg"
+            alt="Perl Documentation Logo" />
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse"
+        data-target="#navbar" aria-controls="navbar" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="navbar" class="collapse navbar-collapse ">
+        <ul class="navbar-nav ml-auto navbar-right">
+            <form class="nav-item dropdown search-wrapper">
+                <input type="text" id='searchinput' aria-describedby='navbarDropdown5'
+                    placeholder="Type query" class='search-input-field' value=''>
+
+                <button href="#" data-toggle='dropdown' type="button"
+                    aria-haspopup="true" aria-expanded='false' id="navbarDropdown5"
+                    class="nav-link dropdown-toggle search-link">
+                    <object tabindex='-1' focusable="false" class='search-icon'
+                        data="/public/img/search.svg" type="image/svg+xml"
+                        name='search icon'>search
+                        icon</object>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown5"
+                    id='search-results'>
+                    <p class='dropdown-item major-version'>
+                        No results
+                    </p>
+                </div>
+            </form>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown" href="#" class="nav-link dropdown-toggle"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Perl versions</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    
+                        <p class='dropdown-item major-version'>
+                            5.32
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.32.0/">5.32.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.30
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.3/">5.30.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.2/">5.30.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.1/">5.30.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.0/">5.30.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.28
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.3/">5.28.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.2/">5.28.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.1/">5.28.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.0/">5.28.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.26
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.3/">5.26.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.2/">5.26.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.1/">5.26.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.0/">5.26.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.24
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.4/">5.24.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.3/">5.24.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.2/">5.24.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.1/">5.24.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.0/">5.24.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.22
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.4/">5.22.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.3/">5.22.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.2/">5.22.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.1/">5.22.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.0/">5.22.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.20
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.3/">5.20.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.2/">5.20.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.1/">5.20.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.0/">5.20.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.18
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.4/">5.18.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.3/">5.18.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.2/">5.18.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.1/">5.18.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.0/">5.18.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.16
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.3/">5.16.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.2/">5.16.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.1/">5.16.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.0/">5.16.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.14
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.4/">5.14.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.3/">5.14.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.2/">5.14.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.1/">5.14.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.0/">5.14.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.12
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.5/">5.12.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.4/">5.12.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.3/">5.12.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.2/">5.12.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.1/">5.12.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.0/">5.12.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.10
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.1/">5.10.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.0/">5.10.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.8
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.9/">5.8.9</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.8/">5.8.8</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.7/">5.8.7</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.6/">5.8.6</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.5/">5.8.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.4/">5.8.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.3/">5.8.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.2/">5.8.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.1/">5.8.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.0/">5.8.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.6
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.2/">5.6.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.1/">5.6.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.0/">5.6.0</a>
+                        
+                        
+                    
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown1" href="#" class="dropdown-toggle nav-link"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Manuals</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                    <a class="dropdown-item"
+                        href="/5.30.3/index-overview.html">Overview</a>
+                    <a class="dropdown-item"
+                        href="/5.30.3/index-tutorials.html">Tutorials</a>
+                    <a class="dropdown-item"
+                        href="/5.30.3/index-faq.html">FAQs</a>
+                    <a class="dropdown-item"
+                        href="/5.30.3/index-history.html">Changes</a>
+                    <a class="dropdown-item"
+                        href="/5.30.3/index-licence.html">License</a>
+                    <a class="dropdown-item"
+                        href="/5.30.3/index-language.html">Language</a>
+                    <a class="dropdown-item"
+                        href="/5.30.3/index-functions.html">Functions</a>
+                    <a class="dropdown-item"
+                        href="/5.30.3/perlop.html">Operators</a>
+                    <a class="dropdown-item"
+                        href="/5.30.3/perlvar.html">Variables</a>
+                    <a class="dropdown-item"
+                        href="/5.30.3/index-pragmas.html">Pragmas</a>
+                    <a class="dropdown-item"
+                        href="/5.30.3/index-utilities.html">Utilities</a>
+                    <a class="dropdown-item"
+                        href="/5.30.3/index-internals.html">Internals</a>
+                    <a class="dropdown-item"
+                        href="/5.30.3/index-platforms.html">Platforms</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown3" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Modules</a>
+                <div aria-labelledby="navbarDropdown3"
+                    class="dropdown-menu letters-wrap">
+                    <!--<a class="dropdown-item"
+                        href="/5.30.3/index-modules.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.30.3/index-modules-by-cat.html">By
+                        Category</a>-->
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.30.3/index-modules-A.html">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.3/index-modules-B.html">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.3/index-modules-C.html">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.3/index-modules-D.html">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.3/index-modules-E.html">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.3/index-modules-F.html">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.3/index-modules-G.html">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.3/index-modules-H.html">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.3/index-modules-I.html">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.3/index-modules-J.html">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.3/index-modules-K.html">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.3/index-modules-L.html">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.3/index-modules-M.html">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.3/index-modules-N.html">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.3/index-modules-O.html">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.3/index-modules-P.html">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.3/index-modules-Q.html">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.3/index-modules-R.html">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.3/index-modules-S.html">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.3/index-modules-T.html">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.3/index-modules-U.html">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.3/index-modules-V.html">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.3/index-modules-W.html">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.3/index-modules-X.html">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.3/index-modules-Y.html">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.3/index-modules-Z.html">Z</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown4" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Functions</a>
+                <div aria-labelledby="navbarDropdown4"
+                    class="dropdown-menu letters-wrap">
+                    <a class="dropdown-item"
+                        href="/5.30.3/index-functions.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.30.3/index-functions-by-cat.html">By
+                        Category</a>
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.30.3/index-functions.html#A">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.3/index-functions.html#B">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.3/index-functions.html#C">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.3/index-functions.html#D">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.3/index-functions.html#E">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.3/index-functions.html#F">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.3/index-functions.html#G">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.3/index-functions.html#H">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.3/index-functions.html#I">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.3/index-functions.html#J">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.3/index-functions.html#K">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.3/index-functions.html#L">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.3/index-functions.html#M">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.3/index-functions.html#N">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.3/index-functions.html#O">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.3/index-functions.html#P">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.3/index-functions.html#Q">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.3/index-functions.html#R">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.3/index-functions.html#S">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.3/index-functions.html#T">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.3/index-functions.html#U">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.3/index-functions.html#V">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.3/index-functions.html#W">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.3/index-functions.html#X">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.3/index-functions.html#Y">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.3/index-functions.html#Z">Z</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!--/.nav-collapse -->
+</nav>
+
+
+          <main class="row main-content pb-5 pt-5" id='content'>
+            <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+              <div class="row">
+                <div class="col-sm-12">
+                  <div id="breadcrumbs">
+                      
+    <a href="../../index.html">Home</a>&nbsp; &gt;
+    
+      
+        <a href="../../index-modules-A.html">Core modules (A)</a> &gt;
+      
+    
+    Archive::Tar::File
+  
+
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <article class="col-sm-12 content">
+                  <div class="documentation-wrapper">
+                    <div id="perl_version">
+                      <h7 class='page-title'> Perl 5 version 30.3
+                        documentation</h7>
+                    </div>
+                    <h1>Archive::Tar::File</h1>
+
+
+  <!--    -->
+<ul><li><a href="#NAME">NAME</a></li><li><a href="#SYNOPSIS">SYNOPSIS</a></li><li><a href="#DESCRIPTION">DESCRIPTION</a></li><ul><li><a href="#Accessors">Accessors</a></li></ul><li><a href="#Methods">Methods</a></li><ul><li><a href="#Archive%3a%3aTar%3a%3aFile-%3enew(-file-%3d%3e-%24path-)">Archive::Tar::File->new( file => $path )</a></li><li><a href="#Archive%3a%3aTar%3a%3aFile-%3enew(-data-%3d%3e-%24path%2c-%24data%2c-%24opt-)">Archive::Tar::File->new( data => $path, $data, $opt )</a></li><li><a href="#Archive%3a%3aTar%3a%3aFile-%3enew(-chunk-%3d%3e-%24chunk-)">Archive::Tar::File->new( chunk => $chunk )</a></li><li><a href="#%24bool-%3d-%24file-%3eextract(-%5b-%24alternative_name-%5d-)">$bool = $file->extract( [ $alternative_name ] )</a></li><li><a href="#%24path-%3d-%24file-%3efull_path">$path = $file->full_path</a></li><li><a href="#%24bool-%3d-%24file-%3evalidate">$bool = $file->validate</a></li><li><a href="#%24bool-%3d-%24file-%3ehas_content">$bool = $file->has_content</a></li><li><a href="#%24content-%3d-%24file-%3eget_content">$content = $file->get_content</a></li><li><a href="#%24cref-%3d-%24file-%3eget_content_by_ref">$cref = $file->get_content_by_ref</a></li><li><a href="#%24bool-%3d-%24file-%3ereplace_content(-%24content-)">$bool = $file->replace_content( $content )</a></li><li><a href="#%24bool-%3d-%24file-%3erename(-%24new_name-)">$bool = $file->rename( $new_name )</a></li><li><a href="#%24bool-%3d-%24file-%3echmod-%24mode)">$bool = $file->chmod $mode)</a></li><li><a href="#%24bool-%3d-%24file-%3echown(-%24user-%5b%2c-%24group%5d)">$bool = $file->chown( $user [, $group])</a></li></ul><li><a href="#Convenience-methods">Convenience methods</a></li></ul><a class='view-head1' id="NAME"></a><h2 class='h2' >NAME</h2>
+<p>Archive::Tar::File - a subclass for in-memory extracted file from Archive::Tar</p>
+<a class='view-head1' id="SYNOPSIS"></a><h2 class='h2' >SYNOPSIS</h2>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../../functions/my.html">my</a> <span class="i">@items</span> = <span class="i">$tar</span><span class="i">-&gt;get_files</span><span class="sc">;</span></li><li></li><li>    <a class="l_k" href="../../functions/print.html">print</a> <span class="i">$_</span><span class="i">-&gt;name</span><span class="cm">,</span> <span class="q">&#39; &#39;</span><span class="cm">,</span> <span class="i">$_</span><span class="i">-&gt;size</span><span class="cm">,</span> <span class="q">&quot;\n&quot;</span> <a class="l_k" href="../../functions/for.html">for</a> <span class="i">@items</span><span class="sc">;</span></li><li></li><li>    <a class="l_k" href="../../functions/print.html">print</a> <span class="i">$object</span><span class="i">-&gt;get_content</span><span class="sc">;</span></li><li>    <span class="i">$object</span><span class="i">-&gt;replace_content</span><span class="s">(</span><span class="q">&#39;new content&#39;</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>    <span class="i">$object</span><span class="i">-&gt;rename</span><span class="s">(</span> <span class="q">&#39;new/full/path/to/file.c&#39;</span> <span class="s">)</span><span class="sc">;</span></li></ol></pre><a class='view-head1' id="DESCRIPTION"></a><h2 class='h2' >DESCRIPTION</h2>
+<p>Archive::Tar::Files provides a neat little object layer for in-memory
+extracted files. It's mostly used internally in Archive::Tar to tidy
+up the code, but there's no reason users shouldn't use this API as
+well.</p>
+<a class='view-head2' id="Accessors"></a><h3 class='h3' >Accessors</h3>
+<p>A lot of the methods in this package are accessors to the various
+fields in the tar header:</p>
+<ul>
+<li><a class='view-title' id="name"></a><strong>name</strong>
+<p>The file's name</p>
+</li>
+<li><a class='view-title' id="mode"></a><strong>mode</strong>
+<p>The file's mode</p>
+</li>
+<li><a class='view-title' id="uid"></a><strong>uid</strong>
+<p>The user id owning the file</p>
+</li>
+<li><a class='view-title' id="gid"></a><strong>gid</strong>
+<p>The group id owning the file</p>
+</li>
+<li><a class='view-title' id="size"></a><strong>size</strong>
+<p>File size in bytes</p>
+</li>
+<li><a class='view-title' id="mtime"></a><strong>mtime</strong>
+<p>Modification time. Adjusted to mac-time on MacOS if required</p>
+</li>
+<li><a class='view-title' id="chksum"></a><strong>chksum</strong>
+<p>Checksum field for the tar header</p>
+</li>
+<li><a class='view-title' id="type"></a><strong>type</strong>
+<p>File type -- numeric, but comparable to exported constants -- see
+Archive::Tar's documentation</p>
+</li>
+<li><a class='view-title' id="linkname"></a><strong>linkname</strong>
+<p>If the file is a symlink, the file it's pointing to</p>
+</li>
+<li><a class='view-title' id="magic"></a><strong>magic</strong>
+<p>Tar magic string -- not useful for most users</p>
+</li>
+<li><a class='view-title' id="version"></a><strong>version</strong>
+<p>Tar version string -- not useful for most users</p>
+</li>
+<li><a class='view-title' id="uname"></a><strong>uname</strong>
+<p>The user name that owns the file</p>
+</li>
+<li><a class='view-title' id="gname"></a><strong>gname</strong>
+<p>The group name that owns the file</p>
+</li>
+<li><a class='view-title' id="devmajor"></a><strong>devmajor</strong>
+<p>Device major number in case of a special file</p>
+</li>
+<li><a class='view-title' id="devminor"></a><strong>devminor</strong>
+<p>Device minor number in case of a special file</p>
+</li>
+<li><a class='view-title' id="prefix"></a><strong>prefix</strong>
+<p>Any directory to prefix to the extraction path, if any</p>
+</li>
+<li><a class='view-title' id="raw"></a><strong>raw</strong>
+<p>Raw tar header -- not useful for most users</p>
+</li>
+</ul>
+<a class='view-head1' id="Methods"></a><h2 class='h2' >Methods</h2>
+<a class='view-head2' id="Archive%3a%3aTar%3a%3aFile-%3enew(-file-%3d%3e-%24path-)"></a><h3 class='h3' >Archive::Tar::File-&gt;new( file =&gt; $path )</h3>
+<p>Returns a new Archive::Tar::File object from an existing file.</p>
+<p>Returns undef on failure.</p>
+<a class='view-head2' id="Archive%3a%3aTar%3a%3aFile-%3enew(-data-%3d%3e-%24path%2c-%24data%2c-%24opt-)"></a><h3 class='h3' >Archive::Tar::File-&gt;new( data =&gt; $path, $data, $opt )</h3>
+<p>Returns a new Archive::Tar::File object from data.</p>
+<p><code class="inline"><span class="i">$path</span></code>
+ defines the file name (which need not exist), <code class="inline"><span class="i">$data</span></code>
+ the
+file contents, and <code class="inline"><span class="i">$opt</span></code>
+ is a reference to a hash of attributes
+which may be used to override the default attributes (fields in the
+tar header), which are described above in the Accessors section.</p>
+<p>Returns undef on failure.</p>
+<a class='view-head2' id="Archive%3a%3aTar%3a%3aFile-%3enew(-chunk-%3d%3e-%24chunk-)"></a><h3 class='h3' >Archive::Tar::File-&gt;new( chunk =&gt; $chunk )</h3>
+<p>Returns a new Archive::Tar::File object from a raw 512-byte tar
+archive chunk.</p>
+<p>Returns undef on failure.</p>
+<a class='view-head2' id="%24bool-%3d-%24file-%3eextract(-%5b-%24alternative_name-%5d-)"></a><h3 class='h3' >$bool = $file-&gt;extract( [ $alternative_name ] )</h3>
+<p>Extract this object, optionally to an alternative name.</p>
+<p>See <code class="inline"><span class="w">Archive::Tar</span><span class="w">-&gt;extract_file</span></code>
+ for details.</p>
+<p>Returns true on success and false on failure.</p>
+<a class='view-head2' id="%24path-%3d-%24file-%3efull_path"></a><h3 class='h3' >$path = $file-&gt;full_path</h3>
+<p>Returns the full path from the tar header; this is basically a
+concatenation of the <code class="inline"><span class="w">prefix</span></code>
+ and <code class="inline"><span class="w">name</span></code>
+ fields.</p>
+<a class='view-head2' id="%24bool-%3d-%24file-%3evalidate"></a><h3 class='h3' >$bool = $file-&gt;validate</h3>
+<p>Done by Archive::Tar internally when reading the tar file:
+validate the header against the checksum to ensure integer tar file.</p>
+<p>Returns true on success, false on failure</p>
+<a class='view-head2' id="%24bool-%3d-%24file-%3ehas_content"></a><h3 class='h3' >$bool = $file-&gt;has_content</h3>
+<p>Returns a boolean to indicate whether the current object has content.
+Some special files like directories and so on never will have any
+content. This method is mainly to make sure you don't get warnings
+for using uninitialized values when looking at an object's content.</p>
+<a class='view-head2' id="%24content-%3d-%24file-%3eget_content"></a><h3 class='h3' >$content = $file-&gt;get_content</h3>
+<p>Returns the current content for the in-memory file</p>
+<a class='view-head2' id="%24cref-%3d-%24file-%3eget_content_by_ref"></a><h3 class='h3' >$cref = $file-&gt;get_content_by_ref</h3>
+<p>Returns the current content for the in-memory file as a scalar
+reference. Normal users won't need this, but it will save memory if
+you are dealing with very large data files in your tar archive, since
+it will pass the contents by reference, rather than make a copy of it
+first.</p>
+<a class='view-head2' id="%24bool-%3d-%24file-%3ereplace_content(-%24content-)"></a><h3 class='h3' >$bool = $file-&gt;replace_content( $content )</h3>
+<p>Replace the current content of the file with the new content. This
+only affects the in-memory archive, not the on-disk version until
+you write it.</p>
+<p>Returns true on success, false on failure.</p>
+<a class='view-head2' id="%24bool-%3d-%24file-%3erename(-%24new_name-)"></a><h3 class='h3' >$bool = $file-&gt;rename( $new_name )</h3>
+<p>Rename the current file to $new_name.</p>
+<p>Note that you must specify a Unix path for $new_name, since per tar
+standard, all files in the archive must be Unix paths.</p>
+<p>Returns true on success and false on failure.</p>
+<a class='view-head2' id="%24bool-%3d-%24file-%3echmod-%24mode)"></a><h3 class='h3' >$bool = $file-&gt;chmod $mode)</h3>
+<p>Change mode of $file to $mode. The mode can be a string or a number
+which is interpreted as octal whether or not a leading 0 is given.</p>
+<p>Returns true on success and false on failure.</p>
+<a class='view-head2' id="%24bool-%3d-%24file-%3echown(-%24user-%5b%2c-%24group%5d)"></a><h3 class='h3' >$bool = $file-&gt;chown( $user [, $group])</h3>
+<p>Change owner of $file to $user. If a $group is given that is changed
+as well. You can also pass a single parameter with a colon separating the
+use and group as in 'root:wheel'.</p>
+<p>Returns true on success and false on failure.</p>
+<a class='view-head1' id="Convenience-methods"></a><h2 class='h2' >Convenience methods</h2>
+<p>To quickly check the type of a <code class="inline"><span class="w">Archive::Tar::File</span></code>
+ object, you can
+use the following methods:</p>
+<ul>
+<li><a class='view-title' id="%24file-%3eis_file"></a><strong>$file-&gt;is_file</strong>
+<p>Returns true if the file is of type <code class="inline"><span class="w">file</span></code>
+</p>
+</li>
+<li><a class='view-title' id="%24file-%3eis_dir"></a><strong>$file-&gt;is_dir</strong>
+<p>Returns true if the file is of type <code class="inline"><span class="w">dir</span></code>
+</p>
+</li>
+<li><a class='view-title' id="%24file-%3eis_hardlink"></a><strong>$file-&gt;is_hardlink</strong>
+<p>Returns true if the file is of type <code class="inline"><span class="w">hardlink</span></code>
+</p>
+</li>
+<li><a class='view-title' id="%24file-%3eis_symlink"></a><strong>$file-&gt;is_symlink</strong>
+<p>Returns true if the file is of type <code class="inline"><a class="l_k" href="../../functions/symlink.html">symlink</a></code></p>
+</li>
+<li><a class='view-title' id="%24file-%3eis_chardev"></a><strong>$file-&gt;is_chardev</strong>
+<p>Returns true if the file is of type <code class="inline"><span class="w">chardev</span></code>
+</p>
+</li>
+<li><a class='view-title' id="%24file-%3eis_blockdev"></a><strong>$file-&gt;is_blockdev</strong>
+<p>Returns true if the file is of type <code class="inline"><span class="w">blockdev</span></code>
+</p>
+</li>
+<li><a class='view-title' id="%24file-%3eis_fifo"></a><strong>$file-&gt;is_fifo</strong>
+<p>Returns true if the file is of type <code class="inline"><span class="w">fifo</span></code>
+</p>
+</li>
+<li><a class='view-title' id="%24file-%3eis_socket"></a><strong>$file-&gt;is_socket</strong>
+<p>Returns true if the file is of type <code class="inline"><a class="l_k" href="../../functions/socket.html">socket</a></code></p>
+</li>
+<li><a class='view-title' id="%24file-%3eis_longlink"></a><strong>$file-&gt;is_longlink</strong>
+<p>Returns true if the file is of type <code class="inline"><span class="w">LongLink</span></code>
+.
+Should not happen after a successful <code class="inline"><a class="l_k" href="../../functions/read.html">read</a></code>.</p>
+</li>
+<li><a class='view-title' id="%24file-%3eis_label"></a><strong>$file-&gt;is_label</strong>
+<p>Returns true if the file is of type <code class="inline"><span class="w">Label</span></code>
+.
+Should not happen after a successful <code class="inline"><a class="l_k" href="../../functions/read.html">read</a></code>.</p>
+</li>
+<li><a class='view-title' id="%24file-%3eis_unknown"></a><strong>$file-&gt;is_unknown</strong>
+<p>Returns true if the file type is <code class="inline"><span class="w">unknown</span></code>
+</p>
+</li>
+</ul>
+
+
+
+
+      <ul><li><a href="#NAME">NAME</a></li><li><a href="#SYNOPSIS">SYNOPSIS</a></li><li><a href="#DESCRIPTION">DESCRIPTION</a></li><ul><li><a href="#Accessors">Accessors</a></li></ul><li><a href="#Methods">Methods</a></li><ul><li><a href="#Archive%3a%3aTar%3a%3aFile-%3enew(-file-%3d%3e-%24path-)">Archive::Tar::File->new( file => $path )</a></li><li><a href="#Archive%3a%3aTar%3a%3aFile-%3enew(-data-%3d%3e-%24path%2c-%24data%2c-%24opt-)">Archive::Tar::File->new( data => $path, $data, $opt )</a></li><li><a href="#Archive%3a%3aTar%3a%3aFile-%3enew(-chunk-%3d%3e-%24chunk-)">Archive::Tar::File->new( chunk => $chunk )</a></li><li><a href="#%24bool-%3d-%24file-%3eextract(-%5b-%24alternative_name-%5d-)">$bool = $file->extract( [ $alternative_name ] )</a></li><li><a href="#%24path-%3d-%24file-%3efull_path">$path = $file->full_path</a></li><li><a href="#%24bool-%3d-%24file-%3evalidate">$bool = $file->validate</a></li><li><a href="#%24bool-%3d-%24file-%3ehas_content">$bool = $file->has_content</a></li><li><a href="#%24content-%3d-%24file-%3eget_content">$content = $file->get_content</a></li><li><a href="#%24cref-%3d-%24file-%3eget_content_by_ref">$cref = $file->get_content_by_ref</a></li><li><a href="#%24bool-%3d-%24file-%3ereplace_content(-%24content-)">$bool = $file->replace_content( $content )</a></li><li><a href="#%24bool-%3d-%24file-%3erename(-%24new_name-)">$bool = $file->rename( $new_name )</a></li><li><a href="#%24bool-%3d-%24file-%3echmod-%24mode)">$bool = $file->chmod $mode)</a></li><li><a href="#%24bool-%3d-%24file-%3echown(-%24user-%5b%2c-%24group%5d)">$bool = $file->chown( $user [, $group])</a></li></ul><li><a href="#Convenience-methods">Convenience methods</a></li></ul>
+
+
+                  </div>
+                </article>
+              </div>
+            </div>
+          </main>
+        </div>
+           <footer class="footer row bg-light pt-5 pb-5">
+       <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+           <div class="row">
+               <div class="col-md-4">
+                   <ul class="list-unstyled">
+                       <li>
+                           <h4>Site info</h4>
+                       </li>
+                       <li>Docs mantained by
+                           <a href="//lists.perl.org/list/perl5-porters.html"
+                               rel="noopener">Perl 5 Porters</a>
+                       </li>
+                       <li>Perldoc site development sponsored by
+                           <a href="//opusvl.com" rel="noopener">
+                           <img style="margin: 20px 20px 5px 10px" class="opus-logo" src="/public/img/opusvl_logo.svg" alt="OpusVL Logo">
+                        </a>
+                    <li><span class="about_perldoc"><a href="//about.html">About PerlDOC</a></span>
+                    </li>
+                       </li>
+                   </ul>
+               </div>
+               <div class="col-md-8">
+                   <div class="row">
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Manuals</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.30.3/index-overview.html">Overview</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.30.3/index-tutorials.html">Tutorials</a>
+                               </li>
+                               <li>
+                                   <a href="/5.30.3/index-faq.html">FAQs</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.30.3/index-history.html">Changes</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Reference</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.30.3/index-language.html">Language</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.30.3/index-functions.html">Functions</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.30.3/perlop.html">Operators</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.30.3/perlvar.html">Variables</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Modules</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.30.3/index-modules-A.html">Modules</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.30.3/index-pragmas.html">Pragmas</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.30.3/index-utilities.html">Utilities</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Misc</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.30.3/index-licence.html">License</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.30.3/index-internals.html">Internals</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.30.3/index-platforms.html">Platforms</a>
+                               </li>
+                            <li>
+                                <a
+                                    href="/5.30.3/index-about.html">About</a>
+                            </li>
+                           </ul>
+                       </div>
+                   </div>
+               </div>
+               <div class=" col-12 footer-inf text-center">
+                   <small>perldoc.perl.org - Official documentation for the Perl
+                       programming language</small>
+               </div>
+           </div>
+       </div>
+   </footer>
+
+        	<div class="beta-wrapper beta-bottom-right ">
+		<div class="beta beta-blue  ">
+			<a class="beta-link "
+				href="//github.com/OpusVL/perldoc.perl.org/issues/new" rel="noopener">
+				<span class="beta-text">
+					This website is a Beta release.
+				</span>
+				<span class="beta-text">
+					For any issues please raise a ticket on GitHub
+				</span>
+			</a>
+		</div>
+	</div>
+
+        <script src="/public/js/main.min.js"></script>
+      </body>
+
+      </html>

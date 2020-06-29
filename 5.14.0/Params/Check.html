@@ -1,0 +1,914 @@
+      
+      
+      
+      
+
+      <!DOCTYPE html>
+      <html lang="en">
+
+      <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Params::Check - perldoc.perl.org">
+        <link rel="icon" href="/public/img/favicon.ico">
+        <title>Params::Check - perldoc.perl.org</title>
+        <link href="/public/css/main.min.css" rel="stylesheet">
+        <link rel="canonical" href="/Params/Check.html">
+        <link
+          href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900'
+          rel='stylesheet' type='text/css'>
+        <script>
+          window.ga = window.ga || function () {
+            (ga.q = ga.q || []).push(arguments)
+          };
+          ga.l = +new Date;
+          ga('create', 'UA-1892152-2', 'auto'); // JJ's account
+          ga('create', 'UA-50555-3', 'auto', 'perlOrg'); // perl.org account
+          ga('require', 'outboundLinkTracker', {
+            events: ['click', 'auxclick', 'contextmenu'],
+          });
+          ga('require', 'maxScrollTracker');
+          ga('send', 'pageview');
+          ga('perlOrg.send', 'pageview');
+        </script>
+        <script async src="https://www.google-analytics.com/analytics.js">
+        </script>
+        <script async src="/public/js/tracking.min.js"></script>
+      </head>
+
+      <body class="body container-fluid ">
+        <div class="wrapper">
+
+          <nav
+    class="navbar navbar-dark bg-primary bg-perl fixed-top justify-content-between navbar-expand-lg">
+    <a href="#content" class="skippy sr-only sr-only-focusable">
+        <span class=' skippy-text'>Skip to main content</span>
+    </a>
+    <a class="navbar-brand" href="/">
+        <img class="logo" src="/public/img/logo_perl_doc.svg"
+            alt="Perl Documentation Logo" />
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse"
+        data-target="#navbar" aria-controls="navbar" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="navbar" class="collapse navbar-collapse ">
+        <ul class="navbar-nav ml-auto navbar-right">
+            <form class="nav-item dropdown search-wrapper">
+                <input type="text" id='searchinput' aria-describedby='navbarDropdown5'
+                    placeholder="Type query" class='search-input-field' value=''>
+
+                <button href="#" data-toggle='dropdown' type="button"
+                    aria-haspopup="true" aria-expanded='false' id="navbarDropdown5"
+                    class="nav-link dropdown-toggle search-link">
+                    <object tabindex='-1' focusable="false" class='search-icon'
+                        data="/public/img/search.svg" type="image/svg+xml"
+                        name='search icon'>search
+                        icon</object>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown5"
+                    id='search-results'>
+                    <p class='dropdown-item major-version'>
+                        No results
+                    </p>
+                </div>
+            </form>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown" href="#" class="nav-link dropdown-toggle"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Perl versions</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    
+                        <p class='dropdown-item major-version'>
+                            5.32
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.32.0/">5.32.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.30
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.3/">5.30.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.2/">5.30.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.1/">5.30.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.0/">5.30.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.28
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.3/">5.28.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.2/">5.28.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.1/">5.28.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.0/">5.28.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.26
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.3/">5.26.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.2/">5.26.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.1/">5.26.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.0/">5.26.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.24
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.4/">5.24.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.3/">5.24.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.2/">5.24.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.1/">5.24.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.0/">5.24.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.22
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.4/">5.22.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.3/">5.22.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.2/">5.22.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.1/">5.22.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.0/">5.22.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.20
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.3/">5.20.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.2/">5.20.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.1/">5.20.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.0/">5.20.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.18
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.4/">5.18.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.3/">5.18.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.2/">5.18.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.1/">5.18.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.0/">5.18.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.16
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.3/">5.16.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.2/">5.16.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.1/">5.16.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.0/">5.16.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.14
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.4/">5.14.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.3/">5.14.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.2/">5.14.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.1/">5.14.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.0/">5.14.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.12
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.5/">5.12.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.4/">5.12.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.3/">5.12.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.2/">5.12.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.1/">5.12.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.0/">5.12.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.10
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.1/">5.10.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.0/">5.10.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.8
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.9/">5.8.9</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.8/">5.8.8</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.7/">5.8.7</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.6/">5.8.6</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.5/">5.8.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.4/">5.8.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.3/">5.8.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.2/">5.8.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.1/">5.8.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.0/">5.8.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.6
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.2/">5.6.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.1/">5.6.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.0/">5.6.0</a>
+                        
+                        
+                    
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown1" href="#" class="dropdown-toggle nav-link"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Manuals</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                    <a class="dropdown-item"
+                        href="/5.14.0/index-overview.html">Overview</a>
+                    <a class="dropdown-item"
+                        href="/5.14.0/index-tutorials.html">Tutorials</a>
+                    <a class="dropdown-item"
+                        href="/5.14.0/index-faq.html">FAQs</a>
+                    <a class="dropdown-item"
+                        href="/5.14.0/index-history.html">Changes</a>
+                    <a class="dropdown-item"
+                        href="/5.14.0/index-licence.html">License</a>
+                    <a class="dropdown-item"
+                        href="/5.14.0/index-language.html">Language</a>
+                    <a class="dropdown-item"
+                        href="/5.14.0/index-functions.html">Functions</a>
+                    <a class="dropdown-item"
+                        href="/5.14.0/perlop.html">Operators</a>
+                    <a class="dropdown-item"
+                        href="/5.14.0/perlvar.html">Variables</a>
+                    <a class="dropdown-item"
+                        href="/5.14.0/index-pragmas.html">Pragmas</a>
+                    <a class="dropdown-item"
+                        href="/5.14.0/index-utilities.html">Utilities</a>
+                    <a class="dropdown-item"
+                        href="/5.14.0/index-internals.html">Internals</a>
+                    <a class="dropdown-item"
+                        href="/5.14.0/index-platforms.html">Platforms</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown3" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Modules</a>
+                <div aria-labelledby="navbarDropdown3"
+                    class="dropdown-menu letters-wrap">
+                    <!--<a class="dropdown-item"
+                        href="/5.14.0/index-modules.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.14.0/index-modules-by-cat.html">By
+                        Category</a>-->
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-modules-A.html">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-modules-B.html">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-modules-C.html">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-modules-D.html">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-modules-E.html">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-modules-F.html">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-modules-G.html">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-modules-H.html">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-modules-I.html">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-modules-J.html">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-modules-K.html">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-modules-L.html">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-modules-M.html">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-modules-N.html">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-modules-O.html">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-modules-P.html">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-modules-Q.html">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-modules-R.html">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-modules-S.html">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-modules-T.html">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-modules-U.html">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-modules-V.html">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-modules-W.html">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-modules-X.html">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-modules-Y.html">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-modules-Z.html">Z</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown4" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Functions</a>
+                <div aria-labelledby="navbarDropdown4"
+                    class="dropdown-menu letters-wrap">
+                    <a class="dropdown-item"
+                        href="/5.14.0/index-functions.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.14.0/index-functions-by-cat.html">By
+                        Category</a>
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-functions.html#A">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-functions.html#B">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-functions.html#C">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-functions.html#D">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-functions.html#E">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-functions.html#F">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-functions.html#G">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-functions.html#H">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-functions.html#I">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-functions.html#J">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-functions.html#K">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-functions.html#L">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-functions.html#M">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-functions.html#N">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-functions.html#O">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-functions.html#P">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-functions.html#Q">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-functions.html#R">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-functions.html#S">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-functions.html#T">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-functions.html#U">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-functions.html#V">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-functions.html#W">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-functions.html#X">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-functions.html#Y">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-functions.html#Z">Z</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!--/.nav-collapse -->
+</nav>
+
+
+          <main class="row main-content pb-5 pt-5" id='content'>
+            <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+              <div class="row">
+                <div class="col-sm-12">
+                  <div id="breadcrumbs">
+                      
+    <a href="../index.html">Home</a>&nbsp; &gt;
+    
+      
+        <a href="../index-modules-P.html">Core modules (P)</a> &gt;
+      
+    
+    Params::Check
+  
+
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <article class="col-sm-12 content">
+                  <div class="documentation-wrapper">
+                    <div id="perl_version">
+                      <h7 class='page-title'> Perl 5 version 14.0
+                        documentation</h7>
+                    </div>
+                    <h1>Params::Check</h1>
+
+
+  <!--    -->
+<ul><li><a href="#NAME">NAME</a></li><li><a href="#SYNOPSIS">SYNOPSIS</a></li><li><a href="#DESCRIPTION">DESCRIPTION</a></li><li><a href="#Template">Template</a></li><li><a href="#Functions">Functions</a></li><ul><li><a href="#check(-%5c%25tmpl%2c-%5c%25args%2c-%5b%24verbose%5d-)%3b">check( \%tmpl, \%args, [$verbose] );</a></li><li><a href="#allow(-%24test_me%2c-%5c%40criteria-)%3b">allow( $test_me, \@criteria );</a></li><li><a href="#last_error()">last_error()</a></li></ul><li><a href="#Global-Variables">Global Variables</a></li><ul><li><a href="#%24Params%3a%3aCheck%3a%3aVERBOSE">$Params::Check::VERBOSE</a></li><li><a href="#%24Params%3a%3aCheck%3a%3aSTRICT_TYPE">$Params::Check::STRICT_TYPE</a></li><li><a href="#%24Params%3a%3aCheck%3a%3aALLOW_UNKNOWN">$Params::Check::ALLOW_UNKNOWN</a></li><li><a href="#%24Params%3a%3aCheck%3a%3aSTRIP_LEADING_DASHES">$Params::Check::STRIP_LEADING_DASHES</a></li><li><a href="#%24Params%3a%3aCheck%3a%3aNO_DUPLICATES">$Params::Check::NO_DUPLICATES</a></li><li><a href="#%24Params%3a%3aCheck%3a%3aPRESERVE_CASE">$Params::Check::PRESERVE_CASE</a></li><li><a href="#%24Params%3a%3aCheck%3a%3aONLY_ALLOW_DEFINED">$Params::Check::ONLY_ALLOW_DEFINED</a></li><li><a href="#%24Params%3a%3aCheck%3a%3aSANITY_CHECK_TEMPLATE">$Params::Check::SANITY_CHECK_TEMPLATE</a></li><li><a href="#%24Params%3a%3aCheck%3a%3aWARNINGS_FATAL">$Params::Check::WARNINGS_FATAL</a></li><li><a href="#%24Params%3a%3aCheck%3a%3aCALLER_DEPTH">$Params::Check::CALLER_DEPTH</a></li></ul><li><a href="#Acknowledgements">Acknowledgements</a></li><li><a href="#BUG-REPORTS">BUG REPORTS</a></li><li><a href="#AUTHOR">AUTHOR</a></li><li><a href="#COPYRIGHT">COPYRIGHT</a></li></ul><a class='view-head1' id="NAME"></a><h2 class='h2' >NAME</h2>
+<p>Params::Check - A generic input parsing/checking mechanism.</p>
+<a class='view-head1' id="SYNOPSIS"></a><h2 class='h2' >SYNOPSIS</h2>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">Params::Check</span> <span class="q">qw[check allow last_error]</span><span class="sc">;</span></li><li></li><li><a name="fill_personal_info"></a>    sub <span class="m">fill_personal_info</span> <span class="s">{</span></li><li>        <a class="l_k" href="../functions/my.html">my</a> <span class="i">%hash</span> = <span class="i">@_</span><span class="sc">;</span></li><li>        <a class="l_k" href="../functions/my.html">my</a> <span class="i">$x</span><span class="sc">;</span></li><li></li><li>        <a class="l_k" href="../functions/my.html">my</a> <span class="i">$tmpl</span> = <span class="s">{</span></li><li>            <span class="w">firstname</span>   <span class="cm">=&gt;</span> <span class="s">{</span> <span class="w">required</span>   <span class="cm">=&gt;</span> <span class="n">1</span><span class="cm">,</span> <span class="w">defined</span> <span class="cm">=&gt;</span> <span class="n">1</span> <span class="s">}</span><span class="cm">,</span></li><li>            <span class="w">lastname</span>    <span class="cm">=&gt;</span> <span class="s">{</span> <span class="w">required</span>   <span class="cm">=&gt;</span> <span class="n">1</span><span class="cm">,</span> <span class="w">store</span> <span class="cm">=&gt;</span> \<span class="i">$x</span> <span class="s">}</span><span class="cm">,</span></li><li>            <span class="w">gender</span>      <span class="cm">=&gt;</span> <span class="s">{</span> <span class="w">required</span>   <span class="cm">=&gt;</span> <span class="n">1</span><span class="cm">,</span></li><li>                             <span class="w">allow</span>      <span class="cm">=&gt;</span> <span class="s">[</span><span class="q">qr/M/i</span><span class="cm">,</span> <span class="q">qr/F/i</span><span class="s">]</span><span class="cm">,</span></li><li>                           <span class="s">}</span><span class="cm">,</span></li><li>            <span class="w">married</span>     <span class="cm">=&gt;</span> <span class="s">{</span> <span class="w">allow</span>      <span class="cm">=&gt;</span> <span class="s">[</span><span class="n">0</span><span class="cm">,</span><span class="n">1</span><span class="s">]</span> <span class="s">}</span><span class="cm">,</span></li><li>            <span class="w">age</span>         <span class="cm">=&gt;</span> <span class="s">{</span> <span class="w">default</span>    <span class="cm">=&gt;</span> <span class="n">21</span><span class="cm">,</span></li><li>                             <span class="w">allow</span>      <span class="cm">=&gt;</span> <span class="q">qr/^\d+$/</span><span class="cm">,</span></li><li>                           <span class="s">}</span><span class="cm">,</span></li><li></li><li>            <span class="w">phone</span>       <span class="cm">=&gt;</span> <span class="s">{</span> <span class="w">allow</span> <span class="cm">=&gt;</span> <span class="s">[</span> <a class="l_k" href="../functions/sub.html">sub</a> <span class="s">{</span> <a class="l_k" href="../functions/return.html">return</a> <span class="n">1</span> if <span class="q">/$valid_re/</span> <span class="s">}</span><span class="cm">,</span></li><li>                                        <span class="q">&#39;1-800-PERL&#39;</span> <span class="s">]</span></li><li>                           <span class="s">}</span><span class="cm">,</span></li><li>            <span class="w">id_list</span>     <span class="cm">=&gt;</span> <span class="s">{</span> <span class="w">default</span>        <span class="cm">=&gt;</span> <span class="s">[</span><span class="s">]</span><span class="cm">,</span></li><li>                             <span class="w">strict_type</span>    <span class="cm">=&gt;</span> <span class="n">1</span></li><li>                           <span class="s">}</span><span class="cm">,</span></li><li>            <span class="w">employer</span>    <span class="cm">=&gt;</span> <span class="s">{</span> <span class="w">default</span> <span class="cm">=&gt;</span> <span class="q">&#39;NSA&#39;</span><span class="cm">,</span> <span class="w">no_override</span> <span class="cm">=&gt;</span> <span class="n">1</span> <span class="s">}</span><span class="cm">,</span></li><li>        <span class="s">}</span><span class="sc">;</span></li><li></li><li>        <span class="c">### check() returns a hashref of parsed args on success ###</span></li><li>        <a class="l_k" href="../functions/my.html">my</a> <span class="i">$parsed_args</span> = <span class="i">check</span><span class="s">(</span> <span class="i">$tmpl</span><span class="cm">,</span> \<span class="i">%hash</span><span class="cm">,</span> <span class="i">$VERBOSE</span> <span class="s">)</span></li><li>                            or <a class="l_k" href="../functions/die.html">die</a> <span class="q">qw[Could not parse arguments!]</span><span class="sc">;</span></li><li></li><li>        ... <span class="w">other</span> <span class="w">code</span> <span class="w">here</span> ...</li><li>    <span class="s">}</span></li><li></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">$ok</span> = <span class="i">allow</span><span class="s">(</span> <span class="i">$colour</span><span class="cm">,</span> <span class="s">[</span><span class="q">qw|blue green yellow|</span><span class="s">]</span> <span class="s">)</span><span class="sc">;</span></li><li></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">$error</span> = <span class="i">Params::Check::last_error</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><a class='view-head1' id="DESCRIPTION"></a><h2 class='h2' >DESCRIPTION</h2>
+<p>Params::Check is a generic input parsing/checking mechanism.</p>
+<p>It allows you to validate input via a template. The only requirement
+is that the arguments must be named.</p>
+<p>Params::Check can do the following things for you:</p>
+<ul>
+<li>
+<p>Convert all keys to lowercase</p>
+</li>
+<li>
+<p>Check if all required arguments have been provided</p>
+</li>
+<li>
+<p>Set arguments that have not been provided to the default</p>
+</li>
+<li>
+<p>Weed out arguments that are not supported and warn about them to the
+user</p>
+</li>
+<li>
+<p>Validate the arguments given by the user based on strings, regexes,
+lists or even subroutines</p>
+</li>
+<li>
+<p>Enforce type integrity if required</p>
+</li>
+</ul>
+<p>Most of Params::Check's power comes from its template, which we'll
+discuss below:</p>
+<a class='view-head1' id="Template"></a><h2 class='h2' >Template</h2>
+<p>As you can see in the synopsis, based on your template, the arguments
+provided will be validated.</p>
+<p>The template can take a different set of rules per key that is used.</p>
+<p>The following rules are available:</p>
+<ul>
+<li><a class='view-title' id="default"></a><strong>default</strong>
+<p>This is the default value if none was provided by the user.
+This is also the type <code class="inline"><span class="w">strict_type</span></code>
+ will look at when checking type
+integrity (see below).</p>
+</li>
+<li><a class='view-title' id="required"></a><strong>required</strong>
+<p>A boolean flag that indicates if this argument was a required
+argument. If marked as required and not provided, check() will fail.</p>
+</li>
+<li><a class='view-title' id="strict_type"></a><strong>strict_type</strong>
+<p>This does a <code class="inline"><a class="l_k" href="../functions/ref.html">ref()</a></code> check on the argument provided. The <code class="inline"><a class="l_k" href="../functions/ref.html">ref</a></code> of the
+argument must be the same as the <code class="inline"><a class="l_k" href="../functions/ref.html">ref</a></code> of the default value for this
+check to pass.</p>
+<p>This is very useful if you insist on taking an array reference as
+argument for example.</p>
+</li>
+<li><a class='view-title' id="defined"></a><strong>defined</strong>
+<p>If this template key is true, enforces that if this key is provided by
+user input, its value is <code class="inline"><a class="l_k" href="../functions/defined.html">defined</a></code>. This just means that the user is
+not allowed to pass <code class="inline"><a class="l_k" href="../functions/undef.html">undef</a></code> as a value for this key and is equivalent
+to:
+    allow =&gt; sub { defined $_[0] &amp;&amp; OTHER TESTS }</p>
+</li>
+<li><a class='view-title' id="no_override"></a><strong>no_override</strong>
+<p>This allows you to specify <code class="inline"><span class="w">constants</span></code>
+ in your template. ie, they
+keys that are not allowed to be altered by the user. It pretty much
+allows you to keep all your <code class="inline"><span class="w">configurable</span></code>
+ data in one place; the
+<code class="inline"><span class="w">Params::Check</span></code>
+ template.</p>
+</li>
+<li><a class='view-title' id="store"></a><strong>store</strong>
+<p>This allows you to pass a reference to a scalar, in which the data
+will be stored:</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">$x</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">$args</span> = <span class="i">check</span><span class="s">(</span><span class="w">foo</span> <span class="cm">=&gt;</span> <span class="s">{</span> <span class="w">default</span> <span class="cm">=&gt;</span> <span class="n">1</span><span class="cm">,</span> <span class="w">store</span> <span class="cm">=&gt;</span> \<span class="i">$x</span> <span class="s">}</span><span class="cm">,</span> <span class="i">$input</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>This is basically shorthand for saying:</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">$args</span> = <span class="i">check</span><span class="s">(</span> <span class="s">{</span> <span class="w">foo</span> <span class="cm">=&gt;</span> <span class="s">{</span> <span class="w">default</span> <span class="cm">=&gt;</span> <span class="n">1</span> <span class="s">}</span><span class="cm">,</span> <span class="i">$input</span> <span class="s">)</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">$x</span>    = <span class="i">$args</span>-&gt;{<span class="w">foo</span>}<span class="sc">;</span></li></ol></pre><p>You can alter the global variable $Params::Check::NO_DUPLICATES to
+control whether the <code class="inline"><span class="w">store</span></code>
+'d key will still be present in your
+result set. See the <a href="#Global-Variables">Global Variables</a> section below.</p>
+</li>
+<li><a class='view-title' id="allow"></a><strong>allow</strong>
+<p>A set of criteria used to validate a particular piece of data if it
+has to adhere to particular rules.</p>
+<p>See the <code class="inline"><span class="i">allow</span><span class="s">(</span><span class="s">)</span></code>
+ function for details.</p>
+</li>
+</ul>
+<a class='view-head1' id="Functions"></a><h2 class='h2' >Functions</h2>
+<a class='view-head2' id="check(-%5c%25tmpl%2c-%5c%25args%2c-%5b%24verbose%5d-)%3b"></a><h3 class='h3' >check( \%tmpl, \%args, [$verbose] );</h3>
+<p>This function is not exported by default, so you'll have to ask for it
+via:</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">Params::Check</span> <span class="q">qw[check]</span><span class="sc">;</span></li></ol></pre><p>or use its fully qualified name instead.</p>
+<p><code class="inline"><span class="w">check</span></code>
+ takes a list of arguments, as follows:</p>
+<ul>
+<li><a class='view-title' id="Template"></a><strong>Template</strong>
+<p>This is a hashreference which contains a template as explained in the
+<code class="inline"><span class="w">SYNOPSIS</span></code>
+ and <code class="inline"><span class="w">Template</span></code>
+ section.</p>
+</li>
+<li><a class='view-title' id="Arguments"></a><strong>Arguments</strong>
+<p>This is a reference to a hash of named arguments which need checking.</p>
+</li>
+<li><a class='view-title' id="Verbose"></a><strong>Verbose</strong>
+<p>A boolean to indicate whether <code class="inline"><span class="w">check</span></code>
+ should be verbose and warn
+about what went wrong in a check or not.</p>
+<p>You can enable this program wide by setting the package variable
+<code class="inline"><span class="i">$Params::Check::VERBOSE</span></code>
+ to a true value. For details, see the
+section on <code class="inline"><span class="w">Global</span> <span class="w">Variables</span></code>
+ below.</p>
+</li>
+</ul>
+<p><code class="inline"><span class="w">check</span></code>
+ will return when it fails, or a hashref with lowercase
+keys of parsed arguments when it succeeds.</p>
+<p>So a typical call to check would look like this:</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">$parsed</span> = <span class="i">check</span><span class="s">(</span> \<span class="i">%template</span><span class="cm">,</span> \<span class="i">%arguments</span><span class="cm">,</span> <span class="i">$VERBOSE</span> <span class="s">)</span></li><li>                    or <a class="l_k" href="../functions/warn.html">warn</a> <span class="q">q[Arguments could not be parsed!]</span><span class="sc">;</span></li></ol></pre><p>A lot of the behaviour of <code class="inline"><span class="i">check</span><span class="s">(</span><span class="s">)</span></code>
+ can be altered by setting
+package variables. See the section on <code class="inline"><span class="w">Global</span> <span class="w">Variables</span></code>
+ for details
+on this.</p>
+<a class='view-head2' id="allow(-%24test_me%2c-%5c%40criteria-)%3b"></a><h3 class='h3' >allow( $test_me, \@criteria );</h3>
+<p>The function that handles the <code class="inline"><span class="w">allow</span></code>
+ key in the template is also
+available for independent use.</p>
+<p>The function takes as first argument a key to test against, and
+as second argument any form of criteria that are also allowed by
+the <code class="inline"><span class="w">allow</span></code>
+ key in the template.</p>
+<p>You can use the following types of values for allow:</p>
+<ul>
+<li><a class='view-title' id="string"></a><strong>string</strong>
+<p>The provided argument MUST be equal to the string for the validation
+to pass.</p>
+</li>
+<li><a class='view-title' id="regexp"></a><strong>regexp</strong>
+<p>The provided argument MUST match the regular expression for the
+validation to pass.</p>
+</li>
+<li><a class='view-title' id="subroutine"></a><strong>subroutine</strong>
+<p>The provided subroutine MUST return true in order for the validation
+to pass and the argument accepted.</p>
+<p>(This is particularly useful for more complicated data).</p>
+</li>
+<li><a class='view-title' id="array-ref"></a><strong>array ref</strong>
+<p>The provided argument MUST equal one of the elements of the array
+ref for the validation to pass. An array ref can hold all the above
+values.</p>
+</li>
+</ul>
+<p>It returns true if the key matched the criteria, or false otherwise.</p>
+<a class='view-head2' id="last_error()"></a><h3 class='h3' >last_error()</h3>
+<p>Returns a string containing all warnings and errors reported during
+the last time <code class="inline"><span class="w">check</span></code>
+ was called.</p>
+<p>This is useful if you want to report then some other way than
+<code class="inline"><span class="w">carp</span></code>
+'ing when the verbose flag is on.</p>
+<p>It is exported upon request.</p>
+<a class='view-head1' id="Global-Variables"></a><h2 class='h2' >Global Variables</h2>
+<p>The behaviour of Params::Check can be altered by changing the
+following global variables:</p>
+<a class='view-head2' id="%24Params%3a%3aCheck%3a%3aVERBOSE"></a><h3 class='h3' >$Params::Check::VERBOSE</h3>
+<p>This controls whether Params::Check will issue warnings and
+explanations as to why certain things may have failed.
+If you set it to 0, Params::Check will not output any warnings.</p>
+<p>The default is 1 when <a href="../warnings.html">warnings</a> are enabled, 0 otherwise;</p>
+<a class='view-head2' id="%24Params%3a%3aCheck%3a%3aSTRICT_TYPE"></a><h3 class='h3' >$Params::Check::STRICT_TYPE</h3>
+<p>This works like the <code class="inline"><span class="w">strict_type</span></code>
+ option you can pass to <code class="inline"><span class="w">check</span></code>
+,
+which will turn on <code class="inline"><span class="w">strict_type</span></code>
+ globally for all calls to <code class="inline"><span class="w">check</span></code>
+.</p>
+<p>The default is 0;</p>
+<a class='view-head2' id="%24Params%3a%3aCheck%3a%3aALLOW_UNKNOWN"></a><h3 class='h3' >$Params::Check::ALLOW_UNKNOWN</h3>
+<p>If you set this flag, unknown options will still be present in the
+return value, rather than filtered out. This is useful if your
+subroutine is only interested in a few arguments, and wants to pass
+the rest on blindly to perhaps another subroutine.</p>
+<p>The default is 0;</p>
+<a class='view-head2' id="%24Params%3a%3aCheck%3a%3aSTRIP_LEADING_DASHES"></a><h3 class='h3' >$Params::Check::STRIP_LEADING_DASHES</h3>
+<p>If you set this flag, all keys passed in the following manner:</p>
+<pre class="verbatim"><ol><li>    <span class="i">function</span><span class="s">(</span> -<span class="w">key</span> <span class="cm">=&gt;</span> <span class="q">&#39;val&#39;</span> <span class="s">)</span><span class="sc">;</span></li></ol></pre><p>will have their leading dashes stripped.</p>
+<a class='view-head2' id="%24Params%3a%3aCheck%3a%3aNO_DUPLICATES"></a><h3 class='h3' >$Params::Check::NO_DUPLICATES</h3>
+<p>If set to true, all keys in the template that are marked as to be
+stored in a scalar, will also be removed from the result set.</p>
+<p>Default is false, meaning that when you use <code class="inline"><span class="w">store</span></code>
+ as a template
+key, <code class="inline"><span class="w">check</span></code>
+ will put it both in the scalar you supplied, as well as
+in the hashref it returns.</p>
+<a class='view-head2' id="%24Params%3a%3aCheck%3a%3aPRESERVE_CASE"></a><h3 class='h3' >$Params::Check::PRESERVE_CASE</h3>
+<p>If set to true, <a href="../Params/Check.html">Params::Check</a> will no longer convert all keys from
+the user input to lowercase, but instead expect them to be in the
+case the template provided. This is useful when you want to use
+similar keys with different casing in your templates.</p>
+<p>Understand that this removes the case-insensitivity feature of this
+module.</p>
+<p>Default is 0;</p>
+<a class='view-head2' id="%24Params%3a%3aCheck%3a%3aONLY_ALLOW_DEFINED"></a><h3 class='h3' >$Params::Check::ONLY_ALLOW_DEFINED</h3>
+<p>If set to true, <a href="../Params/Check.html">Params::Check</a> will require all values passed to be
+<code class="inline"><a class="l_k" href="../functions/defined.html">defined</a></code>. If you wish to enable this on a 'per key' basis, use the
+template option <code class="inline"><a class="l_k" href="../functions/defined.html">defined</a></code> instead.</p>
+<p>Default is 0;</p>
+<a class='view-head2' id="%24Params%3a%3aCheck%3a%3aSANITY_CHECK_TEMPLATE"></a><h3 class='h3' >$Params::Check::SANITY_CHECK_TEMPLATE</h3>
+<p>If set to true, <a href="../Params/Check.html">Params::Check</a> will sanity check templates, validating
+for errors and unknown keys. Although very useful for debugging, this
+can be somewhat slow in hot-code and large loops.</p>
+<p>To disable this check, set this variable to <code class="inline"><span class="w">false</span></code>
+.</p>
+<p>Default is 1;</p>
+<a class='view-head2' id="%24Params%3a%3aCheck%3a%3aWARNINGS_FATAL"></a><h3 class='h3' >$Params::Check::WARNINGS_FATAL</h3>
+<p>If set to true, <a href="../Params/Check.html">Params::Check</a> will <code class="inline"><span class="w">croak</span></code>
+ when an error during 
+template validation occurs, rather than return <code class="inline"><span class="w">false</span></code>
+.</p>
+<p>Default is 0;</p>
+<a class='view-head2' id="%24Params%3a%3aCheck%3a%3aCALLER_DEPTH"></a><h3 class='h3' >$Params::Check::CALLER_DEPTH</h3>
+<p>This global modifies the argument given to <code class="inline"><a class="l_k" href="../functions/caller.html">caller()</a></code> by
+<code class="inline"><span class="i">Params::Check::check</span><span class="s">(</span><span class="s">)</span></code>
+ and is useful if you have a custom wrapper
+function around <code class="inline"><span class="i">Params::Check::check</span><span class="s">(</span><span class="s">)</span></code>
+. The value must be an
+integer, indicating the number of wrapper functions inserted between
+the real function call and <code class="inline"><span class="i">Params::Check::check</span><span class="s">(</span><span class="s">)</span></code>
+.</p>
+<p>Example wrapper function, using a custom stacktrace:</p>
+<pre class="verbatim"><ol><li><a name="check"></a>    sub <span class="m">check</span> <span class="s">{</span></li><li>        <a class="l_k" href="../functions/my.html">my</a> <span class="s">(</span><span class="i">$template</span><span class="cm">,</span> <span class="i">$args_in</span><span class="s">)</span> = <span class="i">@_</span><span class="sc">;</span></li><li></li><li>        <a class="l_k" href="../functions/local.html">local</a> <span class="i">$Params::Check::WARNINGS_FATAL</span> = <span class="n">1</span><span class="sc">;</span></li><li>        <a class="l_k" href="../functions/local.html">local</a> <span class="i">$Params::Check::CALLER_DEPTH</span> = <span class="i">$Params::Check::CALLER_DEPTH</span> + <span class="n">1</span><span class="sc">;</span></li><li>        <a class="l_k" href="../functions/my.html">my</a> <span class="i">$args_out</span> = <span class="i">Params::Check::check</span><span class="s">(</span><span class="i">$template</span><span class="cm">,</span> <span class="i">$args_in</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>        <span class="i">my_stacktrace</span><span class="s">(</span><span class="w">Params::Check::last_error</span><span class="s">)</span> unless <span class="i">$args_out</span><span class="sc">;</span></li><li></li><li>        <a class="l_k" href="../functions/return.html">return</a> <span class="i">$args_out</span><span class="sc">;</span></li><li>    <span class="s">}</span></li></ol></pre><p>Default is 0;</p>
+<a class='view-head1' id="Acknowledgements"></a><h2 class='h2' >Acknowledgements</h2>
+<p>Thanks to Richard Soderberg for his performance improvements.</p>
+<a class='view-head1' id="BUG-REPORTS"></a><h2 class='h2' >BUG REPORTS</h2>
+<p>Please report bugs or other issues to &lt;bug-params-check@rt.cpan.org&gt;.</p>
+<a class='view-head1' id="AUTHOR"></a><h2 class='h2' >AUTHOR</h2>
+<p>This module by Jos Boumans &lt;kane@cpan.org&gt;.</p>
+<a class='view-head1' id="COPYRIGHT"></a><h2 class='h2' >COPYRIGHT</h2>
+<p>This library is free software; you may redistribute and/or modify it
+under the same terms as Perl itself.</p>
+
+
+
+
+      <ul><li><a href="#NAME">NAME</a></li><li><a href="#SYNOPSIS">SYNOPSIS</a></li><li><a href="#DESCRIPTION">DESCRIPTION</a></li><li><a href="#Template">Template</a></li><li><a href="#Functions">Functions</a></li><ul><li><a href="#check(-%5c%25tmpl%2c-%5c%25args%2c-%5b%24verbose%5d-)%3b">check( \%tmpl, \%args, [$verbose] );</a></li><li><a href="#allow(-%24test_me%2c-%5c%40criteria-)%3b">allow( $test_me, \@criteria );</a></li><li><a href="#last_error()">last_error()</a></li></ul><li><a href="#Global-Variables">Global Variables</a></li><ul><li><a href="#%24Params%3a%3aCheck%3a%3aVERBOSE">$Params::Check::VERBOSE</a></li><li><a href="#%24Params%3a%3aCheck%3a%3aSTRICT_TYPE">$Params::Check::STRICT_TYPE</a></li><li><a href="#%24Params%3a%3aCheck%3a%3aALLOW_UNKNOWN">$Params::Check::ALLOW_UNKNOWN</a></li><li><a href="#%24Params%3a%3aCheck%3a%3aSTRIP_LEADING_DASHES">$Params::Check::STRIP_LEADING_DASHES</a></li><li><a href="#%24Params%3a%3aCheck%3a%3aNO_DUPLICATES">$Params::Check::NO_DUPLICATES</a></li><li><a href="#%24Params%3a%3aCheck%3a%3aPRESERVE_CASE">$Params::Check::PRESERVE_CASE</a></li><li><a href="#%24Params%3a%3aCheck%3a%3aONLY_ALLOW_DEFINED">$Params::Check::ONLY_ALLOW_DEFINED</a></li><li><a href="#%24Params%3a%3aCheck%3a%3aSANITY_CHECK_TEMPLATE">$Params::Check::SANITY_CHECK_TEMPLATE</a></li><li><a href="#%24Params%3a%3aCheck%3a%3aWARNINGS_FATAL">$Params::Check::WARNINGS_FATAL</a></li><li><a href="#%24Params%3a%3aCheck%3a%3aCALLER_DEPTH">$Params::Check::CALLER_DEPTH</a></li></ul><li><a href="#Acknowledgements">Acknowledgements</a></li><li><a href="#BUG-REPORTS">BUG REPORTS</a></li><li><a href="#AUTHOR">AUTHOR</a></li><li><a href="#COPYRIGHT">COPYRIGHT</a></li></ul>
+
+
+                  </div>
+                </article>
+              </div>
+            </div>
+          </main>
+        </div>
+           <footer class="footer row bg-light pt-5 pb-5">
+       <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+           <div class="row">
+               <div class="col-md-4">
+                   <ul class="list-unstyled">
+                       <li>
+                           <h4>Site info</h4>
+                       </li>
+                       <li>Docs mantained by
+                           <a href="//lists.perl.org/list/perl5-porters.html"
+                               rel="noopener">Perl 5 Porters</a>
+                       </li>
+                       <li>Perldoc site development sponsored by
+                           <a href="//opusvl.com" rel="noopener">
+                           <img style="margin: 20px 20px 5px 10px" class="opus-logo" src="/public/img/opusvl_logo.svg" alt="OpusVL Logo">
+                        </a>
+                    <li><span class="about_perldoc"><a href="//about.html">About PerlDOC</a></span>
+                    </li>
+                       </li>
+                   </ul>
+               </div>
+               <div class="col-md-8">
+                   <div class="row">
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Manuals</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.14.0/index-overview.html">Overview</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.14.0/index-tutorials.html">Tutorials</a>
+                               </li>
+                               <li>
+                                   <a href="/5.14.0/index-faq.html">FAQs</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.14.0/index-history.html">Changes</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Reference</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.14.0/index-language.html">Language</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.14.0/index-functions.html">Functions</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.14.0/perlop.html">Operators</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.14.0/perlvar.html">Variables</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Modules</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.14.0/index-modules-A.html">Modules</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.14.0/index-pragmas.html">Pragmas</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.14.0/index-utilities.html">Utilities</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Misc</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.14.0/index-licence.html">License</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.14.0/index-internals.html">Internals</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.14.0/index-platforms.html">Platforms</a>
+                               </li>
+                            <li>
+                                <a
+                                    href="/5.14.0/index-about.html">About</a>
+                            </li>
+                           </ul>
+                       </div>
+                   </div>
+               </div>
+               <div class=" col-12 footer-inf text-center">
+                   <small>perldoc.perl.org - Official documentation for the Perl
+                       programming language</small>
+               </div>
+           </div>
+       </div>
+   </footer>
+
+        	<div class="beta-wrapper beta-bottom-right ">
+		<div class="beta beta-blue  ">
+			<a class="beta-link "
+				href="//github.com/OpusVL/perldoc.perl.org/issues/new" rel="noopener">
+				<span class="beta-text">
+					This website is a Beta release.
+				</span>
+				<span class="beta-text">
+					For any issues please raise a ticket on GitHub
+				</span>
+			</a>
+		</div>
+	</div>
+
+        <script src="/public/js/main.min.js"></script>
+      </body>
+
+      </html>

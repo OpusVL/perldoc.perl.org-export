@@ -1,0 +1,903 @@
+      
+      
+      
+      
+
+      <!DOCTYPE html>
+      <html lang="en">
+
+      <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Win32 - perldoc.perl.org">
+        <link rel="icon" href="/public/img/favicon.ico">
+        <title>Win32 - perldoc.perl.org</title>
+        <link href="/public/css/main.min.css" rel="stylesheet">
+        <link rel="canonical" href="/Win32.html">
+        <link
+          href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900'
+          rel='stylesheet' type='text/css'>
+        <script>
+          window.ga = window.ga || function () {
+            (ga.q = ga.q || []).push(arguments)
+          };
+          ga.l = +new Date;
+          ga('create', 'UA-1892152-2', 'auto'); // JJ's account
+          ga('create', 'UA-50555-3', 'auto', 'perlOrg'); // perl.org account
+          ga('require', 'outboundLinkTracker', {
+            events: ['click', 'auxclick', 'contextmenu'],
+          });
+          ga('require', 'maxScrollTracker');
+          ga('send', 'pageview');
+          ga('perlOrg.send', 'pageview');
+        </script>
+        <script async src="https://www.google-analytics.com/analytics.js">
+        </script>
+        <script async src="/public/js/tracking.min.js"></script>
+      </head>
+
+      <body class="body container-fluid ">
+        <div class="wrapper">
+
+          <nav
+    class="navbar navbar-dark bg-primary bg-perl fixed-top justify-content-between navbar-expand-lg">
+    <a href="#content" class="skippy sr-only sr-only-focusable">
+        <span class=' skippy-text'>Skip to main content</span>
+    </a>
+    <a class="navbar-brand" href="/">
+        <img class="logo" src="/public/img/logo_perl_doc.svg"
+            alt="Perl Documentation Logo" />
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse"
+        data-target="#navbar" aria-controls="navbar" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="navbar" class="collapse navbar-collapse ">
+        <ul class="navbar-nav ml-auto navbar-right">
+            <form class="nav-item dropdown search-wrapper">
+                <input type="text" id='searchinput' aria-describedby='navbarDropdown5'
+                    placeholder="Type query" class='search-input-field' value=''>
+
+                <button href="#" data-toggle='dropdown' type="button"
+                    aria-haspopup="true" aria-expanded='false' id="navbarDropdown5"
+                    class="nav-link dropdown-toggle search-link">
+                    <object tabindex='-1' focusable="false" class='search-icon'
+                        data="/public/img/search.svg" type="image/svg+xml"
+                        name='search icon'>search
+                        icon</object>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown5"
+                    id='search-results'>
+                    <p class='dropdown-item major-version'>
+                        No results
+                    </p>
+                </div>
+            </form>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown" href="#" class="nav-link dropdown-toggle"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Perl versions</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    
+                        <p class='dropdown-item major-version'>
+                            5.32
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.32.0/">5.32.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.30
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.3/">5.30.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.2/">5.30.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.1/">5.30.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.0/">5.30.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.28
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.3/">5.28.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.2/">5.28.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.1/">5.28.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.0/">5.28.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.26
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.3/">5.26.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.2/">5.26.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.1/">5.26.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.0/">5.26.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.24
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.4/">5.24.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.3/">5.24.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.2/">5.24.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.1/">5.24.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.0/">5.24.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.22
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.4/">5.22.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.3/">5.22.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.2/">5.22.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.1/">5.22.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.0/">5.22.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.20
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.3/">5.20.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.2/">5.20.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.1/">5.20.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.0/">5.20.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.18
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.4/">5.18.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.3/">5.18.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.2/">5.18.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.1/">5.18.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.0/">5.18.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.16
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.3/">5.16.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.2/">5.16.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.1/">5.16.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.0/">5.16.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.14
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.4/">5.14.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.3/">5.14.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.2/">5.14.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.1/">5.14.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.0/">5.14.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.12
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.5/">5.12.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.4/">5.12.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.3/">5.12.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.2/">5.12.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.1/">5.12.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.0/">5.12.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.10
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.1/">5.10.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.0/">5.10.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.8
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.9/">5.8.9</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.8/">5.8.8</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.7/">5.8.7</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.6/">5.8.6</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.5/">5.8.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.4/">5.8.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.3/">5.8.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.2/">5.8.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.1/">5.8.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.0/">5.8.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.6
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.2/">5.6.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.1/">5.6.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.0/">5.6.0</a>
+                        
+                        
+                    
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown1" href="#" class="dropdown-toggle nav-link"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Manuals</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                    <a class="dropdown-item"
+                        href="/5.8.0/index-overview.html">Overview</a>
+                    <a class="dropdown-item"
+                        href="/5.8.0/index-tutorials.html">Tutorials</a>
+                    <a class="dropdown-item"
+                        href="/5.8.0/index-faq.html">FAQs</a>
+                    <a class="dropdown-item"
+                        href="/5.8.0/index-history.html">Changes</a>
+                    <a class="dropdown-item"
+                        href="/5.8.0/index-licence.html">License</a>
+                    <a class="dropdown-item"
+                        href="/5.8.0/index-language.html">Language</a>
+                    <a class="dropdown-item"
+                        href="/5.8.0/index-functions.html">Functions</a>
+                    <a class="dropdown-item"
+                        href="/5.8.0/perlop.html">Operators</a>
+                    <a class="dropdown-item"
+                        href="/5.8.0/perlvar.html">Variables</a>
+                    <a class="dropdown-item"
+                        href="/5.8.0/index-pragmas.html">Pragmas</a>
+                    <a class="dropdown-item"
+                        href="/5.8.0/index-utilities.html">Utilities</a>
+                    <a class="dropdown-item"
+                        href="/5.8.0/index-internals.html">Internals</a>
+                    <a class="dropdown-item"
+                        href="/5.8.0/index-platforms.html">Platforms</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown3" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Modules</a>
+                <div aria-labelledby="navbarDropdown3"
+                    class="dropdown-menu letters-wrap">
+                    <!--<a class="dropdown-item"
+                        href="/5.8.0/index-modules.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.8.0/index-modules-by-cat.html">By
+                        Category</a>-->
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-modules-A.html">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-modules-B.html">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-modules-C.html">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-modules-D.html">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-modules-E.html">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-modules-F.html">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-modules-G.html">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-modules-H.html">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-modules-I.html">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-modules-J.html">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-modules-K.html">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-modules-L.html">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-modules-M.html">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-modules-N.html">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-modules-O.html">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-modules-P.html">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-modules-Q.html">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-modules-R.html">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-modules-S.html">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-modules-T.html">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-modules-U.html">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-modules-V.html">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-modules-W.html">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-modules-X.html">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-modules-Y.html">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-modules-Z.html">Z</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown4" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Functions</a>
+                <div aria-labelledby="navbarDropdown4"
+                    class="dropdown-menu letters-wrap">
+                    <a class="dropdown-item"
+                        href="/5.8.0/index-functions.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.8.0/index-functions-by-cat.html">By
+                        Category</a>
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-functions.html#A">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-functions.html#B">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-functions.html#C">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-functions.html#D">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-functions.html#E">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-functions.html#F">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-functions.html#G">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-functions.html#H">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-functions.html#I">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-functions.html#J">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-functions.html#K">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-functions.html#L">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-functions.html#M">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-functions.html#N">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-functions.html#O">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-functions.html#P">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-functions.html#Q">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-functions.html#R">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-functions.html#S">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-functions.html#T">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-functions.html#U">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-functions.html#V">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-functions.html#W">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-functions.html#X">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-functions.html#Y">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.0/index-functions.html#Z">Z</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!--/.nav-collapse -->
+</nav>
+
+
+          <main class="row main-content pb-5 pt-5" id='content'>
+            <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+              <div class="row">
+                <div class="col-sm-12">
+                  <div id="breadcrumbs">
+                      
+    <a href="index.html">Home</a>&nbsp; &gt;
+    
+      
+        <a href="index-modules-W.html">Core modules (W)</a> &gt;
+      
+    
+    Win32
+  
+
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <article class="col-sm-12 content">
+                  <div class="documentation-wrapper">
+                    <div id="perl_version">
+                      <h7 class='page-title'> Perl 5 version 8.0
+                        documentation</h7>
+                    </div>
+                    <h1>Win32</h1>
+
+
+  <!--    -->
+<ul><li><a href="#NAME">NAME</a></li><li><a href="#DESCRIPTION">DESCRIPTION</a></li><ul><li><a href="#Alphabetical-Listing-of-Win32-Functions">Alphabetical Listing of Win32 Functions</a></li></ul></ul><a class='view-head1' id="NAME"></a><h2 class='h2' >NAME</h2>
+<p>Win32 - Interfaces to some Win32 API Functions</p>
+<a class='view-head1' id="DESCRIPTION"></a><h2 class='h2' >DESCRIPTION</h2>
+<p>Perl on Win32 contains several functions to access Win32 APIs. Some
+are included in Perl itself (on Win32) and some are only available
+after explicitly requesting the Win32 module with:</p>
+<pre class="verbatim"><ol><li>	<a class="l_k" href="functions/use.html">use</a> <span class="w">Win32</span><span class="sc">;</span></li></ol></pre><p>The builtin functions are marked as [CORE] and the other ones
+as [EXT] in the following alphabetical listing. The <code class="inline"><span class="w">Win32</span></code>
+ module
+is not part of the Perl source distribution; it is distributed in
+the libwin32 bundle of Win32::* modules on CPAN. The module is
+already preinstalled in binary distributions like ActivePerl.</p>
+<a class='view-head2' id="Alphabetical-Listing-of-Win32-Functions"></a><h3 class='h3' >Alphabetical Listing of Win32 Functions</h3>
+<ul>
+<li><a class='view-title' id="Win32%3a%3aAbortSystemShutdown(MACHINE)"></a><strong>Win32::AbortSystemShutdown(MACHINE)</strong>
+<p>[EXT] Aborts a system shutdown (started by the
+InitiateSystemShutdown function) on the specified MACHINE.</p>
+</li>
+<li><a class='view-title' id="Win32%3a%3aBuildNumber()"></a><strong>Win32::BuildNumber()</strong>
+<p>[CORE] Returns the ActivePerl build number. This function is
+only available in the ActivePerl binary distribution.</p>
+</li>
+<li><a class='view-title' id="Win32%3a%3aCopyFile(FROM%2c-TO%2c-OVERWRITE)"></a><strong>Win32::CopyFile(FROM, TO, OVERWRITE)</strong>
+<p>[CORE] The Win32::CopyFile() function copies an existing file to a new
+file. All file information like creation time and file attributes will
+be copied to the new file. However it will <strong>not</strong> copy the security
+information. If the destination file already exists it will only be
+overwritten when the OVERWRITE parameter is true. But even this will
+not overwrite a read-only file; you have to unlink() it first
+yourself.</p>
+</li>
+<li><a class='view-title' id="Win32%3a%3aDomainName()"></a><strong>Win32::DomainName()</strong>
+<p>[CORE] Returns the name of the Microsoft Network domain that the
+owner of the current perl process is logged into.  This function does
+<strong>not</strong> work on Windows 9x.</p>
+</li>
+<li><a class='view-title' id="Win32%3a%3aExpandEnvironmentStrings(STRING)"></a><strong>Win32::ExpandEnvironmentStrings(STRING)</strong>
+<p>[EXT] Takes STRING and replaces all referenced environment variable
+names with their defined values. References to environment variables
+take the form <code class="inline"><span class="i">%VariableName</span>%</code>
+. Case is ignored when looking up the
+VariableName in the environment. If the variable is not found then the
+original <code class="inline"><span class="i">%VariableName</span>%</code>
+ text is retained.  Has the same effect
+as the following:</p>
+<pre class="verbatim"><ol><li>	<span class="i">$string</span> =~ <span class="q">s/%([^%]*)%/$ENV{$1} || &quot;%$1%&quot;/eg</span></li></ol></pre></li>
+<li><a class='view-title' id="Win32%3a%3aFormatMessage(ERRORCODE)"></a><strong>Win32::FormatMessage(ERRORCODE)</strong>
+<p>[CORE] Converts the supplied Win32 error number (e.g. returned by
+Win32::GetLastError()) to a descriptive string.  Analogous to the
+perror() standard-C library function.  Note that <code class="inline"><span class="i">$^E</span></code>
+ used
+in a string context has much the same effect.</p>
+<pre class="verbatim"><ol><li>	<span class="j">C:</span>\&gt; <span class="w">perl</span> -e <span class="q">&quot;$^E = 26; print $^E;&quot;</span></li><li>	<span class="w">The</span> <span class="w">specified</span> <span class="w">disk</span> or <span class="w">diskette</span> <span class="w">cannot</span> <span class="w">be</span> <span class="w">accessed</span></li></ol></pre></li>
+<li><a class='view-title' id="Win32%3a%3aFsType()"></a><strong>Win32::FsType()</strong>
+<p>[CORE] Returns the name of the filesystem of the currently active
+drive (like 'FAT' or 'NTFS'). In list context it returns three values:
+(FSTYPE, FLAGS, MAXCOMPLEN). FSTYPE is the filesystem type as
+before. FLAGS is a combination of values of the following table:</p>
+<pre class="verbatim"><ol><li>	<span class="n">0x00000001</span>  <span class="w">supports</span> case-<span class="w">sensitive</span> <span class="w">filenames</span></li><li>	<span class="n">0x00000002</span>  <span class="w">preserves</span> <span class="w">the</span> case <span class="w">of</span> <span class="w">filenames</span></li><li>	<span class="n">0x00000004</span>  <span class="w">supports</span> <span class="w">Unicode</span> <span class="w">in</span> <span class="w">filenames</span></li><li>	<span class="n">0x00000008</span>  <span class="w">preserves</span> and <span class="w">enforces</span> <span class="w">ACLs</span></li><li>	<span class="n">0x00000010</span>  <span class="w">supports</span> <span class="w">file</span>-<span class="w">based</span> <span class="w">compression</span></li><li>	<span class="n">0x00000020</span>  <span class="w">supports</span> <span class="w">disk</span> <span class="w">quotas</span></li><li>	<span class="n">0x00000040</span>  <span class="w">supports</span> <span class="w">sparse</span> <span class="w">files</span></li><li>	<span class="n">0x00000080</span>  <span class="w">supports</span> <span class="w">reparse</span> <span class="w">points</span></li><li>	<span class="n">0x00000100</span>  <span class="w">supports</span> <span class="w">remote</span> <span class="w">storage</span></li><li>	<span class="n">0x00008000</span>  <span class="w">is</span> <span class="w">a</span> <span class="w">compressed</span> <span class="w">volume</span> <span class="s">(</span><span class="w">e</span>.<span class="w">g</span>. <span class="w">DoubleSpace</span><span class="s">)</span></li><li>	<span class="n">0x00010000</span>  <span class="w">supports</span> <span class="w">object</span> <span class="w">identifiers</span></li><li>	<span class="n">0x00020000</span>  <span class="w">supports</span> <span class="w">the</span> <span class="w">Encrypted</span> <span class="w">File</span> <span class="w">System</span> <span class="s">(</span><span class="w">EFS</span><span class="s">)</span></li></ol></pre><p>MAXCOMPLEN is the maximum length of a filename component (the part
+between two backslashes) on this file system.</p>
+</li>
+<li><a class='view-title' id="Win32%3a%3aFreeLibrary(HANDLE)"></a><strong>Win32::FreeLibrary(HANDLE)</strong>
+<p>[EXT] Unloads a previously loaded dynamic-link library. The HANDLE is
+no longer valid after this call. See <i>LoadLibrary</i>
+for information on dynamically loading a library.</p>
+</li>
+<li><a class='view-title' id="Win32%3a%3aGetArchName()"></a><strong>Win32::GetArchName()</strong>
+<p>[EXT] Use of this function is deprecated. It is equivalent with
+$ENV{PROCESSOR_ARCHITECTURE}. This might not work on Win9X.</p>
+</li>
+<li><a class='view-title' id="Win32%3a%3aGetChipName()"></a><strong>Win32::GetChipName()</strong>
+<p>[EXT] Returns the processor type: 386, 486 or 586 for Intel processors,
+21064 for the Alpha chip.</p>
+</li>
+<li><a class='view-title' id="Win32%3a%3aGetCwd()"></a><strong>Win32::GetCwd()</strong>
+<p>[CORE] Returns the current active drive and directory. This function
+does not return a UNC path, since the functionality required for such
+a feature is not available under Windows 95.</p>
+</li>
+<li><a class='view-title' id="Win32%3a%3aGetFullPathName(FILENAME)"></a><strong>Win32::GetFullPathName(FILENAME)</strong>
+<p>[CORE] GetFullPathName combines the FILENAME with the current drive
+and directory name and returns a fully qualified (aka, absolute)
+path name. In list context it returns two elements: (PATH, FILE) where
+PATH is the complete pathname component (including trailing backslash)
+and FILE is just the filename part.  Note that no attempt is made to
+convert 8.3 components in the supplied FILENAME to longnames or
+vice-versa.  Compare with Win32::GetShortPathName and
+Win32::GetLongPathName.</p>
+<p>This function has been added for Perl 5.6.</p>
+</li>
+<li><a class='view-title' id="Win32%3a%3aGetLastError()"></a><strong>Win32::GetLastError()</strong>
+<p>[CORE] Returns the last error value generated by a call to a Win32 API
+function.  Note that <code class="inline"><span class="i">$^E</span></code>
+ used in a numeric context amounts to the
+same value.</p>
+</li>
+<li><a class='view-title' id="Win32%3a%3aGetLongPathName(PATHNAME)"></a><strong>Win32::GetLongPathName(PATHNAME)</strong>
+<p>[CORE] Returns a representation of PATHNAME composed of longname
+components (if any).  The result may not necessarily be longer
+than PATHNAME.  No attempt is made to convert PATHNAME to the
+absolute path.  Compare with Win32::GetShortPathName and
+Win32::GetFullPathName.</p>
+<p>This function has been added for Perl 5.6.</p>
+</li>
+<li><a class='view-title' id="Win32%3a%3aGetNextAvailDrive()"></a><strong>Win32::GetNextAvailDrive()</strong>
+<p>[CORE] Returns a string in the form of "&lt;d&gt;:" where &lt;d&gt; is the first
+available drive letter.</p>
+</li>
+<li><a class='view-title' id="Win32%3a%3aGetOSVersion()"></a><strong>Win32::GetOSVersion()</strong>
+<p>[CORE] Returns the array (STRING, MAJOR, MINOR, BUILD, ID), where the
+elements are, respectively: An arbitrary descriptive string, the major
+version number of the operating system, the minor version number, the
+build number, and a digit indicating the actual operating system.
+For the ID, the values are 0 for Win32s, 1 for Windows 9X and 2 for
+Windows NT/2000/XP.  In scalar context it returns just the ID.</p>
+<p>Currently known values for ID MAJOR and MINOR are as follows:</p>
+<pre class="verbatim"><ol><li>    <span class="w">OS</span>                    <span class="w">ID</span>    <span class="w">MAJOR</span>   <span class="w">MINOR</span></li><li>    <span class="w">Win32s</span>                 <span class="n">0</span>      -       -</li><li>    <span class="w">Windows</span> <span class="n">95</span>             <span class="n">1</span>      <span class="n">4</span>       <span class="n">0</span></li><li>    <span class="w">Windows</span> <span class="n">98</span>             <span class="n">1</span>      <span class="n">4</span>      <span class="n">10</span></li><li>    <span class="w">Windows</span> <span class="w">Me</span>             <span class="n">1</span>      <span class="n">4</span>      <span class="n">90</span></li><li>    <span class="w">Windows</span> <span class="w">NT</span> <span class="n">3.51</span>        <span class="n">2</span>      <span class="n">3</span>      <span class="n">51</span></li><li>    <span class="w">Windows</span> <span class="w">NT</span> <span class="n">4</span>           <span class="n">2</span>      <span class="n">4</span>       <span class="n">0</span></li><li>    <span class="w">Windows</span> <span class="n">2000</span>           <span class="n">2</span>      <span class="n">5</span>       <span class="n">0</span></li><li>    <span class="w">Windows</span> <span class="w">XP</span>             <span class="n">2</span>      <span class="n">5</span>       <span class="n">1</span></li><li>    <span class="w">Windows</span> .<span class="w">NET</span> <span class="w">Server</span>    <span class="n">2</span>      <span class="n">5</span>       <span class="n">1</span></li></ol></pre><p>Unfortunately as of June 2002 there is no way to distinguish between
+.NET servers and XP servers without using additional modules.</p>
+</li>
+<li><a class='view-title' id="Win32%3a%3aGetOSName()"></a><strong>Win32::GetOSName()</strong>
+<p>[EXT] In scalar context returns the name of the Win32 operating system
+being used.  In list context returns a two element list of the OS name
+and whatever edition information is known about the particular build
+(for Win9x boxes) and whatever service packs have been installed.
+The latter is roughly equivalent to the first item returned by
+GetOSVersion() in list context.</p>
+<p>Currently the possible values for the OS name are</p>
+<pre class="verbatim"><ol><li>  <span class="w">Win32s</span> <span class="w">Win95</span> <span class="w">Win98</span> <span class="w">WinMe</span> <span class="w">Win2000</span> <span class="w">WinXP</span>/.<span class="w">Net</span> <span class="w">WinNT3</span><span class="n">.51</span> <span class="w">WinNT4</span></li></ol></pre><p>This routine is just a simple interface into GetOSVersion().  More
+specific or demanding situations should use that instead.  Another
+option would be to use POSIX::uname(), however the latter appears to
+report only the OS family name and not the specific OS.  In scalar
+context it returns just the ID.</p>
+</li>
+<li><a class='view-title' id="Win32%3a%3aGetShortPathName(PATHNAME)"></a><strong>Win32::GetShortPathName(PATHNAME)</strong>
+<p>[CORE] Returns a representation of PATHNAME composed only of
+short (8.3) path components.  The result may not necessarily be
+shorter than PATHNAME.  Compare with Win32::GetFullPathName and
+Win32::GetLongPathName.</p>
+</li>
+<li><a class='view-title' id="Win32%3a%3aGetProcAddress(INSTANCE%2c-PROCNAME)"></a><strong>Win32::GetProcAddress(INSTANCE, PROCNAME)</strong>
+<p>[EXT] Returns the address of a function inside a loaded library. The
+information about what you can do with this address has been lost in
+the mist of time. Use the Win32::API module instead of this deprecated
+function.</p>
+</li>
+<li><a class='view-title' id="Win32%3a%3aGetTickCount()"></a><strong>Win32::GetTickCount()</strong>
+<p>[CORE] Returns the number of milliseconds elapsed since the last
+system boot. Resolution is limited to system timer ticks (about 10ms
+on WinNT and 55ms on Win9X).</p>
+</li>
+<li><a class='view-title' id="Win32%3a%3aInitiateSystemShutdown"></a><strong>Win32::InitiateSystemShutdown</strong>
+<p>(MACHINE, MESSAGE, TIMEOUT, FORCECLOSE, REBOOT)</p>
+<p>[EXT] Shutsdown the specified MACHINE, notifying users with the
+supplied MESSAGE, within the specified TIMEOUT interval. Forces
+closing of all documents without prompting the user if FORCECLOSE is
+true, and reboots the machine if REBOOT is true. This function works
+only on WinNT.</p>
+</li>
+<li><a class='view-title' id="Win32%3a%3aIsWinNT()"></a><strong>Win32::IsWinNT()</strong>
+<p>[CORE] Returns non zero if the Win32 subsystem is Windows NT.</p>
+</li>
+<li><a class='view-title' id="Win32%3a%3aIsWin95()"></a><strong>Win32::IsWin95()</strong>
+<p>[CORE] Returns non zero if the Win32 subsystem is Windows 95.</p>
+</li>
+<li><a class='view-title' id="Win32%3a%3aLoadLibrary(LIBNAME)"></a><strong>Win32::LoadLibrary(LIBNAME)</strong>
+<p>[EXT] Loads a dynamic link library into memory and returns its module
+handle. This handle can be used with Win32::GetProcAddress and
+Win32::FreeLibrary. This function is deprecated. Use the Win32::API
+module instead.</p>
+</li>
+<li><a class='view-title' id="Win32%3a%3aLoginName()"></a><strong>Win32::LoginName()</strong>
+<p>[CORE] Returns the username of the owner of the current perl process.</p>
+</li>
+<li><a class='view-title' id="Win32%3a%3aLookupAccountName(SYSTEM%2c-ACCOUNT%2c-DOMAIN%2c-SID%2c-SIDTYPE)"></a><strong>Win32::LookupAccountName(SYSTEM, ACCOUNT, DOMAIN, SID, SIDTYPE)</strong>
+<p>[EXT] Looks up ACCOUNT on SYSTEM and returns the domain name the SID and
+the SID type.</p>
+</li>
+<li><a class='view-title' id="Win32%3a%3aLookupAccountSID(SYSTEM%2c-SID%2c-ACCOUNT%2c-DOMAIN%2c-SIDTYPE)"></a><strong>Win32::LookupAccountSID(SYSTEM, SID, ACCOUNT, DOMAIN, SIDTYPE)</strong>
+<p>[EXT] Looks up SID on SYSTEM and returns the account name, domain name,
+and the SID type.</p>
+</li>
+<li><a class='view-title' id="Win32%3a%3aMsgBox(MESSAGE-%5b%2c-FLAGS-%5b%2c-TITLE%5d%5d)"></a><strong>Win32::MsgBox(MESSAGE [, FLAGS [, TITLE]])</strong>
+<p>[EXT] Create a dialogbox containing MESSAGE. FLAGS specifies the
+required icon and buttons according to the following table:</p>
+<pre class="verbatim"><ol><li>	<span class="n">0</span> = <span class="w">OK</span></li><li>	<span class="n">1</span> = <span class="w">OK</span> and <span class="w">Cancel</span></li><li>	<span class="n">2</span> = <span class="w">Abort</span><span class="cm">,</span> <span class="w">Retry</span><span class="cm">,</span> and <span class="w">Ignore</span></li><li>	<span class="n">3</span> = <span class="w">Yes</span><span class="cm">,</span> <span class="w">No</span> and <span class="w">Cancel</span></li><li>	<span class="n">4</span> = <span class="w">Yes</span> and <span class="w">No</span></li><li>	<span class="n">5</span> = <span class="w">Retry</span> and <span class="w">Cancel</span></li><li></li><li>	<span class="w">MB_ICONSTOP</span>          <span class="q">&quot;X&quot;</span> <span class="w">in</span> <span class="w">a</span> <span class="w">red</span> <span class="w">circle</span></li><li>	<span class="w">MB_ICONQUESTION</span>      <span class="w">question</span> <span class="w">mark</span> <span class="w">in</span> <span class="w">a</span> <span class="w">bubble</span></li><li>	<span class="w">MB_ICONEXCLAMATION</span>   <span class="w">exclamation</span> <span class="w">mark</span> <span class="w">in</span> <span class="w">a</span> <span class="w">yellow</span> <span class="w">triangle</span></li><li>	<span class="w">MB_ICONINFORMATION</span>   <span class="q">&quot;i&quot;</span> <span class="w">in</span> <span class="w">a</span> <span class="w">bubble</span></li></ol></pre><p>TITLE specifies an optional window title. The default is "Perl".</p>
+<p>The function returns the menu id of the selected push button:</p>
+<pre class="verbatim"><ol><li>	<span class="n">0</span>  <span class="w">Error</span></li><li></li><li>	<span class="n">1</span>  <span class="w">OK</span></li><li>	<span class="n">2</span>  <span class="w">Cancel</span></li><li>	<span class="n">3</span>  <span class="w">Abort</span></li><li>	<span class="n">4</span>  <span class="w">Retry</span></li><li>	<span class="n">5</span>  <span class="w">Ignore</span></li><li>	<span class="n">6</span>  <span class="w">Yes</span></li><li>	<span class="n">7</span>  <span class="w">No</span></li></ol></pre></li>
+<li><a class='view-title' id="Win32%3a%3aNodeName()"></a><strong>Win32::NodeName()</strong>
+<p>[CORE] Returns the Microsoft Network node-name of the current machine.</p>
+</li>
+<li><a class='view-title' id="Win32%3a%3aRegisterServer(LIBRARYNAME)"></a><strong>Win32::RegisterServer(LIBRARYNAME)</strong>
+<p>[EXT] Loads the DLL LIBRARYNAME and calls the function DllRegisterServer.</p>
+</li>
+<li><a class='view-title' id="Win32%3a%3aSetChildShowWindow(SHOWWINDOW)"></a><strong>Win32::SetChildShowWindow(SHOWWINDOW)</strong>
+<p>[CORE] Sets the <i>ShowMode</i> of child processes started by system().
+By default system() will create a new console window for child
+processes if Perl itself is not running from a console. Calling
+SetChildShowWindow(0) will make these new console windows invisible.
+Calling SetChildShowWindow() without arguments reverts system() to the
+default behavior.  The return value of SetChildShowWindow() is the
+previous setting or <code class="inline"><a class="l_k" href="functions/undef.html">undef</a></code>.</p>
+<p>[EXT] The following symbolic constants for SHOWWINDOW are available
+(but not exported) from the Win32 module: SW_HIDE, SW_SHOWNORMAL,
+SW_SHOWMINIMIZED, SW_SHOWMAXIMIZED and SW_SHOWNOACTIVATE.</p>
+</li>
+<li><a class='view-title' id="Win32%3a%3aSetCwd(NEWDIRECTORY)"></a><strong>Win32::SetCwd(NEWDIRECTORY)</strong>
+<p>[CORE] Sets the current active drive and directory. This function does not
+work with UNC paths, since the functionality required to required for
+such a feature is not available under Windows 95.</p>
+</li>
+<li><a class='view-title' id="Win32%3a%3aSetLastError(ERROR)"></a><strong>Win32::SetLastError(ERROR)</strong>
+<p>[CORE] Sets the value of the last error encountered to ERROR. This is
+that value that will be returned by the Win32::GetLastError()
+function. This functions has been added for Perl 5.6.</p>
+</li>
+<li><a class='view-title' id="Win32%3a%3aSleep(TIME)"></a><strong>Win32::Sleep(TIME)</strong>
+<p>[CORE] Pauses for TIME milliseconds. The timeslices are made available
+to other processes and threads.</p>
+</li>
+<li><a class='view-title' id="Win32%3a%3aSpawn(COMMAND%2c-ARGS%2c-PID)"></a><strong>Win32::Spawn(COMMAND, ARGS, PID)</strong>
+<p>[CORE] Spawns a new process using the supplied COMMAND, passing in
+arguments in the string ARGS. The pid of the new process is stored in
+PID. This function is deprecated. Please use the Win32::Process module
+instead.</p>
+</li>
+<li><a class='view-title' id="Win32%3a%3aUnregisterServer(LIBRARYNAME)"></a><strong>Win32::UnregisterServer(LIBRARYNAME)</strong>
+<p>[EXT] Loads the DLL LIBRARYNAME and calls the function
+DllUnregisterServer.</p>
+</li>
+</ul>
+
+
+
+
+      <ul><li><a href="#NAME">NAME</a></li><li><a href="#DESCRIPTION">DESCRIPTION</a></li><ul><li><a href="#Alphabetical-Listing-of-Win32-Functions">Alphabetical Listing of Win32 Functions</a></li></ul></ul>
+
+
+                  </div>
+                </article>
+              </div>
+            </div>
+          </main>
+        </div>
+           <footer class="footer row bg-light pt-5 pb-5">
+       <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+           <div class="row">
+               <div class="col-md-4">
+                   <ul class="list-unstyled">
+                       <li>
+                           <h4>Site info</h4>
+                       </li>
+                       <li>Docs mantained by
+                           <a href="//lists.perl.org/list/perl5-porters.html"
+                               rel="noopener">Perl 5 Porters</a>
+                       </li>
+                       <li>Perldoc site development sponsored by
+                           <a href="//opusvl.com" rel="noopener">
+                           <img style="margin: 20px 20px 5px 10px" class="opus-logo" src="/public/img/opusvl_logo.svg" alt="OpusVL Logo">
+                        </a>
+                    <li><span class="about_perldoc"><a href="//about.html">About PerlDOC</a></span>
+                    </li>
+                       </li>
+                   </ul>
+               </div>
+               <div class="col-md-8">
+                   <div class="row">
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Manuals</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.0/index-overview.html">Overview</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.0/index-tutorials.html">Tutorials</a>
+                               </li>
+                               <li>
+                                   <a href="/5.8.0/index-faq.html">FAQs</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.0/index-history.html">Changes</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Reference</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.0/index-language.html">Language</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.0/index-functions.html">Functions</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.0/perlop.html">Operators</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.0/perlvar.html">Variables</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Modules</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.0/index-modules-A.html">Modules</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.0/index-pragmas.html">Pragmas</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.0/index-utilities.html">Utilities</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Misc</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.0/index-licence.html">License</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.0/index-internals.html">Internals</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.0/index-platforms.html">Platforms</a>
+                               </li>
+                            <li>
+                                <a
+                                    href="/5.8.0/index-about.html">About</a>
+                            </li>
+                           </ul>
+                       </div>
+                   </div>
+               </div>
+               <div class=" col-12 footer-inf text-center">
+                   <small>perldoc.perl.org - Official documentation for the Perl
+                       programming language</small>
+               </div>
+           </div>
+       </div>
+   </footer>
+
+        	<div class="beta-wrapper beta-bottom-right ">
+		<div class="beta beta-blue  ">
+			<a class="beta-link "
+				href="//github.com/OpusVL/perldoc.perl.org/issues/new" rel="noopener">
+				<span class="beta-text">
+					This website is a Beta release.
+				</span>
+				<span class="beta-text">
+					For any issues please raise a ticket on GitHub
+				</span>
+			</a>
+		</div>
+	</div>
+
+        <script src="/public/js/main.min.js"></script>
+      </body>
+
+      </html>

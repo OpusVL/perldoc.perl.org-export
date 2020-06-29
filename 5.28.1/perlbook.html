@@ -1,0 +1,802 @@
+      
+      
+      
+      
+
+      <!DOCTYPE html>
+      <html lang="en">
+
+      <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="perlbook - perldoc.perl.org">
+        <link rel="icon" href="/public/img/favicon.ico">
+        <title>perlbook - perldoc.perl.org</title>
+        <link href="/public/css/main.min.css" rel="stylesheet">
+        <link rel="canonical" href="/perlbook.html">
+        <link
+          href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900'
+          rel='stylesheet' type='text/css'>
+        <script>
+          window.ga = window.ga || function () {
+            (ga.q = ga.q || []).push(arguments)
+          };
+          ga.l = +new Date;
+          ga('create', 'UA-1892152-2', 'auto'); // JJ's account
+          ga('create', 'UA-50555-3', 'auto', 'perlOrg'); // perl.org account
+          ga('require', 'outboundLinkTracker', {
+            events: ['click', 'auxclick', 'contextmenu'],
+          });
+          ga('require', 'maxScrollTracker');
+          ga('send', 'pageview');
+          ga('perlOrg.send', 'pageview');
+        </script>
+        <script async src="https://www.google-analytics.com/analytics.js">
+        </script>
+        <script async src="/public/js/tracking.min.js"></script>
+      </head>
+
+      <body class="body container-fluid ">
+        <div class="wrapper">
+
+          <nav
+    class="navbar navbar-dark bg-primary bg-perl fixed-top justify-content-between navbar-expand-lg">
+    <a href="#content" class="skippy sr-only sr-only-focusable">
+        <span class=' skippy-text'>Skip to main content</span>
+    </a>
+    <a class="navbar-brand" href="/">
+        <img class="logo" src="/public/img/logo_perl_doc.svg"
+            alt="Perl Documentation Logo" />
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse"
+        data-target="#navbar" aria-controls="navbar" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="navbar" class="collapse navbar-collapse ">
+        <ul class="navbar-nav ml-auto navbar-right">
+            <form class="nav-item dropdown search-wrapper">
+                <input type="text" id='searchinput' aria-describedby='navbarDropdown5'
+                    placeholder="Type query" class='search-input-field' value=''>
+
+                <button href="#" data-toggle='dropdown' type="button"
+                    aria-haspopup="true" aria-expanded='false' id="navbarDropdown5"
+                    class="nav-link dropdown-toggle search-link">
+                    <object tabindex='-1' focusable="false" class='search-icon'
+                        data="/public/img/search.svg" type="image/svg+xml"
+                        name='search icon'>search
+                        icon</object>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown5"
+                    id='search-results'>
+                    <p class='dropdown-item major-version'>
+                        No results
+                    </p>
+                </div>
+            </form>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown" href="#" class="nav-link dropdown-toggle"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Perl versions</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    
+                        <p class='dropdown-item major-version'>
+                            5.32
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.32.0/">5.32.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.30
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.3/">5.30.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.2/">5.30.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.1/">5.30.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.0/">5.30.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.28
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.3/">5.28.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.2/">5.28.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.1/">5.28.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.0/">5.28.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.26
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.3/">5.26.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.2/">5.26.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.1/">5.26.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.0/">5.26.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.24
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.4/">5.24.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.3/">5.24.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.2/">5.24.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.1/">5.24.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.0/">5.24.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.22
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.4/">5.22.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.3/">5.22.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.2/">5.22.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.1/">5.22.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.0/">5.22.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.20
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.3/">5.20.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.2/">5.20.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.1/">5.20.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.0/">5.20.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.18
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.4/">5.18.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.3/">5.18.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.2/">5.18.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.1/">5.18.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.0/">5.18.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.16
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.3/">5.16.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.2/">5.16.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.1/">5.16.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.0/">5.16.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.14
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.4/">5.14.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.3/">5.14.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.2/">5.14.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.1/">5.14.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.0/">5.14.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.12
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.5/">5.12.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.4/">5.12.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.3/">5.12.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.2/">5.12.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.1/">5.12.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.0/">5.12.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.10
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.1/">5.10.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.0/">5.10.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.8
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.9/">5.8.9</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.8/">5.8.8</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.7/">5.8.7</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.6/">5.8.6</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.5/">5.8.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.4/">5.8.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.3/">5.8.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.2/">5.8.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.1/">5.8.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.0/">5.8.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.6
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.2/">5.6.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.1/">5.6.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.0/">5.6.0</a>
+                        
+                        
+                    
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown1" href="#" class="dropdown-toggle nav-link"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Manuals</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                    <a class="dropdown-item"
+                        href="/5.28.1/index-overview.html">Overview</a>
+                    <a class="dropdown-item"
+                        href="/5.28.1/index-tutorials.html">Tutorials</a>
+                    <a class="dropdown-item"
+                        href="/5.28.1/index-faq.html">FAQs</a>
+                    <a class="dropdown-item"
+                        href="/5.28.1/index-history.html">Changes</a>
+                    <a class="dropdown-item"
+                        href="/5.28.1/index-licence.html">License</a>
+                    <a class="dropdown-item"
+                        href="/5.28.1/index-language.html">Language</a>
+                    <a class="dropdown-item"
+                        href="/5.28.1/index-functions.html">Functions</a>
+                    <a class="dropdown-item"
+                        href="/5.28.1/perlop.html">Operators</a>
+                    <a class="dropdown-item"
+                        href="/5.28.1/perlvar.html">Variables</a>
+                    <a class="dropdown-item"
+                        href="/5.28.1/index-pragmas.html">Pragmas</a>
+                    <a class="dropdown-item"
+                        href="/5.28.1/index-utilities.html">Utilities</a>
+                    <a class="dropdown-item"
+                        href="/5.28.1/index-internals.html">Internals</a>
+                    <a class="dropdown-item"
+                        href="/5.28.1/index-platforms.html">Platforms</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown3" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Modules</a>
+                <div aria-labelledby="navbarDropdown3"
+                    class="dropdown-menu letters-wrap">
+                    <!--<a class="dropdown-item"
+                        href="/5.28.1/index-modules.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.28.1/index-modules-by-cat.html">By
+                        Category</a>-->
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.28.1/index-modules-A.html">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.1/index-modules-B.html">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.1/index-modules-C.html">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.1/index-modules-D.html">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.1/index-modules-E.html">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.1/index-modules-F.html">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.1/index-modules-G.html">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.1/index-modules-H.html">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.1/index-modules-I.html">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.1/index-modules-J.html">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.1/index-modules-K.html">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.1/index-modules-L.html">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.1/index-modules-M.html">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.1/index-modules-N.html">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.1/index-modules-O.html">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.1/index-modules-P.html">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.1/index-modules-Q.html">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.1/index-modules-R.html">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.1/index-modules-S.html">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.1/index-modules-T.html">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.1/index-modules-U.html">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.1/index-modules-V.html">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.1/index-modules-W.html">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.1/index-modules-X.html">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.1/index-modules-Y.html">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.1/index-modules-Z.html">Z</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown4" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Functions</a>
+                <div aria-labelledby="navbarDropdown4"
+                    class="dropdown-menu letters-wrap">
+                    <a class="dropdown-item"
+                        href="/5.28.1/index-functions.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.28.1/index-functions-by-cat.html">By
+                        Category</a>
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.28.1/index-functions.html#A">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.1/index-functions.html#B">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.1/index-functions.html#C">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.1/index-functions.html#D">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.1/index-functions.html#E">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.1/index-functions.html#F">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.1/index-functions.html#G">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.1/index-functions.html#H">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.1/index-functions.html#I">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.1/index-functions.html#J">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.1/index-functions.html#K">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.1/index-functions.html#L">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.1/index-functions.html#M">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.1/index-functions.html#N">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.1/index-functions.html#O">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.1/index-functions.html#P">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.1/index-functions.html#Q">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.1/index-functions.html#R">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.1/index-functions.html#S">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.1/index-functions.html#T">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.1/index-functions.html#U">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.1/index-functions.html#V">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.1/index-functions.html#W">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.1/index-functions.html#X">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.1/index-functions.html#Y">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.1/index-functions.html#Z">Z</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!--/.nav-collapse -->
+</nav>
+
+
+          <main class="row main-content pb-5 pt-5" id='content'>
+            <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+              <div class="row">
+                <div class="col-sm-12">
+                  <div id="breadcrumbs">
+                      
+    <a href="index.html">Home</a>&nbsp; &gt;
+    
+      
+        <a href="index-overview.html">Overview</a> &gt;
+      
+    
+    perlbook
+  
+
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <article class="col-sm-12 content">
+                  <div class="documentation-wrapper">
+                    <div id="perl_version">
+                      <h7 class='page-title'> Perl 5 version 28.1
+                        documentation</h7>
+                    </div>
+                    <h1>perlbook</h1>
+
+
+  <!--    -->
+<ul><li><a href="#NAME">NAME</a></li><li><a href="#DESCRIPTION">DESCRIPTION</a></li><ul><li><a href="#The-most-popular-books">The most popular books</a></li><li><a href="#References">References</a></li><li><a href="#Tutorials">Tutorials</a></li><li><a href="#Task-Oriented">Task-Oriented</a></li><li><a href="#Special-Topics">Special Topics</a></li><li><a href="#Free-(as-in-beer)-books">Free (as in beer) books</a></li><li><a href="#Other-interesting%2c-non-Perl-books">Other interesting, non-Perl books</a></li><li><a href="#A-note-on-freshness">A note on freshness</a></li><li><a href="#Get-your-book-listed">Get your book listed</a></li></ul></ul><a class='view-head1' id="NAME"></a><h2 class='h2' >NAME</h2>
+<p>perlbook - Books about and related to Perl</p>
+<a class='view-head1' id="DESCRIPTION"></a><h2 class='h2' >DESCRIPTION</h2>
+<p>There are many books on Perl and Perl-related. A few of these are
+good, some are OK, but many aren't worth your money. There is a list
+of these books, some with extensive reviews, at
+<a href="http://books.perl.org/">http://books.perl.org/</a> . We list some of the books here, and while
+listing a book implies our
+endorsement, don't think that not including a book means anything.</p>
+<p>Most of these books are available online through Safari Books Online
+( <a href="http://safaribooksonline.com/">http://safaribooksonline.com/</a> ).</p>
+<a class='view-head2' id="The-most-popular-books"></a><h3 class='h3' >The most popular books</h3>
+<p>The major reference book on Perl, written by the creator of Perl, is
+<i>Programming Perl</i>:</p>
+<ul>
+<li><a class='view-title' id="_Programming-Perl_-(the-%22Camel-Book%22)%3a"></a><strong><i>Programming Perl</i> (the "Camel Book"):</strong>
+<pre class="verbatim"><ol><li> <span class="w">by</span> <span class="w">Tom</span> <span class="w">Christiansen</span><span class="cm">,</span> <span class="w">brian</span> <span class="w">d</span> <span class="w">foy</span><span class="cm">,</span> <span class="w">Larry</span> <span class="w">Wall</span> <span class="w">with</span> <span class="w">Jon</span> <span class="w">Orwant</span></li><li> <span class="w">ISBN</span> <span class="n">978</span>-<span class="n">0</span>-<span class="n">596</span>-<span class="n">00492</span>-<span class="n">7</span> <span class="s">[</span><span class="n">4</span><span class="w">th</span> <span class="w">edition</span> <span class="w">February</span> <span class="n">2012</span><span class="s">]</span></li><li> <span class="w">ISBN</span> <span class="n">978</span>-<span class="n">1</span>-<span class="n">4493</span>-<span class="n">9890</span>-<span class="n">3</span> <span class="s">[</span><span class="w">ebook</span><span class="s">]</span></li><li> <span class="w">http</span><span class="co">:</span><span class="q">//oreilly</span>.<span class="w">com</span>/<span class="w">catalog</span>/<span class="n">9780596004927</span></li></ol></pre></li>
+</ul>
+<p>The Ram is a cookbook with hundreds of examples of using Perl to
+accomplish specific tasks:</p>
+<ul>
+<li><a class='view-title' id="_The-Perl-Cookbook_-(the-%22Ram-Book%22)%3a"></a><strong><i>The Perl Cookbook</i> (the "Ram Book"):</strong>
+<pre class="verbatim"><ol><li> <span class="w">by</span> <span class="w">Tom</span> <span class="w">Christiansen</span> <a class="l_k" href="functions/and.html">and</a> <span class="w">Nathan</span> <span class="w">Torkington</span><span class="cm">,</span></li><li> <span class="w">with</span> <span class="w">Foreword</span> <span class="w">by</span> <span class="w">Larry</span> <span class="w">Wall</span></li><li> <span class="w">ISBN</span> <span class="n">978</span>-<span class="n">0</span>-<span class="n">596</span>-<span class="n">00313</span>-<span class="n">5</span> <span class="s">[</span><span class="n">2</span><span class="w">nd</span> <span class="w">Edition</span> <span class="w">August</span> <span class="n">2003</span><span class="s">]</span></li><li> <span class="w">ISBN</span> <span class="n">978</span>-<span class="n">0</span>-<span class="n">596</span>-<span class="n">15888</span>-<span class="n">0</span> <span class="s">[</span><span class="w">ebook</span><span class="s">]</span></li><li> <span class="w">http</span><span class="co">:</span><span class="q">//oreilly</span>.<span class="w">com</span>/<span class="w">catalog</span><span class="q">/9780596003135/</span></li></ol></pre></li>
+</ul>
+<p>If you want to learn the basics of Perl, you might start with the
+Llama book, which assumes that you already know a little about
+programming:</p>
+<ul>
+<li><a class='view-title' id="_Learning-Perl_--(the-%22Llama-Book%22)"></a><strong><i>Learning Perl</i>  (the "Llama Book")</strong>
+<pre class="verbatim"><ol><li> <span class="w">by</span> <span class="w">Randal</span> <span class="w">L</span>. <span class="w">Schwartz</span><span class="cm">,</span> <span class="w">Tom</span> <span class="w">Phoenix</span><span class="cm">,</span> <a class="l_k" href="functions/and.html">and</a> <span class="w">brian</span> <span class="w">d</span> <span class="w">foy</span></li><li> <span class="w">ISBN</span> <span class="n">978</span>-<span class="n">1</span>-<span class="n">4493</span>-<span class="n">0358</span>-<span class="n">7</span> <span class="s">[</span><span class="n">6</span><span class="w">th</span> <span class="w">edition</span> <span class="w">June</span> <span class="n">2011</span><span class="s">]</span></li><li> <span class="w">ISBN</span> <span class="n">978</span>-<span class="n">1</span>-<span class="n">4493</span>-<span class="n">0458</span>-<span class="n">4</span> <span class="s">[</span><span class="w">ebook</span><span class="s">]</span></li><li> <span class="w">http</span><span class="co">:</span><span class="q">//</span><span class="w">www</span>.<span class="w">learning</span>-<span class="w">perl</span>.<span class="w">com</span>/</li></ol></pre></li>
+</ul>
+<p>The tutorial started in the Llama continues in the Alpaca, which
+introduces the intermediate features of references, data structures,
+object-oriented programming, and modules:</p>
+<ul>
+<li><a class='view-title' id="_Intermediate-Perl_-(the-%22Alpaca-Book%22)"></a><strong><i>Intermediate Perl</i> (the "Alpaca Book")</strong>
+<pre class="verbatim"><ol><li> <span class="w">by</span> <span class="w">Randal</span> <span class="w">L</span>. <span class="w">Schwartz</span> <a class="l_k" href="functions/and.html">and</a> <span class="w">brian</span> <span class="w">d</span> <span class="w">foy</span><span class="cm">,</span> <span class="w">with</span> <span class="w">Tom</span> <span class="w">Phoenix</span></li><li>         <span class="w">foreword</span> <span class="w">by</span> <span class="w">Damian</span> <span class="w">Conway</span></li><li> <span class="w">ISBN</span> <span class="n">978</span>-<span class="n">1</span>-<span class="n">4493</span>-<span class="n">9309</span>-<span class="n">0</span> <span class="s">[</span><span class="n">2</span><span class="w">nd</span> <span class="w">edition</span> <span class="w">August</span> <span class="n">2012</span><span class="s">]</span></li><li> <span class="w">ISBN</span> <span class="n">978</span>-<span class="n">1</span>-<span class="n">4493</span>-<span class="n">0459</span>-<span class="n">1</span> <span class="s">[</span><span class="w">ebook</span><span class="s">]</span></li><li> <span class="w">http</span><span class="co">:</span><span class="q">//</span><span class="w">www</span>.<span class="w">intermediateperl</span>.<span class="w">com</span>/</li></ol></pre></li>
+</ul>
+<a class='view-head2' id="References"></a><h3 class='h3' >References</h3>
+<p>You might want to keep these desktop references close by your keyboard:</p>
+<ul>
+<li><a class='view-title' id="_Perl-5-Pocket-Reference_"></a><strong><i>Perl 5 Pocket Reference</i></strong>
+<pre class="verbatim"><ol><li> <span class="w">by</span> <span class="w">Johan</span> <span class="w">Vromans</span></li><li> <span class="w">ISBN</span> <span class="n">978</span>-<span class="n">1</span>-<span class="n">4493</span>-<span class="n">0370</span>-<span class="n">9</span> <span class="s">[</span><span class="n">5</span><span class="w">th</span> <span class="w">edition</span> <span class="w">July</span> <span class="n">2011</span><span class="s">]</span></li><li> <span class="w">ISBN</span> <span class="n">978</span>-<span class="n">1</span>-<span class="n">4493</span>-<span class="n">0813</span>-<span class="n">1</span> <span class="s">[</span><span class="w">ebook</span><span class="s">]</span></li><li> <span class="w">http</span><span class="co">:</span><span class="q">//oreilly</span>.<span class="w">com</span>/<span class="w">catalog</span><span class="q">/0636920018476/</span></li></ol></pre></li>
+<li><a class='view-title' id="_Perl-Debugger-Pocket-Reference_"></a><strong><i>Perl Debugger Pocket Reference</i></strong>
+<pre class="verbatim"><ol><li> <span class="w">by</span> <span class="w">Richard</span> <span class="w">Foley</span></li><li> <span class="w">ISBN</span> <span class="n">978</span>-<span class="n">0</span>-<span class="n">596</span>-<span class="n">00503</span>-<span class="n">0</span> <span class="s">[</span><span class="n">1</span><span class="w">st</span> <span class="w">edition</span> <span class="w">January</span> <span class="n">2004</span><span class="s">]</span></li><li> <span class="w">ISBN</span> <span class="n">978</span>-<span class="n">0</span>-<span class="n">596</span>-<span class="n">55625</span>-<span class="n">9</span> <span class="s">[</span><span class="w">ebook</span><span class="s">]</span></li><li> <span class="w">http</span><span class="co">:</span><span class="q">//oreilly</span>.<span class="w">com</span>/<span class="w">catalog</span><span class="q">/9780596005030/</span></li></ol></pre></li>
+<li><a class='view-title' id="_Regular-Expression-Pocket-Reference_"></a><strong><i>Regular Expression Pocket Reference</i></strong>
+<pre class="verbatim"><ol><li> <span class="w">by</span> <span class="w">Tony</span> <span class="w">Stubblebine</span></li><li> <span class="w">ISBN</span> <span class="n">978</span>-<span class="n">0</span>-<span class="n">596</span>-<span class="n">51427</span>-<span class="n">3</span> <span class="s">[</span><span class="n">2</span><span class="w">nd</span> <span class="w">edition</span> <span class="w">July</span> <span class="n">2007</span><span class="s">]</span></li><li> <span class="w">ISBN</span> <span class="n">978</span>-<span class="n">0</span>-<span class="n">596</span>-<span class="n">55782</span>-<span class="n">9</span> <span class="s">[</span><span class="w">ebook</span><span class="s">]</span></li><li> <span class="w">http</span><span class="co">:</span><span class="q">//oreilly</span>.<span class="w">com</span>/<span class="w">catalog</span><span class="q">/9780596514273/</span></li></ol></pre></li>
+</ul>
+<a class='view-head2' id="Tutorials"></a><h3 class='h3' >Tutorials</h3>
+<ul>
+<li><a class='view-title' id="_Beginning-Perl_"></a><strong><i>Beginning Perl</i></strong>
+<p>(There are 2 books with this title)</p>
+<pre class="verbatim"><ol><li> <span class="w">by</span> <span class="w">Curtis</span> <span class="q">&#39;Ovid&#39;</span> <span class="w">Poe</span></li><li> <span class="w">ISBN</span> <span class="n">978</span>-<span class="n">1</span>-<span class="n">118</span>-<span class="n">01384</span>-<span class="n">7</span></li><li> <span class="w">http</span><span class="co">:</span><span class="q">//</span><span class="w">www</span>.<span class="w">wrox</span>.<span class="w">com</span>/<span class="w">WileyCDA</span>/<span class="w">WroxTitle</span>/<span class="w">productCd</span>-<span class="n">1118013840.</span><span class="w">html</span></li><li></li><li> <span class="w">by</span> <span class="w">James</span> <span class="w">Lee</span></li><li> <span class="w">ISBN</span> <span class="n">1</span>-<span class="n">59059</span>-<span class="n">391</span>-<span class="w">X</span> <span class="s">[</span><span class="n">3</span><span class="w">rd</span> <span class="w">edition</span> <span class="w">April</span> <span class="n">2010</span> &amp; <span class="w">ebook</span><span class="s">]</span></li><li> <span class="w">http</span><span class="co">:</span><span class="q">//</span><span class="w">www</span>.<span class="w">apress</span>.<span class="w">com</span>/<span class="n">9781430227939</span></li></ol></pre></li>
+<li><a class='view-title' id="_Learning-Perl_-(the-%22Llama-Book%22)"></a><strong><i>Learning Perl</i> (the "Llama Book")</strong>
+<pre class="verbatim"><ol><li> <span class="w">by</span> <span class="w">Randal</span> <span class="w">L</span>. <span class="w">Schwartz</span><span class="cm">,</span> <span class="w">Tom</span> <span class="w">Phoenix</span><span class="cm">,</span> <a class="l_k" href="functions/and.html">and</a> <span class="w">brian</span> <span class="w">d</span> <span class="w">foy</span></li><li> <span class="w">ISBN</span> <span class="n">978</span>-<span class="n">1</span>-<span class="n">4493</span>-<span class="n">0358</span>-<span class="n">7</span> <span class="s">[</span><span class="n">6</span><span class="w">th</span> <span class="w">edition</span> <span class="w">June</span> <span class="n">2011</span><span class="s">]</span></li><li> <span class="w">ISBN</span> <span class="n">978</span>-<span class="n">1</span>-<span class="n">4493</span>-<span class="n">0458</span>-<span class="n">4</span> <span class="s">[</span><span class="w">ebook</span><span class="s">]</span></li><li> <span class="w">http</span><span class="co">:</span><span class="q">//</span><span class="w">www</span>.<span class="w">learning</span>-<span class="w">perl</span>.<span class="w">com</span>/</li></ol></pre></li>
+<li><a class='view-title' id="_Intermediate-Perl_-(the-%22Alpaca-Book%22)"></a><strong><i>Intermediate Perl</i> (the "Alpaca Book")</strong>
+<pre class="verbatim"><ol><li> <span class="w">by</span> <span class="w">Randal</span> <span class="w">L</span>. <span class="w">Schwartz</span> <a class="l_k" href="functions/and.html">and</a> <span class="w">brian</span> <span class="w">d</span> <span class="w">foy</span><span class="cm">,</span> <span class="w">with</span> <span class="w">Tom</span> <span class="w">Phoenix</span></li><li>         <span class="w">foreword</span> <span class="w">by</span> <span class="w">Damian</span> <span class="w">Conway</span></li><li> <span class="w">ISBN</span> <span class="n">978</span>-<span class="n">1</span>-<span class="n">4493</span>-<span class="n">9309</span>-<span class="n">0</span> <span class="s">[</span><span class="n">2</span><span class="w">nd</span> <span class="w">edition</span> <span class="w">August</span> <span class="n">2012</span><span class="s">]</span></li><li> <span class="w">ISBN</span> <span class="n">978</span>-<span class="n">1</span>-<span class="n">4493</span>-<span class="n">0459</span>-<span class="n">1</span> <span class="s">[</span><span class="w">ebook</span><span class="s">]</span></li><li> <span class="w">http</span><span class="co">:</span><span class="q">//</span><span class="w">www</span>.<span class="w">intermediateperl</span>.<span class="w">com</span>/</li></ol></pre></li>
+<li><a class='view-title' id="_Mastering-Perl_"></a><strong><i>Mastering Perl</i></strong>
+<pre class="verbatim"><ol><li>    <span class="w">by</span> <span class="w">brian</span> <span class="w">d</span> <span class="w">foy</span></li><li> <span class="w">ISBN</span> <span class="n">9978</span>-<span class="n">1</span>-<span class="n">4493</span>-<span class="n">9311</span>-<span class="n">3</span> <span class="s">[</span><span class="n">2</span><span class="w">st</span> <span class="w">edition</span> <span class="w">January</span> <span class="n">2014</span><span class="s">]</span></li><li> <span class="w">ISBN</span> <span class="n">978</span>-<span class="n">1</span>-<span class="n">4493</span>-<span class="n">6487</span>-<span class="n">8</span> <span class="s">[</span><span class="w">ebook</span><span class="s">]</span></li><li> <span class="w">http</span><span class="co">:</span><span class="q">//</span><span class="w">www</span>.<span class="w">masteringperl</span>.<span class="w">org</span>/</li></ol></pre></li>
+<li><a class='view-title' id="_Effective-Perl-Programming_"></a><strong><i>Effective Perl Programming</i></strong>
+<pre class="verbatim"><ol><li> <span class="w">by</span> <span class="w">Joseph</span> <span class="w">N</span>. <span class="w">Hall</span><span class="cm">,</span> <span class="w">Joshua</span> <span class="w">A</span>. <span class="w">McAdams</span><span class="cm">,</span> <span class="w">brian</span> <span class="w">d</span> <span class="w">foy</span></li><li> <span class="w">ISBN</span> <span class="n">0</span>-<span class="n">321</span>-<span class="n">49694</span>-<span class="n">9</span> <span class="s">[</span><span class="n">2</span><span class="w">nd</span> <span class="w">edition</span> <span class="n">2010</span><span class="s">]</span></li><li> <span class="w">http</span><span class="co">:</span><span class="q">//</span><span class="w">www</span>.<span class="w">effectiveperlprogramming</span>.<span class="w">com</span>/</li></ol></pre></li>
+</ul>
+<a class='view-head2' id="Task-Oriented"></a><h3 class='h3' >Task-Oriented</h3>
+<ul>
+<li><a class='view-title' id="_Writing-Perl-Modules-for-CPAN_"></a><strong><i>Writing Perl Modules for CPAN</i></strong>
+<pre class="verbatim"><ol><li> <span class="w">by</span> <span class="w">Sam</span> <span class="w">Tregar</span></li><li> <span class="w">ISBN</span> <span class="n">1</span>-<span class="n">59059</span>-<span class="n">018</span>-<span class="w">X</span> <span class="s">[</span><span class="n">1</span><span class="w">st</span> <span class="w">edition</span> <span class="w">August</span> <span class="n">2002</span> &amp; <span class="w">ebook</span><span class="s">]</span></li><li> <span class="w">http</span><span class="co">:</span><span class="q">//</span><span class="w">www</span>.<span class="w">apress</span>.<span class="w">com</span>/<span class="n">9781590590188</span></li></ol></pre></li>
+<li><a class='view-title' id="_The-Perl-Cookbook_"></a><strong><i>The Perl Cookbook</i></strong>
+<pre class="verbatim"><ol><li> <span class="w">by</span> <span class="w">Tom</span> <span class="w">Christiansen</span> <a class="l_k" href="functions/and.html">and</a> <span class="w">Nathan</span> <span class="w">Torkington</span><span class="cm">,</span></li><li>     <span class="w">with</span> <span class="w">Foreword</span> <span class="w">by</span> <span class="w">Larry</span> <span class="w">Wall</span></li><li> <span class="w">ISBN</span> <span class="n">978</span>-<span class="n">0</span>-<span class="n">596</span>-<span class="n">00313</span>-<span class="n">5</span> <span class="s">[</span><span class="n">2</span><span class="w">nd</span> <span class="w">Edition</span> <span class="w">August</span> <span class="n">2003</span><span class="s">]</span></li><li> <span class="w">ISBN</span> <span class="n">978</span>-<span class="n">0</span>-<span class="n">596</span>-<span class="n">15888</span>-<span class="n">0</span> <span class="s">[</span><span class="w">ebook</span><span class="s">]</span></li><li> <span class="w">http</span><span class="co">:</span><span class="q">//oreilly</span>.<span class="w">com</span>/<span class="w">catalog</span><span class="q">/9780596003135/</span></li></ol></pre></li>
+<li><a class='view-title' id="_Automating-System-Administration-with-Perl_"></a><strong><i>Automating System Administration with Perl</i></strong>
+<pre class="verbatim"><ol><li> <span class="w">by</span> <span class="w">David</span> <span class="w">N</span>. <span class="w">Blank</span>-<span class="w">Edelman</span></li><li> <span class="w">ISBN</span> <span class="n">978</span>-<span class="n">0</span>-<span class="n">596</span>-<span class="n">00639</span>-<span class="n">6</span> <span class="s">[</span><span class="n">2</span><span class="w">nd</span> <span class="w">edition</span> <span class="w">May</span> <span class="n">2009</span><span class="s">]</span></li><li> <span class="w">ISBN</span> <span class="n">978</span>-<span class="n">0</span>-<span class="n">596</span>-<span class="n">80251</span>-<span class="n">6</span> <span class="s">[</span><span class="w">ebook</span><span class="s">]</span></li><li> <span class="w">http</span><span class="co">:</span><span class="q">//oreilly</span>.<span class="w">com</span>/<span class="w">catalog</span>/<span class="n">9780596006396</span></li></ol></pre></li>
+<li><a class='view-title' id="_Real-World-SQL-Server-Administration-with-Perl_"></a><strong><i>Real World SQL Server Administration with Perl</i></strong>
+<pre class="verbatim"><ol><li> <span class="w">by</span> <span class="w">Linchi</span> <span class="w">Shea</span></li><li> <span class="w">ISBN</span> <span class="n">1</span>-<span class="n">59059</span>-<span class="n">097</span>-<span class="w">X</span> <span class="s">[</span><span class="n">1</span><span class="w">st</span> <span class="w">edition</span> <span class="w">July</span> <span class="n">2003</span> &amp; <span class="w">ebook</span><span class="s">]</span></li><li> <span class="w">http</span><span class="co">:</span><span class="q">//</span><span class="w">www</span>.<span class="w">apress</span>.<span class="w">com</span>/<span class="n">9781590590973</span></li></ol></pre></li>
+</ul>
+<a class='view-head2' id="Special-Topics"></a><h3 class='h3' >Special Topics</h3>
+<ul>
+<li><a class='view-title' id="_Regular-Expressions-Cookbook_"></a><strong><i>Regular Expressions Cookbook</i></strong>
+<pre class="verbatim"><ol><li> <span class="w">by</span> <span class="w">Jan</span> <span class="w">Goyvaerts</span> <a class="l_k" href="functions/and.html">and</a> <span class="w">Steven</span> <span class="w">Levithan</span></li><li> <span class="w">ISBN</span> <span class="n">978</span>-<span class="n">1</span>-<span class="n">4493</span>-<span class="n">1943</span>-<span class="n">4</span> <span class="s">[</span><span class="n">2</span><span class="w">nd</span> <span class="w">edition</span> <span class="w">August</span> <span class="n">2012</span><span class="s">]</span></li><li> <span class="w">ISBN</span> <span class="n">978</span>-<span class="n">1</span>-<span class="n">4493</span>-<span class="n">2747</span>-<span class="n">7</span> <span class="s">[</span><span class="w">ebook</span><span class="s">]</span></li><li> <span class="w">http</span><span class="co">:</span><span class="q">//shop</span>.<span class="w">oreilly</span>.<span class="w">com</span>/<span class="w">product</span>/<span class="n">0636920023630</span>.<a class="l_k" href="functions/do.html">do</a></li></ol></pre></li>
+<li><a class='view-title' id="_Programming-the-Perl-DBI_"></a><strong><i>Programming the Perl DBI</i></strong>
+<pre class="verbatim"><ol><li> <span class="w">by</span> <span class="w">Tim</span> <span class="w">Bunce</span> <a class="l_k" href="functions/and.html">and</a> <span class="w">Alligator</span> <span class="w">Descartes</span></li><li> <span class="w">ISBN</span> <span class="n">978</span>-<span class="n">1</span>-<span class="n">56592</span>-<span class="n">699</span>-<span class="n">8</span> <span class="s">[</span><span class="w">February</span> <span class="n">2000</span><span class="s">]</span></li><li> <span class="w">ISBN</span> <span class="n">978</span>-<span class="n">1</span>-<span class="n">4493</span>-<span class="n">8670</span>-<span class="n">2</span> <span class="s">[</span><span class="w">ebook</span><span class="s">]</span></li><li> <span class="w">http</span><span class="co">:</span><span class="q">//oreilly</span>.<span class="w">com</span>/<span class="w">catalog</span>/<span class="n">9781565926998</span></li></ol></pre></li>
+<li><a class='view-title' id="_Perl-Best-Practices_"></a><strong><i>Perl Best Practices</i></strong>
+<pre class="verbatim"><ol><li> <span class="w">by</span> <span class="w">Damian</span> <span class="w">Conway</span></li><li> <span class="w">ISBN</span> <span class="n">978</span>-<span class="n">0</span>-<span class="n">596</span>-<span class="n">00173</span>-<span class="n">5</span> <span class="s">[</span><span class="n">1</span><span class="w">st</span> <span class="w">edition</span> <span class="w">July</span> <span class="n">2005</span><span class="s">]</span></li><li> <span class="w">ISBN</span> <span class="n">978</span>-<span class="n">0</span>-<span class="n">596</span>-<span class="n">15900</span>-<span class="n">9</span> <span class="s">[</span><span class="w">ebook</span><span class="s">]</span></li><li> <span class="w">http</span><span class="co">:</span><span class="q">//oreilly</span>.<span class="w">com</span>/<span class="w">catalog</span>/<span class="n">9780596001735</span></li></ol></pre></li>
+<li><a class='view-title' id="_Higher-Order-Perl_"></a><strong><i>Higher-Order Perl</i></strong>
+<pre class="verbatim"><ol><li> <span class="w">by</span> <span class="w">Mark</span>-<span class="w">Jason</span> <span class="w">Dominus</span></li><li> <span class="w">ISBN</span> <span class="n">1</span>-<span class="n">55860</span>-<span class="n">701</span>-<span class="n">3</span> <span class="s">[</span><span class="n">1</span><span class="w">st</span> <span class="w">edition</span> <span class="w">March</span> <span class="n">2005</span><span class="s">]</span></li><li> <span class="w">free</span> <span class="w">ebook</span> <span class="w">http</span><span class="co">:</span><span class="q">//</span><span class="w">hop</span>.<span class="w">perl</span>.<span class="w">plover</span>.<span class="w">com</span>/<span class="w">book</span>/</li><li> <span class="w">http</span><span class="co">:</span><span class="q">//</span><span class="w">hop</span>.<span class="w">perl</span>.<span class="w">plover</span>.<span class="w">com</span>/</li></ol></pre></li>
+<li><a class='view-title' id="_Mastering-Regular-Expressions_"></a><strong><i>Mastering Regular Expressions</i></strong>
+<pre class="verbatim"><ol><li> <span class="w">by</span> <span class="w">Jeffrey</span> <span class="w">E</span>. <span class="w">F</span>. <span class="w">Friedl</span></li><li> <span class="w">ISBN</span> <span class="n">978</span>-<span class="n">0</span>-<span class="n">596</span>-<span class="n">52812</span>-<span class="n">6</span> <span class="s">[</span><span class="n">3</span><span class="w">rd</span> <span class="w">edition</span> <span class="w">August</span> <span class="n">2006</span><span class="s">]</span></li><li> <span class="w">ISBN</span> <span class="n">978</span>-<span class="n">0</span>-<span class="n">596</span>-<span class="n">55899</span>-<span class="n">4</span> <span class="s">[</span><span class="w">ebook</span><span class="s">]</span></li><li> <span class="w">http</span><span class="co">:</span><span class="q">//oreilly</span>.<span class="w">com</span>/<span class="w">catalog</span>/<span class="n">9780596528126</span></li></ol></pre></li>
+<li><a class='view-title' id="_Network-Programming-with-Perl_"></a><strong><i>Network Programming with Perl</i></strong>
+<pre class="verbatim"><ol><li> <span class="w">by</span> <span class="w">Lincoln</span> <span class="w">Stein</span></li><li> <span class="w">ISBN</span> <span class="n">0</span>-<span class="n">201</span>-<span class="n">61571</span>-<span class="n">1</span> <span class="s">[</span><span class="n">1</span><span class="w">st</span> <span class="w">edition</span> <span class="n">2001</span><span class="s">]</span></li><li> <span class="w">http</span><span class="co">:</span><span class="q">//</span><span class="w">www</span>.<span class="w">pearsonhighered</span>.<span class="w">com</span>/<span class="w">educator</span><span class="q">/product/</span><span class="w">Network</span>-<span class="w">Programming</span>-<span class="w">with</span>-<span class="w">Perl</span>/<span class="n">9780201615715.</span><span class="w">page</span></li></ol></pre></li>
+<li><a class='view-title' id="_Perl-Template-Toolkit_"></a><strong><i>Perl Template Toolkit</i></strong>
+<pre class="verbatim"><ol><li> <span class="w">by</span> <span class="w">Darren</span> <span class="w">Chamberlain</span><span class="cm">,</span> <span class="w">Dave</span> <span class="w">Cross</span><span class="cm">,</span> <a class="l_k" href="functions/and.html">and</a> <span class="w">Andy</span> <span class="w">Wardley</span></li><li> <span class="w">ISBN</span> <span class="n">978</span>-<span class="n">0</span>-<span class="n">596</span>-<span class="n">00476</span>-<span class="n">7</span> <span class="s">[</span><span class="w">December</span> <span class="n">2003</span><span class="s">]</span></li><li> <span class="w">ISBN</span> <span class="n">978</span>-<span class="n">1</span>-<span class="n">4493</span>-<span class="n">8647</span>-<span class="n">4</span> <span class="s">[</span><span class="w">ebook</span><span class="s">]</span></li><li> <span class="w">http</span><span class="co">:</span><span class="q">//oreilly</span>.<span class="w">com</span>/<span class="w">catalog</span>/<span class="n">9780596004767</span></li></ol></pre></li>
+<li><a class='view-title' id="_Object-Oriented-Perl_"></a><strong><i>Object Oriented Perl</i></strong>
+<pre class="verbatim"><ol><li> <span class="w">by</span> <span class="w">Damian</span> <span class="w">Conway</span></li><li>     <span class="w">with</span> <span class="w">foreword</span> <span class="w">by</span> <span class="w">Randal</span> <span class="w">L</span>. <span class="w">Schwartz</span></li><li> <span class="w">ISBN</span> <span class="n">1</span>-<span class="n">884777</span>-<span class="n">79</span>-<span class="n">1</span> <span class="s">[</span><span class="n">1</span><span class="w">st</span> <span class="w">edition</span> <span class="w">August</span> <span class="n">1999</span> &amp; <span class="w">ebook</span><span class="s">]</span></li><li> <span class="w">http</span><span class="co">:</span><span class="q">//</span><span class="w">www</span>.<span class="w">manning</span>.<span class="w">com</span><span class="q">/conway/</span></li></ol></pre></li>
+<li><a class='view-title' id="_Data-Munging-with-Perl_"></a><strong><i>Data Munging with Perl</i></strong>
+<pre class="verbatim"><ol><li> <span class="w">by</span> <span class="w">Dave</span> <span class="w">Cross</span></li><li> <span class="w">ISBN</span> <span class="n">1</span>-<span class="n">930110</span>-<span class="n">00</span>-<span class="n">6</span> <span class="s">[</span><span class="n">1</span><span class="w">st</span> <span class="w">edition</span> <span class="n">2001</span> &amp; <span class="w">ebook</span><span class="s">]</span></li><li> <span class="w">http</span><span class="co">:</span><span class="q">//</span><span class="w">www</span>.<span class="w">manning</span>.<span class="w">com</span>/<span class="w">cross</span></li></ol></pre></li>
+<li><a class='view-title' id="_Mastering-Perl%2fTk_"></a><strong><i>Mastering Perl/Tk</i></strong>
+<pre class="verbatim"><ol><li> <span class="w">by</span> <span class="w">Steve</span> <span class="w">Lidie</span> <a class="l_k" href="functions/and.html">and</a> <span class="w">Nancy</span> <span class="w">Walsh</span></li><li> <span class="w">ISBN</span> <span class="n">978</span>-<span class="n">1</span>-<span class="n">56592</span>-<span class="n">716</span>-<span class="n">2</span> <span class="s">[</span><span class="n">1</span><span class="w">st</span> <span class="w">edition</span> <span class="w">January</span> <span class="n">2002</span><span class="s">]</span></li><li> <span class="w">ISBN</span> <span class="n">978</span>-<span class="n">0</span>-<span class="n">596</span>-<span class="n">10344</span>-<span class="n">6</span> <span class="s">[</span><span class="w">ebook</span><span class="s">]</span></li><li> <span class="w">http</span><span class="co">:</span><span class="q">//oreilly</span>.<span class="w">com</span>/<span class="w">catalog</span>/<span class="n">9781565927162</span></li></ol></pre></li>
+<li><a class='view-title' id="_Extending-and-Embedding-Perl_"></a><strong><i>Extending and Embedding Perl</i></strong>
+<pre class="verbatim"><ol><li> <span class="w">by</span> <span class="w">Tim</span> <span class="w">Jenness</span> <a class="l_k" href="functions/and.html">and</a> <span class="w">Simon</span> <span class="w">Cozens</span></li><li> <span class="w">ISBN</span> <span class="n">1</span>-<span class="n">930110</span>-<span class="n">82</span>-<span class="n">0</span> <span class="s">[</span><span class="n">1</span><span class="w">st</span> <span class="w">edition</span> <span class="w">August</span> <span class="n">2002</span> &amp; <span class="w">ebook</span><span class="s">]</span></li><li> <span class="w">http</span><span class="co">:</span><span class="q">//</span><span class="w">www</span>.<span class="w">manning</span>.<span class="w">com</span>/<span class="w">jenness</span></li></ol></pre></li>
+<li><a class='view-title' id="_Pro-Perl-Debugging_"></a><strong><i>Pro Perl Debugging</i></strong>
+<pre class="verbatim"><ol><li> <span class="w">by</span> <span class="w">Richard</span> <span class="w">Foley</span> <span class="w">with</span> <span class="w">Andy</span> <span class="w">Lester</span></li><li> <span class="w">ISBN</span> <span class="n">1</span>-<span class="n">59059</span>-<span class="n">454</span>-<span class="n">1</span> <span class="s">[</span><span class="n">1</span><span class="w">st</span> <span class="w">edition</span> <span class="w">July</span> <span class="n">2005</span> &amp; <span class="w">ebook</span><span class="s">]</span></li><li> <span class="w">http</span><span class="co">:</span><span class="q">//</span><span class="w">www</span>.<span class="w">apress</span>.<span class="w">com</span>/<span class="n">9781590594544</span></li></ol></pre></li>
+</ul>
+<a class='view-head2' id="Free-(as-in-beer)-books"></a><h3 class='h3' >Free (as in beer) books</h3>
+<p>Some of these books are available as free downloads.</p>
+<p><i>Higher-Order Perl</i>: <a href="http://hop.perl.plover.com/">http://hop.perl.plover.com/</a></p>
+<p><i>Modern Perl</i>: <a href="http://onyxneon.com/books/modern_perl/">http://onyxneon.com/books/modern_perl/</a></p>
+<a class='view-head2' id="Other-interesting%2c-non-Perl-books"></a><h3 class='h3' >Other interesting, non-Perl books</h3>
+<p>You might notice several familiar Perl concepts in this collection of
+ACM columns from Jon Bentley. The similarity to the title of the major
+Perl book (which came later) is not completely accidental:</p>
+<ul>
+<li><a class='view-title' id="_Programming-Pearls_"></a><strong><i>Programming Pearls</i></strong>
+<pre class="verbatim"><ol><li> <span class="w">by</span> <span class="w">Jon</span> <span class="w">Bentley</span></li><li> <span class="w">ISBN</span> <span class="n">978</span>-<span class="n">0</span>-<span class="n">201</span>-<span class="n">65788</span>-<span class="n">3</span> <span class="s">[</span><span class="n">2</span> <span class="w">edition</span><span class="cm">,</span> <span class="w">October</span> <span class="n">1999</span><span class="s">]</span></li></ol></pre></li>
+<li><a class='view-title' id="_More-Programming-Pearls_"></a><strong><i>More Programming Pearls</i></strong>
+<pre class="verbatim"><ol><li> <span class="w">by</span> <span class="w">Jon</span> <span class="w">Bentley</span></li><li> <span class="w">ISBN</span> <span class="n">0</span>-<span class="n">201</span>-<span class="n">11889</span>-<span class="n">0</span> <span class="s">[</span><span class="w">January</span> <span class="n">1988</span><span class="s">]</span></li></ol></pre></li>
+</ul>
+<a class='view-head2' id="A-note-on-freshness"></a><h3 class='h3' >A note on freshness</h3>
+<p>Each version of Perl comes with the documentation that was current at
+the time of release. This poses a problem for content such as book
+lists. There are probably very nice books published after this list
+was included in your Perl release, and you can check the latest
+released version at <a href="http://perldoc.perl.org/perlbook.html">http://perldoc.perl.org/perlbook.html</a> .</p>
+<p>Some of the books we've listed appear almost ancient in internet
+scale, but we've included those books because they still describe the
+current way of doing things. Not everything in Perl changes every day.
+Many of the beginner-level books, too, go over basic features and
+techniques that are still valid today. In general though, we try to
+limit this list to books published in the past five years.</p>
+<a class='view-head2' id="Get-your-book-listed"></a><h3 class='h3' >Get your book listed</h3>
+<p>If your Perl book isn't listed and you think it should be, let us know.
+<a href="mailto:perl5-porters@perl.org">mailto:perl5-porters@perl.org</a></p>
+
+
+
+
+      <ul><li><a href="#NAME">NAME</a></li><li><a href="#DESCRIPTION">DESCRIPTION</a></li><ul><li><a href="#The-most-popular-books">The most popular books</a></li><li><a href="#References">References</a></li><li><a href="#Tutorials">Tutorials</a></li><li><a href="#Task-Oriented">Task-Oriented</a></li><li><a href="#Special-Topics">Special Topics</a></li><li><a href="#Free-(as-in-beer)-books">Free (as in beer) books</a></li><li><a href="#Other-interesting%2c-non-Perl-books">Other interesting, non-Perl books</a></li><li><a href="#A-note-on-freshness">A note on freshness</a></li><li><a href="#Get-your-book-listed">Get your book listed</a></li></ul></ul>
+
+
+                  </div>
+                </article>
+              </div>
+            </div>
+          </main>
+        </div>
+           <footer class="footer row bg-light pt-5 pb-5">
+       <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+           <div class="row">
+               <div class="col-md-4">
+                   <ul class="list-unstyled">
+                       <li>
+                           <h4>Site info</h4>
+                       </li>
+                       <li>Docs mantained by
+                           <a href="//lists.perl.org/list/perl5-porters.html"
+                               rel="noopener">Perl 5 Porters</a>
+                       </li>
+                       <li>Perldoc site development sponsored by
+                           <a href="//opusvl.com" rel="noopener">
+                           <img style="margin: 20px 20px 5px 10px" class="opus-logo" src="/public/img/opusvl_logo.svg" alt="OpusVL Logo">
+                        </a>
+                    <li><span class="about_perldoc"><a href="//about.html">About PerlDOC</a></span>
+                    </li>
+                       </li>
+                   </ul>
+               </div>
+               <div class="col-md-8">
+                   <div class="row">
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Manuals</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.28.1/index-overview.html">Overview</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.28.1/index-tutorials.html">Tutorials</a>
+                               </li>
+                               <li>
+                                   <a href="/5.28.1/index-faq.html">FAQs</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.28.1/index-history.html">Changes</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Reference</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.28.1/index-language.html">Language</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.28.1/index-functions.html">Functions</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.28.1/perlop.html">Operators</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.28.1/perlvar.html">Variables</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Modules</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.28.1/index-modules-A.html">Modules</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.28.1/index-pragmas.html">Pragmas</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.28.1/index-utilities.html">Utilities</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Misc</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.28.1/index-licence.html">License</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.28.1/index-internals.html">Internals</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.28.1/index-platforms.html">Platforms</a>
+                               </li>
+                            <li>
+                                <a
+                                    href="/5.28.1/index-about.html">About</a>
+                            </li>
+                           </ul>
+                       </div>
+                   </div>
+               </div>
+               <div class=" col-12 footer-inf text-center">
+                   <small>perldoc.perl.org - Official documentation for the Perl
+                       programming language</small>
+               </div>
+           </div>
+       </div>
+   </footer>
+
+        	<div class="beta-wrapper beta-bottom-right ">
+		<div class="beta beta-blue  ">
+			<a class="beta-link "
+				href="//github.com/OpusVL/perldoc.perl.org/issues/new" rel="noopener">
+				<span class="beta-text">
+					This website is a Beta release.
+				</span>
+				<span class="beta-text">
+					For any issues please raise a ticket on GitHub
+				</span>
+			</a>
+		</div>
+	</div>
+
+        <script src="/public/js/main.min.js"></script>
+      </body>
+
+      </html>

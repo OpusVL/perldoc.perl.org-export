@@ -1,0 +1,953 @@
+      
+      
+      
+      
+
+      <!DOCTYPE html>
+      <html lang="en">
+
+      <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="open - perldoc.perl.org">
+        <link rel="icon" href="/public/img/favicon.ico">
+        <title>open - perldoc.perl.org</title>
+        <link href="/public/css/main.min.css" rel="stylesheet">
+        <link rel="canonical" href="/functions/open.html">
+        <link
+          href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900'
+          rel='stylesheet' type='text/css'>
+        <script>
+          window.ga = window.ga || function () {
+            (ga.q = ga.q || []).push(arguments)
+          };
+          ga.l = +new Date;
+          ga('create', 'UA-1892152-2', 'auto'); // JJ's account
+          ga('create', 'UA-50555-3', 'auto', 'perlOrg'); // perl.org account
+          ga('require', 'outboundLinkTracker', {
+            events: ['click', 'auxclick', 'contextmenu'],
+          });
+          ga('require', 'maxScrollTracker');
+          ga('send', 'pageview');
+          ga('perlOrg.send', 'pageview');
+        </script>
+        <script async src="https://www.google-analytics.com/analytics.js">
+        </script>
+        <script async src="/public/js/tracking.min.js"></script>
+      </head>
+
+      <body class="body container-fluid ">
+        <div class="wrapper">
+
+          <nav
+    class="navbar navbar-dark bg-primary bg-perl fixed-top justify-content-between navbar-expand-lg">
+    <a href="#content" class="skippy sr-only sr-only-focusable">
+        <span class=' skippy-text'>Skip to main content</span>
+    </a>
+    <a class="navbar-brand" href="/">
+        <img class="logo" src="/public/img/logo_perl_doc.svg"
+            alt="Perl Documentation Logo" />
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse"
+        data-target="#navbar" aria-controls="navbar" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="navbar" class="collapse navbar-collapse ">
+        <ul class="navbar-nav ml-auto navbar-right">
+            <form class="nav-item dropdown search-wrapper">
+                <input type="text" id='searchinput' aria-describedby='navbarDropdown5'
+                    placeholder="Type query" class='search-input-field' value=''>
+
+                <button href="#" data-toggle='dropdown' type="button"
+                    aria-haspopup="true" aria-expanded='false' id="navbarDropdown5"
+                    class="nav-link dropdown-toggle search-link">
+                    <object tabindex='-1' focusable="false" class='search-icon'
+                        data="/public/img/search.svg" type="image/svg+xml"
+                        name='search icon'>search
+                        icon</object>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown5"
+                    id='search-results'>
+                    <p class='dropdown-item major-version'>
+                        No results
+                    </p>
+                </div>
+            </form>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown" href="#" class="nav-link dropdown-toggle"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Perl versions</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    
+                        <p class='dropdown-item major-version'>
+                            5.32
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.32.0/">5.32.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.30
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.3/">5.30.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.2/">5.30.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.1/">5.30.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.0/">5.30.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.28
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.3/">5.28.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.2/">5.28.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.1/">5.28.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.0/">5.28.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.26
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.3/">5.26.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.2/">5.26.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.1/">5.26.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.0/">5.26.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.24
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.4/">5.24.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.3/">5.24.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.2/">5.24.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.1/">5.24.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.0/">5.24.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.22
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.4/">5.22.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.3/">5.22.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.2/">5.22.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.1/">5.22.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.0/">5.22.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.20
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.3/">5.20.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.2/">5.20.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.1/">5.20.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.0/">5.20.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.18
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.4/">5.18.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.3/">5.18.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.2/">5.18.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.1/">5.18.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.0/">5.18.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.16
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.3/">5.16.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.2/">5.16.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.1/">5.16.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.0/">5.16.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.14
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.4/">5.14.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.3/">5.14.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.2/">5.14.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.1/">5.14.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.0/">5.14.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.12
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.5/">5.12.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.4/">5.12.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.3/">5.12.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.2/">5.12.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.1/">5.12.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.0/">5.12.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.10
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.1/">5.10.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.0/">5.10.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.8
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.9/">5.8.9</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.8/">5.8.8</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.7/">5.8.7</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.6/">5.8.6</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.5/">5.8.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.4/">5.8.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.3/">5.8.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.2/">5.8.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.1/">5.8.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.0/">5.8.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.6
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.2/">5.6.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.1/">5.6.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.0/">5.6.0</a>
+                        
+                        
+                    
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown1" href="#" class="dropdown-toggle nav-link"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Manuals</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                    <a class="dropdown-item"
+                        href="/5.16.3/index-overview.html">Overview</a>
+                    <a class="dropdown-item"
+                        href="/5.16.3/index-tutorials.html">Tutorials</a>
+                    <a class="dropdown-item"
+                        href="/5.16.3/index-faq.html">FAQs</a>
+                    <a class="dropdown-item"
+                        href="/5.16.3/index-history.html">Changes</a>
+                    <a class="dropdown-item"
+                        href="/5.16.3/index-licence.html">License</a>
+                    <a class="dropdown-item"
+                        href="/5.16.3/index-language.html">Language</a>
+                    <a class="dropdown-item"
+                        href="/5.16.3/index-functions.html">Functions</a>
+                    <a class="dropdown-item"
+                        href="/5.16.3/perlop.html">Operators</a>
+                    <a class="dropdown-item"
+                        href="/5.16.3/perlvar.html">Variables</a>
+                    <a class="dropdown-item"
+                        href="/5.16.3/index-pragmas.html">Pragmas</a>
+                    <a class="dropdown-item"
+                        href="/5.16.3/index-utilities.html">Utilities</a>
+                    <a class="dropdown-item"
+                        href="/5.16.3/index-internals.html">Internals</a>
+                    <a class="dropdown-item"
+                        href="/5.16.3/index-platforms.html">Platforms</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown3" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Modules</a>
+                <div aria-labelledby="navbarDropdown3"
+                    class="dropdown-menu letters-wrap">
+                    <!--<a class="dropdown-item"
+                        href="/5.16.3/index-modules.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.16.3/index-modules-by-cat.html">By
+                        Category</a>-->
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.16.3/index-modules-A.html">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.3/index-modules-B.html">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.3/index-modules-C.html">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.3/index-modules-D.html">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.3/index-modules-E.html">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.3/index-modules-F.html">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.3/index-modules-G.html">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.3/index-modules-H.html">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.3/index-modules-I.html">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.3/index-modules-J.html">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.3/index-modules-K.html">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.3/index-modules-L.html">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.3/index-modules-M.html">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.3/index-modules-N.html">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.3/index-modules-O.html">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.3/index-modules-P.html">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.3/index-modules-Q.html">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.3/index-modules-R.html">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.3/index-modules-S.html">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.3/index-modules-T.html">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.3/index-modules-U.html">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.3/index-modules-V.html">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.3/index-modules-W.html">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.3/index-modules-X.html">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.3/index-modules-Y.html">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.3/index-modules-Z.html">Z</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown4" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Functions</a>
+                <div aria-labelledby="navbarDropdown4"
+                    class="dropdown-menu letters-wrap">
+                    <a class="dropdown-item"
+                        href="/5.16.3/index-functions.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.16.3/index-functions-by-cat.html">By
+                        Category</a>
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.16.3/index-functions.html#A">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.3/index-functions.html#B">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.3/index-functions.html#C">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.3/index-functions.html#D">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.3/index-functions.html#E">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.3/index-functions.html#F">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.3/index-functions.html#G">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.3/index-functions.html#H">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.3/index-functions.html#I">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.3/index-functions.html#J">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.3/index-functions.html#K">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.3/index-functions.html#L">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.3/index-functions.html#M">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.3/index-functions.html#N">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.3/index-functions.html#O">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.3/index-functions.html#P">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.3/index-functions.html#Q">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.3/index-functions.html#R">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.3/index-functions.html#S">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.3/index-functions.html#T">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.3/index-functions.html#U">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.3/index-functions.html#V">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.3/index-functions.html#W">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.3/index-functions.html#X">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.3/index-functions.html#Y">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.3/index-functions.html#Z">Z</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!--/.nav-collapse -->
+</nav>
+
+
+          <main class="row main-content pb-5 pt-5" id='content'>
+            <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+              <div class="row">
+                <div class="col-sm-12">
+                  <div id="breadcrumbs">
+                      
+    <a href="../index.html">Home</a>&nbsp; &gt;
+    
+      
+        <a href="../index-language.html">Language reference</a> &gt;
+      
+        <a href="../index-functions.html">Functions</a> &gt;
+      
+    
+    open
+  
+
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <article class="col-sm-12 content">
+                  <div class="documentation-wrapper">
+                    <div id="perl_version">
+                      <h7 class='page-title'> Perl 5 version 16.3
+                        documentation</h7>
+                    </div>
+                    <h1>open</h1>
+<div class="mod_az_list">
+  <a href="/5.16.3/index-functions.html">Perl functions A-Z</a> |
+  <a href="/5.16.3/index-functions-by-cat.html">Perl functions by category</a> |
+  <a href="/5.16.3/perlfunc.html">The 'perlfunc' manpage</a>
+</div>
+
+
+  <!--    -->
+<ul>
+<li><a class='view-title' id="open-FILEHANDLE%2cEXPR"></a><strong>open FILEHANDLE,EXPR</strong>
+<p>   </p>
+</li>
+</ul>
+<ul>
+<li><a class='view-title' id="open-FILEHANDLE%2cMODE%2cEXPR"></a><strong>open FILEHANDLE,MODE,EXPR</strong>
+</li>
+<li><a class='view-title' id="open-FILEHANDLE%2cMODE%2cEXPR%2cLIST"></a><strong>open FILEHANDLE,MODE,EXPR,LIST</strong>
+</li>
+<li><a class='view-title' id="open-FILEHANDLE%2cMODE%2cREFERENCE"></a><strong>open FILEHANDLE,MODE,REFERENCE</strong>
+</li>
+<li><a class='view-title' id="open-FILEHANDLE"></a><strong>open FILEHANDLE</strong>
+<p>Opens the file whose filename is given by EXPR, and associates it with
+FILEHANDLE.</p>
+<p>Simple examples to open a file for reading:</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/open.html">open</a><span class="s">(</span><a class="l_k" href="../functions/my.html">my</a> <span class="i">$fh</span><span class="cm">,</span> <span class="q">&quot;&lt;&quot;</span><span class="cm">,</span> <span class="q">&quot;input.txt&quot;</span><span class="s">)</span> </li><li>	<a class="l_k" href="../functions/or.html">or</a> <a class="l_k" href="../functions/die.html">die</a> <span class="q">&quot;cannot open &lt; input.txt: $!&quot;</span><span class="sc">;</span></li></ol></pre><p>and for writing:</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/open.html">open</a><span class="s">(</span><a class="l_k" href="../functions/my.html">my</a> <span class="i">$fh</span><span class="cm">,</span> <span class="q">&quot;&gt;&quot;</span><span class="cm">,</span> <span class="q">&quot;output.txt&quot;</span><span class="s">)</span> </li><li>	<a class="l_k" href="../functions/or.html">or</a> <a class="l_k" href="../functions/die.html">die</a> <span class="q">&quot;cannot open &gt; output.txt: $!&quot;</span><span class="sc">;</span></li></ol></pre><p>(The following is a comprehensive reference to open(): for a gentler
+introduction you may consider <a href="../perlopentut.html">perlopentut</a>.)</p>
+<p>If FILEHANDLE is an undefined scalar variable (or array or hash element), a
+new filehandle is autovivified, meaning that the variable is assigned a
+reference to a newly allocated anonymous filehandle.  Otherwise if
+FILEHANDLE is an expression, its value is the real filehandle.  (This is
+considered a symbolic reference, so <code class="inline"><a class="l_k" href="../functions/use.html">use</a> <span class="w">strict</span> <span class="q">&quot;refs&quot;</span></code>
+ should <i>not</i> be
+in effect.)</p>
+<p>If EXPR is omitted, the global (package) scalar variable of the same
+name as the FILEHANDLE contains the filename.  (Note that lexical 
+variables--those declared with <code class="inline"><a class="l_k" href="../functions/my.html">my</a></code> or <code class="inline"><a class="l_k" href="../functions/state.html">state</a></code>--will not work for this
+purpose; so if you're using <code class="inline"><a class="l_k" href="../functions/my.html">my</a></code> or <code class="inline"><a class="l_k" href="../functions/state.html">state</a></code>, specify EXPR in your
+call to open.)</p>
+<p>If three (or more) arguments are specified, the open mode (including
+optional encoding) in the second argument are distinct from the filename in
+the third.  If MODE is <code class="inline">&lt;</code>
+ or nothing, the file is opened for input.
+If MODE is <code class="inline">&gt;</code>
+, the file is opened for output, with existing files
+first being truncated ("clobbered") and nonexisting files newly created.
+If MODE is <code class="inline">&gt;&gt;</code>
+, the file is opened for appending, again being
+created if necessary.</p>
+<p>You can put a <code class="inline">+</code>
+ in front of the <code class="inline">&gt;</code>
+ or <code class="inline">&lt;</code>
+ to
+indicate that you want both read and write access to the file; thus
+<code class="inline">+&lt;</code>
+ is almost always preferred for read/write updates--the 
+<code class="inline">+&gt;</code>
+ mode would clobber the file first.  You can't usually use
+either read-write mode for updating textfiles, since they have
+variable-length records.  See the <strong>-i</strong> switch in <a href="../perlrun.html">perlrun</a> for a
+better approach.  The file is created with permissions of <code class="inline"><span class="n">0666</span></code>
+
+modified by the process's <code class="inline"><a class="l_k" href="../functions/umask.html">umask</a></code> value.</p>
+<p>These various prefixes correspond to the fopen(3) modes of <code class="inline"><span class="w">r</span></code>
+,
+<code class="inline"><span class="w">r</span>+</code>
+, <code class="inline"><span class="w">w</span></code>
+, <code class="inline"><span class="w">w</span>+</code>
+, <code class="inline"><span class="w">a</span></code>
+, and <code class="inline"><span class="w">a</span>+</code>
+.</p>
+<p>In the one- and two-argument forms of the call, the mode and filename
+should be concatenated (in that order), preferably separated by white
+space.  You can--but shouldn't--omit the mode in these forms when that mode
+is <code class="inline">&lt;</code>
+.  It is always safe to use the two-argument form of <code class="inline"><a class="l_k" href="../functions/open.html">open</a></code> if
+the filename argument is a known literal.</p>
+<p>For three or more arguments if MODE is <code class="inline">|-</code>
+, the filename is
+interpreted as a command to which output is to be piped, and if MODE
+is <code class="inline">-|</code>
+, the filename is interpreted as a command that pipes
+output to us.  In the two-argument (and one-argument) form, one should
+replace dash (<code class="inline">-</code>
+) with the command.
+See <a href="../perlipc.html#Using-open()-for-IPC">Using open() for IPC in perlipc</a> for more examples of this.
+(You are not allowed to <code class="inline"><a class="l_k" href="../functions/open.html">open</a></code> to a command that pipes both in <i>and</i>
+out, but see <a href="../IPC/Open2.html">IPC::Open2</a>, <a href="../IPC/Open3.html">IPC::Open3</a>, and
+<a href="../perlipc.html#Bidirectional-Communication-with-Another-Process">Bidirectional Communication with Another Process in perlipc</a> for
+alternatives.)</p>
+<p>In the form of pipe opens taking three or more arguments, if LIST is specified
+(extra arguments after the command name) then LIST becomes arguments
+to the command invoked if the platform supports it.  The meaning of
+<code class="inline"><a class="l_k" href="../functions/open.html">open</a></code> with more than three arguments for non-pipe modes is not yet
+defined, but experimental "layers" may give extra LIST arguments
+meaning.</p>
+<p>In the two-argument (and one-argument) form, opening <code class="inline">&lt;-</code>
+ 
+or <code class="inline">-</code>
+ opens STDIN and opening <code class="inline">&gt;-</code>
+ opens STDOUT.</p>
+<p>You may (and usually should) use the three-argument form of open to specify
+I/O layers (sometimes referred to as "disciplines") to apply to the handle
+that affect how the input and output are processed (see <a href="../open.html">open</a> and
+<a href="../PerlIO.html">PerlIO</a> for more details).  For example:</p>
+<pre class="verbatim"><ol><li>  <a class="l_k" href="../functions/open.html">open</a><span class="s">(</span><a class="l_k" href="../functions/my.html">my</a> <span class="i">$fh</span><span class="cm">,</span> <span class="q">&quot;&lt;:encoding(UTF-8)&quot;</span><span class="cm">,</span> <span class="q">&quot;filename&quot;</span><span class="s">)</span></li><li>    || <a class="l_k" href="../functions/die.html">die</a> <span class="q">&quot;can&#39;t open UTF-8 encoded filename: $!&quot;</span><span class="sc">;</span></li></ol></pre><p>opens the UTF8-encoded file containing Unicode characters;
+see <a href="../perluniintro.html">perluniintro</a>.  Note that if layers are specified in the
+three-argument form, then default layers stored in ${^OPEN} (see <a href="../perlvar.html">perlvar</a>;
+usually set by the <strong>open</strong> pragma or the switch <strong>-CioD</strong>) are ignored.
+Those layers will also be ignored if you specifying a colon with no name
+following it.  In that case the default layer for the operating system
+(:raw on Unix, :crlf on Windows) is used.</p>
+<p>Open returns nonzero on success, the undefined value otherwise.  If
+the <code class="inline"><a class="l_k" href="../functions/open.html">open</a></code> involved a pipe, the return value happens to be the pid of
+the subprocess.</p>
+<p>If you're running Perl on a system that distinguishes between text
+files and binary files, then you should check out <a href="../functions/binmode.html">binmode</a> for tips
+for dealing with this.  The key distinction between systems that need
+<code class="inline"><a class="l_k" href="../functions/binmode.html">binmode</a></code> and those that don't is their text file formats.  Systems
+like Unix, Mac OS, and Plan 9, that end lines with a single
+character and encode that character in C as <code class="inline"><span class="q">&quot;\n&quot;</span></code>
+ do not
+need <code class="inline"><a class="l_k" href="../functions/binmode.html">binmode</a></code>.  The rest need it.</p>
+<p>When opening a file, it's seldom a good idea to continue 
+if the request failed, so <code class="inline"><a class="l_k" href="../functions/open.html">open</a></code> is frequently used with
+<code class="inline"><a class="l_k" href="../functions/die.html">die</a></code>.  Even if <code class="inline"><a class="l_k" href="../functions/die.html">die</a></code> won't do what you want (say, in a CGI script,
+where you want to format a suitable error message (but there are
+modules that can help with that problem)) always check
+the return value from opening a file.</p>
+<p>As a special case the three-argument form with a read/write mode and the third
+argument being <code class="inline"><a class="l_k" href="../functions/undef.html">undef</a></code>:</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/open.html">open</a><span class="s">(</span><a class="l_k" href="../functions/my.html">my</a> <span class="i">$tmp</span><span class="cm">,</span> <span class="q">&quot;+&gt;&quot;</span><span class="cm">,</span> <a class="l_k" href="../functions/undef.html">undef</a><span class="s">)</span> <a class="l_k" href="../functions/or.html">or</a> <a class="l_k" href="../functions/die.html">die</a> ...</li></ol></pre><p>opens a filehandle to an anonymous temporary file.  Also using <code class="inline">+&lt;</code>
+
+works for symmetry, but you really should consider writing something
+to the temporary file first.  You will need to seek() to do the
+reading.</p>
+<p>Since v5.8.0, Perl has built using PerlIO by default.  Unless you've
+changed this (such as building Perl with <code class="inline"><span class="w">Configure</span> -<span class="w">Uuseperlio</span></code>
+), you can
+open filehandles directly to Perl scalars via:</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/open.html">open</a><span class="s">(</span><span class="i">$fh</span><span class="cm">,</span> <span class="q">&quot;&gt;&quot;</span><span class="cm">,</span> \<span class="i">$variable</span><span class="s">)</span> || ..</li></ol></pre><p>To (re)open <code class="inline"><span class="w">STDOUT</span></code>
+ or <code class="inline"><span class="w">STDERR</span></code>
+ as an in-memory file, close it first:</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/close.html">close</a> <span class="w">STDOUT</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/open.html">open</a><span class="s">(</span><span class="w">STDOUT</span><span class="cm">,</span> <span class="q">&quot;&gt;&quot;</span><span class="cm">,</span> \<span class="i">$variable</span><span class="s">)</span></li><li>	<a class="l_k" href="../functions/or.html">or</a> <a class="l_k" href="../functions/die.html">die</a> <span class="q">&quot;Can&#39;t open STDOUT: $!&quot;</span><span class="sc">;</span></li></ol></pre><p>General examples:</p>
+<pre class="verbatim"><ol><li>    <span class="i">$ARTICLE</span> = <span class="n">100</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/open.html">open</a><span class="s">(</span><span class="w">ARTICLE</span><span class="s">)</span> <a class="l_k" href="../functions/or.html">or</a> <a class="l_k" href="../functions/die.html">die</a> <span class="q">&quot;Can&#39;t find article $ARTICLE: $!\n&quot;</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/while.html">while</a> <span class="s">(</span><span class="q">&lt;ARTICLE&gt;</span><span class="s">)</span> <span class="s">{</span>...</li><li></li><li>    <a class="l_k" href="../functions/open.html">open</a><span class="s">(</span><span class="w">LOG</span><span class="cm">,</span> <span class="q">&quot;&gt;&gt;/usr/spool/news/twitlog&quot;</span><span class="s">)</span><span class="sc">;</span>  <span class="c"># (log is reserved)</span></li><li>    <span class="c"># if the open fails, output is discarded</span></li><li></li><li>    <a class="l_k" href="../functions/open.html">open</a><span class="s">(</span><a class="l_k" href="../functions/my.html">my</a> <span class="i">$dbase</span><span class="cm">,</span> <span class="q">&quot;+&lt;&quot;</span><span class="cm">,</span> <span class="q">&quot;dbase.mine&quot;</span><span class="s">)</span>      <span class="c"># open for update</span></li><li>        <a class="l_k" href="../functions/or.html">or</a> <a class="l_k" href="../functions/die.html">die</a> <span class="q">&quot;Can&#39;t open &#39;dbase.mine&#39; for update: $!&quot;</span><span class="sc">;</span></li><li></li><li>    <a class="l_k" href="../functions/open.html">open</a><span class="s">(</span><a class="l_k" href="../functions/my.html">my</a> <span class="i">$dbase</span><span class="cm">,</span> <span class="q">&quot;+&lt;dbase.mine&quot;</span><span class="s">)</span>          <span class="c"># ditto</span></li><li>        <a class="l_k" href="../functions/or.html">or</a> <a class="l_k" href="../functions/die.html">die</a> <span class="q">&quot;Can&#39;t open &#39;dbase.mine&#39; for update: $!&quot;</span><span class="sc">;</span></li><li></li><li>    <a class="l_k" href="../functions/open.html">open</a><span class="s">(</span><span class="w">ARTICLE</span><span class="cm">,</span> <span class="q">&quot;-|&quot;</span><span class="cm">,</span> <span class="q">&quot;caesar &lt;$article&quot;</span><span class="s">)</span>  <span class="c"># decrypt article</span></li><li>        <a class="l_k" href="../functions/or.html">or</a> <a class="l_k" href="../functions/die.html">die</a> <span class="q">&quot;Can&#39;t start caesar: $!&quot;</span><span class="sc">;</span></li><li></li><li>    <a class="l_k" href="../functions/open.html">open</a><span class="s">(</span><span class="w">ARTICLE</span><span class="cm">,</span> <span class="q">&quot;caesar &lt;$article |&quot;</span><span class="s">)</span>      <span class="c"># ditto</span></li><li>        <a class="l_k" href="../functions/or.html">or</a> <a class="l_k" href="../functions/die.html">die</a> <span class="q">&quot;Can&#39;t start caesar: $!&quot;</span><span class="sc">;</span></li><li></li><li>    <a class="l_k" href="../functions/open.html">open</a><span class="s">(</span><span class="w">EXTRACT</span><span class="cm">,</span> <span class="q">&quot;|sort &gt;Tmp$$&quot;</span><span class="s">)</span>            <span class="c"># $$ is our process id</span></li><li>        <a class="l_k" href="../functions/or.html">or</a> <a class="l_k" href="../functions/die.html">die</a> <span class="q">&quot;Can&#39;t start sort: $!&quot;</span><span class="sc">;</span></li><li></li><li>    <span class="c"># in-memory files</span></li><li>    <a class="l_k" href="../functions/open.html">open</a><span class="s">(</span><span class="w">MEMORY</span><span class="cm">,</span> <span class="q">&quot;&gt;&quot;</span><span class="cm">,</span> \<span class="i">$var</span><span class="s">)</span></li><li>        <a class="l_k" href="../functions/or.html">or</a> <a class="l_k" href="../functions/die.html">die</a> <span class="q">&quot;Can&#39;t open memory file: $!&quot;</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/print.html">print</a> <span class="i">MEMORY</span> <span class="q">&quot;foo!\n&quot;</span><span class="sc">;</span>                   <span class="c"># output will appear in $var</span></li><li></li><li>    <span class="c"># process argument list of files along with any includes</span></li><li></li><li>    <a class="l_k" href="../functions/foreach.html">foreach</a> <span class="i">$file</span> <span class="s">(</span><span class="i">@ARGV</span><span class="s">)</span> <span class="s">{</span></li><li>        <span class="i">process</span><span class="s">(</span><span class="i">$file</span><span class="cm">,</span> <span class="q">&quot;fh00&quot;</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="s">}</span></li><li></li><li><a name="process"></a>    sub <span class="m">process</span> <span class="s">{</span></li><li>        <a class="l_k" href="../functions/my.html">my</a><span class="s">(</span><span class="i">$filename</span><span class="cm">,</span> <span class="i">$input</span><span class="s">)</span> = <span class="i">@_</span><span class="sc">;</span></li><li>        <span class="i">$input</span>++<span class="sc">;</span>    <span class="c"># this is a string increment</span></li><li>        <a class="l_k" href="../functions/unless.html">unless</a> <span class="s">(</span><a class="l_k" href="../functions/open.html">open</a><span class="s">(</span><span class="i">$input</span><span class="cm">,</span> <span class="q">&quot;&lt;&quot;</span><span class="cm">,</span> <span class="i">$filename</span><span class="s">)</span><span class="s">)</span> <span class="s">{</span></li><li>            <a class="l_k" href="../functions/print.html">print</a> <span class="i">STDERR</span> <span class="q">&quot;Can&#39;t open $filename: $!\n&quot;</span><span class="sc">;</span></li><li>            <a class="l_k" href="../functions/return.html">return</a><span class="sc">;</span></li><li>        <span class="s">}</span></li><li></li><li>        <a class="l_k" href="../functions/local.html">local</a> <span class="i">$_</span><span class="sc">;</span></li><li>        <a class="l_k" href="../functions/while.html">while</a> <span class="s">(</span><span class="q">&lt;$input&gt;</span><span class="s">)</span> <span class="s">{</span>    <span class="c"># note use of indirection</span></li><li>            <a class="l_k" href="../functions/if.html">if</a> <span class="s">(</span><span class="q">/^#include &quot;(.*)&quot;/</span><span class="s">)</span> <span class="s">{</span></li><li>                <span class="i">process</span><span class="s">(</span><span class="i">$1</span><span class="cm">,</span> <span class="i">$input</span><span class="s">)</span><span class="sc">;</span></li><li>                <a class="l_k" href="../functions/next.html">next</a><span class="sc">;</span></li><li>            <span class="s">}</span></li><li>            <span class="c">#...          # whatever</span></li><li>        <span class="s">}</span></li><li>    <span class="s">}</span></li></ol></pre><p>See <a href="../perliol.html">perliol</a> for detailed info on PerlIO.</p>
+<p>You may also, in the Bourne shell tradition, specify an EXPR beginning
+with <code class="inline">&gt;<span class="i">&amp;</span></code>
+, in which case the rest of the string is interpreted
+as the name of a filehandle (or file descriptor, if numeric) to be
+duped (as <code class="inline"><span class="i">dup</span><span class="s">(</span><span class="n">2</span><span class="s">)</span></code>
+) and opened.  You may use <code class="inline"><span class="i">&amp;</span></code>
+ after <code class="inline">&gt;</code>
+,
+<code class="inline">&gt;&gt;</code>
+, <code class="inline">&lt;</code>
+, <code class="inline">+&gt;</code>
+, <code class="inline">+&gt;&gt;</code>
+, and <code class="inline">+&lt;</code>
+.
+The mode you specify should match the mode of the original filehandle.
+(Duping a filehandle does not take into account any existing contents
+of IO buffers.)  If you use the three-argument
+form, then you can pass either a
+number, the name of a filehandle, or the normal "reference to a glob".</p>
+<p>Here is a script that saves, redirects, and restores <code class="inline"><span class="w">STDOUT</span></code>
+ and
+<code class="inline"><span class="w">STDERR</span></code>
+ using various methods:</p>
+<pre class="verbatim"><ol><li>    <span class="c">#!/usr/bin/perl</span></li><li>    <a class="l_k" href="../functions/open.html">open</a><span class="s">(</span><a class="l_k" href="../functions/my.html">my</a> <span class="i">$oldout</span><span class="cm">,</span> <span class="q">&quot;&gt;&amp;STDOUT&quot;</span><span class="s">)</span>     <a class="l_k" href="../functions/or.html">or</a> <a class="l_k" href="../functions/die.html">die</a> <span class="q">&quot;Can&#39;t dup STDOUT: $!&quot;</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/open.html">open</a><span class="s">(</span><span class="w">OLDERR</span><span class="cm">,</span>     <span class="q">&quot;&gt;&amp;&quot;</span><span class="cm">,</span> \<span class="i">*STDERR</span><span class="s">)</span> <a class="l_k" href="../functions/or.html">or</a> <a class="l_k" href="../functions/die.html">die</a> <span class="q">&quot;Can&#39;t dup STDERR: $!&quot;</span><span class="sc">;</span></li><li></li><li>    <a class="l_k" href="../functions/open.html">open</a><span class="s">(</span><span class="w">STDOUT</span><span class="cm">,</span> <span class="q">&#39;&gt;&#39;</span><span class="cm">,</span> <span class="q">&quot;foo.out&quot;</span><span class="s">)</span> <a class="l_k" href="../functions/or.html">or</a> <a class="l_k" href="../functions/die.html">die</a> <span class="q">&quot;Can&#39;t redirect STDOUT: $!&quot;</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/open.html">open</a><span class="s">(</span><span class="w">STDERR</span><span class="cm">,</span> <span class="q">&quot;&gt;&amp;STDOUT&quot;</span><span class="s">)</span>     <a class="l_k" href="../functions/or.html">or</a> <a class="l_k" href="../functions/die.html">die</a> <span class="q">&quot;Can&#39;t dup STDOUT: $!&quot;</span><span class="sc">;</span></li><li></li><li>    <a class="l_k" href="../functions/select.html">select</a> <span class="w">STDERR</span><span class="sc">;</span> <span class="i">$|</span> = <span class="n">1</span><span class="sc">;</span>  <span class="c"># make unbuffered</span></li><li>    <a class="l_k" href="../functions/select.html">select</a> <span class="w">STDOUT</span><span class="sc">;</span> <span class="i">$|</span> = <span class="n">1</span><span class="sc">;</span>  <span class="c"># make unbuffered</span></li><li></li><li>    <a class="l_k" href="../functions/print.html">print</a> <span class="i">STDOUT</span> <span class="q">&quot;stdout 1\n&quot;</span><span class="sc">;</span>  <span class="c"># this works for</span></li><li>    <a class="l_k" href="../functions/print.html">print</a> <span class="i">STDERR</span> <span class="q">&quot;stderr 1\n&quot;</span><span class="sc">;</span>  <span class="c"># subprocesses too</span></li><li></li><li>    <a class="l_k" href="../functions/open.html">open</a><span class="s">(</span><span class="w">STDOUT</span><span class="cm">,</span> <span class="q">&quot;&gt;&amp;&quot;</span><span class="cm">,</span> <span class="i">$oldout</span><span class="s">)</span> <a class="l_k" href="../functions/or.html">or</a> <a class="l_k" href="../functions/die.html">die</a> <span class="q">&quot;Can&#39;t dup \$oldout: $!&quot;</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/open.html">open</a><span class="s">(</span><span class="w">STDERR</span><span class="cm">,</span> <span class="q">&quot;&gt;&amp;OLDERR&quot;</span><span class="s">)</span>    <a class="l_k" href="../functions/or.html">or</a> <a class="l_k" href="../functions/die.html">die</a> <span class="q">&quot;Can&#39;t dup OLDERR: $!&quot;</span><span class="sc">;</span></li><li></li><li>    <a class="l_k" href="../functions/print.html">print</a> <span class="i">STDOUT</span> <span class="q">&quot;stdout 2\n&quot;</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/print.html">print</a> <span class="i">STDERR</span> <span class="q">&quot;stderr 2\n&quot;</span><span class="sc">;</span></li></ol></pre><p>If you specify <code class="inline"><span class="q">&#39;&lt;&amp;=X&#39;</span></code>
+, where <code class="inline"><span class="w">X</span></code>
+ is a file descriptor number
+or a filehandle, then Perl will do an equivalent of C's <code class="inline"><span class="w">fdopen</span></code>
+ of
+that file descriptor (and not call <code class="inline"><span class="i">dup</span><span class="s">(</span><span class="n">2</span><span class="s">)</span></code>
+); this is more
+parsimonious of file descriptors.  For example:</p>
+<pre class="verbatim"><ol><li>    <span class="c"># open for input, reusing the fileno of $fd</span></li><li>    <a class="l_k" href="../functions/open.html">open</a><span class="s">(</span><span class="w">FILEHANDLE</span><span class="cm">,</span> <span class="q">&quot;&lt;&amp;=$fd&quot;</span><span class="s">)</span></li></ol></pre><p>or</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/open.html">open</a><span class="s">(</span><span class="w">FILEHANDLE</span><span class="cm">,</span> <span class="q">&quot;&lt;&amp;=&quot;</span><span class="cm">,</span> <span class="i">$fd</span><span class="s">)</span></li></ol></pre><p>or</p>
+<pre class="verbatim"><ol><li>    <span class="c"># open for append, using the fileno of OLDFH</span></li><li>    <a class="l_k" href="../functions/open.html">open</a><span class="s">(</span><span class="w">FH</span><span class="cm">,</span> <span class="q">&quot;&gt;&gt;&amp;=&quot;</span><span class="cm">,</span> <span class="w">OLDFH</span><span class="s">)</span></li></ol></pre><p>or</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/open.html">open</a><span class="s">(</span><span class="w">FH</span><span class="cm">,</span> <span class="q">&quot;&gt;&gt;&amp;=OLDFH&quot;</span><span class="s">)</span></li></ol></pre><p>Being parsimonious on filehandles is also useful (besides being
+parsimonious) for example when something is dependent on file
+descriptors, like for example locking using flock().  If you do just
+<code class="inline"><a class="l_k" href="../functions/open.html">open</a><span class="s">(</span><span class="w">A</span><span class="cm">,</span> <span class="q">&quot;&gt;&gt;&amp;B&quot;</span><span class="s">)</span></code>
+, the filehandle A will not have the same file
+descriptor as B, and therefore flock(A) will not flock(B) nor vice
+versa.  But with <code class="inline"><a class="l_k" href="../functions/open.html">open</a><span class="s">(</span><span class="w">A</span><span class="cm">,</span> <span class="q">&quot;&gt;&gt;&amp;=B&quot;</span><span class="s">)</span></code>
+, the filehandles will share
+the same underlying system file descriptor.</p>
+<p>Note that under Perls older than 5.8.0, Perl uses the standard C library's'
+fdopen() to implement the <code class="inline">=</code>
+ functionality.  On many Unix systems,
+fdopen() fails when file descriptors exceed a certain value, typically 255.
+For Perls 5.8.0 and later, PerlIO is (most often) the default.</p>
+<p>You can see whether your Perl was built with PerlIO by running <code class="inline"><span class="w">perl</span> -<span class="w">V</span></code>
+
+and looking for the <code class="inline"><span class="w">useperlio</span>=</code>
+ line.  If <code class="inline"><span class="w">useperlio</span></code>
+ is <code class="inline"><span class="w">define</span></code>
+, you
+have PerlIO; otherwise you don't.</p>
+<p>If you open a pipe on the command <code class="inline">-</code>
+ (that is, specify either <code class="inline">|-</code>
+ or <code class="inline">-|</code>
+
+with the one- or two-argument forms of <code class="inline"><a class="l_k" href="../functions/open.html">open</a></code>), 
+an implicit <code class="inline"><a class="l_k" href="../functions/fork.html">fork</a></code> is done, so <code class="inline"><a class="l_k" href="../functions/open.html">open</a></code> returns twice: in the parent
+process it returns the pid
+of the child process, and in the child process it returns (a defined) <code class="inline"><span class="n">0</span></code>
+.
+Use <code class="inline"><a class="l_k" href="../functions/defined.html">defined($pid)</a></code> or <code class="inline"><span class="q">//</span></code>
+ to determine whether the open was successful.</p>
+<p>For example, use either</p>
+<pre class="verbatim"><ol><li>    <span class="i">$child_pid</span> = <a class="l_k" href="../functions/open.html">open</a><span class="s">(</span><span class="w">FROM_KID</span><span class="cm">,</span> <span class="q">&quot;-|&quot;</span><span class="s">)</span> 	// <a class="l_k" href="../functions/die.html">die</a> <span class="q">&quot;can&#39;t fork: $!&quot;</span><span class="sc">;</span></li></ol></pre><p>or
+    $child_pid = open(TO_KID,   "|-") 	// die "can't fork: $!";</p>
+<p>followed by</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/if.html">if</a> <span class="s">(</span><span class="i">$child_pid</span><span class="s">)</span> <span class="s">{</span></li><li>	<span class="c"># am the parent:</span></li><li>	<span class="c"># either write TO_KID or else read FROM_KID</span></li><li>	...</li><li>	<a class="l_k" href="../functions/wait.html">wait</a> <span class="i">$child_pid</span><span class="sc">;</span></li><li>    <span class="s">}</span> <a class="l_k" href="../functions/else.html">else</a> <span class="s">{</span></li><li>	<span class="c"># am the child; use STDIN/STDOUT normally</span></li><li>	...</li><li>	<a class="l_k" href="../functions/exit.html">exit</a><span class="sc">;</span></li><li>    <span class="s">}</span></li></ol></pre><p>The filehandle behaves normally for the parent, but I/O to that
+filehandle is piped from/to the STDOUT/STDIN of the child process.
+In the child process, the filehandle isn't opened--I/O happens from/to
+the new STDOUT/STDIN.  Typically this is used like the normal
+piped open when you want to exercise more control over just how the
+pipe command gets executed, such as when running setuid and
+you don't want to have to scan shell commands for metacharacters.</p>
+<p>The following blocks are more or less equivalent:</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/open.html">open</a><span class="s">(</span><span class="w">FOO</span><span class="cm">,</span> <span class="q">&quot;|tr &#39;[a-z]&#39; &#39;[A-Z]&#39;&quot;</span><span class="s">)</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/open.html">open</a><span class="s">(</span><span class="w">FOO</span><span class="cm">,</span> <span class="q">&quot;|-&quot;</span><span class="cm">,</span> <span class="q">&quot;tr &#39;[a-z]&#39; &#39;[A-Z]&#39;&quot;</span><span class="s">)</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/open.html">open</a><span class="s">(</span><span class="w">FOO</span><span class="cm">,</span> <span class="q">&quot;|-&quot;</span><span class="s">)</span> || <a class="l_k" href="../functions/exec.html">exec</a> <span class="q">&#39;tr&#39;</span><span class="cm">,</span> <span class="q">&#39;[a-z]&#39;</span><span class="cm">,</span> <span class="q">&#39;[A-Z]&#39;</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/open.html">open</a><span class="s">(</span><span class="w">FOO</span><span class="cm">,</span> <span class="q">&quot;|-&quot;</span><span class="cm">,</span> <span class="q">&quot;tr&quot;</span><span class="cm">,</span> <span class="q">&#39;[a-z]&#39;</span><span class="cm">,</span> <span class="q">&#39;[A-Z]&#39;</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>    <a class="l_k" href="../functions/open.html">open</a><span class="s">(</span><span class="w">FOO</span><span class="cm">,</span> <span class="q">&quot;cat -n &#39;$file&#39;|&quot;</span><span class="s">)</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/open.html">open</a><span class="s">(</span><span class="w">FOO</span><span class="cm">,</span> <span class="q">&quot;-|&quot;</span><span class="cm">,</span> <span class="q">&quot;cat -n &#39;$file&#39;&quot;</span><span class="s">)</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/open.html">open</a><span class="s">(</span><span class="w">FOO</span><span class="cm">,</span> <span class="q">&quot;-|&quot;</span><span class="s">)</span> || <a class="l_k" href="../functions/exec.html">exec</a> <span class="q">&quot;cat&quot;</span><span class="cm">,</span> <span class="q">&quot;-n&quot;</span><span class="cm">,</span> <span class="i">$file</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/open.html">open</a><span class="s">(</span><span class="w">FOO</span><span class="cm">,</span> <span class="q">&quot;-|&quot;</span><span class="cm">,</span> <span class="q">&quot;cat&quot;</span><span class="cm">,</span> <span class="q">&quot;-n&quot;</span><span class="cm">,</span> <span class="i">$file</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>The last two examples in each block show the pipe as "list form", which is
+not yet supported on all platforms.  A good rule of thumb is that if
+your platform has a real <code class="inline"><a class="l_k" href="../functions/fork.html">fork()</a></code> (in other words, if your platform is
+Unix, including Linux and MacOS X), you can use the list form.  You would 
+want to use the list form of the pipe so you can pass literal arguments
+to the command without risk of the shell interpreting any shell metacharacters
+in them.  However, this also bars you from opening pipes to commands
+that intentionally contain shell metacharacters, such as:</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/open.html">open</a><span class="s">(</span><span class="w">FOO</span><span class="cm">,</span> <span class="q">&quot;|cat -n | expand -4 | lpr&quot;</span><span class="s">)</span></li><li>	// <a class="l_k" href="../functions/die.html">die</a> <span class="q">&quot;Can&#39;t open pipeline to lpr: $!&quot;</span><span class="sc">;</span></li></ol></pre><p>See <a href="../perlipc.html#Safe-Pipe-Opens">Safe Pipe Opens in perlipc</a> for more examples of this.</p>
+<p>Beginning with v5.6.0, Perl will attempt to flush all files opened for
+output before any operation that may do a fork, but this may not be
+supported on some platforms (see <a href="../perlport.html">perlport</a>).  To be safe, you may need
+to set <code class="inline"><span class="i">$|</span></code>
+ ($AUTOFLUSH in English) or call the <code class="inline"><span class="i">autoflush</span><span class="s">(</span><span class="s">)</span></code>
+ method
+of <code class="inline"><span class="w">IO::Handle</span></code>
+ on any open handles.</p>
+<p>On systems that support a close-on-exec flag on files, the flag will
+be set for the newly opened file descriptor as determined by the value
+of <code class="inline"><span class="i">$^F</span></code>
+.  See <a href="../perlvar.html#%24%5eF">$^F in perlvar</a>.</p>
+<p>Closing any piped filehandle causes the parent process to wait for the
+child to finish, then returns the status value in <code class="inline"><span class="i">$?</span></code>
+ and
+<code class="inline"><span class="i">$</span>{<span class="w">^CHILD_ERROR_NATIVE</span>}</code>
+.</p>
+<p>The filename passed to the one- and two-argument forms of open() will
+have leading and trailing whitespace deleted and normal
+redirection characters honored.  This property, known as "magic open",
+can often be used to good effect.  A user could specify a filename of
+<i>"rsh cat file |"</i>, or you could change certain filenames as needed:</p>
+<pre class="verbatim"><ol><li>    <span class="i">$filename</span> =~ <span class="q">s/(.*\.gz)\s*$/gzip -dc &lt; $1|/</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/open.html">open</a><span class="s">(</span><span class="w">FH</span><span class="cm">,</span> <span class="i">$filename</span><span class="s">)</span> <a class="l_k" href="../functions/or.html">or</a> <a class="l_k" href="../functions/die.html">die</a> <span class="q">&quot;Can&#39;t open $filename: $!&quot;</span><span class="sc">;</span></li></ol></pre><p>Use the three-argument form to open a file with arbitrary weird characters in it,</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/open.html">open</a><span class="s">(</span><span class="w">FOO</span><span class="cm">,</span> <span class="q">&quot;&lt;&quot;</span><span class="cm">,</span> <span class="i">$file</span><span class="s">)</span></li><li>	|| <a class="l_k" href="../functions/die.html">die</a> <span class="q">&quot;can&#39;t open &lt; $file: $!&quot;</span><span class="sc">;</span></li></ol></pre><p>otherwise it's necessary to protect any leading and trailing whitespace:</p>
+<pre class="verbatim"><ol><li>    <span class="i">$file</span> =~ <span class="q">s#^(\s)#./$1#</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/open.html">open</a><span class="s">(</span><span class="w">FOO</span><span class="cm">,</span> <span class="q">&quot;&lt; $file\0&quot;</span><span class="s">)</span></li><li>	|| <a class="l_k" href="../functions/die.html">die</a> <span class="q">&quot;open failed: $!&quot;</span><span class="sc">;</span></li></ol></pre><p>(this may not work on some bizarre filesystems).  One should
+conscientiously choose between the <i>magic</i> and <i>three-argument</i> form
+of open():</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/open.html">open</a><span class="s">(</span><span class="w">IN</span><span class="cm">,</span> <span class="i">$ARGV</span>[<span class="n">0</span>]<span class="s">)</span> || <a class="l_k" href="../functions/die.html">die</a> <span class="q">&quot;can&#39;t open $ARGV[0]: $!&quot;</span><span class="sc">;</span></li></ol></pre><p>will allow the user to specify an argument of the form <code class="inline"><span class="q">&quot;rsh cat file |&quot;</span></code>
+,
+but will not work on a filename that happens to have a trailing space, while</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/open.html">open</a><span class="s">(</span><span class="w">IN</span><span class="cm">,</span> <span class="q">&quot;&lt;&quot;</span><span class="cm">,</span> <span class="i">$ARGV</span>[<span class="n">0</span>]<span class="s">)</span></li><li>	|| <a class="l_k" href="../functions/die.html">die</a> <span class="q">&quot;can&#39;t open &lt; $ARGV[0]: $!&quot;</span><span class="sc">;</span></li></ol></pre><p>will have exactly the opposite restrictions.</p>
+<p>If you want a "real" C <code class="inline"><a class="l_k" href="../functions/open.html">open</a></code> (see <i>open(2)</i> on your system), then you
+should use the <code class="inline"><a class="l_k" href="../functions/sysopen.html">sysopen</a></code> function, which involves no such magic (but may
+use subtly different filemodes than Perl open(), which is mapped to C
+fopen()).  This is another way to protect your filenames from
+interpretation.  For example:</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">IO::Handle</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/sysopen.html">sysopen</a><span class="s">(</span><span class="w">HANDLE</span><span class="cm">,</span> <span class="i">$path</span><span class="cm">,</span> <span class="w">O_RDWR</span>|<span class="w">O_CREAT</span>|<span class="w">O_EXCL</span><span class="s">)</span></li><li>        <a class="l_k" href="../functions/or.html">or</a> <a class="l_k" href="../functions/die.html">die</a> <span class="q">&quot;sysopen $path: $!&quot;</span><span class="sc">;</span></li><li>    <span class="i">$oldfh</span> = <a class="l_k" href="../functions/select.html">select</a><span class="s">(</span><span class="w">HANDLE</span><span class="s">)</span><span class="sc">;</span> <span class="i">$|</span> = <span class="n">1</span><span class="sc">;</span> <a class="l_k" href="../functions/select.html">select</a><span class="s">(</span><span class="i">$oldfh</span><span class="s">)</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/print.html">print</a> <span class="i">HANDLE</span> <span class="q">&quot;stuff $$\n&quot;</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/seek.html">seek</a><span class="s">(</span><span class="w">HANDLE</span><span class="cm">,</span> <span class="n">0</span><span class="cm">,</span> <span class="n">0</span><span class="s">)</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/print.html">print</a> <span class="q">&quot;File contains: &quot;</span><span class="cm">,</span> <span class="q">&lt;HANDLE&gt;</span><span class="sc">;</span></li></ol></pre><p>Using the constructor from the <code class="inline"><span class="w">IO::Handle</span></code>
+ package (or one of its
+subclasses, such as <code class="inline"><span class="w">IO::File</span></code>
+ or <code class="inline"><span class="w">IO::Socket</span></code>
+), you can generate anonymous
+filehandles that have the scope of the variables used to hold them, then
+automatically (but silently) close once their reference counts become
+zero, typically at scope exit:</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">IO::File</span><span class="sc">;</span></li><li>    <span class="c">#...</span></li><li><a name="read_myfile_munged"></a>    sub <span class="m">read_myfile_munged</span> <span class="s">{</span></li><li>        <a class="l_k" href="../functions/my.html">my</a> <span class="i">$ALL</span> = <a class="l_k" href="../functions/shift.html">shift</a><span class="sc">;</span></li><li>	<span class="c"># or just leave it undef to autoviv</span></li><li>        <a class="l_k" href="../functions/my.html">my</a> <span class="i">$handle</span> = <span class="w">IO::File</span><span class="w">-&gt;new</span><span class="sc">;</span></li><li>        <a class="l_k" href="../functions/open.html">open</a><span class="s">(</span><span class="i">$handle</span><span class="cm">,</span> <span class="q">&quot;&lt;&quot;</span><span class="cm">,</span> <span class="q">&quot;myfile&quot;</span><span class="s">)</span> <a class="l_k" href="../functions/or.html">or</a> <a class="l_k" href="../functions/die.html">die</a> <span class="q">&quot;myfile: $!&quot;</span><span class="sc">;</span></li><li>        <span class="i">$first</span> = <span class="q">&lt;$handle&gt;</span></li><li>            <a class="l_k" href="../functions/or.html">or</a> <a class="l_k" href="../functions/return.html">return</a> <span class="s">(</span><span class="s">)</span><span class="sc">;</span>     <span class="c"># Automatically closed here.</span></li><li>        <span class="i">mung</span><span class="s">(</span><span class="i">$first</span><span class="s">)</span> <a class="l_k" href="../functions/or.html">or</a> <a class="l_k" href="../functions/die.html">die</a> <span class="q">&quot;mung failed&quot;</span><span class="sc">;</span>  <span class="c"># Or here.</span></li><li>        <a class="l_k" href="../functions/return.html">return</a> <span class="s">(</span><span class="w">first</span><span class="cm">,</span> <span class="q">&lt;$handle&gt;</span><span class="s">)</span> <a class="l_k" href="../functions/if.html">if</a> <span class="i">$ALL</span><span class="sc">;</span>  <span class="c"># Or here.</span></li><li>        <a class="l_k" href="../functions/return.html">return</a> <span class="i">$first</span><span class="sc">;</span>                      <span class="c"># Or here.</span></li><li>    <span class="s">}</span></li></ol></pre><p><strong>WARNING:</strong> The previous example has a bug because the automatic
+close that happens when the refcount on <code class="inline"><span class="w">handle</span></code>
+ does not
+properly detect and report failures.  <i>Always</i> close the handle
+yourself and inspect the return value.</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/close.html">close</a><span class="s">(</span><span class="i">$handle</span><span class="s">)</span> </li><li>	|| <a class="l_k" href="../functions/warn.html">warn</a> <span class="q">&quot;close failed: $!&quot;</span><span class="sc">;</span></li></ol></pre><p>See <a href="../functions/seek.html">seek</a> for some details about mixing reading and writing.</p>
+<p>Portability issues: <a href="../perlport.html#open">open in perlport</a>.</p>
+</li>
+</ul>
+
+
+
+                  </div>
+                </article>
+              </div>
+            </div>
+          </main>
+        </div>
+           <footer class="footer row bg-light pt-5 pb-5">
+       <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+           <div class="row">
+               <div class="col-md-4">
+                   <ul class="list-unstyled">
+                       <li>
+                           <h4>Site info</h4>
+                       </li>
+                       <li>Docs mantained by
+                           <a href="//lists.perl.org/list/perl5-porters.html"
+                               rel="noopener">Perl 5 Porters</a>
+                       </li>
+                       <li>Perldoc site development sponsored by
+                           <a href="//opusvl.com" rel="noopener">
+                           <img style="margin: 20px 20px 5px 10px" class="opus-logo" src="/public/img/opusvl_logo.svg" alt="OpusVL Logo">
+                        </a>
+                    <li><span class="about_perldoc"><a href="//about.html">About PerlDOC</a></span>
+                    </li>
+                       </li>
+                   </ul>
+               </div>
+               <div class="col-md-8">
+                   <div class="row">
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Manuals</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.16.3/index-overview.html">Overview</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.16.3/index-tutorials.html">Tutorials</a>
+                               </li>
+                               <li>
+                                   <a href="/5.16.3/index-faq.html">FAQs</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.16.3/index-history.html">Changes</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Reference</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.16.3/index-language.html">Language</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.16.3/index-functions.html">Functions</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.16.3/perlop.html">Operators</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.16.3/perlvar.html">Variables</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Modules</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.16.3/index-modules-A.html">Modules</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.16.3/index-pragmas.html">Pragmas</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.16.3/index-utilities.html">Utilities</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Misc</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.16.3/index-licence.html">License</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.16.3/index-internals.html">Internals</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.16.3/index-platforms.html">Platforms</a>
+                               </li>
+                            <li>
+                                <a
+                                    href="/5.16.3/index-about.html">About</a>
+                            </li>
+                           </ul>
+                       </div>
+                   </div>
+               </div>
+               <div class=" col-12 footer-inf text-center">
+                   <small>perldoc.perl.org - Official documentation for the Perl
+                       programming language</small>
+               </div>
+           </div>
+       </div>
+   </footer>
+
+        	<div class="beta-wrapper beta-bottom-right ">
+		<div class="beta beta-blue  ">
+			<a class="beta-link "
+				href="//github.com/OpusVL/perldoc.perl.org/issues/new" rel="noopener">
+				<span class="beta-text">
+					This website is a Beta release.
+				</span>
+				<span class="beta-text">
+					For any issues please raise a ticket on GitHub
+				</span>
+			</a>
+		</div>
+	</div>
+
+        <script src="/public/js/main.min.js"></script>
+      </body>
+
+      </html>

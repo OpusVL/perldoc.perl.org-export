@@ -1,0 +1,913 @@
+      
+      
+      
+      
+
+      <!DOCTYPE html>
+      <html lang="en">
+
+      <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Devel::PPPort - perldoc.perl.org">
+        <link rel="icon" href="/public/img/favicon.ico">
+        <title>Devel::PPPort - perldoc.perl.org</title>
+        <link href="/public/css/main.min.css" rel="stylesheet">
+        <link rel="canonical" href="/Devel/PPPort.html">
+        <link
+          href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900'
+          rel='stylesheet' type='text/css'>
+        <script>
+          window.ga = window.ga || function () {
+            (ga.q = ga.q || []).push(arguments)
+          };
+          ga.l = +new Date;
+          ga('create', 'UA-1892152-2', 'auto'); // JJ's account
+          ga('create', 'UA-50555-3', 'auto', 'perlOrg'); // perl.org account
+          ga('require', 'outboundLinkTracker', {
+            events: ['click', 'auxclick', 'contextmenu'],
+          });
+          ga('require', 'maxScrollTracker');
+          ga('send', 'pageview');
+          ga('perlOrg.send', 'pageview');
+        </script>
+        <script async src="https://www.google-analytics.com/analytics.js">
+        </script>
+        <script async src="/public/js/tracking.min.js"></script>
+      </head>
+
+      <body class="body container-fluid ">
+        <div class="wrapper">
+
+          <nav
+    class="navbar navbar-dark bg-primary bg-perl fixed-top justify-content-between navbar-expand-lg">
+    <a href="#content" class="skippy sr-only sr-only-focusable">
+        <span class=' skippy-text'>Skip to main content</span>
+    </a>
+    <a class="navbar-brand" href="/">
+        <img class="logo" src="/public/img/logo_perl_doc.svg"
+            alt="Perl Documentation Logo" />
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse"
+        data-target="#navbar" aria-controls="navbar" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="navbar" class="collapse navbar-collapse ">
+        <ul class="navbar-nav ml-auto navbar-right">
+            <form class="nav-item dropdown search-wrapper">
+                <input type="text" id='searchinput' aria-describedby='navbarDropdown5'
+                    placeholder="Type query" class='search-input-field' value=''>
+
+                <button href="#" data-toggle='dropdown' type="button"
+                    aria-haspopup="true" aria-expanded='false' id="navbarDropdown5"
+                    class="nav-link dropdown-toggle search-link">
+                    <object tabindex='-1' focusable="false" class='search-icon'
+                        data="/public/img/search.svg" type="image/svg+xml"
+                        name='search icon'>search
+                        icon</object>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown5"
+                    id='search-results'>
+                    <p class='dropdown-item major-version'>
+                        No results
+                    </p>
+                </div>
+            </form>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown" href="#" class="nav-link dropdown-toggle"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Perl versions</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    
+                        <p class='dropdown-item major-version'>
+                            5.32
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.32.0/">5.32.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.30
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.3/">5.30.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.2/">5.30.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.1/">5.30.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.0/">5.30.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.28
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.3/">5.28.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.2/">5.28.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.1/">5.28.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.0/">5.28.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.26
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.3/">5.26.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.2/">5.26.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.1/">5.26.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.0/">5.26.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.24
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.4/">5.24.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.3/">5.24.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.2/">5.24.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.1/">5.24.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.0/">5.24.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.22
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.4/">5.22.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.3/">5.22.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.2/">5.22.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.1/">5.22.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.0/">5.22.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.20
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.3/">5.20.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.2/">5.20.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.1/">5.20.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.0/">5.20.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.18
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.4/">5.18.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.3/">5.18.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.2/">5.18.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.1/">5.18.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.0/">5.18.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.16
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.3/">5.16.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.2/">5.16.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.1/">5.16.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.0/">5.16.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.14
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.4/">5.14.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.3/">5.14.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.2/">5.14.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.1/">5.14.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.0/">5.14.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.12
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.5/">5.12.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.4/">5.12.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.3/">5.12.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.2/">5.12.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.1/">5.12.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.0/">5.12.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.10
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.1/">5.10.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.0/">5.10.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.8
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.9/">5.8.9</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.8/">5.8.8</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.7/">5.8.7</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.6/">5.8.6</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.5/">5.8.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.4/">5.8.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.3/">5.8.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.2/">5.8.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.1/">5.8.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.0/">5.8.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.6
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.2/">5.6.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.1/">5.6.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.0/">5.6.0</a>
+                        
+                        
+                    
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown1" href="#" class="dropdown-toggle nav-link"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Manuals</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                    <a class="dropdown-item"
+                        href="/5.28.3/index-overview.html">Overview</a>
+                    <a class="dropdown-item"
+                        href="/5.28.3/index-tutorials.html">Tutorials</a>
+                    <a class="dropdown-item"
+                        href="/5.28.3/index-faq.html">FAQs</a>
+                    <a class="dropdown-item"
+                        href="/5.28.3/index-history.html">Changes</a>
+                    <a class="dropdown-item"
+                        href="/5.28.3/index-licence.html">License</a>
+                    <a class="dropdown-item"
+                        href="/5.28.3/index-language.html">Language</a>
+                    <a class="dropdown-item"
+                        href="/5.28.3/index-functions.html">Functions</a>
+                    <a class="dropdown-item"
+                        href="/5.28.3/perlop.html">Operators</a>
+                    <a class="dropdown-item"
+                        href="/5.28.3/perlvar.html">Variables</a>
+                    <a class="dropdown-item"
+                        href="/5.28.3/index-pragmas.html">Pragmas</a>
+                    <a class="dropdown-item"
+                        href="/5.28.3/index-utilities.html">Utilities</a>
+                    <a class="dropdown-item"
+                        href="/5.28.3/index-internals.html">Internals</a>
+                    <a class="dropdown-item"
+                        href="/5.28.3/index-platforms.html">Platforms</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown3" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Modules</a>
+                <div aria-labelledby="navbarDropdown3"
+                    class="dropdown-menu letters-wrap">
+                    <!--<a class="dropdown-item"
+                        href="/5.28.3/index-modules.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.28.3/index-modules-by-cat.html">By
+                        Category</a>-->
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-A.html">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-B.html">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-C.html">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-D.html">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-E.html">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-F.html">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-G.html">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-H.html">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-I.html">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-J.html">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-K.html">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-L.html">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-M.html">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-N.html">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-O.html">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-P.html">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-Q.html">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-R.html">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-S.html">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-T.html">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-U.html">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-V.html">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-W.html">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-X.html">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-Y.html">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-Z.html">Z</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown4" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Functions</a>
+                <div aria-labelledby="navbarDropdown4"
+                    class="dropdown-menu letters-wrap">
+                    <a class="dropdown-item"
+                        href="/5.28.3/index-functions.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.28.3/index-functions-by-cat.html">By
+                        Category</a>
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#A">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#B">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#C">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#D">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#E">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#F">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#G">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#H">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#I">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#J">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#K">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#L">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#M">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#N">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#O">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#P">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#Q">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#R">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#S">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#T">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#U">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#V">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#W">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#X">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#Y">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#Z">Z</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!--/.nav-collapse -->
+</nav>
+
+
+          <main class="row main-content pb-5 pt-5" id='content'>
+            <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+              <div class="row">
+                <div class="col-sm-12">
+                  <div id="breadcrumbs">
+                      
+    <a href="../index.html">Home</a>&nbsp; &gt;
+    
+      
+        <a href="../index-modules-D.html">Core modules (D)</a> &gt;
+      
+    
+    Devel::PPPort
+  
+
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <article class="col-sm-12 content">
+                  <div class="documentation-wrapper">
+                    <div id="perl_version">
+                      <h7 class='page-title'> Perl 5 version 28.3
+                        documentation</h7>
+                    </div>
+                    <h1>Devel::PPPort</h1>
+
+
+  <!--    -->
+<ul><li><a href="#NAME">NAME</a></li><li><a href="#SYNOPSIS">SYNOPSIS</a></li><li><a href="#DESCRIPTION">DESCRIPTION</a></li><ul><li><a href="#Why-use-ppport.h%3f">Why use ppport.h?</a></li><li><a href="#How-to-use-ppport.h">How to use ppport.h</a></li><li><a href="#Running-ppport.h">Running ppport.h</a></li></ul><li><a href="#FUNCTIONS">FUNCTIONS</a></li><ul><li><a href="#WriteFile">WriteFile</a></li><li><a href="#GetFileContents">GetFileContents</a></li></ul><li><a href="#COMPATIBILITY">COMPATIBILITY</a></li><ul><li><a href="#Provided-Perl-compatibility-API">Provided Perl compatibility API</a></li><li><a href="#Perl-API-not-supported-by-ppport.h">Perl API not supported by ppport.h</a></li></ul><li><a href="#BUGS">BUGS</a></li><li><a href="#AUTHORS">AUTHORS</a></li><li><a href="#COPYRIGHT">COPYRIGHT</a></li><li><a href="#SEE-ALSO">SEE ALSO</a></li></ul><a class='view-head1' id="NAME"></a><h2 class='h2' >NAME</h2>
+<p>Devel::PPPort - Perl/Pollution/Portability</p>
+<a class='view-head1' id="SYNOPSIS"></a><h2 class='h2' >SYNOPSIS</h2>
+<pre class="verbatim"><ol><li>    <span class="i">Devel::PPPort::WriteFile</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span>   <span class="c"># defaults to ./ppport.h</span></li><li>    <span class="i">Devel::PPPort::WriteFile</span><span class="s">(</span><span class="q">&#39;someheader.h&#39;</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>    <span class="c"># Same as above but retrieve contents rather than write file</span></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">$contents</span> = <span class="i">Devel::PPPort::GetFileContents</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">$contents</span> = <span class="i">Devel::PPPort::GetFileContents</span><span class="s">(</span><span class="q">&#39;someheader.h&#39;</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><a class='view-head1' id="DESCRIPTION"></a><h2 class='h2' >DESCRIPTION</h2>
+<p>Perl's API has changed over time, gaining new features, new functions,
+increasing its flexibility, and reducing the impact on the C namespace
+environment (reduced pollution). The header file written by this module,
+typically <i>ppport.h</i>, attempts to bring some of the newer Perl API
+features to older versions of Perl, so that you can worry less about
+keeping track of old releases, but users can still reap the benefit.</p>
+<p><code class="inline"><span class="w">Devel::PPPort</span></code>
+ contains two functions, <code class="inline"><span class="w">WriteFile</span></code>
+ and <code class="inline"><span class="w">GetFileContents</span></code>
+.
+<code class="inline"><span class="w">WriteFile</span></code>
+'s only purpose is to write the <i>ppport.h</i> C header file.
+This file contains a series of macros and, if explicitly requested, functions
+that allow XS modules to be built using older versions of Perl. Currently,
+Perl versions from 5.003 to 5.20 are supported.</p>
+<p><code class="inline"><span class="w">GetFileContents</span></code>
+ can be used to retrieve the file contents rather than
+writing it out.</p>
+<p>This module is used by <code class="inline"><span class="w">h2xs</span></code>
+ to write the file <i>ppport.h</i>.</p>
+<a class='view-head2' id="Why-use-ppport.h%3f"></a><h3 class='h3' >Why use ppport.h?</h3>
+<p>You should use <i>ppport.h</i> in modern code so that your code will work
+with the widest range of Perl interpreters possible, without significant
+additional work.</p>
+<p>You should attempt older code to fully use <i>ppport.h</i>, because the
+reduced pollution of newer Perl versions is an important thing. It's so
+important that the old polluting ways of original Perl modules will not be
+supported very far into the future, and your module will almost certainly
+break! By adapting to it now, you'll gain compatibility and a sense of
+having done the electronic ecology some good.</p>
+<a class='view-head2' id="How-to-use-ppport.h"></a><h3 class='h3' >How to use ppport.h</h3>
+<p>Don't direct the users of your module to download <code class="inline"><span class="w">Devel::PPPort</span></code>
+.
+They are most probably no XS writers. Also, don't make <i>ppport.h</i>
+optional. Rather, just take the most recent copy of <i>ppport.h</i> that
+you can find (e.g. by generating it with the latest <code class="inline"><span class="w">Devel::PPPort</span></code>
+
+release from CPAN), copy it into your project, adjust your project to
+use it, and distribute the header along with your module.</p>
+<a class='view-head2' id="Running-ppport.h"></a><h3 class='h3' >Running ppport.h</h3>
+<p>But <i>ppport.h</i> is more than just a C header. It's also a Perl script
+that can check your source code. It will suggest hints and portability
+notes, and can even make suggestions on how to change your code. You
+can run it like any other Perl program:</p>
+<pre class="verbatim"><ol><li>    <span class="w">perl</span> <span class="w">ppport</span>.<span class="w">h</span> <span class="s">[</span><span class="w">options</span><span class="s">]</span> <span class="s">[</span><span class="w">files</span><span class="s">]</span></li></ol></pre><p>It also has embedded documentation, so you can use</p>
+<pre class="verbatim"><ol><li>    <span class="w">perldoc</span> <span class="w">ppport</span>.<span class="w">h</span></li></ol></pre><p>to find out more about how to use it.</p>
+<a class='view-head1' id="FUNCTIONS"></a><h2 class='h2' >FUNCTIONS</h2>
+<a class='view-head2' id="WriteFile"></a><h3 class='h3' >WriteFile</h3>
+<p><code class="inline"><span class="w">WriteFile</span></code>
+ takes one optional argument. When called with one
+argument, it expects to be passed a filename. When called with
+no arguments, it defaults to the filename <i>ppport.h</i>.</p>
+<p>The function returns a true value if the file was written successfully.
+Otherwise it returns a false value.</p>
+<a class='view-head2' id="GetFileContents"></a><h3 class='h3' >GetFileContents</h3>
+<p><code class="inline"><span class="w">GetFileContents</span></code>
+ behaves like <code class="inline"><span class="w">WriteFile</span></code>
+ above, but returns the contents
+of the would-be file rather than writing it out.</p>
+<a class='view-head1' id="COMPATIBILITY"></a><h2 class='h2' >COMPATIBILITY</h2>
+<p><i>ppport.h</i> supports Perl versions from 5.003 to 5.20
+in threaded and non-threaded configurations.</p>
+<a class='view-head2' id="Provided-Perl-compatibility-API"></a><h3 class='h3' >Provided Perl compatibility API</h3>
+<p>The header file written by this module, typically <i>ppport.h</i>, provides
+access to the following elements of the Perl API that is not available
+in older Perl releases:</p>
+<pre class="verbatim"><ol><li>    <span class="w">_aMY_CXT</span></li><li>    <span class="w">_pMY_CXT</span></li><li>    <span class="w">aMY_CXT</span></li><li>    <span class="w">aMY_CXT_</span></li><li>    <span class="w">aTHX</span></li><li>    <span class="w">aTHX_</span></li><li>    <span class="w">aTHXR</span></li><li>    <span class="w">aTHXR_</span></li><li>    <span class="w">AvFILLp</span></li><li>    <span class="w">boolSV</span></li><li>    <span class="w">C_ARRAY_END</span></li><li>    <span class="w">C_ARRAY_LENGTH</span></li><li>    <span class="w">call_argv</span></li><li>    <span class="w">call_method</span></li><li>    <span class="w">call_pv</span></li><li>    <span class="w">call_sv</span></li><li>    <span class="w">caller_cx</span></li><li>    <span class="w">cBOOL</span></li><li>    <span class="w">ckWARN</span></li><li>    <span class="w">CopFILE</span></li><li>    <span class="w">CopFILE_set</span></li><li>    <span class="w">CopFILEAV</span></li><li>    <span class="w">CopFILEGV</span></li><li>    <span class="w">CopFILEGV_set</span></li><li>    <span class="w">CopFILESV</span></li><li>    <span class="w">CopSTASH</span></li><li>    <span class="w">CopSTASH_eq</span></li><li>    <span class="w">CopSTASH_set</span></li><li>    <span class="w">CopSTASHPV</span></li><li>    <span class="w">CopSTASHPV_set</span></li><li>    <span class="w">CopyD</span></li><li>    <span class="w">CPERLscope</span></li><li>    <span class="w">croak_memory_wrap</span></li><li>    <span class="w">croak_no_modify</span></li><li>    <span class="w">croak_nocontext</span></li><li>    <span class="w">croak_sv</span></li><li>    <span class="w">croak_xs_usage</span></li><li>    <span class="w">dAX</span></li><li>    <span class="w">dAXMARK</span></li><li>    <span class="w">DEFSV</span></li><li>    <span class="w">DEFSV_set</span></li><li>    <span class="w">die_sv</span></li><li>    <span class="w">dITEMS</span></li><li>    <span class="w">dMY_CXT</span></li><li>    <span class="w">dMY_CXT_SV</span></li><li>    <span class="w">dNOOP</span></li><li>    <span class="w">dTHR</span></li><li>    <span class="w">dTHX</span></li><li>    <span class="w">dTHXa</span></li><li>    <span class="w">dTHXoa</span></li><li>    <span class="w">dTHXR</span></li><li>    <span class="w">dUNDERBAR</span></li><li>    <span class="w">dVAR</span></li><li>    <span class="w">dXCPT</span></li><li>    <span class="w">dXSTARG</span></li><li>    <span class="w">END_EXTERN_C</span></li><li>    <span class="w">ERRSV</span></li><li>    <span class="w">eval_pv</span></li><li>    <span class="w">eval_sv</span></li><li>    <span class="w">EXTERN_C</span></li><li>    <span class="w">G_METHOD</span></li><li>    <span class="w">get_av</span></li><li>    <span class="w">get_cv</span></li><li>    <span class="w">get_cvs</span></li><li>    <span class="w">get_hv</span></li><li>    <span class="w">get_sv</span></li><li>    <span class="w">grok_bin</span></li><li>    <span class="w">grok_hex</span></li><li>    <span class="w">grok_number</span></li><li>    <span class="w">GROK_NUMERIC_RADIX</span></li><li>    <span class="w">grok_numeric_radix</span></li><li>    <span class="w">grok_oct</span></li><li>    <span class="w">gv_fetchpvn_flags</span></li><li>    <span class="w">gv_fetchpvs</span></li><li>    <span class="w">gv_stashpvn</span></li><li>    <span class="w">gv_stashpvs</span></li><li>    <span class="w">HEf_SVKEY</span></li><li>    <span class="w">HeUTF8</span></li><li>    <span class="w">hv_fetchs</span></li><li>    <span class="w">hv_stores</span></li><li>    <span class="w">HvNAME_get</span></li><li>    <span class="w">HvNAMELEN_get</span></li><li>    <span class="w">IN_LOCALE</span></li><li>    <span class="w">IN_LOCALE_COMPILETIME</span></li><li>    <span class="w">IN_LOCALE_RUNTIME</span></li><li>    <span class="w">IN_PERL_COMPILETIME</span></li><li>    <span class="w">INT2PTR</span></li><li>    <span class="w">IS_NUMBER_GREATER_THAN_UV_MAX</span></li><li>    <span class="w">IS_NUMBER_IN_UV</span></li><li>    <span class="w">IS_NUMBER_INFINITY</span></li><li>    <span class="w">IS_NUMBER_NAN</span></li><li>    <span class="w">IS_NUMBER_NEG</span></li><li>    <span class="w">IS_NUMBER_NOT_INT</span></li><li>    <span class="w">isALNUMC</span></li><li>    <span class="w">isASCII</span></li><li>    <span class="w">isBLANK</span></li><li>    <span class="w">isCNTRL</span></li><li>    <span class="w">isGRAPH</span></li><li>    <span class="w">isPRINT</span></li><li>    <span class="w">isPSXSPC</span></li><li>    <span class="w">isPUNCT</span></li><li>    <span class="w">isXDIGIT</span></li><li>    <span class="w">IVdf</span></li><li>    <span class="w">IVSIZE</span></li><li>    <span class="w">IVTYPE</span></li><li>    <span class="w">load_module</span></li><li>    <span class="w">memEQ</span></li><li>    <span class="w">memEQs</span></li><li>    <span class="w">memNE</span></li><li>    <span class="w">memNEs</span></li><li>    <span class="w">mess</span></li><li>    <span class="w">mess_nocontext</span></li><li>    <span class="w">mess_sv</span></li><li>    <span class="w">mg_findext</span></li><li>    <span class="w">MoveD</span></li><li>    <span class="w">mPUSHi</span></li><li>    <span class="w">mPUSHn</span></li><li>    <span class="w">mPUSHp</span></li><li>    <span class="w">mPUSHs</span></li><li>    <span class="w">mPUSHu</span></li><li>    <span class="w">MUTABLE_PTR</span></li><li>    <span class="w">MUTABLE_SV</span></li><li>    <span class="w">mXPUSHi</span></li><li>    <span class="w">mXPUSHn</span></li><li>    <span class="w">mXPUSHp</span></li><li>    <span class="w">mXPUSHs</span></li><li>    <span class="w">mXPUSHu</span></li><li>    <span class="w">MY_CXT</span></li><li>    <span class="w">MY_CXT_CLONE</span></li><li>    <span class="w">MY_CXT_INIT</span></li><li>    <span class="w">my_snprintf</span></li><li>    <span class="w">my_sprintf</span></li><li>    <span class="w">my_strlcat</span></li><li>    <span class="w">my_strlcpy</span></li><li>    <span class="w">newCONSTSUB</span></li><li>    <span class="w">newRV_inc</span></li><li>    <span class="w">newRV_noinc</span></li><li>    <span class="w">newSV_type</span></li><li>    <span class="w">newSVpvn</span></li><li>    <span class="w">newSVpvn_flags</span></li><li>    <span class="w">newSVpvn_share</span></li><li>    <span class="w">newSVpvn_utf8</span></li><li>    <span class="w">newSVpvs</span></li><li>    <span class="w">newSVpvs_flags</span></li><li>    <span class="w">newSVpvs_share</span></li><li>    <span class="w">newSVuv</span></li><li>    <span class="w">Newx</span></li><li>    <span class="w">Newxc</span></li><li>    <span class="w">Newxz</span></li><li>    <span class="w">NOOP</span></li><li>    <span class="w">NUM2PTR</span></li><li>    <span class="w">NVef</span></li><li>    <span class="w">NVff</span></li><li>    <span class="w">NVgf</span></li><li>    <span class="w">NVTYPE</span></li><li>    <span class="w">OpHAS_SIBLING</span></li><li>    <span class="w">OpLASTSIB_set</span></li><li>    <span class="w">OpMAYBESIB_set</span></li><li>    <span class="w">OpMORESIB_set</span></li><li>    <span class="w">OpSIBLING</span></li><li>    <span class="w">packWARN</span></li><li>    <span class="w">PERL_ABS</span></li><li>    <span class="w">PERL_ARGS_ASSERT_CROAK_XS_USAGE</span></li><li>    <span class="w">PERL_BCDVERSION</span></li><li>    <span class="w">Perl_croak_no_modify</span></li><li>    <span class="w">PERL_GCC_BRACE_GROUPS_FORBIDDEN</span></li><li>    <span class="w">PERL_HASH</span></li><li>    <span class="w">PERL_INT_MAX</span></li><li>    <span class="w">PERL_INT_MIN</span></li><li>    <span class="w">PERL_LONG_MAX</span></li><li>    <span class="w">PERL_LONG_MIN</span></li><li>    <span class="w">PERL_MAGIC_arylen</span></li><li>    <span class="w">PERL_MAGIC_backref</span></li><li>    <span class="w">PERL_MAGIC_bm</span></li><li>    <span class="w">PERL_MAGIC_collxfrm</span></li><li>    <span class="w">PERL_MAGIC_dbfile</span></li><li>    <span class="w">PERL_MAGIC_dbline</span></li><li>    <span class="w">PERL_MAGIC_defelem</span></li><li>    <span class="w">PERL_MAGIC_env</span></li><li>    <span class="w">PERL_MAGIC_envelem</span></li><li>    <span class="w">PERL_MAGIC_ext</span></li><li>    <span class="w">PERL_MAGIC_fm</span></li><li>    <span class="w">PERL_MAGIC_glob</span></li><li>    <span class="w">PERL_MAGIC_isa</span></li><li>    <span class="w">PERL_MAGIC_isaelem</span></li><li>    <span class="w">PERL_MAGIC_mutex</span></li><li>    <span class="w">PERL_MAGIC_nkeys</span></li><li>    <span class="w">PERL_MAGIC_overload</span></li><li>    <span class="w">PERL_MAGIC_overload_elem</span></li><li>    <span class="w">PERL_MAGIC_overload_table</span></li><li>    <span class="w">PERL_MAGIC_pos</span></li><li>    <span class="w">PERL_MAGIC_qr</span></li><li>    <span class="w">PERL_MAGIC_regdata</span></li><li>    <span class="w">PERL_MAGIC_regdatum</span></li><li>    <span class="w">PERL_MAGIC_regex_global</span></li><li>    <span class="w">PERL_MAGIC_shared</span></li><li>    <span class="w">PERL_MAGIC_shared_scalar</span></li><li>    <span class="w">PERL_MAGIC_sig</span></li><li>    <span class="w">PERL_MAGIC_sigelem</span></li><li>    <span class="w">PERL_MAGIC_substr</span></li><li>    <span class="w">PERL_MAGIC_sv</span></li><li>    <span class="w">PERL_MAGIC_taint</span></li><li>    <span class="w">PERL_MAGIC_tied</span></li><li>    <span class="w">PERL_MAGIC_tiedelem</span></li><li>    <span class="w">PERL_MAGIC_tiedscalar</span></li><li>    <span class="w">PERL_MAGIC_utf8</span></li><li>    <span class="w">PERL_MAGIC_uvar</span></li><li>    <span class="w">PERL_MAGIC_uvar_elem</span></li><li>    <span class="w">PERL_MAGIC_vec</span></li><li>    <span class="w">PERL_MAGIC_vstring</span></li><li>    <span class="w">PERL_PV_ESCAPE_ALL</span></li><li>    <span class="w">PERL_PV_ESCAPE_FIRSTCHAR</span></li><li>    <span class="w">PERL_PV_ESCAPE_NOBACKSLASH</span></li><li>    <span class="w">PERL_PV_ESCAPE_NOCLEAR</span></li><li>    <span class="w">PERL_PV_ESCAPE_QUOTE</span></li><li>    <span class="w">PERL_PV_ESCAPE_RE</span></li><li>    <span class="w">PERL_PV_ESCAPE_UNI</span></li><li>    <span class="w">PERL_PV_ESCAPE_UNI_DETECT</span></li><li>    <span class="w">PERL_PV_PRETTY_DUMP</span></li><li>    <span class="w">PERL_PV_PRETTY_ELLIPSES</span></li><li>    <span class="w">PERL_PV_PRETTY_LTGT</span></li><li>    <span class="w">PERL_PV_PRETTY_NOCLEAR</span></li><li>    <span class="w">PERL_PV_PRETTY_QUOTE</span></li><li>    <span class="w">PERL_PV_PRETTY_REGPROP</span></li><li>    <span class="w">PERL_QUAD_MAX</span></li><li>    <span class="w">PERL_QUAD_MIN</span></li><li>    <span class="w">PERL_REVISION</span></li><li>    <span class="w">PERL_SCAN_ALLOW_UNDERSCORES</span></li><li>    <span class="w">PERL_SCAN_DISALLOW_PREFIX</span></li><li>    <span class="w">PERL_SCAN_GREATER_THAN_UV_MAX</span></li><li>    <span class="w">PERL_SCAN_SILENT_ILLDIGIT</span></li><li>    <span class="w">PERL_SHORT_MAX</span></li><li>    <span class="w">PERL_SHORT_MIN</span></li><li>    <span class="w">PERL_SIGNALS_UNSAFE_FLAG</span></li><li>    <span class="w">PERL_SUBVERSION</span></li><li>    <span class="w">PERL_UCHAR_MAX</span></li><li>    <span class="w">PERL_UCHAR_MIN</span></li><li>    <span class="w">PERL_UINT_MAX</span></li><li>    <span class="w">PERL_UINT_MIN</span></li><li>    <span class="w">PERL_ULONG_MAX</span></li><li>    <span class="w">PERL_ULONG_MIN</span></li><li>    <span class="w">PERL_UNUSED_ARG</span></li><li>    <span class="w">PERL_UNUSED_CONTEXT</span></li><li>    <span class="w">PERL_UNUSED_DECL</span></li><li>    <span class="w">PERL_UNUSED_RESULT</span></li><li>    <span class="w">PERL_UNUSED_VAR</span></li><li>    <span class="w">PERL_UQUAD_MAX</span></li><li>    <span class="w">PERL_UQUAD_MIN</span></li><li>    <span class="w">PERL_USE_GCC_BRACE_GROUPS</span></li><li>    <span class="w">PERL_USHORT_MAX</span></li><li>    <span class="w">PERL_USHORT_MIN</span></li><li>    <span class="w">PERL_VERSION</span></li><li>    <span class="w">Perl_warner</span></li><li>    <span class="w">Perl_warner_nocontext</span></li><li>    <span class="w">PERLIO_FUNCS_CAST</span></li><li>    <span class="w">PERLIO_FUNCS_DECL</span></li><li>    <span class="w">PL_bufend</span></li><li>    <span class="w">PL_bufptr</span></li><li>    <span class="w">PL_compiling</span></li><li>    <span class="w">PL_copline</span></li><li>    <span class="w">PL_curcop</span></li><li>    <span class="w">PL_curstash</span></li><li>    <span class="w">PL_DBsignal</span></li><li>    <span class="w">PL_DBsingle</span></li><li>    <span class="w">PL_DBsub</span></li><li>    <span class="w">PL_DBtrace</span></li><li>    <span class="w">PL_debstash</span></li><li>    <span class="w">PL_defgv</span></li><li>    <span class="w">PL_diehook</span></li><li>    <span class="w">PL_dirty</span></li><li>    <span class="w">PL_dowarn</span></li><li>    <span class="w">PL_errgv</span></li><li>    <span class="w">PL_error_count</span></li><li>    <span class="w">PL_expect</span></li><li>    <span class="w">PL_hexdigit</span></li><li>    <span class="w">PL_hints</span></li><li>    <span class="w">PL_in_my</span></li><li>    <span class="w">PL_in_my_stash</span></li><li>    <span class="w">PL_laststatval</span></li><li>    <span class="w">PL_lex_state</span></li><li>    <span class="w">PL_lex_stuff</span></li><li>    <span class="w">PL_linestr</span></li><li>    <span class="w">PL_na</span></li><li>    <span class="w">PL_no_modify</span></li><li>    <span class="w">PL_parser</span></li><li>    <span class="w">PL_perl_destruct_level</span></li><li>    <span class="w">PL_perldb</span></li><li>    <span class="w">PL_ppaddr</span></li><li>    <span class="w">PL_rsfp</span></li><li>    <span class="w">PL_rsfp_filters</span></li><li>    <span class="w">PL_signals</span></li><li>    <span class="w">PL_stack_base</span></li><li>    <span class="w">PL_stack_sp</span></li><li>    <span class="w">PL_statcache</span></li><li>    <span class="w">PL_stdingv</span></li><li>    <span class="w">PL_Sv</span></li><li>    <span class="w">PL_sv_arenaroot</span></li><li>    <span class="w">PL_sv_no</span></li><li>    <span class="w">PL_sv_undef</span></li><li>    <span class="w">PL_sv_yes</span></li><li>    <span class="w">PL_tainted</span></li><li>    <span class="w">PL_tainting</span></li><li>    <span class="w">PL_tokenbuf</span></li><li>    <span class="w">pMY_CXT</span></li><li>    <span class="w">pMY_CXT_</span></li><li>    <span class="w">Poison</span></li><li>    <span class="w">PoisonFree</span></li><li>    <span class="w">PoisonNew</span></li><li>    <span class="w">PoisonWith</span></li><li>    <span class="w">pTHX</span></li><li>    <span class="w">pTHX_</span></li><li>    <span class="w">PTR2IV</span></li><li>    <span class="w">PTR2nat</span></li><li>    <span class="w">PTR2NV</span></li><li>    <span class="w">PTR2ul</span></li><li>    <span class="w">PTR2UV</span></li><li>    <span class="w">PTRV</span></li><li>    <span class="w">PUSHmortal</span></li><li>    <span class="w">PUSHu</span></li><li>    <span class="w">pv_display</span></li><li>    <span class="w">pv_escape</span></li><li>    <span class="w">pv_pretty</span></li><li>    <span class="w">SAVE_DEFSV</span></li><li>    <span class="w">START_EXTERN_C</span></li><li>    <span class="w">START_MY_CXT</span></li><li>    <span class="w">STMT_END</span></li><li>    <span class="w">STMT_START</span></li><li>    <span class="w">STR_WITH_LEN</span></li><li>    <span class="w">sv_2pv_flags</span></li><li>    <span class="w">sv_2pv_nolen</span></li><li>    <span class="w">sv_2pvbyte</span></li><li>    <span class="w">sv_2pvbyte_nolen</span></li><li>    <span class="w">sv_2uv</span></li><li>    <span class="w">sv_catpv_mg</span></li><li>    <span class="w">sv_catpvf_mg</span></li><li>    <span class="w">sv_catpvf_mg_nocontext</span></li><li>    <span class="w">sv_catpvn_mg</span></li><li>    <span class="w">sv_catpvn_nomg</span></li><li>    <span class="w">sv_catpvs</span></li><li>    <span class="w">sv_catsv_mg</span></li><li>    <span class="w">sv_catsv_nomg</span></li><li>    <span class="w">SV_CONST_RETURN</span></li><li>    <span class="w">SV_COW_DROP_PV</span></li><li>    <span class="w">SV_COW_SHARED_HASH_KEYS</span></li><li>    <span class="w">SV_GMAGIC</span></li><li>    <span class="w">SV_HAS_TRAILING_NUL</span></li><li>    <span class="w">SV_IMMEDIATE_UNREF</span></li><li>    <span class="w">sv_magic_portable</span></li><li>    <span class="w">SV_MUTABLE_RETURN</span></li><li>    <span class="w">SV_NOSTEAL</span></li><li>    <span class="w">sv_pvn_force_flags</span></li><li>    <span class="w">sv_pvn_nomg</span></li><li>    <span class="w">sv_setiv_mg</span></li><li>    <span class="w">sv_setnv_mg</span></li><li>    <span class="w">sv_setpv_mg</span></li><li>    <span class="w">sv_setpvf_mg</span></li><li>    <span class="w">sv_setpvf_mg_nocontext</span></li><li>    <span class="w">sv_setpvn_mg</span></li><li>    <span class="w">sv_setpvs</span></li><li>    <span class="w">sv_setsv_mg</span></li><li>    <span class="w">sv_setsv_nomg</span></li><li>    <span class="w">sv_setuv</span></li><li>    <span class="w">sv_setuv_mg</span></li><li>    <span class="w">SV_SMAGIC</span></li><li>    <span class="w">sv_unmagicext</span></li><li>    <span class="w">sv_usepvn_mg</span></li><li>    <span class="w">SV_UTF8_NO_ENCODING</span></li><li>    <span class="w">sv_uv</span></li><li>    <span class="w">sv_vcatpvf</span></li><li>    <span class="w">sv_vcatpvf_mg</span></li><li>    <span class="w">sv_vsetpvf</span></li><li>    <span class="w">sv_vsetpvf_mg</span></li><li>    <span class="w">SVf</span></li><li>    <span class="w">SVf_UTF8</span></li><li>    <span class="w">SVfARG</span></li><li>    <span class="w">SvGETMAGIC</span></li><li>    <span class="w">SvIV_nomg</span></li><li>    <span class="w">SvMAGIC_set</span></li><li>    <span class="w">SvPV_const</span></li><li>    <span class="w">SvPV_flags</span></li><li>    <span class="w">SvPV_flags_const</span></li><li>    <span class="w">SvPV_flags_const_nolen</span></li><li>    <span class="w">SvPV_flags_mutable</span></li><li>    <span class="w">SvPV_force</span></li><li>    <span class="w">SvPV_force_flags</span></li><li>    <span class="w">SvPV_force_flags_mutable</span></li><li>    <span class="w">SvPV_force_flags_nolen</span></li><li>    <span class="w">SvPV_force_mutable</span></li><li>    <span class="w">SvPV_force_nolen</span></li><li>    <span class="w">SvPV_force_nomg</span></li><li>    <span class="w">SvPV_force_nomg_nolen</span></li><li>    <span class="w">SvPV_mutable</span></li><li>    <span class="w">SvPV_nolen</span></li><li>    <span class="w">SvPV_nolen_const</span></li><li>    <span class="w">SvPV_nomg</span></li><li>    <span class="w">SvPV_nomg_const</span></li><li>    <span class="w">SvPV_nomg_const_nolen</span></li><li>    <span class="w">SvPV_nomg_nolen</span></li><li>    <span class="w">SvPV_renew</span></li><li>    <span class="w">SvPVbyte</span></li><li>    <span class="w">SvPVX_const</span></li><li>    <span class="w">SvPVX_mutable</span></li><li>    <span class="w">SvREFCNT_inc</span></li><li>    <span class="w">SvREFCNT_inc_NN</span></li><li>    <span class="w">SvREFCNT_inc_simple</span></li><li>    <span class="w">SvREFCNT_inc_simple_NN</span></li><li>    <span class="w">SvREFCNT_inc_simple_void</span></li><li>    <span class="w">SvREFCNT_inc_simple_void_NN</span></li><li>    <span class="w">SvREFCNT_inc_void</span></li><li>    <span class="w">SvREFCNT_inc_void_NN</span></li><li>    <span class="w">SvRV_set</span></li><li>    <span class="w">SvRX</span></li><li>    <span class="w">SvRXOK</span></li><li>    <span class="w">SvSHARED_HASH</span></li><li>    <span class="w">SvSTASH_set</span></li><li>    <span class="w">SvUOK</span></li><li>    <span class="w">SvUV</span></li><li>    <span class="w">SvUV_nomg</span></li><li>    <span class="w">SvUV_set</span></li><li>    <span class="w">SvUVX</span></li><li>    <span class="w">SvUVx</span></li><li>    <span class="w">SvUVXx</span></li><li>    <span class="w">SvVSTRING_mg</span></li><li>    <span class="w">UNDERBAR</span></li><li>    <span class="w">UTF8_MAXBYTES</span></li><li>    <span class="w">UVof</span></li><li>    <span class="w">UVSIZE</span></li><li>    <span class="w">UVTYPE</span></li><li>    <span class="w">UVuf</span></li><li>    <span class="w">UVXf</span></li><li>    <span class="w">UVxf</span></li><li>    <span class="w">vload_module</span></li><li>    <span class="w">vmess</span></li><li>    <span class="w">vnewSVpvf</span></li><li>    <span class="w">WARN_ALL</span></li><li>    <span class="w">WARN_AMBIGUOUS</span></li><li>    <span class="w">WARN_ASSERTIONS</span></li><li>    <span class="w">WARN_BAREWORD</span></li><li>    <span class="w">WARN_CLOSED</span></li><li>    <span class="w">WARN_CLOSURE</span></li><li>    <span class="w">WARN_DEBUGGING</span></li><li>    <span class="w">WARN_DEPRECATED</span></li><li>    <span class="w">WARN_DIGIT</span></li><li>    <span class="w">WARN_EXEC</span></li><li>    <span class="w">WARN_EXITING</span></li><li>    <span class="w">WARN_GLOB</span></li><li>    <span class="w">WARN_INPLACE</span></li><li>    <span class="w">WARN_INTERNAL</span></li><li>    <span class="w">WARN_IO</span></li><li>    <span class="w">WARN_LAYER</span></li><li>    <span class="w">WARN_MALLOC</span></li><li>    <span class="w">WARN_MISC</span></li><li>    <span class="w">WARN_NEWLINE</span></li><li>    <span class="w">warn_nocontext</span></li><li>    <span class="w">WARN_NUMERIC</span></li><li>    <span class="w">WARN_ONCE</span></li><li>    <span class="w">WARN_OVERFLOW</span></li><li>    <span class="w">WARN_PACK</span></li><li>    <span class="w">WARN_PARENTHESIS</span></li><li>    <span class="w">WARN_PIPE</span></li><li>    <span class="w">WARN_PORTABLE</span></li><li>    <span class="w">WARN_PRECEDENCE</span></li><li>    <span class="w">WARN_PRINTF</span></li><li>    <span class="w">WARN_PROTOTYPE</span></li><li>    <span class="w">WARN_QW</span></li><li>    <span class="w">WARN_RECURSION</span></li><li>    <span class="w">WARN_REDEFINE</span></li><li>    <span class="w">WARN_REGEXP</span></li><li>    <span class="w">WARN_RESERVED</span></li><li>    <span class="w">WARN_SEMICOLON</span></li><li>    <span class="w">WARN_SEVERE</span></li><li>    <span class="w">WARN_SIGNAL</span></li><li>    <span class="w">WARN_SUBSTR</span></li><li>    <span class="w">warn_sv</span></li><li>    <span class="w">WARN_SYNTAX</span></li><li>    <span class="w">WARN_TAINT</span></li><li>    <span class="w">WARN_THREADS</span></li><li>    <span class="w">WARN_UNINITIALIZED</span></li><li>    <span class="w">WARN_UNOPENED</span></li><li>    <span class="w">WARN_UNPACK</span></li><li>    <span class="w">WARN_UNTIE</span></li><li>    <span class="w">WARN_UTF8</span></li><li>    <span class="w">WARN_VOID</span></li><li>    <span class="w">warner</span></li><li>    <span class="w">WIDEST_UTYPE</span></li><li>    <span class="w">XCPT_CATCH</span></li><li>    <span class="w">XCPT_RETHROW</span></li><li>    <span class="w">XCPT_TRY_END</span></li><li>    <span class="w">XCPT_TRY_START</span></li><li>    <span class="w">XPUSHmortal</span></li><li>    <span class="w">XPUSHu</span></li><li>    <span class="w">XSprePUSH</span></li><li>    <span class="w">XSPROTO</span></li><li>    <span class="w">XSRETURN</span></li><li>    <span class="w">XSRETURN_UV</span></li><li>    <span class="w">XST_mUV</span></li><li>    <span class="w">ZeroD</span></li></ol></pre><a class='view-head2' id="Perl-API-not-supported-by-ppport.h"></a><h3 class='h3' >Perl API not supported by ppport.h</h3>
+<p>There is still a big part of the API not supported by <i>ppport.h</i>.
+Either because it doesn't make sense to back-port that part of the API,
+or simply because it hasn't been implemented yet. Patches welcome!</p>
+<p>Here's a list of the currently unsupported API, and also the version of
+Perl below which it is unsupported:</p>
+<ul>
+<li><a class='view-title' id="perl-5.24.0"></a><strong>perl 5.24.0</strong>
+<pre class="verbatim"><ol><li>  <span class="w">BhkDISABLE</span></li><li>  <span class="w">BhkENABLE</span></li><li>  <span class="w">BhkENTRY_set</span></li><li>  <span class="w">MULTICALL</span></li><li>  <span class="w">PERL_SYS_TERM</span></li><li>  <span class="w">POP_MULTICALL</span></li><li>  <span class="w">PUSH_MULTICALL</span></li><li>  <span class="w">PadARRAY</span></li><li>  <span class="w">PadMAX</span></li><li>  <span class="w">PadlistARRAY</span></li><li>  <span class="w">PadlistMAX</span></li><li>  <span class="w">PadlistNAMES</span></li><li>  <span class="w">PadlistNAMESARRAY</span></li><li>  <span class="w">PadlistNAMESMAX</span></li><li>  <span class="w">PadnameLEN</span></li><li>  <span class="w">PadnamePV</span></li><li>  <span class="w">PadnameREFCNT</span></li><li>  <span class="w">PadnameREFCNT_dec</span></li><li>  <span class="w">PadnameSV</span></li><li>  <span class="w">PadnamelistARRAY</span></li><li>  <span class="w">PadnamelistMAX</span></li><li>  <span class="w">PadnamelistREFCNT</span></li><li>  <span class="w">PadnamelistREFCNT_dec</span></li><li>  <span class="w">RESTORE_LC_NUMERIC</span></li><li>  <span class="w">STORE_LC_NUMERIC_FORCE_TO_UNDERLYING</span></li><li>  <span class="w">STORE_LC_NUMERIC_SET_TO_NEEDED</span></li><li>  <span class="w">XS_APIVERSION_BOOTCHECK</span></li><li>  <span class="w">XS_EXTERNAL</span></li><li>  <span class="w">XS_INTERNAL</span></li><li>  <span class="w">XS_VERSION_BOOTCHECK</span></li><li>  <span class="w">XopDISABLE</span></li><li>  <span class="w">XopENABLE</span></li><li>  <span class="w">XopENTRY</span></li><li>  <span class="w">XopENTRYCUSTOM</span></li><li>  <span class="w">XopENTRY_set</span></li><li>  <span class="w">cophh_new_empty</span></li><li>  <span class="w">my_lstat</span></li><li>  <span class="w">my_stat</span></li><li>  <span class="w">reentrant_free</span></li><li>  <span class="w">reentrant_init</span></li><li>  <span class="w">reentrant_retry</span></li><li>  <span class="w">reentrant_size</span></li><li>  <a class="l_k" href="../functions/ref.html">ref</a></li><li>  <span class="w">sv_setref_pvs</span></li></ol></pre></li>
+<li><a class='view-title' id="perl-5.23.9"></a><strong>perl 5.23.9</strong>
+<pre class="verbatim"><ol><li>  <span class="w">toFOLD_uvchr</span></li><li>  <span class="w">toLOWER_uvchr</span></li><li>  <span class="w">toTITLE_uvchr</span></li><li>  <span class="w">toUPPER_uvchr</span></li></ol></pre></li>
+<li><a class='view-title' id="perl-5.23.8"></a><strong>perl 5.23.8</strong>
+<pre class="verbatim"><ol><li>  <span class="w">clear_defarray</span></li><li>  <span class="w">cx_popblock</span></li><li>  <span class="w">cx_popeval</span></li><li>  <span class="w">cx_popformat</span></li><li>  <span class="w">cx_popgiven</span></li><li>  <span class="w">cx_poploop</span></li><li>  <span class="w">cx_popsub</span></li><li>  <span class="w">cx_popsub_args</span></li><li>  <span class="w">cx_popsub_common</span></li><li>  <span class="w">cx_popwhen</span></li><li>  <span class="w">cx_pushblock</span></li><li>  <span class="w">cx_pusheval</span></li><li>  <span class="w">cx_pushformat</span></li><li>  <span class="w">cx_pushgiven</span></li><li>  <span class="w">cx_pushloop_for</span></li><li>  <span class="w">cx_pushloop_plain</span></li><li>  <span class="w">cx_pushsub</span></li><li>  <span class="w">cx_pushwhen</span></li><li>  <span class="w">cx_topblock</span></li><li>  <span class="w">leave_adjust_stacks</span></li><li>  <span class="w">savetmps</span></li></ol></pre></li>
+<li><a class='view-title' id="perl-5.22.0"></a><strong>perl 5.22.0</strong>
+<pre class="verbatim"><ol><li>  <span class="w">UVCHR_SKIP</span></li></ol></pre></li>
+<li><a class='view-title' id="perl-5.21.10"></a><strong>perl 5.21.10</strong>
+<pre class="verbatim"><ol><li>  <span class="w">DECLARATION_FOR_LC_NUMERIC_MANIPULATION</span></li></ol></pre></li>
+<li><a class='view-title' id="perl-5.21.8"></a><strong>perl 5.21.8</strong>
+<pre class="verbatim"><ol><li>  <span class="w">sv_get_backrefs</span></li></ol></pre></li>
+<li><a class='view-title' id="perl-5.21.7"></a><strong>perl 5.21.7</strong>
+<pre class="verbatim"><ol><li>  <span class="w">PadnameUTF8</span></li><li>  <span class="w">is_invariant_string</span></li><li>  <span class="w">newPADNAMELIST</span></li><li>  <span class="w">newPADNAMEouter</span></li><li>  <span class="w">newPADNAMEpvn</span></li><li>  <span class="w">newUNOP_AUX</span></li><li>  <span class="w">padnamelist_fetch</span></li><li>  <span class="w">padnamelist_store</span></li></ol></pre></li>
+<li><a class='view-title' id="perl-5.21.6"></a><strong>perl 5.21.6</strong>
+<pre class="verbatim"><ol><li>  <span class="w">newDEFSVOP</span></li><li>  <span class="w">op_convert_list</span></li></ol></pre></li>
+<li><a class='view-title' id="perl-5.21.5"></a><strong>perl 5.21.5</strong>
+<pre class="verbatim"><ol><li>  <span class="w">cv_name</span></li><li>  <span class="w">newMETHOP</span></li><li>  <span class="w">newMETHOP_named</span></li></ol></pre></li>
+<li><a class='view-title' id="perl-5.21.4"></a><strong>perl 5.21.4</strong>
+<pre class="verbatim"><ol><li>  <span class="w">cv_set_call_checker_flags</span></li><li>  <span class="w">grok_infnan</span></li><li>  <span class="w">isinfnan</span></li><li>  <span class="w">sync_locale</span></li></ol></pre></li>
+<li><a class='view-title' id="perl-5.21.2"></a><strong>perl 5.21.2</strong>
+<pre class="verbatim"><ol><li>  <span class="w">grok_number_flags</span></li><li>  <span class="w">op_sibling_splice</span></li></ol></pre></li>
+<li><a class='view-title' id="perl-5.21.1"></a><strong>perl 5.21.1</strong>
+<pre class="verbatim"><ol><li>  <span class="w">_is_in_locale_category</span></li><li>  <span class="w">_is_utf8_char_slow</span></li><li>  <span class="w">_is_utf8_idcont</span></li><li>  <span class="w">_is_utf8_idstart</span></li><li>  <span class="w">_is_utf8_xidcont</span></li><li>  <span class="w">_is_utf8_xidstart</span></li><li>  <span class="w">isALNUM_lazy</span></li><li>  <span class="w">isIDFIRST_lazy</span></li><li>  <span class="w">isUTF8_CHAR</span></li><li>  <span class="w">markstack_grow</span></li><li>  <span class="w">my_strerror</span></li></ol></pre></li>
+<li><a class='view-title' id="perl-5.19.10"></a><strong>perl 5.19.10</strong>
+<pre class="verbatim"><ol><li>  <span class="w">OP_TYPE_IS_OR_WAS</span></li></ol></pre></li>
+<li><a class='view-title' id="perl-5.19.9"></a><strong>perl 5.19.9</strong>
+<pre class="verbatim"><ol><li>  <span class="w">_to_utf8_fold_flags</span></li><li>  <span class="w">_to_utf8_lower_flags</span></li><li>  <span class="w">_to_utf8_title_flags</span></li><li>  <span class="w">_to_utf8_upper_flags</span></li></ol></pre></li>
+<li><a class='view-title' id="perl-5.19.7"></a><strong>perl 5.19.7</strong>
+<pre class="verbatim"><ol><li>  <span class="w">OP_TYPE_IS</span></li></ol></pre></li>
+<li><a class='view-title' id="perl-5.19.4"></a><strong>perl 5.19.4</strong>
+<pre class="verbatim"><ol><li>  <span class="w">append_utf8_from_native_byte</span></li><li>  <span class="w">is_safe_syscall</span></li><li>  <span class="w">uvoffuni_to_utf8_flags</span></li></ol></pre></li>
+<li><a class='view-title' id="perl-5.19.3"></a><strong>perl 5.19.3</strong>
+<pre class="verbatim"><ol><li>  <span class="w">sv_pos_b2u_flags</span></li></ol></pre></li>
+<li><a class='view-title' id="perl-5.19.2"></a><strong>perl 5.19.2</strong>
+<pre class="verbatim"><ol><li>  <span class="w">SVt_INVLIST</span></li></ol></pre></li>
+<li><a class='view-title' id="perl-5.19.1"></a><strong>perl 5.19.1</strong>
+<pre class="verbatim"><ol><li>  <span class="w">re_intuit_start</span></li><li>  <span class="w">toFOLD</span></li><li>  <span class="w">toFOLD_utf8</span></li><li>  <span class="w">toLOWER_L1</span></li><li>  <span class="w">toTITLE</span></li></ol></pre></li>
+<li><a class='view-title' id="perl-5.18.0"></a><strong>perl 5.18.0</strong>
+<pre class="verbatim"><ol><li>  <span class="w">hv_rand_set</span></li></ol></pre></li>
+<li><a class='view-title' id="perl-5.17.9"></a><strong>perl 5.17.9</strong>
+<pre class="verbatim"><ol><li>  <span class="w">av_tindex</span></li><li>  <span class="w">av_top_index</span></li></ol></pre></li>
+<li><a class='view-title' id="perl-5.17.8"></a><strong>perl 5.17.8</strong>
+<pre class="verbatim"><ol><li>  <span class="w">_is_uni_FOO</span></li><li>  <span class="w">_is_uni_perl_idcont</span></li><li>  <span class="w">_is_utf8_FOO</span></li><li>  <span class="w">_is_utf8_mark</span></li><li>  <span class="w">_is_utf8_perl_idcont</span></li><li>  <span class="w">isALPHANUMERIC</span></li><li>  <span class="w">isIDCONT</span></li></ol></pre></li>
+<li><a class='view-title' id="perl-5.17.7"></a><strong>perl 5.17.7</strong>
+<pre class="verbatim"><ol><li>  <span class="w">SvREFCNT_dec_NN</span></li><li>  <span class="w">_is_uni_perl_idstart</span></li><li>  <span class="w">_is_utf8_perl_idstart</span></li><li>  <span class="w">is_uni_alnumc</span></li><li>  <span class="w">is_uni_alnumc_lc</span></li><li>  <span class="w">is_utf8_alnumc</span></li></ol></pre></li>
+<li><a class='view-title' id="perl-5.17.6"></a><strong>perl 5.17.6</strong>
+<pre class="verbatim"><ol><li>  <span class="w">READ_XDIGIT</span></li></ol></pre></li>
+<li><a class='view-title' id="perl-5.17.4"></a><strong>perl 5.17.4</strong>
+<pre class="verbatim"><ol><li>  <span class="w">PL_comppad_name</span></li><li>  <span class="w">PadlistREFCNT</span></li><li>  <span class="w">newMYSUB</span></li><li>  <span class="w">newSVpadname</span></li></ol></pre></li>
+<li><a class='view-title' id="perl-5.17.2"></a><strong>perl 5.17.2</strong>
+<pre class="verbatim"><ol><li>  <span class="w">is_uni_blank</span></li><li>  <span class="w">is_uni_blank_lc</span></li><li>  <span class="w">is_utf8_blank</span></li><li>  <span class="w">sv_copypv_flags</span></li><li>  <span class="w">sv_copypv_nomg</span></li><li>  <span class="w">sv_vcatpvfn_flags</span></li></ol></pre></li>
+<li><a class='view-title' id="perl-5.15.9"></a><strong>perl 5.15.9</strong>
+<pre class="verbatim"><ol><li>  <span class="w">utf8_to_uvchr_buf</span></li><li>  <span class="w">utf8_to_uvuni_buf</span></li><li>  <span class="w">valid_utf8_to_uvchr</span></li><li>  <span class="w">valid_utf8_to_uvuni</span></li></ol></pre></li>
+<li><a class='view-title' id="perl-5.15.8"></a><strong>perl 5.15.8</strong>
+<pre class="verbatim"><ol><li>  <span class="w">is_utf8_char_buf</span></li><li>  <span class="w">wrap_op_checker</span></li></ol></pre></li>
+<li><a class='view-title' id="perl-5.15.7"></a><strong>perl 5.15.7</strong>
+<pre class="verbatim"><ol><li>  <span class="w">toLOWER_utf8</span></li><li>  <span class="w">toTITLE_utf8</span></li><li>  <span class="w">toUPPER_utf8</span></li><li>  <span class="w">to_utf8_fold</span></li><li>  <span class="w">to_utf8_lower</span></li><li>  <span class="w">to_utf8_title</span></li><li>  <span class="w">to_utf8_upper</span></li></ol></pre></li>
+<li><a class='view-title' id="perl-5.15.6"></a><strong>perl 5.15.6</strong>
+<pre class="verbatim"><ol><li>  <span class="w">newCONSTSUB_flags</span></li></ol></pre></li>
+<li><a class='view-title' id="perl-5.15.4"></a><strong>perl 5.15.4</strong>
+<pre class="verbatim"><ol><li>  <span class="w">HvENAMELEN</span></li><li>  <span class="w">HvENAMEUTF8</span></li><li>  <span class="w">HvNAMELEN</span></li><li>  <span class="w">HvNAMEUTF8</span></li><li>  <span class="w">gv_autoload_pv</span></li><li>  <span class="w">gv_autoload_pvn</span></li><li>  <span class="w">gv_autoload_sv</span></li><li>  <span class="w">gv_fetchmeth_pv</span></li><li>  <span class="w">gv_fetchmeth_pv_autoload</span></li><li>  <span class="w">gv_fetchmeth_pvn</span></li><li>  <span class="w">gv_fetchmeth_pvn_autoload</span></li><li>  <span class="w">gv_fetchmeth_sv</span></li><li>  <span class="w">gv_fetchmeth_sv_autoload</span></li><li>  <span class="w">gv_fetchmethod_pv_flags</span></li><li>  <span class="w">gv_fetchmethod_pvn_flags</span></li><li>  <span class="w">gv_fetchmethod_sv_flags</span></li><li>  <span class="w">gv_init_pv</span></li><li>  <span class="w">gv_init_sv</span></li><li>  <span class="w">newGVgen_flags</span></li><li>  <span class="w">sv_derived_from_pv</span></li><li>  <span class="w">sv_derived_from_pvn</span></li><li>  <span class="w">sv_derived_from_sv</span></li><li>  <span class="w">sv_does_pv</span></li><li>  <span class="w">sv_does_pvn</span></li><li>  <span class="w">sv_does_sv</span></li><li>  <span class="w">sv_ref</span></li><li>  <span class="w">whichsig_pv</span></li><li>  <span class="w">whichsig_pvn</span></li><li>  <span class="w">whichsig_sv</span></li></ol></pre></li>
+<li><a class='view-title' id="perl-5.15.1"></a><strong>perl 5.15.1</strong>
+<pre class="verbatim"><ol><li>  <span class="w">cop_fetch_label</span></li><li>  <span class="w">cop_store_label</span></li><li>  <span class="w">pad_add_name_pv</span></li><li>  <span class="w">pad_add_name_pvn</span></li><li>  <span class="w">pad_add_name_pvs</span></li><li>  <span class="w">pad_add_name_sv</span></li><li>  <span class="w">pad_findmy_pv</span></li><li>  <span class="w">pad_findmy_pvn</span></li><li>  <span class="w">pad_findmy_pvs</span></li><li>  <span class="w">pad_findmy_sv</span></li></ol></pre></li>
+<li><a class='view-title' id="perl-5.14.0"></a><strong>perl 5.14.0</strong>
+<pre class="verbatim"><ol><li>  <span class="w">_to_uni_fold_flags</span></li></ol></pre></li>
+<li><a class='view-title' id="perl-5.13.10"></a><strong>perl 5.13.10</strong>
+<pre class="verbatim"><ol><li>  <span class="w">foldEQ_utf8_flags</span></li><li>  <span class="w">is_utf8_xidcont</span></li><li>  <span class="w">is_utf8_xidfirst</span></li></ol></pre></li>
+<li><a class='view-title' id="perl-5.13.8"></a><strong>perl 5.13.8</strong>
+<pre class="verbatim"><ol><li>  <span class="w">foldEQ_latin1</span></li><li>  <span class="w">parse_arithexpr</span></li><li>  <span class="w">parse_fullexpr</span></li><li>  <span class="w">parse_listexpr</span></li><li>  <span class="w">parse_termexpr</span></li></ol></pre></li>
+<li><a class='view-title' id="perl-5.13.7"></a><strong>perl 5.13.7</strong>
+<pre class="verbatim"><ol><li>  <span class="w">HvENAME</span></li><li>  <span class="w">OP_CLASS</span></li><li>  <span class="w">XopFLAGS</span></li><li>  <span class="w">amagic_deref_call</span></li><li>  <span class="w">bytes_cmp_utf8</span></li><li>  <span class="w">cop_hints_2hv</span></li><li>  <span class="w">cop_hints_fetch_pv</span></li><li>  <span class="w">cop_hints_fetch_pvn</span></li><li>  <span class="w">cop_hints_fetch_pvs</span></li><li>  <span class="w">cop_hints_fetch_sv</span></li><li>  <span class="w">cophh_2hv</span></li><li>  <span class="w">cophh_copy</span></li><li>  <span class="w">cophh_delete_pv</span></li><li>  <span class="w">cophh_delete_pvn</span></li><li>  <span class="w">cophh_delete_pvs</span></li><li>  <span class="w">cophh_delete_sv</span></li><li>  <span class="w">cophh_fetch_pv</span></li><li>  <span class="w">cophh_fetch_pvn</span></li><li>  <span class="w">cophh_fetch_pvs</span></li><li>  <span class="w">cophh_fetch_sv</span></li><li>  <span class="w">cophh_free</span></li><li>  <span class="w">cophh_store_pv</span></li><li>  <span class="w">cophh_store_pvn</span></li><li>  <span class="w">cophh_store_pvs</span></li><li>  <span class="w">cophh_store_sv</span></li><li>  <span class="w">custom_op_register</span></li><li>  <span class="w">custom_op_xop</span></li><li>  <span class="w">newFOROP</span></li><li>  <span class="w">newWHILEOP</span></li><li>  <span class="w">op_lvalue</span></li><li>  <span class="w">op_scope</span></li><li>  <span class="w">parse_barestmt</span></li><li>  <span class="w">parse_block</span></li><li>  <span class="w">parse_label</span></li></ol></pre></li>
+<li><a class='view-title' id="perl-5.13.6"></a><strong>perl 5.13.6</strong>
+<pre class="verbatim"><ol><li>  <span class="w">LINKLIST</span></li><li>  <span class="w">SvTRUE_nomg</span></li><li>  <span class="w">ck_entersub_args_list</span></li><li>  <span class="w">ck_entersub_args_proto</span></li><li>  <span class="w">ck_entersub_args_proto_or_list</span></li><li>  <span class="w">cv_get_call_checker</span></li><li>  <span class="w">cv_set_call_checker</span></li><li>  <span class="w">isWORDCHAR</span></li><li>  <span class="w">lex_stuff_pv</span></li><li>  <span class="w">mg_free_type</span></li><li>  <span class="w">newSVpv_share</span></li><li>  <span class="w">op_append_elem</span></li><li>  <span class="w">op_append_list</span></li><li>  <span class="w">op_contextualize</span></li><li>  <span class="w">op_linklist</span></li><li>  <span class="w">op_prepend_elem</span></li><li>  <span class="w">parse_stmtseq</span></li><li>  <span class="w">rv2cv_op_cv</span></li><li>  <span class="w">savesharedpvs</span></li><li>  <span class="w">savesharedsvpv</span></li><li>  <span class="w">sv_2bool_flags</span></li><li>  <span class="w">sv_catpv_flags</span></li><li>  <span class="w">sv_catpv_nomg</span></li><li>  <span class="w">sv_catpvs_flags</span></li><li>  <span class="w">sv_catpvs_mg</span></li><li>  <span class="w">sv_catpvs_nomg</span></li><li>  <span class="w">sv_cmp_flags</span></li><li>  <span class="w">sv_cmp_locale_flags</span></li><li>  <span class="w">sv_collxfrm_flags</span></li><li>  <span class="w">sv_eq_flags</span></li><li>  <span class="w">sv_setpvs_mg</span></li></ol></pre></li>
+<li><a class='view-title' id="perl-5.13.5"></a><strong>perl 5.13.5</strong>
+<pre class="verbatim"><ol><li>  <span class="w">PL_rpeepp</span></li><li>  <span class="w">isOCTAL</span></li><li>  <span class="w">lex_stuff_pvs</span></li><li>  <span class="w">parse_fullstmt</span></li></ol></pre></li>
+<li><a class='view-title' id="perl-5.13.3"></a><strong>perl 5.13.3</strong>
+<pre class="verbatim"><ol><li>  <span class="w">blockhook_register</span></li></ol></pre></li>
+<li><a class='view-title' id="perl-5.13.2"></a><strong>perl 5.13.2</strong>
+<pre class="verbatim"><ol><li>  <span class="w">SvNV_nomg</span></li><li>  <span class="w">find_rundefsv</span></li><li>  <span class="w">foldEQ</span></li><li>  <span class="w">foldEQ_locale</span></li><li>  <span class="w">foldEQ_utf8</span></li><li>  <span class="w">hv_fill</span></li><li>  <span class="w">sv_dec_nomg</span></li><li>  <span class="w">sv_inc_nomg</span></li></ol></pre></li>
+<li><a class='view-title' id="perl-5.13.1"></a><strong>perl 5.13.1</strong>
+<pre class="verbatim"><ol><li>  <span class="w">sv_2nv_flags</span></li></ol></pre></li>
+<li><a class='view-title' id="perl-5.11.5"></a><strong>perl 5.11.5</strong>
+<pre class="verbatim"><ol><li>  <span class="w">sv_pos_u2b_flags</span></li></ol></pre></li>
+<li><a class='view-title' id="perl-5.11.4"></a><strong>perl 5.11.4</strong>
+<pre class="verbatim"><ol><li>  <span class="w">prescan_version</span></li></ol></pre></li>
+<li><a class='view-title' id="perl-5.11.2"></a><strong>perl 5.11.2</strong>
+<pre class="verbatim"><ol><li>  <span class="w">PL_keyword_plugin</span></li><li>  <span class="w">lex_bufutf8</span></li><li>  <span class="w">lex_discard_to</span></li><li>  <span class="w">lex_grow_linestr</span></li><li>  <span class="w">lex_next_chunk</span></li><li>  <span class="w">lex_peek_unichar</span></li><li>  <span class="w">lex_read_space</span></li><li>  <span class="w">lex_read_to</span></li><li>  <span class="w">lex_read_unichar</span></li><li>  <span class="w">lex_stuff_pvn</span></li><li>  <span class="w">lex_stuff_sv</span></li><li>  <span class="w">lex_unstuff</span></li></ol></pre></li>
+<li><a class='view-title' id="perl-5.11.1"></a><strong>perl 5.11.1</strong>
+<pre class="verbatim"><ol><li>  <span class="w">ck_warner</span></li><li>  <span class="w">ck_warner_d</span></li><li>  <span class="w">is_utf8_perl_space</span></li><li>  <span class="w">is_utf8_perl_word</span></li><li>  <span class="w">is_utf8_posix_digit</span></li></ol></pre></li>
+<li><a class='view-title' id="perl-5.11.0"></a><strong>perl 5.11.0</strong>
+<pre class="verbatim"><ol><li>  <span class="w">Gv_AMupdate</span></li><li>  <span class="w">PL_opfreehook</span></li><li>  <span class="w">SVt_REGEXP</span></li><li>  <span class="w">SvOOK_offset</span></li><li>  <span class="w">av_iter_p</span></li><li>  <span class="w">gv_add_by_type</span></li><li>  <span class="w">is_ascii_string</span></li><li>  <span class="w">pregfree2</span></li><li>  <span class="w">save_adelete</span></li><li>  <span class="w">save_aelem_flags</span></li><li>  <span class="w">save_hdelete</span></li><li>  <span class="w">save_helem_flags</span></li><li>  <span class="w">sv_utf8_upgrade_flags_grow</span></li></ol></pre></li>
+<li><a class='view-title' id="perl-5.10.1"></a><strong>perl 5.10.1</strong>
+<pre class="verbatim"><ol><li>  <span class="w">mro_get_from_name</span></li><li>  <span class="w">mro_get_private_data</span></li><li>  <span class="w">mro_register</span></li><li>  <span class="w">mro_set_mro</span></li><li>  <span class="w">mro_set_private_data</span></li><li>  <span class="w">save_hints</span></li><li>  <span class="w">save_padsv_and_mortalize</span></li><li>  <span class="w">save_pushi32ptr</span></li><li>  <span class="w">save_pushptr</span></li><li>  <span class="w">save_pushptrptr</span></li><li>  <span class="w">sv_insert_flags</span></li></ol></pre></li>
+<li><a class='view-title' id="perl-5.10.0"></a><strong>perl 5.10.0</strong>
+<pre class="verbatim"><ol><li>  <span class="w">hv_common</span></li><li>  <span class="w">hv_common_key_len</span></li><li>  <span class="w">sv_destroyable</span></li><li>  <span class="w">sys_init</span></li><li>  <span class="w">sys_init3</span></li><li>  <span class="w">sys_term</span></li></ol></pre></li>
+<li><a class='view-title' id="perl-5.9.5"></a><strong>perl 5.9.5</strong>
+<pre class="verbatim"><ol><li>  <span class="w">Perl_signbit</span></li><li>  <span class="w">av_create_and_push</span></li><li>  <span class="w">av_create_and_unshift_one</span></li><li>  <span class="w">gv_fetchfile_flags</span></li><li>  <span class="w">lex_start</span></li><li>  <span class="w">mro_get_linear_isa</span></li><li>  <span class="w">mro_method_changed_in</span></li><li>  <span class="w">my_dirfd</span></li><li>  <span class="w">pregcomp</span></li><li>  <span class="w">ptr_table_clear</span></li><li>  <span class="w">ptr_table_fetch</span></li><li>  <span class="w">ptr_table_free</span></li><li>  <span class="w">ptr_table_new</span></li><li>  <span class="w">ptr_table_split</span></li><li>  <span class="w">ptr_table_store</span></li><li>  <span class="w">re_compile</span></li><li>  <span class="w">reg_named_buff_all</span></li><li>  <span class="w">reg_named_buff_exists</span></li><li>  <span class="w">reg_named_buff_fetch</span></li><li>  <span class="w">reg_named_buff_firstkey</span></li><li>  <span class="w">reg_named_buff_nextkey</span></li><li>  <span class="w">reg_named_buff_scalar</span></li><li>  <span class="w">regfree_internal</span></li><li>  <span class="w">savesharedpvn</span></li><li>  <span class="w">scan_vstring</span></li><li>  <span class="w">upg_version</span></li></ol></pre></li>
+<li><a class='view-title' id="perl-5.9.4"></a><strong>perl 5.9.4</strong>
+<pre class="verbatim"><ol><li>  <span class="w">PerlIO_context_layers</span></li><li>  <span class="w">gv_name_set</span></li><li>  <span class="w">hv_copy_hints_hv</span></li><li>  <span class="w">my_vsnprintf</span></li><li>  <span class="w">newXS_flags</span></li><li>  <span class="w">regclass_swash</span></li><li>  <span class="w">sv_does</span></li><li>  <span class="w">sv_usepvn_flags</span></li></ol></pre></li>
+<li><a class='view-title' id="perl-5.9.3"></a><strong>perl 5.9.3</strong>
+<pre class="verbatim"><ol><li>  <span class="w">av_arylen_p</span></li><li>  <span class="w">ckwarn</span></li><li>  <span class="w">ckwarn_d</span></li><li>  <span class="w">csighandler</span></li><li>  <span class="w">dMULTICALL</span></li><li>  <span class="w">doref</span></li><li>  <span class="w">gv_const_sv</span></li><li>  <span class="w">hv_eiter_p</span></li><li>  <span class="w">hv_eiter_set</span></li><li>  <span class="w">hv_name_set</span></li><li>  <span class="w">hv_placeholders_get</span></li><li>  <span class="w">hv_placeholders_set</span></li><li>  <span class="w">hv_riter_p</span></li><li>  <span class="w">hv_riter_set</span></li><li>  <span class="w">is_utf8_string_loclen</span></li><li>  <span class="w">newGIVENOP</span></li><li>  <span class="w">newSVhek</span></li><li>  <span class="w">newWHENOP</span></li><li>  <span class="w">pad_compname_type</span></li><li>  <span class="w">savepvs</span></li><li>  <span class="w">sortsv_flags</span></li><li>  <span class="w">vverify</span></li></ol></pre></li>
+<li><a class='view-title' id="perl-5.9.2"></a><strong>perl 5.9.2</strong>
+<pre class="verbatim"><ol><li>  <span class="w">SvPVbyte_force</span></li><li>  <span class="w">find_rundefsvoffset</span></li><li>  <span class="w">op_refcnt_lock</span></li><li>  <span class="w">op_refcnt_unlock</span></li><li>  <span class="w">savesvpv</span></li><li>  <span class="w">vnormal</span></li></ol></pre></li>
+<li><a class='view-title' id="perl-5.9.1"></a><strong>perl 5.9.1</strong>
+<pre class="verbatim"><ol><li>  <span class="w">hv_clear_placeholders</span></li><li>  <span class="w">hv_scalar</span></li><li>  <span class="w">scan_version</span></li><li>  <span class="w">sv_2iv_flags</span></li><li>  <span class="w">sv_2uv_flags</span></li></ol></pre></li>
+<li><a class='view-title' id="perl-5.9.0"></a><strong>perl 5.9.0</strong>
+<pre class="verbatim"><ol><li>  <span class="w">new_version</span></li><li>  <span class="w">save_set_svflags</span></li><li>  <span class="w">vcmp</span></li><li>  <span class="w">vnumify</span></li><li>  <span class="w">vstringify</span></li></ol></pre></li>
+<li><a class='view-title' id="perl-5.8.3"></a><strong>perl 5.8.3</strong>
+<pre class="verbatim"><ol><li>  <span class="w">SvIsCOW</span></li><li>  <span class="w">SvIsCOW_shared_hash</span></li></ol></pre></li>
+<li><a class='view-title' id="perl-5.8.1"></a><strong>perl 5.8.1</strong>
+<pre class="verbatim"><ol><li>  <span class="w">CvPADLIST</span></li><li>  <span class="w">PL_comppad</span></li><li>  <span class="w">SvVOK</span></li><li>  <span class="w">doing_taint</span></li><li>  <span class="w">find_runcv</span></li><li>  <span class="w">is_utf8_string_loc</span></li><li>  <span class="w">packlist</span></li><li>  <span class="w">pad_add_anon</span></li><li>  <span class="w">pad_new</span></li><li>  <span class="w">pad_tidy</span></li><li>  <span class="w">save_bool</span></li><li>  <span class="w">savestack_grow_cnt</span></li><li>  <span class="w">seed</span></li><li>  <span class="w">sv_cat_decode</span></li><li>  <span class="w">sv_setpviv</span></li><li>  <span class="w">sv_setpviv_mg</span></li><li>  <span class="w">unpackstring</span></li></ol></pre></li>
+<li><a class='view-title' id="perl-5.8.0"></a><strong>perl 5.8.0</strong>
+<pre class="verbatim"><ol><li>  <span class="w">HeUTF8</span></li><li>  <span class="w">hv_iternext_flags</span></li><li>  <span class="w">hv_store_flags</span></li><li>  <span class="w">is_utf8_idcont</span></li><li>  <span class="w">nothreadhook</span></li></ol></pre></li>
+<li><a class='view-title' id="perl-5.7.3"></a><strong>perl 5.7.3</strong>
+<pre class="verbatim"><ol><li>  <span class="w">OP_DESC</span></li><li>  <span class="w">OP_NAME</span></li><li>  <span class="w">PL_peepp</span></li><li>  <span class="w">PerlIO_clearerr</span></li><li>  <span class="w">PerlIO_close</span></li><li>  <span class="w">PerlIO_eof</span></li><li>  <span class="w">PerlIO_error</span></li><li>  <span class="w">PerlIO_fileno</span></li><li>  <span class="w">PerlIO_fill</span></li><li>  <span class="w">PerlIO_flush</span></li><li>  <span class="w">PerlIO_get_base</span></li><li>  <span class="w">PerlIO_get_bufsiz</span></li><li>  <span class="w">PerlIO_get_cnt</span></li><li>  <span class="w">PerlIO_get_ptr</span></li><li>  <span class="w">PerlIO_read</span></li><li>  <span class="w">PerlIO_seek</span></li><li>  <span class="w">PerlIO_set_cnt</span></li><li>  <span class="w">PerlIO_set_ptrcnt</span></li><li>  <span class="w">PerlIO_setlinebuf</span></li><li>  <span class="w">PerlIO_stderr</span></li><li>  <span class="w">PerlIO_stdin</span></li><li>  <span class="w">PerlIO_stdout</span></li><li>  <span class="w">PerlIO_tell</span></li><li>  <span class="w">PerlIO_unread</span></li><li>  <span class="w">PerlIO_write</span></li><li>  <span class="w">SvLOCK</span></li><li>  <span class="w">SvSHARE</span></li><li>  <span class="w">SvUNLOCK</span></li><li>  <span class="w">atfork_lock</span></li><li>  <span class="w">atfork_unlock</span></li><li>  <span class="w">custom_op_desc</span></li><li>  <span class="w">custom_op_name</span></li><li>  <span class="w">deb</span></li><li>  <span class="w">debstack</span></li><li>  <span class="w">debstackptrs</span></li><li>  <span class="w">gv_fetchmeth_autoload</span></li><li>  <span class="w">ibcmp_utf8</span></li><li>  <span class="w">my_fork</span></li><li>  <span class="w">my_socketpair</span></li><li>  <span class="w">pack_cat</span></li><li>  <span class="w">perl_destruct</span></li><li>  <span class="w">pv_uni_display</span></li><li>  <span class="w">save_shared_pvref</span></li><li>  <span class="w">savesharedpv</span></li><li>  <span class="w">sortsv</span></li><li>  <span class="w">sv_magicext</span></li><li>  <span class="w">sv_nolocking</span></li><li>  <span class="w">sv_nosharing</span></li><li>  <span class="w">sv_recode_to_utf8</span></li><li>  <span class="w">sv_uni_display</span></li><li>  <span class="w">to_uni_fold</span></li><li>  <span class="w">to_uni_lower</span></li><li>  <span class="w">to_uni_title</span></li><li>  <span class="w">to_uni_upper</span></li><li>  <span class="w">to_utf8_case</span></li><li>  <span class="w">unpack_str</span></li><li>  <span class="w">uvchr_to_utf8_flags</span></li><li>  <span class="w">uvuni_to_utf8_flags</span></li><li>  <span class="w">vdeb</span></li></ol></pre></li>
+<li><a class='view-title' id="perl-5.7.2"></a><strong>perl 5.7.2</strong>
+<pre class="verbatim"><ol><li>  <span class="w">calloc</span></li><li>  <span class="w">getcwd_sv</span></li><li>  <span class="w">init_tm</span></li><li>  <span class="w">malloc</span></li><li>  <span class="w">mfree</span></li><li>  <span class="w">mini_mktime</span></li><li>  <span class="w">my_atof2</span></li><li>  <span class="w">my_strftime</span></li><li>  <span class="w">op_null</span></li><li>  <span class="w">realloc</span></li><li>  <span class="w">sv_catpvn_flags</span></li><li>  <span class="w">sv_catsv_flags</span></li><li>  <span class="w">sv_setsv_flags</span></li><li>  <span class="w">sv_utf8_upgrade_flags</span></li><li>  <span class="w">sv_utf8_upgrade_nomg</span></li><li>  <span class="w">swash_fetch</span></li></ol></pre></li>
+<li><a class='view-title' id="perl-5.7.1"></a><strong>perl 5.7.1</strong>
+<pre class="verbatim"><ol><li>  <span class="w">ASCII_TO_NEED</span></li><li>  <span class="w">NATIVE_TO_NEED</span></li><li>  <span class="w">POPpbytex</span></li><li>  <span class="w">bytes_from_utf8</span></li><li>  <span class="w">despatch_signals</span></li><li>  <span class="w">do_openn</span></li><li>  <span class="w">gv_handler</span></li><li>  <span class="w">is_lvalue_sub</span></li><li>  <span class="w">my_popen_list</span></li><li>  <span class="w">save_mortalizesv</span></li><li>  <span class="w">scan_num</span></li><li>  <span class="w">sv_force_normal_flags</span></li><li>  <span class="w">sv_setref_uv</span></li><li>  <span class="w">sv_unref_flags</span></li><li>  <span class="w">sv_utf8_upgrade</span></li><li>  <span class="w">utf8_length</span></li><li>  <span class="w">utf8_to_uvchr</span></li><li>  <span class="w">utf8_to_uvuni</span></li><li>  <span class="w">utf8n_to_uvchr</span></li><li>  <span class="w">utf8n_to_uvuni</span></li><li>  <span class="w">uvchr_to_utf8</span></li><li>  <span class="w">uvuni_to_utf8</span></li></ol></pre></li>
+<li><a class='view-title' id="perl-5.6.1"></a><strong>perl 5.6.1</strong>
+<pre class="verbatim"><ol><li>  <span class="w">SvGAMAGIC</span></li><li>  <span class="w">apply_attrs_string</span></li><li>  <span class="w">bytes_to_utf8</span></li><li>  <span class="w">gv_efullname4</span></li><li>  <span class="w">gv_fullname4</span></li><li>  <span class="w">is_utf8_string</span></li><li>  <span class="w">save_generic_pvref</span></li><li>  <span class="w">utf16_to_utf8</span></li><li>  <span class="w">utf16_to_utf8_reversed</span></li><li>  <span class="w">utf8_to_bytes</span></li></ol></pre></li>
+<li><a class='view-title' id="perl-5.6.0"></a><strong>perl 5.6.0</strong>
+<pre class="verbatim"><ol><li>  <span class="w">DO_UTF8</span></li><li>  <span class="w">PERL_SYS_INIT3</span></li><li>  <span class="w">PL_check</span></li><li>  <span class="w">POPul</span></li><li>  <span class="w">SvIOK_UV</span></li><li>  <span class="w">SvIOK_notUV</span></li><li>  <span class="w">SvIOK_only_UV</span></li><li>  <span class="w">SvPOK_only_UTF8</span></li><li>  <span class="w">SvPVbyte_nolen</span></li><li>  <span class="w">SvPVbytex</span></li><li>  <span class="w">SvPVbytex_force</span></li><li>  <span class="w">SvPVutf8</span></li><li>  <span class="w">SvPVutf8_force</span></li><li>  <span class="w">SvPVutf8_nolen</span></li><li>  <span class="w">SvPVutf8x</span></li><li>  <span class="w">SvPVutf8x_force</span></li><li>  <span class="w">SvUOK</span></li><li>  <span class="w">SvUTF8</span></li><li>  <span class="w">SvUTF8_off</span></li><li>  <span class="w">SvUTF8_on</span></li><li>  <span class="w">UTF8SKIP</span></li><li>  <span class="w">av_delete</span></li><li>  <span class="w">av_exists</span></li><li>  <span class="w">call_atexit</span></li><li>  <span class="w">caller_cx</span></li><li>  <span class="w">cast_i32</span></li><li>  <span class="w">cast_iv</span></li><li>  <span class="w">cast_ulong</span></li><li>  <span class="w">cast_uv</span></li><li>  <span class="w">do_gv_dump</span></li><li>  <span class="w">do_gvgv_dump</span></li><li>  <span class="w">do_hv_dump</span></li><li>  <span class="w">do_magic_dump</span></li><li>  <span class="w">do_op_dump</span></li><li>  <span class="w">do_open9</span></li><li>  <span class="w">do_pmop_dump</span></li><li>  <span class="w">do_sv_dump</span></li><li>  <span class="w">dump_all</span></li><li>  <span class="w">dump_eval</span></li><li>  <span class="w">dump_form</span></li><li>  <span class="w">dump_indent</span></li><li>  <span class="w">dump_packsubs</span></li><li>  <span class="w">dump_sub</span></li><li>  <span class="w">dump_vindent</span></li><li>  <span class="w">get_context</span></li><li>  <span class="w">get_ppaddr</span></li><li>  <span class="w">gv_dump</span></li><li>  <span class="w">init_i18nl10n</span></li><li>  <span class="w">init_i18nl14n</span></li><li>  <span class="w">is_uni_alnum</span></li><li>  <span class="w">is_uni_alnum_lc</span></li><li>  <span class="w">is_uni_alpha</span></li><li>  <span class="w">is_uni_alpha_lc</span></li><li>  <span class="w">is_uni_ascii</span></li><li>  <span class="w">is_uni_ascii_lc</span></li><li>  <span class="w">is_uni_cntrl</span></li><li>  <span class="w">is_uni_cntrl_lc</span></li><li>  <span class="w">is_uni_digit</span></li><li>  <span class="w">is_uni_digit_lc</span></li><li>  <span class="w">is_uni_graph</span></li><li>  <span class="w">is_uni_graph_lc</span></li><li>  <span class="w">is_uni_idfirst</span></li><li>  <span class="w">is_uni_idfirst_lc</span></li><li>  <span class="w">is_uni_lower</span></li><li>  <span class="w">is_uni_lower_lc</span></li><li>  <span class="w">is_uni_print</span></li><li>  <span class="w">is_uni_print_lc</span></li><li>  <span class="w">is_uni_punct</span></li><li>  <span class="w">is_uni_punct_lc</span></li><li>  <span class="w">is_uni_space</span></li><li>  <span class="w">is_uni_space_lc</span></li><li>  <span class="w">is_uni_upper</span></li><li>  <span class="w">is_uni_upper_lc</span></li><li>  <span class="w">is_uni_xdigit</span></li><li>  <span class="w">is_uni_xdigit_lc</span></li><li>  <span class="w">is_utf8_alnum</span></li><li>  <span class="w">is_utf8_alpha</span></li><li>  <span class="w">is_utf8_ascii</span></li><li>  <span class="w">is_utf8_char</span></li><li>  <span class="w">is_utf8_cntrl</span></li><li>  <span class="w">is_utf8_digit</span></li><li>  <span class="w">is_utf8_graph</span></li><li>  <span class="w">is_utf8_idfirst</span></li><li>  <span class="w">is_utf8_lower</span></li><li>  <span class="w">is_utf8_mark</span></li><li>  <span class="w">is_utf8_print</span></li><li>  <span class="w">is_utf8_punct</span></li><li>  <span class="w">is_utf8_space</span></li><li>  <span class="w">is_utf8_upper</span></li><li>  <span class="w">is_utf8_xdigit</span></li><li>  <span class="w">magic_dump</span></li><li>  <span class="w">my_atof</span></li><li>  <span class="w">my_fflush_all</span></li><li>  <span class="w">newANONATTRSUB</span></li><li>  <span class="w">newATTRSUB</span></li><li>  <span class="w">newXS</span></li><li>  <span class="w">newXSproto</span></li><li>  <span class="w">new_collate</span></li><li>  <span class="w">new_ctype</span></li><li>  <span class="w">new_numeric</span></li><li>  <span class="w">op_dump</span></li><li>  <span class="w">perl_parse</span></li><li>  <span class="w">pmop_dump</span></li><li>  <span class="w">re_intuit_string</span></li><li>  <span class="w">reginitcolors</span></li><li>  <span class="w">require_pv</span></li><li>  <span class="w">safesyscalloc</span></li><li>  <span class="w">safesysfree</span></li><li>  <span class="w">safesysmalloc</span></li><li>  <span class="w">safesysrealloc</span></li><li>  <span class="w">save_I8</span></li><li>  <span class="w">save_alloc</span></li><li>  <span class="w">save_destructor</span></li><li>  <span class="w">save_destructor_x</span></li><li>  <span class="w">save_re_context</span></li><li>  <span class="w">save_vptr</span></li><li>  <span class="w">scan_bin</span></li><li>  <span class="w">set_context</span></li><li>  <span class="w">set_numeric_local</span></li><li>  <span class="w">set_numeric_radix</span></li><li>  <span class="w">set_numeric_standard</span></li><li>  <span class="w">str_to_version</span></li><li>  <span class="w">sv_2pvutf8</span></li><li>  <span class="w">sv_2pvutf8_nolen</span></li><li>  <span class="w">sv_force_normal</span></li><li>  <span class="w">sv_len_utf8</span></li><li>  <span class="w">sv_pos_b2u</span></li><li>  <span class="w">sv_pos_u2b</span></li><li>  <span class="w">sv_pv</span></li><li>  <span class="w">sv_pvbyte</span></li><li>  <span class="w">sv_pvbyten</span></li><li>  <span class="w">sv_pvbyten_force</span></li><li>  <span class="w">sv_pvutf8</span></li><li>  <span class="w">sv_pvutf8n</span></li><li>  <span class="w">sv_pvutf8n_force</span></li><li>  <span class="w">sv_rvweaken</span></li><li>  <span class="w">sv_utf8_decode</span></li><li>  <span class="w">sv_utf8_downgrade</span></li><li>  <span class="w">sv_utf8_encode</span></li><li>  <span class="w">swash_init</span></li><li>  <span class="w">to_uni_lower_lc</span></li><li>  <span class="w">to_uni_title_lc</span></li><li>  <span class="w">to_uni_upper_lc</span></li><li>  <span class="w">utf8_distance</span></li><li>  <span class="w">utf8_hop</span></li><li>  <span class="w">vcroak</span></li><li>  <span class="w">vform</span></li><li>  <span class="w">vwarn</span></li><li>  <span class="w">vwarner</span></li></ol></pre></li>
+<li><a class='view-title' id="perl-5.005_03"></a><strong>perl 5.005_03</strong>
+<pre class="verbatim"><ol><li>  <span class="w">POPpx</span></li><li>  <span class="w">get_vtbl</span></li><li>  <span class="w">save_generic_svref</span></li></ol></pre></li>
+<li><a class='view-title' id="perl-5.005"></a><strong>perl 5.005</strong>
+<pre class="verbatim"><ol><li>  <span class="w">PL_curpad</span></li><li>  <span class="w">PL_modglobal</span></li><li>  <span class="w">cx_dump</span></li><li>  <span class="w">debop</span></li><li>  <span class="w">debprofdump</span></li><li>  <span class="w">fbm_compile</span></li><li>  <span class="w">fbm_instr</span></li><li>  <span class="w">get_op_descs</span></li><li>  <span class="w">get_op_names</span></li><li>  <span class="w">init_stacks</span></li><li>  <span class="w">mg_length</span></li><li>  <span class="w">mg_size</span></li><li>  <span class="w">newHVhv</span></li><li>  <span class="w">new_stackinfo</span></li><li>  <span class="w">regdump</span></li><li>  <span class="w">regexec_flags</span></li><li>  <span class="w">regnext</span></li><li>  <span class="w">runops_debug</span></li><li>  <span class="w">runops_standard</span></li><li>  <span class="w">save_iv</span></li><li>  <span class="w">save_op</span></li><li>  <span class="w">sv_iv</span></li><li>  <span class="w">sv_nv</span></li><li>  <span class="w">sv_peek</span></li><li>  <span class="w">sv_pvn</span></li><li>  <span class="w">sv_pvn_nomg</span></li><li>  <span class="w">sv_true</span></li></ol></pre></li>
+<li><a class='view-title' id="perl-5.004_05"></a><strong>perl 5.004_05</strong>
+<pre class="verbatim"><ol><li>  <span class="w">CopyD</span></li><li>  <span class="w">MoveD</span></li><li>  <span class="w">do_binmode</span></li><li>  <span class="w">my_bcopy</span></li><li>  <span class="w">save_aelem</span></li><li>  <span class="w">save_helem</span></li></ol></pre></li>
+<li><a class='view-title' id="perl-5.004"></a><strong>perl 5.004</strong>
+<pre class="verbatim"><ol><li>  <span class="w">GIMME_V</span></li><li>  <span class="w">G_VOID</span></li><li>  <span class="w">HePV</span></li><li>  <span class="w">HeSVKEY_set</span></li><li>  <span class="w">POPu</span></li><li>  <span class="w">SvSetMagicSV</span></li><li>  <span class="w">SvSetMagicSV_nosteal</span></li><li>  <span class="w">SvSetSV_nosteal</span></li><li>  <span class="w">SvTAINTED</span></li><li>  <span class="w">SvTAINTED_off</span></li><li>  <span class="w">SvTAINTED_on</span></li><li>  <span class="w">block_end</span></li><li>  <span class="w">block_gimme</span></li><li>  <span class="w">block_start</span></li><li>  <span class="w">call_list</span></li><li>  <span class="w">delimcpy</span></li><li>  <span class="w">form</span></li><li>  <span class="w">gv_autoload4</span></li><li>  <span class="w">gv_fetchmethod_autoload</span></li><li>  <span class="w">hv_delayfree_ent</span></li><li>  <span class="w">hv_free_ent</span></li><li>  <span class="w">ibcmp_locale</span></li><li>  <span class="w">intro_my</span></li><li>  <span class="w">my_failure_exit</span></li><li>  <span class="w">newSVpvf</span></li><li>  <span class="w">rsignal</span></li><li>  <span class="w">rsignal_state</span></li><li>  <span class="w">save_I16</span></li><li>  <span class="w">save_gp</span></li><li>  <span class="w">share_hek</span></li><li>  <span class="w">start_subparse</span></li><li>  <span class="w">sv_catpvf</span></li><li>  <span class="w">sv_catpvf_mg</span></li><li>  <span class="w">sv_cmp_locale</span></li><li>  <span class="w">sv_derived_from</span></li><li>  <span class="w">sv_magic_portable</span></li><li>  <span class="w">sv_setpvf</span></li><li>  <span class="w">sv_setpvf_mg</span></li><li>  <span class="w">sv_taint</span></li><li>  <span class="w">sv_tainted</span></li><li>  <span class="w">sv_untaint</span></li><li>  <span class="w">sv_vcatpvf</span></li><li>  <span class="w">sv_vcatpvf_mg</span></li><li>  <span class="w">sv_vcatpvfn</span></li><li>  <span class="w">sv_vsetpvf</span></li><li>  <span class="w">sv_vsetpvf_mg</span></li><li>  <span class="w">sv_vsetpvfn</span></li><li>  <span class="w">toLOWER_LC</span></li><li>  <span class="w">vnewSVpvf</span></li><li>  <span class="w">warner</span></li></ol></pre></li>
+<li><a class='view-title' id="perl-5.003_07"></a><strong>perl 5.003_07</strong>
+<pre class="verbatim"><ol><li>  <span class="w">HeHASH</span></li><li>  <span class="w">HeKEY</span></li><li>  <span class="w">HeKLEN</span></li><li>  <span class="w">HeSVKEY</span></li><li>  <span class="w">HeSVKEY_force</span></li><li>  <span class="w">HeVAL</span></li><li>  <span class="w">cv_const_sv</span></li><li>  <span class="w">do_open</span></li><li>  <span class="w">gv_efullname3</span></li><li>  <span class="w">gv_fullname3</span></li><li>  <span class="w">hv_delete_ent</span></li><li>  <span class="w">hv_exists_ent</span></li><li>  <span class="w">hv_fetch_ent</span></li><li>  <span class="w">hv_iterkeysv</span></li><li>  <span class="w">hv_ksplit</span></li><li>  <span class="w">hv_store_ent</span></li><li>  <span class="w">my_pclose</span></li><li>  <span class="w">my_popen</span></li><li>  <span class="w">sv_gets</span></li><li>  <span class="w">unsharepvn</span></li></ol></pre></li>
+</ul>
+<a class='view-head1' id="BUGS"></a><h2 class='h2' >BUGS</h2>
+<p>If you find any bugs, <code class="inline"><span class="w">Devel::PPPort</span></code>
+ doesn't seem to build on your
+system, or any of its tests fail, please send a bug report to
+<a class='link-to-page' href="mailto:perlbug@perl.org">perlbug@perl.org</a>.</p>
+<a class='view-head1' id="AUTHORS"></a><h2 class='h2' >AUTHORS</h2>
+<ul>
+<li>
+<p>Version 1.x of Devel::PPPort was written by Kenneth Albanowski.</p>
+</li>
+<li>
+<p>Version 2.x was ported to the Perl core by Paul Marquess.</p>
+</li>
+<li>
+<p>Version 3.x was ported back to CPAN by Marcus Holland-Moritz.</p>
+</li>
+<li>
+<p>Versions &gt;= 3.22 are maintained with support from Matthew Horsfall (alh).</p>
+</li>
+</ul>
+<a class='view-head1' id="COPYRIGHT"></a><h2 class='h2' >COPYRIGHT</h2>
+<p>Version 3.x, Copyright (C) 2004-2013, Marcus Holland-Moritz.</p>
+<p>Version 2.x, Copyright (C) 2001, Paul Marquess.</p>
+<p>Version 1.x, Copyright (C) 1999, Kenneth Albanowski.</p>
+<p>This program is free software; you can redistribute it and/or
+modify it under the same terms as Perl itself.</p>
+<a class='view-head1' id="SEE-ALSO"></a><h2 class='h2' >SEE ALSO</h2>
+<p>See <a href="../h2xs.html">h2xs</a>, <a href="https://search.cpan.org/perldoc/ppport.h">ppport.h</a>.</p>
+
+
+
+
+      <ul><li><a href="#NAME">NAME</a></li><li><a href="#SYNOPSIS">SYNOPSIS</a></li><li><a href="#DESCRIPTION">DESCRIPTION</a></li><ul><li><a href="#Why-use-ppport.h%3f">Why use ppport.h?</a></li><li><a href="#How-to-use-ppport.h">How to use ppport.h</a></li><li><a href="#Running-ppport.h">Running ppport.h</a></li></ul><li><a href="#FUNCTIONS">FUNCTIONS</a></li><ul><li><a href="#WriteFile">WriteFile</a></li><li><a href="#GetFileContents">GetFileContents</a></li></ul><li><a href="#COMPATIBILITY">COMPATIBILITY</a></li><ul><li><a href="#Provided-Perl-compatibility-API">Provided Perl compatibility API</a></li><li><a href="#Perl-API-not-supported-by-ppport.h">Perl API not supported by ppport.h</a></li></ul><li><a href="#BUGS">BUGS</a></li><li><a href="#AUTHORS">AUTHORS</a></li><li><a href="#COPYRIGHT">COPYRIGHT</a></li><li><a href="#SEE-ALSO">SEE ALSO</a></li></ul>
+
+
+                  </div>
+                </article>
+              </div>
+            </div>
+          </main>
+        </div>
+           <footer class="footer row bg-light pt-5 pb-5">
+       <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+           <div class="row">
+               <div class="col-md-4">
+                   <ul class="list-unstyled">
+                       <li>
+                           <h4>Site info</h4>
+                       </li>
+                       <li>Docs mantained by
+                           <a href="//lists.perl.org/list/perl5-porters.html"
+                               rel="noopener">Perl 5 Porters</a>
+                       </li>
+                       <li>Perldoc site development sponsored by
+                           <a href="//opusvl.com" rel="noopener">
+                           <img style="margin: 20px 20px 5px 10px" class="opus-logo" src="/public/img/opusvl_logo.svg" alt="OpusVL Logo">
+                        </a>
+                    <li><span class="about_perldoc"><a href="//about.html">About PerlDOC</a></span>
+                    </li>
+                       </li>
+                   </ul>
+               </div>
+               <div class="col-md-8">
+                   <div class="row">
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Manuals</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.28.3/index-overview.html">Overview</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.28.3/index-tutorials.html">Tutorials</a>
+                               </li>
+                               <li>
+                                   <a href="/5.28.3/index-faq.html">FAQs</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.28.3/index-history.html">Changes</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Reference</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.28.3/index-language.html">Language</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.28.3/index-functions.html">Functions</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.28.3/perlop.html">Operators</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.28.3/perlvar.html">Variables</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Modules</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.28.3/index-modules-A.html">Modules</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.28.3/index-pragmas.html">Pragmas</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.28.3/index-utilities.html">Utilities</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Misc</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.28.3/index-licence.html">License</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.28.3/index-internals.html">Internals</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.28.3/index-platforms.html">Platforms</a>
+                               </li>
+                            <li>
+                                <a
+                                    href="/5.28.3/index-about.html">About</a>
+                            </li>
+                           </ul>
+                       </div>
+                   </div>
+               </div>
+               <div class=" col-12 footer-inf text-center">
+                   <small>perldoc.perl.org - Official documentation for the Perl
+                       programming language</small>
+               </div>
+           </div>
+       </div>
+   </footer>
+
+        	<div class="beta-wrapper beta-bottom-right ">
+		<div class="beta beta-blue  ">
+			<a class="beta-link "
+				href="//github.com/OpusVL/perldoc.perl.org/issues/new" rel="noopener">
+				<span class="beta-text">
+					This website is a Beta release.
+				</span>
+				<span class="beta-text">
+					For any issues please raise a ticket on GitHub
+				</span>
+			</a>
+		</div>
+	</div>
+
+        <script src="/public/js/main.min.js"></script>
+      </body>
+
+      </html>

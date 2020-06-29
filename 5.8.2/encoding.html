@@ -1,0 +1,896 @@
+      
+      
+      
+      
+
+      <!DOCTYPE html>
+      <html lang="en">
+
+      <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="encoding - perldoc.perl.org">
+        <link rel="icon" href="/public/img/favicon.ico">
+        <title>encoding - perldoc.perl.org</title>
+        <link href="/public/css/main.min.css" rel="stylesheet">
+        <link rel="canonical" href="/encoding.html">
+        <link
+          href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900'
+          rel='stylesheet' type='text/css'>
+        <script>
+          window.ga = window.ga || function () {
+            (ga.q = ga.q || []).push(arguments)
+          };
+          ga.l = +new Date;
+          ga('create', 'UA-1892152-2', 'auto'); // JJ's account
+          ga('create', 'UA-50555-3', 'auto', 'perlOrg'); // perl.org account
+          ga('require', 'outboundLinkTracker', {
+            events: ['click', 'auxclick', 'contextmenu'],
+          });
+          ga('require', 'maxScrollTracker');
+          ga('send', 'pageview');
+          ga('perlOrg.send', 'pageview');
+        </script>
+        <script async src="https://www.google-analytics.com/analytics.js">
+        </script>
+        <script async src="/public/js/tracking.min.js"></script>
+      </head>
+
+      <body class="body container-fluid ">
+        <div class="wrapper">
+
+          <nav
+    class="navbar navbar-dark bg-primary bg-perl fixed-top justify-content-between navbar-expand-lg">
+    <a href="#content" class="skippy sr-only sr-only-focusable">
+        <span class=' skippy-text'>Skip to main content</span>
+    </a>
+    <a class="navbar-brand" href="/">
+        <img class="logo" src="/public/img/logo_perl_doc.svg"
+            alt="Perl Documentation Logo" />
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse"
+        data-target="#navbar" aria-controls="navbar" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="navbar" class="collapse navbar-collapse ">
+        <ul class="navbar-nav ml-auto navbar-right">
+            <form class="nav-item dropdown search-wrapper">
+                <input type="text" id='searchinput' aria-describedby='navbarDropdown5'
+                    placeholder="Type query" class='search-input-field' value=''>
+
+                <button href="#" data-toggle='dropdown' type="button"
+                    aria-haspopup="true" aria-expanded='false' id="navbarDropdown5"
+                    class="nav-link dropdown-toggle search-link">
+                    <object tabindex='-1' focusable="false" class='search-icon'
+                        data="/public/img/search.svg" type="image/svg+xml"
+                        name='search icon'>search
+                        icon</object>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown5"
+                    id='search-results'>
+                    <p class='dropdown-item major-version'>
+                        No results
+                    </p>
+                </div>
+            </form>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown" href="#" class="nav-link dropdown-toggle"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Perl versions</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    
+                        <p class='dropdown-item major-version'>
+                            5.32
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.32.0/">5.32.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.30
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.3/">5.30.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.2/">5.30.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.1/">5.30.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.0/">5.30.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.28
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.3/">5.28.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.2/">5.28.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.1/">5.28.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.0/">5.28.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.26
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.3/">5.26.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.2/">5.26.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.1/">5.26.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.0/">5.26.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.24
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.4/">5.24.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.3/">5.24.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.2/">5.24.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.1/">5.24.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.0/">5.24.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.22
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.4/">5.22.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.3/">5.22.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.2/">5.22.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.1/">5.22.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.0/">5.22.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.20
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.3/">5.20.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.2/">5.20.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.1/">5.20.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.0/">5.20.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.18
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.4/">5.18.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.3/">5.18.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.2/">5.18.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.1/">5.18.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.0/">5.18.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.16
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.3/">5.16.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.2/">5.16.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.1/">5.16.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.0/">5.16.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.14
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.4/">5.14.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.3/">5.14.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.2/">5.14.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.1/">5.14.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.0/">5.14.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.12
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.5/">5.12.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.4/">5.12.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.3/">5.12.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.2/">5.12.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.1/">5.12.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.0/">5.12.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.10
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.1/">5.10.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.0/">5.10.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.8
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.9/">5.8.9</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.8/">5.8.8</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.7/">5.8.7</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.6/">5.8.6</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.5/">5.8.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.4/">5.8.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.3/">5.8.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.2/">5.8.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.1/">5.8.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.0/">5.8.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.6
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.2/">5.6.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.1/">5.6.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.0/">5.6.0</a>
+                        
+                        
+                    
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown1" href="#" class="dropdown-toggle nav-link"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Manuals</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                    <a class="dropdown-item"
+                        href="/5.8.2/index-overview.html">Overview</a>
+                    <a class="dropdown-item"
+                        href="/5.8.2/index-tutorials.html">Tutorials</a>
+                    <a class="dropdown-item"
+                        href="/5.8.2/index-faq.html">FAQs</a>
+                    <a class="dropdown-item"
+                        href="/5.8.2/index-history.html">Changes</a>
+                    <a class="dropdown-item"
+                        href="/5.8.2/index-licence.html">License</a>
+                    <a class="dropdown-item"
+                        href="/5.8.2/index-language.html">Language</a>
+                    <a class="dropdown-item"
+                        href="/5.8.2/index-functions.html">Functions</a>
+                    <a class="dropdown-item"
+                        href="/5.8.2/perlop.html">Operators</a>
+                    <a class="dropdown-item"
+                        href="/5.8.2/perlvar.html">Variables</a>
+                    <a class="dropdown-item"
+                        href="/5.8.2/index-pragmas.html">Pragmas</a>
+                    <a class="dropdown-item"
+                        href="/5.8.2/index-utilities.html">Utilities</a>
+                    <a class="dropdown-item"
+                        href="/5.8.2/index-internals.html">Internals</a>
+                    <a class="dropdown-item"
+                        href="/5.8.2/index-platforms.html">Platforms</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown3" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Modules</a>
+                <div aria-labelledby="navbarDropdown3"
+                    class="dropdown-menu letters-wrap">
+                    <!--<a class="dropdown-item"
+                        href="/5.8.2/index-modules.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.8.2/index-modules-by-cat.html">By
+                        Category</a>-->
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.8.2/index-modules-A.html">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.2/index-modules-B.html">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.2/index-modules-C.html">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.2/index-modules-D.html">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.2/index-modules-E.html">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.2/index-modules-F.html">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.2/index-modules-G.html">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.2/index-modules-H.html">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.2/index-modules-I.html">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.2/index-modules-J.html">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.2/index-modules-K.html">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.2/index-modules-L.html">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.2/index-modules-M.html">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.2/index-modules-N.html">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.2/index-modules-O.html">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.2/index-modules-P.html">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.2/index-modules-Q.html">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.2/index-modules-R.html">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.2/index-modules-S.html">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.2/index-modules-T.html">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.2/index-modules-U.html">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.2/index-modules-V.html">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.2/index-modules-W.html">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.2/index-modules-X.html">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.2/index-modules-Y.html">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.2/index-modules-Z.html">Z</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown4" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Functions</a>
+                <div aria-labelledby="navbarDropdown4"
+                    class="dropdown-menu letters-wrap">
+                    <a class="dropdown-item"
+                        href="/5.8.2/index-functions.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.8.2/index-functions-by-cat.html">By
+                        Category</a>
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.8.2/index-functions.html#A">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.2/index-functions.html#B">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.2/index-functions.html#C">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.2/index-functions.html#D">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.2/index-functions.html#E">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.2/index-functions.html#F">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.2/index-functions.html#G">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.2/index-functions.html#H">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.2/index-functions.html#I">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.2/index-functions.html#J">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.2/index-functions.html#K">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.2/index-functions.html#L">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.2/index-functions.html#M">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.2/index-functions.html#N">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.2/index-functions.html#O">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.2/index-functions.html#P">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.2/index-functions.html#Q">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.2/index-functions.html#R">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.2/index-functions.html#S">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.2/index-functions.html#T">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.2/index-functions.html#U">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.2/index-functions.html#V">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.2/index-functions.html#W">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.2/index-functions.html#X">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.2/index-functions.html#Y">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.8.2/index-functions.html#Z">Z</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!--/.nav-collapse -->
+</nav>
+
+
+          <main class="row main-content pb-5 pt-5" id='content'>
+            <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+              <div class="row">
+                <div class="col-sm-12">
+                  <div id="breadcrumbs">
+                      
+    <a href="index.html">Home</a>&nbsp; &gt;
+    
+      
+        <a href="index-pragmas.html">Pragmas</a> &gt;
+      
+    
+    encoding
+  
+
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <article class="col-sm-12 content">
+                  <div class="documentation-wrapper">
+                    <div id="perl_version">
+                      <h7 class='page-title'> Perl 5 version 8.2
+                        documentation</h7>
+                    </div>
+                    <h1>encoding</h1>
+
+
+  <!--    -->
+<ul><li><a href="#NAME">NAME</a></li><li><a href="#SYNOPSIS">SYNOPSIS</a></li><li><a href="#ABSTRACT">ABSTRACT</a></li><ul><li><a href="#Literal-Conversions">Literal Conversions</a></li><li><a href="#PerlIO-layers-for-STD(IN%7cOUT)">PerlIO layers for STD(IN|OUT)</a></li></ul><li><a href="#FEATURES-THAT-REQUIRE-5.8.1">FEATURES THAT REQUIRE 5.8.1</a></li><li><a href="#USAGE">USAGE</a></li><li><a href="#The-Filter-Option">The Filter Option</a></li><ul><li><a href="#Filter-related-changes-at-Encode-version-1.87">Filter-related changes at Encode version 1.87</a></li></ul><li><a href="#CAVEATS">CAVEATS</a></li><ul><li><a href="#NOT-SCOPED">NOT SCOPED</a></li><li><a href="#DO-NOT-MIX-MULTIPLE-ENCODINGS">DO NOT MIX MULTIPLE ENCODINGS</a></li><li><a href="#tr%2f%2f%2f-with-ranges">tr/// with ranges</a></li></ul><li><a href="#EXAMPLE---Greekperl">EXAMPLE - Greekperl</a></li><li><a href="#KNOWN-PROBLEMS">KNOWN PROBLEMS</a></li><li><a href="#HISTORY">HISTORY</a></li><li><a href="#SEE-ALSO">SEE ALSO</a></li></ul><a class='view-head1' id="NAME"></a><h2 class='h2' >NAME</h2>
+<p>encoding - allows you to write your script in non-ascii or non-utf8</p>
+<a class='view-head1' id="SYNOPSIS"></a><h2 class='h2' >SYNOPSIS</h2>
+<pre class="verbatim"><ol><li>  <a class="l_k" href="functions/use.html">use</a> <span class="w">encoding</span> <span class="q">&quot;greek&quot;</span><span class="sc">;</span>  <span class="c"># Perl like Greek to you?</span></li><li>  <a class="l_k" href="functions/use.html">use</a> <span class="w">encoding</span> <span class="q">&quot;euc-jp&quot;</span><span class="sc">;</span> <span class="c"># Jperl!</span></li><li></li><li>  <span class="c"># or you can even do this if your shell supports your native encoding</span></li><li></li><li>  <span class="w">perl</span> -<span class="w">Mencoding</span>=<span class="w">latin2</span> -e <span class="q">&#39;...&#39;</span> <span class="c"># Feeling centrally European?</span></li><li>  <span class="w">perl</span> -<span class="w">Mencoding</span>=<span class="w">euc</span>-<span class="w">kr</span> -e <span class="q">&#39;...&#39;</span> <span class="c"># Or Korean?</span></li><li></li><li>  <span class="c"># more control</span></li><li></li><li>  <span class="c"># A simple euc-cn =&gt; utf-8 converter</span></li><li>  <a class="l_k" href="functions/use.html">use</a> <span class="w">encoding</span> <span class="q">&quot;euc-cn&quot;</span><span class="cm">,</span> <span class="w">STDOUT</span> <span class="cm">=&gt;</span> <span class="q">&quot;utf8&quot;</span><span class="sc">;</span>  while<span class="s">(</span>&lt;&gt;<span class="s">)</span><span class="s">{</span><a class="l_k" href="functions/print.html">print</a><span class="s">}</span><span class="sc">;</span></li><li></li><li>  <span class="c"># &quot;no encoding;&quot; supported (but not scoped!)</span></li><li>  <a class="l_k" href="functions/no.html">no</a> <span class="w">encoding</span><span class="sc">;</span></li><li></li><li>  <span class="c"># an alternate way, Filter</span></li><li>  <a class="l_k" href="functions/use.html">use</a> <span class="w">encoding</span> <span class="q">&quot;euc-jp&quot;</span><span class="cm">,</span> <span class="w">Filter</span><span class="cm">=&gt;</span><span class="n">1</span><span class="sc">;</span></li><li>  <span class="c"># now you can use kanji identifiers -- in euc-jp!</span></li></ol></pre><a class='view-head1' id="ABSTRACT"></a><h2 class='h2' >ABSTRACT</h2>
+<p>Let's start with a bit of history: Perl 5.6.0 introduced Unicode
+support.  You could apply <code class="inline"><a class="l_k" href="functions/substr.html">substr()</a></code> and regexes even to complex CJK
+characters -- so long as the script was written in UTF-8.  But back
+then, text editors that supported UTF-8 were still rare and many users
+instead chose to write scripts in legacy encodings, giving up a whole
+new feature of Perl 5.6.</p>
+<p>Rewind to the future: starting from perl 5.8.0 with the <strong>encoding</strong>
+pragma, you can write your script in any encoding you like (so long
+as the <code class="inline"><span class="w">Encode</span></code>
+ module supports it) and still enjoy Unicode support.
+This pragma achieves that by doing the following:</p>
+<ul>
+<li>
+<p>Internally converts all literals (<code class="inline"><span class="q">q//</span><span class="cm">,</span><span class="q">qq//</span><span class="cm">,</span><span class="q">qr//</span><span class="cm">,</span><span class="q">qw//</span>/<span class="cm">,</span> <span class="q">qx//</span></code>
+) from
+the encoding specified to utf8.  In Perl 5.8.1 and later, literals in
+<code class="inline"><a class="l_k" href="functions/tr.html">tr///</a></code> and <code class="inline"><span class="w">DATA</span></code>
+ pseudo-filehandle are also converted.</p>
+</li>
+<li>
+<p>Changing PerlIO layers of <code class="inline"><span class="w">STDIN</span></code>
+ and <code class="inline"><span class="w">STDOUT</span></code>
+ to the encoding
+ specified.</p>
+</li>
+</ul>
+<a class='view-head2' id="Literal-Conversions"></a><h3 class='h3' >Literal Conversions</h3>
+<p>You can write code in EUC-JP as follows:</p>
+<pre class="verbatim"><ol><li>  <a class="l_k" href="functions/my.html">my</a> <span class="i">$Rakuda</span> = <span class="q">&quot;\xF1\xD1\xF1\xCC&quot;</span><span class="sc">;</span> <span class="c"># Camel in Kanji</span></li><li>               <span class="c">#&lt;-char-&gt;&lt;-char-&gt;   # 4 octets</span></li><li>  <span class="q">s/\bCamel\b/$Rakuda/</span><span class="sc">;</span></li></ol></pre><p>And with <code class="inline"><a class="l_k" href="functions/use.html">use</a> <span class="w">encoding</span> <span class="q">&quot;euc-jp&quot;</span></code>
+ in effect, it is the same thing as
+the code in UTF-8:</p>
+<pre class="verbatim"><ol><li>  <a class="l_k" href="functions/my.html">my</a> <span class="i">$Rakuda</span> = <span class="q">&quot;\x{99F1}\x{99DD}&quot;</span><span class="sc">;</span> <span class="c"># two Unicode Characters</span></li><li>  <span class="q">s/\bCamel\b/$Rakuda/</span><span class="sc">;</span></li></ol></pre><a class='view-head2' id="PerlIO-layers-for-STD(IN%7cOUT)"></a><h3 class='h3' >PerlIO layers for <code class="inline"><span class="i">STD</span><span class="s">(</span><span class="w">IN</span>|<span class="w">OUT</span><span class="s">)</span></code>
+</h3>
+<p>The <strong>encoding</strong> pragma also modifies the filehandle layers of
+STDIN and STDOUT to the specified encoding.  Therefore,</p>
+<pre class="verbatim"><ol><li>  <a class="l_k" href="functions/use.html">use</a> <span class="w">encoding</span> <span class="q">&quot;euc-jp&quot;</span><span class="sc">;</span></li><li>  <a class="l_k" href="functions/my.html">my</a> <span class="i">$message</span> = <span class="q">&quot;Camel is the symbol of perl.\n&quot;</span><span class="sc">;</span></li><li>  <a class="l_k" href="functions/my.html">my</a> <span class="i">$Rakuda</span> = <span class="q">&quot;\xF1\xD1\xF1\xCC&quot;</span><span class="sc">;</span> <span class="c"># Camel in Kanji</span></li><li>  <span class="i">$message</span> =~ <span class="q">s/\bCamel\b/$Rakuda/</span><span class="sc">;</span></li><li>  <a class="l_k" href="functions/print.html">print</a> <span class="i">$message</span><span class="sc">;</span></li></ol></pre><p>Will print "\xF1\xD1\xF1\xCC is the symbol of perl.\n",
+not "\x{99F1}\x{99DD} is the symbol of perl.\n".</p>
+<p>You can override this by giving extra arguments; see below.</p>
+<a class='view-head1' id="FEATURES-THAT-REQUIRE-5.8.1"></a><h2 class='h2' >FEATURES THAT REQUIRE 5.8.1</h2>
+<p>Some of the features offered by this pragma requires perl 5.8.1.  Most
+of these are done by Inaba Hiroto.  Any other features and changes
+are good for 5.8.0.</p>
+<ul>
+<li><a class='view-title' id="%22NON-EUC%22-doublebyte-encodings"></a><strong>"NON-EUC" doublebyte encodings</strong>
+<p>Because perl needs to parse script before applying this pragma, such
+encodings as Shift_JIS and Big-5 that may contain '\' (BACKSLASH;
+\x5c) in the second byte fails because the second byte may
+accidentally escape the quoting character that follows.  Perl 5.8.1
+or later fixes this problem.</p>
+</li>
+<li><a class='view-title' id="tr%2f%2f"></a><strong>tr//</strong>
+<p><code class="inline"><a class="l_k" href="functions/tr.html">tr//</a></code> was overlooked by Perl 5 porters when they released perl 5.8.0
+See the section below for details.</p>
+</li>
+<li><a class='view-title' id="DATA-pseudo-filehandle"></a><strong>DATA pseudo-filehandle</strong>
+<p>Another feature that was overlooked was <code class="inline"><span class="w">DATA</span></code>
+.</p>
+</li>
+</ul>
+<a class='view-head1' id="USAGE"></a><h2 class='h2' >USAGE</h2>
+<ul>
+<li><a class='view-title' id="use-encoding-%5b_ENCNAME_%5d-%3b"></a><strong>use encoding [<i>ENCNAME</i>] ;</strong>
+<p>Sets the script encoding to <i>ENCNAME</i>.  And unless ${^UNICODE} 
+exists and non-zero, PerlIO layers of STDIN and STDOUT are set to
+":encoding(<i>ENCNAME</i>)".</p>
+<p>Note that STDERR WILL NOT be changed.</p>
+<p>Also note that non-STD file handles remain unaffected.  Use <code class="inline"><a class="l_k" href="functions/use.html">use</a>
+<a class="l_k" href="functions/open.html">open</a></code>
+ or <code class="inline"><a class="l_k" href="functions/binmode.html">binmode</a></code> to change layers of those.</p>
+<p>If no encoding is specified, the environment variable <a href="https://search.cpan.org/perldoc/PERL_ENCODING">PERL_ENCODING</a>
+is consulted.  If no encoding can be found, the error <code class="inline">Unknown encoding
+'<i>ENCNAME</i>'</code> will be thrown.</p>
+</li>
+<li><a class='view-title' id="use-encoding-_ENCNAME_-%5b-STDIN-%3d%3e-_ENCNAME_IN_-...%5d-%3b"></a><strong>use encoding <i>ENCNAME</i> [ STDIN =&gt; <i>ENCNAME_IN</i> ...] ;</strong>
+<p>You can also individually set encodings of STDIN and STDOUT via the
+<code class="inline">STDIN =&gt; <i>ENCNAME</i></code> form.  In this case, you cannot omit the
+first <i>ENCNAME</i>.  <code class="inline"><span class="w">STDIN</span> <span class="cm">=&gt;</span> <a class="l_k" href="functions/undef.html">undef</a></code>
+ turns the IO transcoding
+completely off.</p>
+<p>When ${^UNICODE} exists and non-zero, these options will completely
+ignored.  ${^UNICODE} is a variable introduced in perl 5.8.1.  See
+<a href="perlrun.html">perlrun</a> see <a href="perlvar.html#%24%7b%5eUNICODE%7d">${^UNICODE} in perlvar</a> and <a href="perlrun.html#-C">-C in perlrun</a> for
+details (perl 5.8.1 and later).</p>
+</li>
+<li><a class='view-title' id="use-encoding-_ENCNAME_-Filter%3d%3e1%3b"></a><strong>use encoding <i>ENCNAME</i> Filter=&gt;1;</strong>
+<p>This turns the encoding pragma into a source filter.  While the
+default approach just decodes interpolated literals (in qq() and
+qr()), this will apply a source filter to the entire source code.  See
+<a href="#The-Filter-Option">The Filter Option</a> below for details.</p>
+</li>
+<li><a class='view-title' id="no-encoding%3b"></a><strong>no encoding;</strong>
+<p>Unsets the script encoding. The layers of STDIN, STDOUT are
+reset to ":raw" (the default unprocessed raw stream of bytes).</p>
+</li>
+</ul>
+<a class='view-head1' id="The-Filter-Option"></a><h2 class='h2' >The Filter Option</h2>
+<p>The magic of <code class="inline"><a class="l_k" href="functions/use.html">use</a> <span class="w">encoding</span></code>
+ is not applied to the names of
+identifiers.  In order to make <code class="inline"><span class="i">$</span>{<span class="q">&quot;\x{4eba}&quot;</span>}++</code>
+ ($human++, where human
+is a single Han ideograph) work, you still need to write your script
+in UTF-8 -- or use a source filter.  That's what 'Filter=&gt;1' does.</p>
+<p>What does this mean?  Your source code behaves as if it is written in
+UTF-8 with 'use utf8' in effect.  So even if your editor only supports
+Shift_JIS, for example, you can still try examples in Chapter 15 of
+<code class="inline"><span class="w">Programming</span> <span class="w">Perl</span><span class="cm">,</span> <span class="n">3</span><span class="w">rd</span> <span class="w">Ed</span>.</code>
+.  For instance, you can use UTF-8
+identifiers.</p>
+<p>This option is significantly slower and (as of this writing) non-ASCII
+identifiers are not very stable WITHOUT this option and with the
+source code written in UTF-8.</p>
+<a class='view-head2' id="Filter-related-changes-at-Encode-version-1.87"></a><h3 class='h3' >Filter-related changes at Encode version 1.87</h3>
+<ul>
+<li>
+<p>The Filter option now sets STDIN and STDOUT like non-filter options.
+And <code class="inline">STDIN=&gt;<i>ENCODING</i></code> and <code class="inline">STDOUT=&gt;<i>ENCODING</i></code> work like
+non-filter version.</p>
+</li>
+<li>
+<p><code class="inline"><a class="l_k" href="functions/use.html">use</a> <span class="w">utf8</span></code>
+ is implicitly declared so you no longer have to <code class="inline"><a class="l_k" href="functions/use.html">use</a>
+<span class="w">utf8</span></code>
+ to <code class="inline"><span class="i">$</span>{<span class="q">&quot;\x{4eba}&quot;</span>}++</code>
+.</p>
+</li>
+</ul>
+<a class='view-head1' id="CAVEATS"></a><h2 class='h2' >CAVEATS</h2>
+<a class='view-head2' id="NOT-SCOPED"></a><h3 class='h3' >NOT SCOPED</h3>
+<p>The pragma is a per script, not a per block lexical.  Only the last
+<code class="inline"><a class="l_k" href="functions/use.html">use</a> <span class="w">encoding</span></code>
+ or <code class="inline"><a class="l_k" href="functions/no.html">no</a> <span class="w">encoding</span></code>
+ matters, and it affects 
+<strong>the whole script</strong>.  However, the &lt;no encoding&gt; pragma is supported and 
+<strong>use encoding</strong> can appear as many times as you want in a given script. 
+The multiple use of this pragma is discouraged.</p>
+<p>By the same reason, the use this pragma inside modules is also
+discouraged (though not as strongly discouranged as the case above.  
+See below).</p>
+<p>If you still have to write a module with this pragma, be very careful
+of the load order.  See the codes below;</p>
+<pre class="verbatim"><ol><li>  <span class="c"># called module</span></li><li><a name="package-Module_IN_BAR"></a>  package <span class="i">Module_IN_BAR</span><span class="sc">;</span></li><li>  <a class="l_k" href="functions/use.html">use</a> <span class="w">encoding</span> <span class="q">&quot;bar&quot;</span><span class="sc">;</span></li><li>  <span class="c"># stuff in &quot;bar&quot; encoding here</span></li><li>  <span class="n">1</span><span class="sc">;</span></li><li></li><li>  <span class="c"># caller script</span></li><li>  <a class="l_k" href="functions/use.html">use</a> <span class="w">encoding</span> <span class="q">&quot;foo&quot;</span></li><li>  <a class="l_k" href="functions/use.html">use</a> <span class="w">Module_IN_BAR</span><span class="sc">;</span></li><li>  <span class="c"># surprise! use encoding &quot;bar&quot; is in effect.</span></li></ol></pre><p>The best way to avoid this oddity is to use this pragma RIGHT AFTER
+other modules are loaded.  i.e.</p>
+<pre class="verbatim"><ol><li>  <a class="l_k" href="functions/use.html">use</a> <span class="w">Module_IN_BAR</span><span class="sc">;</span></li><li>  <a class="l_k" href="functions/use.html">use</a> <span class="w">encoding</span> <span class="q">&quot;foo&quot;</span><span class="sc">;</span></li></ol></pre><a class='view-head2' id="DO-NOT-MIX-MULTIPLE-ENCODINGS"></a><h3 class='h3' >DO NOT MIX MULTIPLE ENCODINGS</h3>
+<p>Notice that only literals (string or regular expression) having only
+legacy code points are affected: if you mix data like this</p>
+<pre class="verbatim"><ol><li>	\<span class="w">xDF</span>\<span class="i">x</span><span class="s">{</span><span class="n">100</span><span class="s">}</span></li></ol></pre><p>the data is assumed to be in (Latin 1 and) Unicode, not in your native
+encoding.  In other words, this will match in "greek":</p>
+<pre class="verbatim"><ol><li>	<span class="q">&quot;\xDF&quot;</span> =~ <span class="q">/\x{3af}/</span></li></ol></pre><p>but this will not</p>
+<pre class="verbatim"><ol><li>	<span class="q">&quot;\xDF\x{100}&quot;</span> =~ <span class="q">/\x{3af}\x{100}/</span></li></ol></pre><p>since the <code class="inline">\<span class="w">xDF</span></code>
+ (ISO 8859-7 GREEK SMALL LETTER IOTA WITH TONOS) on
+the left will <strong>not</strong> be upgraded to <code class="inline">\<span class="i">x</span><span class="s">{</span><span class="n">3</span><span class="w">af</span><span class="s">}</span></code>
+ (Unicode GREEK SMALL
+LETTER IOTA WITH TONOS) because of the <code class="inline">\<span class="i">x</span><span class="s">{</span><span class="n">100</span><span class="s">}</span></code>
+ on the left.  You
+should not be mixing your legacy data and Unicode in the same string.</p>
+<p>This pragma also affects encoding of the 0x80..0xFF code point range:
+normally characters in that range are left as eight-bit bytes (unless
+they are combined with characters with code points 0x100 or larger,
+in which case all characters need to become UTF-8 encoded), but if
+the <code class="inline"><span class="w">encoding</span></code>
+ pragma is present, even the 0x80..0xFF range always
+gets UTF-8 encoded.</p>
+<p>After all, the best thing about this pragma is that you don't have to
+resort to \x{....} just to spell your name in a native encoding.
+So feel free to put your strings in your encoding in quotes and
+regexes.</p>
+<a class='view-head2' id="tr%2f%2f%2f-with-ranges"></a><h3 class='h3' >tr/// with ranges</h3>
+<p>The <strong>encoding</strong> pragma works by decoding string literals in
+<code class="inline"><span class="q">q//</span><span class="cm">,</span><span class="q">qq//</span><span class="cm">,</span><span class="q">qr//</span><span class="cm">,</span><span class="q">qw//</span>/<span class="cm">,</span> <span class="q">qx//</span></code>
+ and so forth.  In perl 5.8.0, this
+does not apply to <code class="inline"><a class="l_k" href="functions/tr.html">tr///</a></code>.  Therefore,</p>
+<pre class="verbatim"><ol><li>  <a class="l_k" href="functions/use.html">use</a> <span class="w">encoding</span> <span class="q">&#39;euc-jp&#39;</span><span class="sc">;</span></li><li>  <span class="c">#....</span></li><li>  <span class="i">$kana</span> =~ <span class="q">tr/\xA4\xA1-\xA4\xF3/\xA5\xA1-\xA5\xF3/</span><span class="sc">;</span></li><li>  <span class="c">#           -------- -------- -------- --------</span></li></ol></pre><p>Does not work as</p>
+<pre class="verbatim"><ol><li>  <span class="i">$kana</span> =~ <span class="q">tr/\x{3041}-\x{3093}/\x{30a1}-\x{30f3}/</span><span class="sc">;</span></li></ol></pre><ul>
+<li><a class='view-title' id="Legend-of-characters-above"></a><strong>Legend of characters above</strong>
+<pre class="verbatim"><ol><li>  <span class="w">utf8</span>     <span class="w">euc</span>-<span class="w">jp</span>   <span class="i">charnames::viacode</span><span class="s">(</span><span class="s">)</span></li><li>  -----------------------------------------</li><li>  \<span class="i">x</span><span class="s">{</span><span class="n">3041</span><span class="s">}</span> \<span class="w">xA4</span>\<span class="w">xA1</span> <span class="w">HIRAGANA</span> <span class="w">LETTER</span> <span class="w">SMALL</span> <span class="w">A</span></li><li>  \<span class="i">x</span><span class="s">{</span><span class="n">3093</span><span class="s">}</span> \<span class="w">xA4</span>\<span class="w">xF3</span> <span class="w">HIRAGANA</span> <span class="w">LETTER</span> <span class="w">N</span></li><li>  \<span class="i">x</span><span class="s">{</span><span class="n">30</span><span class="w">a1</span><span class="s">}</span> \<span class="w">xA5</span>\<span class="w">xA1</span> <span class="w">KATAKANA</span> <span class="w">LETTER</span> <span class="w">SMALL</span> <span class="w">A</span></li><li>  \<span class="i">x</span><span class="s">{</span><span class="n">30</span><span class="w">f3</span><span class="s">}</span> \<span class="w">xA5</span>\<span class="w">xF3</span> <span class="w">KATAKANA</span> <span class="w">LETTER</span> <span class="w">N</span></li></ol></pre></li>
+</ul>
+<p>This counterintuitive behavior has been fixed in perl 5.8.1.</p>
+<a class='view-head3' id="workaround-to-tr%2f%2f%2f%3b"></a><h4 class='h4' >workaround to tr///;</h4>
+<p>In perl 5.8.0, you can work around as follows;</p>
+<pre class="verbatim"><ol><li>  <a class="l_k" href="functions/use.html">use</a> <span class="w">encoding</span> <span class="q">&#39;euc-jp&#39;</span><span class="sc">;</span></li><li>  <span class="c">#  ....</span></li><li>  <a class="l_k" href="functions/eval.html">eval</a> <span class="q">qq{ \$kana =~ tr/\xA4\xA1-\xA4\xF3/\xA5\xA1-\xA5\xF3/ }</span><span class="sc">;</span></li></ol></pre><p>Note the <code class="inline"><a class="l_k" href="functions/tr.html">tr//</a></code> expression is surrounded by <code class="inline"><a class="l_k" href="functions/qq.html">qq{}</a></code>.  The idea behind
+is the same as classic idiom that makes <code class="inline"><a class="l_k" href="functions/tr.html">tr///</a></code> 'interpolate'.</p>
+<pre class="verbatim"><ol><li>   <span class="q">tr/$from/$to/</span><span class="sc">;</span>            <span class="c"># wrong!</span></li><li>   <a class="l_k" href="functions/eval.html">eval</a> <span class="q">qq{ tr/$from/$to/ }</span><span class="sc">;</span> <span class="c"># workaround.</span></li></ol></pre><p>Nevertheless, in case of <strong>encoding</strong> pragma even <code class="inline"><a class="l_k" href="functions/q.html">q//</a></code> is affected so
+<code class="inline"><a class="l_k" href="functions/tr.html">tr///</a></code> not being decoded was obviously against the will of Perl5
+Porters so it has been fixed in Perl 5.8.1 or later.</p>
+<a class='view-head1' id="EXAMPLE---Greekperl"></a><h2 class='h2' >EXAMPLE - Greekperl</h2>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="functions/use.html">use</a> <span class="w">encoding</span> <span class="q">&quot;iso 8859-7&quot;</span><span class="sc">;</span></li><li></li><li>    <span class="c"># \xDF in ISO 8859-7 (Greek) is \x{3af} in Unicode.</span></li><li></li><li>    <span class="i">$a</span> = <span class="q">&quot;\xDF&quot;</span><span class="sc">;</span></li><li>    <span class="i">$b</span> = <span class="q">&quot;\x{100}&quot;</span><span class="sc">;</span></li><li></li><li>    <a class="l_k" href="functions/printf.html">printf</a> <span class="q">&quot;%#x\n&quot;</span><span class="cm">,</span> <a class="l_k" href="functions/ord.html">ord</a><span class="s">(</span><span class="i">$a</span><span class="s">)</span><span class="sc">;</span> <span class="c"># will print 0x3af, not 0xdf</span></li><li></li><li>    <span class="i">$c</span> = <span class="i">$a</span> . <span class="i">$b</span><span class="sc">;</span></li><li></li><li>    <span class="c"># $c will be &quot;\x{3af}\x{100}&quot;, not &quot;\x{df}\x{100}&quot;.</span></li><li></li><li>    <span class="c"># chr() is affected, and ...</span></li><li></li><li>    <a class="l_k" href="functions/print.html">print</a> <span class="q">&quot;mega\n&quot;</span>  if <a class="l_k" href="functions/ord.html">ord</a><span class="s">(</span><a class="l_k" href="functions/chr.html">chr</a><span class="s">(</span><span class="n">0xdf</span><span class="s">)</span><span class="s">)</span> == <span class="n">0x3af</span><span class="sc">;</span></li><li></li><li>    <span class="c"># ... ord() is affected by the encoding pragma ...</span></li><li></li><li>    <a class="l_k" href="functions/print.html">print</a> <span class="q">&quot;tera\n&quot;</span> if <a class="l_k" href="functions/ord.html">ord</a><span class="s">(</span><a class="l_k" href="functions/pack.html">pack</a><span class="s">(</span><span class="q">&quot;C&quot;</span><span class="cm">,</span> <span class="n">0xdf</span><span class="s">)</span><span class="s">)</span> == <span class="n">0x3af</span><span class="sc">;</span></li><li></li><li>    <span class="c"># ... as are eq and cmp ...</span></li><li></li><li>    <a class="l_k" href="functions/print.html">print</a> <span class="q">&quot;peta\n&quot;</span> if <span class="q">&quot;\x{3af}&quot;</span> eq  <a class="l_k" href="functions/pack.html">pack</a><span class="s">(</span><span class="q">&quot;C&quot;</span><span class="cm">,</span> <span class="n">0xdf</span><span class="s">)</span><span class="sc">;</span></li><li>    <a class="l_k" href="functions/print.html">print</a> <span class="q">&quot;exa\n&quot;</span>  if <span class="q">&quot;\x{3af}&quot;</span> cmp <a class="l_k" href="functions/pack.html">pack</a><span class="s">(</span><span class="q">&quot;C&quot;</span><span class="cm">,</span> <span class="n">0xdf</span><span class="s">)</span> == <span class="n">0</span><span class="sc">;</span></li><li></li><li>    <span class="c"># ... but pack/unpack C are not affected, in case you still</span></li><li>    <span class="c"># want to go back to your native encoding</span></li><li></li><li>    <a class="l_k" href="functions/print.html">print</a> <span class="q">&quot;zetta\n&quot;</span> if <a class="l_k" href="functions/unpack.html">unpack</a><span class="s">(</span><span class="q">&quot;C&quot;</span><span class="cm">,</span> <span class="s">(</span><a class="l_k" href="functions/pack.html">pack</a><span class="s">(</span><span class="q">&quot;C&quot;</span><span class="cm">,</span> <span class="n">0xdf</span><span class="s">)</span><span class="s">)</span><span class="s">)</span> == <span class="n">0xdf</span><span class="sc">;</span></li></ol></pre><a class='view-head1' id="KNOWN-PROBLEMS"></a><h2 class='h2' >KNOWN PROBLEMS</h2>
+<ul>
+<li><a class='view-title' id="literals-in-regex-that-are-longer-than-127-bytes"></a><strong>literals in regex that are longer than 127 bytes</strong>
+<p>For native multibyte encodings (either fixed or variable length),
+the current implementation of the regular expressions may introduce
+recoding errors for regular expression literals longer than 127 bytes.</p>
+</li>
+<li><a class='view-title' id="EBCDIC"></a><strong>EBCDIC</strong>
+<p>The encoding pragma is not supported on EBCDIC platforms.
+(Porters who are willing and able to remove this limitation are
+welcome.)</p>
+</li>
+<li><a class='view-title' id="format"></a><strong>format</strong>
+<p>This pragma doesn't work well with format because PerlIO does not
+get along very well with it.  When format contains non-ascii
+characters it prints funny or gets "wide character warnings".
+To understand it, try the code below.</p>
+<pre class="verbatim"><ol><li>  <span class="c"># Save this one in utf8</span></li><li>  <span class="c"># replace *non-ascii* with a non-ascii string</span></li><li>  <a class="l_k" href="functions/my.html">my</a> <span class="i">$camel</span><span class="sc">;</span></li><li>  format STDOUT =</li><li><span class="hh">  *non-ascii*@&gt;&gt;&gt;&gt;&gt;&gt;&gt;</span></li><li><span class="hh">  $camel</span></li><li><span class="hh">  .</span></li><li><span class="hh">  $camel = &quot;*non-ascii*&quot;;</span></li><li><span class="hh">  binmode(STDOUT=&gt;&#39;:encoding(utf8)&#39;); # bang!</span></li><li><span class="hh">  write;              # funny </span></li><li><span class="hh">  print $camel, &quot;\n&quot;; # fine</span></li></ol></pre><p>Without binmode this happens to work but without binmode, print()
+fails instead of write().</p>
+<p>At any rate, the very use of format is questionable when it comes to
+unicode characters since you have to consider such things as character
+width (i.e. double-width for ideographs) and directions (i.e. BIDI for
+Arabic and Hebrew).</p>
+</li>
+</ul>
+<a class='view-head1' id="HISTORY"></a><h2 class='h2' >HISTORY</h2>
+<p>This pragma first appeared in Perl 5.8.0.  For features that require 
+5.8.1 and better, see above.</p>
+<a class='view-head1' id="SEE-ALSO"></a><h2 class='h2' >SEE ALSO</h2>
+<p><a href="perlunicode.html">perlunicode</a>, <a href="Encode.html">Encode</a>, <a href="open.html">open</a>, <a href="Filter/Util/Call.html">Filter::Util::Call</a>,</p>
+<p>Ch. 15 of <code class="inline"><span class="w">Programming</span> <span class="w">Perl</span> <span class="s">(</span><span class="n">3</span><span class="w">rd</span> <span class="w">Edition</span><span class="s">)</span></code>
+
+by Larry Wall, Tom Christiansen, Jon Orwant;
+O'Reilly &amp; Associates; ISBN 0-596-00027-8</p>
+
+
+
+
+      <ul><li><a href="#NAME">NAME</a></li><li><a href="#SYNOPSIS">SYNOPSIS</a></li><li><a href="#ABSTRACT">ABSTRACT</a></li><ul><li><a href="#Literal-Conversions">Literal Conversions</a></li><li><a href="#PerlIO-layers-for-STD(IN%7cOUT)">PerlIO layers for STD(IN|OUT)</a></li></ul><li><a href="#FEATURES-THAT-REQUIRE-5.8.1">FEATURES THAT REQUIRE 5.8.1</a></li><li><a href="#USAGE">USAGE</a></li><li><a href="#The-Filter-Option">The Filter Option</a></li><ul><li><a href="#Filter-related-changes-at-Encode-version-1.87">Filter-related changes at Encode version 1.87</a></li></ul><li><a href="#CAVEATS">CAVEATS</a></li><ul><li><a href="#NOT-SCOPED">NOT SCOPED</a></li><li><a href="#DO-NOT-MIX-MULTIPLE-ENCODINGS">DO NOT MIX MULTIPLE ENCODINGS</a></li><li><a href="#tr%2f%2f%2f-with-ranges">tr/// with ranges</a></li></ul><li><a href="#EXAMPLE---Greekperl">EXAMPLE - Greekperl</a></li><li><a href="#KNOWN-PROBLEMS">KNOWN PROBLEMS</a></li><li><a href="#HISTORY">HISTORY</a></li><li><a href="#SEE-ALSO">SEE ALSO</a></li></ul>
+
+
+                  </div>
+                </article>
+              </div>
+            </div>
+          </main>
+        </div>
+           <footer class="footer row bg-light pt-5 pb-5">
+       <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+           <div class="row">
+               <div class="col-md-4">
+                   <ul class="list-unstyled">
+                       <li>
+                           <h4>Site info</h4>
+                       </li>
+                       <li>Docs mantained by
+                           <a href="//lists.perl.org/list/perl5-porters.html"
+                               rel="noopener">Perl 5 Porters</a>
+                       </li>
+                       <li>Perldoc site development sponsored by
+                           <a href="//opusvl.com" rel="noopener">
+                           <img style="margin: 20px 20px 5px 10px" class="opus-logo" src="/public/img/opusvl_logo.svg" alt="OpusVL Logo">
+                        </a>
+                    <li><span class="about_perldoc"><a href="//about.html">About PerlDOC</a></span>
+                    </li>
+                       </li>
+                   </ul>
+               </div>
+               <div class="col-md-8">
+                   <div class="row">
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Manuals</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.2/index-overview.html">Overview</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.2/index-tutorials.html">Tutorials</a>
+                               </li>
+                               <li>
+                                   <a href="/5.8.2/index-faq.html">FAQs</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.2/index-history.html">Changes</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Reference</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.2/index-language.html">Language</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.2/index-functions.html">Functions</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.2/perlop.html">Operators</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.2/perlvar.html">Variables</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Modules</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.2/index-modules-A.html">Modules</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.2/index-pragmas.html">Pragmas</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.2/index-utilities.html">Utilities</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Misc</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.2/index-licence.html">License</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.2/index-internals.html">Internals</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.8.2/index-platforms.html">Platforms</a>
+                               </li>
+                            <li>
+                                <a
+                                    href="/5.8.2/index-about.html">About</a>
+                            </li>
+                           </ul>
+                       </div>
+                   </div>
+               </div>
+               <div class=" col-12 footer-inf text-center">
+                   <small>perldoc.perl.org - Official documentation for the Perl
+                       programming language</small>
+               </div>
+           </div>
+       </div>
+   </footer>
+
+        	<div class="beta-wrapper beta-bottom-right ">
+		<div class="beta beta-blue  ">
+			<a class="beta-link "
+				href="//github.com/OpusVL/perldoc.perl.org/issues/new" rel="noopener">
+				<span class="beta-text">
+					This website is a Beta release.
+				</span>
+				<span class="beta-text">
+					For any issues please raise a ticket on GitHub
+				</span>
+			</a>
+		</div>
+	</div>
+
+        <script src="/public/js/main.min.js"></script>
+      </body>
+
+      </html>

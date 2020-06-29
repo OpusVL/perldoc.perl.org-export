@@ -1,0 +1,951 @@
+      
+      
+      
+      
+
+      <!DOCTYPE html>
+      <html lang="en">
+
+      <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="perlce - perldoc.perl.org">
+        <link rel="icon" href="/public/img/favicon.ico">
+        <title>perlce - perldoc.perl.org</title>
+        <link href="/public/css/main.min.css" rel="stylesheet">
+        <link rel="canonical" href="/perlce.html">
+        <link
+          href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900'
+          rel='stylesheet' type='text/css'>
+        <script>
+          window.ga = window.ga || function () {
+            (ga.q = ga.q || []).push(arguments)
+          };
+          ga.l = +new Date;
+          ga('create', 'UA-1892152-2', 'auto'); // JJ's account
+          ga('create', 'UA-50555-3', 'auto', 'perlOrg'); // perl.org account
+          ga('require', 'outboundLinkTracker', {
+            events: ['click', 'auxclick', 'contextmenu'],
+          });
+          ga('require', 'maxScrollTracker');
+          ga('send', 'pageview');
+          ga('perlOrg.send', 'pageview');
+        </script>
+        <script async src="https://www.google-analytics.com/analytics.js">
+        </script>
+        <script async src="/public/js/tracking.min.js"></script>
+      </head>
+
+      <body class="body container-fluid ">
+        <div class="wrapper">
+
+          <nav
+    class="navbar navbar-dark bg-primary bg-perl fixed-top justify-content-between navbar-expand-lg">
+    <a href="#content" class="skippy sr-only sr-only-focusable">
+        <span class=' skippy-text'>Skip to main content</span>
+    </a>
+    <a class="navbar-brand" href="/">
+        <img class="logo" src="/public/img/logo_perl_doc.svg"
+            alt="Perl Documentation Logo" />
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse"
+        data-target="#navbar" aria-controls="navbar" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="navbar" class="collapse navbar-collapse ">
+        <ul class="navbar-nav ml-auto navbar-right">
+            <form class="nav-item dropdown search-wrapper">
+                <input type="text" id='searchinput' aria-describedby='navbarDropdown5'
+                    placeholder="Type query" class='search-input-field' value=''>
+
+                <button href="#" data-toggle='dropdown' type="button"
+                    aria-haspopup="true" aria-expanded='false' id="navbarDropdown5"
+                    class="nav-link dropdown-toggle search-link">
+                    <object tabindex='-1' focusable="false" class='search-icon'
+                        data="/public/img/search.svg" type="image/svg+xml"
+                        name='search icon'>search
+                        icon</object>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown5"
+                    id='search-results'>
+                    <p class='dropdown-item major-version'>
+                        No results
+                    </p>
+                </div>
+            </form>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown" href="#" class="nav-link dropdown-toggle"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Perl versions</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    
+                        <p class='dropdown-item major-version'>
+                            5.32
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.32.0/">5.32.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.30
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.3/">5.30.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.2/">5.30.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.1/">5.30.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.0/">5.30.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.28
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.3/">5.28.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.2/">5.28.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.1/">5.28.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.0/">5.28.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.26
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.3/">5.26.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.2/">5.26.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.1/">5.26.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.0/">5.26.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.24
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.4/">5.24.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.3/">5.24.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.2/">5.24.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.1/">5.24.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.0/">5.24.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.22
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.4/">5.22.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.3/">5.22.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.2/">5.22.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.1/">5.22.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.0/">5.22.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.20
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.3/">5.20.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.2/">5.20.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.1/">5.20.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.0/">5.20.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.18
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.4/">5.18.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.3/">5.18.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.2/">5.18.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.1/">5.18.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.0/">5.18.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.16
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.3/">5.16.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.2/">5.16.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.1/">5.16.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.0/">5.16.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.14
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.4/">5.14.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.3/">5.14.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.2/">5.14.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.1/">5.14.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.0/">5.14.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.12
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.5/">5.12.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.4/">5.12.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.3/">5.12.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.2/">5.12.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.1/">5.12.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.0/">5.12.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.10
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.1/">5.10.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.0/">5.10.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.8
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.9/">5.8.9</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.8/">5.8.8</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.7/">5.8.7</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.6/">5.8.6</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.5/">5.8.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.4/">5.8.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.3/">5.8.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.2/">5.8.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.1/">5.8.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.0/">5.8.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.6
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.2/">5.6.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.1/">5.6.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.0/">5.6.0</a>
+                        
+                        
+                    
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown1" href="#" class="dropdown-toggle nav-link"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Manuals</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                    <a class="dropdown-item"
+                        href="/5.24.4/index-overview.html">Overview</a>
+                    <a class="dropdown-item"
+                        href="/5.24.4/index-tutorials.html">Tutorials</a>
+                    <a class="dropdown-item"
+                        href="/5.24.4/index-faq.html">FAQs</a>
+                    <a class="dropdown-item"
+                        href="/5.24.4/index-history.html">Changes</a>
+                    <a class="dropdown-item"
+                        href="/5.24.4/index-licence.html">License</a>
+                    <a class="dropdown-item"
+                        href="/5.24.4/index-language.html">Language</a>
+                    <a class="dropdown-item"
+                        href="/5.24.4/index-functions.html">Functions</a>
+                    <a class="dropdown-item"
+                        href="/5.24.4/perlop.html">Operators</a>
+                    <a class="dropdown-item"
+                        href="/5.24.4/perlvar.html">Variables</a>
+                    <a class="dropdown-item"
+                        href="/5.24.4/index-pragmas.html">Pragmas</a>
+                    <a class="dropdown-item"
+                        href="/5.24.4/index-utilities.html">Utilities</a>
+                    <a class="dropdown-item"
+                        href="/5.24.4/index-internals.html">Internals</a>
+                    <a class="dropdown-item"
+                        href="/5.24.4/index-platforms.html">Platforms</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown3" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Modules</a>
+                <div aria-labelledby="navbarDropdown3"
+                    class="dropdown-menu letters-wrap">
+                    <!--<a class="dropdown-item"
+                        href="/5.24.4/index-modules.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.24.4/index-modules-by-cat.html">By
+                        Category</a>-->
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.24.4/index-modules-A.html">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.4/index-modules-B.html">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.4/index-modules-C.html">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.4/index-modules-D.html">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.4/index-modules-E.html">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.4/index-modules-F.html">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.4/index-modules-G.html">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.4/index-modules-H.html">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.4/index-modules-I.html">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.4/index-modules-J.html">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.4/index-modules-K.html">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.4/index-modules-L.html">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.4/index-modules-M.html">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.4/index-modules-N.html">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.4/index-modules-O.html">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.4/index-modules-P.html">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.4/index-modules-Q.html">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.4/index-modules-R.html">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.4/index-modules-S.html">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.4/index-modules-T.html">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.4/index-modules-U.html">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.4/index-modules-V.html">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.4/index-modules-W.html">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.4/index-modules-X.html">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.4/index-modules-Y.html">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.4/index-modules-Z.html">Z</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown4" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Functions</a>
+                <div aria-labelledby="navbarDropdown4"
+                    class="dropdown-menu letters-wrap">
+                    <a class="dropdown-item"
+                        href="/5.24.4/index-functions.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.24.4/index-functions-by-cat.html">By
+                        Category</a>
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.24.4/index-functions.html#A">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.4/index-functions.html#B">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.4/index-functions.html#C">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.4/index-functions.html#D">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.4/index-functions.html#E">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.4/index-functions.html#F">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.4/index-functions.html#G">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.4/index-functions.html#H">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.4/index-functions.html#I">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.4/index-functions.html#J">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.4/index-functions.html#K">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.4/index-functions.html#L">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.4/index-functions.html#M">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.4/index-functions.html#N">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.4/index-functions.html#O">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.4/index-functions.html#P">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.4/index-functions.html#Q">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.4/index-functions.html#R">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.4/index-functions.html#S">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.4/index-functions.html#T">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.4/index-functions.html#U">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.4/index-functions.html#V">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.4/index-functions.html#W">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.4/index-functions.html#X">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.4/index-functions.html#Y">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.24.4/index-functions.html#Z">Z</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!--/.nav-collapse -->
+</nav>
+
+
+          <main class="row main-content pb-5 pt-5" id='content'>
+            <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+              <div class="row">
+                <div class="col-sm-12">
+                  <div id="breadcrumbs">
+                      
+    <a href="index.html">Home</a>&nbsp; &gt;
+    
+      
+        <a href="index-platforms.html">Platform specific</a> &gt;
+      
+    
+    perlce
+  
+
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <article class="col-sm-12 content">
+                  <div class="documentation-wrapper">
+                    <div id="perl_version">
+                      <h7 class='page-title'> Perl 5 version 24.4
+                        documentation</h7>
+                    </div>
+                    <h1>perlce</h1>
+
+
+  <!--    -->
+<ul><li><a href="#NAME">NAME</a></li><li><a href="#Building-Perl-for-WinCE">Building Perl for WinCE</a></li><ul><li><a href="#WARNING">WARNING</a></li><li><a href="#DESCRIPTION">DESCRIPTION</a></li><li><a href="#General-explanations-on-cross-compiling-WinCE">General explanations on cross-compiling WinCE</a></li><li><a href="#CURRENT-BUILD-INSTRUCTIONS">CURRENT BUILD INSTRUCTIONS</a></li><li><a href="#OLD-BUILD-INSTRUCTIONS">OLD BUILD INSTRUCTIONS</a></li></ul><li><a href="#Using-Perl-on-WinCE">Using Perl on WinCE</a></li><ul><li><a href="#DESCRIPTION">DESCRIPTION</a></li><li><a href="#LIMITATIONS">LIMITATIONS</a></li><li><a href="#ENVIRONMENT">ENVIRONMENT</a></li><li><a href="#REGISTRY">REGISTRY</a></li><li><a href="#XS">XS</a></li><li><a href="#BUGS">BUGS</a></li><li><a href="#INSTALLATION">INSTALLATION</a></li></ul><li><a href="#ACKNOWLEDGEMENTS">ACKNOWLEDGEMENTS</a></li><li><a href="#History-of-WinCE-port">History of WinCE port</a></li><li><a href="#AUTHORS">AUTHORS</a></li></ul><a class='view-head1' id="NAME"></a><h2 class='h2' >NAME</h2>
+<p>perlce - Perl for WinCE</p>
+<a class='view-head1' id="Building-Perl-for-WinCE"></a><h2 class='h2' >Building Perl for WinCE</h2>
+<a class='view-head2' id="WARNING"></a><h3 class='h3' >WARNING</h3>
+<p><strong>Much of this document has become very out of date and needs updating,
+rewriting or deleting. The build process was overhauled during the 5.19
+development track and the current instructions as of that time are given
+in <a href="#CURRENT-BUILD-INSTRUCTIONS">CURRENT BUILD INSTRUCTIONS</a>; the previous build instructions, which
+are largely superseded but may still contain some useful information, are
+left in <a href="#OLD-BUILD-INSTRUCTIONS">OLD BUILD INSTRUCTIONS</a> but really need removing after anything
+of use has been extracted from them.</strong></p>
+<a class='view-head2' id="DESCRIPTION"></a><h3 class='h3' >DESCRIPTION</h3>
+<p>This file gives the instructions for building Perl5.8 and above for
+WinCE.  Please read and understand the terms under which this
+software is distributed.</p>
+<a class='view-head2' id="General-explanations-on-cross-compiling-WinCE"></a><h3 class='h3' >General explanations on cross-compiling WinCE</h3>
+<ul>
+<li>
+<p><i>miniperl</i> is built. This is a single executable (without DLL), intended
+to run on Win32, and it will facilitate remaining build process; all binaries
+built after it are foreign and should not run locally.</p>
+<p><i>miniperl</i> is built using <i>./win32/Makefile</i>; this is part of normal
+build process invoked as dependency from wince/Makefile.ce</p>
+</li>
+<li>
+<p>After <i>miniperl</i> is built, <i>configpm</i> is invoked to create right <i>Config.pm</i>
+in right place and its corresponding Cross.pm.</p>
+<p>Unlike Win32 build, miniperl will not have <i>Config.pm</i> of host within reach;
+it rather will use <i>Config.pm</i> from within cross-compilation directories.</p>
+<p>File <i>Cross.pm</i> is dead simple: for given cross-architecture places in @INC
+a path where perl modules are, and right <i>Config.pm</i> in that place.</p>
+<p>That said, <code class="inline"><span class="w">miniperl</span> -<span class="w">Ilib</span> -<span class="w">MConfig</span> -<span class="w">we</span> <span class="n">1</span></code>
+ should report an error, because
+it can not find <i>Config.pm</i>. If it does not give an error -- wrong <i>Config.pm</i>
+is substituted, and resulting binaries will be a mess.</p>
+<p><code class="inline"><span class="w">miniperl</span> -<span class="w">MCross</span> -<span class="w">MConfig</span> -<span class="w">we</span> <span class="n">1</span></code>
+ should run okay, and it will provide right
+<i>Config.pm</i> for further compilations.</p>
+</li>
+<li>
+<p>During extensions build phase, a script <i>./win32/buildext.pl</i> is invoked,
+which in turn steps in <i>./ext</i> subdirectories and performs a build of
+each extension in turn.</p>
+<p>All invokes of <i>Makefile.PL</i> are provided with <code class="inline">-<span class="w">MCross</span></code>
+ so to enable cross-
+compile.</p>
+</li>
+</ul>
+<a class='view-head2' id="CURRENT-BUILD-INSTRUCTIONS"></a><h3 class='h3' >CURRENT BUILD INSTRUCTIONS</h3>
+<p>(These instructions assume the host is 32-bit Windows. If you're on 64-bit
+Windows then change "C:\Program Files" to "C:\Program Files (x86)" throughout.)</p>
+<p>1. Install EVC4 from</p>
+<pre class="verbatim"><ol><li> <span class="j">http:</span><span class="q">//</span><span class="w">download</span>.<span class="w">microsoft</span>.<span class="w">com</span>/<span class="w">download</span>/<span class="w">c</span>/<span class="n">3</span>/<span class="w">f</span>/<span class="w">c3f8b58b</span>-<span class="n">9753</span>-<span class="n">4</span><span class="w">c2e</span>-<span class="n">8</span><span class="w">b96</span>-<span class="n">2</span><span class="w">dfe3476a2f7</span>/<span class="w">eVC4</span>.<span class="w">exe</span></li></ol></pre><p>Use the key mentioned at</p>
+<pre class="verbatim"><ol><li> <span class="j">http:</span><span class="q">//</span><span class="w">download</span>.<span class="w">cnet</span>.<span class="w">com</span>/<span class="w">Microsoft</span>-<span class="w">eMbedded</span>-<span class="w">Visual</span>-C<span class="q">/3000-2212_4-10108490.html?tag=bc</span></li></ol></pre><p>The installer is ancient and has a few bugs on the paths it uses. You 
+will have to fix them later. Basically, some things go into "C:/Program 
+Files/Windows CE Tools", others go into "C:/Windows CE Tools" regardless 
+of the path you gave to the installer (the default will be "C:/Windows 
+CE Tools"). Reboots will be required for the installer to proceed. Also 
+.c and .h associations with Visual Studio might get overridden when 
+installing EVC4. You have been warned.</p>
+<p>2. Download celib from GitHub (using "Download ZIP") at</p>
+<pre class="verbatim"><ol><li>    <span class="j">https:</span><span class="q">//github</span>.<span class="w">com</span><span class="q">/bulk88/celib</span></li></ol></pre><p>Extract it to a spaceless path but not into the perl build source.
+I call this directory "celib-palm-3.0" but in the GitHub 
+snapshot it will be called "celib-master". Make a copy of the 
+"wince-arm-pocket-wce300-release" folder and rename the copy to 
+"wince-arm-pocket-wce400". This is a hack so we can build a CE 4.0 
+binary by linking in CE 3.0 ARM asm; the linker doesn't care. Windows 
+Mobile/WinCE are backwards compatible with machine code like Desktop Windows.</p>
+<p>3. Download console-1.3-src.tar.gz from</p>
+<pre class="verbatim"><ol><li> <span class="j">http:</span><span class="q">//sourceforge</span>.<span class="w">net</span>/<span class="w">projects</span>/<span class="w">perlce</span>/<span class="w">files</span>/<span class="w">PerlCE</span><span class="i">%20support</span>%<span class="n">20</span><span class="w">files</span><span class="q">/console/</span></li></ol></pre><p>Extract it to a spaceless path but not into the perl build source. 
+Don't extract it into the same directory as celib. Make a copy of the 
+"wince-arm-pocket-wce300" folder and rename the copy to 
+"wince-arm-pocket-wce400". This is a hack so we can build a CE 4.0 
+binary by linking in CE 3.0 ARM asm; the linker doesn't care. Windows 
+Mobile/WinCE are backwards compatible with machine code like Desktop Windows.</p>
+<p>4. Open a command prompt, run your regular batch file to set the environment
+for desktop Visual C building, goto the perl source directory, cd into win32/,
+fill out Makefile, and do a "nmake all" to build a Desktop Perl.</p>
+<p>5. Open win32/Makefile.ce in a text editor and do something similar to the 
+following patch.</p>
+<pre class="verbatim"><ol><li>    -<span class="w">CELIBDLLDIR</span>  = <span class="w">h</span><span class="co">:</span>\<span class="w">src</span>\<span class="w">wince</span>\<span class="w">celib</span>-<span class="w">palm</span>-<span class="n">3.0</span></li><li>    -<span class="w">CECONSOLEDIR</span> = <span class="w">h</span><span class="co">:</span>\<span class="w">src</span>\<span class="w">wince</span>\<span class="w">w32console</span></li><li>    +<span class="w">CELIBDLLDIR</span>  = <span class="w">C</span><span class="co">:</span>\<span class="w">sources</span>\<span class="w">celib</span>-<span class="w">palm</span>-<span class="n">3.0</span></li><li>    +<span class="w">CECONSOLEDIR</span> = <span class="w">C</span><span class="co">:</span>\<span class="w">sources</span>\<span class="w">w32console</span></li></ol></pre><p>Also change</p>
+<pre class="verbatim"><ol><li>    !<a class="l_k" href="functions/if.html">if</a> <span class="q">&quot;$(MACHINE)&quot;</span> == <span class="q">&quot;&quot;</span></li><li>    <span class="w">MACHINE</span>=<span class="w">wince</span>-<span class="w">arm</span>-<span class="w">hpc</span>-<span class="w">wce300</span></li><li>    <span class="c">#MACHINE=wince-arm-hpc-wce211</span></li><li>    <span class="c">#MACHINE=wince-sh3-hpc-wce211</span></li><li>    <span class="c">#MACHINE=wince-mips-hpc-wce211</span></li><li>    <span class="c">#MACHINE=wince-sh3-hpc-wce200</span></li><li>    <span class="c">#MACHINE=wince-mips-hpc-wce200</span></li><li>    <span class="c">#MACHINE=wince-arm-pocket-wce300</span></li><li>    <span class="c">#MACHINE=wince-mips-pocket-wce300</span></li><li>    <span class="c">#MACHINE=wince-sh3-pocket-wce300</span></li><li>    <span class="c">#MACHINE=wince-x86em-pocket-wce300</span></li><li>    <span class="c">#MACHINE=wince-mips-palm-wce211</span></li><li>    <span class="c">#MACHINE=wince-sh3-palm-wce211</span></li><li>    <span class="c">#MACHINE=wince-x86em-palm-wce211</span></li><li>    <span class="c">#MACHINE=wince-x86-hpc-wce300</span></li><li>    <span class="c">#MACHINE=wince-arm-pocket-wce400</span></li><li>    !<span class="w">endif</span></li></ol></pre><p>to</p>
+<pre class="verbatim"><ol><li>    !<a class="l_k" href="functions/if.html">if</a> <span class="q">&quot;$(MACHINE)&quot;</span> == <span class="q">&quot;&quot;</span></li><li>    <span class="c">#MACHINE=wince-arm-hpc-wce300</span></li><li>    <span class="c">#MACHINE=wince-arm-hpc-wce211</span></li><li>    <span class="c">#MACHINE=wince-sh3-hpc-wce211</span></li><li>    <span class="c">#MACHINE=wince-mips-hpc-wce211</span></li><li>    <span class="c">#MACHINE=wince-sh3-hpc-wce200</span></li><li>    <span class="c">#MACHINE=wince-mips-hpc-wce200</span></li><li>    <span class="c">#MACHINE=wince-arm-pocket-wce300</span></li><li>    <span class="c">#MACHINE=wince-mips-pocket-wce300</span></li><li>    <span class="c">#MACHINE=wince-sh3-pocket-wce300</span></li><li>    <span class="c">#MACHINE=wince-x86em-pocket-wce300</span></li><li>    <span class="c">#MACHINE=wince-mips-palm-wce211</span></li><li>    <span class="c">#MACHINE=wince-sh3-palm-wce211</span></li><li>    <span class="c">#MACHINE=wince-x86em-palm-wce211</span></li><li>    <span class="c">#MACHINE=wince-x86-hpc-wce300</span></li><li>    <span class="w">MACHINE</span>=<span class="w">wince</span>-<span class="w">arm</span>-<span class="w">pocket</span>-<span class="w">wce400</span></li><li>    !<span class="w">endif</span></li></ol></pre><p>so wince-arm-pocket-wce400 is the MACHINE type.</p>
+<p>6. Use a text editor to open "C:\Program Files\Microsoft eMbedded C++ 
+4.0\EVC\WCE400\BIN\WCEARMV4.BAT". Look for</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="functions/if.html">if</a> <span class="q">&quot;%SDKROOT%&quot;</span>==<span class="q">&quot;&quot;</span> <span class="w">set</span> <span class="w">SDKROOT</span>=...</li></ol></pre><p>On a new install it is "C:\Windows CE Tools". Goto 
+"C:\Windows CE Tools" in a file manager and see if "C:\Windows CE 
+Tools\wce400\STANDARDSDK\Include\Armv4" exists on your disk. If not
+the SDKROOT need to be changed to "C:\Program Files\Windows CE Tools".</p>
+<p>Goto celib-palm-3.0\inc\cewin32.h, search for</p>
+<pre class="verbatim"><ol><li>    <span class="w">typedef</span> <span class="w">struct</span> <span class="i">_ABC</span> <span class="s">{</span></li></ol></pre><p>and uncomment the struct.</p>
+<p>7. Open another command prompt, ensure PLATFORM is not set to anything
+already unless you know what you're doing (so that the correct default
+value is set by the next command), and run "C:\Program Files\Microsoft
+eMbedded C++ 4.0\EVC\WCE400\BIN\WCEARMV4.BAT"</p>
+<p>8. In the WinCE command prompt you made with WCEARMV4.BAT, goto the perl 
+source directory, cd into win32/ and run "nmake -f Makefile.ce".</p>
+<p>9. The ARM perl interpreter (perl519.dll and perl.exe) will be in something
+like "C:\perl519\src\win32\wince-arm-pocket-wce400", with the XS DLLs in
+"C:\perl519\src\xlib\wince-arm-hpc-wce400\auto".</p>
+<p>To prove success on the host machine, run
+"dumpbin /headers wince-arm-pocket-wce400\perl.exe" from the win32/ folder
+and look for "machine (ARM)" in the FILE HEADER VALUES and
+"subsystem (Windows CE GUI)" in the OPTIONAL HEADER VALUES.</p>
+<a class='view-head2' id="OLD-BUILD-INSTRUCTIONS"></a><h3 class='h3' >OLD BUILD INSTRUCTIONS</h3>
+<p>This section describes the steps to be performed to build PerlCE.
+You may find additional information about building perl for WinCE
+at <a href="http://perlce.sourceforge.net">http://perlce.sourceforge.net</a> and some pre-built binaries.</p>
+<a class='view-head3' id="Tools-%26-SDK"></a><h4 class='h4' >Tools &amp; SDK</h4>
+<p>For compiling, you need following:</p>
+<ul>
+<li><a class='view-title' id="*-Microsoft-Embedded-Visual-Tools"></a><strong>Microsoft Embedded Visual Tools</strong>
+</li>
+<li><a class='view-title' id="*-Microsoft-Visual-C%2b%2b"></a><strong>Microsoft Visual C++</strong>
+</li>
+<li><a class='view-title' id="*-Rainer-Keuchel's-celib-sources"></a><strong>Rainer Keuchel's celib-sources</strong>
+</li>
+<li><a class='view-title' id="*-Rainer-Keuchel's-console-sources"></a><strong>Rainer Keuchel's console-sources</strong>
+</li>
+</ul>
+<p>Needed source files can be downloaded at
+<a href="http://perlce.sourceforge.net">http://perlce.sourceforge.net</a></p>
+<a class='view-head3' id="Make"></a><h4 class='h4' >Make</h4>
+<p>Normally you only need to edit <i>./win32/ce-helpers/compile.bat</i>
+to reflect your system and run it.</p>
+<p>File <i>./win32/ce-helpers/compile.bat</i> is actually a wrapper to call
+<code class="inline"><span class="w">nmake</span> -f <span class="w">makefile</span>.<span class="w">ce</span></code>
+ with appropriate parameters and it accepts extra
+parameters and forwards them to <code class="inline"><span class="w">nmake</span></code>
+ command as additional
+arguments. You should pass target this way.</p>
+<p>To prepare distribution you need to do following:</p>
+<ul>
+<li><a class='view-title' id="*-go-to-_.%2fwin32_-subdirectory"></a><strong>go to <i>./win32</i> subdirectory</strong>
+</li>
+<li><a class='view-title' id="*-edit-file-_.%2fwin32%2fce-helpers%2fcompile.bat_"></a><strong>edit file <i>./win32/ce-helpers/compile.bat</i></strong>
+</li>
+<li><a class='view-title' id="*-run----compile.bat"></a><strong>run 
+  compile.bat</strong>
+</li>
+<li><a class='view-title' id="*-run----compile.bat-dist"></a><strong>run 
+  compile.bat dist</strong>
+</li>
+</ul>
+<p><i>Makefile.ce</i> has <code class="inline"><span class="w">CROSS_NAME</span></code>
+ macro, and it is used further to refer to
+your cross-compilation scheme. You could assign a name to it, but this
+is not necessary, because by default it is assigned after your machine
+configuration name, such as "wince-sh3-hpc-wce211", and this is enough
+to distinguish different builds at the same time. This option could be
+handy for several different builds on same platform to perform, say,
+threaded build. In a following example we assume that all required
+environment variables are set properly for C cross-compiler (a special
+*.bat file could fit perfectly to this purpose) and your <i>compile.bat</i>
+has proper "MACHINE" parameter set, to, say, <code class="inline"><span class="w">wince</span>-<span class="w">mips</span>-<span class="w">pocket</span>-<span class="w">wce300</span></code>
+.</p>
+<pre class="verbatim"><ol><li>  <span class="w">compile</span>.<span class="w">bat</span></li><li>  <span class="w">compile</span>.<span class="w">bat</span> <span class="w">dist</span></li><li>  <span class="w">compile</span>.<span class="w">bat</span> <span class="w">CROSS_NAME</span>=<span class="w">mips</span>-<span class="w">wce300</span>-<span class="w">thr</span> <span class="q">&quot;USE_ITHREADS=define&quot;</span> ^</li><li>    <span class="q">&quot;USE_IMP_SYS=define&quot;</span> <span class="q">&quot;USE_MULTI=define&quot;</span></li><li>  <span class="w">compile</span>.<span class="w">bat</span> <span class="w">CROSS_NAME</span>=<span class="w">mips</span>-<span class="w">wce300</span>-<span class="w">thr</span> <span class="q">&quot;USE_ITHREADS=define&quot;</span> ^</li><li>    <span class="q">&quot;USE_IMP_SYS=define&quot;</span> <span class="q">&quot;USE_MULTI=define&quot;</span> <span class="w">dist</span></li></ol></pre><p>If all goes okay and no errors during a build, you'll get two independent
+distributions: <code class="inline"><span class="w">wince</span>-<span class="w">mips</span>-<span class="w">pocket</span>-<span class="w">wce300</span></code>
+ and <code class="inline"><span class="w">mips</span>-<span class="w">wce300</span>-<span class="w">thr</span></code>
+.</p>
+<p>Target <code class="inline"><span class="w">dist</span></code>
+ prepares distribution file set. Target <code class="inline"><span class="w">zipdist</span></code>
+ performs
+same as <code class="inline"><span class="w">dist</span></code>
+ but additionally compresses distribution files into zip
+archive.</p>
+<p>NOTE: during a build there could be created a number (or one) of <i>Config.pm</i>
+for cross-compilation ("foreign" <i>Config.pm</i>) and those are hidden inside
+<i>../xlib/$(CROSS_NAME)</i> with other auxiliary files, but, and this is important to
+note, there should be <strong>no</strong> <i>Config.pm</i> for host miniperl.
+If you'll get an error that perl could not find Config.pm somewhere in building
+process this means something went wrong. Most probably you forgot to
+specify a cross-compilation when invoking miniperl.exe to Makefile.PL
+When building an extension for cross-compilation your command line should
+look like</p>
+<pre class="verbatim"><ol><li>  ..\<span class="w">miniperl</span>.<span class="w">exe</span> -<span class="w">I</span>..\<span class="w">lib</span> -<span class="w">MCross</span>=<span class="w">mips</span>-<span class="w">wce300</span>-<span class="w">thr</span> <span class="w">Makefile</span>.<span class="w">PL</span></li></ol></pre><p>or just</p>
+<pre class="verbatim"><ol><li>  ..\<span class="w">miniperl</span>.<span class="w">exe</span> -<span class="w">I</span>..\<span class="w">lib</span> -<span class="w">MCross</span> <span class="w">Makefile</span>.<span class="w">PL</span></li></ol></pre><p>to refer a cross-compilation that was created last time.</p>
+<p>All questions related to building for WinCE devices could be asked in
+<i>perlce-user@lists.sourceforge.net</i> mailing list.</p>
+<a class='view-head1' id="Using-Perl-on-WinCE"></a><h2 class='h2' >Using Perl on WinCE</h2>
+<a class='view-head2' id="DESCRIPTION"></a><h3 class='h3' >DESCRIPTION</h3>
+<p>PerlCE is currently linked with a simple console window, so it also
+works on non-hpc devices.</p>
+<p>The simple stdio implementation creates the files <i>stdin.txt</i>,
+<i>stdout.txt</i> and <i>stderr.txt</i>, so you might examine them if your
+console has only a limited number of cols.</p>
+<p>When exitcode is non-zero, a message box appears, otherwise the
+console closes, so you might have to catch an exit with
+status 0 in your program to see any output.</p>
+<p>stdout/stderr now go into the files <i>/perl-stdout.txt</i> and
+<i>/perl-stderr.txt.</i></p>
+<p>PerlIDE is handy to deal with perlce.</p>
+<a class='view-head2' id="LIMITATIONS"></a><h3 class='h3' >LIMITATIONS</h3>
+<p>No fork(), pipe(), popen() etc.</p>
+<a class='view-head2' id="ENVIRONMENT"></a><h3 class='h3' >ENVIRONMENT</h3>
+<p>All environment vars must be stored in HKLM\Environment as
+strings. They are read at process startup.</p>
+<ul>
+<li><a class='view-title' id="PERL5LIB"></a><strong>PERL5LIB</strong>
+<p>Usual perl lib path (semi-list).</p>
+</li>
+<li><a class='view-title' id="PATH"></a><strong>PATH</strong>
+<p>Semi-list for executables.</p>
+</li>
+<li><a class='view-title' id="TMP"></a><strong>TMP</strong>
+<p>- Tempdir.</p>
+</li>
+<li><a class='view-title' id="UNIXROOTPATH"></a><strong>UNIXROOTPATH</strong>
+<p>- Root for accessing some special files, i.e. <i>/dev/null</i>, <i>/etc/services</i>.</p>
+</li>
+<li><a class='view-title' id="ROWS%2fCOLS"></a><strong>ROWS/COLS</strong>
+<p>- Rows/cols for console.</p>
+</li>
+<li><a class='view-title' id="HOME"></a><strong>HOME</strong>
+<p>- Home directory.</p>
+</li>
+<li><a class='view-title' id="CONSOLEFONTSIZE"></a><strong>CONSOLEFONTSIZE</strong>
+<p>- Size for console font.</p>
+</li>
+</ul>
+<p>You can set these with cereg.exe, a (remote) registry editor
+or via the PerlIDE.</p>
+<a class='view-head2' id="REGISTRY"></a><h3 class='h3' >REGISTRY</h3>
+<p>To start perl by clicking on a perl source file, you have
+to make the according entries in HKCR (see <i>ce-helpers/wince-reg.bat</i>).
+cereg.exe (which must be executed on a desktop pc with
+ActiveSync) is reported not to work on some devices.
+You have to create the registry entries by hand using a 
+registry editor.</p>
+<a class='view-head2' id="XS"></a><h3 class='h3' >XS</h3>
+<p>The following Win32-Methods are built-in:</p>
+<pre class="verbatim"><ol><li>	<span class="i">newXS</span><span class="s">(</span><span class="q">&quot;Win32::GetCwd&quot;</span><span class="cm">,</span> <span class="w">w32_GetCwd</span><span class="cm">,</span> <span class="w">file</span><span class="s">)</span><span class="sc">;</span></li><li>	<span class="i">newXS</span><span class="s">(</span><span class="q">&quot;Win32::SetCwd&quot;</span><span class="cm">,</span> <span class="w">w32_SetCwd</span><span class="cm">,</span> <span class="w">file</span><span class="s">)</span><span class="sc">;</span></li><li>	<span class="i">newXS</span><span class="s">(</span><span class="q">&quot;Win32::GetTickCount&quot;</span><span class="cm">,</span> <span class="w">w32_GetTickCount</span><span class="cm">,</span> <span class="w">file</span><span class="s">)</span><span class="sc">;</span></li><li>	<span class="i">newXS</span><span class="s">(</span><span class="q">&quot;Win32::GetOSVersion&quot;</span><span class="cm">,</span> <span class="w">w32_GetOSVersion</span><span class="cm">,</span> <span class="w">file</span><span class="s">)</span><span class="sc">;</span></li><li>	<span class="i">newXS</span><span class="s">(</span><span class="q">&quot;Win32::IsWinNT&quot;</span><span class="cm">,</span> <span class="w">w32_IsWinNT</span><span class="cm">,</span> <span class="w">file</span><span class="s">)</span><span class="sc">;</span></li><li>	<span class="i">newXS</span><span class="s">(</span><span class="q">&quot;Win32::IsWin95&quot;</span><span class="cm">,</span> <span class="w">w32_IsWin95</span><span class="cm">,</span> <span class="w">file</span><span class="s">)</span><span class="sc">;</span></li><li>	<span class="i">newXS</span><span class="s">(</span><span class="q">&quot;Win32::IsWinCE&quot;</span><span class="cm">,</span> <span class="w">w32_IsWinCE</span><span class="cm">,</span> <span class="w">file</span><span class="s">)</span><span class="sc">;</span></li><li>	<span class="i">newXS</span><span class="s">(</span><span class="q">&quot;Win32::CopyFile&quot;</span><span class="cm">,</span> <span class="w">w32_CopyFile</span><span class="cm">,</span> <span class="w">file</span><span class="s">)</span><span class="sc">;</span></li><li>	<span class="i">newXS</span><span class="s">(</span><span class="q">&quot;Win32::Sleep&quot;</span><span class="cm">,</span> <span class="w">w32_Sleep</span><span class="cm">,</span> <span class="w">file</span><span class="s">)</span><span class="sc">;</span></li><li>	<span class="i">newXS</span><span class="s">(</span><span class="q">&quot;Win32::MessageBox&quot;</span><span class="cm">,</span> <span class="w">w32_MessageBox</span><span class="cm">,</span> <span class="w">file</span><span class="s">)</span><span class="sc">;</span></li><li>	<span class="i">newXS</span><span class="s">(</span><span class="q">&quot;Win32::GetPowerStatus&quot;</span><span class="cm">,</span> <span class="w">w32_GetPowerStatus</span><span class="cm">,</span> <span class="w">file</span><span class="s">)</span><span class="sc">;</span></li><li>	<span class="i">newXS</span><span class="s">(</span><span class="q">&quot;Win32::GetOemInfo&quot;</span><span class="cm">,</span> <span class="w">w32_GetOemInfo</span><span class="cm">,</span> <span class="w">file</span><span class="s">)</span><span class="sc">;</span></li><li>	<span class="i">newXS</span><span class="s">(</span><span class="q">&quot;Win32::ShellEx&quot;</span><span class="cm">,</span> <span class="w">w32_ShellEx</span><span class="cm">,</span> <span class="w">file</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><a class='view-head2' id="BUGS"></a><h3 class='h3' >BUGS</h3>
+<p>Opening files for read-write is currently not supported if
+they use stdio (normal perl file handles).</p>
+<p>If you find bugs or if it does not work at all on your
+device, send mail to the address below. Please report
+the details of your device (processor, ceversion, 
+devicetype (hpc/palm/pocket)) and the date of the downloaded
+files.</p>
+<a class='view-head2' id="INSTALLATION"></a><h3 class='h3' >INSTALLATION</h3>
+<p>Currently installation instructions are at <a href="http://perlce.sourceforge.net/">http://perlce.sourceforge.net/</a>.</p>
+<p>After installation &amp; testing processes will stabilize, information will
+be more precise.</p>
+<a class='view-head1' id="ACKNOWLEDGEMENTS"></a><h2 class='h2' >ACKNOWLEDGEMENTS</h2>
+<p>The port for Win32 was used as a reference.</p>
+<a class='view-head1' id="History-of-WinCE-port"></a><h2 class='h2' >History of WinCE port</h2>
+<dl>
+<li><a class='view-title' id="5.6.0"></a><strong>6.0</strong>
+<p>Initial port of perl to WinCE. It was performed in separate directory
+named <i>wince</i>. This port was based on contents of <i>./win32</i> directory.
+<i>miniperl</i> was not built, user must have HOST perl and properly edit
+<i>makefile.ce</i> to reflect this.</p>
+</li>
+<li><a class='view-title' id="5.8.0"></a><strong>8.0</strong>
+<p>wince port was kept in the same <i>./wince</i> directory, and <i>wince/Makefile.ce</i>
+was used to invoke native compiler to create HOST miniperl, which then
+facilitates cross-compiling process.
+Extension building support was added.</p>
+</li>
+<li><a class='view-title' id="5.9.4"></a><strong>9.4</strong>
+<p>Two directories <i>./win32</i> and <i>./wince</i> were merged, so perlce build
+process comes in <i>./win32</i> directory.</p>
+</li>
+</dl>
+<a class='view-head1' id="AUTHORS"></a><h2 class='h2' >AUTHORS</h2>
+<ul>
+<li><a class='view-title' id="Rainer-Keuchel-%3ccoyxc%40rainer-keuchel.de%3e"></a><strong>Rainer Keuchel &lt;coyxc@rainer-keuchel.de&gt;</strong>
+<p>provided initial port of Perl, which appears to be most essential work, as
+it was a breakthrough on having Perl ported at all.
+Many thanks and obligations to Rainer!</p>
+</li>
+<li><a class='view-title' id="Vadim-Konovalov"></a><strong>Vadim Konovalov</strong>
+<p>made further support of WinCE port.</p>
+</li>
+<li><a class='view-title' id="Daniel-Dragan"></a><strong>Daniel Dragan</strong>
+<p>updated the build process during the 5.19 development track.</p>
+</li>
+</ul>
+
+
+
+
+      <ul><li><a href="#NAME">NAME</a></li><li><a href="#Building-Perl-for-WinCE">Building Perl for WinCE</a></li><ul><li><a href="#WARNING">WARNING</a></li><li><a href="#DESCRIPTION">DESCRIPTION</a></li><li><a href="#General-explanations-on-cross-compiling-WinCE">General explanations on cross-compiling WinCE</a></li><li><a href="#CURRENT-BUILD-INSTRUCTIONS">CURRENT BUILD INSTRUCTIONS</a></li><li><a href="#OLD-BUILD-INSTRUCTIONS">OLD BUILD INSTRUCTIONS</a></li></ul><li><a href="#Using-Perl-on-WinCE">Using Perl on WinCE</a></li><ul><li><a href="#DESCRIPTION">DESCRIPTION</a></li><li><a href="#LIMITATIONS">LIMITATIONS</a></li><li><a href="#ENVIRONMENT">ENVIRONMENT</a></li><li><a href="#REGISTRY">REGISTRY</a></li><li><a href="#XS">XS</a></li><li><a href="#BUGS">BUGS</a></li><li><a href="#INSTALLATION">INSTALLATION</a></li></ul><li><a href="#ACKNOWLEDGEMENTS">ACKNOWLEDGEMENTS</a></li><li><a href="#History-of-WinCE-port">History of WinCE port</a></li><li><a href="#AUTHORS">AUTHORS</a></li></ul>
+
+
+                  </div>
+                </article>
+              </div>
+            </div>
+          </main>
+        </div>
+           <footer class="footer row bg-light pt-5 pb-5">
+       <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+           <div class="row">
+               <div class="col-md-4">
+                   <ul class="list-unstyled">
+                       <li>
+                           <h4>Site info</h4>
+                       </li>
+                       <li>Docs mantained by
+                           <a href="//lists.perl.org/list/perl5-porters.html"
+                               rel="noopener">Perl 5 Porters</a>
+                       </li>
+                       <li>Perldoc site development sponsored by
+                           <a href="//opusvl.com" rel="noopener">
+                           <img style="margin: 20px 20px 5px 10px" class="opus-logo" src="/public/img/opusvl_logo.svg" alt="OpusVL Logo">
+                        </a>
+                    <li><span class="about_perldoc"><a href="//about.html">About PerlDOC</a></span>
+                    </li>
+                       </li>
+                   </ul>
+               </div>
+               <div class="col-md-8">
+                   <div class="row">
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Manuals</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.24.4/index-overview.html">Overview</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.24.4/index-tutorials.html">Tutorials</a>
+                               </li>
+                               <li>
+                                   <a href="/5.24.4/index-faq.html">FAQs</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.24.4/index-history.html">Changes</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Reference</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.24.4/index-language.html">Language</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.24.4/index-functions.html">Functions</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.24.4/perlop.html">Operators</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.24.4/perlvar.html">Variables</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Modules</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.24.4/index-modules-A.html">Modules</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.24.4/index-pragmas.html">Pragmas</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.24.4/index-utilities.html">Utilities</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Misc</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.24.4/index-licence.html">License</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.24.4/index-internals.html">Internals</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.24.4/index-platforms.html">Platforms</a>
+                               </li>
+                            <li>
+                                <a
+                                    href="/5.24.4/index-about.html">About</a>
+                            </li>
+                           </ul>
+                       </div>
+                   </div>
+               </div>
+               <div class=" col-12 footer-inf text-center">
+                   <small>perldoc.perl.org - Official documentation for the Perl
+                       programming language</small>
+               </div>
+           </div>
+       </div>
+   </footer>
+
+        	<div class="beta-wrapper beta-bottom-right ">
+		<div class="beta beta-blue  ">
+			<a class="beta-link "
+				href="//github.com/OpusVL/perldoc.perl.org/issues/new" rel="noopener">
+				<span class="beta-text">
+					This website is a Beta release.
+				</span>
+				<span class="beta-text">
+					For any issues please raise a ticket on GitHub
+				</span>
+			</a>
+		</div>
+	</div>
+
+        <script src="/public/js/main.min.js"></script>
+      </body>
+
+      </html>

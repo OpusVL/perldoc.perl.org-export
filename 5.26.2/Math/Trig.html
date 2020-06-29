@@ -1,0 +1,968 @@
+      
+      
+      
+      
+
+      <!DOCTYPE html>
+      <html lang="en">
+
+      <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Math::Trig - perldoc.perl.org">
+        <link rel="icon" href="/public/img/favicon.ico">
+        <title>Math::Trig - perldoc.perl.org</title>
+        <link href="/public/css/main.min.css" rel="stylesheet">
+        <link rel="canonical" href="/Math/Trig.html">
+        <link
+          href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900'
+          rel='stylesheet' type='text/css'>
+        <script>
+          window.ga = window.ga || function () {
+            (ga.q = ga.q || []).push(arguments)
+          };
+          ga.l = +new Date;
+          ga('create', 'UA-1892152-2', 'auto'); // JJ's account
+          ga('create', 'UA-50555-3', 'auto', 'perlOrg'); // perl.org account
+          ga('require', 'outboundLinkTracker', {
+            events: ['click', 'auxclick', 'contextmenu'],
+          });
+          ga('require', 'maxScrollTracker');
+          ga('send', 'pageview');
+          ga('perlOrg.send', 'pageview');
+        </script>
+        <script async src="https://www.google-analytics.com/analytics.js">
+        </script>
+        <script async src="/public/js/tracking.min.js"></script>
+      </head>
+
+      <body class="body container-fluid ">
+        <div class="wrapper">
+
+          <nav
+    class="navbar navbar-dark bg-primary bg-perl fixed-top justify-content-between navbar-expand-lg">
+    <a href="#content" class="skippy sr-only sr-only-focusable">
+        <span class=' skippy-text'>Skip to main content</span>
+    </a>
+    <a class="navbar-brand" href="/">
+        <img class="logo" src="/public/img/logo_perl_doc.svg"
+            alt="Perl Documentation Logo" />
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse"
+        data-target="#navbar" aria-controls="navbar" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="navbar" class="collapse navbar-collapse ">
+        <ul class="navbar-nav ml-auto navbar-right">
+            <form class="nav-item dropdown search-wrapper">
+                <input type="text" id='searchinput' aria-describedby='navbarDropdown5'
+                    placeholder="Type query" class='search-input-field' value=''>
+
+                <button href="#" data-toggle='dropdown' type="button"
+                    aria-haspopup="true" aria-expanded='false' id="navbarDropdown5"
+                    class="nav-link dropdown-toggle search-link">
+                    <object tabindex='-1' focusable="false" class='search-icon'
+                        data="/public/img/search.svg" type="image/svg+xml"
+                        name='search icon'>search
+                        icon</object>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown5"
+                    id='search-results'>
+                    <p class='dropdown-item major-version'>
+                        No results
+                    </p>
+                </div>
+            </form>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown" href="#" class="nav-link dropdown-toggle"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Perl versions</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    
+                        <p class='dropdown-item major-version'>
+                            5.32
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.32.0/">5.32.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.30
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.3/">5.30.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.2/">5.30.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.1/">5.30.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.0/">5.30.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.28
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.3/">5.28.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.2/">5.28.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.1/">5.28.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.0/">5.28.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.26
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.3/">5.26.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.2/">5.26.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.1/">5.26.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.0/">5.26.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.24
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.4/">5.24.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.3/">5.24.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.2/">5.24.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.1/">5.24.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.0/">5.24.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.22
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.4/">5.22.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.3/">5.22.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.2/">5.22.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.1/">5.22.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.0/">5.22.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.20
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.3/">5.20.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.2/">5.20.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.1/">5.20.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.0/">5.20.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.18
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.4/">5.18.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.3/">5.18.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.2/">5.18.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.1/">5.18.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.0/">5.18.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.16
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.3/">5.16.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.2/">5.16.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.1/">5.16.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.0/">5.16.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.14
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.4/">5.14.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.3/">5.14.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.2/">5.14.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.1/">5.14.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.0/">5.14.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.12
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.5/">5.12.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.4/">5.12.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.3/">5.12.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.2/">5.12.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.1/">5.12.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.0/">5.12.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.10
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.1/">5.10.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.0/">5.10.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.8
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.9/">5.8.9</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.8/">5.8.8</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.7/">5.8.7</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.6/">5.8.6</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.5/">5.8.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.4/">5.8.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.3/">5.8.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.2/">5.8.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.1/">5.8.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.0/">5.8.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.6
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.2/">5.6.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.1/">5.6.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.0/">5.6.0</a>
+                        
+                        
+                    
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown1" href="#" class="dropdown-toggle nav-link"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Manuals</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                    <a class="dropdown-item"
+                        href="/5.26.2/index-overview.html">Overview</a>
+                    <a class="dropdown-item"
+                        href="/5.26.2/index-tutorials.html">Tutorials</a>
+                    <a class="dropdown-item"
+                        href="/5.26.2/index-faq.html">FAQs</a>
+                    <a class="dropdown-item"
+                        href="/5.26.2/index-history.html">Changes</a>
+                    <a class="dropdown-item"
+                        href="/5.26.2/index-licence.html">License</a>
+                    <a class="dropdown-item"
+                        href="/5.26.2/index-language.html">Language</a>
+                    <a class="dropdown-item"
+                        href="/5.26.2/index-functions.html">Functions</a>
+                    <a class="dropdown-item"
+                        href="/5.26.2/perlop.html">Operators</a>
+                    <a class="dropdown-item"
+                        href="/5.26.2/perlvar.html">Variables</a>
+                    <a class="dropdown-item"
+                        href="/5.26.2/index-pragmas.html">Pragmas</a>
+                    <a class="dropdown-item"
+                        href="/5.26.2/index-utilities.html">Utilities</a>
+                    <a class="dropdown-item"
+                        href="/5.26.2/index-internals.html">Internals</a>
+                    <a class="dropdown-item"
+                        href="/5.26.2/index-platforms.html">Platforms</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown3" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Modules</a>
+                <div aria-labelledby="navbarDropdown3"
+                    class="dropdown-menu letters-wrap">
+                    <!--<a class="dropdown-item"
+                        href="/5.26.2/index-modules.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.26.2/index-modules-by-cat.html">By
+                        Category</a>-->
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.26.2/index-modules-A.html">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.2/index-modules-B.html">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.2/index-modules-C.html">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.2/index-modules-D.html">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.2/index-modules-E.html">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.2/index-modules-F.html">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.2/index-modules-G.html">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.2/index-modules-H.html">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.2/index-modules-I.html">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.2/index-modules-J.html">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.2/index-modules-K.html">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.2/index-modules-L.html">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.2/index-modules-M.html">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.2/index-modules-N.html">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.2/index-modules-O.html">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.2/index-modules-P.html">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.2/index-modules-Q.html">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.2/index-modules-R.html">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.2/index-modules-S.html">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.2/index-modules-T.html">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.2/index-modules-U.html">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.2/index-modules-V.html">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.2/index-modules-W.html">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.2/index-modules-X.html">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.2/index-modules-Y.html">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.2/index-modules-Z.html">Z</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown4" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Functions</a>
+                <div aria-labelledby="navbarDropdown4"
+                    class="dropdown-menu letters-wrap">
+                    <a class="dropdown-item"
+                        href="/5.26.2/index-functions.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.26.2/index-functions-by-cat.html">By
+                        Category</a>
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.26.2/index-functions.html#A">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.2/index-functions.html#B">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.2/index-functions.html#C">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.2/index-functions.html#D">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.2/index-functions.html#E">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.2/index-functions.html#F">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.2/index-functions.html#G">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.2/index-functions.html#H">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.2/index-functions.html#I">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.2/index-functions.html#J">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.2/index-functions.html#K">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.2/index-functions.html#L">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.2/index-functions.html#M">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.2/index-functions.html#N">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.2/index-functions.html#O">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.2/index-functions.html#P">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.2/index-functions.html#Q">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.2/index-functions.html#R">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.2/index-functions.html#S">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.2/index-functions.html#T">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.2/index-functions.html#U">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.2/index-functions.html#V">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.2/index-functions.html#W">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.2/index-functions.html#X">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.2/index-functions.html#Y">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.26.2/index-functions.html#Z">Z</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!--/.nav-collapse -->
+</nav>
+
+
+          <main class="row main-content pb-5 pt-5" id='content'>
+            <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+              <div class="row">
+                <div class="col-sm-12">
+                  <div id="breadcrumbs">
+                      
+    <a href="../index.html">Home</a>&nbsp; &gt;
+    
+      
+        <a href="../index-modules-M.html">Core modules (M)</a> &gt;
+      
+    
+    Math::Trig
+  
+
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <article class="col-sm-12 content">
+                  <div class="documentation-wrapper">
+                    <div id="perl_version">
+                      <h7 class='page-title'> Perl 5 version 26.2
+                        documentation</h7>
+                    </div>
+                    <h1>Math::Trig</h1>
+
+
+  <!--    -->
+<ul><li><a href="#NAME">NAME</a></li><li><a href="#SYNOPSIS">SYNOPSIS</a></li><li><a href="#DESCRIPTION">DESCRIPTION</a></li><li><a href="#TRIGONOMETRIC-FUNCTIONS">TRIGONOMETRIC FUNCTIONS</a></li><ul><li><a href="#ERRORS-DUE-TO-DIVISION-BY-ZERO">ERRORS DUE TO DIVISION BY ZERO</a></li><li><a href="#SIMPLE-(REAL)-ARGUMENTS%2c-COMPLEX-RESULTS">SIMPLE (REAL) ARGUMENTS, COMPLEX RESULTS</a></li></ul><li><a href="#PLANE-ANGLE-CONVERSIONS">PLANE ANGLE CONVERSIONS</a></li><li><a href="#RADIAL-COORDINATE-CONVERSIONS">RADIAL COORDINATE CONVERSIONS</a></li><ul><li><a href="#COORDINATE-SYSTEMS">COORDINATE SYSTEMS</a></li><li><a href="#3-D-ANGLE-CONVERSIONS">3-D ANGLE CONVERSIONS</a></li></ul><li><a href="#GREAT-CIRCLE-DISTANCES-AND-DIRECTIONS">GREAT CIRCLE DISTANCES AND DIRECTIONS</a></li><ul><li><a href="#great_circle_distance">great_circle_distance</a></li><li><a href="#great_circle_direction">great_circle_direction</a></li><li><a href="#great_circle_bearing">great_circle_bearing</a></li><li><a href="#great_circle_destination">great_circle_destination</a></li><li><a href="#great_circle_midpoint">great_circle_midpoint</a></li><li><a href="#great_circle_waypoint">great_circle_waypoint</a></li></ul><li><a href="#EXAMPLES">EXAMPLES</a></li><ul><li><a href="#CAVEAT-FOR-GREAT-CIRCLE-FORMULAS">CAVEAT FOR GREAT CIRCLE FORMULAS</a></li><li><a href="#Real-valued-asin-and-acos">Real-valued asin and acos</a></li></ul><li><a href="#BUGS">BUGS</a></li><li><a href="#AUTHORS">AUTHORS</a></li><li><a href="#LICENSE">LICENSE</a></li></ul><a class='view-head1' id="NAME"></a><h2 class='h2' >NAME</h2>
+<p>Math::Trig - trigonometric functions</p>
+<a class='view-head1' id="SYNOPSIS"></a><h2 class='h2' >SYNOPSIS</h2>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">Math::Trig</span><span class="sc">;</span></li><li></li><li>    <span class="i">$x</span> = <span class="i">tan</span><span class="s">(</span><span class="n">0.9</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="i">$y</span> = <span class="i">acos</span><span class="s">(</span><span class="n">3.7</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="i">$z</span> = <span class="i">asin</span><span class="s">(</span><span class="n">2.4</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>    <span class="i">$halfpi</span> = <span class="w">pi</span>/<span class="n">2</span><span class="sc">;</span></li><li></li><li>    <span class="i">$rad</span> = <span class="i">deg2rad</span><span class="s">(</span><span class="n">120</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>    <span class="c"># Import constants pi2, pip2, pip4 (2*pi, pi/2, pi/4).</span></li><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">Math::Trig</span> <span class="q">&#39;:pi&#39;</span><span class="sc">;</span></li><li></li><li>    <span class="c"># Import the conversions between cartesian/spherical/cylindrical.</span></li><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">Math::Trig</span> <span class="q">&#39;:radial&#39;</span><span class="sc">;</span></li><li></li><li>        <span class="c"># Import the great circle formulas.</span></li><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">Math::Trig</span> <span class="q">&#39;:great_circle&#39;</span><span class="sc">;</span></li></ol></pre><a class='view-head1' id="DESCRIPTION"></a><h2 class='h2' >DESCRIPTION</h2>
+<p><code class="inline"><span class="w">Math::Trig</span></code>
+ defines many trigonometric functions not defined by the
+core Perl which defines only the <code class="inline"><a class="l_k" href="../functions/sin.html">sin()</a></code> and <code class="inline"><a class="l_k" href="../functions/cos.html">cos()</a></code>.  The constant
+<strong>pi</strong> is also defined as are a few convenience functions for angle
+conversions, and <i>great circle formulas</i> for spherical movement.</p>
+<a class='view-head1' id="TRIGONOMETRIC-FUNCTIONS"></a><h2 class='h2' >TRIGONOMETRIC FUNCTIONS</h2>
+<p>The tangent</p>
+<ul>
+<li><a class='view-title' id="*tan*"></a><strong><strong>tan</strong></strong>
+</li>
+</ul>
+<p>The cofunctions of the sine, cosine, and tangent (cosec/csc and cotan/cot
+are aliases)</p>
+<p><strong>csc</strong>, <strong>cosec</strong>, <strong>sec</strong>, <strong>sec</strong>, <strong>cot</strong>, <strong>cotan</strong></p>
+<p>The arcus (also known as the inverse) functions of the sine, cosine,
+and tangent</p>
+<p><strong>asin</strong>, <strong>acos</strong>, <strong>atan</strong></p>
+<p>The principal value of the arc tangent of y/x</p>
+<p><strong>atan2</strong>(y, x)</p>
+<p>The arcus cofunctions of the sine, cosine, and tangent (acosec/acsc
+and acotan/acot are aliases).  Note that atan2(0, 0) is not well-defined.</p>
+<p><strong>acsc</strong>, <strong>acosec</strong>, <strong>asec</strong>, <strong>acot</strong>, <strong>acotan</strong></p>
+<p>The hyperbolic sine, cosine, and tangent</p>
+<p><strong>sinh</strong>, <strong>cosh</strong>, <strong>tanh</strong></p>
+<p>The cofunctions of the hyperbolic sine, cosine, and tangent (cosech/csch
+and cotanh/coth are aliases)</p>
+<p><strong>csch</strong>, <strong>cosech</strong>, <strong>sech</strong>, <strong>coth</strong>, <strong>cotanh</strong></p>
+<p>The area (also known as the inverse) functions of the hyperbolic
+sine, cosine, and tangent</p>
+<p><strong>asinh</strong>, <strong>acosh</strong>, <strong>atanh</strong></p>
+<p>The area cofunctions of the hyperbolic sine, cosine, and tangent
+(acsch/acosech and acoth/acotanh are aliases)</p>
+<p><strong>acsch</strong>, <strong>acosech</strong>, <strong>asech</strong>, <strong>acoth</strong>, <strong>acotanh</strong></p>
+<p>The trigonometric constant <strong>pi</strong> and some of handy multiples
+of it are also defined.</p>
+<p><strong>pi, pi2, pi4, pip2, pip4</strong></p>
+<a class='view-head2' id="ERRORS-DUE-TO-DIVISION-BY-ZERO"></a><h3 class='h3' >ERRORS DUE TO DIVISION BY ZERO</h3>
+<p>The following functions</p>
+<pre class="verbatim"><ol><li>    <span class="w">acoth</span></li><li>    <span class="w">acsc</span></li><li>    <span class="w">acsch</span></li><li>    <span class="w">asec</span></li><li>    <span class="w">asech</span></li><li>    <span class="w">atanh</span></li><li>    <span class="w">cot</span></li><li>    <span class="w">coth</span></li><li>    <span class="w">csc</span></li><li>    <span class="w">csch</span></li><li>    <span class="w">sec</span></li><li>    <span class="w">sech</span></li><li>    <span class="w">tan</span></li><li>    <span class="w">tanh</span></li></ol></pre><p>cannot be computed for all arguments because that would mean dividing
+by zero or taking logarithm of zero. These situations cause fatal
+runtime errors looking like this</p>
+<pre class="verbatim"><ol><li>    <span class="i">cot</span><span class="s">(</span><span class="n">0</span><span class="s">)</span><span class="co">:</span> <span class="w">Division</span> <span class="w">by</span> <span class="w">zero</span>.</li><li>    <span class="s">(</span><span class="w">Because</span> <span class="w">in</span> <span class="w">the</span> <span class="w">definition</span> <span class="w">of</span> <span class="i">cot</span><span class="s">(</span><span class="n">0</span><span class="s">)</span><span class="cm">,</span> <span class="w">the</span> <span class="w">divisor</span> <a class="l_k" href="../functions/sin.html">sin</a><span class="s">(</span><span class="n">0</span><span class="s">)</span> <span class="w">is</span> <span class="n">0</span><span class="s">)</span></li><li>    <span class="w">Died</span> <span class="w">at</span> ...</li></ol></pre><p>or</p>
+<pre class="verbatim"><ol><li>    <span class="i">atanh</span><span class="s">(</span><span class="n">-1</span><span class="s">)</span><span class="co">:</span> <span class="w">Logarithm</span> <span class="w">of</span> <span class="w">zero</span>.</li><li>    <span class="w">Died</span> <span class="w">at</span>...</li></ol></pre><p>For the <code class="inline"><span class="w">csc</span></code>
+, <code class="inline"><span class="w">cot</span></code>
+, <code class="inline"><span class="w">asec</span></code>
+, <code class="inline"><span class="w">acsc</span></code>
+, <code class="inline"><span class="w">acot</span></code>
+, <code class="inline"><span class="w">csch</span></code>
+, <code class="inline"><span class="w">coth</span></code>
+,
+<code class="inline"><span class="w">asech</span></code>
+, <code class="inline"><span class="w">acsch</span></code>
+, the argument cannot be <code class="inline"><span class="n">0</span></code>
+ (zero).  For the
+<code class="inline"><span class="w">atanh</span></code>
+, <code class="inline"><span class="w">acoth</span></code>
+, the argument cannot be <code class="inline"><span class="n">1</span></code>
+ (one).  For the
+<code class="inline"><span class="w">atanh</span></code>
+, <code class="inline"><span class="w">acoth</span></code>
+, the argument cannot be <code class="inline"><span class="n">-1</span></code>
+ (minus one).  For the
+<code class="inline"><span class="w">tan</span></code>
+, <code class="inline"><span class="w">sec</span></code>
+, <code class="inline"><span class="w">tanh</span></code>
+, <code class="inline"><span class="w">sech</span></code>
+, the argument cannot be <i>pi/2 + k *
+pi</i>, where <i>k</i> is any integer.</p>
+<p>Note that atan2(0, 0) is not well-defined.</p>
+<a class='view-head2' id="SIMPLE-(REAL)-ARGUMENTS%2c-COMPLEX-RESULTS"></a><h3 class='h3' >SIMPLE (REAL) ARGUMENTS, COMPLEX RESULTS</h3>
+<p>Please note that some of the trigonometric functions can break out
+from the <strong>real axis</strong> into the <strong>complex plane</strong>. For example
+<code class="inline"><span class="i">asin</span><span class="s">(</span><span class="n">2</span><span class="s">)</span></code>
+ has no definition for plain real numbers but it has
+definition for complex numbers.</p>
+<p>In Perl terms this means that supplying the usual Perl numbers (also
+known as scalars, please see <a href="../perldata.html">perldata</a>) as input for the
+trigonometric functions might produce as output results that no more
+are simple real numbers: instead they are complex numbers.</p>
+<p>The <code class="inline"><span class="w">Math::Trig</span></code>
+ handles this by using the <code class="inline"><span class="w">Math::Complex</span></code>
+ package
+which knows how to handle complex numbers, please see <a href="../Math/Complex.html">Math::Complex</a>
+for more information. In practice you need not to worry about getting
+complex numbers as results because the <code class="inline"><span class="w">Math::Complex</span></code>
+ takes care of
+details like for example how to display complex numbers. For example:</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/print.html">print</a> <span class="i">asin</span><span class="s">(</span><span class="n">2</span><span class="s">)</span><span class="cm">,</span> <span class="q">&quot;\n&quot;</span><span class="sc">;</span></li></ol></pre><p>should produce something like this (take or leave few last decimals):</p>
+<pre class="verbatim"><ol><li>    <span class="n">1.5707963267949</span>-<span class="n">1.31695789692482</span><span class="w">i</span></li></ol></pre><p>That is, a complex number with the real part of approximately <code class="inline"><span class="n">1.571</span></code>
+
+and the imaginary part of approximately <code class="inline"><span class="n">-1.317</span></code>
+.</p>
+<a class='view-head1' id="PLANE-ANGLE-CONVERSIONS"></a><h2 class='h2' >PLANE ANGLE CONVERSIONS</h2>
+<p>(Plane, 2-dimensional) angles may be converted with the following functions.</p>
+<ul>
+<li><a class='view-title' id="deg2rad"></a><strong>deg2rad</strong>
+<pre class="verbatim"><ol><li>    <span class="i">$radians</span>  = <span class="i">deg2rad</span><span class="s">(</span><span class="i">$degrees</span><span class="s">)</span><span class="sc">;</span></li></ol></pre></li>
+<li><a class='view-title' id="grad2rad"></a><strong>grad2rad</strong>
+<pre class="verbatim"><ol><li>    <span class="i">$radians</span>  = <span class="i">grad2rad</span><span class="s">(</span><span class="i">$gradians</span><span class="s">)</span><span class="sc">;</span></li></ol></pre></li>
+<li><a class='view-title' id="rad2deg"></a><strong>rad2deg</strong>
+<pre class="verbatim"><ol><li>    <span class="i">$degrees</span>  = <span class="i">rad2deg</span><span class="s">(</span><span class="i">$radians</span><span class="s">)</span><span class="sc">;</span></li></ol></pre></li>
+<li><a class='view-title' id="grad2deg"></a><strong>grad2deg</strong>
+<pre class="verbatim"><ol><li>    <span class="i">$degrees</span>  = <span class="i">grad2deg</span><span class="s">(</span><span class="i">$gradians</span><span class="s">)</span><span class="sc">;</span></li></ol></pre></li>
+<li><a class='view-title' id="deg2grad"></a><strong>deg2grad</strong>
+<pre class="verbatim"><ol><li>    <span class="i">$gradians</span> = <span class="i">deg2grad</span><span class="s">(</span><span class="i">$degrees</span><span class="s">)</span><span class="sc">;</span></li></ol></pre></li>
+<li><a class='view-title' id="rad2grad"></a><strong>rad2grad</strong>
+<pre class="verbatim"><ol><li>    <span class="i">$gradians</span> = <span class="i">rad2grad</span><span class="s">(</span><span class="i">$radians</span><span class="s">)</span><span class="sc">;</span></li></ol></pre></li>
+</ul>
+<p>The full circle is 2 <i>pi</i> radians or <i>360</i> degrees or <i>400</i> gradians.
+The result is by default wrapped to be inside the [0, {2pi,360,400}[ circle.
+If you don't want this, supply a true second argument:</p>
+<pre class="verbatim"><ol><li>    <span class="i">$zillions_of_radians</span>  = <span class="i">deg2rad</span><span class="s">(</span><span class="i">$zillions_of_degrees</span><span class="cm">,</span> <span class="n">1</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="i">$negative_degrees</span>     = <span class="i">rad2deg</span><span class="s">(</span><span class="i">$negative_radians</span><span class="cm">,</span> <span class="n">1</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>You can also do the wrapping explicitly by rad2rad(), deg2deg(), and
+grad2grad().</p>
+<ul>
+<li><a class='view-title' id="rad2rad"></a><strong>rad2rad</strong>
+<pre class="verbatim"><ol><li>    <span class="i">$radians_wrapped_by_2pi</span> = <span class="i">rad2rad</span><span class="s">(</span><span class="i">$radians</span><span class="s">)</span><span class="sc">;</span></li></ol></pre></li>
+<li><a class='view-title' id="deg2deg"></a><strong>deg2deg</strong>
+<pre class="verbatim"><ol><li>    <span class="i">$degrees_wrapped_by_360</span> = <span class="i">deg2deg</span><span class="s">(</span><span class="i">$degrees</span><span class="s">)</span><span class="sc">;</span></li></ol></pre></li>
+<li><a class='view-title' id="grad2grad"></a><strong>grad2grad</strong>
+<pre class="verbatim"><ol><li>    <span class="i">$gradians_wrapped_by_400</span> = <span class="i">grad2grad</span><span class="s">(</span><span class="i">$gradians</span><span class="s">)</span><span class="sc">;</span></li></ol></pre></li>
+</ul>
+<a class='view-head1' id="RADIAL-COORDINATE-CONVERSIONS"></a><h2 class='h2' >RADIAL COORDINATE CONVERSIONS</h2>
+<p><strong>Radial coordinate systems</strong> are the <strong>spherical</strong> and the <strong>cylindrical</strong>
+systems, explained shortly in more detail.</p>
+<p>You can import radial coordinate conversion functions by using the
+<code class="inline"><span class="j">:</span><span class="w">radial</span></code>
+ tag:</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">Math::Trig</span> <span class="q">&#39;:radial&#39;</span><span class="sc">;</span></li><li></li><li>    <span class="s">(</span><span class="i">$rho</span><span class="cm">,</span> <span class="i">$theta</span><span class="cm">,</span> <span class="i">$z</span><span class="s">)</span>     = <span class="i">cartesian_to_cylindrical</span><span class="s">(</span><span class="i">$x</span><span class="cm">,</span> <span class="i">$y</span><span class="cm">,</span> <span class="i">$z</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="s">(</span><span class="i">$rho</span><span class="cm">,</span> <span class="i">$theta</span><span class="cm">,</span> <span class="i">$phi</span><span class="s">)</span>   = <span class="i">cartesian_to_spherical</span><span class="s">(</span><span class="i">$x</span><span class="cm">,</span> <span class="i">$y</span><span class="cm">,</span> <span class="i">$z</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="s">(</span><span class="i">$x</span><span class="cm">,</span> <span class="i">$y</span><span class="cm">,</span> <span class="i">$z</span><span class="s">)</span>           = <span class="i">cylindrical_to_cartesian</span><span class="s">(</span><span class="i">$rho</span><span class="cm">,</span> <span class="i">$theta</span><span class="cm">,</span> <span class="i">$z</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="s">(</span><span class="i">$rho_s</span><span class="cm">,</span> <span class="i">$theta</span><span class="cm">,</span> <span class="i">$phi</span><span class="s">)</span> = <span class="i">cylindrical_to_spherical</span><span class="s">(</span><span class="i">$rho_c</span><span class="cm">,</span> <span class="i">$theta</span><span class="cm">,</span> <span class="i">$z</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="s">(</span><span class="i">$x</span><span class="cm">,</span> <span class="i">$y</span><span class="cm">,</span> <span class="i">$z</span><span class="s">)</span>           = <span class="i">spherical_to_cartesian</span><span class="s">(</span><span class="i">$rho</span><span class="cm">,</span> <span class="i">$theta</span><span class="cm">,</span> <span class="i">$phi</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="s">(</span><span class="i">$rho_c</span><span class="cm">,</span> <span class="i">$theta</span><span class="cm">,</span> <span class="i">$z</span><span class="s">)</span>   = <span class="i">spherical_to_cylindrical</span><span class="s">(</span><span class="i">$rho_s</span><span class="cm">,</span> <span class="i">$theta</span><span class="cm">,</span> <span class="i">$phi</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p><strong>All angles are in radians</strong>.</p>
+<a class='view-head2' id="COORDINATE-SYSTEMS"></a><h3 class='h3' >COORDINATE SYSTEMS</h3>
+<p><strong>Cartesian</strong> coordinates are the usual rectangular <i>(x, y, z)</i>-coordinates.</p>
+<p>Spherical coordinates, <i>(rho, theta, pi)</i>, are three-dimensional
+coordinates which define a point in three-dimensional space.  They are
+based on a sphere surface.  The radius of the sphere is <strong>rho</strong>, also
+known as the <i>radial</i> coordinate.  The angle in the <i>xy</i>-plane
+(around the <i>z</i>-axis) is <strong>theta</strong>, also known as the <i>azimuthal</i>
+coordinate.  The angle from the <i>z</i>-axis is <strong>phi</strong>, also known as the
+<i>polar</i> coordinate.  The North Pole is therefore <i>0, 0, rho</i>, and
+the Gulf of Guinea (think of the missing big chunk of Africa) <i>0,
+pi/2, rho</i>.  In geographical terms <i>phi</i> is latitude (northward
+positive, southward negative) and <i>theta</i> is longitude (eastward
+positive, westward negative).</p>
+<p><strong>BEWARE</strong>: some texts define <i>theta</i> and <i>phi</i> the other way round,
+some texts define the <i>phi</i> to start from the horizontal plane, some
+texts use <i>r</i> in place of <i>rho</i>.</p>
+<p>Cylindrical coordinates, <i>(rho, theta, z)</i>, are three-dimensional
+coordinates which define a point in three-dimensional space.  They are
+based on a cylinder surface.  The radius of the cylinder is <strong>rho</strong>,
+also known as the <i>radial</i> coordinate.  The angle in the <i>xy</i>-plane
+(around the <i>z</i>-axis) is <strong>theta</strong>, also known as the <i>azimuthal</i>
+coordinate.  The third coordinate is the <i>z</i>, pointing up from the
+<strong>theta</strong>-plane.</p>
+<a class='view-head2' id="3-D-ANGLE-CONVERSIONS"></a><h3 class='h3' >3-D ANGLE CONVERSIONS</h3>
+<p>Conversions to and from spherical and cylindrical coordinates are
+available.  Please notice that the conversions are not necessarily
+reversible because of the equalities like <i>pi</i> angles being equal to
+<i>-pi</i> angles.</p>
+<ul>
+<li><a class='view-title' id="cartesian_to_cylindrical"></a><strong>cartesian_to_cylindrical</strong>
+<pre class="verbatim"><ol><li>    <span class="s">(</span><span class="i">$rho</span><span class="cm">,</span> <span class="i">$theta</span><span class="cm">,</span> <span class="i">$z</span><span class="s">)</span> = <span class="i">cartesian_to_cylindrical</span><span class="s">(</span><span class="i">$x</span><span class="cm">,</span> <span class="i">$y</span><span class="cm">,</span> <span class="i">$z</span><span class="s">)</span><span class="sc">;</span></li></ol></pre></li>
+<li><a class='view-title' id="cartesian_to_spherical"></a><strong>cartesian_to_spherical</strong>
+<pre class="verbatim"><ol><li>    <span class="s">(</span><span class="i">$rho</span><span class="cm">,</span> <span class="i">$theta</span><span class="cm">,</span> <span class="i">$phi</span><span class="s">)</span> = <span class="i">cartesian_to_spherical</span><span class="s">(</span><span class="i">$x</span><span class="cm">,</span> <span class="i">$y</span><span class="cm">,</span> <span class="i">$z</span><span class="s">)</span><span class="sc">;</span></li></ol></pre></li>
+<li><a class='view-title' id="cylindrical_to_cartesian"></a><strong>cylindrical_to_cartesian</strong>
+<pre class="verbatim"><ol><li>    <span class="s">(</span><span class="i">$x</span><span class="cm">,</span> <span class="i">$y</span><span class="cm">,</span> <span class="i">$z</span><span class="s">)</span> = <span class="i">cylindrical_to_cartesian</span><span class="s">(</span><span class="i">$rho</span><span class="cm">,</span> <span class="i">$theta</span><span class="cm">,</span> <span class="i">$z</span><span class="s">)</span><span class="sc">;</span></li></ol></pre></li>
+<li><a class='view-title' id="cylindrical_to_spherical"></a><strong>cylindrical_to_spherical</strong>
+<pre class="verbatim"><ol><li>    <span class="s">(</span><span class="i">$rho_s</span><span class="cm">,</span> <span class="i">$theta</span><span class="cm">,</span> <span class="i">$phi</span><span class="s">)</span> = <span class="i">cylindrical_to_spherical</span><span class="s">(</span><span class="i">$rho_c</span><span class="cm">,</span> <span class="i">$theta</span><span class="cm">,</span> <span class="i">$z</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>Notice that when <code class="inline"><span class="i">$z</span></code>
+ is not 0 <code class="inline"><span class="i">$rho_s</span></code>
+ is not equal to <code class="inline"><span class="i">$rho_c</span></code>
+.</p>
+</li>
+<li><a class='view-title' id="spherical_to_cartesian"></a><strong>spherical_to_cartesian</strong>
+<pre class="verbatim"><ol><li>    <span class="s">(</span><span class="i">$x</span><span class="cm">,</span> <span class="i">$y</span><span class="cm">,</span> <span class="i">$z</span><span class="s">)</span> = <span class="i">spherical_to_cartesian</span><span class="s">(</span><span class="i">$rho</span><span class="cm">,</span> <span class="i">$theta</span><span class="cm">,</span> <span class="i">$phi</span><span class="s">)</span><span class="sc">;</span></li></ol></pre></li>
+<li><a class='view-title' id="spherical_to_cylindrical"></a><strong>spherical_to_cylindrical</strong>
+<pre class="verbatim"><ol><li>    <span class="s">(</span><span class="i">$rho_c</span><span class="cm">,</span> <span class="i">$theta</span><span class="cm">,</span> <span class="i">$z</span><span class="s">)</span> = <span class="i">spherical_to_cylindrical</span><span class="s">(</span><span class="i">$rho_s</span><span class="cm">,</span> <span class="i">$theta</span><span class="cm">,</span> <span class="i">$phi</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>Notice that when <code class="inline"><span class="i">$z</span></code>
+ is not 0 <code class="inline"><span class="i">$rho_c</span></code>
+ is not equal to <code class="inline"><span class="i">$rho_s</span></code>
+.</p>
+</li>
+</ul>
+<a class='view-head1' id="GREAT-CIRCLE-DISTANCES-AND-DIRECTIONS"></a><h2 class='h2' >GREAT CIRCLE DISTANCES AND DIRECTIONS</h2>
+<p>A great circle is section of a circle that contains the circle
+diameter: the shortest distance between two (non-antipodal) points on
+the spherical surface goes along the great circle connecting those two
+points.</p>
+<a class='view-head2' id="great_circle_distance"></a><h3 class='h3' >great_circle_distance</h3>
+<p>You can compute spherical distances, called <strong>great circle distances</strong>,
+by importing the great_circle_distance() function:</p>
+<pre class="verbatim"><ol><li>  <a class="l_k" href="../functions/use.html">use</a> <span class="w">Math::Trig</span> <span class="q">&#39;great_circle_distance&#39;</span><span class="sc">;</span></li><li></li><li>  <span class="i">$distance</span> = <span class="i">great_circle_distance</span><span class="s">(</span><span class="i">$theta0</span><span class="cm">,</span> <span class="i">$phi0</span><span class="cm">,</span> <span class="i">$theta1</span><span class="cm">,</span> <span class="i">$phi1</span><span class="cm">,</span> <span class="s">[</span><span class="cm">,</span> <span class="i">$rho</span><span class="s">]</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>The <i>great circle distance</i> is the shortest distance between two
+points on a sphere.  The distance is in <code class="inline"><span class="i">$rho</span></code>
+ units.  The <code class="inline"><span class="i">$rho</span></code>
+ is
+optional, it defaults to 1 (the unit sphere), therefore the distance
+defaults to radians.</p>
+<p>If you think geographically the <i>theta</i> are longitudes: zero at the
+Greenwhich meridian, eastward positive, westward negative -- and the
+<i>phi</i> are latitudes: zero at the North Pole, northward positive,
+southward negative.  <strong>NOTE</strong>: this formula thinks in mathematics, not
+geographically: the <i>phi</i> zero is at the North Pole, not at the
+Equator on the west coast of Africa (Bay of Guinea).  You need to
+subtract your geographical coordinates from <i>pi/2</i> (also known as 90
+degrees).</p>
+<pre class="verbatim"><ol><li>  <span class="i">$distance</span> = <span class="i">great_circle_distance</span><span class="s">(</span><span class="i">$lon0</span><span class="cm">,</span> <span class="w">pi</span>/<span class="n">2</span> - <span class="i">$lat0</span><span class="cm">,</span></li><li>                                    <span class="i">$lon1</span><span class="cm">,</span> <span class="w">pi</span>/<span class="n">2</span> - <span class="i">$lat1</span><span class="cm">,</span> <span class="i">$rho</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><a class='view-head2' id="great_circle_direction"></a><h3 class='h3' >great_circle_direction</h3>
+<p>The direction you must follow the great circle (also known as <i>bearing</i>)
+can be computed by the great_circle_direction() function:</p>
+<pre class="verbatim"><ol><li>  <a class="l_k" href="../functions/use.html">use</a> <span class="w">Math::Trig</span> <span class="q">&#39;great_circle_direction&#39;</span><span class="sc">;</span></li><li></li><li>  <span class="i">$direction</span> = <span class="i">great_circle_direction</span><span class="s">(</span><span class="i">$theta0</span><span class="cm">,</span> <span class="i">$phi0</span><span class="cm">,</span> <span class="i">$theta1</span><span class="cm">,</span> <span class="i">$phi1</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><a class='view-head2' id="great_circle_bearing"></a><h3 class='h3' >great_circle_bearing</h3>
+<p>Alias 'great_circle_bearing' for 'great_circle_direction' is also available.</p>
+<pre class="verbatim"><ol><li>  <a class="l_k" href="../functions/use.html">use</a> <span class="w">Math::Trig</span> <span class="q">&#39;great_circle_bearing&#39;</span><span class="sc">;</span></li><li></li><li>  <span class="i">$direction</span> = <span class="i">great_circle_bearing</span><span class="s">(</span><span class="i">$theta0</span><span class="cm">,</span> <span class="i">$phi0</span><span class="cm">,</span> <span class="i">$theta1</span><span class="cm">,</span> <span class="i">$phi1</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>The result of great_circle_direction is in radians, zero indicating
+straight north, pi or -pi straight south, pi/2 straight west, and
+-pi/2 straight east.</p>
+<a class='view-head2' id="great_circle_destination"></a><h3 class='h3' >great_circle_destination</h3>
+<p>You can inversely compute the destination if you know the
+starting point, direction, and distance:</p>
+<pre class="verbatim"><ol><li>  <a class="l_k" href="../functions/use.html">use</a> <span class="w">Math::Trig</span> <span class="q">&#39;great_circle_destination&#39;</span><span class="sc">;</span></li><li></li><li>  <span class="c"># $diro is the original direction,</span></li><li>  <span class="c"># for example from great_circle_bearing().</span></li><li>  <span class="c"># $distance is the angular distance in radians,</span></li><li>  <span class="c"># for example from great_circle_distance().</span></li><li>  <span class="c"># $thetad and $phid are the destination coordinates,</span></li><li>  <span class="c"># $dird is the final direction at the destination.</span></li><li></li><li>  <span class="s">(</span><span class="i">$thetad</span><span class="cm">,</span> <span class="i">$phid</span><span class="cm">,</span> <span class="i">$dird</span><span class="s">)</span> =</li><li>    <span class="i">great_circle_destination</span><span class="s">(</span><span class="i">$theta</span><span class="cm">,</span> <span class="i">$phi</span><span class="cm">,</span> <span class="i">$diro</span><span class="cm">,</span> <span class="i">$distance</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>or the midpoint if you know the end points:</p>
+<a class='view-head2' id="great_circle_midpoint"></a><h3 class='h3' >great_circle_midpoint</h3>
+<pre class="verbatim"><ol><li>  <a class="l_k" href="../functions/use.html">use</a> <span class="w">Math::Trig</span> <span class="q">&#39;great_circle_midpoint&#39;</span><span class="sc">;</span></li><li></li><li>  <span class="s">(</span><span class="i">$thetam</span><span class="cm">,</span> <span class="i">$phim</span><span class="s">)</span> =</li><li>    <span class="i">great_circle_midpoint</span><span class="s">(</span><span class="i">$theta0</span><span class="cm">,</span> <span class="i">$phi0</span><span class="cm">,</span> <span class="i">$theta1</span><span class="cm">,</span> <span class="i">$phi1</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>The great_circle_midpoint() is just a special case of</p>
+<a class='view-head2' id="great_circle_waypoint"></a><h3 class='h3' >great_circle_waypoint</h3>
+<pre class="verbatim"><ol><li>  <a class="l_k" href="../functions/use.html">use</a> <span class="w">Math::Trig</span> <span class="q">&#39;great_circle_waypoint&#39;</span><span class="sc">;</span></li><li></li><li>  <span class="s">(</span><span class="i">$thetai</span><span class="cm">,</span> <span class="i">$phii</span><span class="s">)</span> =</li><li>    <span class="i">great_circle_waypoint</span><span class="s">(</span><span class="i">$theta0</span><span class="cm">,</span> <span class="i">$phi0</span><span class="cm">,</span> <span class="i">$theta1</span><span class="cm">,</span> <span class="i">$phi1</span><span class="cm">,</span> <span class="i">$way</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>Where the $way is a value from zero ($theta0, $phi0) to one ($theta1,
+$phi1).  Note that antipodal points (where their distance is <i>pi</i>
+radians) do not have waypoints between them (they would have an an
+"equator" between them), and therefore <code class="inline"><a class="l_k" href="../functions/undef.html">undef</a></code> is returned for
+antipodal points.  If the points are the same and the distance
+therefore zero and all waypoints therefore identical, the first point
+(either point) is returned.</p>
+<p>The thetas, phis, direction, and distance in the above are all in radians.</p>
+<p>You can import all the great circle formulas by</p>
+<pre class="verbatim"><ol><li>  <a class="l_k" href="../functions/use.html">use</a> <span class="w">Math::Trig</span> <span class="q">&#39;:great_circle&#39;</span><span class="sc">;</span></li></ol></pre><p>Notice that the resulting directions might be somewhat surprising if
+you are looking at a flat worldmap: in such map projections the great
+circles quite often do not look like the shortest routes --  but for
+example the shortest possible routes from Europe or North America to
+Asia do often cross the polar regions.  (The common Mercator projection
+does <strong>not</strong> show great circles as straight lines: straight lines in the
+Mercator projection are lines of constant bearing.)</p>
+<a class='view-head1' id="EXAMPLES"></a><h2 class='h2' >EXAMPLES</h2>
+<p>To calculate the distance between London (51.3N 0.5W) and Tokyo
+(35.7N 139.8E) in kilometers:</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">Math::Trig</span> <span class="q">qw(great_circle_distance deg2rad)</span><span class="sc">;</span></li><li></li><li>    <span class="c"># Notice the 90 - latitude: phi zero is at the North Pole.</span></li><li><a name="NESW"></a>    sub <span class="m">NESW</span> <span class="s">{</span> <span class="i">deg2rad</span><span class="s">(</span><span class="i">$_</span>[<span class="n">0</span>]<span class="s">)</span><span class="cm">,</span> <span class="i">deg2rad</span><span class="s">(</span><span class="n">90</span> - <span class="i">$_</span>[<span class="n">1</span>]<span class="s">)</span> <span class="s">}</span></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">@L</span> = <span class="i">NESW</span><span class="s">(</span> <span class="n">-0.5</span><span class="cm">,</span> <span class="n">51.3</span><span class="s">)</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">@T</span> = <span class="i">NESW</span><span class="s">(</span><span class="n">139.8</span><span class="cm">,</span> <span class="n">35.7</span><span class="s">)</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">$km</span> = <span class="i">great_circle_distance</span><span class="s">(</span><span class="i">@L</span><span class="cm">,</span> <span class="i">@T</span><span class="cm">,</span> <span class="n">6378</span><span class="s">)</span><span class="sc">;</span> <span class="c"># About 9600 km.</span></li></ol></pre><p>The direction you would have to go from London to Tokyo (in radians,
+straight north being zero, straight east being pi/2).</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">Math::Trig</span> <span class="q">qw(great_circle_direction)</span><span class="sc">;</span></li><li></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">$rad</span> = <span class="i">great_circle_direction</span><span class="s">(</span><span class="i">@L</span><span class="cm">,</span> <span class="i">@T</span><span class="s">)</span><span class="sc">;</span> <span class="c"># About 0.547 or 0.174 pi.</span></li></ol></pre><p>The midpoint between London and Tokyo being</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">Math::Trig</span> <span class="q">qw(great_circle_midpoint)</span><span class="sc">;</span></li><li></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">@M</span> = <span class="i">great_circle_midpoint</span><span class="s">(</span><span class="i">@L</span><span class="cm">,</span> <span class="i">@T</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>or about 69 N 89 E, in the frozen wastes of Siberia.</p>
+<p><strong>NOTE</strong>: you <strong>cannot</strong> get from A to B like this:</p>
+<pre class="verbatim"><ol><li>   <span class="w">Dist</span> = <span class="i">great_circle_distance</span><span class="s">(</span><span class="w">A</span><span class="cm">,</span> <span class="w">B</span><span class="s">)</span></li><li>   <span class="w">Dir</span>  = <span class="i">great_circle_direction</span><span class="s">(</span><span class="w">A</span><span class="cm">,</span> <span class="w">B</span><span class="s">)</span></li><li>   <span class="w">C</span>    = <span class="i">great_circle_destination</span><span class="s">(</span><span class="w">A</span><span class="cm">,</span> <span class="w">Dist</span><span class="cm">,</span> <span class="w">Dir</span><span class="s">)</span></li></ol></pre><p>and expect C to be B, because the bearing constantly changes when
+going from A to B (except in some special case like the meridians or
+the circles of latitudes) and in great_circle_destination() one gives
+a <strong>constant</strong> bearing to follow.</p>
+<a class='view-head2' id="CAVEAT-FOR-GREAT-CIRCLE-FORMULAS"></a><h3 class='h3' >CAVEAT FOR GREAT CIRCLE FORMULAS</h3>
+<p>The answers may be off by few percentages because of the irregular
+(slightly aspherical) form of the Earth.  The errors are at worst
+about 0.55%, but generally below 0.3%.</p>
+<a class='view-head2' id="Real-valued-asin-and-acos"></a><h3 class='h3' >Real-valued asin and acos</h3>
+<p>For small inputs asin() and acos() may return complex numbers even
+when real numbers would be enough and correct, this happens because of
+floating-point inaccuracies.  You can see these inaccuracies for
+example by trying theses:</p>
+<pre class="verbatim"><ol><li>  <a class="l_k" href="../functions/print.html">print</a> <a class="l_k" href="../functions/cos.html">cos</a><span class="s">(</span><span class="n">1e-6</span><span class="s">)</span>**<span class="n">2</span>+<a class="l_k" href="../functions/sin.html">sin</a><span class="s">(</span><span class="n">1e-6</span><span class="s">)</span>**<span class="n">2</span> - <span class="n">1</span><span class="cm">,</span><span class="q">&quot;\n&quot;</span><span class="sc">;</span></li><li>  <a class="l_k" href="../functions/printf.html">printf</a> <span class="q">&quot;%.20f&quot;</span><span class="cm">,</span> <a class="l_k" href="../functions/cos.html">cos</a><span class="s">(</span><span class="n">1e-6</span><span class="s">)</span>**<span class="n">2</span>+<a class="l_k" href="../functions/sin.html">sin</a><span class="s">(</span><span class="n">1e-6</span><span class="s">)</span>**<span class="n">2</span><span class="cm">,</span><span class="q">&quot;\n&quot;</span><span class="sc">;</span></li></ol></pre><p>which will print something like this</p>
+<pre class="verbatim"><ol><li>  <span class="n">-1.11022302462516e-16</span></li><li>  <span class="n">0.99999999999999988898</span></li></ol></pre><p>even though the expected results are of course exactly zero and one.
+The formulas used to compute asin() and acos() are quite sensitive to
+this, and therefore they might accidentally slip into the complex
+plane even when they should not.  To counter this there are two
+interfaces that are guaranteed to return a real-valued output.</p>
+<ul>
+<li><a class='view-title' id="asin_real"></a><strong>asin_real</strong>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">Math::Trig</span> <span class="q">qw(asin_real)</span><span class="sc">;</span></li><li></li><li>    <span class="i">$real_angle</span> = <span class="i">asin_real</span><span class="s">(</span><span class="i">$input_sin</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>Return a real-valued arcus sine if the input is between [-1, 1],
+<strong>inclusive</strong> the endpoints.  For inputs greater than one, pi/2
+is returned.  For inputs less than minus one, -pi/2 is returned.</p>
+</li>
+<li><a class='view-title' id="acos_real"></a><strong>acos_real</strong>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">Math::Trig</span> <span class="q">qw(acos_real)</span><span class="sc">;</span></li><li></li><li>    <span class="i">$real_angle</span> = <span class="i">acos_real</span><span class="s">(</span><span class="i">$input_cos</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>Return a real-valued arcus cosine if the input is between [-1, 1],
+<strong>inclusive</strong> the endpoints.  For inputs greater than one, zero
+is returned.  For inputs less than minus one, pi is returned.</p>
+</li>
+</ul>
+<a class='view-head1' id="BUGS"></a><h2 class='h2' >BUGS</h2>
+<p>Saying <code class="inline"><a class="l_k" href="../functions/use.html">use</a> <span class="w">Math::Trig</span><span class="sc">;</span></code>
+ exports many mathematical routines in the
+caller environment and even overrides some (<code class="inline"><a class="l_k" href="../functions/sin.html">sin</a></code>, <code class="inline"><a class="l_k" href="../functions/cos.html">cos</a></code>).  This is
+construed as a feature by the Authors, actually... ;-)</p>
+<p>The code is not optimized for speed, especially because we use
+<code class="inline"><span class="w">Math::Complex</span></code>
+ and thus go quite near complex numbers while doing
+the computations even when the arguments are not. This, however,
+cannot be completely avoided if we want things like <code class="inline"><span class="i">asin</span><span class="s">(</span><span class="n">2</span><span class="s">)</span></code>
+ to give
+an answer instead of giving a fatal runtime error.</p>
+<p>Do not attempt navigation using these formulas.</p>
+<p><a href="../Math/Complex.html">Math::Complex</a></p>
+<a class='view-head1' id="AUTHORS"></a><h2 class='h2' >AUTHORS</h2>
+<p>Jarkko Hietaniemi &lt;<i>jhi!at!iki.fi</i>&gt;,
+Raphael Manfredi &lt;<i>Raphael_Manfredi!at!pobox.com</i>&gt;,
+Zefram &lt;zefram@fysh.org&gt;</p>
+<a class='view-head1' id="LICENSE"></a><h2 class='h2' >LICENSE</h2>
+<p>This library is free software; you can redistribute it and/or modify
+it under the same terms as Perl itself.</p>
+
+
+
+
+      <ul><li><a href="#NAME">NAME</a></li><li><a href="#SYNOPSIS">SYNOPSIS</a></li><li><a href="#DESCRIPTION">DESCRIPTION</a></li><li><a href="#TRIGONOMETRIC-FUNCTIONS">TRIGONOMETRIC FUNCTIONS</a></li><ul><li><a href="#ERRORS-DUE-TO-DIVISION-BY-ZERO">ERRORS DUE TO DIVISION BY ZERO</a></li><li><a href="#SIMPLE-(REAL)-ARGUMENTS%2c-COMPLEX-RESULTS">SIMPLE (REAL) ARGUMENTS, COMPLEX RESULTS</a></li></ul><li><a href="#PLANE-ANGLE-CONVERSIONS">PLANE ANGLE CONVERSIONS</a></li><li><a href="#RADIAL-COORDINATE-CONVERSIONS">RADIAL COORDINATE CONVERSIONS</a></li><ul><li><a href="#COORDINATE-SYSTEMS">COORDINATE SYSTEMS</a></li><li><a href="#3-D-ANGLE-CONVERSIONS">3-D ANGLE CONVERSIONS</a></li></ul><li><a href="#GREAT-CIRCLE-DISTANCES-AND-DIRECTIONS">GREAT CIRCLE DISTANCES AND DIRECTIONS</a></li><ul><li><a href="#great_circle_distance">great_circle_distance</a></li><li><a href="#great_circle_direction">great_circle_direction</a></li><li><a href="#great_circle_bearing">great_circle_bearing</a></li><li><a href="#great_circle_destination">great_circle_destination</a></li><li><a href="#great_circle_midpoint">great_circle_midpoint</a></li><li><a href="#great_circle_waypoint">great_circle_waypoint</a></li></ul><li><a href="#EXAMPLES">EXAMPLES</a></li><ul><li><a href="#CAVEAT-FOR-GREAT-CIRCLE-FORMULAS">CAVEAT FOR GREAT CIRCLE FORMULAS</a></li><li><a href="#Real-valued-asin-and-acos">Real-valued asin and acos</a></li></ul><li><a href="#BUGS">BUGS</a></li><li><a href="#AUTHORS">AUTHORS</a></li><li><a href="#LICENSE">LICENSE</a></li></ul>
+
+
+                  </div>
+                </article>
+              </div>
+            </div>
+          </main>
+        </div>
+           <footer class="footer row bg-light pt-5 pb-5">
+       <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+           <div class="row">
+               <div class="col-md-4">
+                   <ul class="list-unstyled">
+                       <li>
+                           <h4>Site info</h4>
+                       </li>
+                       <li>Docs mantained by
+                           <a href="//lists.perl.org/list/perl5-porters.html"
+                               rel="noopener">Perl 5 Porters</a>
+                       </li>
+                       <li>Perldoc site development sponsored by
+                           <a href="//opusvl.com" rel="noopener">
+                           <img style="margin: 20px 20px 5px 10px" class="opus-logo" src="/public/img/opusvl_logo.svg" alt="OpusVL Logo">
+                        </a>
+                    <li><span class="about_perldoc"><a href="//about.html">About PerlDOC</a></span>
+                    </li>
+                       </li>
+                   </ul>
+               </div>
+               <div class="col-md-8">
+                   <div class="row">
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Manuals</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.26.2/index-overview.html">Overview</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.26.2/index-tutorials.html">Tutorials</a>
+                               </li>
+                               <li>
+                                   <a href="/5.26.2/index-faq.html">FAQs</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.26.2/index-history.html">Changes</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Reference</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.26.2/index-language.html">Language</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.26.2/index-functions.html">Functions</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.26.2/perlop.html">Operators</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.26.2/perlvar.html">Variables</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Modules</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.26.2/index-modules-A.html">Modules</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.26.2/index-pragmas.html">Pragmas</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.26.2/index-utilities.html">Utilities</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Misc</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.26.2/index-licence.html">License</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.26.2/index-internals.html">Internals</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.26.2/index-platforms.html">Platforms</a>
+                               </li>
+                            <li>
+                                <a
+                                    href="/5.26.2/index-about.html">About</a>
+                            </li>
+                           </ul>
+                       </div>
+                   </div>
+               </div>
+               <div class=" col-12 footer-inf text-center">
+                   <small>perldoc.perl.org - Official documentation for the Perl
+                       programming language</small>
+               </div>
+           </div>
+       </div>
+   </footer>
+
+        	<div class="beta-wrapper beta-bottom-right ">
+		<div class="beta beta-blue  ">
+			<a class="beta-link "
+				href="//github.com/OpusVL/perldoc.perl.org/issues/new" rel="noopener">
+				<span class="beta-text">
+					This website is a Beta release.
+				</span>
+				<span class="beta-text">
+					For any issues please raise a ticket on GitHub
+				</span>
+			</a>
+		</div>
+	</div>
+
+        <script src="/public/js/main.min.js"></script>
+      </body>
+
+      </html>

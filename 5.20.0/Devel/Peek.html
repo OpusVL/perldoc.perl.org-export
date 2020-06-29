@@ -1,0 +1,973 @@
+      
+      
+      
+      
+
+      <!DOCTYPE html>
+      <html lang="en">
+
+      <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Devel::Peek - perldoc.perl.org">
+        <link rel="icon" href="/public/img/favicon.ico">
+        <title>Devel::Peek - perldoc.perl.org</title>
+        <link href="/public/css/main.min.css" rel="stylesheet">
+        <link rel="canonical" href="/Devel/Peek.html">
+        <link
+          href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900'
+          rel='stylesheet' type='text/css'>
+        <script>
+          window.ga = window.ga || function () {
+            (ga.q = ga.q || []).push(arguments)
+          };
+          ga.l = +new Date;
+          ga('create', 'UA-1892152-2', 'auto'); // JJ's account
+          ga('create', 'UA-50555-3', 'auto', 'perlOrg'); // perl.org account
+          ga('require', 'outboundLinkTracker', {
+            events: ['click', 'auxclick', 'contextmenu'],
+          });
+          ga('require', 'maxScrollTracker');
+          ga('send', 'pageview');
+          ga('perlOrg.send', 'pageview');
+        </script>
+        <script async src="https://www.google-analytics.com/analytics.js">
+        </script>
+        <script async src="/public/js/tracking.min.js"></script>
+      </head>
+
+      <body class="body container-fluid ">
+        <div class="wrapper">
+
+          <nav
+    class="navbar navbar-dark bg-primary bg-perl fixed-top justify-content-between navbar-expand-lg">
+    <a href="#content" class="skippy sr-only sr-only-focusable">
+        <span class=' skippy-text'>Skip to main content</span>
+    </a>
+    <a class="navbar-brand" href="/">
+        <img class="logo" src="/public/img/logo_perl_doc.svg"
+            alt="Perl Documentation Logo" />
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse"
+        data-target="#navbar" aria-controls="navbar" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="navbar" class="collapse navbar-collapse ">
+        <ul class="navbar-nav ml-auto navbar-right">
+            <form class="nav-item dropdown search-wrapper">
+                <input type="text" id='searchinput' aria-describedby='navbarDropdown5'
+                    placeholder="Type query" class='search-input-field' value=''>
+
+                <button href="#" data-toggle='dropdown' type="button"
+                    aria-haspopup="true" aria-expanded='false' id="navbarDropdown5"
+                    class="nav-link dropdown-toggle search-link">
+                    <object tabindex='-1' focusable="false" class='search-icon'
+                        data="/public/img/search.svg" type="image/svg+xml"
+                        name='search icon'>search
+                        icon</object>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown5"
+                    id='search-results'>
+                    <p class='dropdown-item major-version'>
+                        No results
+                    </p>
+                </div>
+            </form>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown" href="#" class="nav-link dropdown-toggle"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Perl versions</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    
+                        <p class='dropdown-item major-version'>
+                            5.32
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.32.0/">5.32.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.30
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.3/">5.30.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.2/">5.30.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.1/">5.30.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.0/">5.30.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.28
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.3/">5.28.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.2/">5.28.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.1/">5.28.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.0/">5.28.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.26
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.3/">5.26.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.2/">5.26.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.1/">5.26.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.0/">5.26.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.24
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.4/">5.24.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.3/">5.24.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.2/">5.24.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.1/">5.24.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.0/">5.24.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.22
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.4/">5.22.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.3/">5.22.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.2/">5.22.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.1/">5.22.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.0/">5.22.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.20
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.3/">5.20.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.2/">5.20.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.1/">5.20.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.0/">5.20.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.18
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.4/">5.18.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.3/">5.18.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.2/">5.18.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.1/">5.18.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.0/">5.18.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.16
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.3/">5.16.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.2/">5.16.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.1/">5.16.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.0/">5.16.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.14
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.4/">5.14.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.3/">5.14.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.2/">5.14.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.1/">5.14.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.0/">5.14.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.12
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.5/">5.12.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.4/">5.12.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.3/">5.12.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.2/">5.12.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.1/">5.12.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.0/">5.12.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.10
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.1/">5.10.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.0/">5.10.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.8
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.9/">5.8.9</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.8/">5.8.8</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.7/">5.8.7</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.6/">5.8.6</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.5/">5.8.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.4/">5.8.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.3/">5.8.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.2/">5.8.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.1/">5.8.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.0/">5.8.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.6
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.2/">5.6.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.1/">5.6.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.0/">5.6.0</a>
+                        
+                        
+                    
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown1" href="#" class="dropdown-toggle nav-link"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Manuals</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                    <a class="dropdown-item"
+                        href="/5.20.0/index-overview.html">Overview</a>
+                    <a class="dropdown-item"
+                        href="/5.20.0/index-tutorials.html">Tutorials</a>
+                    <a class="dropdown-item"
+                        href="/5.20.0/index-faq.html">FAQs</a>
+                    <a class="dropdown-item"
+                        href="/5.20.0/index-history.html">Changes</a>
+                    <a class="dropdown-item"
+                        href="/5.20.0/index-licence.html">License</a>
+                    <a class="dropdown-item"
+                        href="/5.20.0/index-language.html">Language</a>
+                    <a class="dropdown-item"
+                        href="/5.20.0/index-functions.html">Functions</a>
+                    <a class="dropdown-item"
+                        href="/5.20.0/perlop.html">Operators</a>
+                    <a class="dropdown-item"
+                        href="/5.20.0/perlvar.html">Variables</a>
+                    <a class="dropdown-item"
+                        href="/5.20.0/index-pragmas.html">Pragmas</a>
+                    <a class="dropdown-item"
+                        href="/5.20.0/index-utilities.html">Utilities</a>
+                    <a class="dropdown-item"
+                        href="/5.20.0/index-internals.html">Internals</a>
+                    <a class="dropdown-item"
+                        href="/5.20.0/index-platforms.html">Platforms</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown3" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Modules</a>
+                <div aria-labelledby="navbarDropdown3"
+                    class="dropdown-menu letters-wrap">
+                    <!--<a class="dropdown-item"
+                        href="/5.20.0/index-modules.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.20.0/index-modules-by-cat.html">By
+                        Category</a>-->
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.20.0/index-modules-A.html">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.0/index-modules-B.html">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.0/index-modules-C.html">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.0/index-modules-D.html">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.0/index-modules-E.html">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.0/index-modules-F.html">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.0/index-modules-G.html">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.0/index-modules-H.html">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.0/index-modules-I.html">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.0/index-modules-J.html">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.0/index-modules-K.html">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.0/index-modules-L.html">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.0/index-modules-M.html">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.0/index-modules-N.html">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.0/index-modules-O.html">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.0/index-modules-P.html">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.0/index-modules-Q.html">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.0/index-modules-R.html">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.0/index-modules-S.html">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.0/index-modules-T.html">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.0/index-modules-U.html">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.0/index-modules-V.html">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.0/index-modules-W.html">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.0/index-modules-X.html">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.0/index-modules-Y.html">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.0/index-modules-Z.html">Z</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown4" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Functions</a>
+                <div aria-labelledby="navbarDropdown4"
+                    class="dropdown-menu letters-wrap">
+                    <a class="dropdown-item"
+                        href="/5.20.0/index-functions.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.20.0/index-functions-by-cat.html">By
+                        Category</a>
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.20.0/index-functions.html#A">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.0/index-functions.html#B">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.0/index-functions.html#C">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.0/index-functions.html#D">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.0/index-functions.html#E">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.0/index-functions.html#F">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.0/index-functions.html#G">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.0/index-functions.html#H">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.0/index-functions.html#I">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.0/index-functions.html#J">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.0/index-functions.html#K">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.0/index-functions.html#L">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.0/index-functions.html#M">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.0/index-functions.html#N">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.0/index-functions.html#O">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.0/index-functions.html#P">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.0/index-functions.html#Q">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.0/index-functions.html#R">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.0/index-functions.html#S">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.0/index-functions.html#T">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.0/index-functions.html#U">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.0/index-functions.html#V">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.0/index-functions.html#W">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.0/index-functions.html#X">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.0/index-functions.html#Y">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.0/index-functions.html#Z">Z</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!--/.nav-collapse -->
+</nav>
+
+
+          <main class="row main-content pb-5 pt-5" id='content'>
+            <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+              <div class="row">
+                <div class="col-sm-12">
+                  <div id="breadcrumbs">
+                      
+    <a href="../index.html">Home</a>&nbsp; &gt;
+    
+      
+        <a href="../index-modules-D.html">Core modules (D)</a> &gt;
+      
+    
+    Devel::Peek
+  
+
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <article class="col-sm-12 content">
+                  <div class="documentation-wrapper">
+                    <div id="perl_version">
+                      <h7 class='page-title'> Perl 5 version 20.0
+                        documentation</h7>
+                    </div>
+                    <h1>Devel::Peek</h1>
+
+
+  <!--    -->
+<ul><li><a href="#NAME">NAME</a></li><li><a href="#SYNOPSIS">SYNOPSIS</a></li><li><a href="#DESCRIPTION">DESCRIPTION</a></li><ul><li><a href="#Runtime-debugging">Runtime debugging</a></li><li><a href="#Memory-footprint-debugging">Memory footprint debugging</a></li></ul><li><a href="#EXAMPLES">EXAMPLES</a></li><ul><li><a href="#A-simple-scalar-string">A simple scalar string</a></li><li><a href="#A-simple-scalar-number">A simple scalar number</a></li><li><a href="#A-simple-scalar-with-an-extra-reference">A simple scalar with an extra reference</a></li><li><a href="#A-reference-to-a-simple-scalar">A reference to a simple scalar</a></li><li><a href="#A-reference-to-an-array">A reference to an array</a></li><li><a href="#A-reference-to-a-hash">A reference to a hash</a></li><li><a href="#Dumping-a-large-array-or-hash">Dumping a large array or hash</a></li><li><a href="#A-reference-to-an-SV-which-holds-a-C-pointer">A reference to an SV which holds a C pointer</a></li><li><a href="#A-reference-to-a-subroutine">A reference to a subroutine</a></li></ul><li><a href="#EXPORTS">EXPORTS</a></li><li><a href="#BUGS">BUGS</a></li><li><a href="#AUTHOR">AUTHOR</a></li><li><a href="#SEE-ALSO">SEE ALSO</a></li></ul><a class='view-head1' id="NAME"></a><h2 class='h2' >NAME</h2>
+<p>Devel::Peek - A data debugging tool for the XS programmer</p>
+<a class='view-head1' id="SYNOPSIS"></a><h2 class='h2' >SYNOPSIS</h2>
+<pre class="verbatim"><ol><li>        <a class="l_k" href="../functions/use.html">use</a> <span class="w">Devel::Peek</span><span class="sc">;</span></li><li>        <span class="i">Dump</span><span class="s">(</span> <span class="i">$a</span> <span class="s">)</span><span class="sc">;</span></li><li>        <span class="i">Dump</span><span class="s">(</span> <span class="i">$a</span><span class="cm">,</span> <span class="n">5</span> <span class="s">)</span><span class="sc">;</span></li><li>        <span class="i">Dump</span><span class="s">(</span> <span class="i">@a</span> <span class="s">)</span><span class="sc">;</span></li><li>        <span class="i">Dump</span><span class="s">(</span> <span class="i">%h</span> <span class="s">)</span><span class="sc">;</span></li><li>        <span class="i">DumpArray</span><span class="s">(</span> <span class="n">5</span><span class="cm">,</span> <span class="i">$a</span><span class="cm">,</span> <span class="i">$b</span><span class="cm">,</span> ... <span class="s">)</span><span class="sc">;</span></li><li>	<span class="w">mstat</span> <span class="q">&quot;Point 5&quot;</span><span class="sc">;</span></li><li></li><li>        <a class="l_k" href="../functions/use.html">use</a> <span class="w">Devel::Peek</span> <span class="q">&#39;:opd=st&#39;</span><span class="sc">;</span></li></ol></pre><a class='view-head1' id="DESCRIPTION"></a><h2 class='h2' >DESCRIPTION</h2>
+<p>Devel::Peek contains functions which allows raw Perl datatypes to be
+manipulated from a Perl script.  This is used by those who do XS programming
+to check that the data they are sending from C to Perl looks as they think
+it should look.  The trick, then, is to know what the raw datatype is
+supposed to look like when it gets to Perl.  This document offers some tips
+and hints to describe good and bad raw data.</p>
+<p>It is very possible that this document will fall far short of being useful
+to the casual reader.  The reader is expected to understand the material in
+the first few sections of <a href="../perlguts.html">perlguts</a>.</p>
+<p>Devel::Peek supplies a <code class="inline"><span class="i">Dump</span><span class="s">(</span><span class="s">)</span></code>
+ function which can dump a raw Perl
+datatype, and <code class="inline"><span class="i">mstat</span><span class="s">(</span><span class="q">&quot;marker&quot;</span><span class="s">)</span></code>
+ function to report on memory usage
+(if perl is compiled with corresponding option).  The function
+DeadCode() provides statistics on the data "frozen" into inactive
+<code class="inline"><span class="w">CV</span></code>
+.  Devel::Peek also supplies <code class="inline"><span class="i">SvREFCNT</span><span class="s">(</span><span class="s">)</span></code>
+ which can query reference
+counts on SVs.  This document will take a passive, and safe, approach
+to data debugging and for that it will describe only the <code class="inline"><span class="i">Dump</span><span class="s">(</span><span class="s">)</span></code>
+
+function.</p>
+<p>The <code class="inline"><span class="i">Dump</span><span class="s">(</span><span class="s">)</span></code>
+ function takes one or two arguments: something to dump, and
+an optional limit for recursion and array elements (default is 4).  The
+first argument is evaluted in rvalue scalar context, with exceptions for
+@array and %hash, which dump the array or hash itself.  So <code class="inline"><span class="w">Dump</span> <span class="i">@array</span></code>
+
+works, as does <code class="inline"><span class="w">Dump</span> <span class="i">$foo</span></code>
+.  And <code class="inline"><span class="w">Dump</span> <a class="l_k" href="../functions/pos.html">pos</a></code>
+ will call <code class="inline"><a class="l_k" href="../functions/pos.html">pos</a></code> in rvalue
+context, whereas <code class="inline"><span class="w">Dump</span> <span class="i">$</span>{\<a class="l_k" href="../functions/pos.html">pos</a>}</code>
+ will call it in lvalue context.</p>
+<p>Function <code class="inline"><span class="i">DumpArray</span><span class="s">(</span><span class="s">)</span></code>
+ allows dumping of multiple values (useful when you
+need to analyze returns of functions).</p>
+<p>The global variable $Devel::Peek::pv_limit can be set to limit the
+number of character printed in various string values.  Setting it to 0
+means no limit.</p>
+<p>If <code class="inline"><a class="l_k" href="../functions/use.html">use</a> <span class="w">Devel::Peek</span></code>
+ directive has a <code class="inline"><span class="j">:</span><span class="w">opd</span>=<span class="w">FLAGS</span></code>
+ argument,
+this switches on debugging of opcode dispatch.  <code class="inline"><span class="w">FLAGS</span></code>
+ should be a
+combination of <code class="inline"><a class="l_k" href="../functions/s.html">s</a></code>, <code class="inline"><span class="w">t</span></code>
+, and <code class="inline"><span class="w">P</span></code>
+ (see <strong>-D</strong> flags in <a href="../perlrun.html">perlrun</a>).
+<code class="inline"><span class="j">:</span><span class="w">opd</span></code>
+ is a shortcut for <code class="inline"><span class="j">:</span><span class="w">opd</span>=<span class="w">st</span></code>
+.</p>
+<a class='view-head2' id="Runtime-debugging"></a><h3 class='h3' >Runtime debugging</h3>
+<p><code class="inline"><span class="i">CvGV</span><span class="s">(</span><span class="i">$cv</span><span class="s">)</span></code>
+ return one of the globs associated to a subroutine reference $cv.</p>
+<p>debug_flags() returns a string representation of <code class="inline"><span class="i">$^D</span></code>
+ (similar to
+what is allowed for <strong>-D</strong> flag).  When called with a numeric argument,
+sets $^D to the corresponding value.  When called with an argument of
+the form <code class="inline"><span class="q">&quot;flags-flags&quot;</span></code>
+, set on/off bits of <code class="inline"><span class="i">$^D</span></code>
+ corresponding to
+letters before/after <code class="inline">-</code>
+.  (The returned value is for <code class="inline"><span class="i">$^D</span></code>
+ before
+the modification.)</p>
+<p>runops_debug() returns true if the current <i>opcode dispatcher</i> is the
+debugging one.  When called with an argument, switches to debugging or
+non-debugging dispatcher depending on the argument (active for
+newly-entered subs/etc only).  (The returned value is for the dispatcher before the modification.)</p>
+<a class='view-head2' id="Memory-footprint-debugging"></a><h3 class='h3' >Memory footprint debugging</h3>
+<p>When perl is compiled with support for memory footprint debugging
+(default with Perl's malloc()), Devel::Peek provides an access to this API.</p>
+<p>Use mstat() function to emit a memory state statistic to the terminal.
+For more information on the format of output of mstat() see
+<a href="../perldebguts.html#Using-%24ENV%7bPERL_DEBUG_MSTATS%7d">Using $ENV{PERL_DEBUG_MSTATS} in perldebguts</a>.</p>
+<p>Three additional functions allow access to this statistic from Perl.
+First, use <code class="inline"><span class="i">mstats_fillhash</span><span class="s">(</span><span class="i">%hash</span><span class="s">)</span></code>
+ to get the information contained
+in the output of mstat() into %hash. The field of this hash are</p>
+<pre class="verbatim"><ol><li>  <span class="w">minbucket</span> <span class="w">nbuckets</span> <span class="w">sbrk_good</span> <span class="w">sbrk_slack</span> <span class="w">sbrked_remains</span> <span class="w">sbrks</span></li><li>  <span class="w">start_slack</span> <span class="w">topbucket</span> <span class="w">topbucket_ev</span> <span class="w">topbucket_odd</span> <span class="w">total</span> <span class="w">total_chain</span></li><li>  <span class="w">total_sbrk</span> <span class="w">totfree</span></li></ol></pre><p>Two additional fields <code class="inline"><span class="w">free</span></code>
+, <code class="inline"><span class="w">used</span></code>
+ contain array references which
+provide per-bucket count of free and used chunks.  Two other fields
+<code class="inline"><span class="w">mem_size</span></code>
+, <code class="inline"><span class="w">available_size</span></code>
+ contain array references which provide
+the information about the allocated size and usable size of chunks in
+each bucket.  Again, see <a href="../perldebguts.html#Using-%24ENV%7bPERL_DEBUG_MSTATS%7d">Using $ENV{PERL_DEBUG_MSTATS} in perldebguts</a>
+for details.</p>
+<p>Keep in mind that only the first several "odd-numbered" buckets are
+used, so the information on size of the "odd-numbered" buckets which are
+not used is probably meaningless.</p>
+<p>The information in</p>
+<pre class="verbatim"><ol><li> <span class="w">mem_size</span> <span class="w">available_size</span> <span class="w">minbucket</span> <span class="w">nbuckets</span></li></ol></pre><p>is the property of a particular build of perl, and does not depend on
+the current process.  If you do not provide the optional argument to
+the functions mstats_fillhash(), fill_mstats(), mstats2hash(), then
+the information in fields <code class="inline"><span class="w">mem_size</span></code>
+, <code class="inline"><span class="w">available_size</span></code>
+ is not
+updated.</p>
+<p><code class="inline"><span class="i">fill_mstats</span><span class="s">(</span><span class="i">$buf</span><span class="s">)</span></code>
+ is a much cheaper call (both speedwise and
+memory-wise) which collects the statistic into $buf in
+machine-readable form.  At a later moment you may need to call
+<code class="inline"><span class="i">mstats2hash</span><span class="s">(</span><span class="i">$buf</span><span class="cm">,</span> <span class="i">%hash</span><span class="s">)</span></code>
+ to use this information to fill %hash.</p>
+<p>All three APIs <code class="inline"><span class="i">fill_mstats</span><span class="s">(</span><span class="i">$buf</span><span class="s">)</span></code>
+, <code class="inline"><span class="i">mstats_fillhash</span><span class="s">(</span><span class="i">%hash</span><span class="s">)</span></code>
+, and
+<code class="inline"><span class="i">mstats2hash</span><span class="s">(</span><span class="i">$buf</span><span class="cm">,</span> <span class="i">%hash</span><span class="s">)</span></code>
+ are designed to allocate no memory if used
+<i>the second time</i> on the same $buf and/or %hash.</p>
+<p>So, if you want to collect memory info in a cycle, you may call</p>
+<pre class="verbatim"><ol><li>  <span class="i">$#buf</span> = <span class="n">999</span><span class="sc">;</span></li><li>  <span class="i">fill_mstats</span><span class="s">(</span><span class="i">$_</span><span class="s">)</span> <a class="l_k" href="../functions/for.html">for</a> <span class="i">@buf</span><span class="sc">;</span></li><li>  <span class="i">mstats_fillhash</span><span class="s">(</span><span class="i">%report</span><span class="cm">,</span> <span class="n">1</span><span class="s">)</span><span class="sc">;</span>		<span class="c"># Static info too</span></li><li></li><li>  <a class="l_k" href="../functions/foreach.html">foreach</a> <span class="s">(</span><span class="i">@buf</span><span class="s">)</span> <span class="s">{</span></li><li>    <span class="c"># Do something...</span></li><li>    <span class="w">fill_mstats</span> <span class="i">$_</span><span class="sc">;</span>			<span class="c"># Collect statistic</span></li><li>  <span class="s">}</span></li><li>  <a class="l_k" href="../functions/foreach.html">foreach</a> <span class="s">(</span><span class="i">@buf</span><span class="s">)</span> <span class="s">{</span></li><li>    <span class="i">mstats2hash</span><span class="s">(</span><span class="i">$_</span><span class="cm">,</span> <span class="i">%report</span><span class="s">)</span><span class="sc">;</span>		<span class="c"># Preserve static info</span></li><li>    <span class="c"># Do something with %report</span></li><li>  <span class="s">}</span></li></ol></pre><a class='view-head1' id="EXAMPLES"></a><h2 class='h2' >EXAMPLES</h2>
+<p>The following examples don't attempt to show everything as that would be a
+monumental task, and, frankly, we don't want this manpage to be an internals
+document for Perl.  The examples do demonstrate some basics of the raw Perl
+datatypes, and should suffice to get most determined people on their way.
+There are no guidewires or safety nets, nor blazed trails, so be prepared to
+travel alone from this point and on and, if at all possible, don't fall into
+the quicksand (it's bad for business).</p>
+<p>Oh, one final bit of advice: take <a href="../perlguts.html">perlguts</a> with you.  When you return we
+expect to see it well-thumbed.</p>
+<a class='view-head2' id="A-simple-scalar-string"></a><h3 class='h3' >A simple scalar string</h3>
+<p>Let's begin by looking a simple scalar which is holding a string.</p>
+<pre class="verbatim"><ol><li>        <a class="l_k" href="../functions/use.html">use</a> <span class="w">Devel::Peek</span><span class="sc">;</span></li><li>        <span class="i">$a</span> = <span class="n">42</span><span class="sc">;</span> <span class="i">$a</span> = <span class="q">&quot;hello&quot;</span><span class="sc">;</span></li><li>        <span class="w">Dump</span> <span class="i">$a</span><span class="sc">;</span></li></ol></pre><p>The output:</p>
+<pre class="verbatim"><ol><li>        <span class="w">SV</span> = <span class="i">PVIV</span><span class="s">(</span><span class="n">0xbc288</span><span class="s">)</span> <span class="w">at</span> <span class="n">0xbe9a8</span></li><li>          <span class="w">REFCNT</span> = <span class="n">1</span></li><li>          <span class="w">FLAGS</span> = <span class="s">(</span><span class="w">POK</span><span class="cm">,</span><span class="w">pPOK</span><span class="s">)</span></li><li>          <span class="w">IV</span> = <span class="n">42</span></li><li>          <span class="w">PV</span> = <span class="n">0xb2048</span> <span class="q">&quot;hello&quot;</span>\<span class="n">0</span></li><li>          <span class="w">CUR</span> = <span class="n">5</span></li><li>          <span class="w">LEN</span> = <span class="n">8</span></li></ol></pre><p>This says <code class="inline"><span class="i">$a</span></code>
+ is an SV, a scalar.  The scalar type is a PVIV, which is
+capable of holding an integer (IV) and/or a string (PV) value. The scalar's
+head is allocated at address 0xbe9a8, while the body is at 0xbc288.
+Its reference count is 1.  It has the <code class="inline"><span class="w">POK</span></code>
+ flag set, meaning its
+current PV field is valid.  Because POK is set we look at the PV item
+to see what is in the scalar.  The \0 at the end indicate that this
+PV is properly NUL-terminated.
+Note that the IV field still contains its old numeric value, but because
+FLAGS doesn't have IOK set, we must ignore the IV item.
+CUR indicates the number of characters in the PV.  LEN indicates the
+number of bytes allocated for the PV (at least one more than CUR, because
+LEN includes an extra byte for the end-of-string marker, then usually
+rounded up to some efficient allocation unit).</p>
+<a class='view-head2' id="A-simple-scalar-number"></a><h3 class='h3' >A simple scalar number</h3>
+<p>If the scalar contains a number the raw SV will be leaner.</p>
+<pre class="verbatim"><ol><li>        <a class="l_k" href="../functions/use.html">use</a> <span class="w">Devel::Peek</span><span class="sc">;</span></li><li>        <span class="i">$a</span> = <span class="n">42</span><span class="sc">;</span></li><li>        <span class="w">Dump</span> <span class="i">$a</span><span class="sc">;</span></li></ol></pre><p>The output:</p>
+<pre class="verbatim"><ol><li>        <span class="w">SV</span> = <span class="i">IV</span><span class="s">(</span><span class="n">0xbc818</span><span class="s">)</span> <span class="w">at</span> <span class="n">0xbe9a8</span></li><li>          <span class="w">REFCNT</span> = <span class="n">1</span></li><li>          <span class="w">FLAGS</span> = <span class="s">(</span><span class="w">IOK</span><span class="cm">,</span><span class="w">pIOK</span><span class="s">)</span></li><li>          <span class="w">IV</span> = <span class="n">42</span></li></ol></pre><p>This says <code class="inline"><span class="i">$a</span></code>
+ is an SV, a scalar.  The scalar is an IV, a number.  Its
+reference count is 1.  It has the <code class="inline"><span class="w">IOK</span></code>
+ flag set, meaning it is currently
+being evaluated as a number.  Because IOK is set we look at the IV item to
+see what is in the scalar.</p>
+<a class='view-head2' id="A-simple-scalar-with-an-extra-reference"></a><h3 class='h3' >A simple scalar with an extra reference</h3>
+<p>If the scalar from the previous example had an extra reference:</p>
+<pre class="verbatim"><ol><li>        <a class="l_k" href="../functions/use.html">use</a> <span class="w">Devel::Peek</span><span class="sc">;</span></li><li>        <span class="i">$a</span> = <span class="n">42</span><span class="sc">;</span></li><li>        <span class="i">$b</span> = \<span class="i">$a</span><span class="sc">;</span></li><li>        <span class="w">Dump</span> <span class="i">$a</span><span class="sc">;</span></li></ol></pre><p>The output:</p>
+<pre class="verbatim"><ol><li>        <span class="w">SV</span> = <span class="i">IV</span><span class="s">(</span><span class="n">0xbe860</span><span class="s">)</span> <span class="w">at</span> <span class="n">0xbe9a8</span></li><li>          <span class="w">REFCNT</span> = <span class="n">2</span></li><li>          <span class="w">FLAGS</span> = <span class="s">(</span><span class="w">IOK</span><span class="cm">,</span><span class="w">pIOK</span><span class="s">)</span></li><li>          <span class="w">IV</span> = <span class="n">42</span></li></ol></pre><p>Notice that this example differs from the previous example only in its
+reference count.  Compare this to the next example, where we dump <code class="inline"><span class="i">$b</span></code>
+
+instead of <code class="inline"><span class="i">$a</span></code>
+.</p>
+<a class='view-head2' id="A-reference-to-a-simple-scalar"></a><h3 class='h3' >A reference to a simple scalar</h3>
+<p>This shows what a reference looks like when it references a simple scalar.</p>
+<pre class="verbatim"><ol><li>        <a class="l_k" href="../functions/use.html">use</a> <span class="w">Devel::Peek</span><span class="sc">;</span></li><li>        <span class="i">$a</span> = <span class="n">42</span><span class="sc">;</span></li><li>        <span class="i">$b</span> = \<span class="i">$a</span><span class="sc">;</span></li><li>        <span class="w">Dump</span> <span class="i">$b</span><span class="sc">;</span></li></ol></pre><p>The output:</p>
+<pre class="verbatim"><ol><li>        <span class="w">SV</span> = <span class="i">IV</span><span class="s">(</span><span class="n">0xf041c</span><span class="s">)</span> <span class="w">at</span> <span class="n">0xbe9a0</span></li><li>          <span class="w">REFCNT</span> = <span class="n">1</span></li><li>          <span class="w">FLAGS</span> = <span class="s">(</span><span class="w">ROK</span><span class="s">)</span></li><li>          <span class="w">RV</span> = <span class="n">0xbab08</span></li><li>          <span class="w">SV</span> = <span class="i">IV</span><span class="s">(</span><span class="n">0xbe860</span><span class="s">)</span> <span class="w">at</span> <span class="n">0xbe9a8</span></li><li>            <span class="w">REFCNT</span> = <span class="n">2</span></li><li>            <span class="w">FLAGS</span> = <span class="s">(</span><span class="w">IOK</span><span class="cm">,</span><span class="w">pIOK</span><span class="s">)</span></li><li>            <span class="w">IV</span> = <span class="n">42</span></li></ol></pre><p>Starting from the top, this says <code class="inline"><span class="i">$b</span></code>
+ is an SV.  The scalar is an IV,
+which is capable of holding an integer or reference value.
+It has the <code class="inline"><span class="w">ROK</span></code>
+ flag set, meaning it is a reference (rather than an
+integer or string).  Notice that Dump
+follows the reference and shows us what <code class="inline"><span class="i">$b</span></code>
+ was referencing.  We see the
+same <code class="inline"><span class="i">$a</span></code>
+ that we found in the previous example.</p>
+<p>Note that the value of <code class="inline"><span class="w">RV</span></code>
+ coincides with the numbers we see when we
+stringify $b. The addresses inside IV() are addresses of
+<code class="inline"><span class="w">X</span>**<span class="i">*</span></code>
+ structures which hold the current state of an <code class="inline"><span class="w">SV</span></code>
+. This
+address may change during lifetime of an SV.</p>
+<a class='view-head2' id="A-reference-to-an-array"></a><h3 class='h3' >A reference to an array</h3>
+<p>This shows what a reference to an array looks like.</p>
+<pre class="verbatim"><ol><li>        <a class="l_k" href="../functions/use.html">use</a> <span class="w">Devel::Peek</span><span class="sc">;</span></li><li>        <span class="i">$a</span> = <span class="s">[</span><span class="n">42</span><span class="s">]</span><span class="sc">;</span></li><li>        <span class="w">Dump</span> <span class="i">$a</span><span class="sc">;</span></li></ol></pre><p>The output:</p>
+<pre class="verbatim"><ol><li>        <span class="w">SV</span> = <span class="i">IV</span><span class="s">(</span><span class="n">0xc85998</span><span class="s">)</span> <span class="w">at</span> <span class="n">0xc859a8</span></li><li>          <span class="w">REFCNT</span> = <span class="n">1</span></li><li>          <span class="w">FLAGS</span> = <span class="s">(</span><span class="w">ROK</span><span class="s">)</span></li><li>          <span class="w">RV</span> = <span class="n">0xc70de8</span></li><li>          <span class="w">SV</span> = <span class="i">PVAV</span><span class="s">(</span><span class="n">0xc71e10</span><span class="s">)</span> <span class="w">at</span> <span class="n">0xc70de8</span></li><li>            <span class="w">REFCNT</span> = <span class="n">1</span></li><li>            <span class="w">FLAGS</span> = <span class="s">(</span><span class="s">)</span></li><li>            <span class="w">ARRAY</span> = <span class="n">0xc7e820</span></li><li>            <span class="w">FILL</span> = <span class="n">0</span></li><li>            <span class="w">MAX</span> = <span class="n">0</span></li><li>            <span class="w">ARYLEN</span> = <span class="n">0x0</span></li><li>            <span class="w">FLAGS</span> = <span class="s">(</span><span class="w">REAL</span><span class="s">)</span></li><li>            <span class="w">Elt</span> <span class="w">No</span>. <span class="n">0</span></li><li>            <span class="w">SV</span> = <span class="i">IV</span><span class="s">(</span><span class="n">0xc70f88</span><span class="s">)</span> <span class="w">at</span> <span class="n">0xc70f98</span></li><li>              <span class="w">REFCNT</span> = <span class="n">1</span></li><li>              <span class="w">FLAGS</span> = <span class="s">(</span><span class="w">IOK</span><span class="cm">,</span><span class="w">pIOK</span><span class="s">)</span></li><li>              <span class="w">IV</span> = <span class="n">42</span></li></ol></pre><p>This says <code class="inline"><span class="i">$a</span></code>
+ is a reference (ROK), which points to
+another SV which is a PVAV, an array.  The array has one element,
+element zero, which is another SV. The field <code class="inline"><span class="w">FILL</span></code>
+ above indicates
+the last element in the array, similar to <code class="inline"><span class="i">$#$a</span></code>
+.</p>
+<p>If <code class="inline"><span class="i">$a</span></code>
+ pointed to an array of two elements then we would see the
+following.</p>
+<pre class="verbatim"><ol><li>        <a class="l_k" href="../functions/use.html">use</a> <span class="w">Devel::Peek</span> <span class="q">&#39;Dump&#39;</span><span class="sc">;</span></li><li>        <span class="i">$a</span> = <span class="s">[</span><span class="n">42</span><span class="cm">,</span><span class="n">24</span><span class="s">]</span><span class="sc">;</span></li><li>        <span class="w">Dump</span> <span class="i">$a</span><span class="sc">;</span></li></ol></pre><p>The output:</p>
+<pre class="verbatim"><ol><li>        <span class="w">SV</span> = <span class="i">IV</span><span class="s">(</span><span class="n">0x158c998</span><span class="s">)</span> <span class="w">at</span> <span class="n">0x158c9a8</span></li><li>          <span class="w">REFCNT</span> = <span class="n">1</span></li><li>          <span class="w">FLAGS</span> = <span class="s">(</span><span class="w">ROK</span><span class="s">)</span></li><li>          <span class="w">RV</span> = <span class="n">0x1577de8</span></li><li>          <span class="w">SV</span> = <span class="i">PVAV</span><span class="s">(</span><span class="n">0x1578e10</span><span class="s">)</span> <span class="w">at</span> <span class="n">0x1577de8</span></li><li>            <span class="w">REFCNT</span> = <span class="n">1</span></li><li>            <span class="w">FLAGS</span> = <span class="s">(</span><span class="s">)</span></li><li>            <span class="w">ARRAY</span> = <span class="n">0x1585820</span></li><li>            <span class="w">FILL</span> = <span class="n">1</span></li><li>            <span class="w">MAX</span> = <span class="n">1</span></li><li>            <span class="w">ARYLEN</span> = <span class="n">0x0</span></li><li>            <span class="w">FLAGS</span> = <span class="s">(</span><span class="w">REAL</span><span class="s">)</span></li><li>            <span class="w">Elt</span> <span class="w">No</span>. <span class="n">0</span></li><li>            <span class="w">SV</span> = <span class="i">IV</span><span class="s">(</span><span class="n">0x1577f88</span><span class="s">)</span> <span class="w">at</span> <span class="n">0x1577f98</span></li><li>              <span class="w">REFCNT</span> = <span class="n">1</span></li><li>              <span class="w">FLAGS</span> = <span class="s">(</span><span class="w">IOK</span><span class="cm">,</span><span class="w">pIOK</span><span class="s">)</span></li><li>              <span class="w">IV</span> = <span class="n">42</span></li><li>            <span class="w">Elt</span> <span class="w">No</span>. <span class="n">1</span></li><li>            <span class="w">SV</span> = <span class="i">IV</span><span class="s">(</span><span class="n">0x158be88</span><span class="s">)</span> <span class="w">at</span> <span class="n">0x158be98</span></li><li>              <span class="w">REFCNT</span> = <span class="n">1</span></li><li>              <span class="w">FLAGS</span> = <span class="s">(</span><span class="w">IOK</span><span class="cm">,</span><span class="w">pIOK</span><span class="s">)</span></li><li>              <span class="w">IV</span> = <span class="n">24</span></li></ol></pre><p>Note that <code class="inline"><span class="w">Dump</span></code>
+ will not report <i>all</i> the elements in the array,
+only several first (depending on how deep it already went into the
+report tree).</p>
+<a class='view-head2' id="A-reference-to-a-hash"></a><h3 class='h3' >A reference to a hash</h3>
+<p>The following shows the raw form of a reference to a hash.</p>
+<pre class="verbatim"><ol><li>        <a class="l_k" href="../functions/use.html">use</a> <span class="w">Devel::Peek</span><span class="sc">;</span></li><li>        <span class="i">$a</span> = <span class="s">{</span><span class="w">hello</span><span class="cm">=&gt;</span><span class="n">42</span><span class="s">}</span><span class="sc">;</span></li><li>        <span class="w">Dump</span> <span class="i">$a</span><span class="sc">;</span></li></ol></pre><p>The output:</p>
+<pre class="verbatim"><ol><li>	<span class="w">SV</span> = <span class="i">IV</span><span class="s">(</span><span class="n">0x8177858</span><span class="s">)</span> <span class="w">at</span> <span class="n">0x816a618</span></li><li>	  <span class="w">REFCNT</span> = <span class="n">1</span></li><li>	  <span class="w">FLAGS</span> = <span class="s">(</span><span class="w">ROK</span><span class="s">)</span></li><li>	  <span class="w">RV</span> = <span class="n">0x814fc10</span></li><li>	  <span class="w">SV</span> = <span class="i">PVHV</span><span class="s">(</span><span class="n">0x8167768</span><span class="s">)</span> <span class="w">at</span> <span class="n">0x814fc10</span></li><li>	    <span class="w">REFCNT</span> = <span class="n">1</span></li><li>	    <span class="w">FLAGS</span> = <span class="s">(</span><span class="w">SHAREKEYS</span><span class="s">)</span></li><li>	    <span class="w">ARRAY</span> = <span class="n">0x816c5b8</span>  <span class="s">(</span><span class="n">0</span><span class="co">:</span><span class="n">7</span><span class="cm">,</span> <span class="n">1</span><span class="co">:</span><span class="n">1</span><span class="s">)</span></li><li>	    <span class="w">hash</span> <span class="w">quality</span> = <span class="n">100.0</span>%</li><li>	    <span class="w">KEYS</span> = <span class="n">1</span></li><li>	    <span class="w">FILL</span> = <span class="n">1</span></li><li>	    <span class="w">MAX</span> = <span class="n">7</span></li><li>	    <span class="w">RITER</span> = <span class="n">-1</span></li><li>	    <span class="w">EITER</span> = <span class="n">0x0</span></li><li>	    <span class="w">Elt</span> <span class="q">&quot;hello&quot;</span> <span class="w">HASH</span> = <span class="n">0xc8fd181b</span></li><li>	    <span class="w">SV</span> = <span class="i">IV</span><span class="s">(</span><span class="n">0x816c030</span><span class="s">)</span> <span class="w">at</span> <span class="n">0x814fcf4</span></li><li>	      <span class="w">REFCNT</span> = <span class="n">1</span></li><li>	      <span class="w">FLAGS</span> = <span class="s">(</span><span class="w">IOK</span><span class="cm">,</span><span class="w">pIOK</span><span class="s">)</span></li><li>	      <span class="w">IV</span> = <span class="n">42</span></li></ol></pre><p>This shows <code class="inline"><span class="i">$a</span></code>
+ is a reference pointing to an SV.  That SV is a PVHV, a
+hash. Fields RITER and EITER are used by <code class="inline"><a class='function-name' href="../functions/each.html">each</a></code>.</p>
+<p>The "quality" of a hash is defined as the total number of comparisons needed
+to access every element once, relative to the expected number needed for a
+random hash. The value can go over 100%.</p>
+<p>The total number of comparisons is equal to the sum of the squares of the
+number of entries in each bucket.  For a random hash of <code class="inline">&lt;<span class="w">n</span></code>
+&gt; keys into
+<code class="inline">&lt;<span class="w">k</span></code>
+&gt; buckets, the expected value is:</p>
+<pre class="verbatim"><ol><li>		<span class="w">n</span> + <span class="i">n</span><span class="s">(</span><span class="w">n</span>-<span class="n">1</span><span class="s">)</span>/<span class="n">2</span><span class="w">k</span></li></ol></pre><a class='view-head2' id="Dumping-a-large-array-or-hash"></a><h3 class='h3' >Dumping a large array or hash</h3>
+<p>The <code class="inline"><span class="i">Dump</span><span class="s">(</span><span class="s">)</span></code>
+ function, by default, dumps up to 4 elements from a
+toplevel array or hash.  This number can be increased by supplying a
+second argument to the function.</p>
+<pre class="verbatim"><ol><li>        <a class="l_k" href="../functions/use.html">use</a> <span class="w">Devel::Peek</span><span class="sc">;</span></li><li>        <span class="i">$a</span> = <span class="s">[</span><span class="n">10</span><span class="cm">,</span><span class="n">11</span><span class="cm">,</span><span class="n">12</span><span class="cm">,</span><span class="n">13</span><span class="cm">,</span><span class="n">14</span><span class="s">]</span><span class="sc">;</span></li><li>        <span class="w">Dump</span> <span class="i">$a</span><span class="sc">;</span></li></ol></pre><p>Notice that <code class="inline"><span class="i">Dump</span><span class="s">(</span><span class="s">)</span></code>
+ prints only elements 10 through 13 in the above code.
+The following code will print all of the elements.</p>
+<pre class="verbatim"><ol><li>        <a class="l_k" href="../functions/use.html">use</a> <span class="w">Devel::Peek</span> <span class="q">&#39;Dump&#39;</span><span class="sc">;</span></li><li>        <span class="i">$a</span> = <span class="s">[</span><span class="n">10</span><span class="cm">,</span><span class="n">11</span><span class="cm">,</span><span class="n">12</span><span class="cm">,</span><span class="n">13</span><span class="cm">,</span><span class="n">14</span><span class="s">]</span><span class="sc">;</span></li><li>        <span class="w">Dump</span> <span class="i">$a</span><span class="cm">,</span> <span class="n">5</span><span class="sc">;</span></li></ol></pre><a class='view-head2' id="A-reference-to-an-SV-which-holds-a-C-pointer"></a><h3 class='h3' >A reference to an SV which holds a C pointer</h3>
+<p>This is what you really need to know as an XS programmer, of course.  When
+an XSUB returns a pointer to a C structure that pointer is stored in an SV
+and a reference to that SV is placed on the XSUB stack.  So the output from
+an XSUB which uses something like the T_PTROBJ map might look something like
+this:</p>
+<pre class="verbatim"><ol><li>        <span class="w">SV</span> = <span class="i">IV</span><span class="s">(</span><span class="n">0xf381c</span><span class="s">)</span> <span class="w">at</span> <span class="n">0xc859a8</span></li><li>          <span class="w">REFCNT</span> = <span class="n">1</span></li><li>          <span class="w">FLAGS</span> = <span class="s">(</span><span class="w">ROK</span><span class="s">)</span></li><li>          <span class="w">RV</span> = <span class="n">0xb8ad8</span></li><li>          <span class="w">SV</span> = <span class="i">PVMG</span><span class="s">(</span><span class="n">0xbb3c8</span><span class="s">)</span> <span class="w">at</span> <span class="n">0xc859a0</span></li><li>            <span class="w">REFCNT</span> = <span class="n">1</span></li><li>            <span class="w">FLAGS</span> = <span class="s">(</span><span class="w">OBJECT</span><span class="cm">,</span><span class="w">IOK</span><span class="cm">,</span><span class="w">pIOK</span><span class="s">)</span></li><li>            <span class="w">IV</span> = <span class="n">729160</span></li><li>            <span class="w">NV</span> = <span class="n">0</span></li><li>            <span class="w">PV</span> = <span class="n">0</span></li><li>            <span class="w">STASH</span> = <span class="n">0xc1d10</span>       <span class="q">&quot;CookBookB::Opaque&quot;</span></li></ol></pre><p>This shows that we have an SV which is a reference, which points at another
+SV.  In this case that second SV is a PVMG, a blessed scalar.  Because it is
+blessed it has the <code class="inline"><span class="w">OBJECT</span></code>
+ flag set.  Note that an SV which holds a C
+pointer also has the <code class="inline"><span class="w">IOK</span></code>
+ flag set.  The <code class="inline"><span class="w">STASH</span></code>
+ is set to the package
+name which this SV was blessed into.</p>
+<p>The output from an XSUB which uses something like the T_PTRREF map, which
+doesn't bless the object, might look something like this:</p>
+<pre class="verbatim"><ol><li>        <span class="w">SV</span> = <span class="i">IV</span><span class="s">(</span><span class="n">0xf381c</span><span class="s">)</span> <span class="w">at</span> <span class="n">0xc859a8</span></li><li>          <span class="w">REFCNT</span> = <span class="n">1</span></li><li>          <span class="w">FLAGS</span> = <span class="s">(</span><span class="w">ROK</span><span class="s">)</span></li><li>          <span class="w">RV</span> = <span class="n">0xb8ad8</span></li><li>          <span class="w">SV</span> = <span class="i">PVMG</span><span class="s">(</span><span class="n">0xbb3c8</span><span class="s">)</span> <span class="w">at</span> <span class="n">0xc859a0</span></li><li>            <span class="w">REFCNT</span> = <span class="n">1</span></li><li>            <span class="w">FLAGS</span> = <span class="s">(</span><span class="w">IOK</span><span class="cm">,</span><span class="w">pIOK</span><span class="s">)</span></li><li>            <span class="w">IV</span> = <span class="n">729160</span></li><li>            <span class="w">NV</span> = <span class="n">0</span></li><li>            <span class="w">PV</span> = <span class="n">0</span></li></ol></pre><a class='view-head2' id="A-reference-to-a-subroutine"></a><h3 class='h3' >A reference to a subroutine</h3>
+<p>Looks like this:</p>
+<pre class="verbatim"><ol><li>	<span class="w">SV</span> = <span class="i">IV</span><span class="s">(</span><span class="n">0x24d2dd8</span><span class="s">)</span> <span class="w">at</span> <span class="n">0x24d2de8</span></li><li>	  <span class="w">REFCNT</span> = <span class="n">1</span></li><li>	  <span class="w">FLAGS</span> = <span class="s">(</span><span class="w">TEMP</span><span class="cm">,</span><span class="w">ROK</span><span class="s">)</span></li><li>	  <span class="w">RV</span> = <span class="n">0x24e79d8</span></li><li>	  <span class="w">SV</span> = <span class="i">PVCV</span><span class="s">(</span><span class="n">0x24e5798</span><span class="s">)</span> <span class="w">at</span> <span class="n">0x24e79d8</span></li><li>	    <span class="w">REFCNT</span> = <span class="n">2</span></li><li>	    <span class="w">FLAGS</span> = <span class="s">(</span><span class="s">)</span></li><li>	    <span class="w">COMP_STASH</span> = <span class="n">0x22c9c50</span>	<span class="q">&quot;main&quot;</span></li><li>	    <span class="w">START</span> = <span class="n">0x22eed60</span> ==<span class="cm">=&gt;</span> <span class="n">0</span></li><li>	    <span class="w">ROOT</span> = <span class="n">0x22ee490</span></li><li>	    <span class="w">GVGV::GV</span> = <span class="n">0x22de9d8</span>	<span class="q">&quot;MY&quot;</span> <span class="w">::</span> <span class="q">&quot;top_targets&quot;</span></li><li>	    <span class="w">FILE</span> = <span class="q">&quot;(eval 5)&quot;</span></li><li>	    <span class="w">DEPTH</span> = <span class="n">0</span></li><li>	    <span class="w">FLAGS</span> = <span class="n">0x0</span></li><li>	    <span class="w">OUTSIDE_SEQ</span> = <span class="n">93</span></li><li>	    <span class="w">PADLIST</span> = <span class="n">0x22e9ed8</span></li><li>	    <span class="w">PADNAME</span> = <span class="n">0x22e9ec0</span><span class="s">(</span><span class="n">0x22eed00</span><span class="s">)</span> <span class="w">PAD</span> = <span class="n">0x22e9ea8</span><span class="s">(</span><span class="n">0x22eecd0</span><span class="s">)</span></li><li>	    <span class="w">OUTSIDE</span> = <span class="n">0x22c9fb0</span> <span class="s">(</span><span class="w">MAIN</span><span class="s">)</span></li></ol></pre><p>This shows that</p>
+<ul>
+<li>
+<p>the subroutine is not an XSUB (since <code class="inline"><span class="w">START</span></code>
+ and <code class="inline"><span class="w">ROOT</span></code>
+ are
+non-zero, and <code class="inline"><span class="w">XSUB</span></code>
+ is not listed, and is thus null);</p>
+</li>
+<li>
+<p>that it was compiled in the package <code class="inline"><span class="w">main</span></code>
+;</p>
+</li>
+<li>
+<p>under the name <code class="inline"><span class="w">MY::top_targets</span></code>
+;</p>
+</li>
+<li>
+<p>inside a 5th eval in the program;</p>
+</li>
+<li>
+<p>it is not currently executed (see <code class="inline"><span class="w">DEPTH</span></code>
+);</p>
+</li>
+<li>
+<p>it has no prototype (<code class="inline"><span class="w">PROTOTYPE</span></code>
+ field is missing).</p>
+</li>
+</ul>
+<a class='view-head1' id="EXPORTS"></a><h2 class='h2' >EXPORTS</h2>
+<p><code class="inline"><span class="w">Dump</span></code>
+, <code class="inline"><span class="w">mstat</span></code>
+, <code class="inline"><span class="w">DeadCode</span></code>
+, <code class="inline"><span class="w">DumpArray</span></code>
+, <code class="inline"><span class="w">DumpWithOP</span></code>
+ and
+<code class="inline"><span class="w">DumpProg</span></code>
+, <code class="inline"><span class="w">fill_mstats</span></code>
+, <code class="inline"><span class="w">mstats_fillhash</span></code>
+, <code class="inline"><span class="w">mstats2hash</span></code>
+ by
+default. Additionally available <code class="inline"><span class="w">SvREFCNT</span></code>
+, <code class="inline"><span class="w">SvREFCNT_inc</span></code>
+ and
+<code class="inline"><span class="w">SvREFCNT_dec</span></code>
+.</p>
+<a class='view-head1' id="BUGS"></a><h2 class='h2' >BUGS</h2>
+<p>Readers have been known to skip important parts of <a href="../perlguts.html">perlguts</a>, causing much
+frustration for all.</p>
+<a class='view-head1' id="AUTHOR"></a><h2 class='h2' >AUTHOR</h2>
+<p>Ilya Zakharevich	ilya@math.ohio-state.edu</p>
+<p>Copyright (c) 1995-98 Ilya Zakharevich. All rights reserved.
+This program is free software; you can redistribute it and/or
+modify it under the same terms as Perl itself.</p>
+<p>Author of this software makes no claim whatsoever about suitability,
+reliability, edability, editability or usability of this product, and
+should not be kept liable for any damage resulting from the use of
+it. If you can use it, you are in luck, if not, I should not be kept
+responsible. Keep a handy copy of your backup tape at hand.</p>
+<a class='view-head1' id="SEE-ALSO"></a><h2 class='h2' >SEE ALSO</h2>
+<p><a href="../perlguts.html">perlguts</a>, and <a href="../perlguts.html">perlguts</a>, again.</p>
+
+
+
+
+      <ul><li><a href="#NAME">NAME</a></li><li><a href="#SYNOPSIS">SYNOPSIS</a></li><li><a href="#DESCRIPTION">DESCRIPTION</a></li><ul><li><a href="#Runtime-debugging">Runtime debugging</a></li><li><a href="#Memory-footprint-debugging">Memory footprint debugging</a></li></ul><li><a href="#EXAMPLES">EXAMPLES</a></li><ul><li><a href="#A-simple-scalar-string">A simple scalar string</a></li><li><a href="#A-simple-scalar-number">A simple scalar number</a></li><li><a href="#A-simple-scalar-with-an-extra-reference">A simple scalar with an extra reference</a></li><li><a href="#A-reference-to-a-simple-scalar">A reference to a simple scalar</a></li><li><a href="#A-reference-to-an-array">A reference to an array</a></li><li><a href="#A-reference-to-a-hash">A reference to a hash</a></li><li><a href="#Dumping-a-large-array-or-hash">Dumping a large array or hash</a></li><li><a href="#A-reference-to-an-SV-which-holds-a-C-pointer">A reference to an SV which holds a C pointer</a></li><li><a href="#A-reference-to-a-subroutine">A reference to a subroutine</a></li></ul><li><a href="#EXPORTS">EXPORTS</a></li><li><a href="#BUGS">BUGS</a></li><li><a href="#AUTHOR">AUTHOR</a></li><li><a href="#SEE-ALSO">SEE ALSO</a></li></ul>
+
+
+                  </div>
+                </article>
+              </div>
+            </div>
+          </main>
+        </div>
+           <footer class="footer row bg-light pt-5 pb-5">
+       <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+           <div class="row">
+               <div class="col-md-4">
+                   <ul class="list-unstyled">
+                       <li>
+                           <h4>Site info</h4>
+                       </li>
+                       <li>Docs mantained by
+                           <a href="//lists.perl.org/list/perl5-porters.html"
+                               rel="noopener">Perl 5 Porters</a>
+                       </li>
+                       <li>Perldoc site development sponsored by
+                           <a href="//opusvl.com" rel="noopener">
+                           <img style="margin: 20px 20px 5px 10px" class="opus-logo" src="/public/img/opusvl_logo.svg" alt="OpusVL Logo">
+                        </a>
+                    <li><span class="about_perldoc"><a href="//about.html">About PerlDOC</a></span>
+                    </li>
+                       </li>
+                   </ul>
+               </div>
+               <div class="col-md-8">
+                   <div class="row">
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Manuals</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.20.0/index-overview.html">Overview</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.20.0/index-tutorials.html">Tutorials</a>
+                               </li>
+                               <li>
+                                   <a href="/5.20.0/index-faq.html">FAQs</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.20.0/index-history.html">Changes</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Reference</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.20.0/index-language.html">Language</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.20.0/index-functions.html">Functions</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.20.0/perlop.html">Operators</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.20.0/perlvar.html">Variables</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Modules</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.20.0/index-modules-A.html">Modules</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.20.0/index-pragmas.html">Pragmas</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.20.0/index-utilities.html">Utilities</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Misc</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.20.0/index-licence.html">License</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.20.0/index-internals.html">Internals</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.20.0/index-platforms.html">Platforms</a>
+                               </li>
+                            <li>
+                                <a
+                                    href="/5.20.0/index-about.html">About</a>
+                            </li>
+                           </ul>
+                       </div>
+                   </div>
+               </div>
+               <div class=" col-12 footer-inf text-center">
+                   <small>perldoc.perl.org - Official documentation for the Perl
+                       programming language</small>
+               </div>
+           </div>
+       </div>
+   </footer>
+
+        	<div class="beta-wrapper beta-bottom-right ">
+		<div class="beta beta-blue  ">
+			<a class="beta-link "
+				href="//github.com/OpusVL/perldoc.perl.org/issues/new" rel="noopener">
+				<span class="beta-text">
+					This website is a Beta release.
+				</span>
+				<span class="beta-text">
+					For any issues please raise a ticket on GitHub
+				</span>
+			</a>
+		</div>
+	</div>
+
+        <script src="/public/js/main.min.js"></script>
+      </body>
+
+      </html>

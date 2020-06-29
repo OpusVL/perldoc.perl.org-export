@@ -1,0 +1,808 @@
+      
+      
+      
+      
+
+      <!DOCTYPE html>
+      <html lang="en">
+
+      <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Term::Cap - perldoc.perl.org">
+        <link rel="icon" href="/public/img/favicon.ico">
+        <title>Term::Cap - perldoc.perl.org</title>
+        <link href="/public/css/main.min.css" rel="stylesheet">
+        <link rel="canonical" href="/Term/Cap.html">
+        <link
+          href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900'
+          rel='stylesheet' type='text/css'>
+        <script>
+          window.ga = window.ga || function () {
+            (ga.q = ga.q || []).push(arguments)
+          };
+          ga.l = +new Date;
+          ga('create', 'UA-1892152-2', 'auto'); // JJ's account
+          ga('create', 'UA-50555-3', 'auto', 'perlOrg'); // perl.org account
+          ga('require', 'outboundLinkTracker', {
+            events: ['click', 'auxclick', 'contextmenu'],
+          });
+          ga('require', 'maxScrollTracker');
+          ga('send', 'pageview');
+          ga('perlOrg.send', 'pageview');
+        </script>
+        <script async src="https://www.google-analytics.com/analytics.js">
+        </script>
+        <script async src="/public/js/tracking.min.js"></script>
+      </head>
+
+      <body class="body container-fluid ">
+        <div class="wrapper">
+
+          <nav
+    class="navbar navbar-dark bg-primary bg-perl fixed-top justify-content-between navbar-expand-lg">
+    <a href="#content" class="skippy sr-only sr-only-focusable">
+        <span class=' skippy-text'>Skip to main content</span>
+    </a>
+    <a class="navbar-brand" href="/">
+        <img class="logo" src="/public/img/logo_perl_doc.svg"
+            alt="Perl Documentation Logo" />
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse"
+        data-target="#navbar" aria-controls="navbar" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="navbar" class="collapse navbar-collapse ">
+        <ul class="navbar-nav ml-auto navbar-right">
+            <form class="nav-item dropdown search-wrapper">
+                <input type="text" id='searchinput' aria-describedby='navbarDropdown5'
+                    placeholder="Type query" class='search-input-field' value=''>
+
+                <button href="#" data-toggle='dropdown' type="button"
+                    aria-haspopup="true" aria-expanded='false' id="navbarDropdown5"
+                    class="nav-link dropdown-toggle search-link">
+                    <object tabindex='-1' focusable="false" class='search-icon'
+                        data="/public/img/search.svg" type="image/svg+xml"
+                        name='search icon'>search
+                        icon</object>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown5"
+                    id='search-results'>
+                    <p class='dropdown-item major-version'>
+                        No results
+                    </p>
+                </div>
+            </form>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown" href="#" class="nav-link dropdown-toggle"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Perl versions</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    
+                        <p class='dropdown-item major-version'>
+                            5.32
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.32.0/">5.32.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.30
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.3/">5.30.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.2/">5.30.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.1/">5.30.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.0/">5.30.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.28
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.3/">5.28.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.2/">5.28.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.1/">5.28.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.0/">5.28.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.26
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.3/">5.26.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.2/">5.26.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.1/">5.26.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.0/">5.26.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.24
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.4/">5.24.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.3/">5.24.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.2/">5.24.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.1/">5.24.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.0/">5.24.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.22
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.4/">5.22.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.3/">5.22.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.2/">5.22.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.1/">5.22.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.0/">5.22.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.20
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.3/">5.20.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.2/">5.20.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.1/">5.20.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.0/">5.20.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.18
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.4/">5.18.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.3/">5.18.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.2/">5.18.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.1/">5.18.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.0/">5.18.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.16
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.3/">5.16.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.2/">5.16.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.1/">5.16.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.0/">5.16.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.14
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.4/">5.14.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.3/">5.14.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.2/">5.14.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.1/">5.14.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.0/">5.14.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.12
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.5/">5.12.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.4/">5.12.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.3/">5.12.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.2/">5.12.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.1/">5.12.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.0/">5.12.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.10
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.1/">5.10.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.0/">5.10.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.8
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.9/">5.8.9</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.8/">5.8.8</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.7/">5.8.7</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.6/">5.8.6</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.5/">5.8.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.4/">5.8.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.3/">5.8.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.2/">5.8.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.1/">5.8.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.0/">5.8.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.6
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.2/">5.6.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.1/">5.6.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.0/">5.6.0</a>
+                        
+                        
+                    
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown1" href="#" class="dropdown-toggle nav-link"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Manuals</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                    <a class="dropdown-item"
+                        href="/5.16.0/index-overview.html">Overview</a>
+                    <a class="dropdown-item"
+                        href="/5.16.0/index-tutorials.html">Tutorials</a>
+                    <a class="dropdown-item"
+                        href="/5.16.0/index-faq.html">FAQs</a>
+                    <a class="dropdown-item"
+                        href="/5.16.0/index-history.html">Changes</a>
+                    <a class="dropdown-item"
+                        href="/5.16.0/index-licence.html">License</a>
+                    <a class="dropdown-item"
+                        href="/5.16.0/index-language.html">Language</a>
+                    <a class="dropdown-item"
+                        href="/5.16.0/index-functions.html">Functions</a>
+                    <a class="dropdown-item"
+                        href="/5.16.0/perlop.html">Operators</a>
+                    <a class="dropdown-item"
+                        href="/5.16.0/perlvar.html">Variables</a>
+                    <a class="dropdown-item"
+                        href="/5.16.0/index-pragmas.html">Pragmas</a>
+                    <a class="dropdown-item"
+                        href="/5.16.0/index-utilities.html">Utilities</a>
+                    <a class="dropdown-item"
+                        href="/5.16.0/index-internals.html">Internals</a>
+                    <a class="dropdown-item"
+                        href="/5.16.0/index-platforms.html">Platforms</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown3" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Modules</a>
+                <div aria-labelledby="navbarDropdown3"
+                    class="dropdown-menu letters-wrap">
+                    <!--<a class="dropdown-item"
+                        href="/5.16.0/index-modules.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.16.0/index-modules-by-cat.html">By
+                        Category</a>-->
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.16.0/index-modules-A.html">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.0/index-modules-B.html">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.0/index-modules-C.html">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.0/index-modules-D.html">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.0/index-modules-E.html">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.0/index-modules-F.html">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.0/index-modules-G.html">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.0/index-modules-H.html">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.0/index-modules-I.html">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.0/index-modules-J.html">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.0/index-modules-K.html">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.0/index-modules-L.html">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.0/index-modules-M.html">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.0/index-modules-N.html">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.0/index-modules-O.html">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.0/index-modules-P.html">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.0/index-modules-Q.html">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.0/index-modules-R.html">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.0/index-modules-S.html">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.0/index-modules-T.html">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.0/index-modules-U.html">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.0/index-modules-V.html">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.0/index-modules-W.html">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.0/index-modules-X.html">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.0/index-modules-Y.html">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.0/index-modules-Z.html">Z</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown4" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Functions</a>
+                <div aria-labelledby="navbarDropdown4"
+                    class="dropdown-menu letters-wrap">
+                    <a class="dropdown-item"
+                        href="/5.16.0/index-functions.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.16.0/index-functions-by-cat.html">By
+                        Category</a>
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.16.0/index-functions.html#A">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.0/index-functions.html#B">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.0/index-functions.html#C">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.0/index-functions.html#D">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.0/index-functions.html#E">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.0/index-functions.html#F">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.0/index-functions.html#G">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.0/index-functions.html#H">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.0/index-functions.html#I">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.0/index-functions.html#J">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.0/index-functions.html#K">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.0/index-functions.html#L">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.0/index-functions.html#M">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.0/index-functions.html#N">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.0/index-functions.html#O">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.0/index-functions.html#P">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.0/index-functions.html#Q">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.0/index-functions.html#R">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.0/index-functions.html#S">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.0/index-functions.html#T">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.0/index-functions.html#U">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.0/index-functions.html#V">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.0/index-functions.html#W">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.0/index-functions.html#X">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.0/index-functions.html#Y">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.16.0/index-functions.html#Z">Z</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!--/.nav-collapse -->
+</nav>
+
+
+          <main class="row main-content pb-5 pt-5" id='content'>
+            <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+              <div class="row">
+                <div class="col-sm-12">
+                  <div id="breadcrumbs">
+                      
+    <a href="../index.html">Home</a>&nbsp; &gt;
+    
+      
+        <a href="../index-modules-T.html">Core modules (T)</a> &gt;
+      
+    
+    Term::Cap
+  
+
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <article class="col-sm-12 content">
+                  <div class="documentation-wrapper">
+                    <div id="perl_version">
+                      <h7 class='page-title'> Perl 5 version 16.0
+                        documentation</h7>
+                    </div>
+                    <h1>Term::Cap</h1>
+
+
+  <!--    -->
+<ul><li><a href="#NAME">NAME</a></li><li><a href="#SYNOPSIS">SYNOPSIS</a></li><li><a href="#DESCRIPTION">DESCRIPTION</a></li><ul><li><a href="#METHODS">METHODS</a></li></ul><li><a href="#EXAMPLES">EXAMPLES</a></li><li><a href="#COPYRIGHT-AND-LICENSE">COPYRIGHT AND LICENSE</a></li><li><a href="#AUTHOR">AUTHOR</a></li><li><a href="#SEE-ALSO">SEE ALSO</a></li></ul><a class='view-head1' id="NAME"></a><h2 class='h2' >NAME</h2>
+<p>Term::Cap - Perl termcap interface</p>
+<a class='view-head1' id="SYNOPSIS"></a><h2 class='h2' >SYNOPSIS</h2>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/require.html">require</a> <span class="w">Term::Cap</span><span class="sc">;</span></li><li>    <span class="i">$terminal</span> = <span class="w">Tgetent</span> <span class="w">Term::Cap</span> <span class="s">{</span> <span class="w">TERM</span> <span class="cm">=&gt;</span> <a class="l_k" href="../functions/undef.html">undef</a><span class="cm">,</span> <span class="w">OSPEED</span> <span class="cm">=&gt;</span> <span class="i">$ospeed</span> <span class="s">}</span><span class="sc">;</span></li><li>    <span class="i">$terminal</span><span class="i">-&gt;Trequire</span><span class="s">(</span><span class="q">qw/ce ku kd/</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="i">$terminal</span><span class="i">-&gt;Tgoto</span><span class="s">(</span><span class="q">&#39;cm&#39;</span><span class="cm">,</span> <span class="i">$col</span><span class="cm">,</span> <span class="i">$row</span><span class="cm">,</span> <span class="i">$FH</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="i">$terminal</span><span class="i">-&gt;Tputs</span><span class="s">(</span><span class="q">&#39;dl&#39;</span><span class="cm">,</span> <span class="i">$count</span><span class="cm">,</span> <span class="i">$FH</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="i">$terminal</span><span class="i">-&gt;Tpad</span><span class="s">(</span><span class="i">$string</span><span class="cm">,</span> <span class="i">$count</span><span class="cm">,</span> <span class="i">$FH</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><a class='view-head1' id="DESCRIPTION"></a><h2 class='h2' >DESCRIPTION</h2>
+<p>These are low-level functions to extract and use capabilities from
+a terminal capability (termcap) database.</p>
+<p>More information on the terminal capabilities will be found in the
+termcap manpage on most Unix-like systems.</p>
+<a class='view-head2' id="METHODS"></a><h3 class='h3' >METHODS</h3>
+<p>The output strings for <strong>Tputs</strong> are cached for counts of 1 for performance.
+<strong>Tgoto</strong> and <strong>Tpad</strong> do not cache.  <code class="inline"><span class="i">$self</span>-&gt;{<span class="w">_xx</span>}</code>
+ is the raw termcap
+data and <code class="inline"><span class="i">$self</span>-&gt;{<span class="w">xx</span>}</code>
+ is the cached version.</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/print.html">print</a> <span class="i">$terminal</span><span class="i">-&gt;Tpad</span><span class="s">(</span><span class="i">$self</span>-&gt;{<span class="w">_xx</span>}<span class="cm">,</span> <span class="n">1</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p><strong>Tgoto</strong>, <strong>Tputs</strong>, and <strong>Tpad</strong> return the string and will also
+output the string to $FH if specified.</p>
+<ul>
+<li><a class='view-title' id="*Tgetent*"></a><strong><strong>Tgetent</strong></strong>
+<p>Returns a blessed object reference which the user can
+then use to send the control strings to the terminal using <strong>Tputs</strong>
+and <strong>Tgoto</strong>.</p>
+<p>The function extracts the entry of the specified terminal
+type <i>TERM</i> (defaults to the environment variable <i>TERM</i>) from the
+database.</p>
+<p>It will look in the environment for a <i>TERMCAP</i> variable.  If
+found, and the value does not begin with a slash, and the terminal
+type name is the same as the environment string <i>TERM</i>, the
+<i>TERMCAP</i> string is used instead of reading a termcap file.  If
+it does begin with a slash, the string is used as a path name of
+the termcap file to search.  If <i>TERMCAP</i> does not begin with a
+slash and name is different from <i>TERM</i>, <strong>Tgetent</strong> searches the
+files <i>$HOME/.termcap</i>, <i>/etc/termcap</i>, and <i>/usr/share/misc/termcap</i>,
+in that order, unless the environment variable <i>TERMPATH</i> exists,
+in which case it specifies a list of file pathnames (separated by
+spaces or colons) to be searched <strong>instead</strong>.  Whenever multiple
+files are searched and a tc field occurs in the requested entry,
+the entry it names must be found in the same file or one of the
+succeeding files.  If there is a <code class="inline"><span class="j">:</span><span class="w">tc</span>=...<span class="co">:</span></code>
+ in the <i>TERMCAP</i>
+environment variable string it will continue the search in the
+files as above.</p>
+<p>The extracted termcap entry is available in the object
+as <code class="inline"><span class="i">$self</span>-&gt;{<span class="w">TERMCAP</span>}</code>
+.</p>
+<p>It takes a hash reference as an argument with two optional keys:</p>
+<ul>
+<li><a class='view-title' id="OSPEED"></a><strong>OSPEED</strong>
+<p>The terminal output bit rate (often mistakenly called the baud rate)
+for this terminal - if not set a warning will be generated
+and it will be defaulted to 9600.  <i>OSPEED</i> can be be specified as
+either a POSIX termios/SYSV termio speeds (where 9600 equals 9600) or
+an old DSD-style speed ( where 13 equals 9600).</p>
+</li>
+<li><a class='view-title' id="TERM"></a><strong>TERM</strong>
+<p>The terminal type whose termcap entry will be used - if not supplied it will
+default to $ENV{TERM}: if that is not set then <strong>Tgetent</strong> will croak.</p>
+</li>
+</ul>
+<p>It calls <code class="inline"><span class="w">croak</span></code>
+ on failure.</p>
+</li>
+<li><a class='view-title' id="*Tpad*"></a><strong><strong>Tpad</strong></strong>
+<p>Outputs a literal string with appropriate padding for the current terminal.</p>
+<p>It takes three arguments:</p>
+<ul>
+<li><a class='view-title' id="*%24string*"></a><strong><strong>$string</strong></strong>
+<p>The literal string to be output.  If it starts with a number and an optional
+'*' then the padding will be increased by an amount relative to this number,
+if the '*' is present then this amount will me multiplied by $cnt.  This part
+of $string is removed before output/</p>
+</li>
+<li><a class='view-title' id="*%24cnt*"></a><strong><strong>$cnt</strong></strong>
+<p>Will be used to modify the padding applied to string as described above.</p>
+</li>
+<li><a class='view-title' id="*%24FH*"></a><strong><strong>$FH</strong></strong>
+<p>An optional filehandle (or IO::Handle ) that output will be printed to.</p>
+</li>
+</ul>
+<p>The padded $string is returned.</p>
+</li>
+<li><a class='view-title' id="*Tputs*"></a><strong><strong>Tputs</strong></strong>
+<p>Output the string for the given capability padded as appropriate without
+any parameter substitution.</p>
+<p>It takes three arguments:</p>
+<ul>
+<li><a class='view-title' id="*%24cap*"></a><strong><strong>$cap</strong></strong>
+<p>The capability whose string is to be output.</p>
+</li>
+<li><a class='view-title' id="*%24cnt*"></a><strong><strong>$cnt</strong></strong>
+<p>A count passed to Tpad to modify the padding applied to the output string.
+If $cnt is zero or one then the resulting string will be cached.</p>
+</li>
+<li><a class='view-title' id="*%24FH*"></a><strong><strong>$FH</strong></strong>
+<p>An optional filehandle (or IO::Handle ) that output will be printed to.</p>
+</li>
+</ul>
+<p>The appropriate string for the capability will be returned.</p>
+</li>
+<li><a class='view-title' id="*Tgoto*"></a><strong><strong>Tgoto</strong></strong>
+<p><strong>Tgoto</strong> decodes a cursor addressing string with the given parameters.</p>
+<p>There are four arguments:</p>
+<ul>
+<li><a class='view-title' id="*%24cap*"></a><strong><strong>$cap</strong></strong>
+<p>The name of the capability to be output.</p>
+</li>
+<li><a class='view-title' id="*%24col*"></a><strong><strong>$col</strong></strong>
+<p>The first value to be substituted in the output string ( usually the column
+in a cursor addressing capability )</p>
+</li>
+<li><a class='view-title' id="*%24row*"></a><strong><strong>$row</strong></strong>
+<p>The second value to be substituted in the output string (usually the row
+in cursor addressing capabilities)</p>
+</li>
+<li><a class='view-title' id="*%24FH*"></a><strong><strong>$FH</strong></strong>
+<p>An optional filehandle (or IO::Handle ) to which the output string will be
+printed.</p>
+</li>
+</ul>
+<p>Substitutions are made with $col and $row in the output string with the
+following sprintf() line formats:</p>
+<pre class="verbatim"><ol><li> <span class="i">%%</span>   <span class="w">output</span> <span class="q">`%&#39;</span></li><li> <span class="q"> %d   output value as in printf %d</span></li><li> <span class="q"> %2   output value as in printf %2d</span></li><li> <span class="q"> %3   output value as in printf %3d</span></li><li> <span class="q"> %.   output value as in printf %c</span></li><li> <span class="q"> %+x  add x to value, then do %.</span></li><li></li><li> <span class="q"> %&gt;xy if value &gt; x then add y, no output</span></li><li> <span class="q"> %r   reverse order of two parameters, no output</span></li><li> <span class="q"> %i   increment by one, no output</span></li><li> <span class="q"> %B   BCD (16*(value/10)) + (value%10), no output</span></li><li></li><li> <span class="q"> %n   exclusive-or all parameters with 0140 (Datamedia 2500)</span></li><li> <span class="q"> %D   Reverse coding (value - 2*(value%16)), no output (Delta Data)</span></li></ol></pre><p>The output string will be returned.</p>
+</li>
+<li><a class='view-title' id="*Trequire*"></a><strong><strong>Trequire</strong></strong>
+<p>Takes a list of capabilities as an argument and will croak if one is not
+found.</p>
+</li>
+</ul>
+<a class='view-head1' id="EXAMPLES"></a><h2 class='h2' >EXAMPLES</h2>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">Term::Cap</span><span class="sc">;</span></li><li></li><li>    <span class="c"># Get terminal output speed</span></li><li>    <a class="l_k" href="../functions/require.html">require</a> <span class="w">POSIX</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">$termios</span> = <span class="w">new</span> <span class="w">POSIX::Termios</span><span class="sc">;</span></li><li>    <span class="i">$termios</span><span class="i">-&gt;getattr</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">$ospeed</span> = <span class="i">$termios</span><span class="i">-&gt;getospeed</span><span class="sc">;</span></li><li></li><li>    <span class="c"># Old-style ioctl code to get ospeed:</span></li><li>    <span class="c">#     require &#39;ioctl.pl&#39;;</span></li><li>    <span class="c">#     ioctl(TTY,$TIOCGETP,$sgtty);</span></li><li>    <span class="c">#     ($ispeed,$ospeed) = unpack(&#39;cc&#39;,$sgtty);</span></li><li></li><li>    <span class="c"># allocate and initialize a terminal structure</span></li><li>    <span class="i">$terminal</span> = <span class="w">Tgetent</span> <span class="w">Term::Cap</span> <span class="s">{</span> <span class="w">TERM</span> <span class="cm">=&gt;</span> <a class="l_k" href="../functions/undef.html">undef</a><span class="cm">,</span> <span class="w">OSPEED</span> <span class="cm">=&gt;</span> <span class="i">$ospeed</span> <span class="s">}</span><span class="sc">;</span></li><li></li><li>    <span class="c"># require certain capabilities to be available</span></li><li>    <span class="i">$terminal</span><span class="i">-&gt;Trequire</span><span class="s">(</span><span class="q">qw/ce ku kd/</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>    <span class="c"># Output Routines, if $FH is undefined these just return the string</span></li><li></li><li>    <span class="c"># Tgoto does the % expansion stuff with the given args</span></li><li>    <span class="i">$terminal</span><span class="i">-&gt;Tgoto</span><span class="s">(</span><span class="q">&#39;cm&#39;</span><span class="cm">,</span> <span class="i">$col</span><span class="cm">,</span> <span class="i">$row</span><span class="cm">,</span> <span class="i">$FH</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>    <span class="c"># Tputs doesn&#39;t do any % expansion.</span></li><li>    <span class="i">$terminal</span><span class="i">-&gt;Tputs</span><span class="s">(</span><span class="q">&#39;dl&#39;</span><span class="cm">,</span> <span class="i">$count</span> = <span class="n">1</span><span class="cm">,</span> <span class="i">$FH</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><a class='view-head1' id="COPYRIGHT-AND-LICENSE"></a><h2 class='h2' >COPYRIGHT AND LICENSE</h2>
+<p>Please see the README file in distribution.</p>
+<a class='view-head1' id="AUTHOR"></a><h2 class='h2' >AUTHOR</h2>
+<p>This module is part of the core Perl distribution and is also maintained
+for CPAN by Jonathan Stowe &lt;jns@gellyfish.com&gt;.</p>
+<a class='view-head1' id="SEE-ALSO"></a><h2 class='h2' >SEE ALSO</h2>
+<p>termcap(5)</p>
+
+
+
+
+      <ul><li><a href="#NAME">NAME</a></li><li><a href="#SYNOPSIS">SYNOPSIS</a></li><li><a href="#DESCRIPTION">DESCRIPTION</a></li><ul><li><a href="#METHODS">METHODS</a></li></ul><li><a href="#EXAMPLES">EXAMPLES</a></li><li><a href="#COPYRIGHT-AND-LICENSE">COPYRIGHT AND LICENSE</a></li><li><a href="#AUTHOR">AUTHOR</a></li><li><a href="#SEE-ALSO">SEE ALSO</a></li></ul>
+
+
+                  </div>
+                </article>
+              </div>
+            </div>
+          </main>
+        </div>
+           <footer class="footer row bg-light pt-5 pb-5">
+       <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+           <div class="row">
+               <div class="col-md-4">
+                   <ul class="list-unstyled">
+                       <li>
+                           <h4>Site info</h4>
+                       </li>
+                       <li>Docs mantained by
+                           <a href="//lists.perl.org/list/perl5-porters.html"
+                               rel="noopener">Perl 5 Porters</a>
+                       </li>
+                       <li>Perldoc site development sponsored by
+                           <a href="//opusvl.com" rel="noopener">
+                           <img style="margin: 20px 20px 5px 10px" class="opus-logo" src="/public/img/opusvl_logo.svg" alt="OpusVL Logo">
+                        </a>
+                    <li><span class="about_perldoc"><a href="//about.html">About PerlDOC</a></span>
+                    </li>
+                       </li>
+                   </ul>
+               </div>
+               <div class="col-md-8">
+                   <div class="row">
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Manuals</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.16.0/index-overview.html">Overview</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.16.0/index-tutorials.html">Tutorials</a>
+                               </li>
+                               <li>
+                                   <a href="/5.16.0/index-faq.html">FAQs</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.16.0/index-history.html">Changes</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Reference</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.16.0/index-language.html">Language</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.16.0/index-functions.html">Functions</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.16.0/perlop.html">Operators</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.16.0/perlvar.html">Variables</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Modules</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.16.0/index-modules-A.html">Modules</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.16.0/index-pragmas.html">Pragmas</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.16.0/index-utilities.html">Utilities</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Misc</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.16.0/index-licence.html">License</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.16.0/index-internals.html">Internals</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.16.0/index-platforms.html">Platforms</a>
+                               </li>
+                            <li>
+                                <a
+                                    href="/5.16.0/index-about.html">About</a>
+                            </li>
+                           </ul>
+                       </div>
+                   </div>
+               </div>
+               <div class=" col-12 footer-inf text-center">
+                   <small>perldoc.perl.org - Official documentation for the Perl
+                       programming language</small>
+               </div>
+           </div>
+       </div>
+   </footer>
+
+        	<div class="beta-wrapper beta-bottom-right ">
+		<div class="beta beta-blue  ">
+			<a class="beta-link "
+				href="//github.com/OpusVL/perldoc.perl.org/issues/new" rel="noopener">
+				<span class="beta-text">
+					This website is a Beta release.
+				</span>
+				<span class="beta-text">
+					For any issues please raise a ticket on GitHub
+				</span>
+			</a>
+		</div>
+	</div>
+
+        <script src="/public/js/main.min.js"></script>
+      </body>
+
+      </html>

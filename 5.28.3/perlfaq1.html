@@ -1,0 +1,932 @@
+      
+      
+      
+      
+
+      <!DOCTYPE html>
+      <html lang="en">
+
+      <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="perlfaq1 - perldoc.perl.org">
+        <link rel="icon" href="/public/img/favicon.ico">
+        <title>perlfaq1 - perldoc.perl.org</title>
+        <link href="/public/css/main.min.css" rel="stylesheet">
+        <link rel="canonical" href="/perlfaq1.html">
+        <link
+          href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900'
+          rel='stylesheet' type='text/css'>
+        <script>
+          window.ga = window.ga || function () {
+            (ga.q = ga.q || []).push(arguments)
+          };
+          ga.l = +new Date;
+          ga('create', 'UA-1892152-2', 'auto'); // JJ's account
+          ga('create', 'UA-50555-3', 'auto', 'perlOrg'); // perl.org account
+          ga('require', 'outboundLinkTracker', {
+            events: ['click', 'auxclick', 'contextmenu'],
+          });
+          ga('require', 'maxScrollTracker');
+          ga('send', 'pageview');
+          ga('perlOrg.send', 'pageview');
+        </script>
+        <script async src="https://www.google-analytics.com/analytics.js">
+        </script>
+        <script async src="/public/js/tracking.min.js"></script>
+      </head>
+
+      <body class="body container-fluid ">
+        <div class="wrapper">
+
+          <nav
+    class="navbar navbar-dark bg-primary bg-perl fixed-top justify-content-between navbar-expand-lg">
+    <a href="#content" class="skippy sr-only sr-only-focusable">
+        <span class=' skippy-text'>Skip to main content</span>
+    </a>
+    <a class="navbar-brand" href="/">
+        <img class="logo" src="/public/img/logo_perl_doc.svg"
+            alt="Perl Documentation Logo" />
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse"
+        data-target="#navbar" aria-controls="navbar" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="navbar" class="collapse navbar-collapse ">
+        <ul class="navbar-nav ml-auto navbar-right">
+            <form class="nav-item dropdown search-wrapper">
+                <input type="text" id='searchinput' aria-describedby='navbarDropdown5'
+                    placeholder="Type query" class='search-input-field' value=''>
+
+                <button href="#" data-toggle='dropdown' type="button"
+                    aria-haspopup="true" aria-expanded='false' id="navbarDropdown5"
+                    class="nav-link dropdown-toggle search-link">
+                    <object tabindex='-1' focusable="false" class='search-icon'
+                        data="/public/img/search.svg" type="image/svg+xml"
+                        name='search icon'>search
+                        icon</object>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown5"
+                    id='search-results'>
+                    <p class='dropdown-item major-version'>
+                        No results
+                    </p>
+                </div>
+            </form>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown" href="#" class="nav-link dropdown-toggle"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Perl versions</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    
+                        <p class='dropdown-item major-version'>
+                            5.32
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.32.0/">5.32.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.30
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.3/">5.30.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.2/">5.30.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.1/">5.30.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.0/">5.30.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.28
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.3/">5.28.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.2/">5.28.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.1/">5.28.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.0/">5.28.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.26
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.3/">5.26.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.2/">5.26.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.1/">5.26.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.0/">5.26.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.24
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.4/">5.24.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.3/">5.24.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.2/">5.24.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.1/">5.24.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.0/">5.24.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.22
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.4/">5.22.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.3/">5.22.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.2/">5.22.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.1/">5.22.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.0/">5.22.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.20
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.3/">5.20.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.2/">5.20.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.1/">5.20.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.0/">5.20.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.18
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.4/">5.18.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.3/">5.18.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.2/">5.18.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.1/">5.18.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.0/">5.18.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.16
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.3/">5.16.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.2/">5.16.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.1/">5.16.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.0/">5.16.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.14
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.4/">5.14.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.3/">5.14.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.2/">5.14.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.1/">5.14.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.0/">5.14.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.12
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.5/">5.12.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.4/">5.12.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.3/">5.12.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.2/">5.12.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.1/">5.12.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.0/">5.12.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.10
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.1/">5.10.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.0/">5.10.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.8
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.9/">5.8.9</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.8/">5.8.8</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.7/">5.8.7</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.6/">5.8.6</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.5/">5.8.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.4/">5.8.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.3/">5.8.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.2/">5.8.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.1/">5.8.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.0/">5.8.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.6
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.2/">5.6.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.1/">5.6.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.0/">5.6.0</a>
+                        
+                        
+                    
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown1" href="#" class="dropdown-toggle nav-link"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Manuals</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                    <a class="dropdown-item"
+                        href="/5.28.3/index-overview.html">Overview</a>
+                    <a class="dropdown-item"
+                        href="/5.28.3/index-tutorials.html">Tutorials</a>
+                    <a class="dropdown-item"
+                        href="/5.28.3/index-faq.html">FAQs</a>
+                    <a class="dropdown-item"
+                        href="/5.28.3/index-history.html">Changes</a>
+                    <a class="dropdown-item"
+                        href="/5.28.3/index-licence.html">License</a>
+                    <a class="dropdown-item"
+                        href="/5.28.3/index-language.html">Language</a>
+                    <a class="dropdown-item"
+                        href="/5.28.3/index-functions.html">Functions</a>
+                    <a class="dropdown-item"
+                        href="/5.28.3/perlop.html">Operators</a>
+                    <a class="dropdown-item"
+                        href="/5.28.3/perlvar.html">Variables</a>
+                    <a class="dropdown-item"
+                        href="/5.28.3/index-pragmas.html">Pragmas</a>
+                    <a class="dropdown-item"
+                        href="/5.28.3/index-utilities.html">Utilities</a>
+                    <a class="dropdown-item"
+                        href="/5.28.3/index-internals.html">Internals</a>
+                    <a class="dropdown-item"
+                        href="/5.28.3/index-platforms.html">Platforms</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown3" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Modules</a>
+                <div aria-labelledby="navbarDropdown3"
+                    class="dropdown-menu letters-wrap">
+                    <!--<a class="dropdown-item"
+                        href="/5.28.3/index-modules.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.28.3/index-modules-by-cat.html">By
+                        Category</a>-->
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-A.html">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-B.html">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-C.html">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-D.html">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-E.html">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-F.html">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-G.html">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-H.html">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-I.html">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-J.html">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-K.html">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-L.html">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-M.html">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-N.html">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-O.html">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-P.html">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-Q.html">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-R.html">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-S.html">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-T.html">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-U.html">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-V.html">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-W.html">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-X.html">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-Y.html">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-modules-Z.html">Z</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown4" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Functions</a>
+                <div aria-labelledby="navbarDropdown4"
+                    class="dropdown-menu letters-wrap">
+                    <a class="dropdown-item"
+                        href="/5.28.3/index-functions.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.28.3/index-functions-by-cat.html">By
+                        Category</a>
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#A">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#B">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#C">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#D">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#E">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#F">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#G">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#H">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#I">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#J">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#K">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#L">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#M">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#N">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#O">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#P">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#Q">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#R">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#S">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#T">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#U">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#V">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#W">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#X">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#Y">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.3/index-functions.html#Z">Z</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!--/.nav-collapse -->
+</nav>
+
+
+          <main class="row main-content pb-5 pt-5" id='content'>
+            <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+              <div class="row">
+                <div class="col-sm-12">
+                  <div id="breadcrumbs">
+                      
+    <a href="index.html">Home</a>&nbsp; &gt;
+    
+      
+        <a href="index-faq.html">FAQs</a> &gt;
+      
+    
+    perlfaq1
+  
+
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <article class="col-sm-12 content">
+                  <div class="documentation-wrapper">
+                    <div id="perl_version">
+                      <h7 class='page-title'> Perl 5 version 28.3
+                        documentation</h7>
+                    </div>
+                    <h1>perlfaq1</h1>
+
+
+  <!--    -->
+<ul><li><a href="#NAME">NAME</a></li><li><a href="#VERSION">VERSION</a></li><li><a href="#DESCRIPTION">DESCRIPTION</a></li><ul><li><a href="#What-is-Perl%3f">What is Perl?</a></li><li><a href="#Who-supports-Perl%3f-Who-develops-it%3f-Why-is-it-free%3f">Who supports Perl? Who develops it? Why is it free?</a></li><li><a href="#Which-version-of-Perl-should-I-use%3f">Which version of Perl should I use?</a></li><li><a href="#What-are-Perl-4%2c-Perl-5%2c-or-Perl-6%3f">What are Perl 4, Perl 5, or Perl 6?</a></li><li><a href="#What-is-Perl-6%3f">What is Perl 6?</a></li><li><a href="#How-stable-is-Perl%3f">How stable is Perl?</a></li><li><a href="#How-often-are-new-versions-of-Perl-released%3f">How often are new versions of Perl released?</a></li><li><a href="#Is-Perl-difficult-to-learn%3f">Is Perl difficult to learn?</a></li><li><a href="#How-does-Perl-compare-with-other-languages-like-Java%2c-Python%2c-REXX%2c-Scheme%2c-or-Tcl%3f">How does Perl compare with other languages like Java, Python, REXX, Scheme, or Tcl?</a></li><li><a href="#Can-I-do-%5btask%5d-in-Perl%3f">Can I do [task] in Perl?</a></li><li><a href="#When-shouldn't-I-program-in-Perl%3f">When shouldn't I program in Perl?</a></li><li><a href="#What's-the-difference-between-%22perl%22-and-%22Perl%22%3f">What's the difference between "perl" and "Perl"?</a></li><li><a href="#What-is-a-JAPH%3f">What is a JAPH?</a></li><li><a href="#How-can-I-convince-others-to-use-Perl%3f">How can I convince others to use Perl?</a></li></ul><li><a href="#AUTHOR-AND-COPYRIGHT">AUTHOR AND COPYRIGHT</a></li></ul><a class='view-head1' id="NAME"></a><h2 class='h2' >NAME</h2>
+<p>perlfaq1 - General Questions About Perl</p>
+<a class='view-head1' id="VERSION"></a><h2 class='h2' >VERSION</h2>
+<p>version 5.021011</p>
+<a class='view-head1' id="DESCRIPTION"></a><h2 class='h2' >DESCRIPTION</h2>
+<p>This section of the FAQ answers very general, high-level questions
+about Perl.</p>
+<a class='view-head2' id="What-is-Perl%3f"></a><h3 class='h3' >What is Perl?</h3>
+<p>Perl is a high-level programming language with an eclectic heritage
+written by Larry Wall and a cast of thousands.</p>
+<p>Perl's process, file, and text manipulation facilities make it
+particularly well-suited for tasks involving quick prototyping, system
+utilities, software tools, system management tasks, database access,
+graphical programming, networking, and web programming.</p>
+<p>Perl derives from the ubiquitous C programming language and to a
+lesser extent from sed, awk, the Unix shell, and many other tools
+and languages.</p>
+<p>These strengths make it especially popular with web developers
+and system administrators. Mathematicians, geneticists, journalists,
+managers and many other people also use Perl.</p>
+<a class='view-head2' id="Who-supports-Perl%3f-Who-develops-it%3f-Why-is-it-free%3f"></a><h3 class='h3' >Who supports Perl? Who develops it? Why is it free?</h3>
+<p>The original culture of the pre-populist Internet and the deeply-held
+beliefs of Perl's author, Larry Wall, gave rise to the free and open
+distribution policy of Perl. Perl is supported by its users. The
+core, the standard Perl library, the optional modules, and the
+documentation you're reading now were all written by volunteers.</p>
+<p>The core development team (known as the Perl Porters)
+are a group of highly altruistic individuals committed to
+producing better software for free than you could hope to purchase for
+money. You may snoop on pending developments via the
+<a class='link-to-page' href="http://www.nntp.perl.org/group/perl.perl5.porters/">archives</a>
+or read the <a class='link-to-page' href="http://dev.perl.org/perl5/docs/p5p-faq.html">faq</a>,
+or you can subscribe to the mailing list by sending
+perl5-porters-subscribe@perl.org a subscription request
+(an empty message with no subject is fine).</p>
+<p>While the GNU project includes Perl in its distributions, there's no
+such thing as "GNU Perl". Perl is not produced nor maintained by the
+Free Software Foundation. Perl's licensing terms are also more open
+than GNU software's tend to be.</p>
+<p>You can get commercial support of Perl if you wish, although for most
+users the informal support will more than suffice. See the answer to
+"Where can I buy a commercial version of Perl?" for more information.</p>
+<a class='view-head2' id="Which-version-of-Perl-should-I-use%3f"></a><h3 class='h3' >Which version of Perl should I use?</h3>
+<p>(contributed by brian d foy)</p>
+<p>There is often a matter of opinion and taste, and there isn't any one
+answer that fits everyone. In general, you want to use either the current
+stable release, or the stable release immediately prior to that one.
+Currently, those are perl5.18.x and perl5.16.x, respectively.</p>
+<p>Beyond that, you have to consider several things and decide which is best
+for you.</p>
+<ul>
+<li>
+<p>If things aren't broken, upgrading perl may break them (or at least issue
+new warnings).</p>
+</li>
+<li>
+<p>The latest versions of perl have more bug fixes.</p>
+</li>
+<li>
+<p>The Perl community is geared toward supporting the most recent releases,
+so you'll have an easier time finding help for those.</p>
+</li>
+<li>
+<p>Versions prior to perl5.004 had serious security problems with buffer
+overflows, and in some cases have CERT advisories (for instance,
+<a href="http://www.cert.org/advisories/CA-1997-17.html">http://www.cert.org/advisories/CA-1997-17.html</a> ).</p>
+</li>
+<li>
+<p>The latest versions are probably the least deployed and widely tested, so
+you may want to wait a few months after their release and see what
+problems others have if you are risk averse.</p>
+</li>
+<li>
+<p>The immediate, previous releases (i.e. perl5.14.x ) are usually maintained
+for a while, although not at the same level as the current releases.</p>
+</li>
+<li>
+<p>No one is actively supporting Perl 4. Ten years ago it was a dead
+camel carcass (according to this document). Now it's barely a skeleton
+as its whitewashed bones have fractured or eroded.</p>
+</li>
+<li>
+<p>There are really two tracks of perl development: a maintenance version
+and an experimental version. The maintenance versions are stable, and
+have an even number as the minor release (i.e. perl5.18.x, where 18 is the
+minor release). The experimental versions may include features that
+don't make it into the stable versions, and have an odd number as the
+minor release (i.e. perl5.19.x, where 19 is the minor release).</p>
+</li>
+</ul>
+<a class='view-head2' id="What-are-Perl-4%2c-Perl-5%2c-or-Perl-6%3f"></a><h3 class='h3' >What are Perl 4, Perl 5, or Perl 6?</h3>
+<p>In short, Perl 4 is the parent to both Perl 5 and Perl 6. Perl 5 is the older
+sibling, and though they are different languages, someone who knows one will
+spot many similarities in the other.</p>
+<p>The number after Perl (i.e. the 5 after Perl 5) is the major release
+of the perl interpreter as well as the version of the language. Each
+major version has significant differences that earlier versions cannot
+support.</p>
+<p>The current major release of Perl is Perl 5, first released in
+1994. It can run scripts from the previous major release, Perl 4
+(March 1991), but has significant differences.</p>
+<p>Perl 6 is a reinvention of Perl, it is a language in the same lineage but
+not compatible. The two are complementary, not mutually exclusive. Perl 6 is
+not meant to replace Perl 5, and vice versa. See <a href="#What-is-Perl-6%3f">What is Perl 6?</a> below
+to find out more.</p>
+<p>See <a href="perlhist.html">perlhist</a> for a history of Perl revisions.</p>
+<a class='view-head2' id="What-is-Perl-6%3f"></a><h3 class='h3' >What is Perl 6?</h3>
+<p>Perl 6 was <i>originally</i> described as the community's rewrite of Perl 5,
+however as the language evolved, it became clear that it is a separate
+language, but in the same language family as Perl 5.</p>
+<p>Perl 6 is not intended primarily as a replacement for Perl 5, but as its
+own thing - and libraries exist to allow you to call Perl 5 code from Perl
+6 programs and vice versa.</p>
+<p>Contrary to popular belief, Perl 6 and Perl 5 peacefully coexist with one
+another. Perl 6 has proven to be a fascinating source of ideas for those
+using Perl 5 (the <a href="https://search.cpan.org/perldoc/Moose">Moose</a> object system is a well-known example). There is
+overlap in the communities, and this overlap fosters the tradition of sharing
+and borrowing that have been instrumental to Perl's success.</p>
+<p>If you want to learn more about Perl 6 read the Perl 6 developers
+page at <a href="http://www.perl6.org/">http://www.perl6.org/</a> and get involved.</p>
+<p>"We're really serious about reinventing everything that needs reinventing."
+--Larry Wall</p>
+<a class='view-head2' id="How-stable-is-Perl%3f"></a><h3 class='h3' >How stable is Perl?</h3>
+<p>Production releases, which incorporate bug fixes and new functionality,
+are widely tested before release. Since the 5.000 release, we have
+averaged about one production release per year.</p>
+<p>The Perl development team occasionally make changes to the
+internal core of the language, but all possible efforts are made toward
+backward compatibility.</p>
+<a class='view-head2' id="How-often-are-new-versions-of-Perl-released%3f"></a><h3 class='h3' >How often are new versions of Perl released?</h3>
+<p>Recently, the plan has been to release a new version of Perl roughly every
+April, but getting the release right is more important than sticking rigidly to
+a calendar date, so the release date is somewhat flexible.  The historical
+release dates can be viewed at <a href="http://www.cpan.org/src/README.html">http://www.cpan.org/src/README.html</a>.</p>
+<p>Even numbered minor versions (5.14, 5.16, 5.18) are production versions, and
+odd numbered minor versions (5.15, 5.17, 5.19) are development versions. Unless
+you want to try out an experimental feature, you probably never want to install
+a development version of Perl.</p>
+<p>The Perl development team are called Perl 5 Porters, and their
+organization is described at <a href="http://perldoc.perl.org/perlpolicy.html">http://perldoc.perl.org/perlpolicy.html</a>.
+The organizational rules really just boil down to one: Larry is always
+right, even when he was wrong.</p>
+<a class='view-head2' id="Is-Perl-difficult-to-learn%3f"></a><h3 class='h3' >Is Perl difficult to learn?</h3>
+<p>No, Perl is easy to start <a class='link-to-page' href="http://learn.perl.org/">learning</a> --and easy to keep learning. It looks
+like most programming languages you're likely to have experience
+with, so if you've ever written a C program, an awk script, a shell
+script, or even a BASIC program, you're already partway there.</p>
+<p>Most tasks only require a small subset of the Perl language. One of
+the guiding mottos for Perl development is "there's more than one way
+to do it" (TMTOWTDI, sometimes pronounced "tim toady"). Perl's
+learning curve is therefore shallow (easy to learn) and long (there's
+a whole lot you can do if you really want).</p>
+<p>Finally, because Perl is frequently (but not always, and certainly not by
+definition) an interpreted language, you can write your programs and test
+them without an intermediate compilation step, allowing you to experiment
+and test/debug quickly and easily. This ease of experimentation flattens
+the learning curve even more.</p>
+<p>Things that make Perl easier to learn: Unix experience, almost any kind
+of programming experience, an understanding of regular expressions, and
+the ability to understand other people's code. If there's something you
+need to do, then it's probably already been done, and a working example is
+usually available for free. Don't forget Perl modules, either.
+They're discussed in Part 3 of this FAQ, along with <a class='link-to-page' href="http://www.cpan.org/">CPAN</a>, which is
+discussed in Part 2.</p>
+<a class='view-head2' id="How-does-Perl-compare-with-other-languages-like-Java%2c-Python%2c-REXX%2c-Scheme%2c-or-Tcl%3f"></a><h3 class='h3' >How does Perl compare with other languages like Java, Python, REXX, Scheme, or Tcl?</h3>
+<p>Perl can be used for almost any coding problem, even ones which require
+integrating specialist C code for extra speed. As with any tool it can
+be used well or badly. Perl has many strengths, and a few weaknesses,
+precisely which areas are good and bad is often a personal choice.</p>
+<p>When choosing a language you should also be influenced by the
+<a class='link-to-page' href="http://www.cpan.org/">resources</a>, <a class='link-to-page' href="http://www.cpantesters.org/">testing culture</a>
+and <a class='link-to-page' href="http://www.perl.org/community.html">community</a> which surrounds it.</p>
+<p>For comparisons to a specific language it is often best to create
+a small project in both languages and compare the results, make sure
+to use all the <a class='link-to-page' href="http://www.cpan.org/">resources</a> of each language,
+as a language is far more than just it's syntax.</p>
+<a class='view-head2' id="Can-I-do-%5btask%5d-in-Perl%3f"></a><h3 class='h3' >Can I do [task] in Perl?</h3>
+<p>Perl is flexible and extensible enough for you to use on virtually any
+task, from one-line file-processing tasks to large, elaborate systems.</p>
+<p>For many people, Perl serves as a great replacement for shell scripting.
+For others, it serves as a convenient, high-level replacement for most of
+what they'd program in low-level languages like C or C++. It's ultimately
+up to you (and possibly your management) which tasks you'll use Perl
+for and which you won't.</p>
+<p>If you have a library that provides an API, you can make any component
+of it available as just another Perl function or variable using a Perl
+extension written in C or C++ and dynamically linked into your main
+perl interpreter. You can also go the other direction, and write your
+main program in C or C++, and then link in some Perl code on the fly,
+to create a powerful application. See <a href="perlembed.html">perlembed</a>.</p>
+<p>That said, there will always be small, focused, special-purpose
+languages dedicated to a specific problem domain that are simply more
+convenient for certain kinds of problems. Perl tries to be all things
+to all people, but nothing special to anyone. Examples of specialized
+languages that come to mind include prolog and matlab.</p>
+<a class='view-head2' id="When-shouldn't-I-program-in-Perl%3f"></a><h3 class='h3' >When shouldn't I program in Perl?</h3>
+<p>One good reason is when you already have an existing
+application written in another language that's all done (and done
+well), or you have an application language specifically designed for a
+certain task (e.g. prolog, make).</p>
+<p>If you find that you need to speed up a specific part of a Perl
+application (not something you often need) you may want to use C,
+but you can access this from your Perl code with <a href="perlxs.html">perlxs</a>.</p>
+<a class='view-head2' id="What's-the-difference-between-%22perl%22-and-%22Perl%22%3f"></a><h3 class='h3' >What's the difference between "perl" and "Perl"?</h3>
+<p>"Perl" is the name of the language. Only the "P" is capitalized.
+The name of the interpreter (the program which runs the Perl script)
+is "perl" with a lowercase "p".</p>
+<p>You may or may not choose to follow this usage. But never write "PERL",
+because perl is not an acronym.</p>
+<a class='view-head2' id="What-is-a-JAPH%3f"></a><h3 class='h3' >What is a JAPH?</h3>
+<p>(contributed by brian d foy)</p>
+<p>JAPH stands for "Just another Perl hacker,", which Randal Schwartz used
+to sign email and usenet messages starting in the late 1980s. He
+previously used the phrase with many subjects ("Just another x hacker,"),
+so to distinguish his JAPH, he started to write them as Perl programs:</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="functions/print.html">print</a> <span class="q">&quot;Just another Perl hacker,&quot;</span><span class="sc">;</span></li></ol></pre><p>Other people picked up on this and started to write clever or obfuscated
+programs to produce the same output, spinning things quickly out of
+control while still providing hours of amusement for their creators and
+readers.</p>
+<p>CPAN has several JAPH programs at <a href="http://www.cpan.org/misc/japh">http://www.cpan.org/misc/japh</a>.</p>
+<a class='view-head2' id="How-can-I-convince-others-to-use-Perl%3f"></a><h3 class='h3' >How can I convince others to use Perl?</h3>
+<p>(contributed by brian d foy)</p>
+<p>Appeal to their self interest! If Perl is new (and thus scary) to them,
+find something that Perl can do to solve one of their problems. That
+might mean that Perl either saves them something (time, headaches, money)
+or gives them something (flexibility, power, testability).</p>
+<p>In general, the benefit of a language is closely related to the skill of
+the people using that language. If you or your team can be faster,
+better, and stronger through Perl, you'll deliver more value. Remember,
+people often respond better to what they get out of it. If you run
+into resistance, figure out what those people get out of the other
+choice and how Perl might satisfy that requirement.</p>
+<p>You don't have to worry about finding or paying for Perl; it's freely
+available and several popular operating systems come with Perl. Community
+support in places such as Perlmonks ( <a href="http://www.perlmonks.com">http://www.perlmonks.com</a> )
+and the various Perl mailing lists ( <a href="http://lists.perl.org">http://lists.perl.org</a> ) means that
+you can usually get quick answers to your problems.</p>
+<p>Finally, keep in mind that Perl might not be the right tool for every
+job. You're a much better advocate if your claims are reasonable and
+grounded in reality. Dogmatically advocating anything tends to make
+people discount your message. Be honest about possible disadvantages
+to your choice of Perl since any choice has trade-offs.</p>
+<p>You might find these links useful:</p>
+<ul>
+<li><a class='view-title' id="*-the-http%3a%2f%2fwww.perl.org%2fabout.html-manpage"></a><strong><a href="http://www.perl.org/about.html">http://www.perl.org/about.html</a></strong>
+</li>
+<li><a class='view-title' id="*-the-http%3a%2f%2fperltraining.com.au%2fwhyperl.html-manpage"></a><strong><a href="http://perltraining.com.au/whyperl.html">http://perltraining.com.au/whyperl.html</a></strong>
+</li>
+</ul>
+<a class='view-head1' id="AUTHOR-AND-COPYRIGHT"></a><h2 class='h2' >AUTHOR AND COPYRIGHT</h2>
+<p>Copyright (c) 1997-2010 Tom Christiansen, Nathan Torkington, and
+other authors as noted. All rights reserved.</p>
+<p>This documentation is free; you can redistribute it and/or modify it
+under the same terms as Perl itself.</p>
+<p>Irrespective of its distribution, all code examples here are in the public
+domain. You are permitted and encouraged to use this code and any
+derivatives thereof in your own programs for fun or for profit as you
+see fit. A simple comment in the code giving credit to the FAQ would
+be courteous but is not required.</p>
+
+
+
+
+      <ul><li><a href="#NAME">NAME</a></li><li><a href="#VERSION">VERSION</a></li><li><a href="#DESCRIPTION">DESCRIPTION</a></li><ul><li><a href="#What-is-Perl%3f">What is Perl?</a></li><li><a href="#Who-supports-Perl%3f-Who-develops-it%3f-Why-is-it-free%3f">Who supports Perl? Who develops it? Why is it free?</a></li><li><a href="#Which-version-of-Perl-should-I-use%3f">Which version of Perl should I use?</a></li><li><a href="#What-are-Perl-4%2c-Perl-5%2c-or-Perl-6%3f">What are Perl 4, Perl 5, or Perl 6?</a></li><li><a href="#What-is-Perl-6%3f">What is Perl 6?</a></li><li><a href="#How-stable-is-Perl%3f">How stable is Perl?</a></li><li><a href="#How-often-are-new-versions-of-Perl-released%3f">How often are new versions of Perl released?</a></li><li><a href="#Is-Perl-difficult-to-learn%3f">Is Perl difficult to learn?</a></li><li><a href="#How-does-Perl-compare-with-other-languages-like-Java%2c-Python%2c-REXX%2c-Scheme%2c-or-Tcl%3f">How does Perl compare with other languages like Java, Python, REXX, Scheme, or Tcl?</a></li><li><a href="#Can-I-do-%5btask%5d-in-Perl%3f">Can I do [task] in Perl?</a></li><li><a href="#When-shouldn't-I-program-in-Perl%3f">When shouldn't I program in Perl?</a></li><li><a href="#What's-the-difference-between-%22perl%22-and-%22Perl%22%3f">What's the difference between "perl" and "Perl"?</a></li><li><a href="#What-is-a-JAPH%3f">What is a JAPH?</a></li><li><a href="#How-can-I-convince-others-to-use-Perl%3f">How can I convince others to use Perl?</a></li></ul><li><a href="#AUTHOR-AND-COPYRIGHT">AUTHOR AND COPYRIGHT</a></li></ul>
+
+
+                  </div>
+                </article>
+              </div>
+            </div>
+          </main>
+        </div>
+           <footer class="footer row bg-light pt-5 pb-5">
+       <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+           <div class="row">
+               <div class="col-md-4">
+                   <ul class="list-unstyled">
+                       <li>
+                           <h4>Site info</h4>
+                       </li>
+                       <li>Docs mantained by
+                           <a href="//lists.perl.org/list/perl5-porters.html"
+                               rel="noopener">Perl 5 Porters</a>
+                       </li>
+                       <li>Perldoc site development sponsored by
+                           <a href="//opusvl.com" rel="noopener">
+                           <img style="margin: 20px 20px 5px 10px" class="opus-logo" src="/public/img/opusvl_logo.svg" alt="OpusVL Logo">
+                        </a>
+                    <li><span class="about_perldoc"><a href="//about.html">About PerlDOC</a></span>
+                    </li>
+                       </li>
+                   </ul>
+               </div>
+               <div class="col-md-8">
+                   <div class="row">
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Manuals</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.28.3/index-overview.html">Overview</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.28.3/index-tutorials.html">Tutorials</a>
+                               </li>
+                               <li>
+                                   <a href="/5.28.3/index-faq.html">FAQs</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.28.3/index-history.html">Changes</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Reference</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.28.3/index-language.html">Language</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.28.3/index-functions.html">Functions</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.28.3/perlop.html">Operators</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.28.3/perlvar.html">Variables</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Modules</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.28.3/index-modules-A.html">Modules</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.28.3/index-pragmas.html">Pragmas</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.28.3/index-utilities.html">Utilities</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Misc</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.28.3/index-licence.html">License</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.28.3/index-internals.html">Internals</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.28.3/index-platforms.html">Platforms</a>
+                               </li>
+                            <li>
+                                <a
+                                    href="/5.28.3/index-about.html">About</a>
+                            </li>
+                           </ul>
+                       </div>
+                   </div>
+               </div>
+               <div class=" col-12 footer-inf text-center">
+                   <small>perldoc.perl.org - Official documentation for the Perl
+                       programming language</small>
+               </div>
+           </div>
+       </div>
+   </footer>
+
+        	<div class="beta-wrapper beta-bottom-right ">
+		<div class="beta beta-blue  ">
+			<a class="beta-link "
+				href="//github.com/OpusVL/perldoc.perl.org/issues/new" rel="noopener">
+				<span class="beta-text">
+					This website is a Beta release.
+				</span>
+				<span class="beta-text">
+					For any issues please raise a ticket on GitHub
+				</span>
+			</a>
+		</div>
+	</div>
+
+        <script src="/public/js/main.min.js"></script>
+      </body>
+
+      </html>

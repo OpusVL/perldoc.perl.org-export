@@ -1,0 +1,1085 @@
+      
+      
+      
+      
+
+      <!DOCTYPE html>
+      <html lang="en">
+
+      <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Unicode::Normalize - perldoc.perl.org">
+        <link rel="icon" href="/public/img/favicon.ico">
+        <title>Unicode::Normalize - perldoc.perl.org</title>
+        <link href="/public/css/main.min.css" rel="stylesheet">
+        <link rel="canonical" href="/Unicode/Normalize.html">
+        <link
+          href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900'
+          rel='stylesheet' type='text/css'>
+        <script>
+          window.ga = window.ga || function () {
+            (ga.q = ga.q || []).push(arguments)
+          };
+          ga.l = +new Date;
+          ga('create', 'UA-1892152-2', 'auto'); // JJ's account
+          ga('create', 'UA-50555-3', 'auto', 'perlOrg'); // perl.org account
+          ga('require', 'outboundLinkTracker', {
+            events: ['click', 'auxclick', 'contextmenu'],
+          });
+          ga('require', 'maxScrollTracker');
+          ga('send', 'pageview');
+          ga('perlOrg.send', 'pageview');
+        </script>
+        <script async src="https://www.google-analytics.com/analytics.js">
+        </script>
+        <script async src="/public/js/tracking.min.js"></script>
+      </head>
+
+      <body class="body container-fluid ">
+        <div class="wrapper">
+
+          <nav
+    class="navbar navbar-dark bg-primary bg-perl fixed-top justify-content-between navbar-expand-lg">
+    <a href="#content" class="skippy sr-only sr-only-focusable">
+        <span class=' skippy-text'>Skip to main content</span>
+    </a>
+    <a class="navbar-brand" href="/">
+        <img class="logo" src="/public/img/logo_perl_doc.svg"
+            alt="Perl Documentation Logo" />
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse"
+        data-target="#navbar" aria-controls="navbar" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="navbar" class="collapse navbar-collapse ">
+        <ul class="navbar-nav ml-auto navbar-right">
+            <form class="nav-item dropdown search-wrapper">
+                <input type="text" id='searchinput' aria-describedby='navbarDropdown5'
+                    placeholder="Type query" class='search-input-field' value=''>
+
+                <button href="#" data-toggle='dropdown' type="button"
+                    aria-haspopup="true" aria-expanded='false' id="navbarDropdown5"
+                    class="nav-link dropdown-toggle search-link">
+                    <object tabindex='-1' focusable="false" class='search-icon'
+                        data="/public/img/search.svg" type="image/svg+xml"
+                        name='search icon'>search
+                        icon</object>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown5"
+                    id='search-results'>
+                    <p class='dropdown-item major-version'>
+                        No results
+                    </p>
+                </div>
+            </form>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown" href="#" class="nav-link dropdown-toggle"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Perl versions</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    
+                        <p class='dropdown-item major-version'>
+                            5.32
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.32.0/">5.32.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.30
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.3/">5.30.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.2/">5.30.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.1/">5.30.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.0/">5.30.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.28
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.3/">5.28.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.2/">5.28.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.1/">5.28.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.0/">5.28.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.26
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.3/">5.26.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.2/">5.26.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.1/">5.26.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.0/">5.26.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.24
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.4/">5.24.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.3/">5.24.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.2/">5.24.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.1/">5.24.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.0/">5.24.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.22
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.4/">5.22.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.3/">5.22.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.2/">5.22.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.1/">5.22.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.0/">5.22.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.20
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.3/">5.20.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.2/">5.20.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.1/">5.20.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.0/">5.20.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.18
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.4/">5.18.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.3/">5.18.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.2/">5.18.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.1/">5.18.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.0/">5.18.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.16
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.3/">5.16.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.2/">5.16.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.1/">5.16.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.0/">5.16.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.14
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.4/">5.14.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.3/">5.14.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.2/">5.14.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.1/">5.14.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.0/">5.14.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.12
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.5/">5.12.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.4/">5.12.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.3/">5.12.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.2/">5.12.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.1/">5.12.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.0/">5.12.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.10
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.1/">5.10.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.0/">5.10.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.8
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.9/">5.8.9</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.8/">5.8.8</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.7/">5.8.7</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.6/">5.8.6</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.5/">5.8.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.4/">5.8.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.3/">5.8.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.2/">5.8.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.1/">5.8.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.0/">5.8.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.6
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.2/">5.6.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.1/">5.6.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.0/">5.6.0</a>
+                        
+                        
+                    
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown1" href="#" class="dropdown-toggle nav-link"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Manuals</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                    <a class="dropdown-item"
+                        href="/5.28.2/index-overview.html">Overview</a>
+                    <a class="dropdown-item"
+                        href="/5.28.2/index-tutorials.html">Tutorials</a>
+                    <a class="dropdown-item"
+                        href="/5.28.2/index-faq.html">FAQs</a>
+                    <a class="dropdown-item"
+                        href="/5.28.2/index-history.html">Changes</a>
+                    <a class="dropdown-item"
+                        href="/5.28.2/index-licence.html">License</a>
+                    <a class="dropdown-item"
+                        href="/5.28.2/index-language.html">Language</a>
+                    <a class="dropdown-item"
+                        href="/5.28.2/index-functions.html">Functions</a>
+                    <a class="dropdown-item"
+                        href="/5.28.2/perlop.html">Operators</a>
+                    <a class="dropdown-item"
+                        href="/5.28.2/perlvar.html">Variables</a>
+                    <a class="dropdown-item"
+                        href="/5.28.2/index-pragmas.html">Pragmas</a>
+                    <a class="dropdown-item"
+                        href="/5.28.2/index-utilities.html">Utilities</a>
+                    <a class="dropdown-item"
+                        href="/5.28.2/index-internals.html">Internals</a>
+                    <a class="dropdown-item"
+                        href="/5.28.2/index-platforms.html">Platforms</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown3" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Modules</a>
+                <div aria-labelledby="navbarDropdown3"
+                    class="dropdown-menu letters-wrap">
+                    <!--<a class="dropdown-item"
+                        href="/5.28.2/index-modules.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.28.2/index-modules-by-cat.html">By
+                        Category</a>-->
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.28.2/index-modules-A.html">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.2/index-modules-B.html">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.2/index-modules-C.html">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.2/index-modules-D.html">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.2/index-modules-E.html">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.2/index-modules-F.html">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.2/index-modules-G.html">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.2/index-modules-H.html">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.2/index-modules-I.html">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.2/index-modules-J.html">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.2/index-modules-K.html">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.2/index-modules-L.html">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.2/index-modules-M.html">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.2/index-modules-N.html">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.2/index-modules-O.html">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.2/index-modules-P.html">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.2/index-modules-Q.html">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.2/index-modules-R.html">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.2/index-modules-S.html">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.2/index-modules-T.html">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.2/index-modules-U.html">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.2/index-modules-V.html">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.2/index-modules-W.html">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.2/index-modules-X.html">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.2/index-modules-Y.html">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.2/index-modules-Z.html">Z</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown4" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Functions</a>
+                <div aria-labelledby="navbarDropdown4"
+                    class="dropdown-menu letters-wrap">
+                    <a class="dropdown-item"
+                        href="/5.28.2/index-functions.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.28.2/index-functions-by-cat.html">By
+                        Category</a>
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.28.2/index-functions.html#A">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.2/index-functions.html#B">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.2/index-functions.html#C">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.2/index-functions.html#D">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.2/index-functions.html#E">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.2/index-functions.html#F">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.2/index-functions.html#G">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.2/index-functions.html#H">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.2/index-functions.html#I">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.2/index-functions.html#J">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.2/index-functions.html#K">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.2/index-functions.html#L">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.2/index-functions.html#M">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.2/index-functions.html#N">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.2/index-functions.html#O">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.2/index-functions.html#P">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.2/index-functions.html#Q">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.2/index-functions.html#R">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.2/index-functions.html#S">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.2/index-functions.html#T">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.2/index-functions.html#U">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.2/index-functions.html#V">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.2/index-functions.html#W">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.2/index-functions.html#X">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.2/index-functions.html#Y">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.28.2/index-functions.html#Z">Z</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!--/.nav-collapse -->
+</nav>
+
+
+          <main class="row main-content pb-5 pt-5" id='content'>
+            <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+              <div class="row">
+                <div class="col-sm-12">
+                  <div id="breadcrumbs">
+                      
+    <a href="../index.html">Home</a>&nbsp; &gt;
+    
+      
+        <a href="../index-modules-U.html">Core modules (U)</a> &gt;
+      
+    
+    Unicode::Normalize
+  
+
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <article class="col-sm-12 content">
+                  <div class="documentation-wrapper">
+                    <div id="perl_version">
+                      <h7 class='page-title'> Perl 5 version 28.2
+                        documentation</h7>
+                    </div>
+                    <h1>Unicode::Normalize</h1>
+
+
+  <!--    -->
+<ul><li><a href="#NAME">NAME</a></li><li><a href="#SYNOPSIS">SYNOPSIS</a></li><li><a href="#DESCRIPTION">DESCRIPTION</a></li><ul><li><a href="#Normalization-Forms">Normalization Forms</a></li><li><a href="#Decomposition-and-Composition">Decomposition and Composition</a></li><li><a href="#Quick-Check">Quick Check</a></li><li><a href="#Character-Data">Character Data</a></li></ul><li><a href="#EXPORT">EXPORT</a></li><li><a href="#CAVEATS">CAVEATS</a></li><li><a href="#AUTHOR">AUTHOR</a></li><li><a href="#LICENSE">LICENSE</a></li><li><a href="#SEE-ALSO">SEE ALSO</a></li></ul><a class='view-head1' id="NAME"></a><h2 class='h2' >NAME</h2>
+<p>Unicode::Normalize - Unicode Normalization Forms</p>
+<a class='view-head1' id="SYNOPSIS"></a><h2 class='h2' >SYNOPSIS</h2>
+<p>(1) using function names exported by default:</p>
+<pre class="verbatim"><ol><li>  <a class="l_k" href="../functions/use.html">use</a> <span class="w">Unicode::Normalize</span><span class="sc">;</span></li><li></li><li>  <span class="i">$NFD_string</span>  = <span class="i">NFD</span><span class="s">(</span><span class="i">$string</span><span class="s">)</span><span class="sc">;</span>  <span class="c"># Normalization Form D</span></li><li>  <span class="i">$NFC_string</span>  = <span class="i">NFC</span><span class="s">(</span><span class="i">$string</span><span class="s">)</span><span class="sc">;</span>  <span class="c"># Normalization Form C</span></li><li>  <span class="i">$NFKD_string</span> = <span class="i">NFKD</span><span class="s">(</span><span class="i">$string</span><span class="s">)</span><span class="sc">;</span> <span class="c"># Normalization Form KD</span></li><li>  <span class="i">$NFKC_string</span> = <span class="i">NFKC</span><span class="s">(</span><span class="i">$string</span><span class="s">)</span><span class="sc">;</span> <span class="c"># Normalization Form KC</span></li></ol></pre><p>(2) using function names exported on request:</p>
+<pre class="verbatim"><ol><li>  <a class="l_k" href="../functions/use.html">use</a> <span class="w">Unicode::Normalize</span> <span class="q">&#39;normalize&#39;</span><span class="sc">;</span></li><li></li><li>  <span class="i">$NFD_string</span>  = <span class="i">normalize</span><span class="s">(</span><span class="q">&#39;D&#39;</span><span class="cm">,</span>  <span class="i">$string</span><span class="s">)</span><span class="sc">;</span>  <span class="c"># Normalization Form D</span></li><li>  <span class="i">$NFC_string</span>  = <span class="i">normalize</span><span class="s">(</span><span class="q">&#39;C&#39;</span><span class="cm">,</span>  <span class="i">$string</span><span class="s">)</span><span class="sc">;</span>  <span class="c"># Normalization Form C</span></li><li>  <span class="i">$NFKD_string</span> = <span class="i">normalize</span><span class="s">(</span><span class="q">&#39;KD&#39;</span><span class="cm">,</span> <span class="i">$string</span><span class="s">)</span><span class="sc">;</span>  <span class="c"># Normalization Form KD</span></li><li>  <span class="i">$NFKC_string</span> = <span class="i">normalize</span><span class="s">(</span><span class="q">&#39;KC&#39;</span><span class="cm">,</span> <span class="i">$string</span><span class="s">)</span><span class="sc">;</span>  <span class="c"># Normalization Form KC</span></li></ol></pre><a class='view-head1' id="DESCRIPTION"></a><h2 class='h2' >DESCRIPTION</h2>
+<p>Parameters:</p>
+<p><code class="inline"><span class="i">$string</span></code>
+ is used as a string under character semantics (see <a href="../perlunicode.html">perlunicode</a>).</p>
+<p><code class="inline"><span class="i">$code_point</span></code>
+ should be an unsigned integer representing a Unicode code point.</p>
+<p>Note: Between XSUB and pure Perl, there is an incompatibility
+about the interpretation of <code class="inline"><span class="i">$code_point</span></code>
+ as a decimal number.
+XSUB converts <code class="inline"><span class="i">$code_point</span></code>
+ to an unsigned integer, but pure Perl does not.
+Do not use a floating point nor a negative sign in <code class="inline"><span class="i">$code_point</span></code>
+.</p>
+<a class='view-head2' id="Normalization-Forms"></a><h3 class='h3' >Normalization Forms</h3>
+<ul>
+<li><a class='view-title' id="%24NFD_string-%3d-NFD(%24string)"></a><strong><code class="inline"><span class="i">$NFD_string</span> = <span class="i">NFD</span><span class="s">(</span><span class="i">$string</span><span class="s">)</span></code>
+</strong>
+<p>It returns the Normalization Form D (formed by canonical decomposition).</p>
+</li>
+<li><a class='view-title' id="%24NFC_string-%3d-NFC(%24string)"></a><strong><code class="inline"><span class="i">$NFC_string</span> = <span class="i">NFC</span><span class="s">(</span><span class="i">$string</span><span class="s">)</span></code>
+</strong>
+<p>It returns the Normalization Form C (formed by canonical decomposition
+followed by canonical composition).</p>
+</li>
+<li><a class='view-title' id="%24NFKD_string-%3d-NFKD(%24string)"></a><strong><code class="inline"><span class="i">$NFKD_string</span> = <span class="i">NFKD</span><span class="s">(</span><span class="i">$string</span><span class="s">)</span></code>
+</strong>
+<p>It returns the Normalization Form KD (formed by compatibility decomposition).</p>
+</li>
+<li><a class='view-title' id="%24NFKC_string-%3d-NFKC(%24string)"></a><strong><code class="inline"><span class="i">$NFKC_string</span> = <span class="i">NFKC</span><span class="s">(</span><span class="i">$string</span><span class="s">)</span></code>
+</strong>
+<p>It returns the Normalization Form KC (formed by compatibility decomposition
+followed by <strong>canonical</strong> composition).</p>
+</li>
+<li><a class='view-title' id="%24FCD_string-%3d-FCD(%24string)"></a><strong><code class="inline"><span class="i">$FCD_string</span> = <span class="i">FCD</span><span class="s">(</span><span class="i">$string</span><span class="s">)</span></code>
+</strong>
+<p>If the given string is in FCD ("Fast C or D" form; cf. UTN #5),
+it returns the string without modification; otherwise it returns an FCD string.</p>
+<p>Note: FCD is not always unique, then plural forms may be equivalent
+each other. <code class="inline"><span class="i">FCD</span><span class="s">(</span><span class="s">)</span></code>
+ will return one of these equivalent forms.</p>
+</li>
+<li><a class='view-title' id="%24FCC_string-%3d-FCC(%24string)"></a><strong><code class="inline"><span class="i">$FCC_string</span> = <span class="i">FCC</span><span class="s">(</span><span class="i">$string</span><span class="s">)</span></code>
+</strong>
+<p>It returns the FCC form ("Fast C Contiguous"; cf. UTN #5).</p>
+<p>Note: FCC is unique, as well as four normalization forms (NF*).</p>
+</li>
+<li><a class='view-title' id="%24normalized_string-%3d-normalize(%24form_name%2c-%24string)"></a><strong><code class="inline"><span class="i">$normalized_string</span> = <span class="i">normalize</span><span class="s">(</span><span class="i">$form_name</span><span class="cm">,</span> <span class="i">$string</span><span class="s">)</span></code>
+</strong>
+<p>It returns the normalization form of <code class="inline"><span class="i">$form_name</span></code>
+.</p>
+<p>As <code class="inline"><span class="i">$form_name</span></code>
+, one of the following names must be given.</p>
+<pre class="verbatim"><ol><li>  <span class="q">&#39;C&#39;</span>  <a class="l_k" href="../functions/or.html">or</a> <span class="q">&#39;NFC&#39;</span>  <a class="l_k" href="../functions/for.html">for</a> <span class="w">Normalization</span> <span class="w">Form</span> <span class="w">C</span>  <span class="s">(</span><span class="w">UAX</span> <span class="c">#15)</span></li><li>  <span class="q">&#39;D&#39;</span>  <a class="l_k" href="../functions/or.html">or</a> <span class="q">&#39;NFD&#39;</span>  <a class="l_k" href="../functions/for.html">for</a> <span class="w">Normalization</span> <span class="w">Form</span> <span class="w">D</span>  <span class="s">(</span><span class="w">UAX</span> <span class="c">#15)</span></li><li>  <span class="q">&#39;KC&#39;</span> <a class="l_k" href="../functions/or.html">or</a> <span class="q">&#39;NFKC&#39;</span> <a class="l_k" href="../functions/for.html">for</a> <span class="w">Normalization</span> <span class="w">Form</span> <span class="w">KC</span> <span class="s">(</span><span class="w">UAX</span> <span class="c">#15)</span></li><li>  <span class="q">&#39;KD&#39;</span> <a class="l_k" href="../functions/or.html">or</a> <span class="q">&#39;NFKD&#39;</span> <a class="l_k" href="../functions/for.html">for</a> <span class="w">Normalization</span> <span class="w">Form</span> <span class="w">KD</span> <span class="s">(</span><span class="w">UAX</span> <span class="c">#15)</span></li><li></li><li>  <span class="q">&#39;FCD&#39;</span>          <a class="l_k" href="../functions/for.html">for</a> <span class="q">&quot;Fast C or D&quot;</span> <span class="w">Form</span>  <span class="s">(</span><span class="w">UTN</span> <span class="c">#5)</span></li><li>  <span class="q">&#39;FCC&#39;</span>          <a class="l_k" href="../functions/for.html">for</a> <span class="q">&quot;Fast C Contiguous&quot;</span> <span class="s">(</span><span class="w">UTN</span> <span class="c">#5)</span></li></ol></pre></li>
+</ul>
+<a class='view-head2' id="Decomposition-and-Composition"></a><h3 class='h3' >Decomposition and Composition</h3>
+<ul>
+<li><a class='view-title' id="%24decomposed_string-%3d-decompose(%24string-%5b%2c-%24useCompatMapping%5d)"></a><strong><code class="inline"><span class="i">$decomposed_string</span> = <span class="i">decompose</span><span class="s">(</span><span class="i">$string</span> [<span class="cm">,</span> <span class="i">$useCompatMapping</span>]<span class="s">)</span></code>
+</strong>
+<p>It returns the concatenation of the decomposition of each character
+in the string.</p>
+<p>If the second parameter (a boolean) is omitted or false,
+the decomposition is canonical decomposition;
+if the second parameter (a boolean) is true,
+the decomposition is compatibility decomposition.</p>
+<p>The string returned is not always in NFD/NFKD. Reordering may be required.</p>
+<pre class="verbatim"><ol><li> <span class="i">$NFD_string</span>  = <span class="i">reorder</span><span class="s">(</span><span class="i">decompose</span><span class="s">(</span><span class="i">$string</span><span class="s">)</span><span class="s">)</span><span class="sc">;</span>       <span class="c"># eq. to NFD()</span></li><li> <span class="i">$NFKD_string</span> = <span class="i">reorder</span><span class="s">(</span><span class="i">decompose</span><span class="s">(</span><span class="i">$string</span><span class="cm">,</span> <span class="w">TRUE</span><span class="s">)</span><span class="s">)</span><span class="sc">;</span> <span class="c"># eq. to NFKD()</span></li></ol></pre></li>
+<li><a class='view-title' id="%24reordered_string-%3d-reorder(%24string)"></a><strong><code class="inline"><span class="i">$reordered_string</span> = <span class="i">reorder</span><span class="s">(</span><span class="i">$string</span><span class="s">)</span></code>
+</strong>
+<p>It returns the result of reordering the combining characters
+according to Canonical Ordering Behavior.</p>
+<p>For example, when you have a list of NFD/NFKD strings,
+you can get the concatenated NFD/NFKD string from them, by saying</p>
+<pre class="verbatim"><ol><li>    <span class="i">$concat_NFD</span>  = <span class="i">reorder</span><span class="s">(</span><a class="l_k" href="../functions/join.html">join</a> <span class="q">&#39;&#39;</span><span class="cm">,</span> <span class="i">@NFD_strings</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="i">$concat_NFKD</span> = <span class="i">reorder</span><span class="s">(</span><a class="l_k" href="../functions/join.html">join</a> <span class="q">&#39;&#39;</span><span class="cm">,</span> <span class="i">@NFKD_strings</span><span class="s">)</span><span class="sc">;</span></li></ol></pre></li>
+<li><a class='view-title' id="%24composed_string-%3d-compose(%24string)"></a><strong><code class="inline"><span class="i">$composed_string</span> = <span class="i">compose</span><span class="s">(</span><span class="i">$string</span><span class="s">)</span></code>
+</strong>
+<p>It returns the result of canonical composition
+without applying any decomposition.</p>
+<p>For example, when you have a NFD/NFKD string,
+you can get its NFC/NFKC string, by saying</p>
+<pre class="verbatim"><ol><li>    <span class="i">$NFC_string</span>  = <span class="i">compose</span><span class="s">(</span><span class="i">$NFD_string</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="i">$NFKC_string</span> = <span class="i">compose</span><span class="s">(</span><span class="i">$NFKD_string</span><span class="s">)</span><span class="sc">;</span></li></ol></pre></li>
+<li><a class='view-title' id="(%24processed%2c-%24unprocessed)-%3d-splitOnLastStarter(%24normalized)"></a><strong><code class="inline"><span class="s">(</span><span class="i">$processed</span><span class="cm">,</span> <span class="i">$unprocessed</span><span class="s">)</span> = <span class="i">splitOnLastStarter</span><span class="s">(</span><span class="i">$normalized</span><span class="s">)</span></code>
+</strong>
+<p>It returns two strings: the first one, <code class="inline"><span class="i">$processed</span></code>
+, is a part
+before the last starter, and the second one, <code class="inline"><span class="i">$unprocessed</span></code>
+ is
+another part after the first part. A starter is a character having
+a combining class of zero (see UAX #15).</p>
+<p>Note that <code class="inline"><span class="i">$processed</span></code>
+ may be empty (when <code class="inline"><span class="i">$normalized</span></code>
+ contains no
+starter or starts with the last starter), and then <code class="inline"><span class="i">$unprocessed</span></code>
+
+should be equal to the entire <code class="inline"><span class="i">$normalized</span></code>
+.</p>
+<p>When you have a <code class="inline"><span class="i">$normalized</span></code>
+ string and an <code class="inline"><span class="i">$unnormalized</span></code>
+ string
+following it, a simple concatenation is wrong:</p>
+<pre class="verbatim"><ol><li> <span class="i">$concat</span> = <span class="i">$normalized</span> . <span class="i">normalize</span><span class="s">(</span><span class="i">$form</span><span class="cm">,</span> <span class="i">$unnormalized</span><span class="s">)</span><span class="sc">;</span> <span class="c"># wrong!</span></li></ol></pre><p>Instead of it, do like this:</p>
+<pre class="verbatim"><ol><li> <span class="s">(</span><span class="i">$processed</span><span class="cm">,</span> <span class="i">$unprocessed</span><span class="s">)</span> = <span class="i">splitOnLastStarter</span><span class="s">(</span><span class="i">$normalized</span><span class="s">)</span><span class="sc">;</span></li><li> <span class="i">$concat</span> = <span class="i">$processed</span> . <span class="i">normalize</span><span class="s">(</span><span class="i">$form</span><span class="cm">,</span><span class="i">$unprocessed</span>.<span class="i">$unnormalized</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p><code class="inline"><span class="i">splitOnLastStarter</span><span class="s">(</span><span class="s">)</span></code>
+ should be called with a pre-normalized parameter
+<code class="inline"><span class="i">$normalized</span></code>
+, that is in the same form as <code class="inline"><span class="i">$form</span></code>
+ you want.</p>
+<p>If you have an array of <code class="inline"><span class="i">@string</span></code>
+ that should be concatenated and then
+normalized, you can do like this:</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">$result</span> = <span class="q">&quot;&quot;</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">$unproc</span> = <span class="q">&quot;&quot;</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/foreach.html">foreach</a> <a class="l_k" href="../functions/my.html">my</a> <span class="i">$str</span> <span class="s">(</span><span class="i">@string</span><span class="s">)</span> <span class="s">{</span></li><li>        <span class="i">$unproc</span> .= <span class="i">$str</span><span class="sc">;</span></li><li>        <a class="l_k" href="../functions/my.html">my</a> <span class="i">$n</span> = <span class="i">normalize</span><span class="s">(</span><span class="i">$form</span><span class="cm">,</span> <span class="i">$unproc</span><span class="s">)</span><span class="sc">;</span></li><li>        <a class="l_k" href="../functions/my.html">my</a><span class="s">(</span><span class="i">$p</span><span class="cm">,</span> <span class="i">$u</span><span class="s">)</span> = <span class="i">splitOnLastStarter</span><span class="s">(</span><span class="i">$n</span><span class="s">)</span><span class="sc">;</span></li><li>        <span class="i">$result</span> .= <span class="i">$p</span><span class="sc">;</span></li><li>        <span class="i">$unproc</span>  = <span class="i">$u</span><span class="sc">;</span></li><li>    <span class="s">}</span></li><li>    <span class="i">$result</span> .= <span class="i">$unproc</span><span class="sc">;</span></li><li>    <span class="c"># instead of normalize($form, join(&#39;&#39;, @string))</span></li></ol></pre></li>
+<li><a class='view-title' id="%24processed-%3d-normalize_partial(%24form%2c-%24unprocessed)"></a><strong><code class="inline"><span class="i">$processed</span> = <span class="i">normalize_partial</span><span class="s">(</span><span class="i">$form</span><span class="cm">,</span> <span class="i">$unprocessed</span><span class="s">)</span></code>
+</strong>
+<p>A wrapper for the combination of <code class="inline"><span class="i">normalize</span><span class="s">(</span><span class="s">)</span></code>
+ and <code class="inline"><span class="i">splitOnLastStarter</span><span class="s">(</span><span class="s">)</span></code>
+.
+Note that <code class="inline"><span class="i">$unprocessed</span></code>
+ will be modified as a side-effect.</p>
+<p>If you have an array of <code class="inline"><span class="i">@string</span></code>
+ that should be concatenated and then
+normalized, you can do like this:</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">$result</span> = <span class="q">&quot;&quot;</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">$unproc</span> = <span class="q">&quot;&quot;</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/foreach.html">foreach</a> <a class="l_k" href="../functions/my.html">my</a> <span class="i">$str</span> <span class="s">(</span><span class="i">@string</span><span class="s">)</span> <span class="s">{</span></li><li>        <span class="i">$unproc</span> .= <span class="i">$str</span><span class="sc">;</span></li><li>        <span class="i">$result</span> .= <span class="i">normalize_partial</span><span class="s">(</span><span class="i">$form</span><span class="cm">,</span> <span class="i">$unproc</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="s">}</span></li><li>    <span class="i">$result</span> .= <span class="i">$unproc</span><span class="sc">;</span></li><li>    <span class="c"># instead of normalize($form, join(&#39;&#39;, @string))</span></li></ol></pre></li>
+<li><a class='view-title' id="%24processed-%3d-NFD_partial(%24unprocessed)"></a><strong><code class="inline"><span class="i">$processed</span> = <span class="i">NFD_partial</span><span class="s">(</span><span class="i">$unprocessed</span><span class="s">)</span></code>
+</strong>
+<p>It does like <code class="inline"><span class="i">normalize_partial</span><span class="s">(</span><span class="q">&#39;NFD&#39;</span><span class="cm">,</span> <span class="i">$unprocessed</span><span class="s">)</span></code>
+.
+Note that <code class="inline"><span class="i">$unprocessed</span></code>
+ will be modified as a side-effect.</p>
+</li>
+<li><a class='view-title' id="%24processed-%3d-NFC_partial(%24unprocessed)"></a><strong><code class="inline"><span class="i">$processed</span> = <span class="i">NFC_partial</span><span class="s">(</span><span class="i">$unprocessed</span><span class="s">)</span></code>
+</strong>
+<p>It does like <code class="inline"><span class="i">normalize_partial</span><span class="s">(</span><span class="q">&#39;NFC&#39;</span><span class="cm">,</span> <span class="i">$unprocessed</span><span class="s">)</span></code>
+.
+Note that <code class="inline"><span class="i">$unprocessed</span></code>
+ will be modified as a side-effect.</p>
+</li>
+<li><a class='view-title' id="%24processed-%3d-NFKD_partial(%24unprocessed)"></a><strong><code class="inline"><span class="i">$processed</span> = <span class="i">NFKD_partial</span><span class="s">(</span><span class="i">$unprocessed</span><span class="s">)</span></code>
+</strong>
+<p>It does like <code class="inline"><span class="i">normalize_partial</span><span class="s">(</span><span class="q">&#39;NFKD&#39;</span><span class="cm">,</span> <span class="i">$unprocessed</span><span class="s">)</span></code>
+.
+Note that <code class="inline"><span class="i">$unprocessed</span></code>
+ will be modified as a side-effect.</p>
+</li>
+<li><a class='view-title' id="%24processed-%3d-NFKC_partial(%24unprocessed)"></a><strong><code class="inline"><span class="i">$processed</span> = <span class="i">NFKC_partial</span><span class="s">(</span><span class="i">$unprocessed</span><span class="s">)</span></code>
+</strong>
+<p>It does like <code class="inline"><span class="i">normalize_partial</span><span class="s">(</span><span class="q">&#39;NFKC&#39;</span><span class="cm">,</span> <span class="i">$unprocessed</span><span class="s">)</span></code>
+.
+Note that <code class="inline"><span class="i">$unprocessed</span></code>
+ will be modified as a side-effect.</p>
+</li>
+</ul>
+<a class='view-head2' id="Quick-Check"></a><h3 class='h3' >Quick Check</h3>
+<p>(see Annex 8, UAX #15; and <i>DerivedNormalizationProps.txt</i>)</p>
+<p>The following functions check whether the string is in that normalization form.</p>
+<p>The result returned will be one of the following:</p>
+<pre class="verbatim"><ol><li>    <span class="w">YES</span>     <span class="w">The</span> <span class="w">string</span> <span class="w">is</span> <span class="w">in</span> <span class="w">that</span> <span class="w">normalization</span> <span class="w">form</span>.</li><li>    <span class="w">NO</span>      <span class="w">The</span> <span class="w">string</span> <span class="w">is</span> <a class="l_k" href="../functions/not.html">not</a> <span class="w">in</span> <span class="w">that</span> <span class="w">normalization</span> <span class="w">form</span>.</li><li>    <span class="w">MAYBE</span>   <span class="w">Dubious</span>. <span class="w">Maybe</span> <span class="w">yes</span><span class="cm">,</span> <span class="w">maybe</span> <a class="l_k" href="../functions/no.html">no</a>.</li></ol></pre><ul>
+<li><a class='view-title' id="%24result-%3d-checkNFD(%24string)"></a><strong><code class="inline"><span class="i">$result</span> = <span class="i">checkNFD</span><span class="s">(</span><span class="i">$string</span><span class="s">)</span></code>
+</strong>
+<p>It returns true (<code class="inline"><span class="n">1</span></code>
+) if <code class="inline"><span class="w">YES</span></code>
+; false (<code class="inline"><span class="w">empty</span> <span class="w">string</span></code>
+) if <code class="inline"><span class="w">NO</span></code>
+.</p>
+</li>
+<li><a class='view-title' id="%24result-%3d-checkNFC(%24string)"></a><strong><code class="inline"><span class="i">$result</span> = <span class="i">checkNFC</span><span class="s">(</span><span class="i">$string</span><span class="s">)</span></code>
+</strong>
+<p>It returns true (<code class="inline"><span class="n">1</span></code>
+) if <code class="inline"><span class="w">YES</span></code>
+; false (<code class="inline"><span class="w">empty</span> <span class="w">string</span></code>
+) if <code class="inline"><span class="w">NO</span></code>
+;
+<code class="inline"><a class="l_k" href="../functions/undef.html">undef</a></code> if <code class="inline"><span class="w">MAYBE</span></code>
+.</p>
+</li>
+<li><a class='view-title' id="%24result-%3d-checkNFKD(%24string)"></a><strong><code class="inline"><span class="i">$result</span> = <span class="i">checkNFKD</span><span class="s">(</span><span class="i">$string</span><span class="s">)</span></code>
+</strong>
+<p>It returns true (<code class="inline"><span class="n">1</span></code>
+) if <code class="inline"><span class="w">YES</span></code>
+; false (<code class="inline"><span class="w">empty</span> <span class="w">string</span></code>
+) if <code class="inline"><span class="w">NO</span></code>
+.</p>
+</li>
+<li><a class='view-title' id="%24result-%3d-checkNFKC(%24string)"></a><strong><code class="inline"><span class="i">$result</span> = <span class="i">checkNFKC</span><span class="s">(</span><span class="i">$string</span><span class="s">)</span></code>
+</strong>
+<p>It returns true (<code class="inline"><span class="n">1</span></code>
+) if <code class="inline"><span class="w">YES</span></code>
+; false (<code class="inline"><span class="w">empty</span> <span class="w">string</span></code>
+) if <code class="inline"><span class="w">NO</span></code>
+;
+<code class="inline"><a class="l_k" href="../functions/undef.html">undef</a></code> if <code class="inline"><span class="w">MAYBE</span></code>
+.</p>
+</li>
+<li><a class='view-title' id="%24result-%3d-checkFCD(%24string)"></a><strong><code class="inline"><span class="i">$result</span> = <span class="i">checkFCD</span><span class="s">(</span><span class="i">$string</span><span class="s">)</span></code>
+</strong>
+<p>It returns true (<code class="inline"><span class="n">1</span></code>
+) if <code class="inline"><span class="w">YES</span></code>
+; false (<code class="inline"><span class="w">empty</span> <span class="w">string</span></code>
+) if <code class="inline"><span class="w">NO</span></code>
+.</p>
+</li>
+<li><a class='view-title' id="%24result-%3d-checkFCC(%24string)"></a><strong><code class="inline"><span class="i">$result</span> = <span class="i">checkFCC</span><span class="s">(</span><span class="i">$string</span><span class="s">)</span></code>
+</strong>
+<p>It returns true (<code class="inline"><span class="n">1</span></code>
+) if <code class="inline"><span class="w">YES</span></code>
+; false (<code class="inline"><span class="w">empty</span> <span class="w">string</span></code>
+) if <code class="inline"><span class="w">NO</span></code>
+;
+<code class="inline"><a class="l_k" href="../functions/undef.html">undef</a></code> if <code class="inline"><span class="w">MAYBE</span></code>
+.</p>
+<p>Note: If a string is not in FCD, it must not be in FCC.
+So <code class="inline"><span class="i">checkFCC</span><span class="s">(</span><span class="i">$not_FCD_string</span><span class="s">)</span></code>
+ should return <code class="inline"><span class="w">NO</span></code>
+.</p>
+</li>
+<li><a class='view-title' id="%24result-%3d-check(%24form_name%2c-%24string)"></a><strong><code class="inline"><span class="i">$result</span> = <span class="i">check</span><span class="s">(</span><span class="i">$form_name</span><span class="cm">,</span> <span class="i">$string</span><span class="s">)</span></code>
+</strong>
+<p>It returns true (<code class="inline"><span class="n">1</span></code>
+) if <code class="inline"><span class="w">YES</span></code>
+; false (<code class="inline"><span class="w">empty</span> <span class="w">string</span></code>
+) if <code class="inline"><span class="w">NO</span></code>
+;
+<code class="inline"><a class="l_k" href="../functions/undef.html">undef</a></code> if <code class="inline"><span class="w">MAYBE</span></code>
+.</p>
+<p>As <code class="inline"><span class="i">$form_name</span></code>
+, one of the following names must be given.</p>
+<pre class="verbatim"><ol><li>  <span class="q">&#39;C&#39;</span>  <a class="l_k" href="../functions/or.html">or</a> <span class="q">&#39;NFC&#39;</span>  <a class="l_k" href="../functions/for.html">for</a> <span class="w">Normalization</span> <span class="w">Form</span> <span class="w">C</span>  <span class="s">(</span><span class="w">UAX</span> <span class="c">#15)</span></li><li>  <span class="q">&#39;D&#39;</span>  <a class="l_k" href="../functions/or.html">or</a> <span class="q">&#39;NFD&#39;</span>  <a class="l_k" href="../functions/for.html">for</a> <span class="w">Normalization</span> <span class="w">Form</span> <span class="w">D</span>  <span class="s">(</span><span class="w">UAX</span> <span class="c">#15)</span></li><li>  <span class="q">&#39;KC&#39;</span> <a class="l_k" href="../functions/or.html">or</a> <span class="q">&#39;NFKC&#39;</span> <a class="l_k" href="../functions/for.html">for</a> <span class="w">Normalization</span> <span class="w">Form</span> <span class="w">KC</span> <span class="s">(</span><span class="w">UAX</span> <span class="c">#15)</span></li><li>  <span class="q">&#39;KD&#39;</span> <a class="l_k" href="../functions/or.html">or</a> <span class="q">&#39;NFKD&#39;</span> <a class="l_k" href="../functions/for.html">for</a> <span class="w">Normalization</span> <span class="w">Form</span> <span class="w">KD</span> <span class="s">(</span><span class="w">UAX</span> <span class="c">#15)</span></li><li></li><li>  <span class="q">&#39;FCD&#39;</span>          <a class="l_k" href="../functions/for.html">for</a> <span class="q">&quot;Fast C or D&quot;</span> <span class="w">Form</span>  <span class="s">(</span><span class="w">UTN</span> <span class="c">#5)</span></li><li>  <span class="q">&#39;FCC&#39;</span>          <a class="l_k" href="../functions/for.html">for</a> <span class="q">&quot;Fast C Contiguous&quot;</span> <span class="s">(</span><span class="w">UTN</span> <span class="c">#5)</span></li></ol></pre></li>
+</ul>
+<p><strong>Note</strong></p>
+<p>In the cases of NFD, NFKD, and FCD, the answer must be
+either <code class="inline"><span class="w">YES</span></code>
+ or <code class="inline"><span class="w">NO</span></code>
+. The answer <code class="inline"><span class="w">MAYBE</span></code>
+ may be returned
+in the cases of NFC, NFKC, and FCC.</p>
+<p>A <code class="inline"><span class="w">MAYBE</span></code>
+ string should contain at least one combining character
+or the like. For example, <code class="inline"><span class="w">COMBINING</span> <span class="w">ACUTE</span> <span class="w">ACCENT</span></code>
+ has
+the MAYBE_NFC/MAYBE_NFKC property.</p>
+<p>Both <code class="inline"><span class="i">checkNFC</span><span class="s">(</span><span class="q">&quot;A\N{COMBINING ACUTE ACCENT}&quot;</span><span class="s">)</span></code>
+
+and <code class="inline"><span class="i">checkNFC</span><span class="s">(</span><span class="q">&quot;B\N{COMBINING ACUTE ACCENT}&quot;</span><span class="s">)</span></code>
+ will return <code class="inline"><span class="w">MAYBE</span></code>
+.
+<code class="inline"><span class="q">&quot;A\N{COMBINING ACUTE ACCENT}&quot;</span></code>
+ is not in NFC
+(its NFC is <code class="inline"><span class="q">&quot;\N{LATIN CAPITAL LETTER A WITH ACUTE}&quot;</span></code>
+),
+while <code class="inline"><span class="q">&quot;B\N{COMBINING ACUTE ACCENT}&quot;</span></code>
+ is in NFC.</p>
+<p>If you want to check exactly, compare the string with its NFC/NFKC/FCC.</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/if.html">if</a> <span class="s">(</span><span class="i">$string</span> <a class="l_k" href="../functions/eq.html">eq</a> <span class="i">NFC</span><span class="s">(</span><span class="i">$string</span><span class="s">)</span><span class="s">)</span> <span class="s">{</span></li><li>        <span class="c"># $string is exactly normalized in NFC;</span></li><li>    <span class="s">}</span> <a class="l_k" href="../functions/else.html">else</a> <span class="s">{</span></li><li>        <span class="c"># $string is not normalized in NFC;</span></li><li>    <span class="s">}</span></li><li></li><li>    <a class="l_k" href="../functions/if.html">if</a> <span class="s">(</span><span class="i">$string</span> <a class="l_k" href="../functions/eq.html">eq</a> <span class="i">NFKC</span><span class="s">(</span><span class="i">$string</span><span class="s">)</span><span class="s">)</span> <span class="s">{</span></li><li>        <span class="c"># $string is exactly normalized in NFKC;</span></li><li>    <span class="s">}</span> <a class="l_k" href="../functions/else.html">else</a> <span class="s">{</span></li><li>        <span class="c"># $string is not normalized in NFKC;</span></li><li>    <span class="s">}</span></li></ol></pre><a class='view-head2' id="Character-Data"></a><h3 class='h3' >Character Data</h3>
+<p>These functions are interface of character data used internally.
+If you want only to get Unicode normalization forms, you don't need
+call them yourself.</p>
+<ul>
+<li><a class='view-title' id="%24canonical_decomposition-%3d-getCanon(%24code_point)"></a><strong><code class="inline"><span class="i">$canonical_decomposition</span> = <span class="i">getCanon</span><span class="s">(</span><span class="i">$code_point</span><span class="s">)</span></code>
+</strong>
+<p>If the character is canonically decomposable (including Hangul Syllables),
+it returns the (full) canonical decomposition as a string.
+Otherwise it returns <code class="inline"><a class="l_k" href="../functions/undef.html">undef</a></code>.</p>
+<p><strong>Note:</strong> According to the Unicode standard, the canonical decomposition
+of the character that is not canonically decomposable is same as
+the character itself.</p>
+</li>
+<li><a class='view-title' id="%24compatibility_decomposition-%3d-getCompat(%24code_point)"></a><strong><code class="inline"><span class="i">$compatibility_decomposition</span> = <span class="i">getCompat</span><span class="s">(</span><span class="i">$code_point</span><span class="s">)</span></code>
+</strong>
+<p>If the character is compatibility decomposable (including Hangul Syllables),
+it returns the (full) compatibility decomposition as a string.
+Otherwise it returns <code class="inline"><a class="l_k" href="../functions/undef.html">undef</a></code>.</p>
+<p><strong>Note:</strong> According to the Unicode standard, the compatibility decomposition
+of the character that is not compatibility decomposable is same as
+the character itself.</p>
+</li>
+<li><a class='view-title' id="%24code_point_composite-%3d-getComposite(%24code_point_here%2c-%24code_point_next)"></a><strong><code class="inline"><span class="i">$code_point_composite</span> = <span class="i">getComposite</span><span class="s">(</span><span class="i">$code_point_here</span><span class="cm">,</span> <span class="i">$code_point_next</span><span class="s">)</span></code>
+</strong>
+<p>If two characters here and next (as code points) are composable
+(including Hangul Jamo/Syllables and Composition Exclusions),
+it returns the code point of the composite.</p>
+<p>If they are not composable, it returns <code class="inline"><a class="l_k" href="../functions/undef.html">undef</a></code>.</p>
+</li>
+<li><a class='view-title' id="%24combining_class-%3d-getCombinClass(%24code_point)"></a><strong><code class="inline"><span class="i">$combining_class</span> = <span class="i">getCombinClass</span><span class="s">(</span><span class="i">$code_point</span><span class="s">)</span></code>
+</strong>
+<p>It returns the combining class (as an integer) of the character.</p>
+</li>
+<li><a class='view-title' id="%24may_be_composed_with_prev_char-%3d-isComp2nd(%24code_point)"></a><strong><code class="inline"><span class="i">$may_be_composed_with_prev_char</span> = <span class="i">isComp2nd</span><span class="s">(</span><span class="i">$code_point</span><span class="s">)</span></code>
+</strong>
+<p>It returns a boolean whether the character of the specified codepoint
+may be composed with the previous one in a certain composition
+(including Hangul Compositions, but excluding
+Composition Exclusions and Non-Starter Decompositions).</p>
+</li>
+<li><a class='view-title' id="%24is_exclusion-%3d-isExclusion(%24code_point)"></a><strong><code class="inline"><span class="i">$is_exclusion</span> = <span class="i">isExclusion</span><span class="s">(</span><span class="i">$code_point</span><span class="s">)</span></code>
+</strong>
+<p>It returns a boolean whether the code point is a composition exclusion.</p>
+</li>
+<li><a class='view-title' id="%24is_singleton-%3d-isSingleton(%24code_point)"></a><strong><code class="inline"><span class="i">$is_singleton</span> = <span class="i">isSingleton</span><span class="s">(</span><span class="i">$code_point</span><span class="s">)</span></code>
+</strong>
+<p>It returns a boolean whether the code point is a singleton</p>
+</li>
+<li><a class='view-title' id="%24is_non_starter_decomposition-%3d-isNonStDecomp(%24code_point)"></a><strong><code class="inline"><span class="i">$is_non_starter_decomposition</span> = <span class="i">isNonStDecomp</span><span class="s">(</span><span class="i">$code_point</span><span class="s">)</span></code>
+</strong>
+<p>It returns a boolean whether the code point has Non-Starter Decomposition.</p>
+</li>
+<li><a class='view-title' id="%24is_Full_Composition_Exclusion-%3d-isComp_Ex(%24code_point)"></a><strong><code class="inline"><span class="i">$is_Full_Composition_Exclusion</span> = <span class="i">isComp_Ex</span><span class="s">(</span><span class="i">$code_point</span><span class="s">)</span></code>
+</strong>
+<p>It returns a boolean of the derived property Comp_Ex
+(Full_Composition_Exclusion). This property is generated from
+Composition Exclusions + Singletons + Non-Starter Decompositions.</p>
+</li>
+<li><a class='view-title' id="%24NFD_is_NO-%3d-isNFD_NO(%24code_point)"></a><strong><code class="inline"><span class="i">$NFD_is_NO</span> = <span class="i">isNFD_NO</span><span class="s">(</span><span class="i">$code_point</span><span class="s">)</span></code>
+</strong>
+<p>It returns a boolean of the derived property NFD_NO
+(NFD_Quick_Check=No).</p>
+</li>
+<li><a class='view-title' id="%24NFC_is_NO-%3d-isNFC_NO(%24code_point)"></a><strong><code class="inline"><span class="i">$NFC_is_NO</span> = <span class="i">isNFC_NO</span><span class="s">(</span><span class="i">$code_point</span><span class="s">)</span></code>
+</strong>
+<p>It returns a boolean of the derived property NFC_NO
+(NFC_Quick_Check=No).</p>
+</li>
+<li><a class='view-title' id="%24NFC_is_MAYBE-%3d-isNFC_MAYBE(%24code_point)"></a><strong><code class="inline"><span class="i">$NFC_is_MAYBE</span> = <span class="i">isNFC_MAYBE</span><span class="s">(</span><span class="i">$code_point</span><span class="s">)</span></code>
+</strong>
+<p>It returns a boolean of the derived property NFC_MAYBE
+(NFC_Quick_Check=Maybe).</p>
+</li>
+<li><a class='view-title' id="%24NFKD_is_NO-%3d-isNFKD_NO(%24code_point)"></a><strong><code class="inline"><span class="i">$NFKD_is_NO</span> = <span class="i">isNFKD_NO</span><span class="s">(</span><span class="i">$code_point</span><span class="s">)</span></code>
+</strong>
+<p>It returns a boolean of the derived property NFKD_NO
+(NFKD_Quick_Check=No).</p>
+</li>
+<li><a class='view-title' id="%24NFKC_is_NO-%3d-isNFKC_NO(%24code_point)"></a><strong><code class="inline"><span class="i">$NFKC_is_NO</span> = <span class="i">isNFKC_NO</span><span class="s">(</span><span class="i">$code_point</span><span class="s">)</span></code>
+</strong>
+<p>It returns a boolean of the derived property NFKC_NO
+(NFKC_Quick_Check=No).</p>
+</li>
+<li><a class='view-title' id="%24NFKC_is_MAYBE-%3d-isNFKC_MAYBE(%24code_point)"></a><strong><code class="inline"><span class="i">$NFKC_is_MAYBE</span> = <span class="i">isNFKC_MAYBE</span><span class="s">(</span><span class="i">$code_point</span><span class="s">)</span></code>
+</strong>
+<p>It returns a boolean of the derived property NFKC_MAYBE
+(NFKC_Quick_Check=Maybe).</p>
+</li>
+</ul>
+<a class='view-head1' id="EXPORT"></a><h2 class='h2' >EXPORT</h2>
+<p><code class="inline"><span class="w">NFC</span></code>
+, <code class="inline"><span class="w">NFD</span></code>
+, <code class="inline"><span class="w">NFKC</span></code>
+, <code class="inline"><span class="w">NFKD</span></code>
+: by default.</p>
+<p><code class="inline"><span class="w">normalize</span></code>
+ and other some functions: on request.</p>
+<a class='view-head1' id="CAVEATS"></a><h2 class='h2' >CAVEATS</h2>
+<ul>
+<li><a class='view-title' id="Perl's-version-vs.-Unicode-version"></a><strong>Perl's version vs. Unicode version</strong>
+<p>Since this module refers to perl core's Unicode database in the directory
+<i>/lib/unicore</i> (or formerly <i>/lib/unicode</i>), the Unicode version of
+normalization implemented by this module depends on what has been
+compiled into your perl.  The following table lists the default Unicode
+version that comes with various perl versions.  (It is possible to change
+the Unicode version in any perl version to be any earlier Unicode version,
+so one could cause Unicode 3.2 to be used in any perl version starting with
+5.8.0.  Read <i><code class="inline"><span class="i">$Config</span>{<span class="w">privlib</span>}</code>
+/unicore/README.perl</i> for details.</p>
+<pre class="verbatim"><ol><li>    <span class="w">perl&#39;s</span> <span class="w">version</span>     <span class="w">implemented</span> <span class="w">Unicode</span> <span class="w">version</span></li><li>       <span class="v">5.6.1</span>              <span class="v">3.0.1</span></li><li>       <span class="v">5.7.2</span>              <span class="v">3.1.0</span></li><li>       <span class="v">5.7.3</span>              <span class="v">3.1.1</span> <span class="s">(</span><span class="w">normalization</span> <span class="w">is</span> <span class="w">same</span> <span class="w">as</span> <span class="v">3.1.0</span><span class="s">)</span></li><li>       <span class="v">5.8.0</span>              <span class="v">3.2.0</span></li><li>         <span class="v">5.8.1</span>-<span class="v">5.8.3</span>      <span class="v">4.0.0</span></li><li>         <span class="v">5.8.4</span>-<span class="v">5.8.6</span>      <span class="v">4.0.1</span> <span class="s">(</span><span class="w">normalization</span> <span class="w">is</span> <span class="w">same</span> <span class="w">as</span> <span class="v">4.0.0</span><span class="s">)</span></li><li>         <span class="v">5.8.7</span>-<span class="v">5.8.8</span>      <span class="v">4.1.0</span></li><li>       <span class="v">5.10.0</span>             <span class="v">5.0.0</span></li><li>        <span class="v">5.8.9</span><span class="cm">,</span> <span class="v">5.10.1</span>     <span class="v">5.1.0</span></li><li>       <span class="n">5.12</span>.<span class="w">x</span>             <span class="v">5.2.0</span></li><li>       <span class="n">5.14</span>.<span class="w">x</span>             <span class="v">6.0.0</span></li><li>       <span class="n">5.16</span>.<span class="w">x</span>             <span class="v">6.1.0</span></li><li>       <span class="n">5.18</span>.<span class="w">x</span>             <span class="v">6.2.0</span></li><li>       <span class="n">5.20</span>.<span class="w">x</span>             <span class="v">6.3.0</span></li><li>       <span class="n">5.22</span>.<span class="w">x</span>             <span class="v">7.0.0</span></li></ol></pre></li>
+<li><a class='view-title' id="Correction-of-decomposition-mapping"></a><strong>Correction of decomposition mapping</strong>
+<p>In older Unicode versions, a small number of characters (all of which are
+CJK compatibility ideographs as far as they have been found) may have
+an erroneous decomposition mapping (see <i>NormalizationCorrections.txt</i>).
+Anyhow, this module will neither refer to <i>NormalizationCorrections.txt</i>
+nor provide any specific version of normalization. Therefore this module
+running on an older perl with an older Unicode database may use
+the erroneous decomposition mapping blindly conforming to the Unicode database.</p>
+</li>
+<li><a class='view-title' id="Revised-definition-of-canonical-composition"></a><strong>Revised definition of canonical composition</strong>
+<p>In Unicode 4.1.0, the definition D2 of canonical composition (which
+affects NFC and NFKC) has been changed (see Public Review Issue #29
+and recent UAX #15). This module has used the newer definition
+since the version 0.07 (Oct 31, 2001).
+This module will not support the normalization according to the older
+definition, even if the Unicode version implemented by perl is
+lower than 4.1.0.</p>
+</li>
+</ul>
+<a class='view-head1' id="AUTHOR"></a><h2 class='h2' >AUTHOR</h2>
+<p>SADAHIRO Tomoyuki &lt;SADAHIRO@cpan.org&gt;</p>
+<p>Currently maintained by &lt;perl5-porters@perl.org&gt;</p>
+<p>Copyright(C) 2001-2012, SADAHIRO Tomoyuki. Japan. All rights reserved.</p>
+<a class='view-head1' id="LICENSE"></a><h2 class='h2' >LICENSE</h2>
+<p>This module is free software; you can redistribute it
+and/or modify it under the same terms as Perl itself.</p>
+<a class='view-head1' id="SEE-ALSO"></a><h2 class='h2' >SEE ALSO</h2>
+<ul>
+<li><a class='view-title' id="http%3a%2f%2fwww.unicode.org%2freports%2ftr15%2f"></a><strong><a href="http://www.unicode.org/reports/tr15/">http://www.unicode.org/reports/tr15/</a></strong>
+<p>Unicode Normalization Forms - UAX #15</p>
+</li>
+<li><a class='view-title' id="http%3a%2f%2fwww.unicode.org%2fPublic%2fUNIDATA%2fCompositionExclusions.txt"></a><strong><a href="http://www.unicode.org/Public/UNIDATA/CompositionExclusions.txt">http://www.unicode.org/Public/UNIDATA/CompositionExclusions.txt</a></strong>
+<p>Composition Exclusion Table</p>
+</li>
+<li><a class='view-title' id="http%3a%2f%2fwww.unicode.org%2fPublic%2fUNIDATA%2fDerivedNormalizationProps.txt"></a><strong><a href="http://www.unicode.org/Public/UNIDATA/DerivedNormalizationProps.txt">http://www.unicode.org/Public/UNIDATA/DerivedNormalizationProps.txt</a></strong>
+<p>Derived Normalization Properties</p>
+</li>
+<li><a class='view-title' id="http%3a%2f%2fwww.unicode.org%2fPublic%2fUNIDATA%2fNormalizationCorrections.txt"></a><strong><a href="http://www.unicode.org/Public/UNIDATA/NormalizationCorrections.txt">http://www.unicode.org/Public/UNIDATA/NormalizationCorrections.txt</a></strong>
+<p>Normalization Corrections</p>
+</li>
+<li><a class='view-title' id="http%3a%2f%2fwww.unicode.org%2freview%2fpr-29.html"></a><strong><a href="http://www.unicode.org/review/pr-29.html">http://www.unicode.org/review/pr-29.html</a></strong>
+<p>Public Review Issue #29: Normalization Issue</p>
+</li>
+<li><a class='view-title' id="http%3a%2f%2fwww.unicode.org%2fnotes%2ftn5%2f"></a><strong><a href="http://www.unicode.org/notes/tn5/">http://www.unicode.org/notes/tn5/</a></strong>
+<p>Canonical Equivalence in Applications - UTN #5</p>
+</li>
+</ul>
+
+
+
+
+      <ul><li><a href="#NAME">NAME</a></li><li><a href="#SYNOPSIS">SYNOPSIS</a></li><li><a href="#DESCRIPTION">DESCRIPTION</a></li><ul><li><a href="#Normalization-Forms">Normalization Forms</a></li><li><a href="#Decomposition-and-Composition">Decomposition and Composition</a></li><li><a href="#Quick-Check">Quick Check</a></li><li><a href="#Character-Data">Character Data</a></li></ul><li><a href="#EXPORT">EXPORT</a></li><li><a href="#CAVEATS">CAVEATS</a></li><li><a href="#AUTHOR">AUTHOR</a></li><li><a href="#LICENSE">LICENSE</a></li><li><a href="#SEE-ALSO">SEE ALSO</a></li></ul>
+
+
+                  </div>
+                </article>
+              </div>
+            </div>
+          </main>
+        </div>
+           <footer class="footer row bg-light pt-5 pb-5">
+       <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+           <div class="row">
+               <div class="col-md-4">
+                   <ul class="list-unstyled">
+                       <li>
+                           <h4>Site info</h4>
+                       </li>
+                       <li>Docs mantained by
+                           <a href="//lists.perl.org/list/perl5-porters.html"
+                               rel="noopener">Perl 5 Porters</a>
+                       </li>
+                       <li>Perldoc site development sponsored by
+                           <a href="//opusvl.com" rel="noopener">
+                           <img style="margin: 20px 20px 5px 10px" class="opus-logo" src="/public/img/opusvl_logo.svg" alt="OpusVL Logo">
+                        </a>
+                    <li><span class="about_perldoc"><a href="//about.html">About PerlDOC</a></span>
+                    </li>
+                       </li>
+                   </ul>
+               </div>
+               <div class="col-md-8">
+                   <div class="row">
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Manuals</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.28.2/index-overview.html">Overview</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.28.2/index-tutorials.html">Tutorials</a>
+                               </li>
+                               <li>
+                                   <a href="/5.28.2/index-faq.html">FAQs</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.28.2/index-history.html">Changes</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Reference</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.28.2/index-language.html">Language</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.28.2/index-functions.html">Functions</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.28.2/perlop.html">Operators</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.28.2/perlvar.html">Variables</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Modules</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.28.2/index-modules-A.html">Modules</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.28.2/index-pragmas.html">Pragmas</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.28.2/index-utilities.html">Utilities</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Misc</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.28.2/index-licence.html">License</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.28.2/index-internals.html">Internals</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.28.2/index-platforms.html">Platforms</a>
+                               </li>
+                            <li>
+                                <a
+                                    href="/5.28.2/index-about.html">About</a>
+                            </li>
+                           </ul>
+                       </div>
+                   </div>
+               </div>
+               <div class=" col-12 footer-inf text-center">
+                   <small>perldoc.perl.org - Official documentation for the Perl
+                       programming language</small>
+               </div>
+           </div>
+       </div>
+   </footer>
+
+        	<div class="beta-wrapper beta-bottom-right ">
+		<div class="beta beta-blue  ">
+			<a class="beta-link "
+				href="//github.com/OpusVL/perldoc.perl.org/issues/new" rel="noopener">
+				<span class="beta-text">
+					This website is a Beta release.
+				</span>
+				<span class="beta-text">
+					For any issues please raise a ticket on GitHub
+				</span>
+			</a>
+		</div>
+	</div>
+
+        <script src="/public/js/main.min.js"></script>
+      </body>
+
+      </html>

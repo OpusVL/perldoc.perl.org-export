@@ -1,0 +1,1187 @@
+      
+      
+      
+      
+
+      <!DOCTYPE html>
+      <html lang="en">
+
+      <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Unicode::UCD - perldoc.perl.org">
+        <link rel="icon" href="/public/img/favicon.ico">
+        <title>Unicode::UCD - perldoc.perl.org</title>
+        <link href="/public/css/main.min.css" rel="stylesheet">
+        <link rel="canonical" href="/Unicode/UCD.html">
+        <link
+          href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900'
+          rel='stylesheet' type='text/css'>
+        <script>
+          window.ga = window.ga || function () {
+            (ga.q = ga.q || []).push(arguments)
+          };
+          ga.l = +new Date;
+          ga('create', 'UA-1892152-2', 'auto'); // JJ's account
+          ga('create', 'UA-50555-3', 'auto', 'perlOrg'); // perl.org account
+          ga('require', 'outboundLinkTracker', {
+            events: ['click', 'auxclick', 'contextmenu'],
+          });
+          ga('require', 'maxScrollTracker');
+          ga('send', 'pageview');
+          ga('perlOrg.send', 'pageview');
+        </script>
+        <script async src="https://www.google-analytics.com/analytics.js">
+        </script>
+        <script async src="/public/js/tracking.min.js"></script>
+      </head>
+
+      <body class="body container-fluid ">
+        <div class="wrapper">
+
+          <nav
+    class="navbar navbar-dark bg-primary bg-perl fixed-top justify-content-between navbar-expand-lg">
+    <a href="#content" class="skippy sr-only sr-only-focusable">
+        <span class=' skippy-text'>Skip to main content</span>
+    </a>
+    <a class="navbar-brand" href="/">
+        <img class="logo" src="/public/img/logo_perl_doc.svg"
+            alt="Perl Documentation Logo" />
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse"
+        data-target="#navbar" aria-controls="navbar" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="navbar" class="collapse navbar-collapse ">
+        <ul class="navbar-nav ml-auto navbar-right">
+            <form class="nav-item dropdown search-wrapper">
+                <input type="text" id='searchinput' aria-describedby='navbarDropdown5'
+                    placeholder="Type query" class='search-input-field' value=''>
+
+                <button href="#" data-toggle='dropdown' type="button"
+                    aria-haspopup="true" aria-expanded='false' id="navbarDropdown5"
+                    class="nav-link dropdown-toggle search-link">
+                    <object tabindex='-1' focusable="false" class='search-icon'
+                        data="/public/img/search.svg" type="image/svg+xml"
+                        name='search icon'>search
+                        icon</object>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown5"
+                    id='search-results'>
+                    <p class='dropdown-item major-version'>
+                        No results
+                    </p>
+                </div>
+            </form>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown" href="#" class="nav-link dropdown-toggle"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Perl versions</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    
+                        <p class='dropdown-item major-version'>
+                            5.32
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.32.0/">5.32.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.30
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.3/">5.30.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.2/">5.30.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.1/">5.30.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.0/">5.30.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.28
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.3/">5.28.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.2/">5.28.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.1/">5.28.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.0/">5.28.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.26
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.3/">5.26.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.2/">5.26.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.1/">5.26.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.0/">5.26.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.24
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.4/">5.24.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.3/">5.24.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.2/">5.24.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.1/">5.24.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.0/">5.24.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.22
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.4/">5.22.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.3/">5.22.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.2/">5.22.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.1/">5.22.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.0/">5.22.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.20
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.3/">5.20.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.2/">5.20.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.1/">5.20.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.0/">5.20.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.18
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.4/">5.18.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.3/">5.18.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.2/">5.18.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.1/">5.18.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.0/">5.18.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.16
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.3/">5.16.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.2/">5.16.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.1/">5.16.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.0/">5.16.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.14
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.4/">5.14.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.3/">5.14.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.2/">5.14.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.1/">5.14.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.0/">5.14.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.12
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.5/">5.12.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.4/">5.12.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.3/">5.12.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.2/">5.12.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.1/">5.12.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.0/">5.12.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.10
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.1/">5.10.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.0/">5.10.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.8
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.9/">5.8.9</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.8/">5.8.8</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.7/">5.8.7</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.6/">5.8.6</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.5/">5.8.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.4/">5.8.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.3/">5.8.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.2/">5.8.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.1/">5.8.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.0/">5.8.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.6
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.2/">5.6.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.1/">5.6.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.0/">5.6.0</a>
+                        
+                        
+                    
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown1" href="#" class="dropdown-toggle nav-link"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Manuals</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                    <a class="dropdown-item"
+                        href="/5.14.0/index-overview.html">Overview</a>
+                    <a class="dropdown-item"
+                        href="/5.14.0/index-tutorials.html">Tutorials</a>
+                    <a class="dropdown-item"
+                        href="/5.14.0/index-faq.html">FAQs</a>
+                    <a class="dropdown-item"
+                        href="/5.14.0/index-history.html">Changes</a>
+                    <a class="dropdown-item"
+                        href="/5.14.0/index-licence.html">License</a>
+                    <a class="dropdown-item"
+                        href="/5.14.0/index-language.html">Language</a>
+                    <a class="dropdown-item"
+                        href="/5.14.0/index-functions.html">Functions</a>
+                    <a class="dropdown-item"
+                        href="/5.14.0/perlop.html">Operators</a>
+                    <a class="dropdown-item"
+                        href="/5.14.0/perlvar.html">Variables</a>
+                    <a class="dropdown-item"
+                        href="/5.14.0/index-pragmas.html">Pragmas</a>
+                    <a class="dropdown-item"
+                        href="/5.14.0/index-utilities.html">Utilities</a>
+                    <a class="dropdown-item"
+                        href="/5.14.0/index-internals.html">Internals</a>
+                    <a class="dropdown-item"
+                        href="/5.14.0/index-platforms.html">Platforms</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown3" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Modules</a>
+                <div aria-labelledby="navbarDropdown3"
+                    class="dropdown-menu letters-wrap">
+                    <!--<a class="dropdown-item"
+                        href="/5.14.0/index-modules.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.14.0/index-modules-by-cat.html">By
+                        Category</a>-->
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-modules-A.html">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-modules-B.html">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-modules-C.html">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-modules-D.html">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-modules-E.html">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-modules-F.html">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-modules-G.html">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-modules-H.html">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-modules-I.html">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-modules-J.html">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-modules-K.html">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-modules-L.html">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-modules-M.html">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-modules-N.html">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-modules-O.html">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-modules-P.html">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-modules-Q.html">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-modules-R.html">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-modules-S.html">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-modules-T.html">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-modules-U.html">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-modules-V.html">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-modules-W.html">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-modules-X.html">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-modules-Y.html">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-modules-Z.html">Z</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown4" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Functions</a>
+                <div aria-labelledby="navbarDropdown4"
+                    class="dropdown-menu letters-wrap">
+                    <a class="dropdown-item"
+                        href="/5.14.0/index-functions.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.14.0/index-functions-by-cat.html">By
+                        Category</a>
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-functions.html#A">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-functions.html#B">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-functions.html#C">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-functions.html#D">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-functions.html#E">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-functions.html#F">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-functions.html#G">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-functions.html#H">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-functions.html#I">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-functions.html#J">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-functions.html#K">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-functions.html#L">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-functions.html#M">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-functions.html#N">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-functions.html#O">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-functions.html#P">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-functions.html#Q">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-functions.html#R">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-functions.html#S">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-functions.html#T">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-functions.html#U">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-functions.html#V">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-functions.html#W">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-functions.html#X">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-functions.html#Y">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.14.0/index-functions.html#Z">Z</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!--/.nav-collapse -->
+</nav>
+
+
+          <main class="row main-content pb-5 pt-5" id='content'>
+            <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+              <div class="row">
+                <div class="col-sm-12">
+                  <div id="breadcrumbs">
+                      
+    <a href="../index.html">Home</a>&nbsp; &gt;
+    
+      
+        <a href="../index-modules-U.html">Core modules (U)</a> &gt;
+      
+    
+    Unicode::UCD
+  
+
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <article class="col-sm-12 content">
+                  <div class="documentation-wrapper">
+                    <div id="perl_version">
+                      <h7 class='page-title'> Perl 5 version 14.0
+                        documentation</h7>
+                    </div>
+                    <h1>Unicode::UCD</h1>
+
+
+  <!--    -->
+<ul><li><a href="#NAME">NAME</a></li><li><a href="#SYNOPSIS">SYNOPSIS</a></li><li><a href="#DESCRIPTION">DESCRIPTION</a></li><ul><li><a href="#code-point-argument">code point argument</a></li><li><a href="#*charinfo()*">*charinfo()*</a></li><li><a href="#*charblock()*">*charblock()*</a></li><li><a href="#*charscript()*">*charscript()*</a></li><li><a href="#*charblocks()*">*charblocks()*</a></li><li><a href="#*charscripts()*">*charscripts()*</a></li><li><a href="#*charinrange()*">*charinrange()*</a></li><li><a href="#*general_categories()*">*general_categories()*</a></li><li><a href="#*bidi_types()*">*bidi_types()*</a></li><li><a href="#*compexcl()*">*compexcl()*</a></li><li><a href="#*casefold()*">*casefold()*</a></li><li><a href="#*casespec()*">*casespec()*</a></li><li><a href="#*namedseq()*">*namedseq()*</a></li><li><a href="#num">num</a></li><li><a href="#Unicode%3a%3aUCD%3a%3aUnicodeVersion">Unicode::UCD::UnicodeVersion</a></li><li><a href="#*Blocks-versus-Scripts*">*Blocks versus Scripts*</a></li><li><a href="#*Matching-Scripts-and-Blocks*">*Matching Scripts and Blocks*</a></li><li><a href="#Implementation-Note">Implementation Note</a></li></ul><li><a href="#BUGS">BUGS</a></li><li><a href="#AUTHOR">AUTHOR</a></li></ul><a class='view-head1' id="NAME"></a><h2 class='h2' >NAME</h2>
+<p>Unicode::UCD - Unicode character database</p>
+<a class='view-head1' id="SYNOPSIS"></a><h2 class='h2' >SYNOPSIS</h2>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">Unicode::UCD</span> <span class="q">&#39;charinfo&#39;</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">$charinfo</span>   = <span class="i">charinfo</span><span class="s">(</span><span class="i">$codepoint</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">Unicode::UCD</span> <span class="q">&#39;casefold&#39;</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">$casefold</span> = <span class="i">casefold</span><span class="s">(</span><span class="n">0xFB00</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">Unicode::UCD</span> <span class="q">&#39;casespec&#39;</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">$casespec</span> = <span class="i">casespec</span><span class="s">(</span><span class="n">0xFB00</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">Unicode::UCD</span> <span class="q">&#39;charblock&#39;</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">$charblock</span>  = <span class="i">charblock</span><span class="s">(</span><span class="i">$codepoint</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">Unicode::UCD</span> <span class="q">&#39;charscript&#39;</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">$charscript</span> = <span class="i">charscript</span><span class="s">(</span><span class="i">$codepoint</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">Unicode::UCD</span> <span class="q">&#39;charblocks&#39;</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">$charblocks</span> = <span class="i">charblocks</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">Unicode::UCD</span> <span class="q">&#39;charscripts&#39;</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">$charscripts</span> = <span class="i">charscripts</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">Unicode::UCD</span> <span class="q">qw(charscript charinrange)</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">$range</span> = <span class="i">charscript</span><span class="s">(</span><span class="i">$script</span><span class="s">)</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/print.html">print</a> <span class="q">&quot;looks like $script\n&quot;</span> if <span class="i">charinrange</span><span class="s">(</span><span class="i">$range</span><span class="cm">,</span> <span class="i">$codepoint</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">Unicode::UCD</span> <span class="q">qw(general_categories bidi_types)</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">$categories</span> = <span class="i">general_categories</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">$types</span> = <span class="i">bidi_types</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">Unicode::UCD</span> <span class="q">&#39;compexcl&#39;</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">$compexcl</span> = <span class="i">compexcl</span><span class="s">(</span><span class="i">$codepoint</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">Unicode::UCD</span> <span class="q">&#39;namedseq&#39;</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">$namedseq</span> = <span class="i">namedseq</span><span class="s">(</span><span class="i">$named_sequence_name</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">$unicode_version</span> = <span class="i">Unicode::UCD::UnicodeVersion</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">$convert_to_numeric</span> =</li><li>                <span class="i">Unicode::UCD::num</span><span class="s">(</span><span class="q">&quot;\N{RUMI DIGIT ONE}\N{RUMI DIGIT TWO}&quot;</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><a class='view-head1' id="DESCRIPTION"></a><h2 class='h2' >DESCRIPTION</h2>
+<p>The Unicode::UCD module offers a series of functions that
+provide a simple interface to the Unicode
+Character Database.</p>
+<a class='view-head2' id="code-point-argument"></a><h3 class='h3' >code point argument</h3>
+<p>Some of the functions are called with a <i>code point argument</i>, which is either
+a decimal or a hexadecimal scalar designating a Unicode code point, or <code class="inline"><span class="w">U</span>+</code>
+
+followed by hexadecimals designating a Unicode code point.  In other words, if
+you want a code point to be interpreted as a hexadecimal number, you must
+prefix it with either <code class="inline"><span class="n">0</span>x</code>
+ or <code class="inline"><span class="w">U</span>+</code>
+, because a string like e.g. <code class="inline"><span class="n">123</span></code>
+ will be
+interpreted as a decimal code point.  Note that the largest code point in
+Unicode is U+10FFFF.
+=cut</p>
+<p>my $BLOCKSFH;
+my $VERSIONFH;
+my $CASEFOLDFH;
+my $CASESPECFH;
+my $NAMEDSEQFH;</p>
+<p>sub openunicode {
+    my ($rfh, @path) = @_;
+    my $f;
+    unless (defined $$rfh) {
+	for my $d (@INC) {
+	    use File::Spec;
+	    $f = File::Spec-&gt;catfile($d, "unicore", @path);
+	    last if open($$rfh, $f);
+	    undef $f;
+	}
+	croak __PACKAGE__, ": failed to find ",
+              File::Spec-&gt;catfile(@path), " in @INC"
+	    unless defined $f;
+    }
+    return $f;
+}</p>
+<a class='view-head2' id="*charinfo()*"></a><h3 class='h3' ><strong>charinfo()</strong></h3>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">Unicode::UCD</span> <span class="q">&#39;charinfo&#39;</span><span class="sc">;</span></li><li></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">$charinfo</span> = <span class="i">charinfo</span><span class="s">(</span><span class="n">0x41</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>This returns information about the input <a href="#code-point-argument">code point argument</a>
+as a reference to a hash of fields as defined by the Unicode
+standard.  If the <a href="#code-point-argument">code point argument</a> is not assigned in the standard
+(i.e., has the general category <code class="inline"><span class="w">Cn</span></code>
+ meaning <code class="inline"><span class="w">Unassigned</span></code>
+)
+or is a non-character (meaning it is guaranteed to never be assigned in
+the standard),
+<strong>undef</strong> is returned.</p>
+<p>Fields that aren't applicable to the particular code point argument exist in the
+returned hash, and are empty.</p>
+<p>The keys in the hash with the meanings of their values are:</p>
+<ul>
+<li><a class='view-title' id="*code*"></a><strong><strong>code</strong></strong>
+<p>the input <a href="#code-point-argument">code point argument</a> expressed in hexadecimal, with leading zeros
+added if necessary to make it contain at least four hexdigits</p>
+</li>
+<li><a class='view-title' id="*name*"></a><strong><strong>name</strong></strong>
+<p>name of <i>code</i>, all IN UPPER CASE.
+Some control-type code points do not have names.
+This field will be empty for <code class="inline"><span class="w">Surrogate</span></code>
+ and <code class="inline"><span class="w">Private</span> <span class="w">Use</span></code>
+ code points,
+and for the others without a name,
+it will contain a description enclosed in angle brackets, like
+<code class="inline"><span class="q">&lt;control&gt;</span></code>
+.</p>
+</li>
+<li><a class='view-title' id="*category*"></a><strong><strong>category</strong></strong>
+<p>The short name of the general category of <i>code</i>.
+This will match one of the keys in the hash returned by <a href="#general_categories()">general_categories()</a>.</p>
+</li>
+<li><a class='view-title' id="*combining*"></a><strong><strong>combining</strong></strong>
+<p>the combining class number for <i>code</i> used in the Canonical Ordering Algorithm.
+For Unicode 5.1, this is described in Section 3.11 <code class="inline"><span class="w">Canonical</span> <span class="w">Ordering</span> <span class="w">Behavior</span></code>
+
+available at
+<a href="http://www.unicode.org/versions/Unicode5.1.0/">http://www.unicode.org/versions/Unicode5.1.0/</a></p>
+</li>
+<li><a class='view-title' id="*bidi*"></a><strong><strong>bidi</strong></strong>
+<p>bidirectional type of <i>code</i>.
+This will match one of the keys in the hash returned by <a href="#bidi_types()">bidi_types()</a>.</p>
+</li>
+<li><a class='view-title' id="*decomposition*"></a><strong><strong>decomposition</strong></strong>
+<p>is empty if <i>code</i> has no decomposition; or is one or more codes
+(separated by spaces) that taken in order represent a decomposition for
+<i>code</i>.  Each has at least four hexdigits.
+The codes may be preceded by a word enclosed in angle brackets then a space,
+like <code class="inline"><span class="q">&lt;compat&gt;</span> </code>
+, giving the type of decomposition</p>
+<p>This decomposition may be an intermediate one whose components are also
+decomposable.  Use <a href="../Unicode/Normalize.html">Unicode::Normalize</a> to get the final decomposition.</p>
+</li>
+<li><a class='view-title' id="*decimal*"></a><strong><strong>decimal</strong></strong>
+<p>if <i>code</i> is a decimal digit this is its integer numeric value</p>
+</li>
+<li><a class='view-title' id="*digit*"></a><strong><strong>digit</strong></strong>
+<p>if <i>code</i> represents some other digit-like number, this is its integer
+numeric value</p>
+</li>
+<li><a class='view-title' id="*numeric*"></a><strong><strong>numeric</strong></strong>
+<p>if <i>code</i> represents a whole or rational number, this is its numeric value.
+Rational values are expressed as a string like <code class="inline"><span class="n">1</span>/<span class="n">4</span></code>
+.</p>
+</li>
+<li><a class='view-title' id="*mirrored*"></a><strong><strong>mirrored</strong></strong>
+<p><code class="inline"><span class="w">Y</span></code>
+ or <code class="inline"><span class="w">N</span></code>
+ designating if <i>code</i> is mirrored in bidirectional text</p>
+</li>
+<li><a class='view-title' id="*unicode10*"></a><strong><strong>unicode10</strong></strong>
+<p>name of <i>code</i> in the Unicode 1.0 standard if one
+existed for this code point and is different from the current name</p>
+</li>
+<li><a class='view-title' id="*comment*"></a><strong><strong>comment</strong></strong>
+<p>As of Unicode 6.0, this is always empty.</p>
+</li>
+<li><a class='view-title' id="*upper*"></a><strong><strong>upper</strong></strong>
+<p>is empty if there is no single code point uppercase mapping for <i>code</i>
+(its uppercase mapping is itself);
+otherwise it is that mapping expressed as at least four hexdigits.
+(<a href="#casespec()">casespec()</a> should be used in addition to <strong>charinfo()</strong>
+for case mappings when the calling program can cope with multiple code point
+mappings.)</p>
+</li>
+<li><a class='view-title' id="*lower*"></a><strong><strong>lower</strong></strong>
+<p>is empty if there is no single code point lowercase mapping for <i>code</i>
+(its lowercase mapping is itself);
+otherwise it is that mapping expressed as at least four hexdigits.
+(<a href="#casespec()">casespec()</a> should be used in addition to <strong>charinfo()</strong>
+for case mappings when the calling program can cope with multiple code point
+mappings.)</p>
+</li>
+<li><a class='view-title' id="*title*"></a><strong><strong>title</strong></strong>
+<p>is empty if there is no single code point titlecase mapping for <i>code</i>
+(its titlecase mapping is itself);
+otherwise it is that mapping expressed as at least four hexdigits.
+(<a href="#casespec()">casespec()</a> should be used in addition to <strong>charinfo()</strong>
+for case mappings when the calling program can cope with multiple code point
+mappings.)</p>
+</li>
+<li><a class='view-title' id="*block*"></a><strong><strong>block</strong></strong>
+<p>block <i>code</i> belongs to (used in <code class="inline">\<span class="i">p</span><span class="s">{</span><span class="w">Blk</span>=...<span class="s">}</span></code>
+).
+See <a href="#Blocks-versus-Scripts">Blocks versus Scripts</a>.</p>
+</li>
+<li><a class='view-title' id="*script*"></a><strong><strong>script</strong></strong>
+<p>script <i>code</i> belongs to.
+See <a href="#Blocks-versus-Scripts">Blocks versus Scripts</a>.</p>
+</li>
+</ul>
+<p>Note that you cannot do (de)composition and casing based solely on the
+<i>decomposition</i>, <i>combining</i>, <i>lower</i>, <i>upper</i>, and <i>title</i> fields;
+you will need also the <a href="#compexcl()">compexcl()</a>, and <a href="#casespec()">casespec()</a> functions.</p>
+<a class='view-head2' id="*charblock()*"></a><h3 class='h3' ><strong>charblock()</strong></h3>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">Unicode::UCD</span> <span class="q">&#39;charblock&#39;</span><span class="sc">;</span></li><li></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">$charblock</span> = <span class="i">charblock</span><span class="s">(</span><span class="n">0x41</span><span class="s">)</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">$charblock</span> = <span class="i">charblock</span><span class="s">(</span><span class="n">1234</span><span class="s">)</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">$charblock</span> = <span class="i">charblock</span><span class="s">(</span><span class="n">0x263a</span><span class="s">)</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">$charblock</span> = <span class="i">charblock</span><span class="s">(</span><span class="q">&quot;U+263a&quot;</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">$range</span>     = <span class="i">charblock</span><span class="s">(</span><span class="q">&#39;Armenian&#39;</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>With a <a href="#code-point-argument">code point argument</a> charblock() returns the <i>block</i> the code point
+belongs to, e.g.  <code class="inline"><span class="w">Basic</span> <span class="w">Latin</span></code>
+.
+If the code point is unassigned, this returns the block it would belong to if
+it were assigned (which it may in future versions of the Unicode Standard).</p>
+<p>See also <a href="#Blocks-versus-Scripts">Blocks versus Scripts</a>.</p>
+<p>If supplied with an argument that can't be a code point, charblock() tries
+to do the opposite and interpret the argument as a code point block. The
+return value is a <i>range</i>: an anonymous list of lists that contain
+<i>start-of-range</i>, <i>end-of-range</i> code point pairs. You can test whether
+a code point is in a range using the <a href="#charinrange()">charinrange()</a> function. If the
+argument is not a known code point block, <strong>undef</strong> is returned.</p>
+<a class='view-head2' id="*charscript()*"></a><h3 class='h3' ><strong>charscript()</strong></h3>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">Unicode::UCD</span> <span class="q">&#39;charscript&#39;</span><span class="sc">;</span></li><li></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">$charscript</span> = <span class="i">charscript</span><span class="s">(</span><span class="n">0x41</span><span class="s">)</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">$charscript</span> = <span class="i">charscript</span><span class="s">(</span><span class="n">1234</span><span class="s">)</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">$charscript</span> = <span class="i">charscript</span><span class="s">(</span><span class="q">&quot;U+263a&quot;</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">$range</span>      = <span class="i">charscript</span><span class="s">(</span><span class="q">&#39;Thai&#39;</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>With a <a href="#code-point-argument">code point argument</a> charscript() returns the <i>script</i> the
+code point belongs to, e.g.  <code class="inline"><span class="w">Latin</span></code>
+, <code class="inline"><span class="w">Greek</span></code>
+, <code class="inline"><span class="w">Han</span></code>
+.
+If the code point is unassigned, it returns <strong>undef</strong></p>
+<p>If supplied with an argument that can't be a code point, charscript() tries
+to do the opposite and interpret the argument as a code point script. The
+return value is a <i>range</i>: an anonymous list of lists that contain
+<i>start-of-range</i>, <i>end-of-range</i> code point pairs. You can test whether a
+code point is in a range using the <a href="#charinrange()">charinrange()</a> function. If the
+argument is not a known code point script, <strong>undef</strong> is returned.</p>
+<p>See also <a href="#Blocks-versus-Scripts">Blocks versus Scripts</a>.</p>
+<a class='view-head2' id="*charblocks()*"></a><h3 class='h3' ><strong>charblocks()</strong></h3>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">Unicode::UCD</span> <span class="q">&#39;charblocks&#39;</span><span class="sc">;</span></li><li></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">$charblocks</span> = <span class="i">charblocks</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>charblocks() returns a reference to a hash with the known block names
+as the keys, and the code point ranges (see <a href="#charblock()">charblock()</a>) as the values.</p>
+<p>See also <a href="#Blocks-versus-Scripts">Blocks versus Scripts</a>.</p>
+<a class='view-head2' id="*charscripts()*"></a><h3 class='h3' ><strong>charscripts()</strong></h3>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">Unicode::UCD</span> <span class="q">&#39;charscripts&#39;</span><span class="sc">;</span></li><li></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">$charscripts</span> = <span class="i">charscripts</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>charscripts() returns a reference to a hash with the known script
+names as the keys, and the code point ranges (see <a href="#charscript()">charscript()</a>) as
+the values.</p>
+<p>See also <a href="#Blocks-versus-Scripts">Blocks versus Scripts</a>.</p>
+<a class='view-head2' id="*charinrange()*"></a><h3 class='h3' ><strong>charinrange()</strong></h3>
+<p>In addition to using the <code class="inline">\<span class="i">p</span><span class="s">{</span><span class="w">Blk</span>=...<span class="s">}</span></code>
+ and <code class="inline">\<span class="i">P</span><span class="s">{</span><span class="w">Blk</span>=...<span class="s">}</span></code>
+ constructs, you
+can also test whether a code point is in the <i>range</i> as returned by
+<a href="#charblock()">charblock()</a> and <a href="#charscript()">charscript()</a> or as the values of the hash returned
+by <a href="#charblocks()">charblocks()</a> and <a href="#charscripts()">charscripts()</a> by using charinrange():</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">Unicode::UCD</span> <span class="q">qw(charscript charinrange)</span><span class="sc">;</span></li><li></li><li>    <span class="i">$range</span> = <span class="i">charscript</span><span class="s">(</span><span class="q">&#39;Hiragana&#39;</span><span class="s">)</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/print.html">print</a> <span class="q">&quot;looks like hiragana\n&quot;</span> if <span class="i">charinrange</span><span class="s">(</span><span class="i">$range</span><span class="cm">,</span> <span class="i">$codepoint</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><a class='view-head2' id="*general_categories()*"></a><h3 class='h3' ><strong>general_categories()</strong></h3>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">Unicode::UCD</span> <span class="q">&#39;general_categories&#39;</span><span class="sc">;</span></li><li></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">$categories</span> = <span class="i">general_categories</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>This returns a reference to a hash which has short
+general category names (such as <code class="inline"><span class="w">Lu</span></code>
+, <code class="inline"><span class="w">Nd</span></code>
+, <code class="inline"><span class="w">Zs</span></code>
+, <code class="inline"><span class="w">S</span></code>
+) as keys and long
+names (such as <code class="inline"><span class="w">UppercaseLetter</span></code>
+, <code class="inline"><span class="w">DecimalNumber</span></code>
+, <code class="inline"><span class="w">SpaceSeparator</span></code>
+,
+<code class="inline"><span class="w">Symbol</span></code>
+) as values.  The hash is reversible in case you need to go
+from the long names to the short names.  The general category is the
+one returned from
+<a href="#charinfo()">charinfo()</a> under the <code class="inline"><span class="w">category</span></code>
+ key.</p>
+<a class='view-head2' id="*bidi_types()*"></a><h3 class='h3' ><strong>bidi_types()</strong></h3>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">Unicode::UCD</span> <span class="q">&#39;bidi_types&#39;</span><span class="sc">;</span></li><li></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">$categories</span> = <span class="i">bidi_types</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>This returns a reference to a hash which has the short
+bidi (bidirectional) type names (such as <code class="inline"><span class="w">L</span></code>
+, <code class="inline"><span class="w">R</span></code>
+) as keys and long
+names (such as <code class="inline"><span class="w">Left</span>-<span class="w">to</span>-<span class="w">Right</span></code>
+, <code class="inline"><span class="w">Right</span>-<span class="w">to</span>-<span class="w">Left</span></code>
+) as values.  The
+hash is reversible in case you need to go from the long names to the
+short names.  The bidi type is the one returned from
+<a href="#charinfo()">charinfo()</a>
+under the <code class="inline"><span class="w">bidi</span></code>
+ key.  For the exact meaning of the various bidi classes
+the Unicode TR9 is recommended reading:
+<a href="http://www.unicode.org/reports/tr9/">http://www.unicode.org/reports/tr9/</a>
+(as of Unicode 5.0.0)</p>
+<a class='view-head2' id="*compexcl()*"></a><h3 class='h3' ><strong>compexcl()</strong></h3>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">Unicode::UCD</span> <span class="q">&#39;compexcl&#39;</span><span class="sc">;</span></li><li></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">$compexcl</span> = <span class="i">compexcl</span><span class="s">(</span><span class="n">0x09dc</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>This routine is included for backwards compatibility, but as of Perl 5.12, for
+most purposes it is probably more convenient to use one of the following
+instead:</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">$compexcl</span> = <a class="l_k" href="../functions/chr.html">chr</a><span class="s">(</span><span class="n">0x09dc</span><span class="s">)</span> =~ <span class="q">/\p{Comp_Ex};</span></li><li>    <span class="q">    my $compexcl = chr(0x09dc) =~ /</span>\<span class="i">p</span><span class="s">{</span><span class="w">Full_Composition_Exclusion</span><span class="s">}</span><span class="sc">;</span></li></ol></pre><p>or even</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">$compexcl</span> = <a class="l_k" href="../functions/chr.html">chr</a><span class="s">(</span><span class="n">0x09dc</span><span class="s">)</span> =~ <span class="q">/\p{CE};</span></li><li>    <span class="q">    my $compexcl = chr(0x09dc) =~ /</span>\<span class="i">p</span><span class="s">{</span><span class="w">Composition_Exclusion</span><span class="s">}</span><span class="sc">;</span></li></ol></pre><p>The first two forms return <strong>true</strong> if the <a href="#code-point-argument">code point argument</a> should not
+be produced by composition normalization.  The final two forms
+additionally require that this fact not otherwise be determinable from
+the Unicode data base for them to return <strong>true</strong>.</p>
+<p>This routine behaves identically to the final two forms.  That is,
+it does not return <strong>true</strong> if the code point has a decomposition
+consisting of another single code point, nor if its decomposition starts
+with a code point whose combining class is non-zero.  Code points that meet
+either of these conditions should also not be produced by composition
+normalization, which is probably why you should use the
+<code class="inline"><span class="w">Full_Composition_Exclusion</span></code>
+ property instead, as shown above.</p>
+<p>The routine returns <strong>false</strong> otherwise.</p>
+<a class='view-head2' id="*casefold()*"></a><h3 class='h3' ><strong>casefold()</strong></h3>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">Unicode::UCD</span> <span class="q">&#39;casefold&#39;</span><span class="sc">;</span></li><li></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">$casefold</span> = <span class="i">casefold</span><span class="s">(</span><span class="n">0xDF</span><span class="s">)</span><span class="sc">;</span></li><li>    if <span class="s">(</span><a class="l_k" href="../functions/defined.html">defined</a> <span class="i">$casefold</span><span class="s">)</span> <span class="s">{</span></li><li>        <a class="l_k" href="../functions/my.html">my</a> <span class="i">@full_fold_hex</span> = <a class="l_k" href="../functions/split.html">split</a> <span class="q">/ /</span><span class="cm">,</span> <span class="i">$casefold</span>-&gt;{<span class="q">&#39;full&#39;</span>}<span class="sc">;</span></li><li>        <a class="l_k" href="../functions/my.html">my</a> <span class="i">$full_fold_string</span> =</li><li>                    <a class="l_k" href="../functions/join.html">join</a> <span class="q">&quot;&quot;</span><span class="cm">,</span> <a class="l_k" href="../functions/map.html">map</a> <span class="s">{</span><a class="l_k" href="../functions/chr.html">chr</a><span class="s">(</span><a class="l_k" href="../functions/hex.html">hex</a><span class="s">(</span><span class="i">$_</span><span class="s">)</span><span class="s">)</span><span class="s">}</span> <span class="i">@full_fold_hex</span><span class="sc">;</span></li><li>        <a class="l_k" href="../functions/my.html">my</a> <span class="i">@turkic_fold_hex</span> =</li><li>                        <a class="l_k" href="../functions/split.html">split</a> <span class="q">/ /</span><span class="cm">,</span> <span class="s">(</span><span class="i">$casefold</span>-&gt;{<span class="q">&#39;turkic&#39;</span>} ne <span class="q">&quot;&quot;</span><span class="s">)</span></li><li>                                        ? <span class="i">$casefold</span>-&gt;{<span class="q">&#39;turkic&#39;</span>}</li><li>                                        <span class="co">:</span> <span class="i">$casefold</span>-&gt;{<span class="q">&#39;full&#39;</span>}<span class="sc">;</span></li><li>        <a class="l_k" href="../functions/my.html">my</a> <span class="i">$turkic_fold_string</span> =</li><li>                        <a class="l_k" href="../functions/join.html">join</a> <span class="q">&quot;&quot;</span><span class="cm">,</span> <a class="l_k" href="../functions/map.html">map</a> <span class="s">{</span><a class="l_k" href="../functions/chr.html">chr</a><span class="s">(</span><a class="l_k" href="../functions/hex.html">hex</a><span class="s">(</span><span class="i">$_</span><span class="s">)</span><span class="s">)</span><span class="s">}</span> <span class="i">@turkic_fold_hex</span><span class="sc">;</span></li><li>    <span class="s">}</span></li><li>    if <span class="s">(</span><a class="l_k" href="../functions/defined.html">defined</a> <span class="i">$casefold</span> &amp;&amp; <span class="i">$casefold</span>-&gt;{<span class="q">&#39;simple&#39;</span>} ne <span class="q">&quot;&quot;</span><span class="s">)</span> <span class="s">{</span></li><li>        <a class="l_k" href="../functions/my.html">my</a> <span class="i">$simple_fold_hex</span> = <span class="i">$casefold</span>-&gt;{<span class="q">&#39;simple&#39;</span>}<span class="sc">;</span></li><li>        <a class="l_k" href="../functions/my.html">my</a> <span class="i">$simple_fold_string</span> = <a class="l_k" href="../functions/chr.html">chr</a><span class="s">(</span><a class="l_k" href="../functions/hex.html">hex</a><span class="s">(</span><span class="i">$simple_fold_hex</span><span class="s">)</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="s">}</span></li></ol></pre><p>This returns the (almost) locale-independent case folding of the
+character specified by the <a href="#code-point-argument">code point argument</a>.</p>
+<p>If there is no case folding for that code point, <strong>undef</strong> is returned.</p>
+<p>If there is a case folding for that code point, a reference to a hash
+with the following fields is returned:</p>
+<ul>
+<li><a class='view-title' id="*code*"></a><strong><strong>code</strong></strong>
+<p>the input <a href="#code-point-argument">code point argument</a> expressed in hexadecimal, with leading zeros
+added if necessary to make it contain at least four hexdigits</p>
+</li>
+<li><a class='view-title' id="*full*"></a><strong><strong>full</strong></strong>
+<p>one or more codes (separated by spaces) that taken in order give the
+code points for the case folding for <i>code</i>.
+Each has at least four hexdigits.</p>
+</li>
+<li><a class='view-title' id="*simple*"></a><strong><strong>simple</strong></strong>
+<p>is empty, or is exactly one code with at least four hexdigits which can be used
+as an alternative case folding when the calling program cannot cope with the
+fold being a sequence of multiple code points.  If <i>full</i> is just one code
+point, then <i>simple</i> equals <i>full</i>.  If there is no single code point folding
+defined for <i>code</i>, then <i>simple</i> is the empty string.  Otherwise, it is an
+inferior, but still better-than-nothing alternative folding to <i>full</i>.</p>
+</li>
+<li><a class='view-title' id="*mapping*"></a><strong><strong>mapping</strong></strong>
+<p>is the same as <i>simple</i> if <i>simple</i> is not empty, and it is the same as <i>full</i>
+otherwise.  It can be considered to be the simplest possible folding for
+<i>code</i>.  It is defined primarily for backwards compatibility.</p>
+</li>
+<li><a class='view-title' id="*status*"></a><strong><strong>status</strong></strong>
+<p>is <code class="inline"><span class="w">C</span></code>
+ (for <code class="inline"><span class="w">common</span></code>
+) if the best possible fold is a single code point
+(<i>simple</i> equals <i>full</i> equals <i>mapping</i>).  It is <code class="inline"><span class="w">S</span></code>
+ if there are distinct
+folds, <i>simple</i> and <i>full</i> (<i>mapping</i> equals <i>simple</i>).  And it is <code class="inline"><span class="w">F</span></code>
+ if
+there only a <i>full</i> fold (<i>mapping</i> equals <i>full</i>; <i>simple</i> is empty).  Note
+that this
+describes the contents of <i>mapping</i>.  It is defined primarily for backwards
+compatibility.</p>
+<p>On versions 3.1 and earlier of Unicode, <i>status</i> can also be
+<code class="inline"><span class="w">I</span></code>
+ which is the same as <code class="inline"><span class="w">C</span></code>
+ but is a special case for dotted uppercase I and
+dotless lowercase i:</p>
+<ul>
+<li><a class='view-title' id="***"></a><strong><strong>*</strong></strong>
+<p>If you use this <code class="inline"><span class="w">I</span></code>
+ mapping, the result is case-insensitive,
+but dotless and dotted I's are not distinguished</p>
+</li>
+<li><a class='view-title' id="***"></a><strong><strong>*</strong></strong>
+<p>If you exclude this <code class="inline"><span class="w">I</span></code>
+ mapping, the result is not fully case-insensitive, but
+dotless and dotted I's are distinguished</p>
+</li>
+</ul>
+</li>
+<li><a class='view-title' id="*turkic*"></a><strong><strong>turkic</strong></strong>
+<p>contains any special folding for Turkic languages.  For versions of Unicode
+starting with 3.2, this field is empty unless <i>code</i> has a different folding
+in Turkic languages, in which case it is one or more codes (separated by
+spaces) that taken in order give the code points for the case folding for
+<i>code</i> in those languages.
+Each code has at least four hexdigits.
+Note that this folding does not maintain canonical equivalence without
+additional processing.</p>
+<p>For versions of Unicode 3.1 and earlier, this field is empty unless there is a
+special folding for Turkic languages, in which case <i>status</i> is <code class="inline"><span class="w">I</span></code>
+, and
+<i>mapping</i>, <i>full</i>, <i>simple</i>, and <i>turkic</i> are all equal.</p>
+</li>
+</ul>
+<p>Programs that want complete generality and the best folding results should use
+the folding contained in the <i>full</i> field.  But note that the fold for some
+code points will be a sequence of multiple code points.</p>
+<p>Programs that can't cope with the fold mapping being multiple code points can
+use the folding contained in the <i>simple</i> field, with the loss of some
+generality.  In Unicode 5.1, about 7% of the defined foldings have no single
+code point folding.</p>
+<p>The <i>mapping</i> and <i>status</i> fields are provided for backwards compatibility for
+existing programs.  They contain the same values as in previous versions of
+this function.</p>
+<p>Locale is not completely independent.  The <i>turkic</i> field contains results to
+use when the locale is a Turkic language.</p>
+<p>For more information about case mappings see
+<a href="http://www.unicode.org/unicode/reports/tr21">http://www.unicode.org/unicode/reports/tr21</a></p>
+<a class='view-head2' id="*casespec()*"></a><h3 class='h3' ><strong>casespec()</strong></h3>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">Unicode::UCD</span> <span class="q">&#39;casespec&#39;</span><span class="sc">;</span></li><li></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">$casespec</span> = <span class="i">casespec</span><span class="s">(</span><span class="n">0xFB00</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>This returns the potentially locale-dependent case mappings of the <a href="#code-point-argument">code point argument</a>.  The mappings may be longer than a single code point (which the basic
+Unicode case mappings as returned by <a href="#charinfo()">charinfo()</a> never are).</p>
+<p>If there are no case mappings for the <a href="#code-point-argument">code point argument</a>, or if all three
+possible mappings (<i>lower</i>, <i>title</i> and <i>upper</i>) result in single code
+points and are locale independent and unconditional, <strong>undef</strong> is returned
+(which means that the case mappings, if any, for the code point are those
+returned by <a href="#charinfo()">charinfo()</a>).</p>
+<p>Otherwise, a reference to a hash giving the mappings (or a reference to a hash
+of such hashes, explained below) is returned with the following keys and their
+meanings:</p>
+<p>The keys in the bottom layer hash with the meanings of their values are:</p>
+<ul>
+<li><a class='view-title' id="*code*"></a><strong><strong>code</strong></strong>
+<p>the input <a href="#code-point-argument">code point argument</a> expressed in hexadecimal, with leading zeros
+added if necessary to make it contain at least four hexdigits</p>
+</li>
+<li><a class='view-title' id="*lower*"></a><strong><strong>lower</strong></strong>
+<p>one or more codes (separated by spaces) that taken in order give the
+code points for the lower case of <i>code</i>.
+Each has at least four hexdigits.</p>
+</li>
+<li><a class='view-title' id="*title*"></a><strong><strong>title</strong></strong>
+<p>one or more codes (separated by spaces) that taken in order give the
+code points for the title case of <i>code</i>.
+Each has at least four hexdigits.</p>
+</li>
+<li><a class='view-title' id="*upper*"></a><strong><strong>upper</strong></strong>
+<p>one or more codes (separated by spaces) that taken in order give the
+code points for the upper case of <i>code</i>.
+Each has at least four hexdigits.</p>
+</li>
+<li><a class='view-title' id="*condition*"></a><strong><strong>condition</strong></strong>
+<p>the conditions for the mappings to be valid.
+If <strong>undef</strong>, the mappings are always valid.
+When defined, this field is a list of conditions,
+all of which must be true for the mappings to be valid.
+The list consists of one or more
+<i>locales</i> (see below)
+and/or <i>contexts</i> (explained in the next paragraph),
+separated by spaces.
+(Other than as used to separate elements, spaces are to be ignored.)
+Case distinctions in the condition list are not significant.
+Conditions preceded by "NON_" represent the negation of the condition.</p>
+<p>A <i>context</i> is one of those defined in the Unicode standard.
+For Unicode 5.1, they are defined in Section 3.13 <code class="inline"><span class="w">Default</span> <span class="w">Case</span> <span class="w">Operations</span></code>
+
+available at
+<a href="http://www.unicode.org/versions/Unicode5.1.0/">http://www.unicode.org/versions/Unicode5.1.0/</a>.
+These are for context-sensitive casing.</p>
+</li>
+</ul>
+<p>The hash described above is returned for locale-independent casing, where
+at least one of the mappings has length longer than one.  If <strong>undef</strong> is 
+returned, the code point may have mappings, but if so, all are length one,
+and are returned by <a href="#charinfo()">charinfo()</a>.
+Note that when this function does return a value, it will be for the complete
+set of mappings for a code point, even those whose length is one.</p>
+<p>If there are additional casing rules that apply only in certain locales,
+an additional key for each will be defined in the returned hash.  Each such key
+will be its locale name, defined as a 2-letter ISO 3166 country code, possibly
+followed by a "_" and a 2-letter ISO language code (possibly followed by a "_"
+and a variant code).  You can find the lists of all possible locales, see
+<a href="../Locale/Country.html">Locale::Country</a> and <a href="../Locale/Language.html">Locale::Language</a>.
+(In Unicode 6.0, the only locales returned by this function
+are <code class="inline">lt</code>
+, <code class="inline"><a class="l_k" href="../functions/tr.html">tr</a></code>, and <code class="inline"><span class="w">az</span></code>
+.)</p>
+<p>Each locale key is a reference to a hash that has the form above, and gives
+the casing rules for that particular locale, which take precedence over the
+locale-independent ones when in that locale.</p>
+<p>If the only casing for a code point is locale-dependent, then the returned
+hash will not have any of the base keys, like <code class="inline"><span class="w">code</span></code>
+, <code class="inline"><span class="w">upper</span></code>
+, etc., but
+will contain only locale keys.</p>
+<p>For more information about case mappings see
+<a href="http://www.unicode.org/unicode/reports/tr21/">http://www.unicode.org/unicode/reports/tr21/</a></p>
+<a class='view-head2' id="*namedseq()*"></a><h3 class='h3' ><strong>namedseq()</strong></h3>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">Unicode::UCD</span> <span class="q">&#39;namedseq&#39;</span><span class="sc">;</span></li><li></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">$namedseq</span> = <span class="i">namedseq</span><span class="s">(</span><span class="q">&quot;KATAKANA LETTER AINU P&quot;</span><span class="s">)</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">@namedseq</span> = <span class="i">namedseq</span><span class="s">(</span><span class="q">&quot;KATAKANA LETTER AINU P&quot;</span><span class="s">)</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">%namedseq</span> = <span class="i">namedseq</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>If used with a single argument in a scalar context, returns the string
+consisting of the code points of the named sequence, or <strong>undef</strong> if no
+named sequence by that name exists.  If used with a single argument in
+a list context, it returns the list of the ordinals of the code points.  If used
+with no
+arguments in a list context, returns a hash with the names of the
+named sequences as the keys and the named sequences as strings as
+the values.  Otherwise, it returns <strong>undef</strong> or an empty list depending
+on the context.</p>
+<p>This function only operates on officially approved (not provisional) named
+sequences.</p>
+<p>Note that as of Perl 5.14, <code class="inline">\<span class="i">N</span><span class="s">{</span><span class="w">KATAKANA</span> <span class="w">LETTER</span> <span class="w">AINU</span> <span class="w">P</span><span class="s">}</span></code>
+ will insert the named
+sequence into double-quoted strings, and <code class="inline"><span class="i">charnames::string_vianame</span><span class="s">(</span><span class="q">&quot;KATAKANA</span>
+<span class="q">LETTER AINU P&quot;</span><span class="s">)</span></code>
+ will return the same string this function does, but will also
+operate on character names that aren't named sequences, without you having to
+know which are which.  See <a href="../charnames.html">charnames</a>.</p>
+<a class='view-head2' id="num"></a><h3 class='h3' >num</h3>
+<p><code class="inline"><span class="w">num</span></code>
+ returns the numeric value of the input Unicode string; or <code class="inline"><a class="l_k" href="../functions/undef.html">undef</a></code> if it
+doesn't think the entire string has a completely valid, safe numeric value.</p>
+<p>If the string is just one character in length, the Unicode numeric value
+is returned if it has one, or <code class="inline"><a class="l_k" href="../functions/undef.html">undef</a></code> otherwise.  Note that this need
+not be a whole number.  <code class="inline"><span class="i">num</span><span class="s">(</span><span class="q">&quot;\N{TIBETAN DIGIT HALF ZERO}&quot;</span><span class="s">)</span></code>
+, for
+example returns -0.5.</p>
+<p>If the string is more than one character, <code class="inline"><a class="l_k" href="../functions/undef.html">undef</a></code> is returned unless
+all its characters are decimal digits (that is they would match <code class="inline">\<span class="w">d</span>+</code>
+),
+from the same script.  For example if you have an ASCII '0' and a Bengali
+'3', mixed together, they aren't considered a valid number, and <code class="inline"><a class="l_k" href="../functions/undef.html">undef</a></code>
+is returned.  A further restriction is that the digits all have to be of
+the same form.  A half-width digit mixed with a full-width one will
+return <code class="inline"><a class="l_k" href="../functions/undef.html">undef</a></code>.  The Arabic script has two sets of digits;  <code class="inline"><span class="w">num</span></code>
+ will
+return <code class="inline"><a class="l_k" href="../functions/undef.html">undef</a></code> unless all the digits in the string come from the same
+set.</p>
+<p><code class="inline"><span class="w">num</span></code>
+ errs on the side of safety, and there may be valid strings of
+decimal digits that it doesn't recognize.  Note that Unicode defines
+a number of "digit" characters that aren't "decimal digit" characters.
+"Decimal digits" have the property that they have a positional value, i.e.,
+there is a units position, a 10's position, a 100's, etc, AND they are
+arranged in Unicode in blocks of 10 contiguous code points.  The Chinese
+digits, for example, are not in such a contiguous block, and so Unicode
+doesn't view them as decimal digits, but merely digits, and so <code class="inline">\<span class="w">d</span></code>
+ will not
+match them.  A single-character string containing one of these digits will
+have its decimal value returned by <code class="inline"><span class="w">num</span></code>
+, but any longer string containing
+only these digits will return <code class="inline"><a class="l_k" href="../functions/undef.html">undef</a></code>.</p>
+<p>Strings of multiple sub- and superscripts are not recognized as numbers.  You
+can use either of the compatibility decompositions in Unicode::Normalize to
+change these into digits, and then call <code class="inline"><span class="w">num</span></code>
+ on the result.</p>
+<a class='view-head2' id="Unicode%3a%3aUCD%3a%3aUnicodeVersion"></a><h3 class='h3' >Unicode::UCD::UnicodeVersion</h3>
+<p>This returns the version of the Unicode Character Database, in other words, the
+version of the Unicode standard the database implements.  The version is a
+string of numbers delimited by dots (<code class="inline"><span class="q">&#39;.&#39;</span></code>
+).</p>
+<a class='view-head2' id="*Blocks-versus-Scripts*"></a><h3 class='h3' ><strong>Blocks versus Scripts</strong></h3>
+<p>The difference between a block and a script is that scripts are closer
+to the linguistic notion of a set of code points required to present
+languages, while block is more of an artifact of the Unicode code point
+numbering and separation into blocks of (mostly) 256 code points.</p>
+<p>For example the Latin <strong>script</strong> is spread over several <strong>blocks</strong>, such
+as <code class="inline"><span class="w">Basic</span> <span class="w">Latin</span></code>
+, <code class="inline"><span class="w">Latin</span> <span class="n">1</span> <span class="w">Supplement</span></code>
+, <code class="inline"><span class="w">Latin</span> <span class="w">Extended</span>-A</code>
+, and
+<code class="inline"><span class="w">Latin</span> <span class="w">Extended</span>-B</code>
+.  On the other hand, the Latin script does not
+contain all the characters of the <code class="inline"><span class="w">Basic</span> <span class="w">Latin</span></code>
+ block (also known as
+ASCII): it includes only the letters, and not, for example, the digits
+or the punctuation.</p>
+<p>For blocks see <a href="http://www.unicode.org/Public/UNIDATA/Blocks.txt">http://www.unicode.org/Public/UNIDATA/Blocks.txt</a></p>
+<p>For scripts see UTR #24: <a href="http://www.unicode.org/unicode/reports/tr24/">http://www.unicode.org/unicode/reports/tr24/</a></p>
+<a class='view-head2' id="*Matching-Scripts-and-Blocks*"></a><h3 class='h3' ><strong>Matching Scripts and Blocks</strong></h3>
+<p>Scripts are matched with the regular-expression construct
+<code class="inline">\<span class="i">p</span><span class="s">{</span>...<span class="s">}</span></code>
+ (e.g. <code class="inline">\<span class="i">p</span><span class="s">{</span><span class="w">Tibetan</span><span class="s">}</span></code>
+ matches characters of the Tibetan script),
+while <code class="inline">\<span class="i">p</span><span class="s">{</span><span class="w">Blk</span>=...<span class="s">}</span></code>
+ is used for blocks (e.g. <code class="inline">\<span class="i">p</span><span class="s">{</span><span class="w">Blk</span>=<span class="w">Tibetan</span><span class="s">}</span></code>
+ matches
+any of the 256 code points in the Tibetan block).</p>
+<a class='view-head2' id="Implementation-Note"></a><h3 class='h3' >Implementation Note</h3>
+<p>The first use of charinfo() opens a read-only filehandle to the Unicode
+Character Database (the database is included in the Perl distribution).
+The filehandle is then kept open for further queries.  In other words,
+if you are wondering where one of your filehandles went, that's where.</p>
+<a class='view-head1' id="BUGS"></a><h2 class='h2' >BUGS</h2>
+<p>Does not yet support EBCDIC platforms.</p>
+<a class='view-head1' id="AUTHOR"></a><h2 class='h2' >AUTHOR</h2>
+<p>Jarkko Hietaniemi</p>
+
+
+
+
+      <ul><li><a href="#NAME">NAME</a></li><li><a href="#SYNOPSIS">SYNOPSIS</a></li><li><a href="#DESCRIPTION">DESCRIPTION</a></li><ul><li><a href="#code-point-argument">code point argument</a></li><li><a href="#*charinfo()*">*charinfo()*</a></li><li><a href="#*charblock()*">*charblock()*</a></li><li><a href="#*charscript()*">*charscript()*</a></li><li><a href="#*charblocks()*">*charblocks()*</a></li><li><a href="#*charscripts()*">*charscripts()*</a></li><li><a href="#*charinrange()*">*charinrange()*</a></li><li><a href="#*general_categories()*">*general_categories()*</a></li><li><a href="#*bidi_types()*">*bidi_types()*</a></li><li><a href="#*compexcl()*">*compexcl()*</a></li><li><a href="#*casefold()*">*casefold()*</a></li><li><a href="#*casespec()*">*casespec()*</a></li><li><a href="#*namedseq()*">*namedseq()*</a></li><li><a href="#num">num</a></li><li><a href="#Unicode%3a%3aUCD%3a%3aUnicodeVersion">Unicode::UCD::UnicodeVersion</a></li><li><a href="#*Blocks-versus-Scripts*">*Blocks versus Scripts*</a></li><li><a href="#*Matching-Scripts-and-Blocks*">*Matching Scripts and Blocks*</a></li><li><a href="#Implementation-Note">Implementation Note</a></li></ul><li><a href="#BUGS">BUGS</a></li><li><a href="#AUTHOR">AUTHOR</a></li></ul>
+
+
+                  </div>
+                </article>
+              </div>
+            </div>
+          </main>
+        </div>
+           <footer class="footer row bg-light pt-5 pb-5">
+       <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+           <div class="row">
+               <div class="col-md-4">
+                   <ul class="list-unstyled">
+                       <li>
+                           <h4>Site info</h4>
+                       </li>
+                       <li>Docs mantained by
+                           <a href="//lists.perl.org/list/perl5-porters.html"
+                               rel="noopener">Perl 5 Porters</a>
+                       </li>
+                       <li>Perldoc site development sponsored by
+                           <a href="//opusvl.com" rel="noopener">
+                           <img style="margin: 20px 20px 5px 10px" class="opus-logo" src="/public/img/opusvl_logo.svg" alt="OpusVL Logo">
+                        </a>
+                    <li><span class="about_perldoc"><a href="//about.html">About PerlDOC</a></span>
+                    </li>
+                       </li>
+                   </ul>
+               </div>
+               <div class="col-md-8">
+                   <div class="row">
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Manuals</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.14.0/index-overview.html">Overview</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.14.0/index-tutorials.html">Tutorials</a>
+                               </li>
+                               <li>
+                                   <a href="/5.14.0/index-faq.html">FAQs</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.14.0/index-history.html">Changes</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Reference</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.14.0/index-language.html">Language</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.14.0/index-functions.html">Functions</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.14.0/perlop.html">Operators</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.14.0/perlvar.html">Variables</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Modules</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.14.0/index-modules-A.html">Modules</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.14.0/index-pragmas.html">Pragmas</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.14.0/index-utilities.html">Utilities</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Misc</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.14.0/index-licence.html">License</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.14.0/index-internals.html">Internals</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.14.0/index-platforms.html">Platforms</a>
+                               </li>
+                            <li>
+                                <a
+                                    href="/5.14.0/index-about.html">About</a>
+                            </li>
+                           </ul>
+                       </div>
+                   </div>
+               </div>
+               <div class=" col-12 footer-inf text-center">
+                   <small>perldoc.perl.org - Official documentation for the Perl
+                       programming language</small>
+               </div>
+           </div>
+       </div>
+   </footer>
+
+        	<div class="beta-wrapper beta-bottom-right ">
+		<div class="beta beta-blue  ">
+			<a class="beta-link "
+				href="//github.com/OpusVL/perldoc.perl.org/issues/new" rel="noopener">
+				<span class="beta-text">
+					This website is a Beta release.
+				</span>
+				<span class="beta-text">
+					For any issues please raise a ticket on GitHub
+				</span>
+			</a>
+		</div>
+	</div>
+
+        <script src="/public/js/main.min.js"></script>
+      </body>
+
+      </html>

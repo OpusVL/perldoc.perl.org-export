@@ -1,0 +1,1009 @@
+      
+      
+      
+      
+
+      <!DOCTYPE html>
+      <html lang="en">
+
+      <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Digest::SHA - perldoc.perl.org">
+        <link rel="icon" href="/public/img/favicon.ico">
+        <title>Digest::SHA - perldoc.perl.org</title>
+        <link href="/public/css/main.min.css" rel="stylesheet">
+        <link rel="canonical" href="/Digest/SHA.html">
+        <link
+          href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900'
+          rel='stylesheet' type='text/css'>
+        <script>
+          window.ga = window.ga || function () {
+            (ga.q = ga.q || []).push(arguments)
+          };
+          ga.l = +new Date;
+          ga('create', 'UA-1892152-2', 'auto'); // JJ's account
+          ga('create', 'UA-50555-3', 'auto', 'perlOrg'); // perl.org account
+          ga('require', 'outboundLinkTracker', {
+            events: ['click', 'auxclick', 'contextmenu'],
+          });
+          ga('require', 'maxScrollTracker');
+          ga('send', 'pageview');
+          ga('perlOrg.send', 'pageview');
+        </script>
+        <script async src="https://www.google-analytics.com/analytics.js">
+        </script>
+        <script async src="/public/js/tracking.min.js"></script>
+      </head>
+
+      <body class="body container-fluid ">
+        <div class="wrapper">
+
+          <nav
+    class="navbar navbar-dark bg-primary bg-perl fixed-top justify-content-between navbar-expand-lg">
+    <a href="#content" class="skippy sr-only sr-only-focusable">
+        <span class=' skippy-text'>Skip to main content</span>
+    </a>
+    <a class="navbar-brand" href="/">
+        <img class="logo" src="/public/img/logo_perl_doc.svg"
+            alt="Perl Documentation Logo" />
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse"
+        data-target="#navbar" aria-controls="navbar" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="navbar" class="collapse navbar-collapse ">
+        <ul class="navbar-nav ml-auto navbar-right">
+            <form class="nav-item dropdown search-wrapper">
+                <input type="text" id='searchinput' aria-describedby='navbarDropdown5'
+                    placeholder="Type query" class='search-input-field' value=''>
+
+                <button href="#" data-toggle='dropdown' type="button"
+                    aria-haspopup="true" aria-expanded='false' id="navbarDropdown5"
+                    class="nav-link dropdown-toggle search-link">
+                    <object tabindex='-1' focusable="false" class='search-icon'
+                        data="/public/img/search.svg" type="image/svg+xml"
+                        name='search icon'>search
+                        icon</object>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown5"
+                    id='search-results'>
+                    <p class='dropdown-item major-version'>
+                        No results
+                    </p>
+                </div>
+            </form>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown" href="#" class="nav-link dropdown-toggle"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Perl versions</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    
+                        <p class='dropdown-item major-version'>
+                            5.32
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.32.0/">5.32.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.30
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.3/">5.30.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.2/">5.30.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.1/">5.30.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.0/">5.30.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.28
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.3/">5.28.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.2/">5.28.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.1/">5.28.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.0/">5.28.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.26
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.3/">5.26.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.2/">5.26.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.1/">5.26.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.0/">5.26.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.24
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.4/">5.24.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.3/">5.24.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.2/">5.24.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.1/">5.24.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.0/">5.24.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.22
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.4/">5.22.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.3/">5.22.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.2/">5.22.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.1/">5.22.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.0/">5.22.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.20
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.3/">5.20.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.2/">5.20.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.1/">5.20.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.0/">5.20.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.18
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.4/">5.18.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.3/">5.18.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.2/">5.18.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.1/">5.18.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.0/">5.18.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.16
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.3/">5.16.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.2/">5.16.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.1/">5.16.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.0/">5.16.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.14
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.4/">5.14.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.3/">5.14.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.2/">5.14.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.1/">5.14.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.0/">5.14.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.12
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.5/">5.12.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.4/">5.12.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.3/">5.12.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.2/">5.12.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.1/">5.12.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.0/">5.12.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.10
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.1/">5.10.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.0/">5.10.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.8
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.9/">5.8.9</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.8/">5.8.8</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.7/">5.8.7</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.6/">5.8.6</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.5/">5.8.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.4/">5.8.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.3/">5.8.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.2/">5.8.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.1/">5.8.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.0/">5.8.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.6
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.2/">5.6.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.1/">5.6.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.0/">5.6.0</a>
+                        
+                        
+                    
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown1" href="#" class="dropdown-toggle nav-link"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Manuals</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                    <a class="dropdown-item"
+                        href="/5.30.2/index-overview.html">Overview</a>
+                    <a class="dropdown-item"
+                        href="/5.30.2/index-tutorials.html">Tutorials</a>
+                    <a class="dropdown-item"
+                        href="/5.30.2/index-faq.html">FAQs</a>
+                    <a class="dropdown-item"
+                        href="/5.30.2/index-history.html">Changes</a>
+                    <a class="dropdown-item"
+                        href="/5.30.2/index-licence.html">License</a>
+                    <a class="dropdown-item"
+                        href="/5.30.2/index-language.html">Language</a>
+                    <a class="dropdown-item"
+                        href="/5.30.2/index-functions.html">Functions</a>
+                    <a class="dropdown-item"
+                        href="/5.30.2/perlop.html">Operators</a>
+                    <a class="dropdown-item"
+                        href="/5.30.2/perlvar.html">Variables</a>
+                    <a class="dropdown-item"
+                        href="/5.30.2/index-pragmas.html">Pragmas</a>
+                    <a class="dropdown-item"
+                        href="/5.30.2/index-utilities.html">Utilities</a>
+                    <a class="dropdown-item"
+                        href="/5.30.2/index-internals.html">Internals</a>
+                    <a class="dropdown-item"
+                        href="/5.30.2/index-platforms.html">Platforms</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown3" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Modules</a>
+                <div aria-labelledby="navbarDropdown3"
+                    class="dropdown-menu letters-wrap">
+                    <!--<a class="dropdown-item"
+                        href="/5.30.2/index-modules.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.30.2/index-modules-by-cat.html">By
+                        Category</a>-->
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-modules-A.html">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-modules-B.html">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-modules-C.html">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-modules-D.html">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-modules-E.html">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-modules-F.html">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-modules-G.html">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-modules-H.html">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-modules-I.html">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-modules-J.html">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-modules-K.html">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-modules-L.html">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-modules-M.html">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-modules-N.html">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-modules-O.html">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-modules-P.html">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-modules-Q.html">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-modules-R.html">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-modules-S.html">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-modules-T.html">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-modules-U.html">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-modules-V.html">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-modules-W.html">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-modules-X.html">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-modules-Y.html">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-modules-Z.html">Z</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown4" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Functions</a>
+                <div aria-labelledby="navbarDropdown4"
+                    class="dropdown-menu letters-wrap">
+                    <a class="dropdown-item"
+                        href="/5.30.2/index-functions.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.30.2/index-functions-by-cat.html">By
+                        Category</a>
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-functions.html#A">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-functions.html#B">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-functions.html#C">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-functions.html#D">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-functions.html#E">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-functions.html#F">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-functions.html#G">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-functions.html#H">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-functions.html#I">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-functions.html#J">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-functions.html#K">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-functions.html#L">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-functions.html#M">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-functions.html#N">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-functions.html#O">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-functions.html#P">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-functions.html#Q">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-functions.html#R">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-functions.html#S">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-functions.html#T">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-functions.html#U">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-functions.html#V">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-functions.html#W">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-functions.html#X">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-functions.html#Y">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.30.2/index-functions.html#Z">Z</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!--/.nav-collapse -->
+</nav>
+
+
+          <main class="row main-content pb-5 pt-5" id='content'>
+            <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+              <div class="row">
+                <div class="col-sm-12">
+                  <div id="breadcrumbs">
+                      
+    <a href="../index.html">Home</a>&nbsp; &gt;
+    
+      
+        <a href="../index-modules-D.html">Core modules (D)</a> &gt;
+      
+    
+    Digest::SHA
+  
+
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <article class="col-sm-12 content">
+                  <div class="documentation-wrapper">
+                    <div id="perl_version">
+                      <h7 class='page-title'> Perl 5 version 30.2
+                        documentation</h7>
+                    </div>
+                    <h1>Digest::SHA</h1>
+
+
+  <!--    -->
+<ul><li><a href="#NAME">NAME</a></li><li><a href="#SYNOPSIS">SYNOPSIS</a></li><li><a href="#SYNOPSIS-(HMAC-SHA)">SYNOPSIS (HMAC-SHA)</a></li><li><a href="#ABSTRACT">ABSTRACT</a></li><li><a href="#DESCRIPTION">DESCRIPTION</a></li><li><a href="#UNICODE-AND-SIDE-EFFECTS">UNICODE AND SIDE EFFECTS</a></li><li><a href="#NIST-STATEMENT-ON-SHA-1">NIST STATEMENT ON SHA-1</a></li><li><a href="#PADDING-OF-BASE64-DIGESTS">PADDING OF BASE64 DIGESTS</a></li><li><a href="#EXPORT">EXPORT</a></li><li><a href="#EXPORTABLE-FUNCTIONS">EXPORTABLE FUNCTIONS</a></li><li><a href="#SEE-ALSO">SEE ALSO</a></li><li><a href="#AUTHOR">AUTHOR</a></li><li><a href="#ACKNOWLEDGMENTS">ACKNOWLEDGMENTS</a></li><li><a href="#COPYRIGHT-AND-LICENSE">COPYRIGHT AND LICENSE</a></li></ul><a class='view-head1' id="NAME"></a><h2 class='h2' >NAME</h2>
+<p>Digest::SHA - Perl extension for SHA-1/224/256/384/512</p>
+<a class='view-head1' id="SYNOPSIS"></a><h2 class='h2' >SYNOPSIS</h2>
+<p>In programs:</p>
+<pre class="verbatim"><ol><li>		<span class="c"># Functional interface</span></li><li></li><li>	<a class="l_k" href="../functions/use.html">use</a> <span class="w">Digest::SHA</span> <span class="q">qw(sha1 sha1_hex sha1_base64 ...)</span><span class="sc">;</span></li><li></li><li>	<span class="i">$digest</span> = <span class="i">sha1</span><span class="s">(</span><span class="i">$data</span><span class="s">)</span><span class="sc">;</span></li><li>	<span class="i">$digest</span> = <span class="i">sha1_hex</span><span class="s">(</span><span class="i">$data</span><span class="s">)</span><span class="sc">;</span></li><li>	<span class="i">$digest</span> = <span class="i">sha1_base64</span><span class="s">(</span><span class="i">$data</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>	<span class="i">$digest</span> = <span class="i">sha256</span><span class="s">(</span><span class="i">$data</span><span class="s">)</span><span class="sc">;</span></li><li>	<span class="i">$digest</span> = <span class="i">sha384_hex</span><span class="s">(</span><span class="i">$data</span><span class="s">)</span><span class="sc">;</span></li><li>	<span class="i">$digest</span> = <span class="i">sha512_base64</span><span class="s">(</span><span class="i">$data</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>		<span class="c"># Object-oriented</span></li><li></li><li>	<a class="l_k" href="../functions/use.html">use</a> <span class="w">Digest::SHA</span><span class="sc">;</span></li><li></li><li>	<span class="i">$sha</span> = <span class="w">Digest::SHA</span><span class="w">-&gt;new</span><span class="s">(</span><span class="i">$alg</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>	<span class="i">$sha</span><span class="i">-&gt;add</span><span class="s">(</span><span class="i">$data</span><span class="s">)</span><span class="sc">;</span>		<span class="c"># feed data into stream</span></li><li></li><li>	<span class="i">$sha</span><span class="i">-&gt;addfile</span><span class="s">(</span><span class="i">*F</span><span class="s">)</span><span class="sc">;</span></li><li>	<span class="i">$sha</span><span class="i">-&gt;addfile</span><span class="s">(</span><span class="i">$filename</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>	<span class="i">$sha</span><span class="i">-&gt;add_bits</span><span class="s">(</span><span class="i">$bits</span><span class="s">)</span><span class="sc">;</span></li><li>	<span class="i">$sha</span><span class="i">-&gt;add_bits</span><span class="s">(</span><span class="i">$data</span><span class="cm">,</span> <span class="i">$nbits</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>	<span class="i">$sha_copy</span> = <span class="i">$sha</span><span class="i">-&gt;clone</span><span class="sc">;</span>	<span class="c"># make copy of digest object</span></li><li>	<span class="i">$state</span> = <span class="i">$sha</span><span class="i">-&gt;getstate</span><span class="sc">;</span>	<span class="c"># save current state to string</span></li><li>	<span class="i">$sha</span><span class="i">-&gt;putstate</span><span class="s">(</span><span class="i">$state</span><span class="s">)</span><span class="sc">;</span>		<span class="c"># restore previous $state</span></li><li></li><li>	<span class="i">$digest</span> = <span class="i">$sha</span><span class="i">-&gt;digest</span><span class="sc">;</span>		<span class="c"># compute digest</span></li><li>	<span class="i">$digest</span> = <span class="i">$sha</span><span class="i">-&gt;hexdigest</span><span class="sc">;</span></li><li>	<span class="i">$digest</span> = <span class="i">$sha</span><span class="i">-&gt;b64digest</span><span class="sc">;</span></li></ol></pre><p>From the command line:</p>
+<pre class="verbatim"><ol><li>	<span class="i">$ shasum</span> <span class="w">files</span></li><li></li><li>	<span class="i">$ shasum</span> --<span class="w">help</span></li></ol></pre><a class='view-head1' id="SYNOPSIS-(HMAC-SHA)"></a><h2 class='h2' >SYNOPSIS (HMAC-SHA)</h2>
+<pre class="verbatim"><ol><li>		<span class="c"># Functional interface only</span></li><li></li><li>	<a class="l_k" href="../functions/use.html">use</a> <span class="w">Digest::SHA</span> <span class="q">qw(hmac_sha1 hmac_sha1_hex ...)</span><span class="sc">;</span></li><li></li><li>	<span class="i">$digest</span> = <span class="i">hmac_sha1</span><span class="s">(</span><span class="i">$data</span><span class="cm">,</span> <span class="i">$key</span><span class="s">)</span><span class="sc">;</span></li><li>	<span class="i">$digest</span> = <span class="i">hmac_sha224_hex</span><span class="s">(</span><span class="i">$data</span><span class="cm">,</span> <span class="i">$key</span><span class="s">)</span><span class="sc">;</span></li><li>	<span class="i">$digest</span> = <span class="i">hmac_sha256_base64</span><span class="s">(</span><span class="i">$data</span><span class="cm">,</span> <span class="i">$key</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><a class='view-head1' id="ABSTRACT"></a><h2 class='h2' >ABSTRACT</h2>
+<p>Digest::SHA is a complete implementation of the NIST Secure Hash Standard.
+It gives Perl programmers a convenient way to calculate SHA-1, SHA-224,
+SHA-256, SHA-384, SHA-512, SHA-512/224, and SHA-512/256 message digests.
+The module can handle all types of input, including partial-byte data.</p>
+<a class='view-head1' id="DESCRIPTION"></a><h2 class='h2' >DESCRIPTION</h2>
+<p>Digest::SHA is written in C for speed.  If your platform lacks a
+C compiler, you can install the functionally equivalent (but much
+slower) <a href="https://search.cpan.org/perldoc/Digest::SHA::PurePerl">Digest::SHA::PurePerl</a> module.</p>
+<p>The programming interface is easy to use: it's the same one found
+in CPAN's <a href="../Digest.html">Digest</a> module.  So, if your applications currently
+use <a href="../Digest/MD5.html">Digest::MD5</a> and you'd prefer the stronger security of SHA,
+it's a simple matter to convert them.</p>
+<p>The interface provides two ways to calculate digests:  all-at-once,
+or in stages.  To illustrate, the following short program computes
+the SHA-256 digest of "hello world" using each approach:</p>
+<pre class="verbatim"><ol><li>	<a class="l_k" href="../functions/use.html">use</a> <span class="w">Digest::SHA</span> <span class="q">qw(sha256_hex)</span><span class="sc">;</span></li><li></li><li>	<span class="i">$data</span> = <span class="q">&quot;hello world&quot;</span><span class="sc">;</span></li><li>	<span class="i">@frags</span> = <a class="l_k" href="../functions/split.html">split</a><span class="s">(</span><span class="q">//</span><span class="cm">,</span> <span class="i">$data</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>	<span class="c"># all-at-once (Functional style)</span></li><li>	<span class="i">$digest1</span> = <span class="i">sha256_hex</span><span class="s">(</span><span class="i">$data</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>	<span class="c"># in-stages (OOP style)</span></li><li>	<span class="i">$state</span> = <span class="w">Digest::SHA</span><span class="w">-&gt;new</span><span class="s">(</span><span class="n">256</span><span class="s">)</span><span class="sc">;</span></li><li>	<a class="l_k" href="../functions/for.html">for</a> <span class="s">(</span><span class="i">@frags</span><span class="s">)</span> <span class="s">{</span> <span class="i">$state</span><span class="i">-&gt;add</span><span class="s">(</span><span class="i">$_</span><span class="s">)</span> <span class="s">}</span></li><li>	<span class="i">$digest2</span> = <span class="i">$state</span><span class="i">-&gt;hexdigest</span><span class="sc">;</span></li><li></li><li>	<a class="l_k" href="../functions/print.html">print</a> <span class="i">$digest1</span> <a class="l_k" href="../functions/eq.html">eq</a> <span class="i">$digest2</span> ?</li><li>		<span class="q">&quot;whew!\n&quot;</span> <span class="co">:</span> <span class="q">&quot;oops!\n&quot;</span><span class="sc">;</span></li></ol></pre><p>To calculate the digest of an n-bit message where <i>n</i> is not a
+multiple of 8, use the <i>add_bits()</i> method.  For example, consider
+the 446-bit message consisting of the bit-string "110" repeated
+148 times, followed by "11".  Here's how to display its SHA-1
+digest:</p>
+<pre class="verbatim"><ol><li>	<a class="l_k" href="../functions/use.html">use</a> <span class="w">Digest::SHA</span><span class="sc">;</span></li><li>	<span class="i">$bits</span> = <span class="q">&quot;110&quot;</span> x <span class="n">148</span> . <span class="q">&quot;11&quot;</span><span class="sc">;</span></li><li>	<span class="i">$sha</span> = <span class="w">Digest::SHA</span><span class="w">-&gt;new</span><span class="s">(</span><span class="n">1</span><span class="s">)</span><span class="i">-&gt;add_bits</span><span class="s">(</span><span class="i">$bits</span><span class="s">)</span><span class="sc">;</span></li><li>	<a class="l_k" href="../functions/print.html">print</a> <span class="i">$sha</span><span class="i">-&gt;hexdigest</span><span class="cm">,</span> <span class="q">&quot;\n&quot;</span><span class="sc">;</span></li></ol></pre><p>Note that for larger bit-strings, it's more efficient to use the
+two-argument version <i>add_bits($data, $nbits)</i>, where <i>$data</i> is
+in the customary packed binary format used for Perl strings.</p>
+<p>The module also lets you save intermediate SHA states to a string.  The
+<i>getstate()</i> method generates portable, human-readable text describing
+the current state of computation.  You can subsequently restore that
+state with <i>putstate()</i> to resume where the calculation left off.</p>
+<p>To see what a state description looks like, just run the following:</p>
+<pre class="verbatim"><ol><li>	<a class="l_k" href="../functions/use.html">use</a> <span class="w">Digest::SHA</span><span class="sc">;</span></li><li>	<a class="l_k" href="../functions/print.html">print</a> <span class="i">Digest::SHA</span><span class="i">-&gt;new</span><span class="i">-&gt;add</span><span class="s">(</span><span class="q">&quot;Shaw&quot;</span> x <span class="n">1962</span><span class="s">)</span><span class="i">-&gt;getstate</span><span class="sc">;</span></li></ol></pre><p>As an added convenience, the Digest::SHA module offers routines to
+calculate keyed hashes using the HMAC-SHA-1/224/256/384/512
+algorithms.  These services exist in functional form only, and
+mimic the style and behavior of the <i>sha()</i>, <i>sha_hex()</i>, and
+<i>sha_base64()</i> functions.</p>
+<pre class="verbatim"><ol><li>	<span class="c"># Test vector from draft-ietf-ipsec-ciph-sha-256-01.txt</span></li><li></li><li>	<a class="l_k" href="../functions/use.html">use</a> <span class="w">Digest::SHA</span> <span class="q">qw(hmac_sha256_hex)</span><span class="sc">;</span></li><li>	<a class="l_k" href="../functions/print.html">print</a> <span class="i">hmac_sha256_hex</span><span class="s">(</span><span class="q">&quot;Hi There&quot;</span><span class="cm">,</span> <a class="l_k" href="../functions/chr.html">chr</a><span class="s">(</span><span class="n">0x0b</span><span class="s">)</span> x <span class="n">32</span><span class="s">)</span><span class="cm">,</span> <span class="q">&quot;\n&quot;</span><span class="sc">;</span></li></ol></pre><a class='view-head1' id="UNICODE-AND-SIDE-EFFECTS"></a><h2 class='h2' >UNICODE AND SIDE EFFECTS</h2>
+<p>Perl supports Unicode strings as of version 5.6.  Such strings may
+contain wide characters, namely, characters whose ordinal values are
+greater than 255.  This can cause problems for digest algorithms such
+as SHA that are specified to operate on sequences of bytes.</p>
+<p>The rule by which Digest::SHA handles a Unicode string is easy
+to state, but potentially confusing to grasp: the string is interpreted
+as a sequence of byte values, where each byte value is equal to the
+ordinal value (viz. code point) of its corresponding Unicode character.
+That way, the Unicode string 'abc' has exactly the same digest value as
+the ordinary string 'abc'.</p>
+<p>Since a wide character does not fit into a byte, the Digest::SHA
+routines croak if they encounter one.  Whereas if a Unicode string
+contains no wide characters, the module accepts it quite happily.
+The following code illustrates the two cases:</p>
+<pre class="verbatim"><ol><li>	<span class="i">$str1</span> = <a class="l_k" href="../functions/pack.html">pack</a><span class="s">(</span><span class="q">&#39;U*&#39;</span><span class="cm">,</span> <span class="s">(</span><span class="n">0</span>..<span class="n">255</span><span class="s">)</span><span class="s">)</span><span class="sc">;</span></li><li>	<a class="l_k" href="../functions/print.html">print</a> <span class="i">sha1_hex</span><span class="s">(</span><span class="i">$str1</span><span class="s">)</span><span class="sc">;</span>		<span class="c"># ok</span></li><li></li><li>	<span class="i">$str2</span> = <a class="l_k" href="../functions/pack.html">pack</a><span class="s">(</span><span class="q">&#39;U*&#39;</span><span class="cm">,</span> <span class="s">(</span><span class="n">0</span>..<span class="n">256</span><span class="s">)</span><span class="s">)</span><span class="sc">;</span></li><li>	<a class="l_k" href="../functions/print.html">print</a> <span class="i">sha1_hex</span><span class="s">(</span><span class="i">$str2</span><span class="s">)</span><span class="sc">;</span>		<span class="c"># croaks</span></li></ol></pre><p>Be aware that the digest routines silently convert UTF-8 input into its
+equivalent byte sequence in the native encoding (cf. utf8::downgrade).
+This side effect influences only the way Perl stores the data internally,
+but otherwise leaves the actual value of the data intact.</p>
+<a class='view-head1' id="NIST-STATEMENT-ON-SHA-1"></a><h2 class='h2' >NIST STATEMENT ON SHA-1</h2>
+<p>NIST acknowledges that the work of Prof. Xiaoyun Wang constitutes a
+practical collision attack on SHA-1.  Therefore, NIST encourages the
+rapid adoption of the SHA-2 hash functions (e.g. SHA-256) for applications
+requiring strong collision resistance, such as digital signatures.</p>
+<p>ref. <a href="http://csrc.nist.gov/groups/ST/hash/statement.html">http://csrc.nist.gov/groups/ST/hash/statement.html</a></p>
+<a class='view-head1' id="PADDING-OF-BASE64-DIGESTS"></a><h2 class='h2' >PADDING OF BASE64 DIGESTS</h2>
+<p>By convention, CPAN Digest modules do <strong>not</strong> pad their Base64 output.
+Problems can occur when feeding such digests to other software that
+expects properly padded Base64 encodings.</p>
+<p>For the time being, any necessary padding must be done by the user.
+Fortunately, this is a simple operation: if the length of a Base64-encoded
+digest isn't a multiple of 4, simply append "=" characters to the end
+of the digest until it is:</p>
+<pre class="verbatim"><ol><li>	<a class="l_k" href="../functions/while.html">while</a> <span class="s">(</span><a class="l_k" href="../functions/length.html">length</a><span class="s">(</span><span class="i">$b64_digest</span><span class="s">)</span> % <span class="n">4</span><span class="s">)</span> <span class="s">{</span></li><li>		<span class="i">$b64_digest</span> .= <span class="q">&#39;=&#39;</span><span class="sc">;</span></li><li>	<span class="s">}</span></li></ol></pre><p>To illustrate, <i>sha256_base64("abc")</i> is computed to be</p>
+<pre class="verbatim"><ol><li>	<span class="w">ungWv48Bz</span>+<span class="w">pBQUDeXa4iI7ADYaOWF3qctBD</span>/<span class="w">YfIAFa0</span></li></ol></pre><p>which has a length of 43.  So, the properly padded version is</p>
+<pre class="verbatim"><ol><li>	<span class="w">ungWv48Bz</span>+<span class="w">pBQUDeXa4iI7ADYaOWF3qctBD</span>/<span class="w">YfIAFa0</span>=</li></ol></pre><a class='view-head1' id="EXPORT"></a><h2 class='h2' >EXPORT</h2>
+<p>None by default.</p>
+<a class='view-head1' id="EXPORTABLE-FUNCTIONS"></a><h2 class='h2' >EXPORTABLE FUNCTIONS</h2>
+<p>Provided your C compiler supports a 64-bit type (e.g. the <i>long
+long</i> of C99, or <i>__int64</i> used by Microsoft C/C++), all of these
+functions will be available for use.  Otherwise, you won't be able
+to perform the SHA-384 and SHA-512 transforms, both of which require
+64-bit operations.</p>
+<p><i>Functional style</i></p>
+<ul>
+<li><a class='view-title' id="*sha1(%24data%2c-...)*"></a><strong><strong>sha1($data, ...)</strong></strong>
+</li>
+<li><a class='view-title' id="*sha224(%24data%2c-...)*"></a><strong><strong>sha224($data, ...)</strong></strong>
+</li>
+<li><a class='view-title' id="*sha256(%24data%2c-...)*"></a><strong><strong>sha256($data, ...)</strong></strong>
+</li>
+<li><a class='view-title' id="*sha384(%24data%2c-...)*"></a><strong><strong>sha384($data, ...)</strong></strong>
+</li>
+<li><a class='view-title' id="*sha512(%24data%2c-...)*"></a><strong><strong>sha512($data, ...)</strong></strong>
+</li>
+<li><a class='view-title' id="*sha512224(%24data%2c-...)*"></a><strong><strong>sha512224($data, ...)</strong></strong>
+</li>
+<li><a class='view-title' id="*sha512256(%24data%2c-...)*"></a><strong><strong>sha512256($data, ...)</strong></strong>
+<p>Logically joins the arguments into a single string, and returns
+its SHA-1/224/256/384/512 digest encoded as a binary string.</p>
+</li>
+<li><a class='view-title' id="*sha1_hex(%24data%2c-...)*"></a><strong><strong>sha1_hex($data, ...)</strong></strong>
+</li>
+<li><a class='view-title' id="*sha224_hex(%24data%2c-...)*"></a><strong><strong>sha224_hex($data, ...)</strong></strong>
+</li>
+<li><a class='view-title' id="*sha256_hex(%24data%2c-...)*"></a><strong><strong>sha256_hex($data, ...)</strong></strong>
+</li>
+<li><a class='view-title' id="*sha384_hex(%24data%2c-...)*"></a><strong><strong>sha384_hex($data, ...)</strong></strong>
+</li>
+<li><a class='view-title' id="*sha512_hex(%24data%2c-...)*"></a><strong><strong>sha512_hex($data, ...)</strong></strong>
+</li>
+<li><a class='view-title' id="*sha512224_hex(%24data%2c-...)*"></a><strong><strong>sha512224_hex($data, ...)</strong></strong>
+</li>
+<li><a class='view-title' id="*sha512256_hex(%24data%2c-...)*"></a><strong><strong>sha512256_hex($data, ...)</strong></strong>
+<p>Logically joins the arguments into a single string, and returns
+its SHA-1/224/256/384/512 digest encoded as a hexadecimal string.</p>
+</li>
+<li><a class='view-title' id="*sha1_base64(%24data%2c-...)*"></a><strong><strong>sha1_base64($data, ...)</strong></strong>
+</li>
+<li><a class='view-title' id="*sha224_base64(%24data%2c-...)*"></a><strong><strong>sha224_base64($data, ...)</strong></strong>
+</li>
+<li><a class='view-title' id="*sha256_base64(%24data%2c-...)*"></a><strong><strong>sha256_base64($data, ...)</strong></strong>
+</li>
+<li><a class='view-title' id="*sha384_base64(%24data%2c-...)*"></a><strong><strong>sha384_base64($data, ...)</strong></strong>
+</li>
+<li><a class='view-title' id="*sha512_base64(%24data%2c-...)*"></a><strong><strong>sha512_base64($data, ...)</strong></strong>
+</li>
+<li><a class='view-title' id="*sha512224_base64(%24data%2c-...)*"></a><strong><strong>sha512224_base64($data, ...)</strong></strong>
+</li>
+<li><a class='view-title' id="*sha512256_base64(%24data%2c-...)*"></a><strong><strong>sha512256_base64($data, ...)</strong></strong>
+<p>Logically joins the arguments into a single string, and returns
+its SHA-1/224/256/384/512 digest encoded as a Base64 string.</p>
+<p>It's important to note that the resulting string does <strong>not</strong> contain
+the padding characters typical of Base64 encodings.  This omission is
+deliberate, and is done to maintain compatibility with the family of
+CPAN Digest modules.  See <a href="#PADDING-OF-BASE64-DIGESTS">PADDING OF BASE64 DIGESTS</a> for details.</p>
+</li>
+</ul>
+<p><i>OOP style</i></p>
+<ul>
+<li><a class='view-title' id="*new(%24alg)*"></a><strong><strong>new($alg)</strong></strong>
+<p>Returns a new Digest::SHA object.  Allowed values for <i>$alg</i> are 1,
+224, 256, 384, 512, 512224, or 512256.  It's also possible to use
+common string representations of the algorithm (e.g. "sha256",
+"SHA-384").  If the argument is missing, SHA-1 will be used by
+default.</p>
+<p>Invoking <i>new</i> as an instance method will reset the object to the
+initial state associated with <i>$alg</i>.  If the argument is missing,
+the object will continue using the same algorithm that was selected
+at creation.</p>
+</li>
+<li><a class='view-title' id="*reset(%24alg)*"></a><strong><strong>reset($alg)</strong></strong>
+<p>This method has exactly the same effect as <i>new($alg)</i>.  In fact,
+<i>reset</i> is just an alias for <i>new</i>.</p>
+</li>
+<li><a class='view-title' id="*hashsize*"></a><strong><strong>hashsize</strong></strong>
+<p>Returns the number of digest bits for this object.  The values are
+160, 224, 256, 384, 512, 224, and 256 for SHA-1, SHA-224, SHA-256,
+SHA-384, SHA-512, SHA-512/224 and SHA-512/256, respectively.</p>
+</li>
+<li><a class='view-title' id="*algorithm*"></a><strong><strong>algorithm</strong></strong>
+<p>Returns the digest algorithm for this object.  The values are 1,
+224, 256, 384, 512, 512224, and 512256 for SHA-1, SHA-224, SHA-256,
+SHA-384, SHA-512, SHA-512/224, and SHA-512/256, respectively.</p>
+</li>
+<li><a class='view-title' id="*clone*"></a><strong><strong>clone</strong></strong>
+<p>Returns a duplicate copy of the object.</p>
+</li>
+<li><a class='view-title' id="*add(%24data%2c-...)*"></a><strong><strong>add($data, ...)</strong></strong>
+<p>Logically joins the arguments into a single string, and uses it to
+update the current digest state.  In other words, the following
+statements have the same effect:</p>
+<pre class="verbatim"><ol><li>	<span class="i">$sha</span><span class="i">-&gt;add</span><span class="s">(</span><span class="q">&quot;a&quot;</span><span class="s">)</span><span class="sc">;</span> <span class="i">$sha</span><span class="i">-&gt;add</span><span class="s">(</span><span class="q">&quot;b&quot;</span><span class="s">)</span><span class="sc">;</span> <span class="i">$sha</span><span class="i">-&gt;add</span><span class="s">(</span><span class="q">&quot;c&quot;</span><span class="s">)</span><span class="sc">;</span></li><li>	<span class="i">$sha</span><span class="i">-&gt;add</span><span class="s">(</span><span class="q">&quot;a&quot;</span><span class="s">)</span><span class="i">-&gt;add</span><span class="s">(</span><span class="q">&quot;b&quot;</span><span class="s">)</span><span class="i">-&gt;add</span><span class="s">(</span><span class="q">&quot;c&quot;</span><span class="s">)</span><span class="sc">;</span></li><li>	<span class="i">$sha</span><span class="i">-&gt;add</span><span class="s">(</span><span class="q">&quot;a&quot;</span><span class="cm">,</span> <span class="q">&quot;b&quot;</span><span class="cm">,</span> <span class="q">&quot;c&quot;</span><span class="s">)</span><span class="sc">;</span></li><li>	<span class="i">$sha</span><span class="i">-&gt;add</span><span class="s">(</span><span class="q">&quot;abc&quot;</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>The return value is the updated object itself.</p>
+</li>
+<li><a class='view-title' id="*add_bits(%24data%2c-%24nbits)*"></a><strong><strong>add_bits($data, $nbits)</strong></strong>
+</li>
+<li><a class='view-title' id="*add_bits(%24bits)*"></a><strong><strong>add_bits($bits)</strong></strong>
+<p>Updates the current digest state by appending bits to it.  The
+return value is the updated object itself.</p>
+<p>The first form causes the most-significant <i>$nbits</i> of <i>$data</i>
+to be appended to the stream.  The <i>$data</i> argument is in the
+customary binary format used for Perl strings.</p>
+<p>The second form takes an ASCII string of "0" and "1" characters as
+its argument.  It's equivalent to</p>
+<pre class="verbatim"><ol><li>	<span class="i">$sha</span><span class="i">-&gt;add_bits</span><span class="s">(</span><a class="l_k" href="../functions/pack.html">pack</a><span class="s">(</span><span class="q">&quot;B*&quot;</span><span class="cm">,</span> <span class="i">$bits</span><span class="s">)</span><span class="cm">,</span> <a class="l_k" href="../functions/length.html">length</a><span class="s">(</span><span class="i">$bits</span><span class="s">)</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>So, the following two statements do the same thing:</p>
+<pre class="verbatim"><ol><li>	<span class="i">$sha</span><span class="i">-&gt;add_bits</span><span class="s">(</span><span class="q">&quot;111100001010&quot;</span><span class="s">)</span><span class="sc">;</span></li><li>	<span class="i">$sha</span><span class="i">-&gt;add_bits</span><span class="s">(</span><span class="q">&quot;\xF0\xA0&quot;</span><span class="cm">,</span> <span class="n">12</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>Note that SHA-1 and SHA-2 use <i>most-significant-bit ordering</i>
+for their internal state.  This means that</p>
+<pre class="verbatim"><ol><li>	<span class="i">$sha3</span><span class="i">-&gt;add_bits</span><span class="s">(</span><span class="q">&quot;110&quot;</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><p>is equivalent to</p>
+<pre class="verbatim"><ol><li>	<span class="i">$sha3</span><span class="i">-&gt;add_bits</span><span class="s">(</span><span class="q">&quot;1&quot;</span><span class="s">)</span><span class="i">-&gt;add_bits</span><span class="s">(</span><span class="q">&quot;1&quot;</span><span class="s">)</span><span class="i">-&gt;add_bits</span><span class="s">(</span><span class="q">&quot;0&quot;</span><span class="s">)</span><span class="sc">;</span></li></ol></pre></li>
+<li><a class='view-title' id="*addfile(*FILE)*"></a><strong><strong>addfile(*FILE)</strong></strong>
+<p>Reads from <i>FILE</i> until EOF, and appends that data to the current
+state.  The return value is the updated object itself.</p>
+</li>
+<li><a class='view-title' id="*addfile(%24filename-%5b%2c-%24mode%5d)*"></a><strong><strong>addfile($filename [, $mode])</strong></strong>
+<p>Reads the contents of <i>$filename</i>, and appends that data to the current
+state.  The return value is the updated object itself.</p>
+<p>By default, <i>$filename</i> is simply opened and read; no special modes
+or I/O disciplines are used.  To change this, set the optional <i>$mode</i>
+argument to one of the following values:</p>
+<pre class="verbatim"><ol><li>	<span class="q">&quot;b&quot;</span>	<a class="l_k" href="../functions/read.html">read</a> <span class="w">file</span> <span class="w">in</span> <span class="w">binary</span> <span class="w">mode</span></li><li></li><li>	<span class="q">&quot;U&quot;</span>	<a class="l_k" href="../functions/use.html">use</a> <span class="w">universal</span> <span class="w">newlines</span></li><li></li><li>	<span class="q">&quot;0&quot;</span>	<a class="l_k" href="../functions/use.html">use</a> <span class="w">BITS</span> <span class="w">mode</span></li></ol></pre><p>The "U" mode is modeled on Python's "Universal Newlines" concept, whereby
+DOS and Mac OS line terminators are converted internally to UNIX newlines
+before processing.  This ensures consistent digest values when working
+simultaneously across multiple file systems.  <strong>The "U" mode influences
+only text files</strong>, namely those passing Perl's <i>-T</i> test; binary files
+are processed with no translation whatsoever.</p>
+<p>The BITS mode ("0") interprets the contents of <i>$filename</i> as a logical
+stream of bits, where each ASCII '0' or '1' character represents a 0 or
+1 bit, respectively.  All other characters are ignored.  This provides
+a convenient way to calculate the digest values of partial-byte data
+by using files, rather than having to write separate programs employing
+the <i>add_bits</i> method.</p>
+</li>
+<li><a class='view-title' id="*getstate*"></a><strong><strong>getstate</strong></strong>
+<p>Returns a string containing a portable, human-readable representation
+of the current SHA state.</p>
+</li>
+<li><a class='view-title' id="*putstate(%24str)*"></a><strong><strong>putstate($str)</strong></strong>
+<p>Returns a Digest::SHA object representing the SHA state contained
+in <i>$str</i>.  The format of <i>$str</i> matches the format of the output
+produced by method <i>getstate</i>.  If called as a class method, a new
+object is created; if called as an instance method, the object is reset
+to the state contained in <i>$str</i>.</p>
+</li>
+<li><a class='view-title' id="*dump(%24filename)*"></a><strong><strong>dump($filename)</strong></strong>
+<p>Writes the output of <i>getstate</i> to <i>$filename</i>.  If the argument is
+missing, or equal to the empty string, the state information will be
+written to STDOUT.</p>
+</li>
+<li><a class='view-title' id="*load(%24filename)*"></a><strong><strong>load($filename)</strong></strong>
+<p>Returns a Digest::SHA object that results from calling <i>putstate</i> on
+the contents of <i>$filename</i>.  If the argument is missing, or equal to
+the empty string, the state information will be read from STDIN.</p>
+</li>
+<li><a class='view-title' id="*digest*"></a><strong><strong>digest</strong></strong>
+<p>Returns the digest encoded as a binary string.</p>
+<p>Note that the <i>digest</i> method is a read-once operation. Once it
+has been performed, the Digest::SHA object is automatically reset
+in preparation for calculating another digest value.  Call
+<i>$sha-&gt;clone-&gt;digest</i> if it's necessary to preserve the
+original digest state.</p>
+</li>
+<li><a class='view-title' id="*hexdigest*"></a><strong><strong>hexdigest</strong></strong>
+<p>Returns the digest encoded as a hexadecimal string.</p>
+<p>Like <i>digest</i>, this method is a read-once operation.  Call
+<i>$sha-&gt;clone-&gt;hexdigest</i> if it's necessary to preserve
+the original digest state.</p>
+</li>
+<li><a class='view-title' id="*b64digest*"></a><strong><strong>b64digest</strong></strong>
+<p>Returns the digest encoded as a Base64 string.</p>
+<p>Like <i>digest</i>, this method is a read-once operation.  Call
+<i>$sha-&gt;clone-&gt;b64digest</i> if it's necessary to preserve
+the original digest state.</p>
+<p>It's important to note that the resulting string does <strong>not</strong> contain
+the padding characters typical of Base64 encodings.  This omission is
+deliberate, and is done to maintain compatibility with the family of
+CPAN Digest modules.  See <a href="#PADDING-OF-BASE64-DIGESTS">PADDING OF BASE64 DIGESTS</a> for details.</p>
+</li>
+</ul>
+<p><i>HMAC-SHA-1/224/256/384/512</i></p>
+<ul>
+<li><a class='view-title' id="*hmac_sha1(%24data%2c-%24key)*"></a><strong><strong>hmac_sha1($data, $key)</strong></strong>
+</li>
+<li><a class='view-title' id="*hmac_sha224(%24data%2c-%24key)*"></a><strong><strong>hmac_sha224($data, $key)</strong></strong>
+</li>
+<li><a class='view-title' id="*hmac_sha256(%24data%2c-%24key)*"></a><strong><strong>hmac_sha256($data, $key)</strong></strong>
+</li>
+<li><a class='view-title' id="*hmac_sha384(%24data%2c-%24key)*"></a><strong><strong>hmac_sha384($data, $key)</strong></strong>
+</li>
+<li><a class='view-title' id="*hmac_sha512(%24data%2c-%24key)*"></a><strong><strong>hmac_sha512($data, $key)</strong></strong>
+</li>
+<li><a class='view-title' id="*hmac_sha512224(%24data%2c-%24key)*"></a><strong><strong>hmac_sha512224($data, $key)</strong></strong>
+</li>
+<li><a class='view-title' id="*hmac_sha512256(%24data%2c-%24key)*"></a><strong><strong>hmac_sha512256($data, $key)</strong></strong>
+<p>Returns the HMAC-SHA-1/224/256/384/512 digest of <i>$data</i>/<i>$key</i>,
+with the result encoded as a binary string.  Multiple <i>$data</i>
+arguments are allowed, provided that <i>$key</i> is the last argument
+in the list.</p>
+</li>
+<li><a class='view-title' id="*hmac_sha1_hex(%24data%2c-%24key)*"></a><strong><strong>hmac_sha1_hex($data, $key)</strong></strong>
+</li>
+<li><a class='view-title' id="*hmac_sha224_hex(%24data%2c-%24key)*"></a><strong><strong>hmac_sha224_hex($data, $key)</strong></strong>
+</li>
+<li><a class='view-title' id="*hmac_sha256_hex(%24data%2c-%24key)*"></a><strong><strong>hmac_sha256_hex($data, $key)</strong></strong>
+</li>
+<li><a class='view-title' id="*hmac_sha384_hex(%24data%2c-%24key)*"></a><strong><strong>hmac_sha384_hex($data, $key)</strong></strong>
+</li>
+<li><a class='view-title' id="*hmac_sha512_hex(%24data%2c-%24key)*"></a><strong><strong>hmac_sha512_hex($data, $key)</strong></strong>
+</li>
+<li><a class='view-title' id="*hmac_sha512224_hex(%24data%2c-%24key)*"></a><strong><strong>hmac_sha512224_hex($data, $key)</strong></strong>
+</li>
+<li><a class='view-title' id="*hmac_sha512256_hex(%24data%2c-%24key)*"></a><strong><strong>hmac_sha512256_hex($data, $key)</strong></strong>
+<p>Returns the HMAC-SHA-1/224/256/384/512 digest of <i>$data</i>/<i>$key</i>,
+with the result encoded as a hexadecimal string.  Multiple <i>$data</i>
+arguments are allowed, provided that <i>$key</i> is the last argument
+in the list.</p>
+</li>
+<li><a class='view-title' id="*hmac_sha1_base64(%24data%2c-%24key)*"></a><strong><strong>hmac_sha1_base64($data, $key)</strong></strong>
+</li>
+<li><a class='view-title' id="*hmac_sha224_base64(%24data%2c-%24key)*"></a><strong><strong>hmac_sha224_base64($data, $key)</strong></strong>
+</li>
+<li><a class='view-title' id="*hmac_sha256_base64(%24data%2c-%24key)*"></a><strong><strong>hmac_sha256_base64($data, $key)</strong></strong>
+</li>
+<li><a class='view-title' id="*hmac_sha384_base64(%24data%2c-%24key)*"></a><strong><strong>hmac_sha384_base64($data, $key)</strong></strong>
+</li>
+<li><a class='view-title' id="*hmac_sha512_base64(%24data%2c-%24key)*"></a><strong><strong>hmac_sha512_base64($data, $key)</strong></strong>
+</li>
+<li><a class='view-title' id="*hmac_sha512224_base64(%24data%2c-%24key)*"></a><strong><strong>hmac_sha512224_base64($data, $key)</strong></strong>
+</li>
+<li><a class='view-title' id="*hmac_sha512256_base64(%24data%2c-%24key)*"></a><strong><strong>hmac_sha512256_base64($data, $key)</strong></strong>
+<p>Returns the HMAC-SHA-1/224/256/384/512 digest of <i>$data</i>/<i>$key</i>,
+with the result encoded as a Base64 string.  Multiple <i>$data</i>
+arguments are allowed, provided that <i>$key</i> is the last argument
+in the list.</p>
+<p>It's important to note that the resulting string does <strong>not</strong> contain
+the padding characters typical of Base64 encodings.  This omission is
+deliberate, and is done to maintain compatibility with the family of
+CPAN Digest modules.  See <a href="#PADDING-OF-BASE64-DIGESTS">PADDING OF BASE64 DIGESTS</a> for details.</p>
+</li>
+</ul>
+<a class='view-head1' id="SEE-ALSO"></a><h2 class='h2' >SEE ALSO</h2>
+<p><a href="../Digest.html">Digest</a>, <a href="https://search.cpan.org/perldoc/Digest::SHA::PurePerl">Digest::SHA::PurePerl</a></p>
+<p>The Secure Hash Standard (Draft FIPS PUB 180-4) can be found at:</p>
+<p><a href="http://csrc.nist.gov/publications/drafts/fips180-4/Draft-FIPS180-4_Feb2011.pdf">http://csrc.nist.gov/publications/drafts/fips180-4/Draft-FIPS180-4_Feb2011.pdf</a></p>
+<p>The Keyed-Hash Message Authentication Code (HMAC):</p>
+<p><a href="http://csrc.nist.gov/publications/fips/fips198/fips-198a.pdf">http://csrc.nist.gov/publications/fips/fips198/fips-198a.pdf</a></p>
+<a class='view-head1' id="AUTHOR"></a><h2 class='h2' >AUTHOR</h2>
+<pre class="verbatim"><ol><li>	<span class="w">Mark</span> <span class="w">Shelor</span>	<span class="q">&lt;mshelor@cpan.org&gt;</span></li></ol></pre><a class='view-head1' id="ACKNOWLEDGMENTS"></a><h2 class='h2' >ACKNOWLEDGMENTS</h2>
+<p>The author is particularly grateful to</p>
+<pre class="verbatim"><ol><li>	<span class="w">Gisle</span> <span class="w">Aas</span></li><li>	<span class="w">H</span>. <span class="w">Merijn</span> <span class="w">Brand</span></li><li>	<span class="w">Sean</span> <span class="w">Burke</span></li><li>	<span class="w">Chris</span> <span class="w">Carey</span></li><li>	<span class="w">Alexandr</span> <span class="w">Ciornii</span></li><li>	<span class="w">Chris</span> <span class="w">David</span></li><li>	<span class="w">Jim</span> <span class="w">Doble</span></li><li>	<span class="w">Thomas</span> <span class="w">Drugeon</span></li><li>	<span class="w">Julius</span> <span class="w">Duque</span></li><li>	<span class="w">Jeffrey</span> <span class="w">Friedl</span></li><li>	<span class="w">Robert</span> <span class="w">Gilmour</span></li><li>	<span class="w">Brian</span> <span class="w">Gladman</span></li><li>	<span class="w">Jarkko</span> <span class="w">Hietaniemi</span></li><li>	<span class="w">Adam</span> <span class="w">Kennedy</span></li><li>	<span class="w">Mark</span> <span class="w">Lawrence</span></li><li>	<span class="w">Andy</span> <span class="w">Lester</span></li><li>	<span class="w">Alex</span> <span class="w">Muntada</span></li><li>	<span class="w">Steve</span> <span class="w">Peters</span></li><li>	<span class="w">Chris</span> <span class="w">Skiscim</span></li><li>	<span class="w">Martin</span> <span class="w">Thurn</span></li><li>	<span class="w">Gunnar</span> <span class="w">Wolf</span></li><li>	<span class="w">Adam</span> <span class="w">Woodbury</span></li></ol></pre><p>"who by trained skill rescued life from such great billows and such thick
+darkness and moored it in so perfect a calm and in so brilliant a light"
+- Lucretius</p>
+<a class='view-head1' id="COPYRIGHT-AND-LICENSE"></a><h2 class='h2' >COPYRIGHT AND LICENSE</h2>
+<p>Copyright (C) 2003-2018 Mark Shelor</p>
+<p>This library is free software; you can redistribute it and/or modify
+it under the same terms as Perl itself.</p>
+<p><a href="../perlartistic.html">perlartistic</a></p>
+
+
+
+
+      <ul><li><a href="#NAME">NAME</a></li><li><a href="#SYNOPSIS">SYNOPSIS</a></li><li><a href="#SYNOPSIS-(HMAC-SHA)">SYNOPSIS (HMAC-SHA)</a></li><li><a href="#ABSTRACT">ABSTRACT</a></li><li><a href="#DESCRIPTION">DESCRIPTION</a></li><li><a href="#UNICODE-AND-SIDE-EFFECTS">UNICODE AND SIDE EFFECTS</a></li><li><a href="#NIST-STATEMENT-ON-SHA-1">NIST STATEMENT ON SHA-1</a></li><li><a href="#PADDING-OF-BASE64-DIGESTS">PADDING OF BASE64 DIGESTS</a></li><li><a href="#EXPORT">EXPORT</a></li><li><a href="#EXPORTABLE-FUNCTIONS">EXPORTABLE FUNCTIONS</a></li><li><a href="#SEE-ALSO">SEE ALSO</a></li><li><a href="#AUTHOR">AUTHOR</a></li><li><a href="#ACKNOWLEDGMENTS">ACKNOWLEDGMENTS</a></li><li><a href="#COPYRIGHT-AND-LICENSE">COPYRIGHT AND LICENSE</a></li></ul>
+
+
+                  </div>
+                </article>
+              </div>
+            </div>
+          </main>
+        </div>
+           <footer class="footer row bg-light pt-5 pb-5">
+       <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+           <div class="row">
+               <div class="col-md-4">
+                   <ul class="list-unstyled">
+                       <li>
+                           <h4>Site info</h4>
+                       </li>
+                       <li>Docs mantained by
+                           <a href="//lists.perl.org/list/perl5-porters.html"
+                               rel="noopener">Perl 5 Porters</a>
+                       </li>
+                       <li>Perldoc site development sponsored by
+                           <a href="//opusvl.com" rel="noopener">
+                           <img style="margin: 20px 20px 5px 10px" class="opus-logo" src="/public/img/opusvl_logo.svg" alt="OpusVL Logo">
+                        </a>
+                    <li><span class="about_perldoc"><a href="//about.html">About PerlDOC</a></span>
+                    </li>
+                       </li>
+                   </ul>
+               </div>
+               <div class="col-md-8">
+                   <div class="row">
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Manuals</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.30.2/index-overview.html">Overview</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.30.2/index-tutorials.html">Tutorials</a>
+                               </li>
+                               <li>
+                                   <a href="/5.30.2/index-faq.html">FAQs</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.30.2/index-history.html">Changes</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Reference</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.30.2/index-language.html">Language</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.30.2/index-functions.html">Functions</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.30.2/perlop.html">Operators</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.30.2/perlvar.html">Variables</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Modules</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.30.2/index-modules-A.html">Modules</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.30.2/index-pragmas.html">Pragmas</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.30.2/index-utilities.html">Utilities</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Misc</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.30.2/index-licence.html">License</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.30.2/index-internals.html">Internals</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.30.2/index-platforms.html">Platforms</a>
+                               </li>
+                            <li>
+                                <a
+                                    href="/5.30.2/index-about.html">About</a>
+                            </li>
+                           </ul>
+                       </div>
+                   </div>
+               </div>
+               <div class=" col-12 footer-inf text-center">
+                   <small>perldoc.perl.org - Official documentation for the Perl
+                       programming language</small>
+               </div>
+           </div>
+       </div>
+   </footer>
+
+        	<div class="beta-wrapper beta-bottom-right ">
+		<div class="beta beta-blue  ">
+			<a class="beta-link "
+				href="//github.com/OpusVL/perldoc.perl.org/issues/new" rel="noopener">
+				<span class="beta-text">
+					This website is a Beta release.
+				</span>
+				<span class="beta-text">
+					For any issues please raise a ticket on GitHub
+				</span>
+			</a>
+		</div>
+	</div>
+
+        <script src="/public/js/main.min.js"></script>
+      </body>
+
+      </html>

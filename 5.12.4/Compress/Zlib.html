@@ -1,0 +1,1343 @@
+      
+      
+      
+      
+
+      <!DOCTYPE html>
+      <html lang="en">
+
+      <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Compress::Zlib - perldoc.perl.org">
+        <link rel="icon" href="/public/img/favicon.ico">
+        <title>Compress::Zlib - perldoc.perl.org</title>
+        <link href="/public/css/main.min.css" rel="stylesheet">
+        <link rel="canonical" href="/Compress/Zlib.html">
+        <link
+          href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900'
+          rel='stylesheet' type='text/css'>
+        <script>
+          window.ga = window.ga || function () {
+            (ga.q = ga.q || []).push(arguments)
+          };
+          ga.l = +new Date;
+          ga('create', 'UA-1892152-2', 'auto'); // JJ's account
+          ga('create', 'UA-50555-3', 'auto', 'perlOrg'); // perl.org account
+          ga('require', 'outboundLinkTracker', {
+            events: ['click', 'auxclick', 'contextmenu'],
+          });
+          ga('require', 'maxScrollTracker');
+          ga('send', 'pageview');
+          ga('perlOrg.send', 'pageview');
+        </script>
+        <script async src="https://www.google-analytics.com/analytics.js">
+        </script>
+        <script async src="/public/js/tracking.min.js"></script>
+      </head>
+
+      <body class="body container-fluid ">
+        <div class="wrapper">
+
+          <nav
+    class="navbar navbar-dark bg-primary bg-perl fixed-top justify-content-between navbar-expand-lg">
+    <a href="#content" class="skippy sr-only sr-only-focusable">
+        <span class=' skippy-text'>Skip to main content</span>
+    </a>
+    <a class="navbar-brand" href="/">
+        <img class="logo" src="/public/img/logo_perl_doc.svg"
+            alt="Perl Documentation Logo" />
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse"
+        data-target="#navbar" aria-controls="navbar" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="navbar" class="collapse navbar-collapse ">
+        <ul class="navbar-nav ml-auto navbar-right">
+            <form class="nav-item dropdown search-wrapper">
+                <input type="text" id='searchinput' aria-describedby='navbarDropdown5'
+                    placeholder="Type query" class='search-input-field' value=''>
+
+                <button href="#" data-toggle='dropdown' type="button"
+                    aria-haspopup="true" aria-expanded='false' id="navbarDropdown5"
+                    class="nav-link dropdown-toggle search-link">
+                    <object tabindex='-1' focusable="false" class='search-icon'
+                        data="/public/img/search.svg" type="image/svg+xml"
+                        name='search icon'>search
+                        icon</object>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown5"
+                    id='search-results'>
+                    <p class='dropdown-item major-version'>
+                        No results
+                    </p>
+                </div>
+            </form>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown" href="#" class="nav-link dropdown-toggle"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Perl versions</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    
+                        <p class='dropdown-item major-version'>
+                            5.32
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.32.0/">5.32.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.30
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.3/">5.30.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.2/">5.30.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.1/">5.30.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.0/">5.30.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.28
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.3/">5.28.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.2/">5.28.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.1/">5.28.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.0/">5.28.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.26
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.3/">5.26.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.2/">5.26.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.1/">5.26.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.0/">5.26.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.24
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.4/">5.24.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.3/">5.24.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.2/">5.24.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.1/">5.24.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.0/">5.24.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.22
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.4/">5.22.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.3/">5.22.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.2/">5.22.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.1/">5.22.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.0/">5.22.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.20
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.3/">5.20.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.2/">5.20.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.1/">5.20.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.0/">5.20.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.18
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.4/">5.18.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.3/">5.18.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.2/">5.18.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.1/">5.18.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.0/">5.18.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.16
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.3/">5.16.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.2/">5.16.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.1/">5.16.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.0/">5.16.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.14
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.4/">5.14.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.3/">5.14.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.2/">5.14.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.1/">5.14.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.0/">5.14.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.12
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.5/">5.12.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.4/">5.12.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.3/">5.12.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.2/">5.12.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.1/">5.12.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.0/">5.12.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.10
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.1/">5.10.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.0/">5.10.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.8
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.9/">5.8.9</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.8/">5.8.8</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.7/">5.8.7</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.6/">5.8.6</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.5/">5.8.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.4/">5.8.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.3/">5.8.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.2/">5.8.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.1/">5.8.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.0/">5.8.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.6
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.2/">5.6.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.1/">5.6.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.0/">5.6.0</a>
+                        
+                        
+                    
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown1" href="#" class="dropdown-toggle nav-link"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Manuals</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                    <a class="dropdown-item"
+                        href="/5.12.4/index-overview.html">Overview</a>
+                    <a class="dropdown-item"
+                        href="/5.12.4/index-tutorials.html">Tutorials</a>
+                    <a class="dropdown-item"
+                        href="/5.12.4/index-faq.html">FAQs</a>
+                    <a class="dropdown-item"
+                        href="/5.12.4/index-history.html">Changes</a>
+                    <a class="dropdown-item"
+                        href="/5.12.4/index-licence.html">License</a>
+                    <a class="dropdown-item"
+                        href="/5.12.4/index-language.html">Language</a>
+                    <a class="dropdown-item"
+                        href="/5.12.4/index-functions.html">Functions</a>
+                    <a class="dropdown-item"
+                        href="/5.12.4/perlop.html">Operators</a>
+                    <a class="dropdown-item"
+                        href="/5.12.4/perlvar.html">Variables</a>
+                    <a class="dropdown-item"
+                        href="/5.12.4/index-pragmas.html">Pragmas</a>
+                    <a class="dropdown-item"
+                        href="/5.12.4/index-utilities.html">Utilities</a>
+                    <a class="dropdown-item"
+                        href="/5.12.4/index-internals.html">Internals</a>
+                    <a class="dropdown-item"
+                        href="/5.12.4/index-platforms.html">Platforms</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown3" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Modules</a>
+                <div aria-labelledby="navbarDropdown3"
+                    class="dropdown-menu letters-wrap">
+                    <!--<a class="dropdown-item"
+                        href="/5.12.4/index-modules.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.12.4/index-modules-by-cat.html">By
+                        Category</a>-->
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.12.4/index-modules-A.html">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.4/index-modules-B.html">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.4/index-modules-C.html">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.4/index-modules-D.html">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.4/index-modules-E.html">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.4/index-modules-F.html">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.4/index-modules-G.html">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.4/index-modules-H.html">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.4/index-modules-I.html">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.4/index-modules-J.html">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.4/index-modules-K.html">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.4/index-modules-L.html">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.4/index-modules-M.html">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.4/index-modules-N.html">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.4/index-modules-O.html">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.4/index-modules-P.html">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.4/index-modules-Q.html">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.4/index-modules-R.html">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.4/index-modules-S.html">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.4/index-modules-T.html">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.4/index-modules-U.html">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.4/index-modules-V.html">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.4/index-modules-W.html">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.4/index-modules-X.html">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.4/index-modules-Y.html">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.4/index-modules-Z.html">Z</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown4" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Functions</a>
+                <div aria-labelledby="navbarDropdown4"
+                    class="dropdown-menu letters-wrap">
+                    <a class="dropdown-item"
+                        href="/5.12.4/index-functions.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.12.4/index-functions-by-cat.html">By
+                        Category</a>
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.12.4/index-functions.html#A">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.4/index-functions.html#B">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.4/index-functions.html#C">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.4/index-functions.html#D">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.4/index-functions.html#E">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.4/index-functions.html#F">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.4/index-functions.html#G">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.4/index-functions.html#H">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.4/index-functions.html#I">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.4/index-functions.html#J">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.4/index-functions.html#K">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.4/index-functions.html#L">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.4/index-functions.html#M">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.4/index-functions.html#N">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.4/index-functions.html#O">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.4/index-functions.html#P">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.4/index-functions.html#Q">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.4/index-functions.html#R">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.4/index-functions.html#S">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.4/index-functions.html#T">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.4/index-functions.html#U">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.4/index-functions.html#V">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.4/index-functions.html#W">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.4/index-functions.html#X">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.4/index-functions.html#Y">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.12.4/index-functions.html#Z">Z</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!--/.nav-collapse -->
+</nav>
+
+
+          <main class="row main-content pb-5 pt-5" id='content'>
+            <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+              <div class="row">
+                <div class="col-sm-12">
+                  <div id="breadcrumbs">
+                      
+    <a href="../index.html">Home</a>&nbsp; &gt;
+    
+      
+        <a href="../index-modules-C.html">Core modules (C)</a> &gt;
+      
+    
+    Compress::Zlib
+  
+
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <article class="col-sm-12 content">
+                  <div class="documentation-wrapper">
+                    <div id="perl_version">
+                      <h7 class='page-title'> Perl 5 version 12.4
+                        documentation</h7>
+                    </div>
+                    <h1>Compress::Zlib</h1>
+
+
+  <!--    -->
+<ul><li><a href="#NAME">NAME</a></li><li><a href="#SYNOPSIS">SYNOPSIS</a></li><li><a href="#DESCRIPTION">DESCRIPTION</a></li><ul><li><a href="#Notes-for-users-of-Compress%3a%3aZlib-version-1">Notes for users of Compress::Zlib version 1</a></li></ul><li><a href="#GZIP-INTERFACE">GZIP INTERFACE</a></li><ul><li><a href="#Examples">Examples</a></li><li><a href="#Compress%3a%3aZlib%3a%3amemGzip">Compress::Zlib::memGzip</a></li><li><a href="#Compress%3a%3aZlib%3a%3amemGunzip">Compress::Zlib::memGunzip</a></li></ul><li><a href="#COMPRESS%2fUNCOMPRESS">COMPRESS/UNCOMPRESS</a></li><li><a href="#Deflate-Interface">Deflate Interface</a></li><ul><li><a href="#*(%24d%2c-%24status)-%3d-deflateInit(-%5bOPT%5d-)*">*($d, $status) = deflateInit( [OPT] )*</a></li><li><a href="#*(%24out%2c-%24status)-%3d-%24d-%3edeflate(%24buffer)*">*($out, $status) = $d->deflate($buffer)*</a></li><li><a href="#*(%24out%2c-%24status)-%3d-%24d-%3eflush()*-%3dhead2-*(%24out%2c-%24status)-%3d-%24d-%3eflush(%24flush_type)*">*($out, $status) = $d->flush()*
+=head2 *($out, $status) = $d->flush($flush_type)*</a></li><li><a href="#*%24status-%3d-%24d-%3edeflateParams(%5bOPT%5d)*">*$status = $d->deflateParams([OPT])*</a></li><li><a href="#*%24d-%3edict_adler()*">*$d->dict_adler()*</a></li><li><a href="#*%24d-%3emsg()*">*$d->msg()*</a></li><li><a href="#*%24d-%3etotal_in()*">*$d->total_in()*</a></li><li><a href="#*%24d-%3etotal_out()*">*$d->total_out()*</a></li><li><a href="#Example">Example</a></li></ul><li><a href="#Inflate-Interface">Inflate Interface</a></li><ul><li><a href="#*(%24i%2c-%24status)-%3d-inflateInit()*">*($i, $status) = inflateInit()*</a></li><li><a href="#*(%24out%2c-%24status)-%3d-%24i-%3einflate(%24buffer)*">*($out, $status) = $i->inflate($buffer)*</a></li><li><a href="#*%24status-%3d-%24i-%3einflateSync(%24buffer)*">*$status = $i->inflateSync($buffer)*</a></li><li><a href="#*%24i-%3edict_adler()*">*$i->dict_adler()*</a></li><li><a href="#*%24i-%3emsg()*">*$i->msg()*</a></li><li><a href="#*%24i-%3etotal_in()*">*$i->total_in()*</a></li><li><a href="#*%24i-%3etotal_out()*">*$i->total_out()*</a></li><li><a href="#Example">Example</a></li></ul><li><a href="#CHECKSUM-FUNCTIONS">CHECKSUM FUNCTIONS</a></li><li><a href="#Misc">Misc</a></li><ul><li><a href="#my-%24version-%3d-Compress%3a%3aZlib%3a%3azlib_version()%3b">my $version = Compress::Zlib::zlib_version();</a></li></ul><li><a href="#CONSTANTS">CONSTANTS</a></li><li><a href="#SEE-ALSO">SEE ALSO</a></li><li><a href="#AUTHOR">AUTHOR</a></li><li><a href="#MODIFICATION-HISTORY">MODIFICATION HISTORY</a></li><li><a href="#COPYRIGHT-AND-LICENSE">COPYRIGHT AND LICENSE</a></li></ul><a class='view-head1' id="NAME"></a><h2 class='h2' >NAME</h2>
+<p>Compress::Zlib - Interface to zlib compression library</p>
+<a class='view-head1' id="SYNOPSIS"></a><h2 class='h2' >SYNOPSIS</h2>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">Compress::Zlib</span> <span class="sc">;</span></li><li></li><li>    <span class="s">(</span><span class="i">$d</span><span class="cm">,</span> <span class="i">$status</span><span class="s">)</span> = <span class="i">deflateInit</span><span class="s">(</span> <span class="s">[</span><span class="w">OPT</span><span class="s">]</span> <span class="s">)</span> <span class="sc">;</span></li><li>    <span class="i">$status</span> = <span class="i">$d</span><span class="i">-&gt;deflate</span><span class="s">(</span><span class="i">$input</span><span class="cm">,</span> <span class="i">$output</span><span class="s">)</span> <span class="sc">;</span></li><li>    <span class="i">$status</span> = <span class="i">$d</span><span class="i">-&gt;flush</span><span class="s">(</span><span class="s">[</span><span class="i">$flush_type</span><span class="s">]</span><span class="s">)</span> <span class="sc">;</span></li><li>    <span class="i">$d</span><span class="i">-&gt;deflateParams</span><span class="s">(</span><span class="w">OPTS</span><span class="s">)</span> <span class="sc">;</span></li><li>    <span class="i">$d</span><span class="i">-&gt;deflateTune</span><span class="s">(</span><span class="w">OPTS</span><span class="s">)</span> <span class="sc">;</span></li><li>    <span class="i">$d</span><span class="i">-&gt;dict_adler</span><span class="s">(</span><span class="s">)</span> <span class="sc">;</span></li><li>    <span class="i">$d</span><span class="i">-&gt;crc32</span><span class="s">(</span><span class="s">)</span> <span class="sc">;</span></li><li>    <span class="i">$d</span><span class="i">-&gt;adler32</span><span class="s">(</span><span class="s">)</span> <span class="sc">;</span></li><li>    <span class="i">$d</span><span class="i">-&gt;total_in</span><span class="s">(</span><span class="s">)</span> <span class="sc">;</span></li><li>    <span class="i">$d</span><span class="i">-&gt;total_out</span><span class="s">(</span><span class="s">)</span> <span class="sc">;</span></li><li>    <span class="i">$d</span><span class="i">-&gt;msg</span><span class="s">(</span><span class="s">)</span> <span class="sc">;</span></li><li>    <span class="i">$d</span><span class="i">-&gt;get_Strategy</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="i">$d</span><span class="i">-&gt;get_Level</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="i">$d</span><span class="i">-&gt;get_BufSize</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>    <span class="s">(</span><span class="i">$i</span><span class="cm">,</span> <span class="i">$status</span><span class="s">)</span> = <span class="i">inflateInit</span><span class="s">(</span> <span class="s">[</span><span class="w">OPT</span><span class="s">]</span> <span class="s">)</span> <span class="sc">;</span></li><li>    <span class="i">$status</span> = <span class="i">$i</span><span class="i">-&gt;inflate</span><span class="s">(</span><span class="i">$input</span><span class="cm">,</span> <span class="i">$output</span> [<span class="cm">,</span> <span class="i">$eof</span>]<span class="s">)</span> <span class="sc">;</span></li><li>    <span class="i">$status</span> = <span class="i">$i</span><span class="i">-&gt;inflateSync</span><span class="s">(</span><span class="i">$input</span><span class="s">)</span> <span class="sc">;</span></li><li>    <span class="i">$i</span><span class="i">-&gt;dict_adler</span><span class="s">(</span><span class="s">)</span> <span class="sc">;</span></li><li>    <span class="i">$d</span><span class="i">-&gt;crc32</span><span class="s">(</span><span class="s">)</span> <span class="sc">;</span></li><li>    <span class="i">$d</span><span class="i">-&gt;adler32</span><span class="s">(</span><span class="s">)</span> <span class="sc">;</span></li><li>    <span class="i">$i</span><span class="i">-&gt;total_in</span><span class="s">(</span><span class="s">)</span> <span class="sc">;</span></li><li>    <span class="i">$i</span><span class="i">-&gt;total_out</span><span class="s">(</span><span class="s">)</span> <span class="sc">;</span></li><li>    <span class="i">$i</span><span class="i">-&gt;msg</span><span class="s">(</span><span class="s">)</span> <span class="sc">;</span></li><li>    <span class="i">$d</span><span class="i">-&gt;get_BufSize</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li><li></li><li>    <span class="i">$dest</span> = <span class="i">compress</span><span class="s">(</span><span class="i">$source</span><span class="s">)</span> <span class="sc">;</span></li><li>    <span class="i">$dest</span> = <span class="i">uncompress</span><span class="s">(</span><span class="i">$source</span><span class="s">)</span> <span class="sc">;</span></li><li></li><li>    <span class="i">$gz</span> = <span class="i">gzopen</span><span class="s">(</span><span class="i">$filename</span> or <span class="w">filehandle</span><span class="cm">,</span> <span class="i">$mode</span><span class="s">)</span> <span class="sc">;</span></li><li>    <span class="i">$bytesread</span> = <span class="i">$gz</span><span class="i">-&gt;gzread</span><span class="s">(</span><span class="i">$buffer</span> [<span class="cm">,</span><span class="i">$size</span>]<span class="s">)</span> <span class="sc">;</span></li><li>    <span class="i">$bytesread</span> = <span class="i">$gz</span><span class="i">-&gt;gzreadline</span><span class="s">(</span><span class="i">$line</span><span class="s">)</span> <span class="sc">;</span></li><li>    <span class="i">$byteswritten</span> = <span class="i">$gz</span><span class="i">-&gt;gzwrite</span><span class="s">(</span><span class="i">$buffer</span><span class="s">)</span> <span class="sc">;</span></li><li>    <span class="i">$status</span> = <span class="i">$gz</span><span class="i">-&gt;gzflush</span><span class="s">(</span><span class="i">$flush</span><span class="s">)</span> <span class="sc">;</span></li><li>    <span class="i">$offset</span> = <span class="i">$gz</span><span class="i">-&gt;gztell</span><span class="s">(</span><span class="s">)</span> <span class="sc">;</span></li><li>    <span class="i">$status</span> = <span class="i">$gz</span><span class="i">-&gt;gzseek</span><span class="s">(</span><span class="i">$offset</span><span class="cm">,</span> <span class="i">$whence</span><span class="s">)</span> <span class="sc">;</span></li><li>    <span class="i">$status</span> = <span class="i">$gz</span><span class="i">-&gt;gzclose</span><span class="s">(</span><span class="s">)</span> <span class="sc">;</span></li><li>    <span class="i">$status</span> = <span class="i">$gz</span><span class="i">-&gt;gzeof</span><span class="s">(</span><span class="s">)</span> <span class="sc">;</span></li><li>    <span class="i">$status</span> = <span class="i">$gz</span><span class="i">-&gt;gzsetparams</span><span class="s">(</span><span class="i">$level</span><span class="cm">,</span> <span class="i">$strategy</span><span class="s">)</span> <span class="sc">;</span></li><li>    <span class="i">$errstring</span> = <span class="i">$gz</span><span class="i">-&gt;gzerror</span><span class="s">(</span><span class="s">)</span> <span class="sc">;</span> </li><li>    <span class="i">$gzerrno</span></li><li></li><li>    <span class="i">$dest</span> = <span class="i">Compress::Zlib::memGzip</span><span class="s">(</span><span class="i">$buffer</span><span class="s">)</span> <span class="sc">;</span></li><li>    <span class="i">$dest</span> = <span class="i">Compress::Zlib::memGunzip</span><span class="s">(</span><span class="i">$buffer</span><span class="s">)</span> <span class="sc">;</span></li><li></li><li>    <span class="i">$crc</span> = <span class="i">adler32</span><span class="s">(</span><span class="i">$buffer</span> [<span class="cm">,</span><span class="i">$crc</span>]<span class="s">)</span> <span class="sc">;</span></li><li>    <span class="i">$crc</span> = <span class="i">crc32</span><span class="s">(</span><span class="i">$buffer</span> [<span class="cm">,</span><span class="i">$crc</span>]<span class="s">)</span> <span class="sc">;</span></li><li></li><li>    <span class="i">$crc</span> = <span class="i">adler32_combine</span><span class="s">(</span><span class="i">$crc1</span><span class="cm">,</span> <span class="i">$crc2</span><span class="cm">,</span> <span class="i">$len2</span><span class="s">)</span><span class="w">l</span></li><li>    <span class="i">$crc</span> = <span class="i">crc32_combine</span><span class="s">(</span><span class="i">$adler1</span><span class="cm">,</span> <span class="i">$adler2</span><span class="cm">,</span> <span class="i">$len2</span><span class="s">)</span></li><li></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">$version</span> = <span class="i">Compress::Raw::Zlib::zlib_version</span><span class="s">(</span><span class="s">)</span><span class="sc">;</span></li></ol></pre><a class='view-head1' id="DESCRIPTION"></a><h2 class='h2' >DESCRIPTION</h2>
+<p>The <i>Compress::Zlib</i> module provides a Perl interface to the <i>zlib</i>
+compression library (see <a href="#AUTHOR">AUTHOR</a> for details about where to get
+<i>zlib</i>).</p>
+<p>The <code class="inline"><span class="w">Compress::Zlib</span></code>
+ module can be split into two general areas of
+functionality, namely a simple read/write interface to <i>gzip</i> files
+and a low-level in-memory compression/decompression interface.</p>
+<p>Each of these areas will be discussed in the following sections.</p>
+<a class='view-head2' id="Notes-for-users-of-Compress%3a%3aZlib-version-1"></a><h3 class='h3' >Notes for users of Compress::Zlib version 1</h3>
+<p>The main change in <code class="inline"><span class="w">Compress::Zlib</span></code>
+ version 2.x is that it does not now
+interface directly to the zlib library. Instead it uses the
+<code class="inline"><span class="w">IO::Compress::Gzip</span></code>
+ and <code class="inline"><span class="w">IO::Uncompress::Gunzip</span></code>
+ modules for
+reading/writing gzip files, and the <code class="inline"><span class="w">Compress::Raw::Zlib</span></code>
+ module for some
+low-level zlib access.</p>
+<p>The interface provided by version 2 of this module should be 100% backward
+compatible with version 1. If you find a difference in the expected
+behaviour please contact the author (See <a href="#AUTHOR">AUTHOR</a>). See <a href="#GZIP-INTERFACE">GZIP INTERFACE</a></p>
+<p>With the creation of the <code class="inline"><span class="w">IO::Compress</span></code>
+ and <code class="inline"><span class="w">IO::Uncompress</span></code>
+ modules no
+new features are planned for <code class="inline"><span class="w">Compress::Zlib</span></code>
+ - the new modules do
+everything that <code class="inline"><span class="w">Compress::Zlib</span></code>
+ does and then some. Development on
+<code class="inline"><span class="w">Compress::Zlib</span></code>
+ will be limited to bug fixes only.</p>
+<p>If you are writing new code, your first port of call should be one of the
+new <code class="inline"><span class="w">IO::Compress</span></code>
+ or <code class="inline"><span class="w">IO::Uncompress</span></code>
+ modules.</p>
+<a class='view-head1' id="GZIP-INTERFACE"></a><h2 class='h2' >GZIP INTERFACE</h2>
+<p>A number of functions are supplied in <i>zlib</i> for reading and writing
+<i>gzip</i> files that conform to RFC 1952. This module provides an interface
+to most of them.</p>
+<p>If you have previously used <code class="inline"><span class="w">Compress::Zlib</span></code>
+ 1.x, the following
+enhancements/changes have been made to the <code class="inline"><span class="w">gzopen</span></code>
+ interface:</p>
+<dl>
+<li>
+<p>If you want to to open either STDIN or STDOUT with <code class="inline"><span class="w">gzopen</span></code>
+, you can now
+optionally use the special filename "<code class="inline">-</code>
+" as a synonym for <code class="inline">\<span class="i">*STDIN</span></code>
+ and
+<code class="inline">\<span class="i">*STDOUT</span></code>
+.</p>
+</li>
+<li>
+<p>In <code class="inline"><span class="w">Compress::Zlib</span></code>
+ version 1.x, <code class="inline"><span class="w">gzopen</span></code>
+ used the zlib library to open
+the underlying file. This made things especially tricky when a Perl
+filehandle was passed to <code class="inline"><span class="w">gzopen</span></code>
+. Behind the scenes the numeric C file
+descriptor had to be extracted from the Perl filehandle and this passed to
+the zlib library.</p>
+<p>Apart from being non-portable to some operating systems, this made it
+difficult to use <code class="inline"><span class="w">gzopen</span></code>
+ in situations where you wanted to extract/create
+a gzip data stream that is embedded in a larger file, without having to
+resort to opening and closing the file multiple times.</p>
+<p>It also made it impossible to pass a perl filehandle that wasn't associated
+with a real filesystem file, like, say, an <code class="inline"><span class="w">IO::String</span></code>
+.</p>
+<p>In <code class="inline"><span class="w">Compress::Zlib</span></code>
+ version 2.x, the <code class="inline"><span class="w">gzopen</span></code>
+ interface has been
+completely rewritten to use the <a href="../IO/Compress/Gzip.html">IO::Compress::Gzip</a>
+for writing gzip files and <a href="../IO/Uncompress/Gunzip.html">IO::Uncompress::Gunzip</a>
+for reading gzip files. None of the limitations mentioned above apply.</p>
+</li>
+<li>
+<p>Addition of <code class="inline"><span class="w">gzseek</span></code>
+ to provide a restricted <code class="inline"><a class="l_k" href="../functions/seek.html">seek</a></code> interface.</p>
+</li>
+<li>
+<p>Added <code class="inline"><span class="w">gztell</span></code>
+.</p>
+</li>
+</dl>
+<p>A more complete and flexible interface for reading/writing gzip
+files/buffers is included with the module <code class="inline"><span class="w">IO</span>-<span class="w">Compress</span>-<span class="w">Zlib</span></code>
+. See
+<a href="../IO/Compress/Gzip.html">IO::Compress::Gzip</a> and
+<a href="../IO/Uncompress/Gunzip.html">IO::Uncompress::Gunzip</a> for more details.</p>
+<ul>
+<li><a class='view-title' id="*%24gz-%3d-gzopen(%24filename%2c-%24mode)*"></a><strong><strong>$gz = gzopen($filename, $mode)</strong></strong>
+</li>
+<li><a class='view-title' id="*%24gz-%3d-gzopen(%24filehandle%2c-%24mode)*"></a><strong><strong>$gz = gzopen($filehandle, $mode)</strong></strong>
+<p>This function opens either the <i>gzip</i> file <code class="inline"><span class="i">$filename</span></code>
+ for reading or
+writing or attaches to the opened filehandle, <code class="inline"><span class="i">$filehandle</span></code>
+. 
+It returns an object on success and <code class="inline"><a class="l_k" href="../functions/undef.html">undef</a></code> on failure.</p>
+<p>When writing a gzip file this interface will <i>always</i> create the smallest
+possible gzip header (exactly 10 bytes). If you want greater control over
+what gets stored in the gzip header (like the original filename or a
+comment) use <a href="../IO/Compress/Gzip.html">IO::Compress::Gzip</a> instead. Similarly if
+you want to read the contents of the gzip header use
+<a href="../IO/Uncompress/Gunzip.html">IO::Uncompress::Gunzip</a>.</p>
+<p>The second parameter, <code class="inline"><span class="i">$mode</span></code>
+, is used to specify whether the file is
+opened for reading or writing and to optionally specify a compression
+level and compression strategy when writing. The format of the <code class="inline"><span class="i">$mode</span></code>
+
+parameter is similar to the mode parameter to the 'C' function <code class="inline"><span class="w">fopen</span></code>
+,
+so "rb" is used to open for reading, "wb" for writing and "ab" for
+appending (writing at the end of the file).</p>
+<p>To specify a compression level when writing, append a digit between 0
+and 9 to the mode string -- 0 means no compression and 9 means maximum
+compression.
+If no compression level is specified Z_DEFAULT_COMPRESSION is used.</p>
+<p>To specify the compression strategy when writing, append 'f' for filtered
+data, 'h' for Huffman only compression, or 'R' for run-length encoding.
+If no strategy is specified Z_DEFAULT_STRATEGY is used.</p>
+<p>So, for example, "wb9" means open for writing with the maximum compression
+using the default strategy and "wb4R" means open for writing with compression
+level 4 and run-length encoding.</p>
+<p>Refer to the <i>zlib</i> documentation for the exact format of the <code class="inline"><span class="i">$mode</span></code>
+
+parameter.</p>
+</li>
+<li><a class='view-title' id="*%24bytesread-%3d-%24gz-%3egzread(%24buffer-%5b%2c-%24size%5d)-%3b*"></a><strong><strong>$bytesread = $gz-&gt;gzread($buffer [, $size]) ;</strong></strong>
+<p>Reads <code class="inline"><span class="i">$size</span></code>
+ bytes from the compressed file into <code class="inline"><span class="i">$buffer</span></code>
+. If
+<code class="inline"><span class="i">$size</span></code>
+ is not specified, it will default to 4096. If the scalar
+<code class="inline"><span class="i">$buffer</span></code>
+ is not large enough, it will be extended automatically.</p>
+<p>Returns the number of bytes actually read. On EOF it returns 0 and in
+the case of an error, -1.</p>
+</li>
+<li><a class='view-title' id="*%24bytesread-%3d-%24gz-%3egzreadline(%24line)-%3b*"></a><strong><strong>$bytesread = $gz-&gt;gzreadline($line) ;</strong></strong>
+<p>Reads the next line from the compressed file into <code class="inline"><span class="i">$line</span></code>
+.</p>
+<p>Returns the number of bytes actually read. On EOF it returns 0 and in
+the case of an error, -1.</p>
+<p>It is legal to intermix calls to <code class="inline"><span class="w">gzread</span></code>
+ and <code class="inline"><span class="w">gzreadline</span></code>
+.</p>
+<p>To maintain backward compatibility with version 1.x of this module
+<code class="inline"><span class="w">gzreadline</span></code>
+ ignores the <code class="inline"><span class="i">$/</span></code>
+ variable - it <i>always</i> uses the string
+<code class="inline"><span class="q">&quot;\n&quot;</span></code>
+ as the line delimiter.</p>
+<p>If you want to read a gzip file a line at a time and have it respect the
+<code class="inline"><span class="i">$/</span></code>
+ variable (or <code class="inline"><span class="i">$INPUT_RECORD_SEPARATOR</span></code>
+, or <code class="inline"><span class="i">$RS</span></code>
+ when <code class="inline"><span class="w">English</span></code>
+ is
+in use) see <a href="../IO/Uncompress/Gunzip.html">IO::Uncompress::Gunzip</a>.</p>
+</li>
+<li><a class='view-title' id="*%24byteswritten-%3d-%24gz-%3egzwrite(%24buffer)-%3b*"></a><strong><strong>$byteswritten = $gz-&gt;gzwrite($buffer) ;</strong></strong>
+<p>Writes the contents of <code class="inline"><span class="i">$buffer</span></code>
+ to the compressed file. Returns the
+number of bytes actually written, or 0 on error.</p>
+</li>
+<li><a class='view-title' id="*%24status-%3d-%24gz-%3egzflush(%24flush_type)-%3b*"></a><strong><strong>$status = $gz-&gt;gzflush($flush_type) ;</strong></strong>
+<p>Flushes all pending output into the compressed file.</p>
+<p>This method takes an optional parameter, <code class="inline"><span class="i">$flush_type</span></code>
+, that controls
+how the flushing will be carried out. By default the <code class="inline"><span class="i">$flush_type</span></code>
+
+used is <code class="inline"><span class="w">Z_FINISH</span></code>
+. Other valid values for <code class="inline"><span class="i">$flush_type</span></code>
+ are
+<code class="inline"><span class="w">Z_NO_FLUSH</span></code>
+, <code class="inline"><span class="w">Z_SYNC_FLUSH</span></code>
+, <code class="inline"><span class="w">Z_FULL_FLUSH</span></code>
+ and <code class="inline"><span class="w">Z_BLOCK</span></code>
+. It is
+strongly recommended that you only set the <code class="inline"><span class="w">flush_type</span></code>
+ parameter if
+you fully understand the implications of what it does - overuse of <code class="inline"><span class="w">flush</span></code>
+
+can seriously degrade the level of compression achieved. See the <code class="inline"><span class="w">zlib</span></code>
+
+documentation for details.</p>
+<p>Returns 0 on success.</p>
+</li>
+<li><a class='view-title' id="*%24offset-%3d-%24gz-%3egztell()-%3b*"></a><strong><strong>$offset = $gz-&gt;gztell() ;</strong></strong>
+<p>Returns the uncompressed file offset.</p>
+</li>
+<li><a class='view-title' id="*%24status-%3d-%24gz-%3egzseek(%24offset%2c-%24whence)-%3b*"></a><strong><strong>$status = $gz-&gt;gzseek($offset, $whence) ;</strong></strong>
+<p>Provides a sub-set of the <code class="inline"><a class="l_k" href="../functions/seek.html">seek</a></code> functionality, with the restriction
+that it is only legal to seek forward in the compressed file.
+It is a fatal error to attempt to seek backward.</p>
+<p>When opened for writing, empty parts of the file will have NULL (0x00)
+bytes written to them.</p>
+<p>The <code class="inline"><span class="i">$whence</span></code>
+ parameter should be one of SEEK_SET, SEEK_CUR or SEEK_END.</p>
+<p>Returns 1 on success, 0 on failure.</p>
+</li>
+<li><a class='view-title' id="*%24gz-%3egzclose*"></a><strong><strong>$gz-&gt;gzclose</strong></strong>
+<p>Closes the compressed file. Any pending data is flushed to the file
+before it is closed.</p>
+<p>Returns 0 on success.</p>
+</li>
+<li><a class='view-title' id="*%24gz-%3egzsetparams(%24level%2c-%24strategy*"></a><strong><strong>$gz-&gt;gzsetparams($level, $strategy</strong></strong>
+<p>Change settings for the deflate stream <code class="inline"><span class="i">$gz</span></code>
+.</p>
+<p>The list of the valid options is shown below. Options not specified
+will remain unchanged.</p>
+<p>Note: This method is only available if you are running zlib 1.0.6 or better.</p>
+<ul>
+<li><a class='view-title' id="*%24level*"></a><strong><strong>$level</strong></strong>
+<p>Defines the compression level. Valid values are 0 through 9,
+<code class="inline"><span class="w">Z_NO_COMPRESSION</span></code>
+, <code class="inline"><span class="w">Z_BEST_SPEED</span></code>
+, <code class="inline"><span class="w">Z_BEST_COMPRESSION</span></code>
+, and
+<code class="inline"><span class="w">Z_DEFAULT_COMPRESSION</span></code>
+.</p>
+</li>
+<li><a class='view-title' id="*%24strategy*"></a><strong><strong>$strategy</strong></strong>
+<p>Defines the strategy used to tune the compression. The valid values are
+<code class="inline"><span class="w">Z_DEFAULT_STRATEGY</span></code>
+, <code class="inline"><span class="w">Z_FILTERED</span></code>
+ and <code class="inline"><span class="w">Z_HUFFMAN_ONLY</span></code>
+.</p>
+</li>
+</ul>
+</li>
+<li><a class='view-title' id="*%24gz-%3egzerror*"></a><strong><strong>$gz-&gt;gzerror</strong></strong>
+<p>Returns the <i>zlib</i> error message or number for the last operation
+associated with <code class="inline"><span class="i">$gz</span></code>
+. The return value will be the <i>zlib</i> error
+number when used in a numeric context and the <i>zlib</i> error message
+when used in a string context. The <i>zlib</i> error number constants,
+shown below, are available for use.</p>
+<pre class="verbatim"><ol><li>    <span class="w">Z_OK</span></li><li>    <span class="w">Z_STREAM_END</span></li><li>    <span class="w">Z_ERRNO</span></li><li>    <span class="w">Z_STREAM_ERROR</span></li><li>    <span class="w">Z_DATA_ERROR</span></li><li>    <span class="w">Z_MEM_ERROR</span></li><li>    <span class="w">Z_BUF_ERROR</span></li></ol></pre></li>
+<li><a class='view-title' id="*%24gzerrno*"></a><strong><strong>$gzerrno</strong></strong>
+<p>The <code class="inline"><span class="i">$gzerrno</span></code>
+ scalar holds the error code associated with the most
+recent <i>gzip</i> routine. Note that unlike <code class="inline"><span class="i">gzerror</span><span class="s">(</span><span class="s">)</span></code>
+, the error is
+<i>not</i> associated with a particular file.</p>
+<p>As with <code class="inline"><span class="i">gzerror</span><span class="s">(</span><span class="s">)</span></code>
+ it returns an error number in numeric context and
+an error message in string context. Unlike <code class="inline"><span class="i">gzerror</span><span class="s">(</span><span class="s">)</span></code>
+ though, the
+error message will correspond to the <i>zlib</i> message when the error is
+associated with <i>zlib</i> itself, or the UNIX error message when it is
+not (i.e. <i>zlib</i> returned <code class="inline"><span class="w">Z_ERRORNO</span></code>
+).</p>
+<p>As there is an overlap between the error numbers used by <i>zlib</i> and
+UNIX, <code class="inline"><span class="i">$gzerrno</span></code>
+ should only be used to check for the presence of
+<i>an</i> error in numeric context. Use <code class="inline"><span class="i">gzerror</span><span class="s">(</span><span class="s">)</span></code>
+ to check for specific
+<i>zlib</i> errors. The <i>gzcat</i> example below shows how the variable can
+be used safely.</p>
+</li>
+</ul>
+<a class='view-head2' id="Examples"></a><h3 class='h3' >Examples</h3>
+<p>Here is an example script which uses the interface. It implements a
+<i>gzcat</i> function.</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">strict</span> <span class="sc">;</span></li><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">warnings</span> <span class="sc">;</span></li><li>    </li><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">Compress::Zlib</span> <span class="sc">;</span></li><li>    </li><li>    <span class="c"># use stdin if no files supplied</span></li><li>    <span class="i">@ARGV</span> = <span class="q">&#39;-&#39;</span> unless <span class="i">@ARGV</span> <span class="sc">;</span></li><li>    </li><li>    foreach <a class="l_k" href="../functions/my.html">my</a> <span class="i">$file</span> <span class="s">(</span><span class="i">@ARGV</span><span class="s">)</span> <span class="s">{</span></li><li>        <a class="l_k" href="../functions/my.html">my</a> <span class="i">$buffer</span> <span class="sc">;</span></li><li>    </li><li>        <a class="l_k" href="../functions/my.html">my</a> <span class="i">$gz</span> = <span class="i">gzopen</span><span class="s">(</span><span class="i">$file</span><span class="cm">,</span> <span class="q">&quot;rb&quot;</span><span class="s">)</span> </li><li>             or <a class="l_k" href="../functions/die.html">die</a> <span class="q">&quot;Cannot open $file: $gzerrno\n&quot;</span> <span class="sc">;</span></li><li>    </li><li>        <a class="l_k" href="../functions/print.html">print</a> <span class="i">$buffer</span> while <span class="i">$gz</span><span class="i">-&gt;gzread</span><span class="s">(</span><span class="i">$buffer</span><span class="s">)</span> &gt; <span class="n">0</span> <span class="sc">;</span></li><li>    </li><li>        <a class="l_k" href="../functions/die.html">die</a> <span class="q">&quot;Error reading from $file: $gzerrno&quot;</span> . <span class="s">(</span><span class="i">$gzerrno</span>+<span class="n">0</span><span class="s">)</span> . <span class="q">&quot;\n&quot;</span> </li><li>            if <span class="i">$gzerrno</span> != <span class="w">Z_STREAM_END</span> <span class="sc">;</span></li><li>        </li><li>        <span class="i">$gz</span><span class="i">-&gt;gzclose</span><span class="s">(</span><span class="s">)</span> <span class="sc">;</span></li><li>    <span class="s">}</span></li></ol></pre><p>Below is a script which makes use of <code class="inline"><span class="w">gzreadline</span></code>
+. It implements a
+very simple <i>grep</i> like script.</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">strict</span> <span class="sc">;</span></li><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">warnings</span> <span class="sc">;</span></li><li>    </li><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">Compress::Zlib</span> <span class="sc">;</span></li><li>    </li><li>    <a class="l_k" href="../functions/die.html">die</a> <span class="q">&quot;Usage: gzgrep pattern [file...]\n&quot;</span></li><li>        unless <span class="i">@ARGV</span> &gt;= <span class="n">1</span><span class="sc">;</span></li><li>    </li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">$pattern</span> = <a class="l_k" href="../functions/shift.html">shift</a> <span class="sc">;</span></li><li>    </li><li>    <span class="c"># use stdin if no files supplied</span></li><li>    <span class="i">@ARGV</span> = <span class="q">&#39;-&#39;</span> unless <span class="i">@ARGV</span> <span class="sc">;</span></li><li>    </li><li>    foreach <a class="l_k" href="../functions/my.html">my</a> <span class="i">$file</span> <span class="s">(</span><span class="i">@ARGV</span><span class="s">)</span> <span class="s">{</span></li><li>        <a class="l_k" href="../functions/my.html">my</a> <span class="i">$gz</span> = <span class="i">gzopen</span><span class="s">(</span><span class="i">$file</span><span class="cm">,</span> <span class="q">&quot;rb&quot;</span><span class="s">)</span> </li><li>             or <a class="l_k" href="../functions/die.html">die</a> <span class="q">&quot;Cannot open $file: $gzerrno\n&quot;</span> <span class="sc">;</span></li><li>    </li><li>        while <span class="s">(</span><span class="i">$gz</span><span class="i">-&gt;gzreadline</span><span class="s">(</span><span class="i">$_</span><span class="s">)</span> &gt; <span class="n">0</span><span class="s">)</span> <span class="s">{</span></li><li>            <a class="l_k" href="../functions/print.html">print</a> if <span class="q">/$pattern/</span> <span class="sc">;</span></li><li>        <span class="s">}</span></li><li>    </li><li>        <a class="l_k" href="../functions/die.html">die</a> <span class="q">&quot;Error reading from $file: $gzerrno\n&quot;</span> </li><li>            if <span class="i">$gzerrno</span> != <span class="w">Z_STREAM_END</span> <span class="sc">;</span></li><li>        </li><li>        <span class="i">$gz</span><span class="i">-&gt;gzclose</span><span class="s">(</span><span class="s">)</span> <span class="sc">;</span></li><li>    <span class="s">}</span></li></ol></pre><p>This script, <i>gzstream</i>, does the opposite of the <i>gzcat</i> script
+above. It reads from standard input and writes a gzip data stream to
+standard output.</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">strict</span> <span class="sc">;</span></li><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">warnings</span> <span class="sc">;</span></li><li>    </li><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">Compress::Zlib</span> <span class="sc">;</span></li><li>    </li><li>    <a class="l_k" href="../functions/binmode.html">binmode</a> <span class="w">STDOUT</span><span class="sc">;</span>  <span class="c"># gzopen only sets it on the fd</span></li><li>    </li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">$gz</span> = <span class="i">gzopen</span><span class="s">(</span>\<span class="i">*STDOUT</span><span class="cm">,</span> <span class="q">&quot;wb&quot;</span><span class="s">)</span></li><li>          or <a class="l_k" href="../functions/die.html">die</a> <span class="q">&quot;Cannot open stdout: $gzerrno\n&quot;</span> <span class="sc">;</span></li><li>    </li><li>    while <span class="s">(</span>&lt;&gt;<span class="s">)</span> <span class="s">{</span></li><li>        <span class="i">$gz</span><span class="i">-&gt;gzwrite</span><span class="s">(</span><span class="i">$_</span><span class="s">)</span> </li><li>          or <a class="l_k" href="../functions/die.html">die</a> <span class="q">&quot;error writing: $gzerrno\n&quot;</span> <span class="sc">;</span></li><li>    <span class="s">}</span></li><li></li><li>    <span class="i">$gz</span><span class="i">-&gt;gzclose</span> <span class="sc">;</span></li></ol></pre><a class='view-head2' id="Compress%3a%3aZlib%3a%3amemGzip"></a><h3 class='h3' >Compress::Zlib::memGzip</h3>
+<p>This function is used to create an in-memory gzip file with the minimum
+possible gzip header (exactly 10 bytes).</p>
+<pre class="verbatim"><ol><li>    <span class="i">$dest</span> = <span class="i">Compress::Zlib::memGzip</span><span class="s">(</span><span class="i">$buffer</span><span class="s">)</span> </li><li>        or <a class="l_k" href="../functions/die.html">die</a> <span class="q">&quot;Cannot compress: $gzerrno\n&quot;</span><span class="sc">;</span></li></ol></pre><p>If successful, it returns the in-memory gzip file. Otherwise it returns
+<code class="inline"><a class="l_k" href="../functions/undef.html">undef</a></code> and the <code class="inline"><span class="i">$gzerrno</span></code>
+ variable will store the zlib error code.</p>
+<p>The <code class="inline"><span class="i">$buffer</span></code>
+ parameter can either be a scalar or a scalar reference.</p>
+<p>See <a href="../IO/Compress/Gzip.html">IO::Compress::Gzip</a> for an alternative way to
+carry out in-memory gzip compression.</p>
+<a class='view-head2' id="Compress%3a%3aZlib%3a%3amemGunzip"></a><h3 class='h3' >Compress::Zlib::memGunzip</h3>
+<p>This function is used to uncompress an in-memory gzip file.</p>
+<pre class="verbatim"><ol><li>    <span class="i">$dest</span> = <span class="i">Compress::Zlib::memGunzip</span><span class="s">(</span><span class="i">$buffer</span><span class="s">)</span> </li><li>        or <a class="l_k" href="../functions/die.html">die</a> <span class="q">&quot;Cannot uncomprss: $gzerrno\n&quot;</span><span class="sc">;</span></li></ol></pre><p>If successful, it returns the uncompressed gzip file. Otherwise it
+returns <code class="inline"><a class="l_k" href="../functions/undef.html">undef</a></code> and the <code class="inline"><span class="i">$gzerrno</span></code>
+ variable will store the zlib error
+code.</p>
+<p>The <code class="inline"><span class="i">$buffer</span></code>
+ parameter can either be a scalar or a scalar reference. The
+contents of the <code class="inline"><span class="i">$buffer</span></code>
+ parameter are destroyed after calling this function.</p>
+<p>If <code class="inline"><span class="i">$buffer</span></code>
+ consists of multiple concatenated gzip data streams only the
+first will be uncompressed. Use <code class="inline"><span class="w">gunzip</span></code>
+ with the <code class="inline"><span class="w">MultiStream</span></code>
+ option in
+the <code class="inline"><span class="w">IO::Uncompress::Gunzip</span></code>
+ module if you need to deal with concatenated
+data streams.</p>
+<p>See <a href="../IO/Uncompress/Gunzip.html">IO::Uncompress::Gunzip</a> for an alternative way
+to carry out in-memory gzip uncompression.</p>
+<a class='view-head1' id="COMPRESS%2fUNCOMPRESS"></a><h2 class='h2' >COMPRESS/UNCOMPRESS</h2>
+<p>Two functions are provided to perform in-memory compression/uncompression of
+RFC 1950 data streams. They are called <code class="inline"><span class="w">compress</span></code>
+ and <code class="inline"><span class="w">uncompress</span></code>
+.</p>
+<ul>
+<li><a class='view-title' id="*%24dest-%3d-compress(%24source-%5b%2c-%24level%5d-)-%3b*"></a><strong><strong>$dest = compress($source [, $level] ) ;</strong></strong>
+<p>Compresses <code class="inline"><span class="i">$source</span></code>
+. If successful it returns the compressed
+data. Otherwise it returns <i>undef</i>.</p>
+<p>The source buffer, <code class="inline"><span class="i">$source</span></code>
+, can either be a scalar or a scalar
+reference.</p>
+<p>The <code class="inline"><span class="i">$level</span></code>
+ parameter defines the compression level. Valid values are
+0 through 9, <code class="inline"><span class="w">Z_NO_COMPRESSION</span></code>
+, <code class="inline"><span class="w">Z_BEST_SPEED</span></code>
+,
+<code class="inline"><span class="w">Z_BEST_COMPRESSION</span></code>
+, and <code class="inline"><span class="w">Z_DEFAULT_COMPRESSION</span></code>
+.
+If <code class="inline"><span class="i">$level</span></code>
+ is not specified <code class="inline"><span class="w">Z_DEFAULT_COMPRESSION</span></code>
+ will be used.</p>
+</li>
+<li><a class='view-title' id="*%24dest-%3d-uncompress(%24source)-%3b*"></a><strong><strong>$dest = uncompress($source) ;</strong></strong>
+<p>Uncompresses <code class="inline"><span class="i">$source</span></code>
+. If successful it returns the uncompressed
+data. Otherwise it returns <i>undef</i>.</p>
+<p>The source buffer can either be a scalar or a scalar reference.</p>
+</li>
+</ul>
+<p>Please note: the two functions defined above are <i>not</i> compatible with
+the Unix commands of the same name.</p>
+<p>See <a href="https://search.cpan.org/perldoc/IO::Deflate">IO::Deflate</a> and <a href="https://search.cpan.org/perldoc/IO::Inflate">IO::Inflate</a> included with
+this distribution for an alternative interface for reading/writing RFC 1950
+files/buffers.</p>
+<a class='view-head1' id="Deflate-Interface"></a><h2 class='h2' >Deflate Interface</h2>
+<p>This section defines an interface that allows in-memory compression using
+the <i>deflate</i> interface provided by zlib.</p>
+<p>Here is a definition of the interface available:</p>
+<a class='view-head2' id="*(%24d%2c-%24status)-%3d-deflateInit(-%5bOPT%5d-)*"></a><h3 class='h3' ><strong>($d, $status) = deflateInit( [OPT] )</strong></h3>
+<p>Initialises a deflation stream.</p>
+<p>It combines the features of the <i>zlib</i> functions <code class="inline"><span class="w">deflateInit</span></code>
+,
+<code class="inline"><span class="w">deflateInit2</span></code>
+ and <code class="inline"><span class="w">deflateSetDictionary</span></code>
+.</p>
+<p>If successful, it will return the initialised deflation stream, <code class="inline"><span class="i">$d</span></code>
+
+and <code class="inline"><span class="i">$status</span></code>
+ of <code class="inline"><span class="w">Z_OK</span></code>
+ in a list context. In scalar context it
+returns the deflation stream, <code class="inline"><span class="i">$d</span></code>
+, only.</p>
+<p>If not successful, the returned deflation stream (<code class="inline"><span class="i">$d</span></code>
+) will be
+<i>undef</i> and <code class="inline"><span class="i">$status</span></code>
+ will hold the exact <i>zlib</i> error code.</p>
+<p>The function optionally takes a number of named options specified as
+<code class="inline">-<span class="w">Name</span><span class="cm">=&gt;</span><span class="w">value</span></code>
+ pairs. This allows individual options to be
+tailored without having to specify them all in the parameter list.</p>
+<p>For backward compatibility, it is also possible to pass the parameters
+as a reference to a hash containing the name=&gt;value pairs.</p>
+<p>The function takes one optional parameter, a reference to a hash.  The
+contents of the hash allow the deflation interface to be tailored.</p>
+<p>Here is a list of the valid options:</p>
+<ul>
+<li><a class='view-title' id="*-Level*"></a><strong><strong>-Level</strong></strong>
+<p>Defines the compression level. Valid values are 0 through 9,
+<code class="inline"><span class="w">Z_NO_COMPRESSION</span></code>
+, <code class="inline"><span class="w">Z_BEST_SPEED</span></code>
+, <code class="inline"><span class="w">Z_BEST_COMPRESSION</span></code>
+, and
+<code class="inline"><span class="w">Z_DEFAULT_COMPRESSION</span></code>
+.</p>
+<p>The default is Z_DEFAULT_COMPRESSION.</p>
+</li>
+<li><a class='view-title' id="*-Method*"></a><strong><strong>-Method</strong></strong>
+<p>Defines the compression method. The only valid value at present (and
+the default) is Z_DEFLATED.</p>
+</li>
+<li><a class='view-title' id="*-WindowBits*"></a><strong><strong>-WindowBits</strong></strong>
+<p>To create an RFC 1950 data stream, set <code class="inline"><span class="w">WindowBits</span></code>
+ to a positive number.</p>
+<p>To create an RFC 1951 data stream, set <code class="inline"><span class="w">WindowBits</span></code>
+ to <code class="inline">-<span class="w">MAX_WBITS</span></code>
+.</p>
+<p>For a full definition of the meaning and valid values for <code class="inline"><span class="w">WindowBits</span></code>
+ refer
+to the <i>zlib</i> documentation for <i>deflateInit2</i>.</p>
+<p>Defaults to MAX_WBITS.</p>
+</li>
+<li><a class='view-title' id="*-MemLevel*"></a><strong><strong>-MemLevel</strong></strong>
+<p>For a definition of the meaning and valid values for <code class="inline"><span class="w">MemLevel</span></code>
+
+refer to the <i>zlib</i> documentation for <i>deflateInit2</i>.</p>
+<p>Defaults to MAX_MEM_LEVEL.</p>
+</li>
+<li><a class='view-title' id="*-Strategy*"></a><strong><strong>-Strategy</strong></strong>
+<p>Defines the strategy used to tune the compression. The valid values are
+<code class="inline"><span class="w">Z_DEFAULT_STRATEGY</span></code>
+, <code class="inline"><span class="w">Z_FILTERED</span></code>
+ and <code class="inline"><span class="w">Z_HUFFMAN_ONLY</span></code>
+.</p>
+<p>The default is Z_DEFAULT_STRATEGY.</p>
+</li>
+<li><a class='view-title' id="*-Dictionary*"></a><strong><strong>-Dictionary</strong></strong>
+<p>When a dictionary is specified <i>Compress::Zlib</i> will automatically
+call <code class="inline"><span class="w">deflateSetDictionary</span></code>
+ directly after calling <code class="inline"><span class="w">deflateInit</span></code>
+. The
+Adler32 value for the dictionary can be obtained by calling the method 
+<code class="inline"><span class="i">$d</span>-</code>
+dict_adler()&gt;.</p>
+<p>The default is no dictionary.</p>
+</li>
+<li><a class='view-title' id="*-Bufsize*"></a><strong><strong>-Bufsize</strong></strong>
+<p>Sets the initial size for the deflation buffer. If the buffer has to be
+reallocated to increase the size, it will grow in increments of
+<code class="inline"><span class="w">Bufsize</span></code>
+.</p>
+<p>The default is 4096.</p>
+</li>
+</ul>
+<p>Here is an example of using the <code class="inline"><span class="w">deflateInit</span></code>
+ optional parameter list
+to override the default buffer size and compression level. All other
+options will take their default values.</p>
+<pre class="verbatim"><ol><li>    <span class="i">deflateInit</span><span class="s">(</span> -<span class="w">Bufsize</span> <span class="cm">=&gt;</span> <span class="n">300</span><span class="cm">,</span> </li><li>                 -<span class="w">Level</span> <span class="cm">=&gt;</span> <span class="w">Z_BEST_SPEED</span>  <span class="s">)</span> <span class="sc">;</span></li></ol></pre><a class='view-head2' id="*(%24out%2c-%24status)-%3d-%24d-%3edeflate(%24buffer)*"></a><h3 class='h3' ><strong>($out, $status) = $d-&gt;deflate($buffer)</strong></h3>
+<p>Deflates the contents of <code class="inline"><span class="i">$buffer</span></code>
+. The buffer can either be a scalar
+or a scalar reference.  When finished, <code class="inline"><span class="i">$buffer</span></code>
+ will be
+completely processed (assuming there were no errors). If the deflation
+was successful it returns the deflated output, <code class="inline"><span class="i">$out</span></code>
+, and a status
+value, <code class="inline"><span class="i">$status</span></code>
+, of <code class="inline"><span class="w">Z_OK</span></code>
+.</p>
+<p>On error, <code class="inline"><span class="i">$out</span></code>
+ will be <i>undef</i> and <code class="inline"><span class="i">$status</span></code>
+ will contain the
+<i>zlib</i> error code.</p>
+<p>In a scalar context <code class="inline"><span class="w">deflate</span></code>
+ will return <code class="inline"><span class="i">$out</span></code>
+ only.</p>
+<p>As with the <i>deflate</i> function in <i>zlib</i>, it is not necessarily the
+case that any output will be produced by this method. So don't rely on
+the fact that <code class="inline"><span class="i">$out</span></code>
+ is empty for an error test.</p>
+<a class='view-head2' id="*(%24out%2c-%24status)-%3d-%24d-%3eflush()*-%3dhead2-*(%24out%2c-%24status)-%3d-%24d-%3eflush(%24flush_type)*"></a><h3 class='h3' ><strong>($out, $status) = $d-&gt;flush()</strong>
+=head2 <strong>($out, $status) = $d-&gt;flush($flush_type)</strong></h3>
+<p>Typically used to finish the deflation. Any pending output will be
+returned via <code class="inline"><span class="i">$out</span></code>
+.
+<code class="inline"><span class="i">$status</span></code>
+ will have a value <code class="inline"><span class="w">Z_OK</span></code>
+ if successful.</p>
+<p>In a scalar context <code class="inline"><span class="w">flush</span></code>
+ will return <code class="inline"><span class="i">$out</span></code>
+ only.</p>
+<p>Note that flushing can seriously degrade the compression ratio, so it
+should only be used to terminate a decompression (using <code class="inline"><span class="w">Z_FINISH</span></code>
+) or
+when you want to create a <i>full flush point</i> (using <code class="inline"><span class="w">Z_FULL_FLUSH</span></code>
+).</p>
+<p>By default the <code class="inline"><span class="w">flush_type</span></code>
+ used is <code class="inline"><span class="w">Z_FINISH</span></code>
+. Other valid values
+for <code class="inline"><span class="w">flush_type</span></code>
+ are <code class="inline"><span class="w">Z_NO_FLUSH</span></code>
+, <code class="inline"><span class="w">Z_PARTIAL_FLUSH</span></code>
+, <code class="inline"><span class="w">Z_SYNC_FLUSH</span></code>
+
+and <code class="inline"><span class="w">Z_FULL_FLUSH</span></code>
+. It is strongly recommended that you only set the
+<code class="inline"><span class="w">flush_type</span></code>
+ parameter if you fully understand the implications of
+what it does. See the <code class="inline"><span class="w">zlib</span></code>
+ documentation for details.</p>
+<a class='view-head2' id="*%24status-%3d-%24d-%3edeflateParams(%5bOPT%5d)*"></a><h3 class='h3' ><strong>$status = $d-&gt;deflateParams([OPT])</strong></h3>
+<p>Change settings for the deflate stream <code class="inline"><span class="i">$d</span></code>
+.</p>
+<p>The list of the valid options is shown below. Options not specified
+will remain unchanged.</p>
+<ul>
+<li><a class='view-title' id="*-Level*"></a><strong><strong>-Level</strong></strong>
+<p>Defines the compression level. Valid values are 0 through 9,
+<code class="inline"><span class="w">Z_NO_COMPRESSION</span></code>
+, <code class="inline"><span class="w">Z_BEST_SPEED</span></code>
+, <code class="inline"><span class="w">Z_BEST_COMPRESSION</span></code>
+, and
+<code class="inline"><span class="w">Z_DEFAULT_COMPRESSION</span></code>
+.</p>
+</li>
+<li><a class='view-title' id="*-Strategy*"></a><strong><strong>-Strategy</strong></strong>
+<p>Defines the strategy used to tune the compression. The valid values are
+<code class="inline"><span class="w">Z_DEFAULT_STRATEGY</span></code>
+, <code class="inline"><span class="w">Z_FILTERED</span></code>
+ and <code class="inline"><span class="w">Z_HUFFMAN_ONLY</span></code>
+.</p>
+</li>
+</ul>
+<a class='view-head2' id="*%24d-%3edict_adler()*"></a><h3 class='h3' ><strong>$d-&gt;dict_adler()</strong></h3>
+<p>Returns the adler32 value for the dictionary.</p>
+<a class='view-head2' id="*%24d-%3emsg()*"></a><h3 class='h3' ><strong>$d-&gt;msg()</strong></h3>
+<p>Returns the last error message generated by zlib.</p>
+<a class='view-head2' id="*%24d-%3etotal_in()*"></a><h3 class='h3' ><strong>$d-&gt;total_in()</strong></h3>
+<p>Returns the total number of bytes uncompressed bytes input to deflate.</p>
+<a class='view-head2' id="*%24d-%3etotal_out()*"></a><h3 class='h3' ><strong>$d-&gt;total_out()</strong></h3>
+<p>Returns the total number of compressed bytes output from deflate.</p>
+<a class='view-head2' id="Example"></a><h3 class='h3' >Example</h3>
+<p>Here is a trivial example of using <code class="inline"><span class="w">deflate</span></code>
+. It simply reads standard
+input, deflates it and writes it to standard output.</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">strict</span> <span class="sc">;</span></li><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">warnings</span> <span class="sc">;</span></li><li></li><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">Compress::Zlib</span> <span class="sc">;</span></li><li></li><li>    <a class="l_k" href="../functions/binmode.html">binmode</a> <span class="w">STDIN</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/binmode.html">binmode</a> <span class="w">STDOUT</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">$x</span> = <span class="i">deflateInit</span><span class="s">(</span><span class="s">)</span></li><li>       or <a class="l_k" href="../functions/die.html">die</a> <span class="q">&quot;Cannot create a deflation stream\n&quot;</span> <span class="sc">;</span></li><li></li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="s">(</span><span class="i">$output</span><span class="cm">,</span> <span class="i">$status</span><span class="s">)</span> <span class="sc">;</span></li><li>    while <span class="s">(</span>&lt;&gt;<span class="s">)</span></li><li>    <span class="s">{</span></li><li>        <span class="s">(</span><span class="i">$output</span><span class="cm">,</span> <span class="i">$status</span><span class="s">)</span> = <span class="i">$x</span><span class="i">-&gt;deflate</span><span class="s">(</span><span class="i">$_</span><span class="s">)</span> <span class="sc">;</span></li><li>    </li><li>        <span class="i">$status</span> == <span class="w">Z_OK</span></li><li>            or <a class="l_k" href="../functions/die.html">die</a> <span class="q">&quot;deflation failed\n&quot;</span> <span class="sc">;</span></li><li>    </li><li>        <a class="l_k" href="../functions/print.html">print</a> <span class="i">$output</span> <span class="sc">;</span></li><li>    <span class="s">}</span></li><li>    </li><li>    <span class="s">(</span><span class="i">$output</span><span class="cm">,</span> <span class="i">$status</span><span class="s">)</span> = <span class="i">$x</span><span class="i">-&gt;flush</span><span class="s">(</span><span class="s">)</span> <span class="sc">;</span></li><li>    </li><li>    <span class="i">$status</span> == <span class="w">Z_OK</span></li><li>        or <a class="l_k" href="../functions/die.html">die</a> <span class="q">&quot;deflation failed\n&quot;</span> <span class="sc">;</span></li><li>    </li><li>    <a class="l_k" href="../functions/print.html">print</a> <span class="i">$output</span> <span class="sc">;</span></li></ol></pre><a class='view-head1' id="Inflate-Interface"></a><h2 class='h2' >Inflate Interface</h2>
+<p>This section defines the interface available that allows in-memory
+uncompression using the <i>deflate</i> interface provided by zlib.</p>
+<p>Here is a definition of the interface:</p>
+<a class='view-head2' id="*(%24i%2c-%24status)-%3d-inflateInit()*"></a><h3 class='h3' ><strong>($i, $status) = inflateInit()</strong></h3>
+<p>Initialises an inflation stream.</p>
+<p>In a list context it returns the inflation stream, <code class="inline"><span class="i">$i</span></code>
+, and the
+<i>zlib</i> status code in <code class="inline"><span class="i">$status</span></code>
+. In a scalar context it returns the
+inflation stream only.</p>
+<p>If successful, <code class="inline"><span class="i">$i</span></code>
+ will hold the inflation stream and <code class="inline"><span class="i">$status</span></code>
+ will
+be <code class="inline"><span class="w">Z_OK</span></code>
+.</p>
+<p>If not successful, <code class="inline"><span class="i">$i</span></code>
+ will be <i>undef</i> and <code class="inline"><span class="i">$status</span></code>
+ will hold the
+<i>zlib</i> error code.</p>
+<p>The function optionally takes a number of named options specified as
+<code class="inline">-<span class="w">Name</span><span class="cm">=&gt;</span><span class="w">value</span></code>
+ pairs. This allows individual options to be
+tailored without having to specify them all in the parameter list.</p>
+<p>For backward compatibility, it is also possible to pass the parameters
+as a reference to a hash containing the name=&gt;value pairs.</p>
+<p>The function takes one optional parameter, a reference to a hash.  The
+contents of the hash allow the deflation interface to be tailored.</p>
+<p>Here is a list of the valid options:</p>
+<ul>
+<li><a class='view-title' id="*-WindowBits*"></a><strong><strong>-WindowBits</strong></strong>
+<p>To uncompress an RFC 1950 data stream, set <code class="inline"><span class="w">WindowBits</span></code>
+ to a positive number.</p>
+<p>To uncompress an RFC 1951 data stream, set <code class="inline"><span class="w">WindowBits</span></code>
+ to <code class="inline">-<span class="w">MAX_WBITS</span></code>
+.</p>
+<p>For a full definition of the meaning and valid values for <code class="inline"><span class="w">WindowBits</span></code>
+ refer
+to the <i>zlib</i> documentation for <i>inflateInit2</i>.</p>
+<p>Defaults to MAX_WBITS.</p>
+</li>
+<li><a class='view-title' id="*-Bufsize*"></a><strong><strong>-Bufsize</strong></strong>
+<p>Sets the initial size for the inflation buffer. If the buffer has to be
+reallocated to increase the size, it will grow in increments of
+<code class="inline"><span class="w">Bufsize</span></code>
+.</p>
+<p>Default is 4096.</p>
+</li>
+<li><a class='view-title' id="*-Dictionary*"></a><strong><strong>-Dictionary</strong></strong>
+<p>The default is no dictionary.</p>
+</li>
+</ul>
+<p>Here is an example of using the <code class="inline"><span class="w">inflateInit</span></code>
+ optional parameter to
+override the default buffer size.</p>
+<pre class="verbatim"><ol><li>    <span class="i">inflateInit</span><span class="s">(</span> -<span class="w">Bufsize</span> <span class="cm">=&gt;</span> <span class="n">300</span> <span class="s">)</span> <span class="sc">;</span></li></ol></pre><a class='view-head2' id="*(%24out%2c-%24status)-%3d-%24i-%3einflate(%24buffer)*"></a><h3 class='h3' ><strong>($out, $status) = $i-&gt;inflate($buffer)</strong></h3>
+<p>Inflates the complete contents of <code class="inline"><span class="i">$buffer</span></code>
+. The buffer can either be
+a scalar or a scalar reference.</p>
+<p>Returns <code class="inline"><span class="w">Z_OK</span></code>
+ if successful and <code class="inline"><span class="w">Z_STREAM_END</span></code>
+ if the end of the
+compressed data has been successfully reached. 
+If not successful, <code class="inline"><span class="i">$out</span></code>
+ will be <i>undef</i> and <code class="inline"><span class="i">$status</span></code>
+ will hold
+the <i>zlib</i> error code.</p>
+<p>The <code class="inline"><span class="i">$buffer</span></code>
+ parameter is modified by <code class="inline"><span class="w">inflate</span></code>
+. On completion it
+will contain what remains of the input buffer after inflation. This
+means that <code class="inline"><span class="i">$buffer</span></code>
+ will be an empty string when the return status is
+<code class="inline"><span class="w">Z_OK</span></code>
+. When the return status is <code class="inline"><span class="w">Z_STREAM_END</span></code>
+ the <code class="inline"><span class="i">$buffer</span></code>
+
+parameter will contains what (if anything) was stored in the input
+buffer after the deflated data stream.</p>
+<p>This feature is useful when processing a file format that encapsulates
+a  compressed data stream (e.g. gzip, zip).</p>
+<a class='view-head2' id="*%24status-%3d-%24i-%3einflateSync(%24buffer)*"></a><h3 class='h3' ><strong>$status = $i-&gt;inflateSync($buffer)</strong></h3>
+<p>Scans <code class="inline"><span class="i">$buffer</span></code>
+ until it reaches either a <i>full flush point</i> or the
+end of the buffer.</p>
+<p>If a <i>full flush point</i> is found, <code class="inline"><span class="w">Z_OK</span></code>
+ is returned and <code class="inline"><span class="i">$buffer</span></code>
+
+will be have all data up to the flush point removed. This can then be
+passed to the <code class="inline"><span class="w">deflate</span></code>
+ method.</p>
+<p>Any other return code means that a flush point was not found. If more
+data is available, <code class="inline"><span class="w">inflateSync</span></code>
+ can be called repeatedly with more
+compressed data until the flush point is found.</p>
+<a class='view-head2' id="*%24i-%3edict_adler()*"></a><h3 class='h3' ><strong>$i-&gt;dict_adler()</strong></h3>
+<p>Returns the adler32 value for the dictionary.</p>
+<a class='view-head2' id="*%24i-%3emsg()*"></a><h3 class='h3' ><strong>$i-&gt;msg()</strong></h3>
+<p>Returns the last error message generated by zlib.</p>
+<a class='view-head2' id="*%24i-%3etotal_in()*"></a><h3 class='h3' ><strong>$i-&gt;total_in()</strong></h3>
+<p>Returns the total number of bytes compressed bytes input to inflate.</p>
+<a class='view-head2' id="*%24i-%3etotal_out()*"></a><h3 class='h3' ><strong>$i-&gt;total_out()</strong></h3>
+<p>Returns the total number of uncompressed bytes output from inflate.</p>
+<a class='view-head2' id="Example"></a><h3 class='h3' >Example</h3>
+<p>Here is an example of using <code class="inline"><span class="w">inflate</span></code>
+.</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">strict</span> <span class="sc">;</span></li><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">warnings</span> <span class="sc">;</span></li><li>    </li><li>    <a class="l_k" href="../functions/use.html">use</a> <span class="w">Compress::Zlib</span> <span class="sc">;</span></li><li>    </li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">$x</span> = <span class="i">inflateInit</span><span class="s">(</span><span class="s">)</span></li><li>       or <a class="l_k" href="../functions/die.html">die</a> <span class="q">&quot;Cannot create a inflation stream\n&quot;</span> <span class="sc">;</span></li><li>    </li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="i">$input</span> = <span class="q">&#39;&#39;</span> <span class="sc">;</span></li><li>    <a class="l_k" href="../functions/binmode.html">binmode</a> <span class="w">STDIN</span><span class="sc">;</span></li><li>    <a class="l_k" href="../functions/binmode.html">binmode</a> <span class="w">STDOUT</span><span class="sc">;</span></li><li>    </li><li>    <a class="l_k" href="../functions/my.html">my</a> <span class="s">(</span><span class="i">$output</span><span class="cm">,</span> <span class="i">$status</span><span class="s">)</span> <span class="sc">;</span></li><li>    while <span class="s">(</span><a class="l_k" href="../functions/read.html">read</a><span class="s">(</span><span class="w">STDIN</span><span class="cm">,</span> <span class="i">$input</span><span class="cm">,</span> <span class="n">4096</span><span class="s">)</span><span class="s">)</span></li><li>    <span class="s">{</span></li><li>        <span class="s">(</span><span class="i">$output</span><span class="cm">,</span> <span class="i">$status</span><span class="s">)</span> = <span class="i">$x</span><span class="i">-&gt;inflate</span><span class="s">(</span>\<span class="i">$input</span><span class="s">)</span> <span class="sc">;</span></li><li>    </li><li>        <a class="l_k" href="../functions/print.html">print</a> <span class="i">$output</span> </li><li>            if <span class="i">$status</span> == <span class="w">Z_OK</span> or <span class="i">$status</span> == <span class="w">Z_STREAM_END</span> <span class="sc">;</span></li><li>    </li><li>        <a class="l_k" href="../functions/last.html">last</a> if <span class="i">$status</span> != <span class="w">Z_OK</span> <span class="sc">;</span></li><li>    <span class="s">}</span></li><li>    </li><li>    <a class="l_k" href="../functions/die.html">die</a> <span class="q">&quot;inflation failed\n&quot;</span></li><li>        unless <span class="i">$status</span> == <span class="w">Z_STREAM_END</span> <span class="sc">;</span></li></ol></pre><a class='view-head1' id="CHECKSUM-FUNCTIONS"></a><h2 class='h2' >CHECKSUM FUNCTIONS</h2>
+<p>Two functions are provided by <i>zlib</i> to calculate checksums. For the
+Perl interface, the order of the two parameters in both functions has
+been reversed. This allows both running checksums and one off
+calculations to be done.</p>
+<pre class="verbatim"><ol><li>    <span class="i">$crc</span> = <span class="i">adler32</span><span class="s">(</span><span class="i">$buffer</span> [<span class="cm">,</span><span class="i">$crc</span>]<span class="s">)</span> <span class="sc">;</span></li><li>    <span class="i">$crc</span> = <span class="i">crc32</span><span class="s">(</span><span class="i">$buffer</span> [<span class="cm">,</span><span class="i">$crc</span>]<span class="s">)</span> <span class="sc">;</span></li></ol></pre><p>The buffer parameters can either be a scalar or a scalar reference.</p>
+<p>If the $crc parameters is <code class="inline"><a class="l_k" href="../functions/undef.html">undef</a></code>, the crc value will be reset.</p>
+<p>If you have built this module with zlib 1.2.3 or better, two more
+CRC-related functions are available.</p>
+<pre class="verbatim"><ol><li>    <span class="i">$crc</span> = <span class="i">adler32_combine</span><span class="s">(</span><span class="i">$crc1</span><span class="cm">,</span> <span class="i">$crc2</span><span class="cm">,</span> <span class="i">$len2</span><span class="s">)</span><span class="w">l</span></li><li>    <span class="i">$crc</span> = <span class="i">crc32_combine</span><span class="s">(</span><span class="i">$adler1</span><span class="cm">,</span> <span class="i">$adler2</span><span class="cm">,</span> <span class="i">$len2</span><span class="s">)</span></li></ol></pre><p>These functions allow checksums to be merged.</p>
+<a class='view-head1' id="Misc"></a><h2 class='h2' >Misc</h2>
+<a class='view-head2' id="my-%24version-%3d-Compress%3a%3aZlib%3a%3azlib_version()%3b"></a><h3 class='h3' >my $version = Compress::Zlib::zlib_version();</h3>
+<p>Returns the version of the zlib library.</p>
+<a class='view-head1' id="CONSTANTS"></a><h2 class='h2' >CONSTANTS</h2>
+<p>All the <i>zlib</i> constants are automatically imported when you make use
+of <i>Compress::Zlib</i>.</p>
+<a class='view-head1' id="SEE-ALSO"></a><h2 class='h2' >SEE ALSO</h2>
+<p><a href="../IO/Compress/Gzip.html">IO::Compress::Gzip</a>, <a href="../IO/Uncompress/Gunzip.html">IO::Uncompress::Gunzip</a>, <a href="../IO/Compress/Deflate.html">IO::Compress::Deflate</a>, <a href="../IO/Uncompress/Inflate.html">IO::Uncompress::Inflate</a>, <a href="../IO/Compress/RawDeflate.html">IO::Compress::RawDeflate</a>, <a href="../IO/Uncompress/RawInflate.html">IO::Uncompress::RawInflate</a>, <a href="../IO/Compress/Bzip2.html">IO::Compress::Bzip2</a>, <a href="../IO/Uncompress/Bunzip2.html">IO::Uncompress::Bunzip2</a>, <a href="https://search.cpan.org/perldoc/IO::Compress::Lzma">IO::Compress::Lzma</a>, <a href="https://search.cpan.org/perldoc/IO::Uncompress::UnLzma">IO::Uncompress::UnLzma</a>, <a href="https://search.cpan.org/perldoc/IO::Compress::Xz">IO::Compress::Xz</a>, <a href="https://search.cpan.org/perldoc/IO::Uncompress::UnXz">IO::Uncompress::UnXz</a>, <a href="https://search.cpan.org/perldoc/IO::Compress::Lzop">IO::Compress::Lzop</a>, <a href="https://search.cpan.org/perldoc/IO::Uncompress::UnLzop">IO::Uncompress::UnLzop</a>, <a href="https://search.cpan.org/perldoc/IO::Compress::Lzf">IO::Compress::Lzf</a>, <a href="https://search.cpan.org/perldoc/IO::Uncompress::UnLzf">IO::Uncompress::UnLzf</a>, <a href="../IO/Uncompress/AnyInflate.html">IO::Uncompress::AnyInflate</a>, <a href="../IO/Uncompress/AnyUncompress.html">IO::Uncompress::AnyUncompress</a></p>
+<p><a href="https://search.cpan.org/perldoc/Compress::Zlib::FAQ">Compress::Zlib::FAQ</a></p>
+<p><a href="../File/GlobMapper.html">File::GlobMapper</a>, <a href="https://search.cpan.org/perldoc/Archive::Zip">Archive::Zip</a>,
+<a href="../Archive/Tar.html">Archive::Tar</a>,
+<a href="../IO/Zlib.html">IO::Zlib</a></p>
+<p>For RFC 1950, 1951 and 1952 see 
+<i><a href="http://www.faqs.org/rfcs/rfc1950.html">http://www.faqs.org/rfcs/rfc1950.html</a></i>,
+<i><a href="http://www.faqs.org/rfcs/rfc1951.html">http://www.faqs.org/rfcs/rfc1951.html</a></i> and
+<i><a href="http://www.faqs.org/rfcs/rfc1952.html">http://www.faqs.org/rfcs/rfc1952.html</a></i></p>
+<p>The <i>zlib</i> compression library was written by Jean-loup Gailly
+<i>gzip@prep.ai.mit.edu</i> and Mark Adler <i>madler@alumni.caltech.edu</i>.</p>
+<p>The primary site for the <i>zlib</i> compression library is
+<i><a href="http://www.zlib.org">http://www.zlib.org</a></i>.</p>
+<p>The primary site for gzip is <i><a href="http://www.gzip.org">http://www.gzip.org</a></i>.</p>
+<a class='view-head1' id="AUTHOR"></a><h2 class='h2' >AUTHOR</h2>
+<p>This module was written by Paul Marquess, <i>pmqs@cpan.org</i>.</p>
+<a class='view-head1' id="MODIFICATION-HISTORY"></a><h2 class='h2' >MODIFICATION HISTORY</h2>
+<p>See the Changes file.</p>
+<a class='view-head1' id="COPYRIGHT-AND-LICENSE"></a><h2 class='h2' >COPYRIGHT AND LICENSE</h2>
+<p>Copyright (c) 1995-2010 Paul Marquess. All rights reserved.</p>
+<p>This program is free software; you can redistribute it and/or
+modify it under the same terms as Perl itself.</p>
+
+
+
+
+      <ul><li><a href="#NAME">NAME</a></li><li><a href="#SYNOPSIS">SYNOPSIS</a></li><li><a href="#DESCRIPTION">DESCRIPTION</a></li><ul><li><a href="#Notes-for-users-of-Compress%3a%3aZlib-version-1">Notes for users of Compress::Zlib version 1</a></li></ul><li><a href="#GZIP-INTERFACE">GZIP INTERFACE</a></li><ul><li><a href="#Examples">Examples</a></li><li><a href="#Compress%3a%3aZlib%3a%3amemGzip">Compress::Zlib::memGzip</a></li><li><a href="#Compress%3a%3aZlib%3a%3amemGunzip">Compress::Zlib::memGunzip</a></li></ul><li><a href="#COMPRESS%2fUNCOMPRESS">COMPRESS/UNCOMPRESS</a></li><li><a href="#Deflate-Interface">Deflate Interface</a></li><ul><li><a href="#*(%24d%2c-%24status)-%3d-deflateInit(-%5bOPT%5d-)*">*($d, $status) = deflateInit( [OPT] )*</a></li><li><a href="#*(%24out%2c-%24status)-%3d-%24d-%3edeflate(%24buffer)*">*($out, $status) = $d->deflate($buffer)*</a></li><li><a href="#*(%24out%2c-%24status)-%3d-%24d-%3eflush()*-%3dhead2-*(%24out%2c-%24status)-%3d-%24d-%3eflush(%24flush_type)*">*($out, $status) = $d->flush()*
+=head2 *($out, $status) = $d->flush($flush_type)*</a></li><li><a href="#*%24status-%3d-%24d-%3edeflateParams(%5bOPT%5d)*">*$status = $d->deflateParams([OPT])*</a></li><li><a href="#*%24d-%3edict_adler()*">*$d->dict_adler()*</a></li><li><a href="#*%24d-%3emsg()*">*$d->msg()*</a></li><li><a href="#*%24d-%3etotal_in()*">*$d->total_in()*</a></li><li><a href="#*%24d-%3etotal_out()*">*$d->total_out()*</a></li><li><a href="#Example">Example</a></li></ul><li><a href="#Inflate-Interface">Inflate Interface</a></li><ul><li><a href="#*(%24i%2c-%24status)-%3d-inflateInit()*">*($i, $status) = inflateInit()*</a></li><li><a href="#*(%24out%2c-%24status)-%3d-%24i-%3einflate(%24buffer)*">*($out, $status) = $i->inflate($buffer)*</a></li><li><a href="#*%24status-%3d-%24i-%3einflateSync(%24buffer)*">*$status = $i->inflateSync($buffer)*</a></li><li><a href="#*%24i-%3edict_adler()*">*$i->dict_adler()*</a></li><li><a href="#*%24i-%3emsg()*">*$i->msg()*</a></li><li><a href="#*%24i-%3etotal_in()*">*$i->total_in()*</a></li><li><a href="#*%24i-%3etotal_out()*">*$i->total_out()*</a></li><li><a href="#Example">Example</a></li></ul><li><a href="#CHECKSUM-FUNCTIONS">CHECKSUM FUNCTIONS</a></li><li><a href="#Misc">Misc</a></li><ul><li><a href="#my-%24version-%3d-Compress%3a%3aZlib%3a%3azlib_version()%3b">my $version = Compress::Zlib::zlib_version();</a></li></ul><li><a href="#CONSTANTS">CONSTANTS</a></li><li><a href="#SEE-ALSO">SEE ALSO</a></li><li><a href="#AUTHOR">AUTHOR</a></li><li><a href="#MODIFICATION-HISTORY">MODIFICATION HISTORY</a></li><li><a href="#COPYRIGHT-AND-LICENSE">COPYRIGHT AND LICENSE</a></li></ul>
+
+
+                  </div>
+                </article>
+              </div>
+            </div>
+          </main>
+        </div>
+           <footer class="footer row bg-light pt-5 pb-5">
+       <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+           <div class="row">
+               <div class="col-md-4">
+                   <ul class="list-unstyled">
+                       <li>
+                           <h4>Site info</h4>
+                       </li>
+                       <li>Docs mantained by
+                           <a href="//lists.perl.org/list/perl5-porters.html"
+                               rel="noopener">Perl 5 Porters</a>
+                       </li>
+                       <li>Perldoc site development sponsored by
+                           <a href="//opusvl.com" rel="noopener">
+                           <img style="margin: 20px 20px 5px 10px" class="opus-logo" src="/public/img/opusvl_logo.svg" alt="OpusVL Logo">
+                        </a>
+                    <li><span class="about_perldoc"><a href="//about.html">About PerlDOC</a></span>
+                    </li>
+                       </li>
+                   </ul>
+               </div>
+               <div class="col-md-8">
+                   <div class="row">
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Manuals</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.12.4/index-overview.html">Overview</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.12.4/index-tutorials.html">Tutorials</a>
+                               </li>
+                               <li>
+                                   <a href="/5.12.4/index-faq.html">FAQs</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.12.4/index-history.html">Changes</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Reference</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.12.4/index-language.html">Language</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.12.4/index-functions.html">Functions</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.12.4/perlop.html">Operators</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.12.4/perlvar.html">Variables</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Modules</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.12.4/index-modules-A.html">Modules</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.12.4/index-pragmas.html">Pragmas</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.12.4/index-utilities.html">Utilities</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Misc</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.12.4/index-licence.html">License</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.12.4/index-internals.html">Internals</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.12.4/index-platforms.html">Platforms</a>
+                               </li>
+                            <li>
+                                <a
+                                    href="/5.12.4/index-about.html">About</a>
+                            </li>
+                           </ul>
+                       </div>
+                   </div>
+               </div>
+               <div class=" col-12 footer-inf text-center">
+                   <small>perldoc.perl.org - Official documentation for the Perl
+                       programming language</small>
+               </div>
+           </div>
+       </div>
+   </footer>
+
+        	<div class="beta-wrapper beta-bottom-right ">
+		<div class="beta beta-blue  ">
+			<a class="beta-link "
+				href="//github.com/OpusVL/perldoc.perl.org/issues/new" rel="noopener">
+				<span class="beta-text">
+					This website is a Beta release.
+				</span>
+				<span class="beta-text">
+					For any issues please raise a ticket on GitHub
+				</span>
+			</a>
+		</div>
+	</div>
+
+        <script src="/public/js/main.min.js"></script>
+      </body>
+
+      </html>

@@ -1,0 +1,1141 @@
+      
+      
+      
+      
+
+      <!DOCTYPE html>
+      <html lang="en">
+
+      <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="IO::Socket::IP - perldoc.perl.org">
+        <link rel="icon" href="/public/img/favicon.ico">
+        <title>IO::Socket::IP - perldoc.perl.org</title>
+        <link href="/public/css/main.min.css" rel="stylesheet">
+        <link rel="canonical" href="/IO/Socket/IP.html">
+        <link
+          href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900'
+          rel='stylesheet' type='text/css'>
+        <script>
+          window.ga = window.ga || function () {
+            (ga.q = ga.q || []).push(arguments)
+          };
+          ga.l = +new Date;
+          ga('create', 'UA-1892152-2', 'auto'); // JJ's account
+          ga('create', 'UA-50555-3', 'auto', 'perlOrg'); // perl.org account
+          ga('require', 'outboundLinkTracker', {
+            events: ['click', 'auxclick', 'contextmenu'],
+          });
+          ga('require', 'maxScrollTracker');
+          ga('send', 'pageview');
+          ga('perlOrg.send', 'pageview');
+        </script>
+        <script async src="https://www.google-analytics.com/analytics.js">
+        </script>
+        <script async src="/public/js/tracking.min.js"></script>
+      </head>
+
+      <body class="body container-fluid ">
+        <div class="wrapper">
+
+          <nav
+    class="navbar navbar-dark bg-primary bg-perl fixed-top justify-content-between navbar-expand-lg">
+    <a href="#content" class="skippy sr-only sr-only-focusable">
+        <span class=' skippy-text'>Skip to main content</span>
+    </a>
+    <a class="navbar-brand" href="/">
+        <img class="logo" src="/public/img/logo_perl_doc.svg"
+            alt="Perl Documentation Logo" />
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse"
+        data-target="#navbar" aria-controls="navbar" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="navbar" class="collapse navbar-collapse ">
+        <ul class="navbar-nav ml-auto navbar-right">
+            <form class="nav-item dropdown search-wrapper">
+                <input type="text" id='searchinput' aria-describedby='navbarDropdown5'
+                    placeholder="Type query" class='search-input-field' value=''>
+
+                <button href="#" data-toggle='dropdown' type="button"
+                    aria-haspopup="true" aria-expanded='false' id="navbarDropdown5"
+                    class="nav-link dropdown-toggle search-link">
+                    <object tabindex='-1' focusable="false" class='search-icon'
+                        data="/public/img/search.svg" type="image/svg+xml"
+                        name='search icon'>search
+                        icon</object>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown5"
+                    id='search-results'>
+                    <p class='dropdown-item major-version'>
+                        No results
+                    </p>
+                </div>
+            </form>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown" href="#" class="nav-link dropdown-toggle"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Perl versions</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    
+                        <p class='dropdown-item major-version'>
+                            5.32
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.32.0/">5.32.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.30
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.3/">5.30.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.2/">5.30.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.1/">5.30.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.0/">5.30.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.28
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.3/">5.28.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.2/">5.28.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.1/">5.28.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.0/">5.28.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.26
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.3/">5.26.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.2/">5.26.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.1/">5.26.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.0/">5.26.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.24
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.4/">5.24.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.3/">5.24.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.2/">5.24.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.1/">5.24.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.0/">5.24.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.22
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.4/">5.22.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.3/">5.22.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.2/">5.22.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.1/">5.22.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.0/">5.22.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.20
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.3/">5.20.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.2/">5.20.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.1/">5.20.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.0/">5.20.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.18
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.4/">5.18.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.3/">5.18.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.2/">5.18.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.1/">5.18.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.0/">5.18.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.16
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.3/">5.16.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.2/">5.16.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.1/">5.16.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.0/">5.16.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.14
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.4/">5.14.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.3/">5.14.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.2/">5.14.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.1/">5.14.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.0/">5.14.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.12
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.5/">5.12.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.4/">5.12.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.3/">5.12.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.2/">5.12.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.1/">5.12.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.0/">5.12.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.10
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.1/">5.10.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.0/">5.10.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.8
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.9/">5.8.9</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.8/">5.8.8</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.7/">5.8.7</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.6/">5.8.6</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.5/">5.8.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.4/">5.8.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.3/">5.8.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.2/">5.8.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.1/">5.8.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.0/">5.8.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.6
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.2/">5.6.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.1/">5.6.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.0/">5.6.0</a>
+                        
+                        
+                    
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown1" href="#" class="dropdown-toggle nav-link"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Manuals</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                    <a class="dropdown-item"
+                        href="/5.22.2/index-overview.html">Overview</a>
+                    <a class="dropdown-item"
+                        href="/5.22.2/index-tutorials.html">Tutorials</a>
+                    <a class="dropdown-item"
+                        href="/5.22.2/index-faq.html">FAQs</a>
+                    <a class="dropdown-item"
+                        href="/5.22.2/index-history.html">Changes</a>
+                    <a class="dropdown-item"
+                        href="/5.22.2/index-licence.html">License</a>
+                    <a class="dropdown-item"
+                        href="/5.22.2/index-language.html">Language</a>
+                    <a class="dropdown-item"
+                        href="/5.22.2/index-functions.html">Functions</a>
+                    <a class="dropdown-item"
+                        href="/5.22.2/perlop.html">Operators</a>
+                    <a class="dropdown-item"
+                        href="/5.22.2/perlvar.html">Variables</a>
+                    <a class="dropdown-item"
+                        href="/5.22.2/index-pragmas.html">Pragmas</a>
+                    <a class="dropdown-item"
+                        href="/5.22.2/index-utilities.html">Utilities</a>
+                    <a class="dropdown-item"
+                        href="/5.22.2/index-internals.html">Internals</a>
+                    <a class="dropdown-item"
+                        href="/5.22.2/index-platforms.html">Platforms</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown3" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Modules</a>
+                <div aria-labelledby="navbarDropdown3"
+                    class="dropdown-menu letters-wrap">
+                    <!--<a class="dropdown-item"
+                        href="/5.22.2/index-modules.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.22.2/index-modules-by-cat.html">By
+                        Category</a>-->
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.22.2/index-modules-A.html">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.2/index-modules-B.html">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.2/index-modules-C.html">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.2/index-modules-D.html">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.2/index-modules-E.html">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.2/index-modules-F.html">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.2/index-modules-G.html">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.2/index-modules-H.html">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.2/index-modules-I.html">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.2/index-modules-J.html">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.2/index-modules-K.html">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.2/index-modules-L.html">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.2/index-modules-M.html">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.2/index-modules-N.html">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.2/index-modules-O.html">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.2/index-modules-P.html">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.2/index-modules-Q.html">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.2/index-modules-R.html">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.2/index-modules-S.html">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.2/index-modules-T.html">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.2/index-modules-U.html">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.2/index-modules-V.html">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.2/index-modules-W.html">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.2/index-modules-X.html">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.2/index-modules-Y.html">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.2/index-modules-Z.html">Z</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown4" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Functions</a>
+                <div aria-labelledby="navbarDropdown4"
+                    class="dropdown-menu letters-wrap">
+                    <a class="dropdown-item"
+                        href="/5.22.2/index-functions.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.22.2/index-functions-by-cat.html">By
+                        Category</a>
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.22.2/index-functions.html#A">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.2/index-functions.html#B">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.2/index-functions.html#C">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.2/index-functions.html#D">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.2/index-functions.html#E">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.2/index-functions.html#F">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.2/index-functions.html#G">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.2/index-functions.html#H">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.2/index-functions.html#I">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.2/index-functions.html#J">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.2/index-functions.html#K">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.2/index-functions.html#L">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.2/index-functions.html#M">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.2/index-functions.html#N">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.2/index-functions.html#O">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.2/index-functions.html#P">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.2/index-functions.html#Q">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.2/index-functions.html#R">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.2/index-functions.html#S">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.2/index-functions.html#T">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.2/index-functions.html#U">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.2/index-functions.html#V">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.2/index-functions.html#W">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.2/index-functions.html#X">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.2/index-functions.html#Y">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.22.2/index-functions.html#Z">Z</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!--/.nav-collapse -->
+</nav>
+
+
+          <main class="row main-content pb-5 pt-5" id='content'>
+            <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+              <div class="row">
+                <div class="col-sm-12">
+                  <div id="breadcrumbs">
+                      
+    <a href="../../index.html">Home</a>&nbsp; &gt;
+    
+      
+        <a href="../../index-modules-I.html">Core modules (I)</a> &gt;
+      
+    
+    IO::Socket::IP
+  
+
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <article class="col-sm-12 content">
+                  <div class="documentation-wrapper">
+                    <div id="perl_version">
+                      <h7 class='page-title'> Perl 5 version 22.2
+                        documentation</h7>
+                    </div>
+                    <h1>IO::Socket::IP</h1>
+
+
+  <!--    -->
+<ul><li><a href="#NAME">NAME</a></li><li><a href="#SYNOPSIS">SYNOPSIS</a></li><li><a href="#DESCRIPTION">DESCRIPTION</a></li><li><a href="#REPLACING-IO%3a%3aSocket-DEFAULT-BEHAVIOUR">REPLACING IO::Socket DEFAULT BEHAVIOUR</a></li><li><a href="#CONSTRUCTORS">CONSTRUCTORS</a></li><ul><li><a href="#%24sock-%3d-IO%3a%3aSocket%3a%3aIP-%3enew(-%25args-)">$sock = IO::Socket::IP->new( %args )</a></li><li><a href="#%24sock-%3d-IO%3a%3aSocket%3a%3aIP-%3enew(-%24peeraddr-)">$sock = IO::Socket::IP->new( $peeraddr )</a></li></ul><li><a href="#METHODS">METHODS</a></li><ul><li><a href="#(-%24host%2c-%24service-)-%3d-%24sock-%3esockhost_service(-%24numeric-)">( $host, $service ) = $sock->sockhost_service( $numeric )</a></li><li><a href="#%24addr-%3d-%24sock-%3esockhost">$addr = $sock->sockhost</a></li><li><a href="#%24port-%3d-%24sock-%3esockport">$port = $sock->sockport</a></li><li><a href="#%24host-%3d-%24sock-%3esockhostname">$host = $sock->sockhostname</a></li><li><a href="#%24service-%3d-%24sock-%3esockservice">$service = $sock->sockservice</a></li><li><a href="#%24addr-%3d-%24sock-%3esockaddr">$addr = $sock->sockaddr</a></li><li><a href="#(-%24host%2c-%24service-)-%3d-%24sock-%3epeerhost_service(-%24numeric-)">( $host, $service ) = $sock->peerhost_service( $numeric )</a></li><li><a href="#%24addr-%3d-%24sock-%3epeerhost">$addr = $sock->peerhost</a></li><li><a href="#%24port-%3d-%24sock-%3epeerport">$port = $sock->peerport</a></li><li><a href="#%24host-%3d-%24sock-%3epeerhostname">$host = $sock->peerhostname</a></li><li><a href="#%24service-%3d-%24sock-%3epeerservice">$service = $sock->peerservice</a></li><li><a href="#%24addr-%3d-%24peer-%3epeeraddr">$addr = $peer->peeraddr</a></li><li><a href="#%24inet-%3d-%24sock-%3eas_inet">$inet = $sock->as_inet</a></li></ul><li><a href="#NON-BLOCKING">NON-BLOCKING</a></li><li><a href="#PeerHost-AND-LocalHost-PARSING">PeerHost AND LocalHost PARSING</a></li><ul><li><a href="#(-%24host%2c-%24port-)-%3d-IO%3a%3aSocket%3a%3aIP-%3esplit_addr(-%24addr-)">( $host, $port ) = IO::Socket::IP->split_addr( $addr )</a></li><li><a href="#%24addr-%3d-IO%3a%3aSocket%3a%3aIP-%3ejoin_addr(-%24host%2c-%24port-)">$addr = IO::Socket::IP->join_addr( $host, $port )</a></li></ul><li><a href="#IO%3a%3aSocket%3a%3aINET-INCOMPATIBILITES">IO::Socket::INET INCOMPATIBILITES</a></li><li><a href="#TODO">TODO</a></li><li><a href="#AUTHOR">AUTHOR</a></li></ul><a class='view-head1' id="NAME"></a><h2 class='h2' >NAME</h2>
+<p><code class="inline"><span class="w">IO::Socket::IP</span></code>
+ - Family-neutral IP socket supporting both IPv4 and IPv6</p>
+<a class='view-head1' id="SYNOPSIS"></a><h2 class='h2' >SYNOPSIS</h2>
+<pre class="verbatim"><ol><li> <a class="l_k" href="../../functions/use.html">use</a> <span class="w">IO::Socket::IP</span><span class="sc">;</span></li><li></li><li> <a class="l_k" href="../../functions/my.html">my</a> <span class="i">$sock</span> = <span class="w">IO::Socket::IP</span><span class="w">-&gt;new</span><span class="s">(</span></li><li>    <span class="w">PeerHost</span> <span class="cm">=&gt;</span> <span class="q">&quot;www.google.com&quot;</span><span class="cm">,</span></li><li>    <span class="w">PeerPort</span> <span class="cm">=&gt;</span> <span class="q">&quot;http&quot;</span><span class="cm">,</span></li><li>    <span class="w">Type</span>     <span class="cm">=&gt;</span> <span class="w">SOCK_STREAM</span><span class="cm">,</span></li><li> <span class="s">)</span> <a class="l_k" href="../../functions/or.html">or</a> <a class="l_k" href="../../functions/die.html">die</a> <span class="q">&quot;Cannot construct socket - $@&quot;</span><span class="sc">;</span></li><li></li><li> <a class="l_k" href="../../functions/my.html">my</a> <span class="i">$familyname</span> = <span class="s">(</span> <span class="i">$sock</span><span class="i">-&gt;sockdomain</span> == <span class="w">PF_INET6</span> <span class="s">)</span> ? <span class="q">&quot;IPv6&quot;</span> <span class="co">:</span></li><li>                  <span class="s">(</span> <span class="i">$sock</span><span class="i">-&gt;sockdomain</span> == <span class="w">PF_INET</span>  <span class="s">)</span> ? <span class="q">&quot;IPv4&quot;</span> <span class="co">:</span></li><li>                                                      <span class="q">&quot;unknown&quot;</span><span class="sc">;</span></li><li></li><li> <a class="l_k" href="../../functions/printf.html">printf</a> <span class="q">&quot;Connected to google via %s\n&quot;</span><span class="cm">,</span> <span class="i">$familyname</span><span class="sc">;</span></li></ol></pre><a class='view-head1' id="DESCRIPTION"></a><h2 class='h2' >DESCRIPTION</h2>
+<p>This module provides a protocol-independent way to use IPv4 and IPv6 sockets,
+intended as a replacement for <a href="../../IO/Socket/INET.html">IO::Socket::INET</a>. Most constructor arguments
+and methods are provided in a backward-compatible way. For a list of known
+differences, see the <code class="inline"><span class="w">IO::Socket::INET</span></code>
+ INCOMPATIBILITES section below.</p>
+<p>It uses the <code class="inline"><span class="i">getaddrinfo</span><span class="s">(</span><span class="n">3</span><span class="s">)</span></code>
+ function to convert hostnames and service names
+or port numbers into sets of possible addresses to connect to or listen on.
+This allows it to work for IPv6 where the system supports it, while still
+falling back to IPv4-only on systems which don't.</p>
+<a class='view-head1' id="REPLACING-IO%3a%3aSocket-DEFAULT-BEHAVIOUR"></a><h2 class='h2' >REPLACING <code class="inline"><span class="w">IO::Socket</span></code>
+ DEFAULT BEHAVIOUR</h2>
+<p>By placing <code class="inline">-<span class="w">register</span></code>
+ in the import list, <a href="../../IO/Socket.html">IO::Socket</a> uses
+<code class="inline"><span class="w">IO::Socket::IP</span></code>
+ rather than <code class="inline"><span class="w">IO::Socket::INET</span></code>
+ as the class that handles
+<code class="inline"><span class="w">PF_INET</span></code>
+.  <code class="inline"><span class="w">IO::Socket</span></code>
+ will also use <code class="inline"><span class="w">IO::Socket::IP</span></code>
+ rather than
+<code class="inline"><span class="w">IO::Socket::INET6</span></code>
+ to handle <code class="inline"><span class="w">PF_INET6</span></code>
+, provided that the <code class="inline"><span class="w">AF_INET6</span></code>
+
+constant is available.</p>
+<p>Changing <code class="inline"><span class="w">IO::Socket</span></code>
+'s default behaviour means that calling the
+<code class="inline"><span class="w">IO::Socket</span></code>
+ constructor with either <code class="inline"><span class="w">PF_INET</span></code>
+ or <code class="inline"><span class="w">PF_INET6</span></code>
+ as the
+<code class="inline"><span class="w">Domain</span></code>
+ parameter will yield an <code class="inline"><span class="w">IO::Socket::IP</span></code>
+ object.</p>
+<pre class="verbatim"><ol><li> <a class="l_k" href="../../functions/use.html">use</a> <span class="w">IO::Socket::IP</span> -<span class="w">register</span><span class="sc">;</span></li><li></li><li> <a class="l_k" href="../../functions/my.html">my</a> <span class="i">$sock</span> = <span class="w">IO::Socket</span><span class="w">-&gt;new</span><span class="s">(</span></li><li>    <span class="w">Domain</span>    <span class="cm">=&gt;</span> <span class="w">PF_INET6</span><span class="cm">,</span></li><li>    <span class="w">LocalHost</span> <span class="cm">=&gt;</span> <span class="q">&quot;::1&quot;</span><span class="cm">,</span></li><li>    <span class="w">Listen</span>    <span class="cm">=&gt;</span> <span class="n">1</span><span class="cm">,</span></li><li> <span class="s">)</span> <a class="l_k" href="../../functions/or.html">or</a> <a class="l_k" href="../../functions/die.html">die</a> <span class="q">&quot;Cannot create socket - $@\n&quot;</span><span class="sc">;</span></li><li></li><li> <a class="l_k" href="../../functions/print.html">print</a> <span class="q">&quot;Created a socket of type &quot;</span> . <a class="l_k" href="../../functions/ref.html">ref</a><span class="s">(</span><span class="i">$sock</span><span class="s">)</span> . <span class="q">&quot;\n&quot;</span><span class="sc">;</span></li></ol></pre><p>Note that <code class="inline">-<span class="w">register</span></code>
+ is a global setting that applies to the entire program;
+it cannot be applied only for certain callers, removed, or limited by lexical
+scope.</p>
+<a class='view-head1' id="CONSTRUCTORS"></a><h2 class='h2' >CONSTRUCTORS</h2>
+<a class='view-head2' id="%24sock-%3d-IO%3a%3aSocket%3a%3aIP-%3enew(-%25args-)"></a><h3 class='h3' >$sock = IO::Socket::IP-&gt;new( %args )</h3>
+<p>Creates a new <code class="inline"><span class="w">IO::Socket::IP</span></code>
+ object, containing a newly created socket
+handle according to the named arguments passed. The recognised arguments are:</p>
+<ul>
+<li><a class='view-title' id="PeerHost-%3d%3e-STRING"></a><strong>PeerHost =&gt; STRING</strong>
+</li>
+<li><a class='view-title' id="PeerService-%3d%3e-STRING"></a><strong>PeerService =&gt; STRING</strong>
+<p>Hostname and service name for the peer to <code class="inline"><a class="l_k" href="../../functions/connect.html">connect()</a></code> to. The service name
+may be given as a port number, as a decimal string.</p>
+</li>
+<li><a class='view-title' id="PeerAddr-%3d%3e-STRING"></a><strong>PeerAddr =&gt; STRING</strong>
+</li>
+<li><a class='view-title' id="PeerPort-%3d%3e-STRING"></a><strong>PeerPort =&gt; STRING</strong>
+<p>For symmetry with the accessor methods and compatibility with
+<code class="inline"><span class="w">IO::Socket::INET</span></code>
+, these are accepted as synonyms for <code class="inline"><span class="w">PeerHost</span></code>
+ and
+<code class="inline"><span class="w">PeerService</span></code>
+ respectively.</p>
+</li>
+<li><a class='view-title' id="PeerAddrInfo-%3d%3e-ARRAY"></a><strong>PeerAddrInfo =&gt; ARRAY</strong>
+<p>Alternate form of specifying the peer to <code class="inline"><a class="l_k" href="../../functions/connect.html">connect()</a></code> to. This should be an
+array of the form returned by <code class="inline"><span class="w">Socket::getaddrinfo</span></code>
+.</p>
+<p>This parameter takes precedence over the <code class="inline"><span class="w">Peer</span>*</code>
+, <code class="inline"><span class="w">Family</span></code>
+, <code class="inline"><span class="w">Type</span></code>
+ and
+<code class="inline"><span class="w">Proto</span></code>
+ arguments.</p>
+</li>
+<li><a class='view-title' id="LocalHost-%3d%3e-STRING"></a><strong>LocalHost =&gt; STRING</strong>
+</li>
+<li><a class='view-title' id="LocalService-%3d%3e-STRING"></a><strong>LocalService =&gt; STRING</strong>
+<p>Hostname and service name for the local address to <code class="inline"><a class="l_k" href="../../functions/bind.html">bind()</a></code> to.</p>
+</li>
+<li><a class='view-title' id="LocalAddr-%3d%3e-STRING"></a><strong>LocalAddr =&gt; STRING</strong>
+</li>
+<li><a class='view-title' id="LocalPort-%3d%3e-STRING"></a><strong>LocalPort =&gt; STRING</strong>
+<p>For symmetry with the accessor methods and compatibility with
+<code class="inline"><span class="w">IO::Socket::INET</span></code>
+, these are accepted as synonyms for <code class="inline"><span class="w">LocalHost</span></code>
+ and
+<code class="inline"><span class="w">LocalService</span></code>
+ respectively.</p>
+</li>
+<li><a class='view-title' id="LocalAddrInfo-%3d%3e-ARRAY"></a><strong>LocalAddrInfo =&gt; ARRAY</strong>
+<p>Alternate form of specifying the local address to <code class="inline"><a class="l_k" href="../../functions/bind.html">bind()</a></code> to. This should be
+an array of the form returned by <code class="inline"><span class="w">Socket::getaddrinfo</span></code>
+.</p>
+<p>This parameter takes precedence over the <code class="inline"><span class="w">Local</span>*</code>
+, <code class="inline"><span class="w">Family</span></code>
+, <code class="inline"><span class="w">Type</span></code>
+ and
+<code class="inline"><span class="w">Proto</span></code>
+ arguments.</p>
+</li>
+<li><a class='view-title' id="Family-%3d%3e-INT"></a><strong>Family =&gt; INT</strong>
+<p>The address family to pass to <code class="inline"><span class="w">getaddrinfo</span></code>
+ (e.g. <code class="inline"><span class="w">AF_INET</span></code>
+, <code class="inline"><span class="w">AF_INET6</span></code>
+).
+Normally this will be left undefined, and <code class="inline"><span class="w">getaddrinfo</span></code>
+ will search using any
+address family supported by the system.</p>
+</li>
+<li><a class='view-title' id="Type-%3d%3e-INT"></a><strong>Type =&gt; INT</strong>
+<p>The socket type to pass to <code class="inline"><span class="w">getaddrinfo</span></code>
+ (e.g. <code class="inline"><span class="w">SOCK_STREAM</span></code>
+,
+<code class="inline"><span class="w">SOCK_DGRAM</span></code>
+). Normally defined by the caller; if left undefined
+<code class="inline"><span class="w">getaddrinfo</span></code>
+ may attempt to infer the type from the service name.</p>
+</li>
+<li><a class='view-title' id="Proto-%3d%3e-STRING-or-INT"></a><strong>Proto =&gt; STRING or INT</strong>
+<p>The IP protocol to use for the socket (e.g. <code class="inline"><span class="q">&#39;tcp&#39;</span></code>
+, <code class="inline"><span class="w">IPPROTO_TCP</span></code>
+,
+<code class="inline"><span class="q">&#39;udp&#39;</span></code>
+,<code class="inline"><span class="w">IPPROTO_UDP</span></code>
+). Normally this will be left undefined, and either
+<code class="inline"><span class="w">getaddrinfo</span></code>
+ or the kernel will choose an appropriate value. May be given
+either in string name or numeric form.</p>
+</li>
+<li><a class='view-title' id="GetAddrInfoFlags-%3d%3e-INT"></a><strong>GetAddrInfoFlags =&gt; INT</strong>
+<p>More flags to pass to the <code class="inline"><span class="i">getaddrinfo</span><span class="s">(</span><span class="s">)</span></code>
+ function. If not supplied, a
+default of <code class="inline"><span class="w">AI_ADDRCONFIG</span></code>
+ will be used.</p>
+<p>These flags will be combined with <code class="inline"><span class="w">AI_PASSIVE</span></code>
+ if the <code class="inline"><span class="w">Listen</span></code>
+ argument is
+given. For more information see the documentation about <code class="inline"><span class="i">getaddrinfo</span><span class="s">(</span><span class="s">)</span></code>
+ in
+the <a href="../../Socket.html">Socket</a> module.</p>
+</li>
+<li><a class='view-title' id="Listen-%3d%3e-INT"></a><strong>Listen =&gt; INT</strong>
+<p>If defined, puts the socket into listening mode where new connections can be
+accepted using the <code class="inline"><a class="l_k" href="../../functions/accept.html">accept</a></code> method. The value given is used as the
+<code class="inline"><a class="l_k" href="../../functions/listen.html">listen(2)</a></code> queue size.</p>
+</li>
+<li><a class='view-title' id="ReuseAddr-%3d%3e-BOOL"></a><strong>ReuseAddr =&gt; BOOL</strong>
+<p>If true, set the <code class="inline"><span class="w">SO_REUSEADDR</span></code>
+ sockopt</p>
+</li>
+<li><a class='view-title' id="ReusePort-%3d%3e-BOOL"></a><strong>ReusePort =&gt; BOOL</strong>
+<p>If true, set the <code class="inline"><span class="w">SO_REUSEPORT</span></code>
+ sockopt (not all OSes implement this sockopt)</p>
+</li>
+<li><a class='view-title' id="Broadcast-%3d%3e-BOOL"></a><strong>Broadcast =&gt; BOOL</strong>
+<p>If true, set the <code class="inline"><span class="w">SO_BROADCAST</span></code>
+ sockopt</p>
+</li>
+<li><a class='view-title' id="V6Only-%3d%3e-BOOL"></a><strong>V6Only =&gt; BOOL</strong>
+<p>If defined, set the <code class="inline"><span class="w">IPV6_V6ONLY</span></code>
+ sockopt when creating <code class="inline"><span class="w">PF_INET6</span></code>
+ sockets
+to the given value. If true, a listening-mode socket will only listen on the
+<code class="inline"><span class="w">AF_INET6</span></code>
+ addresses; if false it will also accept connections from
+<code class="inline"><span class="w">AF_INET</span></code>
+ addresses.</p>
+<p>If not defined, the socket option will not be changed, and default value set
+by the operating system will apply. For repeatable behaviour across platforms
+it is recommended this value always be defined for listening-mode sockets.</p>
+<p>Note that not all platforms support disabling this option. Some, at least
+OpenBSD and MirBSD, will fail with <code class="inline"><span class="w">EINVAL</span></code>
+ if you attempt to disable it.
+To determine whether it is possible to disable, you may use the class method</p>
+<pre class="verbatim"><ol><li> <a class="l_k" href="../../functions/if.html">if</a><span class="s">(</span> <span class="w">IO::Socket::IP</span><span class="w">-&gt;CAN_DISABLE_V6ONLY</span> <span class="s">)</span> <span class="s">{</span></li><li>    ...</li><li> <span class="s">}</span></li><li> <a class="l_k" href="../../functions/else.html">else</a> <span class="s">{</span></li><li>    ...</li><li> <span class="s">}</span></li></ol></pre><p>If your platform does not support disabling this option but you still want to
+listen for both <code class="inline"><span class="w">AF_INET</span></code>
+ and <code class="inline"><span class="w">AF_INET6</span></code>
+ connections you will have to create
+two listening sockets, one bound to each protocol.</p>
+</li>
+<li><a class='view-title' id="MultiHomed"></a><strong>MultiHomed</strong>
+<p>This <code class="inline"><span class="w">IO::Socket::INET</span></code>
+-style argument is ignored, except if it is defined
+but false. See the <code class="inline"><span class="w">IO::Socket::INET</span></code>
+ INCOMPATIBILITES section below.</p>
+<p>However, the behaviour it enables is always performed by <code class="inline"><span class="w">IO::Socket::IP</span></code>
+.</p>
+</li>
+<li><a class='view-title' id="Blocking-%3d%3e-BOOL"></a><strong>Blocking =&gt; BOOL</strong>
+<p>If defined but false, the socket will be set to non-blocking mode. Otherwise
+it will default to blocking mode. See the NON-BLOCKING section below for more
+detail.</p>
+</li>
+<li><a class='view-title' id="Timeout-%3d%3e-NUM"></a><strong>Timeout =&gt; NUM</strong>
+<p>If defined, gives a maximum time in seconds to block per <code class="inline"><a class="l_k" href="../../functions/connect.html">connect()</a></code> call
+when in blocking mode. If missing, no timeout is applied other than that
+provided by the underlying operating system. When in non-blocking mode this
+parameter is ignored.</p>
+<p>Note that if the hostname resolves to multiple address candidates, the same
+timeout will apply to each connection attempt individually, rather than to the
+operation as a whole. Further note that the timeout does not apply to the
+initial hostname resolve operation, if connecting by hostname.</p>
+<p>This behviour is copied inspired by <code class="inline"><span class="w">IO::Socket::INET</span></code>
+; for more fine grained
+control over connection timeouts, consider performing a nonblocking connect
+directly.</p>
+</li>
+</ul>
+<p>If neither <code class="inline"><span class="w">Type</span></code>
+ nor <code class="inline"><span class="w">Proto</span></code>
+ hints are provided, a default of
+<code class="inline"><span class="w">SOCK_STREAM</span></code>
+ and <code class="inline"><span class="w">IPPROTO_TCP</span></code>
+ respectively will be set, to maintain
+compatibility with <code class="inline"><span class="w">IO::Socket::INET</span></code>
+. Other named arguments that are not
+recognised are ignored.</p>
+<p>If neither <code class="inline"><span class="w">Family</span></code>
+ nor any hosts or addresses are passed, nor any
+<code class="inline"><span class="i">*AddrInfo</span></code>
+, then the constructor has no information on which to decide a
+socket family to create. In this case, it performs a <code class="inline"><span class="w">getaddinfo</span></code>
+ call with
+the <code class="inline"><span class="w">AI_ADDRCONFIG</span></code>
+ flag, no host name, and a service name of <code class="inline"><span class="q">&quot;0&quot;</span></code>
+, and
+uses the family of the first returned result.</p>
+<p>If the constructor fails, it will set <code class="inline"><span class="i">$@</span></code>
+ to an appropriate error message;
+this may be from <code class="inline"><span class="i">$!</span></code>
+ or it may be some other string; not every failure
+necessarily has an associated <code class="inline"><span class="w">errno</span></code>
+ value.</p>
+<a class='view-head2' id="%24sock-%3d-IO%3a%3aSocket%3a%3aIP-%3enew(-%24peeraddr-)"></a><h3 class='h3' >$sock = IO::Socket::IP-&gt;new( $peeraddr )</h3>
+<p>As a special case, if the constructor is passed a single argument (as
+opposed to an even-sized list of key/value pairs), it is taken to be the value
+of the <code class="inline"><span class="w">PeerAddr</span></code>
+ parameter. This is parsed in the same way, according to the
+behaviour given in the <code class="inline"><span class="w">PeerHost</span></code>
+ AND <code class="inline"><span class="w">LocalHost</span></code>
+ PARSING section below.</p>
+<a class='view-head1' id="METHODS"></a><h2 class='h2' >METHODS</h2>
+<p>As well as the following methods, this class inherits all the methods in
+<a href="../../IO/Socket.html">IO::Socket</a> and <a href="../../IO/Handle.html">IO::Handle</a>.</p>
+<a class='view-head2' id="(-%24host%2c-%24service-)-%3d-%24sock-%3esockhost_service(-%24numeric-)"></a><h3 class='h3' >( $host, $service ) = $sock-&gt;sockhost_service( $numeric )</h3>
+<p>Returns the hostname and service name of the local address (that is, the
+socket address given by the <code class="inline"><span class="w">sockname</span></code>
+ method).</p>
+<p>If <code class="inline"><span class="i">$numeric</span></code>
+ is true, these will be given in numeric form rather than being
+resolved into names.</p>
+<p>The following four convenience wrappers may be used to obtain one of the two
+values returned here. If both host and service names are required, this method
+is preferable to the following wrappers, because it will call
+<code class="inline"><span class="i">getnameinfo</span><span class="s">(</span><span class="n">3</span><span class="s">)</span></code>
+ only once.</p>
+<a class='view-head2' id="%24addr-%3d-%24sock-%3esockhost"></a><h3 class='h3' >$addr = $sock-&gt;sockhost</h3>
+<p>Return the numeric form of the local address as a textual representation</p>
+<a class='view-head2' id="%24port-%3d-%24sock-%3esockport"></a><h3 class='h3' >$port = $sock-&gt;sockport</h3>
+<p>Return the numeric form of the local port number</p>
+<a class='view-head2' id="%24host-%3d-%24sock-%3esockhostname"></a><h3 class='h3' >$host = $sock-&gt;sockhostname</h3>
+<p>Return the resolved name of the local address</p>
+<a class='view-head2' id="%24service-%3d-%24sock-%3esockservice"></a><h3 class='h3' >$service = $sock-&gt;sockservice</h3>
+<p>Return the resolved name of the local port number</p>
+<a class='view-head2' id="%24addr-%3d-%24sock-%3esockaddr"></a><h3 class='h3' >$addr = $sock-&gt;sockaddr</h3>
+<p>Return the local address as a binary octet string</p>
+<a class='view-head2' id="(-%24host%2c-%24service-)-%3d-%24sock-%3epeerhost_service(-%24numeric-)"></a><h3 class='h3' >( $host, $service ) = $sock-&gt;peerhost_service( $numeric )</h3>
+<p>Returns the hostname and service name of the peer address (that is, the
+socket address given by the <code class="inline"><span class="w">peername</span></code>
+ method), similar to the
+<code class="inline"><span class="w">sockhost_service</span></code>
+ method.</p>
+<p>The following four convenience wrappers may be used to obtain one of the two
+values returned here. If both host and service names are required, this method
+is preferable to the following wrappers, because it will call
+<code class="inline"><span class="i">getnameinfo</span><span class="s">(</span><span class="n">3</span><span class="s">)</span></code>
+ only once.</p>
+<a class='view-head2' id="%24addr-%3d-%24sock-%3epeerhost"></a><h3 class='h3' >$addr = $sock-&gt;peerhost</h3>
+<p>Return the numeric form of the peer address as a textual representation</p>
+<a class='view-head2' id="%24port-%3d-%24sock-%3epeerport"></a><h3 class='h3' >$port = $sock-&gt;peerport</h3>
+<p>Return the numeric form of the peer port number</p>
+<a class='view-head2' id="%24host-%3d-%24sock-%3epeerhostname"></a><h3 class='h3' >$host = $sock-&gt;peerhostname</h3>
+<p>Return the resolved name of the peer address</p>
+<a class='view-head2' id="%24service-%3d-%24sock-%3epeerservice"></a><h3 class='h3' >$service = $sock-&gt;peerservice</h3>
+<p>Return the resolved name of the peer port number</p>
+<a class='view-head2' id="%24addr-%3d-%24peer-%3epeeraddr"></a><h3 class='h3' >$addr = $peer-&gt;peeraddr</h3>
+<p>Return the peer address as a binary octet string</p>
+<a class='view-head2' id="%24inet-%3d-%24sock-%3eas_inet"></a><h3 class='h3' >$inet = $sock-&gt;as_inet</h3>
+<p>Returns a new <a href="../../IO/Socket/INET.html">IO::Socket::INET</a> instance wrapping the same filehandle. This
+may be useful in cases where it is required, for backward-compatibility, to
+have a real object of <code class="inline"><span class="w">IO::Socket::INET</span></code>
+ type instead of <code class="inline"><span class="w">IO::Socket::IP</span></code>
+.
+The new object will wrap the same underlying socket filehandle as the
+original, so care should be taken not to continue to use both objects
+concurrently. Ideally the original <code class="inline"><span class="i">$sock</span></code>
+ should be discarded after this
+method is called.</p>
+<p>This method checks that the socket domain is <code class="inline"><span class="w">PF_INET</span></code>
+ and will throw an
+exception if it isn't.</p>
+<a class='view-head1' id="NON-BLOCKING"></a><h2 class='h2' >NON-BLOCKING</h2>
+<p>If the constructor is passed a defined but false value for the <code class="inline"><span class="w">Blocking</span></code>
+
+argument then the socket is put into non-blocking mode. When in non-blocking
+mode, the socket will not be set up by the time the constructor returns,
+because the underlying <code class="inline"><a class="l_k" href="../../functions/connect.html">connect(2)</a></code> syscall would otherwise have to block.</p>
+<p>The non-blocking behaviour is an extension of the <code class="inline"><span class="w">IO::Socket::INET</span></code>
+ API,
+unique to <code class="inline"><span class="w">IO::Socket::IP</span></code>
+, because the former does not support multi-homed
+non-blocking connect.</p>
+<p>When using non-blocking mode, the caller must repeatedly check for
+writeability on the filehandle (for instance using <code class="inline"><a class="l_k" href="../../functions/select.html">select</a></code> or <code class="inline"><span class="w">IO::Poll</span></code>
+).
+Each time the filehandle is ready to write, the <code class="inline"><a class="l_k" href="../../functions/connect.html">connect</a></code> method must be
+called, with no arguments. Note that some operating systems, most notably
+<code class="inline"><span class="w">MSWin32</span></code>
+ do not report a <code class="inline"><a class="l_k" href="../../functions/connect.html">connect()</a></code> failure using write-ready; so you must
+also <code class="inline"><a class="l_k" href="../../functions/select.html">select()</a></code> for exceptional status.</p>
+<p>While <code class="inline"><a class="l_k" href="../../functions/connect.html">connect</a></code> returns false, the value of <code class="inline"><span class="i">$!</span></code>
+ indicates whether it should
+be tried again (by being set to the value <code class="inline"><span class="w">EINPROGRESS</span></code>
+, or <code class="inline"><span class="w">EWOULDBLOCK</span></code>
+ on
+MSWin32), or whether a permanent error has occurred (e.g. <code class="inline"><span class="w">ECONNREFUSED</span></code>
+).</p>
+<p>Once the socket has been connected to the peer, <code class="inline"><a class="l_k" href="../../functions/connect.html">connect</a></code> will return true
+and the socket will now be ready to use.</p>
+<p>Note that calls to the platform's underlying <code class="inline"><span class="i">getaddrinfo</span><span class="s">(</span><span class="n">3</span><span class="s">)</span></code>
+ function may
+block. If <code class="inline"><span class="w">IO::Socket::IP</span></code>
+ has to perform this lookup, the constructor will
+block even when in non-blocking mode.</p>
+<p>To avoid this blocking behaviour, the caller should pass in the result of such
+a lookup using the <code class="inline"><span class="w">PeerAddrInfo</span></code>
+ or <code class="inline"><span class="w">LocalAddrInfo</span></code>
+ arguments. This can be
+achieved by using <a href="https://search.cpan.org/perldoc/Net::LibAsyncNS">Net::LibAsyncNS</a>, or the <code class="inline"><span class="i">getaddrinfo</span><span class="s">(</span><span class="n">3</span><span class="s">)</span></code>
+ function can be
+called in a child process.</p>
+<pre class="verbatim"><ol><li> <a class="l_k" href="../../functions/use.html">use</a> <span class="w">IO::Socket::IP</span><span class="sc">;</span></li><li> <a class="l_k" href="../../functions/use.html">use</a> <span class="w">Errno</span> <span class="q">qw( EINPROGRESS EWOULDBLOCK )</span><span class="sc">;</span></li><li></li><li> <a class="l_k" href="../../functions/my.html">my</a> <span class="i">@peeraddrinfo</span> = ... <span class="c"># Caller must obtain the getaddinfo result here</span></li><li></li><li> <a class="l_k" href="../../functions/my.html">my</a> <span class="i">$socket</span> = <span class="w">IO::Socket::IP</span><span class="w">-&gt;new</span><span class="s">(</span></li><li>    <span class="w">PeerAddrInfo</span> <span class="cm">=&gt;</span> \<span class="i">@peeraddrinfo</span><span class="cm">,</span></li><li>    <span class="w">Blocking</span>     <span class="cm">=&gt;</span> <span class="n">0</span><span class="cm">,</span></li><li> <span class="s">)</span> <a class="l_k" href="../../functions/or.html">or</a> <a class="l_k" href="../../functions/die.html">die</a> <span class="q">&quot;Cannot construct socket - $@&quot;</span><span class="sc">;</span></li><li></li><li> <a class="l_k" href="../../functions/while.html">while</a><span class="s">(</span> !<span class="i">$socket</span><span class="i">-&gt;connect</span> <a class="l_k" href="../../functions/and.html">and</a> <span class="s">(</span> <span class="i">$!</span> == <span class="w">EINPROGRESS</span> || <span class="i">$!</span> == <span class="w">EWOULDBLOCK</span> <span class="s">)</span> <span class="s">)</span> <span class="s">{</span></li><li>    <a class="l_k" href="../../functions/my.html">my</a> <span class="i">$wvec</span> = <span class="q">&#39;&#39;</span><span class="sc">;</span></li><li>    <a class="l_k" href="../../functions/vec.html">vec</a><span class="s">(</span> <span class="i">$wvec</span><span class="cm">,</span> <a class="l_k" href="../../functions/fileno.html">fileno</a> <span class="i">$socket</span><span class="cm">,</span> <span class="n">1</span> <span class="s">)</span> = <span class="n">1</span><span class="sc">;</span></li><li>    <a class="l_k" href="../../functions/my.html">my</a> <span class="i">$evec</span> = <span class="q">&#39;&#39;</span><span class="sc">;</span></li><li>    <a class="l_k" href="../../functions/vec.html">vec</a><span class="s">(</span> <span class="i">$evec</span><span class="cm">,</span> <a class="l_k" href="../../functions/fileno.html">fileno</a> <span class="i">$socket</span><span class="cm">,</span> <span class="n">1</span> <span class="s">)</span> = <span class="n">1</span><span class="sc">;</span></li><li></li><li>    <a class="l_k" href="../../functions/select.html">select</a><span class="s">(</span> <a class="l_k" href="../../functions/undef.html">undef</a><span class="cm">,</span> <span class="i">$wvec</span><span class="cm">,</span> <span class="i">$evec</span><span class="cm">,</span> <a class="l_k" href="../../functions/undef.html">undef</a> <span class="s">)</span> <a class="l_k" href="../../functions/or.html">or</a> <a class="l_k" href="../../functions/die.html">die</a> <span class="q">&quot;Cannot select - $!&quot;</span><span class="sc">;</span></li><li> <span class="s">}</span></li><li></li><li> <a class="l_k" href="../../functions/die.html">die</a> <span class="q">&quot;Cannot connect - $!&quot;</span> <a class="l_k" href="../../functions/if.html">if</a> <span class="i">$!</span><span class="sc">;</span></li><li></li><li> ...</li></ol></pre><p>The example above uses <code class="inline"><a class="l_k" href="../../functions/select.html">select()</a></code>, but any similar mechanism should work
+analogously. <code class="inline"><span class="w">IO::Socket::IP</span></code>
+ takes care when creating new socket filehandles
+to preserve the actual file descriptor number, so such techniques as <code class="inline"><span class="w">poll</span></code>
+
+or <code class="inline"><span class="w">epoll</span></code>
+ should be transparent to its reallocation of a different socket
+underneath, perhaps in order to switch protocol family between <code class="inline"><span class="w">PF_INET</span></code>
+ and
+<code class="inline"><span class="w">PF_INET6</span></code>
+.</p>
+<p>For another example using <code class="inline"><span class="w">IO::Poll</span></code>
+ and <code class="inline"><span class="w">Net::LibAsyncNS</span></code>
+, see the
+<i>examples/nonblocking_libasyncns.pl</i> file in the module distribution.</p>
+<a class='view-head1' id="PeerHost-AND-LocalHost-PARSING"></a><h2 class='h2' ><code class="inline"><span class="w">PeerHost</span></code>
+ AND <code class="inline"><span class="w">LocalHost</span></code>
+ PARSING</h2>
+<p>To support the <code class="inline"><span class="w">IO::Socket::INET</span></code>
+ API, the host and port information may be
+passed in a single string rather than as two separate arguments.</p>
+<p>If either <code class="inline"><span class="w">LocalHost</span></code>
+ or <code class="inline"><span class="w">PeerHost</span></code>
+ (or their <code class="inline">...<span class="w">Addr</span></code>
+ synonyms) have any
+of the following special forms then special parsing is applied.</p>
+<p>The value of the <code class="inline">...<span class="w">Host</span></code>
+ argument will be split to give both the hostname
+and port (or service name):</p>
+<pre class="verbatim"><ol><li> <span class="w">hostname</span>.<span class="w">example</span>.<span class="w">org</span><span class="co">:</span><span class="w">http</span>    <span class="c"># Host name</span></li><li> <span class="v">192.0.2.1</span><span class="co">:</span><span class="n">80</span>                 <span class="c"># IPv4 address</span></li><li> <span class="s">[</span><span class="n">2001</span><span class="co">:</span><span class="w">db8::1</span><span class="s">]</span><span class="co">:</span><span class="n">80</span>             <span class="c"># IPv6 address</span></li></ol></pre><p>In each case, the port or service name (e.g. <code class="inline"><span class="n">80</span></code>
+) is passed as the
+<code class="inline"><span class="w">LocalService</span></code>
+ or <code class="inline"><span class="w">PeerService</span></code>
+ argument.</p>
+<p>Either of <code class="inline"><span class="w">LocalService</span></code>
+ or <code class="inline"><span class="w">PeerService</span></code>
+ (or their <code class="inline">...<span class="w">Port</span></code>
+ synonyms) can
+be either a service name, a decimal number, or a string containing both a
+service name and number, in a form such as</p>
+<pre class="verbatim"><ol><li> <span class="i">http</span><span class="s">(</span><span class="n">80</span><span class="s">)</span></li></ol></pre><p>In this case, the name (<code class="inline"><span class="w">http</span></code>
+) will be tried first, but if the resolver does
+not understand it then the port number (<code class="inline"><span class="n">80</span></code>
+) will be used instead.</p>
+<p>If the <code class="inline">...<span class="w">Host</span></code>
+ argument is in this special form and the corresponding
+<code class="inline">...<span class="w">Service</span></code>
+ or <code class="inline">...<span class="w">Port</span></code>
+ argument is also defined, the one parsed from
+the <code class="inline">...<span class="w">Host</span></code>
+ argument will take precedence and the other will be ignored.</p>
+<a class='view-head2' id="(-%24host%2c-%24port-)-%3d-IO%3a%3aSocket%3a%3aIP-%3esplit_addr(-%24addr-)"></a><h3 class='h3' >( $host, $port ) = IO::Socket::IP-&gt;split_addr( $addr )</h3>
+<p>Utility method that provides the parsing functionality described above.
+Returns a 2-element list, containing either the split hostname and port
+description if it could be parsed, or the given address and <code class="inline"><a class="l_k" href="../../functions/undef.html">undef</a></code> if it was
+not recognised.</p>
+<pre class="verbatim"><ol><li> <span class="w">IO::Socket::IP</span><span class="w">-&gt;split_addr</span><span class="s">(</span> <span class="q">&quot;hostname:http&quot;</span> <span class="s">)</span></li><li>                              <span class="c"># ( &quot;hostname&quot;,  &quot;http&quot; )</span></li><li></li><li> <span class="w">IO::Socket::IP</span><span class="w">-&gt;split_addr</span><span class="s">(</span> <span class="q">&quot;192.0.2.1:80&quot;</span> <span class="s">)</span></li><li>                              <span class="c"># ( &quot;192.0.2.1&quot;, &quot;80&quot;   )</span></li><li></li><li> <span class="w">IO::Socket::IP</span><span class="w">-&gt;split_addr</span><span class="s">(</span> <span class="q">&quot;[2001:db8::1]:80&quot;</span> <span class="s">)</span></li><li>                              <span class="c"># ( &quot;2001:db8::1&quot;, &quot;80&quot; )</span></li><li></li><li> <span class="w">IO::Socket::IP</span><span class="w">-&gt;split_addr</span><span class="s">(</span> <span class="q">&quot;something.else&quot;</span> <span class="s">)</span></li><li>                              <span class="c"># ( &quot;something.else&quot;, undef )</span></li></ol></pre><a class='view-head2' id="%24addr-%3d-IO%3a%3aSocket%3a%3aIP-%3ejoin_addr(-%24host%2c-%24port-)"></a><h3 class='h3' >$addr = IO::Socket::IP-&gt;join_addr( $host, $port )</h3>
+<p>Utility method that performs the reverse of <code class="inline"><span class="w">split_addr</span></code>
+, returning a string
+formed by joining the specified host address and port number. The host address
+will be wrapped in <code class="inline"><span class="s">[</span><span class="s">]</span></code>
+ brackets if required (because it is a raw IPv6
+numeric address).</p>
+<p>This can be especially useful when combined with the <code class="inline"><span class="w">sockhost_service</span></code>
+ or
+<code class="inline"><span class="w">peerhost_service</span></code>
+ methods.</p>
+<pre class="verbatim"><ol><li> <a class="l_k" href="../../functions/say.html">say</a> <span class="q">&quot;Connected to &quot;</span><span class="cm">,</span> <span class="w">IO::Socket::IP</span><span class="w">-&gt;join_addr</span><span class="s">(</span> <span class="i">$sock</span><span class="i">-&gt;peerhost_service</span> <span class="s">)</span><span class="sc">;</span></li></ol></pre><a class='view-head1' id="IO%3a%3aSocket%3a%3aINET-INCOMPATIBILITES"></a><h2 class='h2' ><code class="inline"><span class="w">IO::Socket::INET</span></code>
+ INCOMPATIBILITES</h2>
+<ul>
+<li>
+<p>The behaviour enabled by <code class="inline"><span class="w">MultiHomed</span></code>
+ is in fact implemented by
+<code class="inline"><span class="w">IO::Socket::IP</span></code>
+ as it is required to correctly support searching for a
+useable address from the results of the <code class="inline"><span class="i">getaddrinfo</span><span class="s">(</span><span class="n">3</span><span class="s">)</span></code>
+ call. The
+constructor will ignore the value of this argument, except if it is defined
+but false. An exception is thrown in this case, because that would request it
+disable the <code class="inline"><span class="i">getaddrinfo</span><span class="s">(</span><span class="n">3</span><span class="s">)</span></code>
+ search behaviour in the first place.</p>
+</li>
+<li>
+<p><code class="inline"><span class="w">IO::Socket::IP</span></code>
+ implements both the <code class="inline"><span class="w">Blocking</span></code>
+ and <code class="inline"><span class="w">Timeout</span></code>
+ parameters,
+but it implements the interaction of both in a different way.</p>
+<p>In <code class="inline"><span class="w">::INET</span></code>
+, supplying a timeout overrides the non-blocking behaviour,
+meaning that the <code class="inline"><a class="l_k" href="../../functions/connect.html">connect()</a></code> operation will still block despite that the
+caller asked for a non-blocking socket. This is not explicitly specified in
+its documentation, nor does this author believe that is a useful behaviour -
+it appears to come from a quirk of implementation.</p>
+<p>In <code class="inline"><span class="w">::IP</span></code>
+ therefore, the <code class="inline"><span class="w">Blocking</span></code>
+ parameter takes precedence - if a
+non-blocking socket is requested, no operation will block. The <code class="inline"><span class="w">Timeout</span></code>
+
+parameter here simply defines the maximum time that a blocking <code class="inline"><a class="l_k" href="../../functions/connect.html">connect()</a></code>
+call will wait, if it blocks at all.</p>
+<p>In order to specifically obtain the "blocking connect then non-blocking send
+and receive" behaviour of specifying this combination of options to <code class="inline"><span class="w">::INET</span></code>
+
+when using <code class="inline"><span class="w">::IP</span></code>
+, perform first a blocking connect, then afterwards turn the
+socket into nonblocking mode.</p>
+<pre class="verbatim"><ol><li> <a class="l_k" href="../../functions/my.html">my</a> <span class="i">$sock</span> = <span class="w">IO::Socket::IP</span><span class="w">-&gt;new</span><span class="s">(</span></li><li>    <span class="w">PeerHost</span> <span class="cm">=&gt;</span> <span class="i">$peer</span><span class="cm">,</span></li><li>    <span class="w">Timeout</span> <span class="cm">=&gt;</span> <span class="n">20</span><span class="cm">,</span></li><li> <span class="s">)</span> <a class="l_k" href="../../functions/or.html">or</a> <a class="l_k" href="../../functions/die.html">die</a> <span class="q">&quot;Cannot connect - $@&quot;</span><span class="sc">;</span></li><li></li><li> <span class="i">$sock</span><span class="i">-&gt;blocking</span><span class="s">(</span> <span class="n">0</span> <span class="s">)</span><span class="sc">;</span></li></ol></pre><p>This code will behave identically under both <code class="inline"><span class="w">IO::Socket::INET</span></code>
+ and
+<code class="inline"><span class="w">IO::Socket::IP</span></code>
+.</p>
+</li>
+</ul>
+<a class='view-head1' id="TODO"></a><h2 class='h2' >TODO</h2>
+<ul>
+<li>
+<p>Investigate whether <code class="inline"><span class="w">POSIX::dup2</span></code>
+ upsets BSD's <code class="inline"><span class="w">kqueue</span></code>
+ watchers, and if so,
+consider what possible workarounds might be applied.</p>
+</li>
+</ul>
+<a class='view-head1' id="AUTHOR"></a><h2 class='h2' >AUTHOR</h2>
+<p>Paul Evans &lt;leonerd@leonerd.org.uk&gt;</p>
+
+
+
+
+      <ul><li><a href="#NAME">NAME</a></li><li><a href="#SYNOPSIS">SYNOPSIS</a></li><li><a href="#DESCRIPTION">DESCRIPTION</a></li><li><a href="#REPLACING-IO%3a%3aSocket-DEFAULT-BEHAVIOUR">REPLACING IO::Socket DEFAULT BEHAVIOUR</a></li><li><a href="#CONSTRUCTORS">CONSTRUCTORS</a></li><ul><li><a href="#%24sock-%3d-IO%3a%3aSocket%3a%3aIP-%3enew(-%25args-)">$sock = IO::Socket::IP->new( %args )</a></li><li><a href="#%24sock-%3d-IO%3a%3aSocket%3a%3aIP-%3enew(-%24peeraddr-)">$sock = IO::Socket::IP->new( $peeraddr )</a></li></ul><li><a href="#METHODS">METHODS</a></li><ul><li><a href="#(-%24host%2c-%24service-)-%3d-%24sock-%3esockhost_service(-%24numeric-)">( $host, $service ) = $sock->sockhost_service( $numeric )</a></li><li><a href="#%24addr-%3d-%24sock-%3esockhost">$addr = $sock->sockhost</a></li><li><a href="#%24port-%3d-%24sock-%3esockport">$port = $sock->sockport</a></li><li><a href="#%24host-%3d-%24sock-%3esockhostname">$host = $sock->sockhostname</a></li><li><a href="#%24service-%3d-%24sock-%3esockservice">$service = $sock->sockservice</a></li><li><a href="#%24addr-%3d-%24sock-%3esockaddr">$addr = $sock->sockaddr</a></li><li><a href="#(-%24host%2c-%24service-)-%3d-%24sock-%3epeerhost_service(-%24numeric-)">( $host, $service ) = $sock->peerhost_service( $numeric )</a></li><li><a href="#%24addr-%3d-%24sock-%3epeerhost">$addr = $sock->peerhost</a></li><li><a href="#%24port-%3d-%24sock-%3epeerport">$port = $sock->peerport</a></li><li><a href="#%24host-%3d-%24sock-%3epeerhostname">$host = $sock->peerhostname</a></li><li><a href="#%24service-%3d-%24sock-%3epeerservice">$service = $sock->peerservice</a></li><li><a href="#%24addr-%3d-%24peer-%3epeeraddr">$addr = $peer->peeraddr</a></li><li><a href="#%24inet-%3d-%24sock-%3eas_inet">$inet = $sock->as_inet</a></li></ul><li><a href="#NON-BLOCKING">NON-BLOCKING</a></li><li><a href="#PeerHost-AND-LocalHost-PARSING">PeerHost AND LocalHost PARSING</a></li><ul><li><a href="#(-%24host%2c-%24port-)-%3d-IO%3a%3aSocket%3a%3aIP-%3esplit_addr(-%24addr-)">( $host, $port ) = IO::Socket::IP->split_addr( $addr )</a></li><li><a href="#%24addr-%3d-IO%3a%3aSocket%3a%3aIP-%3ejoin_addr(-%24host%2c-%24port-)">$addr = IO::Socket::IP->join_addr( $host, $port )</a></li></ul><li><a href="#IO%3a%3aSocket%3a%3aINET-INCOMPATIBILITES">IO::Socket::INET INCOMPATIBILITES</a></li><li><a href="#TODO">TODO</a></li><li><a href="#AUTHOR">AUTHOR</a></li></ul>
+
+
+                  </div>
+                </article>
+              </div>
+            </div>
+          </main>
+        </div>
+           <footer class="footer row bg-light pt-5 pb-5">
+       <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+           <div class="row">
+               <div class="col-md-4">
+                   <ul class="list-unstyled">
+                       <li>
+                           <h4>Site info</h4>
+                       </li>
+                       <li>Docs mantained by
+                           <a href="//lists.perl.org/list/perl5-porters.html"
+                               rel="noopener">Perl 5 Porters</a>
+                       </li>
+                       <li>Perldoc site development sponsored by
+                           <a href="//opusvl.com" rel="noopener">
+                           <img style="margin: 20px 20px 5px 10px" class="opus-logo" src="/public/img/opusvl_logo.svg" alt="OpusVL Logo">
+                        </a>
+                    <li><span class="about_perldoc"><a href="//about.html">About PerlDOC</a></span>
+                    </li>
+                       </li>
+                   </ul>
+               </div>
+               <div class="col-md-8">
+                   <div class="row">
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Manuals</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.22.2/index-overview.html">Overview</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.22.2/index-tutorials.html">Tutorials</a>
+                               </li>
+                               <li>
+                                   <a href="/5.22.2/index-faq.html">FAQs</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.22.2/index-history.html">Changes</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Reference</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.22.2/index-language.html">Language</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.22.2/index-functions.html">Functions</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.22.2/perlop.html">Operators</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.22.2/perlvar.html">Variables</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Modules</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.22.2/index-modules-A.html">Modules</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.22.2/index-pragmas.html">Pragmas</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.22.2/index-utilities.html">Utilities</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Misc</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.22.2/index-licence.html">License</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.22.2/index-internals.html">Internals</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.22.2/index-platforms.html">Platforms</a>
+                               </li>
+                            <li>
+                                <a
+                                    href="/5.22.2/index-about.html">About</a>
+                            </li>
+                           </ul>
+                       </div>
+                   </div>
+               </div>
+               <div class=" col-12 footer-inf text-center">
+                   <small>perldoc.perl.org - Official documentation for the Perl
+                       programming language</small>
+               </div>
+           </div>
+       </div>
+   </footer>
+
+        	<div class="beta-wrapper beta-bottom-right ">
+		<div class="beta beta-blue  ">
+			<a class="beta-link "
+				href="//github.com/OpusVL/perldoc.perl.org/issues/new" rel="noopener">
+				<span class="beta-text">
+					This website is a Beta release.
+				</span>
+				<span class="beta-text">
+					For any issues please raise a ticket on GitHub
+				</span>
+			</a>
+		</div>
+	</div>
+
+        <script src="/public/js/main.min.js"></script>
+      </body>
+
+      </html>

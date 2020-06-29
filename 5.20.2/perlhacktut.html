@@ -1,0 +1,780 @@
+      
+      
+      
+      
+
+      <!DOCTYPE html>
+      <html lang="en">
+
+      <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="perlhacktut - perldoc.perl.org">
+        <link rel="icon" href="/public/img/favicon.ico">
+        <title>perlhacktut - perldoc.perl.org</title>
+        <link href="/public/css/main.min.css" rel="stylesheet">
+        <link rel="canonical" href="/perlhacktut.html">
+        <link
+          href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900'
+          rel='stylesheet' type='text/css'>
+        <script>
+          window.ga = window.ga || function () {
+            (ga.q = ga.q || []).push(arguments)
+          };
+          ga.l = +new Date;
+          ga('create', 'UA-1892152-2', 'auto'); // JJ's account
+          ga('create', 'UA-50555-3', 'auto', 'perlOrg'); // perl.org account
+          ga('require', 'outboundLinkTracker', {
+            events: ['click', 'auxclick', 'contextmenu'],
+          });
+          ga('require', 'maxScrollTracker');
+          ga('send', 'pageview');
+          ga('perlOrg.send', 'pageview');
+        </script>
+        <script async src="https://www.google-analytics.com/analytics.js">
+        </script>
+        <script async src="/public/js/tracking.min.js"></script>
+      </head>
+
+      <body class="body container-fluid ">
+        <div class="wrapper">
+
+          <nav
+    class="navbar navbar-dark bg-primary bg-perl fixed-top justify-content-between navbar-expand-lg">
+    <a href="#content" class="skippy sr-only sr-only-focusable">
+        <span class=' skippy-text'>Skip to main content</span>
+    </a>
+    <a class="navbar-brand" href="/">
+        <img class="logo" src="/public/img/logo_perl_doc.svg"
+            alt="Perl Documentation Logo" />
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse"
+        data-target="#navbar" aria-controls="navbar" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="navbar" class="collapse navbar-collapse ">
+        <ul class="navbar-nav ml-auto navbar-right">
+            <form class="nav-item dropdown search-wrapper">
+                <input type="text" id='searchinput' aria-describedby='navbarDropdown5'
+                    placeholder="Type query" class='search-input-field' value=''>
+
+                <button href="#" data-toggle='dropdown' type="button"
+                    aria-haspopup="true" aria-expanded='false' id="navbarDropdown5"
+                    class="nav-link dropdown-toggle search-link">
+                    <object tabindex='-1' focusable="false" class='search-icon'
+                        data="/public/img/search.svg" type="image/svg+xml"
+                        name='search icon'>search
+                        icon</object>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown5"
+                    id='search-results'>
+                    <p class='dropdown-item major-version'>
+                        No results
+                    </p>
+                </div>
+            </form>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown" href="#" class="nav-link dropdown-toggle"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Perl versions</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    
+                        <p class='dropdown-item major-version'>
+                            5.32
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.32.0/">5.32.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.30
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.3/">5.30.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.2/">5.30.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.1/">5.30.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.30.0/">5.30.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.28
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.3/">5.28.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.2/">5.28.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.1/">5.28.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.28.0/">5.28.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.26
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.3/">5.26.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.2/">5.26.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.1/">5.26.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.26.0/">5.26.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.24
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.4/">5.24.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.3/">5.24.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.2/">5.24.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.1/">5.24.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.24.0/">5.24.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.22
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.4/">5.22.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.3/">5.22.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.2/">5.22.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.1/">5.22.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.22.0/">5.22.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.20
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.3/">5.20.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.2/">5.20.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.1/">5.20.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.20.0/">5.20.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.18
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.4/">5.18.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.3/">5.18.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.2/">5.18.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.1/">5.18.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.18.0/">5.18.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.16
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.3/">5.16.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.2/">5.16.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.1/">5.16.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.16.0/">5.16.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.14
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.4/">5.14.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.3/">5.14.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.2/">5.14.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.1/">5.14.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.14.0/">5.14.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.12
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.5/">5.12.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.4/">5.12.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.3/">5.12.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.2/">5.12.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.1/">5.12.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.12.0/">5.12.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.10
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.1/">5.10.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.10.0/">5.10.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.8
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.9/">5.8.9</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.8/">5.8.8</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.7/">5.8.7</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.6/">5.8.6</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.5/">5.8.5</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.4/">5.8.4</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.3/">5.8.3</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.2/">5.8.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.1/">5.8.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.8.0/">5.8.0</a>
+                        
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                    
+                        <p class='dropdown-item major-version'>
+                            5.6
+                        </p>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.2/">5.6.2</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.1/">5.6.1</a>
+                        
+                        <a class='dropdown-item minor-version' href="/5.6.0/">5.6.0</a>
+                        
+                        
+                    
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown1" href="#" class="dropdown-toggle nav-link"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Manuals</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                    <a class="dropdown-item"
+                        href="/5.20.2/index-overview.html">Overview</a>
+                    <a class="dropdown-item"
+                        href="/5.20.2/index-tutorials.html">Tutorials</a>
+                    <a class="dropdown-item"
+                        href="/5.20.2/index-faq.html">FAQs</a>
+                    <a class="dropdown-item"
+                        href="/5.20.2/index-history.html">Changes</a>
+                    <a class="dropdown-item"
+                        href="/5.20.2/index-licence.html">License</a>
+                    <a class="dropdown-item"
+                        href="/5.20.2/index-language.html">Language</a>
+                    <a class="dropdown-item"
+                        href="/5.20.2/index-functions.html">Functions</a>
+                    <a class="dropdown-item"
+                        href="/5.20.2/perlop.html">Operators</a>
+                    <a class="dropdown-item"
+                        href="/5.20.2/perlvar.html">Variables</a>
+                    <a class="dropdown-item"
+                        href="/5.20.2/index-pragmas.html">Pragmas</a>
+                    <a class="dropdown-item"
+                        href="/5.20.2/index-utilities.html">Utilities</a>
+                    <a class="dropdown-item"
+                        href="/5.20.2/index-internals.html">Internals</a>
+                    <a class="dropdown-item"
+                        href="/5.20.2/index-platforms.html">Platforms</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown3" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Modules</a>
+                <div aria-labelledby="navbarDropdown3"
+                    class="dropdown-menu letters-wrap">
+                    <!--<a class="dropdown-item"
+                        href="/5.20.2/index-modules.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.20.2/index-modules-by-cat.html">By
+                        Category</a>-->
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.20.2/index-modules-A.html">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.2/index-modules-B.html">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.2/index-modules-C.html">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.2/index-modules-D.html">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.2/index-modules-E.html">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.2/index-modules-F.html">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.2/index-modules-G.html">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.2/index-modules-H.html">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.2/index-modules-I.html">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.2/index-modules-J.html">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.2/index-modules-K.html">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.2/index-modules-L.html">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.2/index-modules-M.html">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.2/index-modules-N.html">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.2/index-modules-O.html">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.2/index-modules-P.html">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.2/index-modules-Q.html">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.2/index-modules-R.html">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.2/index-modules-S.html">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.2/index-modules-T.html">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.2/index-modules-U.html">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.2/index-modules-V.html">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.2/index-modules-W.html">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.2/index-modules-X.html">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.2/index-modules-Y.html">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.2/index-modules-Z.html">Z</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown4" href="#" class="nav-link dropdown-toggle "
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Functions</a>
+                <div aria-labelledby="navbarDropdown4"
+                    class="dropdown-menu letters-wrap">
+                    <a class="dropdown-item"
+                        href="/5.20.2/index-functions.html">A-Z</a>
+                    <a class="dropdown-item"
+                        href="/5.20.2/index-functions-by-cat.html">By
+                        Category</a>
+                    <div class="dropdown-divider"></div>
+                    <div class="letter-container">
+                        <a class="dropdown-item letters"
+                            href="/5.20.2/index-functions.html#A">A</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.2/index-functions.html#B">B</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.2/index-functions.html#C">C</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.2/index-functions.html#D">D</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.2/index-functions.html#E">E</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.2/index-functions.html#F">F</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.2/index-functions.html#G">G</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.2/index-functions.html#H">H</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.2/index-functions.html#I">I</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.2/index-functions.html#J">J</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.2/index-functions.html#K">K</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.2/index-functions.html#L">L</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.2/index-functions.html#M">M</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.2/index-functions.html#N">N</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.2/index-functions.html#O">O</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.2/index-functions.html#P">P</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.2/index-functions.html#Q">Q</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.2/index-functions.html#R">R</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.2/index-functions.html#S">S</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.2/index-functions.html#T">T</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.2/index-functions.html#U">U</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.2/index-functions.html#V">V</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.2/index-functions.html#W">W</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.2/index-functions.html#X">X</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.2/index-functions.html#Y">Y</a>
+                        <a class="dropdown-item letters"
+                            href="/5.20.2/index-functions.html#Z">Z</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!--/.nav-collapse -->
+</nav>
+
+
+          <main class="row main-content pb-5 pt-5" id='content'>
+            <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+              <div class="row">
+                <div class="col-sm-12">
+                  <div id="breadcrumbs">
+                      
+    <a href="index.html">Home</a>&nbsp; &gt;
+    
+      
+        <a href="index-internals.html">Internals and C language interface</a> &gt;
+      
+    
+    perlhacktut
+  
+
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <article class="col-sm-12 content">
+                  <div class="documentation-wrapper">
+                    <div id="perl_version">
+                      <h7 class='page-title'> Perl 5 version 20.2
+                        documentation</h7>
+                    </div>
+                    <h1>perlhacktut</h1>
+
+
+  <!--    -->
+<ul><li><a href="#NAME">NAME</a></li><li><a href="#DESCRIPTION">DESCRIPTION</a></li><li><a href="#EXAMPLE-OF-A-SIMPLE-PATCH">EXAMPLE OF A SIMPLE PATCH</a></li><ul><li><a href="#Writing-the-patch">Writing the patch</a></li><li><a href="#Testing-the-patch">Testing the patch</a></li><li><a href="#Documenting-the-patch">Documenting the patch</a></li><li><a href="#Submit">Submit</a></li></ul><li><a href="#AUTHOR">AUTHOR</a></li></ul><a class='view-head1' id="NAME"></a><h2 class='h2' >NAME</h2>
+<p>perlhacktut - Walk through the creation of a simple C code patch</p>
+<a class='view-head1' id="DESCRIPTION"></a><h2 class='h2' >DESCRIPTION</h2>
+<p>This document takes you through a simple patch example.</p>
+<p>If you haven't read <a href="perlhack.html">perlhack</a> yet, go do that first! You might also
+want to read through <a href="perlsource.html">perlsource</a> too.</p>
+<p>Once you're done here, check out <a href="perlhacktips.html">perlhacktips</a> next.</p>
+<a class='view-head1' id="EXAMPLE-OF-A-SIMPLE-PATCH"></a><h2 class='h2' >EXAMPLE OF A SIMPLE PATCH</h2>
+<p>Let's take a simple patch from start to finish.</p>
+<p>Here's something Larry suggested: if a <code class="inline"><span class="w">U</span></code>
+ is the first active format
+during a <code class="inline"><a class="l_k" href="functions/pack.html">pack</a></code>, (for example, <code class="inline"><a class="l_k" href="functions/pack.html">pack</a> <span class="q">&quot;U3C8&quot;</span><span class="cm">,</span> <span class="i">@stuff</span></code>
+) then the
+resulting string should be treated as UTF-8 encoded.</p>
+<p>If you are working with a git clone of the Perl repository, you will
+want to create a branch for your changes. This will make creating a
+proper patch much simpler. See the <a href="perlgit.html">perlgit</a> for details on how to do
+this.</p>
+<a class='view-head2' id="Writing-the-patch"></a><h3 class='h3' >Writing the patch</h3>
+<p>How do we prepare to fix this up? First we locate the code in question
+- the <code class="inline"><a class="l_k" href="functions/pack.html">pack</a></code> happens at runtime, so it's going to be in one of the
+<i>pp</i> files. Sure enough, <code class="inline"><span class="w">pp_pack</span></code>
+ is in <i>pp.c</i>. Since we're going
+to be altering this file, let's copy it to <i>pp.c~</i>.</p>
+<p>[Well, it was in <i>pp.c</i> when this tutorial was written. It has now
+been split off with <code class="inline"><span class="w">pp_unpack</span></code>
+ to its own file, <i>pp_pack.c</i>]</p>
+<p>Now let's look over <code class="inline"><span class="w">pp_pack</span></code>
+: we take a pattern into <code class="inline"><span class="w">pat</span></code>
+, and then
+loop over the pattern, taking each format character in turn into
+<code class="inline"><span class="w">datum_type</span></code>
+. Then for each possible format character, we swallow up
+the other arguments in the pattern (a field width, an asterisk, and so
+on) and convert the next chunk input into the specified format, adding
+it onto the output SV <code class="inline"><span class="w">cat</span></code>
+.</p>
+<p>How do we know if the <code class="inline"><span class="w">U</span></code>
+ is the first format in the <code class="inline"><span class="w">pat</span></code>
+? Well, if
+we have a pointer to the start of <code class="inline"><span class="w">pat</span></code>
+ then, if we see a <code class="inline"><span class="w">U</span></code>
+ we can
+test whether we're still at the start of the string. So, here's where
+<code class="inline"><span class="w">pat</span></code>
+ is set up:</p>
+<pre class="verbatim"><ol><li>    <span class="w">STRLEN</span> <span class="w">fromlen</span><span class="sc">;</span></li><li>    <span class="w">char</span> *<span class="w">pat</span> = <span class="i">SvPVx</span><span class="s">(</span><span class="i">*+</span>+<span class="w">MARK</span><span class="cm">,</span> <span class="w">fromlen</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="w">char</span> *<span class="w">patend</span> = <span class="w">pat</span> + <span class="w">fromlen</span><span class="sc">;</span></li><li>    <span class="w">I32</span> <span class="w">len</span><span class="sc">;</span></li><li>    <span class="w">I32</span> <span class="w">datumtype</span><span class="sc">;</span></li><li>    <span class="w">SV</span> *<span class="w">fromstr</span><span class="sc">;</span></li></ol></pre><p>We'll have another string pointer in there:</p>
+<pre class="verbatim"><ol><li>    <span class="w">STRLEN</span> <span class="w">fromlen</span><span class="sc">;</span></li><li>    <span class="w">char</span> *<span class="w">pat</span> = <span class="i">SvPVx</span><span class="s">(</span><span class="i">*+</span>+<span class="w">MARK</span><span class="cm">,</span> <span class="w">fromlen</span><span class="s">)</span><span class="sc">;</span></li><li>    <span class="w">char</span> *<span class="w">patend</span> = <span class="w">pat</span> + <span class="w">fromlen</span><span class="sc">;</span></li><li> +  <span class="w">char</span> *<span class="w">patcopy</span><span class="sc">;</span></li><li>    <span class="w">I32</span> <span class="w">len</span><span class="sc">;</span></li><li>    <span class="w">I32</span> <span class="w">datumtype</span><span class="sc">;</span></li><li>    <span class="w">SV</span> *<span class="w">fromstr</span><span class="sc">;</span></li></ol></pre><p>And just before we start the loop, we'll set <code class="inline"><span class="w">patcopy</span></code>
+ to be the start
+of <code class="inline"><span class="w">pat</span></code>
+:</p>
+<pre class="verbatim"><ol><li>    <span class="w">items</span> = <span class="w">SP</span> - <span class="w">MARK</span><span class="sc">;</span></li><li>    <span class="w">MARK</span>++<span class="sc">;</span></li><li>    <span class="i">sv_setpvn</span><span class="s">(</span><span class="w">cat</span><span class="cm">,</span> <span class="q">&quot;&quot;</span><span class="cm">,</span> <span class="n">0</span><span class="s">)</span><span class="sc">;</span></li><li> +  <span class="w">patcopy</span> = <span class="w">pat</span><span class="sc">;</span></li><li>    <a class="l_k" href="functions/while.html">while</a> <span class="s">(</span><span class="w">pat</span> &lt; <span class="w">patend</span><span class="s">)</span> <span class="s">{</span></li></ol></pre><p>Now if we see a <code class="inline"><span class="w">U</span></code>
+ which was at the start of the string, we turn on
+the <code class="inline"><span class="w">UTF8</span></code>
+ flag for the output SV, <code class="inline"><span class="w">cat</span></code>
+:</p>
+<pre class="verbatim"><ol><li> +  <a class="l_k" href="functions/if.html">if</a> <span class="s">(</span><span class="w">datumtype</span> == <span class="q">&#39;U&#39;</span> &amp;&amp; <span class="w">pat</span>==<span class="w">patcopy</span>+<span class="n">1</span><span class="s">)</span></li><li> +      <span class="i">SvUTF8_on</span><span class="s">(</span><span class="w">cat</span><span class="s">)</span><span class="sc">;</span></li><li>    <a class="l_k" href="functions/if.html">if</a> <span class="s">(</span><span class="w">datumtype</span> == <span class="q">&#39;#&#39;</span><span class="s">)</span> <span class="s">{</span></li><li>        <a class="l_k" href="functions/while.html">while</a> <span class="s">(</span><span class="w">pat</span> &lt; <span class="w">patend</span> &amp;&amp; <span class="i">*pat</span> != <span class="q">&#39;\n&#39;</span><span class="s">)</span></li><li>            <span class="w">pat</span>++<span class="sc">;</span></li></ol></pre><p>Remember that it has to be <code class="inline"><span class="w">patcopy</span>+<span class="n">1</span></code>
+ because the first character of
+the string is the <code class="inline"><span class="w">U</span></code>
+ which has been swallowed into <code class="inline"><span class="w">datumtype</span>!</code>
+</p>
+<p>Oops, we forgot one thing: what if there are spaces at the start of the
+pattern? <code class="inline"><a class="l_k" href="functions/pack.html">pack</a><span class="s">(</span><span class="q">&quot;  U*&quot;</span><span class="cm">,</span> <span class="i">@stuff</span><span class="s">)</span></code>
+ will have <code class="inline"><span class="w">U</span></code>
+ as the first active
+character, even though it's not the first thing in the pattern. In this
+case, we have to advance <code class="inline"><span class="w">patcopy</span></code>
+ along with <code class="inline"><span class="w">pat</span></code>
+ when we see
+spaces:</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="functions/if.html">if</a> <span class="s">(</span><span class="i">isSPACE</span><span class="s">(</span><span class="w">datumtype</span><span class="s">)</span><span class="s">)</span></li><li>        <a class="l_k" href="functions/continue.html">continue</a><span class="sc">;</span></li></ol></pre><p>needs to become</p>
+<pre class="verbatim"><ol><li>    <a class="l_k" href="functions/if.html">if</a> <span class="s">(</span><span class="i">isSPACE</span><span class="s">(</span><span class="w">datumtype</span><span class="s">)</span><span class="s">)</span> <span class="s">{</span></li><li>        <span class="w">patcopy</span>++<span class="sc">;</span></li><li>        <a class="l_k" href="functions/continue.html">continue</a><span class="sc">;</span></li><li>    <span class="s">}</span></li></ol></pre><p>OK. That's the C part done. Now we must do two additional things before
+this patch is ready to go: we've changed the behaviour of Perl, and so
+we must document that change. We must also provide some more regression
+tests to make sure our patch works and doesn't create a bug somewhere
+else along the line.</p>
+<a class='view-head2' id="Testing-the-patch"></a><h3 class='h3' >Testing the patch</h3>
+<p>The regression tests for each operator live in <i>t/op/</i>, and so we make
+a copy of <i>t/op/pack.t</i> to <i>t/op/pack.t~</i>. Now we can add our tests
+to the end. First, we'll test that the <code class="inline"><span class="w">U</span></code>
+ does indeed create Unicode
+strings.</p>
+<p>t/op/pack.t has a sensible ok() function, but if it didn't we could use
+the one from t/test.pl.</p>
+<pre class="verbatim"><ol><li> <a class="l_k" href="functions/require.html">require</a> <span class="q">&#39;./test.pl&#39;</span><span class="sc">;</span></li><li> <span class="i">plan</span><span class="s">(</span> <span class="w">tests</span> <span class="cm">=&gt;</span> <span class="n">159</span> <span class="s">)</span><span class="sc">;</span></li></ol></pre><p>so instead of this:</p>
+<pre class="verbatim"><ol><li> <a class="l_k" href="functions/print.html">print</a> <span class="q">&#39;not &#39;</span> <a class="l_k" href="functions/unless.html">unless</a> <span class="q">&quot;1.20.300.4000&quot;</span> <a class="l_k" href="functions/eq.html">eq</a> <a class="l_k" href="functions/sprintf.html">sprintf</a> <span class="q">&quot;%vd&quot;</span><span class="cm">,</span></li><li>                                               <a class="l_k" href="functions/pack.html">pack</a><span class="s">(</span><span class="q">&quot;U*&quot;</span><span class="cm">,</span><span class="n">1</span><span class="cm">,</span><span class="n">20</span><span class="cm">,</span><span class="n">300</span><span class="cm">,</span><span class="n">4000</span><span class="s">)</span><span class="sc">;</span></li><li> <a class="l_k" href="functions/print.html">print</a> <span class="q">&quot;ok $test\n&quot;</span><span class="sc">;</span> <span class="i">$test</span>++<span class="sc">;</span></li></ol></pre><p>we can write the more sensible (see <a href="Test/More.html">Test::More</a> for a full
+explanation of is() and other testing functions).</p>
+<pre class="verbatim"><ol><li> <span class="i">is</span><span class="s">(</span> <span class="q">&quot;1.20.300.4000&quot;</span><span class="cm">,</span> <a class="l_k" href="functions/sprintf.html">sprintf</a> <span class="q">&quot;%vd&quot;</span><span class="cm">,</span> <a class="l_k" href="functions/pack.html">pack</a><span class="s">(</span><span class="q">&quot;U*&quot;</span><span class="cm">,</span><span class="n">1</span><span class="cm">,</span><span class="n">20</span><span class="cm">,</span><span class="n">300</span><span class="cm">,</span><span class="n">4000</span><span class="s">)</span><span class="cm">,</span></li><li>                                       <span class="q">&quot;U* produces Unicode&quot;</span> <span class="s">)</span><span class="sc">;</span></li></ol></pre><p>Now we'll test that we got that space-at-the-beginning business right:</p>
+<pre class="verbatim"><ol><li> <span class="i">is</span><span class="s">(</span> <span class="q">&quot;1.20.300.4000&quot;</span><span class="cm">,</span> <a class="l_k" href="functions/sprintf.html">sprintf</a> <span class="q">&quot;%vd&quot;</span><span class="cm">,</span> <a class="l_k" href="functions/pack.html">pack</a><span class="s">(</span><span class="q">&quot;  U*&quot;</span><span class="cm">,</span><span class="n">1</span><span class="cm">,</span><span class="n">20</span><span class="cm">,</span><span class="n">300</span><span class="cm">,</span><span class="n">4000</span><span class="s">)</span><span class="cm">,</span></li><li>                                     <span class="q">&quot;  with spaces at the beginning&quot;</span> <span class="s">)</span><span class="sc">;</span></li></ol></pre><p>And finally we'll test that we don't make Unicode strings if <code class="inline"><span class="w">U</span></code>
+ is
+<strong>not</strong> the first active format:</p>
+<pre class="verbatim"><ol><li> <span class="i">isnt</span><span class="s">(</span> <span class="v">v1.20.300.4000</span><span class="cm">,</span> <a class="l_k" href="functions/sprintf.html">sprintf</a> <span class="q">&quot;%vd&quot;</span><span class="cm">,</span> <a class="l_k" href="functions/pack.html">pack</a><span class="s">(</span><span class="q">&quot;C0U*&quot;</span><span class="cm">,</span><span class="n">1</span><span class="cm">,</span><span class="n">20</span><span class="cm">,</span><span class="n">300</span><span class="cm">,</span><span class="n">4000</span><span class="s">)</span><span class="cm">,</span></li><li>                                       <span class="q">&quot;U* not first isn&#39;t Unicode&quot;</span> <span class="s">)</span><span class="sc">;</span></li></ol></pre><p>Mustn't forget to change the number of tests which appears at the top,
+or else the automated tester will get confused. This will either look
+like this:</p>
+<pre class="verbatim"><ol><li> <a class="l_k" href="functions/print.html">print</a> <span class="q">&quot;1..156\n&quot;</span><span class="sc">;</span></li></ol></pre><p>or this:</p>
+<pre class="verbatim"><ol><li> <span class="i">plan</span><span class="s">(</span> <span class="w">tests</span> <span class="cm">=&gt;</span> <span class="n">156</span> <span class="s">)</span><span class="sc">;</span></li></ol></pre><p>We now compile up Perl, and run it through the test suite. Our new
+tests pass, hooray!</p>
+<a class='view-head2' id="Documenting-the-patch"></a><h3 class='h3' >Documenting the patch</h3>
+<p>Finally, the documentation. The job is never done until the paperwork
+is over, so let's describe the change we've just made. The relevant
+place is <i>pod/perlfunc.pod</i>; again, we make a copy, and then we'll
+insert this text in the description of <code class="inline"><a class="l_k" href="functions/pack.html">pack</a></code>:</p>
+<pre class="verbatim"><ol><li> =<span class="w">item</span> *</li><li></li><li> <span class="w">If</span> <span class="w">the</span> <span class="w">pattern</span> <span class="w">begins</span> <span class="w">with</span> <span class="w">a</span> <span class="w">C</span><span class="q">&lt;U&gt;</span><span class="cm">,</span> <span class="w">the</span> <span class="w">resulting</span> <span class="w">string</span> <span class="w">will</span> <span class="w">be</span> <span class="w">treated</span></li><li> <span class="w">as</span> <span class="w">UTF</span>-<span class="n">8</span>-<span class="w">encoded</span> <span class="w">Unicode</span>. <span class="w">You</span> <span class="w">can</span> <span class="w">force</span> <span class="w">UTF</span>-<span class="n">8</span> <span class="w">encoding</span> <span class="w">on</span> <span class="w">in</span> <span class="w">a</span> <span class="w">string</span></li><li> <span class="w">with</span> <span class="w">an</span> <span class="w">initial</span> <span class="w">C</span><span class="q">&lt;U0&gt;</span><span class="cm">,</span> <a class="l_k" href="functions/and.html">and</a> <span class="w">the</span> <span class="w">bytes</span> <span class="w">that</span> <span class="w">follow</span> <span class="w">will</span> <span class="w">be</span> <span class="w">interpreted</span> <span class="w">as</span></li><li> <span class="w">Unicode</span> <span class="w">characters</span>. <span class="w">If</span> <span class="w">you</span> <span class="w">don&#39;t</span> <span class="w">want</span> <span class="w">this</span> <span class="w">to</span> <span class="w">happen</span><span class="cm">,</span> <span class="w">you</span> <span class="w">can</span> <span class="w">begin</span></li><li> <span class="w">your</span> <span class="w">pattern</span> <span class="w">with</span> <span class="w">C</span><span class="q">&lt;C0&gt;</span> <span class="s">(</span><a class="l_k" href="functions/or.html">or</a> <span class="w">anything</span> <a class="l_k" href="functions/else.html">else</a><span class="s">)</span> <span class="w">to</span> <span class="w">force</span> <span class="w">Perl</span> <a class="l_k" href="functions/not.html">not</a> <span class="w">to</span> <span class="w">UTF</span>-<span class="n">8</span></li><li> <span class="w">encode</span> <span class="w">your</span> <span class="w">string</span><span class="cm">,</span> <a class="l_k" href="functions/and.html">and</a> <span class="w">then</span> <span class="w">follow</span> <span class="w">this</span> <span class="w">with</span> <span class="w">a</span> <span class="w">C</span><span class="q">&lt;U*&gt;</span> <span class="w">somewhere</span> <span class="w">in</span> <span class="w">your</span></li><li> <span class="w">pattern</span>.</li></ol></pre><a class='view-head2' id="Submit"></a><h3 class='h3' >Submit</h3>
+<p>See <a href="perlhack.html">perlhack</a> for details on how to submit this patch.</p>
+<a class='view-head1' id="AUTHOR"></a><h2 class='h2' >AUTHOR</h2>
+<p>This document was originally written by Nathan Torkington, and is
+maintained by the perl5-porters mailing list.</p>
+
+
+
+
+      <ul><li><a href="#NAME">NAME</a></li><li><a href="#DESCRIPTION">DESCRIPTION</a></li><li><a href="#EXAMPLE-OF-A-SIMPLE-PATCH">EXAMPLE OF A SIMPLE PATCH</a></li><ul><li><a href="#Writing-the-patch">Writing the patch</a></li><li><a href="#Testing-the-patch">Testing the patch</a></li><li><a href="#Documenting-the-patch">Documenting the patch</a></li><li><a href="#Submit">Submit</a></li></ul><li><a href="#AUTHOR">AUTHOR</a></li></ul>
+
+
+                  </div>
+                </article>
+              </div>
+            </div>
+          </main>
+        </div>
+           <footer class="footer row bg-light pt-5 pb-5">
+       <div class="col-sm-10 offset-sm-1 col-xl-8 offset-xl-2">
+           <div class="row">
+               <div class="col-md-4">
+                   <ul class="list-unstyled">
+                       <li>
+                           <h4>Site info</h4>
+                       </li>
+                       <li>Docs mantained by
+                           <a href="//lists.perl.org/list/perl5-porters.html"
+                               rel="noopener">Perl 5 Porters</a>
+                       </li>
+                       <li>Perldoc site development sponsored by
+                           <a href="//opusvl.com" rel="noopener">
+                           <img style="margin: 20px 20px 5px 10px" class="opus-logo" src="/public/img/opusvl_logo.svg" alt="OpusVL Logo">
+                        </a>
+                    <li><span class="about_perldoc"><a href="//about.html">About PerlDOC</a></span>
+                    </li>
+                       </li>
+                   </ul>
+               </div>
+               <div class="col-md-8">
+                   <div class="row">
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Manuals</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.20.2/index-overview.html">Overview</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.20.2/index-tutorials.html">Tutorials</a>
+                               </li>
+                               <li>
+                                   <a href="/5.20.2/index-faq.html">FAQs</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.20.2/index-history.html">Changes</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Reference</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.20.2/index-language.html">Language</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.20.2/index-functions.html">Functions</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.20.2/perlop.html">Operators</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.20.2/perlvar.html">Variables</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Modules</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.20.2/index-modules-A.html">Modules</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.20.2/index-pragmas.html">Pragmas</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.20.2/index-utilities.html">Utilities</a>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 col-lg-3">
+                           <ul class=" list-unstyled">
+                               <li>
+                                   <h4>Misc</h4>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.20.2/index-licence.html">License</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.20.2/index-internals.html">Internals</a>
+                               </li>
+                               <li>
+                                   <a
+                                       href="/5.20.2/index-platforms.html">Platforms</a>
+                               </li>
+                            <li>
+                                <a
+                                    href="/5.20.2/index-about.html">About</a>
+                            </li>
+                           </ul>
+                       </div>
+                   </div>
+               </div>
+               <div class=" col-12 footer-inf text-center">
+                   <small>perldoc.perl.org - Official documentation for the Perl
+                       programming language</small>
+               </div>
+           </div>
+       </div>
+   </footer>
+
+        	<div class="beta-wrapper beta-bottom-right ">
+		<div class="beta beta-blue  ">
+			<a class="beta-link "
+				href="//github.com/OpusVL/perldoc.perl.org/issues/new" rel="noopener">
+				<span class="beta-text">
+					This website is a Beta release.
+				</span>
+				<span class="beta-text">
+					For any issues please raise a ticket on GitHub
+				</span>
+			</a>
+		</div>
+	</div>
+
+        <script src="/public/js/main.min.js"></script>
+      </body>
+
+      </html>
